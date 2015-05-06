@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
-using System.Security.Authentication;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using MaxMind.MinFraud.Exception;
@@ -38,12 +38,13 @@ namespace MaxMind.MinFraud
             string licenseKey,
             List<string> locales = null,
             string host = "minfraud.maxmind.com",
-            TimeSpan? timeout = null
+            TimeSpan? timeout = null,
+            HttpMessageHandler httpMessageHandler = null
             )
         {
             _locales = locales ?? new List<string> {"en"};
 //            this.timeout = null;
-            _httpClient = new HttpClient
+            _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
             {
                 BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
 //                Timeout = timeout,
@@ -53,7 +54,7 @@ namespace MaxMind.MinFraud
                         Convert.ToBase64String(
                             Encoding.ASCII.GetBytes(
                                 $"{userId}:{licenseKey}"))),
-//                    Accept = { new MediaTypeWithQualityHeaderValue("application/json")},
+                    Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
                     UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version.ToString())}
                 }
             };
@@ -82,17 +83,25 @@ namespace MaxMind.MinFraud
             settings.Converters.Add(new StringEnumConverter());
             var requestBody = JsonConvert.SerializeObject(request, settings);
 
-            var response = await _httpClient.PostAsync(typeof (T).Name.ToLower(),
+            var requestPath = typeof (T).Name.ToLower();
+            var response = await _httpClient.PostAsync(requestPath,
                 new StringContent(requestBody, Encoding.UTF8, "application/json"))
                 .ConfigureAwait(false);
+
+            // XXX - this is ugly. Previously we used response.RequestMessage, but the
+            // mocking package we use doesn't set RequestMessage:
+            // https://github.com/richardszalay/mockhttp/issues/7
+            // Once that is fixed, we should switch back.
+            var uri = new Uri(_httpClient.BaseAddress.ToString() + requestPath);
+
             if (!response.IsSuccessStatusCode)
             {
-                await HandleError(response);
+                await HandleError(response, uri);
             }
-            return await HandleSuccess<T>(response);
+            return await HandleSuccess<T>(response, uri);
         }
 
-        private static async Task<T> HandleSuccess<T>(HttpResponseMessage response) where T : Score
+        private static async Task<T> HandleSuccess<T>(HttpResponseMessage response, Uri uri) where T : Score
         {
             int length;
             var parsedOk = int.TryParse(response.Content.Headers.GetValues("Content-Length").FirstOrDefault(),
@@ -100,14 +109,14 @@ namespace MaxMind.MinFraud
             if (!parsedOk || length <= 0)
             {
                 throw new HttpException(
-                    $"Received a 200 response for minFraud {typeof (T).Name} but there was no message body.",
-                    response.StatusCode, response.RequestMessage.RequestUri);
+                    $"Received a 200 response for minFraud {typeof (T).Name} but there was no message body",
+                    response.StatusCode, uri);
             }
             var contentType = response.Content.Headers.GetValues("Content-Type")?.FirstOrDefault();
             if (contentType == null || !contentType.Contains("json"))
             {
                 throw new MinFraudException(
-                    $"Received a 200 response for minFraud {typeof (T).Name} but it does not appear to be JSON: {contentType}");
+                    $"Received a 200 response for  {typeof (T).Name} but it does not appear to be JSON: {contentType}");
             }
             using (var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
             using (var sr = new StreamReader(s))
@@ -126,30 +135,34 @@ namespace MaxMind.MinFraud
             }
         }
 
-        private async Task HandleError(HttpResponseMessage response)
+        private async Task HandleError(HttpResponseMessage response, Uri uri)
         {
             var status = (int) response.StatusCode;
+
             if (status >= 400 && status < 500)
             {
-                await Handle4xxStatus(response);
+                await Handle4xxStatus(response, uri);
             }
             else if (status >= 500 && status < 600)
             {
                 throw new HttpException(
-                    $"Received a server ({status}) error for {response.RequestMessage.RequestUri}", response.StatusCode,
-                    response.RequestMessage.RequestUri);
+                    $"Received a server ({status}) error for {uri}", response.StatusCode,
+                    uri);
             }
 
             var errorMessage =
-                $"Received an unexpected response for {response.RequestMessage.RequestUri} (status code: {status})";
-            throw new HttpException(errorMessage, response.StatusCode, response.RequestMessage.RequestUri);
+                $"Received an unexpected HTTP status ({status}) for {uri}";
+            throw new HttpException(errorMessage, response.StatusCode, uri);
         }
 
-        private async Task Handle4xxStatus(HttpResponseMessage response)
+        private async Task Handle4xxStatus(HttpResponseMessage response, Uri uri)
         {
             var status = (int) response.StatusCode;
-            var content = await response.Content.ReadAsStringAsync();
-            var uri = response.RequestMessage.RequestUri;
+
+            // The null guard is primarily because our unit testing mock library does not
+            // set Content for the default response.
+            var content = response.Content != null ? await response.Content.ReadAsStringAsync() : null;
+
             if (string.IsNullOrEmpty(content))
             {
                 throw new HttpException(
@@ -159,38 +172,44 @@ namespace MaxMind.MinFraud
 
             try
             {
-                var ex = JsonConvert.DeserializeObject<InvalidRequestException>(content);
-                ex.Uri = response.RequestMessage.RequestUri;
-                HandleErrorWithJsonBody(ex, response, content);
+                var error = JsonConvert.DeserializeObject<WebServiceError>(content);
+
+                HandleErrorWithJsonBody(error, response, content, uri);
             }
-            catch (JsonSerializationException ex)
+            catch (JsonReaderException ex)
             {
                 throw new HttpException(
                     $"Received a {status} error for {uri} but it did not include the expected JSON body: {content}",
                     response.StatusCode, uri, ex);
             }
+            catch (JsonSerializationException ex)
+            {
+                throw new HttpException(
+                    $"Error response contains JSON but it does not specify code or error keys: {content}",
+                    response.StatusCode,
+                    uri, ex);
+            }
         }
 
-        private static void HandleErrorWithJsonBody(InvalidRequestException ex, HttpResponseMessage response,
-            string content)
+        private static void HandleErrorWithJsonBody(WebServiceError error, HttpResponseMessage response,
+            string content, Uri uri)
         {
-            if (ex.Code == null || ex.Message == null)
+            if (error.Code == null || error.Error == null)
                 throw new HttpException(
-                    $"Response contains JSON but does not specify code or error keys: {content}",
+                    $"Error response contains JSON but it does not specify code or error keys: {content}",
                     response.StatusCode,
-                    ex.Uri);
-
-            switch (ex.Code)
+                    uri);
+            switch (error.Code)
             {
                 case "AUTHORIZATION_INVALID":
                 case "LICENSE_KEY_REQUIRED":
                 case "USER_ID_REQUIRED":
-                    throw new AuthenticationException(ex.Message);
+                    throw new AuthenticationException(error.Error);
                 case "INSUFFICIENT_FUNDS":
-                    throw new InsufficientFundsException(ex.Message);
+                    throw new InsufficientFundsException(error.Error);
 
                 default:
-                    throw ex;
+                    throw new InvalidRequestException(error.Error, error.Code);
             }
         }
     }

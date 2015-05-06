@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Runtime.Serialization;
 
 namespace MaxMind.MinFraud.Exception
 {
@@ -39,6 +41,12 @@ namespace MaxMind.MinFraud.Exception
             Uri = uri;
         }
 
+        protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            this.HttpStatus = (HttpStatusCode) info.GetValue("HttpStatus", typeof (HttpStatusCode));
+            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+        }
+
         /// <summary>
         ///     The HTTP status code returned by the web service.
         /// </summary>
@@ -48,5 +56,12 @@ namespace MaxMind.MinFraud.Exception
         ///     The URI queried by the web service.
         /// </summary>
         public Uri Uri { get; private set; }
+
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+            info.AddValue("HttpStatus", this.HttpStatus);
+            info.AddValue("Uri", this.Uri);
+        }
     }
 }
