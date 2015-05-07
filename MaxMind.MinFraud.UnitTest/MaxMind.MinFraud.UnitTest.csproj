@@ -6,8 +6,8 @@
     <ProjectGuid>{B94CD151-77D9-4423-BB17-504264B109D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnitTestProject1</RootNamespace>
-    <AssemblyName>UnitTestProject1</AssemblyName>
+    <RootNamespace>MaxMind.MinFraud.UnitTest</RootNamespace>
+    <AssemblyName>MaxMind.MinFraud.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -25,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,6 +36,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaxMind.GeoIP2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GeoIP2-dotnet\GeoIP2\bin\Debug\MaxMind.GeoIP2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -70,8 +75,32 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Exception\HttpExceptionTest.cs" />
+    <Compile Include="Exception\InvalidRequestExceptionTest.cs" />
+    <Compile Include="Response\GeoIP2CountryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Request\AccountTest.cs" />
+    <Compile Include="Request\BillingTest.cs" />
+    <Compile Include="Request\CreditCardTest.cs" />
+    <Compile Include="Request\DeviceTest.cs" />
+    <Compile Include="Request\EmailTest.cs" />
+    <Compile Include="Request\EventTest.cs" />
+    <Compile Include="Request\MinFraudRequestTest.cs" />
+    <Compile Include="Request\OrderTest.cs" />
+    <Compile Include="Request\PaymentTest.cs" />
+    <Compile Include="Request\ShippingTest.cs" />
+    <Compile Include="Request\ShoppingCartItemTest.cs" />
     <Compile Include="Request\TestHelper.cs" />
+    <Compile Include="Response\AddressTestHelper.cs" />
+    <Compile Include="Response\BillingAddressTest.cs" />
+    <Compile Include="Response\CreditCardTest.cs" />
+    <Compile Include="Response\GeoIP2LocationTest.cs" />
+    <Compile Include="Response\InsightsTest.cs" />
+    <Compile Include="Response\IPLocationTest.cs" />
+    <Compile Include="Response\IssuerTest.cs" />
+    <Compile Include="Response\ScoreTest.cs" />
+    <Compile Include="Response\ShippingAddressTest.cs" />
+    <Compile Include="Response\WarningTest.cs" />
     <Compile Include="WebServiceClientTest.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +115,7 @@
       <Name>MaxMind.MinFraud</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
@@ -111,7 +141,7 @@
     <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
     <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

@@ -23,7 +23,7 @@ namespace MaxMind.MinFraud.Request
         public string Username { get; }
 
         [JsonProperty("username_md5")]
-        internal string UsernameMD5
+        public string UsernameMD5
         {
             get
             {

@@ -31,9 +31,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MaxMind.Db, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxMind.Db.1.0.0.0\lib\net40\MaxMind.Db.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaxMind.GeoIP2, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GeoIP2-dotnet\GeoIP2\bin\Debug\MaxMind.GeoIP2.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\GeoIP2-dotnet\GeoIP2\bin\Release\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="RichardSzalay.MockHttp, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RichardSzalay.MockHttp.1.2.0\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
@@ -80,6 +92,8 @@
     <Compile Include="Response\Address.cs" />
     <Compile Include="Response\BillingAddress.cs" />
     <Compile Include="Response\CreditCard.cs" />
+    <Compile Include="Response\GeoIP2Country.cs" />
+    <Compile Include="Response\GeoIP2Location.cs" />
     <Compile Include="Response\Insights.cs" />
     <Compile Include="Response\IPLocation.cs" />
     <Compile Include="Response\Issuer.cs" />

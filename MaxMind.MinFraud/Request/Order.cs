@@ -35,6 +35,10 @@ namespace MaxMind.MinFraud.Request
             get { return _currency; }
             private set
             {
+                if (value == null)
+                {
+                    return;
+                }
                 var re = new Regex("^[A-Z]{3}$");
                 if (!re.IsMatch(value))
                 {

@@ -17,11 +17,11 @@ namespace MaxMind.MinFraud.Request
             )
         {
             Address = address;
-            Domain = domain;
+            Domain = domain ?? address?.Host;
         }
 
         [JsonProperty("address")]
-        internal string AddressMD5
+        public string AddressMD5
         {
             get
             {

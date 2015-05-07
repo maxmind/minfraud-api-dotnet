@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Reflection;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using MaxMind.MinFraud.Exception;
@@ -23,16 +22,16 @@ namespace MaxMind.MinFraud
         private const string BasePath = "/minfraud/v2.0/";
         private readonly HttpClient _httpClient;
         private readonly List<string> _locales;
-//        private readonly TimeSpan timeout;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="WebServiceClient" /> class.
+        /// 
         /// </summary>
-        /// <param name="userId">The user unique identifier.</param>
-        /// <param name="licenseKey">The license key.</param>
-        /// <param name="locales">List of locale codes to use in name property from most preferred to least preferred.</param>
-        /// <param name="host">The base url to use when accessing the service</param>
-        /// <param name="timeout">Timeout for connection to web service.</param>
+        /// <param name="userId"></param>
+        /// <param name="licenseKey"></param>
+        /// <param name="locales"></param>
+        /// <param name="host"></param>
+        /// <param name="timeout"></param>
+        /// <param name="httpMessageHandler"></param>
         public WebServiceClient(
             int userId,
             string licenseKey,
@@ -43,11 +42,9 @@ namespace MaxMind.MinFraud
             )
         {
             _locales = locales ?? new List<string> {"en"};
-//            this.timeout = null;
             _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
             {
                 BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
-//                Timeout = timeout,
                 DefaultRequestHeaders =
                 {
                     Authorization = new AuthenticationHeaderValue("Basic",
@@ -58,19 +55,29 @@ namespace MaxMind.MinFraud
                     UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version.ToString())}
                 }
             };
+            if (timeout != null)
+            {
+                _httpClient.Timeout = timeout.Value;
+            }
         }
 
         /// <summary>
+        /// 
         /// </summary>
-        /// <returns>An <see cref="Task<Insights>" /></returns>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<Insights> InsightsAsync(MinFraudRequest request)
         {
-            return await MakeRequest<Insights>(request);
+            var insights = await MakeRequest<Insights>(request);
+            insights.IPLocation.SetLocales(_locales);
+            return insights;
         }
 
         /// <summary>
+        /// 
         /// </summary>
-        /// <returns>An <see cref="Task<Score></Score>" /></returns>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<Score> ScoreAsync(MinFraudRequest request)
         {
             return await MakeRequest<Score>(request);
@@ -209,7 +216,7 @@ namespace MaxMind.MinFraud
                     throw new InsufficientFundsException(error.Error);
 
                 default:
-                    throw new InvalidRequestException(error.Error, error.Code);
+                    throw new InvalidRequestException(error.Error, error.Code, uri);
             }
         }
     }

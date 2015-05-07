@@ -26,19 +26,20 @@ namespace MaxMind.MinFraud.Request
             string phoneNumber = null,
             string phoneCountryCode = null,
             ShippingDeliverySpeed? deliverySpeed = null
-            )
+            ) : base(
+                firstName: firstName,
+                lastName: lastName,
+                company: company,
+                address: address,
+                address2: address2,
+                city: city,
+                region: region,
+                country: country,
+                postal: postal,
+                phoneNumber: phoneNumber,
+                phoneCountryCode: phoneCountryCode
+                )
         {
-            FirstName = firstName;
-            LastName = lastName;
-            Company = company;
-            Address = address;
-            Address2 = address2;
-            City = city;
-            Region = region;
-            Country = country;
-            Postal = postal;
-            PhoneNumber = phoneNumber;
-            PhoneCountryCode = phoneCountryCode;
             DeliverySpeed = deliverySpeed;
         }
 

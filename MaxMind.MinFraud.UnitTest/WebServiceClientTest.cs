@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -17,12 +15,6 @@ namespace MaxMind.MinFraud.UnitTest
     [TestFixture]
     public class WebServiceClientTest
     {
-        [Test]
-        public void TestMethod1()
-        {
-        }
-
-
         [Test]
         public async Task TestFullScoreRequest()
         {
@@ -42,13 +34,33 @@ namespace MaxMind.MinFraud.UnitTest
             var request = CreateFullRequest();
             var response = await client.InsightsAsync(request);
             CompareJson(responseContent, response);
+
+            // The purpose here is to test that SetLocales worked as expected
+            Assert.AreEqual("London", response.IPLocation.City.Name);
+            Assert.AreEqual("United Kingdom", response.IPLocation.Country.Name);
         }
 
 
         private void CompareJson(string responseContent, Object response)
         {
             var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
-            var actualResponse = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response));
+
+            var settings = new JsonSerializerSettings
+            {
+                NullValueHandling = NullValueHandling.Ignore,
+                DefaultValueHandling = DefaultValueHandling.Ignore
+            };
+            var actualResponse = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
+
+            // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
+            JObject ipLocation = (JObject) expectedResponse["ip_location"];
+            if (ipLocation != null)
+            {
+                ipLocation.Add("maxmind", new JObject());
+                ipLocation.Add("postal", new JObject());
+                var representedCountry = new JObject {{"names", new JObject()}};
+                ipLocation.Add("represented_country", representedCountry);
+            }
 
             var areEqual = JToken.DeepEquals(expectedResponse, actualResponse);
             if (!areEqual)

@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using MaxMind.MinFraud.Request;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
 namespace MaxMind.MinFraud.UnitTest.Request
