@@ -50,8 +50,8 @@
       <HintPath>..\packages\NUnit.3.0.0-beta-1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RichardSzalay.MockHttp, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RichardSzalay.MockHttp.1.2.0\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
+    <Reference Include="RichardSzalay.MockHttp, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RichardSzalay.MockHttp.1.2.1\lib\net45\RichardSzalay.MockHttp.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />

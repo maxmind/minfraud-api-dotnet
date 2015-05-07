@@ -95,20 +95,14 @@ namespace MaxMind.MinFraud
                 new StringContent(requestBody, Encoding.UTF8, "application/json"))
                 .ConfigureAwait(false);
 
-            // XXX - this is ugly. Previously we used response.RequestMessage, but the
-            // mocking package we use doesn't set RequestMessage:
-            // https://github.com/richardszalay/mockhttp/issues/7
-            // Once that is fixed, we should switch back.
-            var uri = new Uri(_httpClient.BaseAddress.ToString() + requestPath);
-
             if (!response.IsSuccessStatusCode)
             {
-                await HandleError(response, uri);
+                await HandleError(response);
             }
-            return await HandleSuccess<T>(response, uri);
+            return await HandleSuccess<T>(response);
         }
 
-        private static async Task<T> HandleSuccess<T>(HttpResponseMessage response, Uri uri) where T : Score
+        private static async Task<T> HandleSuccess<T>(HttpResponseMessage response) where T : Score
         {
             int length;
             var parsedOk = int.TryParse(response.Content.Headers.GetValues("Content-Length").FirstOrDefault(),
@@ -117,7 +111,7 @@ namespace MaxMind.MinFraud
             {
                 throw new HttpException(
                     $"Received a 200 response for minFraud {typeof (T).Name} but there was no message body",
-                    response.StatusCode, uri);
+                    response.StatusCode, response.RequestMessage.RequestUri);
             }
             var contentType = response.Content.Headers.GetValues("Content-Type")?.FirstOrDefault();
             if (contentType == null || !contentType.Contains("json"))
@@ -142,13 +136,14 @@ namespace MaxMind.MinFraud
             }
         }
 
-        private async Task HandleError(HttpResponseMessage response, Uri uri)
+        private async Task HandleError(HttpResponseMessage response)
         {
+            var uri = response.RequestMessage.RequestUri;
             var status = (int) response.StatusCode;
 
             if (status >= 400 && status < 500)
             {
-                await Handle4xxStatus(response, uri);
+                await Handle4xxStatus(response);
             }
             else if (status >= 500 && status < 600)
             {
@@ -162,8 +157,9 @@ namespace MaxMind.MinFraud
             throw new HttpException(errorMessage, response.StatusCode, uri);
         }
 
-        private async Task Handle4xxStatus(HttpResponseMessage response, Uri uri)
+        private async Task Handle4xxStatus(HttpResponseMessage response)
         {
+            var uri = response.RequestMessage.RequestUri;
             var status = (int) response.StatusCode;
 
             // The null guard is primarily because our unit testing mock library does not
@@ -181,7 +177,7 @@ namespace MaxMind.MinFraud
             {
                 var error = JsonConvert.DeserializeObject<WebServiceError>(content);
 
-                HandleErrorWithJsonBody(error, response, content, uri);
+                HandleErrorWithJsonBody(error, response, content);
             }
             catch (JsonReaderException ex)
             {
@@ -199,13 +195,13 @@ namespace MaxMind.MinFraud
         }
 
         private static void HandleErrorWithJsonBody(WebServiceError error, HttpResponseMessage response,
-            string content, Uri uri)
+            string content)
         {
             if (error.Code == null || error.Error == null)
                 throw new HttpException(
                     $"Error response contains JSON but it does not specify code or error keys: {content}",
                     response.StatusCode,
-                    uri);
+                    response.RequestMessage.RequestUri);
             switch (error.Code)
             {
                 case "AUTHORIZATION_INVALID":
@@ -216,7 +212,7 @@ namespace MaxMind.MinFraud
                     throw new InsufficientFundsException(error.Error);
 
                 default:
-                    throw new InvalidRequestException(error.Error, error.Code, uri);
+                    throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage.RequestUri);
             }
         }
     }
