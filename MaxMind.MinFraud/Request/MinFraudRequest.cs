@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
-    // XXX - separate score and insights?
     public class MinFraudRequest
     {
         public MinFraudRequest(
@@ -12,8 +11,7 @@ namespace MaxMind.MinFraud.Request
             Billing billing = null,
             CreditCard creditCard = null,
             Email email = null,
-            // XXX - think of better name. "event" is reserved
-            Event eventRequest = null,
+            Event userEvent = null,
             Order order = null,
             Payment payment = null,
             Shipping shipping = null,
@@ -25,7 +23,7 @@ namespace MaxMind.MinFraud.Request
             Billing = billing;
             CreditCard = creditCard;
             Email = email;
-            Event = eventRequest;
+            Event = userEvent;
             Order = order;
             Payment = payment;
             Shipping = shipping;

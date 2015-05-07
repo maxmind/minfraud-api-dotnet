@@ -47,7 +47,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestEvent()
         {
-            var request = new MinFraudRequest(device: Device, eventRequest: new Event(shopId: "1"));
+            var request = new MinFraudRequest(device: Device, userEvent: new Event(shopId: "1"));
             Assert.AreEqual("1", request.Event.ShopId);
         }
 

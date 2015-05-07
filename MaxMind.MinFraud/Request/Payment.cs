@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
-    // XXX - fix enum serialization
     public enum PaymentProcessor
     {
         [EnumMember(Value = "adyen")] Adyen,
