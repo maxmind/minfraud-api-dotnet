@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,14 +16,17 @@ using MaxMind.MinFraud.Util;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
+#endregion
+
 namespace MaxMind.MinFraud
 {
-    public class WebServiceClient
+    public class WebServiceClient : IDisposable
     {
         private static readonly Version Version = Assembly.GetExecutingAssembly().GetName().Version;
         private const string BasePath = "/minfraud/v2.0/";
         private readonly HttpClient _httpClient;
         private readonly List<string> _locales;
+        private bool _disposed;
 
         /// <summary>
         /// 
@@ -68,7 +73,7 @@ namespace MaxMind.MinFraud
         /// <returns></returns>
         public async Task<Insights> InsightsAsync(MinFraudRequest request)
         {
-            var insights = await MakeRequest<Insights>(request);
+            var insights = await MakeRequest<Insights>(request).ConfigureAwait(false);
             insights.IPLocation.SetLocales(_locales);
             return insights;
         }
@@ -80,7 +85,7 @@ namespace MaxMind.MinFraud
         /// <returns></returns>
         public async Task<Score> ScoreAsync(MinFraudRequest request)
         {
-            return await MakeRequest<Score>(request);
+            return await MakeRequest<Score>(request).ConfigureAwait(false);
         }
 
         private async Task<T> MakeRequest<T>(MinFraudRequest request) where T : Score
@@ -97,9 +102,9 @@ namespace MaxMind.MinFraud
 
             if (!response.IsSuccessStatusCode)
             {
-                await HandleError(response);
+                await HandleError(response).ConfigureAwait(false);
             }
-            return await HandleSuccess<T>(response);
+            return await HandleSuccess<T>(response).ConfigureAwait(false);
         }
 
         private static async Task<T> HandleSuccess<T>(HttpResponseMessage response) where T : Score
@@ -143,7 +148,7 @@ namespace MaxMind.MinFraud
 
             if (status >= 400 && status < 500)
             {
-                await Handle4xxStatus(response);
+                await Handle4xxStatus(response).ConfigureAwait(false);
             }
             else if (status >= 500 && status < 600)
             {
@@ -164,7 +169,7 @@ namespace MaxMind.MinFraud
 
             // The null guard is primarily because our unit testing mock library does not
             // set Content for the default response.
-            var content = response.Content != null ? await response.Content.ReadAsStringAsync() : null;
+            var content = response.Content != null ? await response.Content.ReadAsStringAsync().ConfigureAwait(false) : null;
 
             if (string.IsNullOrEmpty(content))
             {
@@ -214,6 +219,25 @@ namespace MaxMind.MinFraud
                 default:
                     throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage.RequestUri);
             }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (_disposed)
+                return;
+
+            if (disposing)
+            {
+                _httpClient.Dispose();
+            }
+
+            _disposed = true;
         }
     }
 }
