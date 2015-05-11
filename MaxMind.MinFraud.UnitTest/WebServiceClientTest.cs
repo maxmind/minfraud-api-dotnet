@@ -74,7 +74,7 @@ namespace MaxMind.MinFraud.UnitTest
 
 
         [Test]
-        public void Test200WithItest200WithNoBodynvalidJson()
+        public void Test200WithNoBody()
         {
             var client = CreateSuccessClient("insights", "");
             var request = CreateFullRequest();
