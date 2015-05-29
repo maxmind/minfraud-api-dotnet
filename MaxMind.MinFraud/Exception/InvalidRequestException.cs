@@ -25,7 +25,7 @@ namespace MaxMind.MinFraud.Exception
         public InvalidRequestException(string message, string code, Uri uri) : base(message)
         {
             Code = code;
-            Uri = uri;
+            this.Uri = uri;
         }
 
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
@@ -33,7 +33,7 @@ namespace MaxMind.MinFraud.Exception
             : base(info, context)
         {
             Code = info.GetString("Code");
-            Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace MaxMind.MinFraud.Exception
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Code", Code);
-            info.AddValue("Uri", Uri);
+            info.AddValue("Uri", this.Uri);
             base.GetObjectData(info, context);
         }
     }

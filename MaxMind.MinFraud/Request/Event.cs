@@ -31,10 +31,10 @@ namespace MaxMind.MinFraud.Request
         /// it will also show up in email alerts and notifications from us to
         /// you.</param>
         /// <param name="shopId">Your internal ID for the shop, affiliate, or
-        /// merchant this order is coming from. Required for minFraud users 
+        /// merchant this order is coming from. Required for minFraud users
         /// who are resellers, payment providers, gateways and affiliate
         /// networks.</param>
-        /// <param name="time">The date and time the event occurred. If this 
+        /// <param name="time">The date and time the event occurred. If this
         /// field is not in the request, the current time will be used.</param>
         /// <param name="type">The type of event being scored.</param>
         public Event(
@@ -47,11 +47,11 @@ namespace MaxMind.MinFraud.Request
             TransactionId = transactionId;
             ShopId = shopId;
             Time = time;
-            Type = type;
+            this.Type = type;
         }
 
         /// <summary>
-        /// Your internal ID for the transaction. We can use this to locate a 
+        /// Your internal ID for the transaction. We can use this to locate a
         /// specific transaction in our logs, and it will also show up in email
         /// alerts and notifications from us to you.
         /// </summary>
@@ -59,8 +59,8 @@ namespace MaxMind.MinFraud.Request
         public string TransactionId { get; }
 
         /// <summary>
-        /// Your internal ID for the shop, affiliate, or merchant this order is 
-        /// coming from. Required for minFraud users who are resellers, payment 
+        /// Your internal ID for the shop, affiliate, or merchant this order is
+        /// coming from. Required for minFraud users who are resellers, payment
         /// providers, gateways and affiliate networks.
         /// </summary>
         [JsonProperty("shop_id")]
@@ -74,7 +74,7 @@ namespace MaxMind.MinFraud.Request
         public DateTimeOffset? Time { get; }
 
         /// <summary>
-        /// The type of event being scored. 
+        /// The type of event being scored.
         /// </summary>
         [JsonProperty("type")]
         public EventType? Type { get; }

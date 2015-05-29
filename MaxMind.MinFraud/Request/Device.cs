@@ -12,9 +12,9 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="ipAddress">The IP address associated with the device 
+        /// <param name="ipAddress">The IP address associated with the device
         /// used by the customer in the transaction.</param>
-        /// <param name="userAgent">The HTTP “User-Agent” header of the 
+        /// <param name="userAgent">The HTTP “User-Agent” header of the
         /// browser used in the transaction.</param>
         /// <param name="acceptLanguage">The HTTP “Accept-Language” header of
         /// the device used in the transaction.</param>
@@ -24,7 +24,7 @@ namespace MaxMind.MinFraud.Request
             string acceptLanguage = null
             )
         {
-            IPAddress = ipAddress;
+            this.IPAddress = ipAddress;
             UserAgent = userAgent;
             AcceptLanguage = acceptLanguage;
         }
@@ -37,7 +37,7 @@ namespace MaxMind.MinFraud.Request
         public IPAddress IPAddress { get; }
 
         /// <summary>
-        /// The HTTP “User-Agent” header of the browser used in the 
+        /// The HTTP “User-Agent” header of the browser used in the
         /// transaction.
         /// </summary>
         [JsonProperty("user_agent")]

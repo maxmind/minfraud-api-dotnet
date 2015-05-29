@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.Exception
             : base(message)
         {
             HttpStatus = httpStatus;
-            Uri = uri;
+            this.Uri = uri;
         }
 
         /// <summary>
@@ -41,13 +41,13 @@ namespace MaxMind.MinFraud.Exception
             : base(message, innerException)
         {
             HttpStatus = httpStatus;
-            Uri = uri;
+            this.Uri = uri;
         }
 
         protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             HttpStatus = (HttpStatusCode) info.GetValue("HttpStatus", typeof (HttpStatusCode));
-            Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
         }
 
         /// <summary>

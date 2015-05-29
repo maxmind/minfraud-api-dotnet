@@ -37,15 +37,15 @@ namespace MaxMind.MinFraud.Request
             List<ShoppingCartItem> shoppingCart = default(List<ShoppingCartItem>)
             )
         {
-            Device = device;
-            Account = account;
-            Billing = billing;
-            CreditCard = creditCard;
-            Email = email;
-            Event = userEvent;
-            Order = order;
-            Payment = payment;
-            Shipping = shipping;
+            this.Device = device;
+            this.Account = account;
+            this.Billing = billing;
+            this.CreditCard = creditCard;
+            this.Email = email;
+            this.Event = userEvent;
+            this.Order = order;
+            this.Payment = payment;
+            this.Shipping = shipping;
             ShoppingCart = shoppingCart;
         }
 
