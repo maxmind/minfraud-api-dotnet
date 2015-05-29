@@ -22,8 +22,8 @@ namespace MaxMind.MinFraud.Request
         /// converted into an MD5 before being sent to the web service.
         /// </param>
         /// <param name="domain">The domain of the email address used in the
-        /// transaction. If <code>address</code> is passed to the constructor
-        /// and <code>domain</code> is not, the domain will be automatically
+        /// transaction. If <c>address</c> is passed to the constructor
+        /// and <c>domain</c> is not, the domain will be automatically
         /// set from the address.</param>
         public Email(
             MailAddress address = null,

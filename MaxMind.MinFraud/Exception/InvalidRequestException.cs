@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Exception
 {
     /// <summary>
     /// This class is thrown when the web service rejected the request. Check
-    /// the value of <code>Code</code> for the reason code.
+    /// the value of <c>Code</c> for the reason code.
     /// </summary>
     [Serializable]
     public class InvalidRequestException : MinFraudException

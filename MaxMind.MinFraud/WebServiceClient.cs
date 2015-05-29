@@ -72,9 +72,9 @@ namespace MaxMind.MinFraud
         /// <summary>
         /// Asynchronously query Insights endpoint with transaction data
         /// </summary>
-        /// <param name="transaction">Object containing the transaction data 
+        /// <param name="transaction">Object containing the transaction data
         /// to be sent to the minFraud web service.</param>
-        /// <returns>Task that produces an object modeling the minFraud 
+        /// <returns>Task that produces an object modeling the minFraud
         /// Insights response data</returns>
         public async Task<Insights> InsightsAsync(Transaction transaction)
         {

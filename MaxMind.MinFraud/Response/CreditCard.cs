@@ -22,14 +22,14 @@ namespace MaxMind.MinFraud.Response
         public string Country { get; internal set; }
 
         /// <summary>
-        /// This property is <code>true</code> if the country of the billing 
+        /// This property is <c>true</c> if the country of the billing 
         /// address matches the country that the credit card was issued in.
         /// </summary>
         [JsonProperty("is_issued_in_billing_address_country")]
         public bool? IsIssuedInBillingAddressCountry { get; internal set; }
 
         /// <summary>
-        /// This property is <code>true</code> if the card is a prepaid card.
+        /// This property is <c>true</c> if the card is a prepaid card.
         /// </summary>
         [JsonProperty("is_prepaid")]
         public bool? IsPrepaid { get; internal set; }

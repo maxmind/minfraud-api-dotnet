@@ -14,9 +14,9 @@ namespace MaxMind.MinFraud.Response
         public string Name { get; internal set; }
 
         /// <summary>
-        /// This property is <code>true</code> if the name matches the name 
-        /// provided in the request for the card issuer. It is <code>false</code>
-        /// if the name does not match. The property is <code>null</code> if
+        /// This property is <c>true</c> if the name matches the name 
+        /// provided in the request for the card issuer. It is <c>false</c>
+        /// if the name does not match. The property is <c>null</c> if
         /// either no name or no issuer ID number (IIN) was provided in the 
         /// request or if MaxMind does not have a name associated with the IIN.
         /// </summary>
@@ -31,10 +31,10 @@ namespace MaxMind.MinFraud.Response
         public string PhoneNumber { get; internal set; }
 
         /// <summary>
-        /// This property is <code>true</code> if the phone number matches 
+        /// This property is <c>true</c> if the phone number matches 
         /// the number provided in the request for the card issuer. It is 
-        /// <code>false</code> if the number does not match. It is 
-        /// <code>null</code> if either no phone number or no issuer ID 
+        /// <c>false</c> if the number does not match. It is 
+        /// <c>null</c> if either no phone number or no issuer ID 
         /// number(IIN) was provided in the request or if MaxMind does not 
         /// have a phone number associated with the IIN.
         /// </summary>

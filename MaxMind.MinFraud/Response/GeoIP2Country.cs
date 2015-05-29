@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
     public class GeoIP2Country: Country
     {
         /// <summary>
-        /// This is <code>true</code> if the IP country is high risk.
+        /// This is <c>true</c> if the IP country is high risk.
         /// </summary>
         [JsonProperty("is_high_risk")]
         public bool? IsHighRisk { get; internal set; }

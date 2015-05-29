@@ -8,19 +8,19 @@ namespace MaxMind.MinFraud.Response
     public abstract class Address
     {
         /// <summary>
-        /// This property is <code>true</code> if the address is in the
-        /// IP country.The property is <code>false</code> when the address is not in the IP
+        /// This property is <c>true</c> if the address is in the
+        /// IP country.The property is <c>false</c> when the address is not in the IP
         /// country. If the address could not be parsed or was not provided or if the
-        /// IP address could not be geo-located, the property will be <code>null</code>.
+        /// IP address could not be geo-located, the property will be <c>null</c>.
         /// </summary>
         [JsonProperty("is_in_ip_country")]
         public bool? IsInIpCountry { get; internal set; }
 
         /// <summary>
-        /// This property is <code>true</code> if the postal code
+        /// This property is <c>true</c> if the postal code
         /// provided with the address is in the city for the address.The property is
-        /// <code>false</code> when the postal code is not in the city. If the address could
-        /// not be parsed or was not provided, the property will be <code>null</code>.
+        /// <c>false</c> when the postal code is not in the city. If the address could
+        /// not be parsed or was not provided, the property will be <c>null</c>.
         /// </summary>
         [JsonProperty("is_postal_in_city")]
         public bool? IsPostalInCity { get; internal set; }

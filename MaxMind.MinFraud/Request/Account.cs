@@ -11,6 +11,17 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public class Account
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="userId">A unique user ID associated with the end-user
+        /// in your system.If your system allows the login name for the
+        /// account to be changed, this should not be the login name for the
+        /// account, but rather should be an internal ID that does not change.
+        /// This is not your MaxMind user ID.c>/param>
+        /// <param name="username">The username associated with the account.
+        /// This is not the MD5 of username. Rather, the MD is automatically
+        /// generated from this string.c>/param>
         public Account(
             string userId = null,
             string username = null
@@ -40,7 +51,7 @@ namespace MaxMind.MinFraud.Request
         public string Username { get; }
 
         /// <summary>
-        /// The MD5 generated from the <code>Username</code>
+        /// The MD5 generated from the <c>Username</c>
         /// </summary>
         [JsonProperty("username_md5")]
         public string UsernameMD5
