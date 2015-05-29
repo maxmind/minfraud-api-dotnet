@@ -109,6 +109,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("shopping_cart")]
         public List<ShoppingCartItem> ShoppingCart { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return

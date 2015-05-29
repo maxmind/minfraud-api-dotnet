@@ -8,6 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public enum PaymentProcessor
     {
+#pragma warning disable CS1591
         [EnumMember(Value = "adyen")] Adyen,
         [EnumMember(Value = "altapay")] Altapay,
         [EnumMember(Value = "amazon_payments")] AmazonPayments,
@@ -74,6 +75,7 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "virtual_card_services")] VirtualCardServices,
         [EnumMember(Value = "vme")] Vme,
         [EnumMember(Value = "worldpay")] Worldpay
+#pragma warning restore
     }
 
     /// <summary>
@@ -125,6 +127,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("decline_code")]
         public string DeclineCode { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return $"Processor: {Processor}, WasAuthorized: {WasAuthorized}, DeclineCode: {DeclineCode}";

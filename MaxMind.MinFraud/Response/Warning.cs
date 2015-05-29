@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Response
 {
+    /// <summary>
+    /// A warning returned by the web service.
+    /// </summary>
     public class Warning
     {
         [JsonProperty("input")]
@@ -35,6 +38,10 @@ namespace MaxMind.MinFraud.Response
         [JsonIgnore]
         public List<string> Input => new List<string>(_input);
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return $"Code: {Code}, Message: {Message}, Input: {Input}";

@@ -44,6 +44,11 @@ namespace MaxMind.MinFraud.Exception
             this.Uri = uri;
         }
 
+        /// <summary>
+        /// Constructor for deserialization.
+        /// </summary>
+        /// <param name="info">The SerializationInfo with data.</param>
+        /// <param name="context">The source for this deserialization.</param>
         protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             HttpStatus = (HttpStatusCode) info.GetValue("HttpStatus", typeof (HttpStatusCode));
@@ -60,6 +65,11 @@ namespace MaxMind.MinFraud.Exception
         /// </summary>
         public Uri Uri { get; }
 
+        /// <summary>
+        /// Populates a SerializationInfo with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info">The SerializationInfo to populate with data.</param>
+        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);

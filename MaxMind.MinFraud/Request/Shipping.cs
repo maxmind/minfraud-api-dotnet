@@ -8,10 +8,12 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public enum ShippingDeliverySpeed
     {
+#pragma warning disable CS1591
         [EnumMember(Value = "same_day")] SameDay,
         [EnumMember(Value = "overnight")] Overnight,
         [EnumMember(Value = "expedited")] Expedited,
         [EnumMember(Value = "standard")] Standard
+#pragma warning restore
     }
 
     /// <summary>
@@ -73,6 +75,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("delivery_speed")]
         public ShippingDeliverySpeed? DeliverySpeed { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return $"{base.ToString()}, DeliverySpeed: {DeliverySpeed}";

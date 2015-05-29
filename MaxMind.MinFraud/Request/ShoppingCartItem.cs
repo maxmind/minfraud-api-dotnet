@@ -30,6 +30,9 @@ namespace MaxMind.MinFraud.Request
             Price = price;
         }
 
+        /// <summary>
+        /// The category of the item.
+        /// </summary>
         [JsonProperty("category")]
         public string Category { get; }
 
@@ -51,6 +54,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("price")]
         public decimal? Price { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return $"Category: {Category}, ItemId: {ItemId}, Quantity: {Quantity}, Price: {Price}";

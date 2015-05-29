@@ -8,6 +8,10 @@ namespace MaxMind.MinFraud.Exception
     [Serializable]
     public class InsufficientFundsException : System.Exception
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">Exception message.</param>
         public InsufficientFundsException(string message) : base(message)
         {
         }

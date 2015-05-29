@@ -9,18 +9,20 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public enum EventType
     {
+#pragma warning disable CS1591
         [EnumMember(Value = "account_creation")] AccountCreation,
         [EnumMember(Value = "account_login")] AccountLogin,
         [EnumMember(Value = "purchase")] Purchase,
         [EnumMember(Value = "recurring_purchase")] RecurringPurchase,
         [EnumMember(Value = "referral")] Referral,
         [EnumMember(Value = "survey")] Survey
+#pragma warning restore 
     }
 
-    /// <summary>
-    /// Event information for the transaction being sent to the
-    /// web service.
-    /// </summary>
+        /// <summary>
+        /// Event information for the transaction being sent to the
+        /// web service.
+        /// </summary>
     public class Event
     {
         /// <summary>
@@ -79,6 +81,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("type")]
         public EventType? Type { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return $"TransactionId: {TransactionId}, ShopId: {ShopId}, Time: {Time}, Type: {Type}";

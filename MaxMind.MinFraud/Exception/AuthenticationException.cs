@@ -12,6 +12,10 @@ namespace MaxMind.MinFraud.Exception
     [Serializable]
     public class AuthenticationException : MinFraudException
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">Exception message.</param>
         public AuthenticationException(string message) : base(message)
         {
         }

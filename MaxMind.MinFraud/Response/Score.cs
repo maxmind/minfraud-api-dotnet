@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Response
 {
+    /// <summary>
+    /// Model class for Score response.
+    /// </summary>
     public class Score
     {
         [JsonProperty("warnings")]
@@ -44,6 +47,10 @@ namespace MaxMind.MinFraud.Response
         [JsonIgnore]
         public List<Warning> Warnings => new List<Warning>(_warnings);
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             var warnings = string.Join("; ", Warnings.Select(x => x.Message));

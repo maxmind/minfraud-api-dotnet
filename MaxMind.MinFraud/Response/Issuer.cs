@@ -41,6 +41,10 @@ namespace MaxMind.MinFraud.Response
         [JsonProperty("matches_provided_phone_number")]
         public bool? MatchesProvidedPhoneNumber { get; internal set; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return

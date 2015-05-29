@@ -98,6 +98,10 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("referrer_uri")]
         public Uri ReferrerUri { get; }
 
+        /// <summary>
+        /// Returns a string that represents the current object.
+        /// </summary>
+        /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return

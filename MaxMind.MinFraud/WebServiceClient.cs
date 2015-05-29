@@ -237,6 +237,10 @@ namespace MaxMind.MinFraud
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Dispose of the underlying HttpClient.
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             if (_disposed)
