@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MaxMind.MinFraud.Exception
 {
+    /// <summary>
+    /// This class represents an authentication error.
+    /// </summary>
     [Serializable]
     public class AuthenticationException : MinFraudException
     {

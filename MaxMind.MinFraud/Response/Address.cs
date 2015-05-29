@@ -2,20 +2,44 @@
 
 namespace MaxMind.MinFraud.Response
 {
+    /// <summary>
+    /// General address response data.
+    /// </summary>
     public abstract class Address
     {
+        /// <summary>
+        /// This property is <code>true</code> if the address is in the
+        /// IP country.The property is <code>false</code> when the address is not in the IP
+        /// country. If the address could not be parsed or was not provided or if the
+        /// IP address could not be geo-located, the property will be <code>null</code>.
+        /// </summary>
         [JsonProperty("is_in_ip_country")]
         public bool? IsInIpCountry { get; internal set; }
 
+        /// <summary>
+        /// This property is <code>true</code> if the postal code
+        /// provided with the address is in the city for the address.The property is
+        /// <code>false</code> when the postal code is not in the city. If the address could
+        /// not be parsed or was not provided, the property will be <code>null</code>.
+        /// </summary>
         [JsonProperty("is_postal_in_city")]
         public bool? IsPostalInCity { get; internal set; }
 
+        /// <summary>
+        /// The latitude associated with the address.
+        /// </summary>
         [JsonProperty("latitude")]
         public double? Latitude { get; internal set; }
 
+        /// <summary>
+        /// The longitude associated with the address.
+        /// </summary>
         [JsonProperty("longitude")]
         public double? Longitude { get; internal set; }
 
+        /// <summary>
+        /// The distance in kilometers from the address to the IP location.
+          /// </summary>
         [JsonProperty("distance_to_ip_location")]
         public int? DistanceToIpLocation { get; internal set; }
 

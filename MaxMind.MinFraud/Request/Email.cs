@@ -7,10 +7,24 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// The email information for the transaction being sent to the
+    /// web service.
+    /// </summary>
     public class Email
     {
         private string _domain;
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="address">The user's email address. This will be
+        /// converted into an MD5 before being sent to the web service.
+        /// </param>
+        /// <param name="domain">The domain of the email address used in the
+        /// transaction. If <code>address</code> is passed to the constructor
+        /// and <code>domain</code> is not, the domain will be automatically
+        /// set from the address.</param>
         public Email(
             MailAddress address = null,
             string domain = null
@@ -20,6 +34,9 @@ namespace MaxMind.MinFraud.Request
             Domain = domain ?? address?.Host;
         }
 
+        /// <summary>
+        /// The MD5 generatedfrom the email address.
+        /// </summary>
         [JsonProperty("address")]
         public string AddressMD5
         {
@@ -40,9 +57,15 @@ namespace MaxMind.MinFraud.Request
             }
         }
 
+        /// <summary>
+        /// The email address used in the transaction.
+        /// </summary>
         [JsonIgnore]
         public MailAddress Address { get; }
 
+        /// <summary>
+        /// The domain of the email address.
+        /// </summary>
         [JsonProperty("domain")]
         public string Domain
         {
@@ -51,7 +74,7 @@ namespace MaxMind.MinFraud.Request
             {
                 if (Uri.CheckHostName(value) == UriHostNameType.Unknown)
                 {
-                    throw new InvalidInputException($"The email domain {value} is not valid.");
+                    throw new ArgumentException($"The email domain {value} is not valid.");
                 }
                 _domain = value;
             }

@@ -1,4 +1,5 @@
-﻿using System.Net.Mail;
+﻿using System;
+using System.Net.Mail;
 using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
 using NUnit.Framework;
@@ -28,7 +29,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestInvalidDomain()
         {
-            Assert.That(() => new Email(domain: " domain.com"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Email(domain: " domain.com"), Throws.TypeOf<ArgumentException>());
         }
     }
 }

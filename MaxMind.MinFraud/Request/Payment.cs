@@ -3,6 +3,9 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// Enumerated payment processors supported by the web service.
+    /// </summary>
     public enum PaymentProcessor
     {
         [EnumMember(Value = "adyen")] Adyen,
@@ -73,8 +76,23 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "worldpay")] Worldpay
     }
 
+    /// <summary>
+    /// The payment information for the transaction being sent to the
+    /// web service.
+    /// </summary>
     public class Payment
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="processor">The payment processor used for the 
+        /// transaction.</param>
+        /// <param name="wasAuthorized">The authorization outcome from the 
+        /// payment processor. If the transaction has not yet been approved
+        /// or denied, do not include this field.</param>
+        /// <param name="declineCode">The decline code as provided by your 
+        /// payment processor. If the transaction was not declined, do not 
+        /// include this field.</param>
         public Payment(
             PaymentProcessor? processor = null,
             bool? wasAuthorized = null,
@@ -86,12 +104,24 @@ namespace MaxMind.MinFraud.Request
             DeclineCode = declineCode;
         }
 
+        /// <summary>
+        /// The payment processor used for the transaction.
+        /// </summary>
         [JsonProperty("processor")]
         public PaymentProcessor? Processor { get; }
 
+        /// <summary>
+        /// The authorization outcome from the payment processor. If the 
+        /// transaction has not yet been approved or denied, do not include 
+        /// this field.
+        /// </summary>
         [JsonProperty("was_authorized")]
         public bool? WasAuthorized { get; }
 
+        /// <summary>
+        /// The decline code as provided by your payment processor. If the 
+        /// transaction was not declined, do not include this field.
+        /// </summary>
         [JsonProperty("decline_code")]
         public string DeclineCode { get; }
 

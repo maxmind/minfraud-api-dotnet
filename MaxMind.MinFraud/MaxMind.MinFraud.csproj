@@ -74,7 +74,6 @@
     <Compile Include="Exception\AuthenticationException.cs" />
     <Compile Include="Exception\HttpException.cs" />
     <Compile Include="Exception\InsufficientFundsException.cs" />
-    <Compile Include="Exception\InvalidInputException.cs" />
     <Compile Include="Exception\InvalidRequestException.cs" />
     <Compile Include="Exception\MinFraudException.cs" />
     <Compile Include="Request\Account.cs" />
@@ -84,7 +83,7 @@
     <Compile Include="Request\Email.cs" />
     <Compile Include="Request\Event.cs" />
     <Compile Include="Request\Location.cs" />
-    <Compile Include="Request\MinFraudRequest.cs" />
+    <Compile Include="Request\Transaction.cs" />
     <Compile Include="Request\Order.cs" />
     <Compile Include="Request\Payment.cs" />
     <Compile Include="Request\Shipping.cs" />

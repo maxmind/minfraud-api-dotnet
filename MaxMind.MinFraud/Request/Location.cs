@@ -1,9 +1,14 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using MaxMind.MinFraud.Exception;
 using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// The location information for the transaction being sent to the
+    /// web service.
+    /// </summary>
     public abstract class Location
     {
         private string _country;
@@ -36,27 +41,53 @@ namespace MaxMind.MinFraud.Request
             PhoneCountryCode = phoneCountryCode;
         }
 
+        /// <summary>
+        /// The first name associated with the address.
+        /// </summary>
         [JsonProperty("first_name")]
         public string FirstName { get; protected set; }
 
+        /// <summary>
+        /// The last name associated with the address.
+        /// </summary>
         [JsonProperty("last_name")]
         public string LastName { get; protected set; }
 
+        /// <summary>
+        /// The company name associated with the address.
+        /// </summary>
         [JsonProperty("company")]
         public string Company { get; protected set; }
 
+        /// <summary>
+        /// The first line of the address.
+        /// </summary>
         [JsonProperty("address")]
         public string Address { get; protected set; }
 
+        /// <summary>
+        /// The second line of the address.
+        /// </summary>
         [JsonProperty("address_2")]
         public string Address2 { get; protected set; }
 
+        /// <summary>
+        /// The city associated with the address.
+        /// </summary>
         [JsonProperty("city")]
         public string City { get; protected set; }
 
+        /// <summary>
+        /// The ISO 3166-2 subdivision code for the region associated 
+        /// with the address.
+        /// </summary>
         [JsonProperty("region")]
         public string Region { get; protected set; }
 
+        /// <summary>
+        /// The ISO 3166-1 alpha-2 country code for the country
+        /// associated with the address(e.g, "US")
+        /// </summary>
         [JsonProperty("country")]
         public string Country
         {
@@ -70,18 +101,27 @@ namespace MaxMind.MinFraud.Request
                 var re = new Regex("^[A-Z]{2}$");
                 if (!re.IsMatch(value))
                 {
-                    throw new InvalidInputException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
+                    throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
                 }
                 _country = value;
             }
         }
 
+        /// <summary>
+        /// The postal code for associated with the address.
+        /// </summary>
         [JsonProperty("postal")]
         public string Postal { get; protected set; }
 
+        /// <summary>
+        /// The phone country code for the phone number associated with the address.
+        /// </summary>
         [JsonProperty("phone_number")]
         public string PhoneNumber { get; protected set; }
 
+        /// <summary>
+        /// The phone number, without the country code, associated with the address.
+        /// </summary>
         [JsonProperty("phone_country_code")]
         public string PhoneCountryCode { get; protected set; }
 

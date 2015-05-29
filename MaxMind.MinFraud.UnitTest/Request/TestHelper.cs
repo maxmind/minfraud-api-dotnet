@@ -12,9 +12,9 @@ namespace MaxMind.MinFraud.UnitTest.Request
 {
     internal class TestHelper
     {
-        public static MinFraudRequest CreateFullRequest()
+        public static Transaction CreateFullRequest()
         {
-            return new MinFraudRequest(
+            return new Transaction(
                 device: new Device(IPAddress.Parse("81.2.69.160"),
                     userAgent:
                         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",

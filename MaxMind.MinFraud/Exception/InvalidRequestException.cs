@@ -9,13 +9,22 @@ using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Exception
 {
+    /// <summary>
+    /// This class is thrown when the web service rejected the request. Check
+    /// the value of <code>Code</code> for the reason code.
+    /// </summary>
     [Serializable]
-    public class InvalidRequestException : System.Exception
+    public class InvalidRequestException : MinFraudException
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">The message from the web service.</param>
+        /// <param name="code">The machine-readable error code.</param>
+        /// <param name="uri">The URI that was queried.</param>
         public InvalidRequestException(string message, string code, Uri uri) : base(message)
         {
             Code = code;
-            Message = message;
             Uri = uri;
         }
 
@@ -27,12 +36,14 @@ namespace MaxMind.MinFraud.Exception
             Uri = (Uri) info.GetValue("Uri", typeof (Uri));
         }
 
-        [JsonProperty("code")]
+        /// <summary>
+        /// The reason code for why the web service rejected the request
+        /// </summary>
         public string Code { get; }
 
-        [JsonProperty("error")]
-        public override string Message { get; }
-
+        /// <summary>
+        /// The URI that was used for the request.
+        /// </summary>
         public Uri Uri { get; }
 
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
