@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Exception
     /// <summary>
     ///     This class represents an HTTP transport error. This is not an error returned
     ///     by the web service itself. As such, it is a IOException instead of a
-    ///     GeoIP2Exception.
+    ///     MinFraudException.
     /// </summary>
     [Serializable]
     public class HttpException : IOException
