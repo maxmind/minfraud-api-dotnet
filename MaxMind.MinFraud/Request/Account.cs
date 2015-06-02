@@ -15,10 +15,10 @@ namespace MaxMind.MinFraud.Request
         /// Constructor.
         /// </summary>
         /// <param name="userId">A unique user ID associated with the end-user
-        /// in your system.If your system allows the login name for the
+        /// in your system. If your system allows the login name for the
         /// account to be changed, this should not be the login name for the
-        /// account, but rather should be an internal ID that does not change.
-        /// This is not your MaxMind user ID.</param>
+        /// account, but rather should be an internal ID that does not
+        /// change. This is not your MaxMind user ID.</param>
         /// <param name="username">The username associated with the account.
         /// This is not the MD5 of username. Rather, the MD is automatically
         /// generated from this string.</param>
@@ -33,10 +33,10 @@ namespace MaxMind.MinFraud.Request
 
         /// <summary>
         /// A unique user ID associated with the end-user in your
-        /// system.If your system allows the login name for the
+        /// system. If your system allows the login name for the
         /// account to be changed, this should not be the login
         /// name for the account, but rather should be an internal
-        /// ID that does not change.This is not your MaxMind user
+        /// ID that does not change. This is not your MaxMind user
         /// ID.
         /// </summary>
         [JsonProperty("user_id")]
@@ -44,7 +44,7 @@ namespace MaxMind.MinFraud.Request
 
         /// <summary>
         /// The username associated with the account. This is
-        /// not the MD5 of username. Rather, the MD is automatically
+        /// not the MD5 of username. Rather, the MD5 is automatically
         /// generated from this string.
         /// </summary>
         [JsonIgnore]

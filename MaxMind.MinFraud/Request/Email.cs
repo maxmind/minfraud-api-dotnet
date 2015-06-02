@@ -35,7 +35,7 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// The MD5 generatedfrom the email address.
+        /// The MD5 generated from the email address.
         /// </summary>
         [JsonProperty("address")]
         public string AddressMD5

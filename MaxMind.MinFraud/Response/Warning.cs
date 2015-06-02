@@ -13,8 +13,8 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// This value is a machine-readable code identifying the
-        /// warning. See the <see href="http://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Warning_Object">
-        /// web service documentation</see> for the current list of of warning
+        /// warning. See the <a href="http://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Warning_Object">
+        /// web service documentation</a> for the current list of of warning
         ///  codes.
         ///</summary>
         [JsonProperty("code")]
@@ -31,7 +31,7 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// This is a list of keys representing the path to the input that
         /// the warning is associated with. For instance, if the warning was
-        /// about the billing city, the list would be 
+        /// about the billing city, the list would be
         /// {"billing", "city"}. The key is used for an object and the index
         /// number for an array.
         /// </summary>

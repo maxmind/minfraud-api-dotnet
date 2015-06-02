@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
         /// This property is <c>true</c> if the address is in the
         /// IP country.The property is <c>false</c> when the address is not in the IP
         /// country. If the address could not be parsed or was not provided or if the
-        /// IP address could not be geo-located, the property will be <c>null</c>.
+        /// IP address could not be geolocated, the property will be <c>null</c>.
         /// </summary>
         [JsonProperty("is_in_ip_country")]
         public bool? IsInIpCountry { get; internal set; }

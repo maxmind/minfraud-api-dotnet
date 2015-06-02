@@ -9,13 +9,13 @@ namespace MaxMind.MinFraud.Response
     {
         /// <summary>
         /// An object containing GeoIP2 and minFraud Insights information about
-        /// the geo-located IP address.
+        /// the geolocated IP address.
         /// </summary>
         [JsonProperty("ip_location")]
         public IPLocation IPLocation { get; internal set; } = new IPLocation();
 
         /// <summary>
-        /// An object containing minFraud data about the credit card used in 
+        /// An object containing minFraud data about the credit card used in
         /// the transaction.
         /// </summary>
         [JsonProperty("credit_card")]

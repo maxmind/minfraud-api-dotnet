@@ -42,7 +42,8 @@ namespace MaxMind.MinFraud.Exception
         }
 
         /// <summary>
-        /// The reason code for why the web service rejected the request
+        /// The <a href="http://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Errors">
+        /// reason code</a> for why the web service rejected the request.
         /// </summary>
         public string Code { get; }
 

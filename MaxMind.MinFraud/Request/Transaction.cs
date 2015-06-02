@@ -10,11 +10,11 @@ namespace MaxMind.MinFraud.Request
     public class Transaction
     {
         /// <summary>
-        /// Constructor. See <see href="https://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Request_Body">
-        /// the minFraud documentation</see> for a general overview of the request sent to the web
+        /// Constructor. See <a href="https://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Request_Body">
+        /// the minFraud documentation</a> for a general overview of the request sent to the web
         /// service.
         /// </summary>
-        /// <param name="device">Information about the device used in the transaction.</param>
+        /// <param name="device">Information about the device used in the transaction. This param is required.</param>
         /// <param name="account">Information about the account used in the transaction.</param>
         /// <param name="billing">Billing information used in the transaction.</param>
         /// <param name="creditCard">Information about the credit card used in the transaction.</param>
@@ -104,7 +104,7 @@ namespace MaxMind.MinFraud.Request
         public Shipping Shipping { get; }
 
         /// <summary>
-        /// List of shopping items in the transaction.s
+        /// List of shopping items in the transaction.
         /// </summary>
         [JsonProperty("shopping_cart")]
         public List<ShoppingCartItem> ShoppingCart { get; }

@@ -14,15 +14,15 @@ namespace MaxMind.MinFraud.Response
         public Issuer Issuer { get; internal set; } = new Issuer();
 
         /// <summary>
-        /// This property contains an <see href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
-        /// ISO 3166-1 alpha-2</see> country code for the country that the card
+        /// This property contains an <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
+        /// ISO 3166-1 alpha-2</a> country code for the country that the card
         /// was issued in.
         /// </summary>
         [JsonProperty("country")]
         public string Country { get; internal set; }
 
         /// <summary>
-        /// This property is <c>true</c> if the country of the billing 
+        /// This property is <c>true</c> if the country of the billing
         /// address matches the country that the credit card was issued in.
         /// </summary>
         [JsonProperty("is_issued_in_billing_address_country")]
