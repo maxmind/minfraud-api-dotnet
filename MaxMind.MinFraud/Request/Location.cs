@@ -101,7 +101,7 @@ namespace MaxMind.MinFraud.Request
 
         /// <summary>
         /// The ISO 3166-1 alpha-2 country code for the country
-        /// associated with the address (e.g, "US")
+        /// associated with the address (e.g., "US")
         /// </summary>
         [JsonProperty("country")]
         public string Country
