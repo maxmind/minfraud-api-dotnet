@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Exception
     /// <summary>
     ///     This class represents an HTTP transport error. This is not an error returned
     ///     by the web service itself. As such, it is a IOException instead of a
-    ///     GeoIP2Exception.
+    ///     MinFraudException.
     /// </summary>
     [Serializable]
     public class HttpException : IOException
@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.Exception
             : base(message)
         {
             HttpStatus = httpStatus;
-            Uri = uri;
+            this.Uri = uri;
         }
 
         /// <summary>
@@ -41,13 +41,18 @@ namespace MaxMind.MinFraud.Exception
             : base(message, innerException)
         {
             HttpStatus = httpStatus;
-            Uri = uri;
+            this.Uri = uri;
         }
 
+        /// <summary>
+        /// Constructor for deserialization.
+        /// </summary>
+        /// <param name="info">The SerializationInfo with data.</param>
+        /// <param name="context">The source for this deserialization.</param>
         protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             HttpStatus = (HttpStatusCode) info.GetValue("HttpStatus", typeof (HttpStatusCode));
-            Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
         }
 
         /// <summary>
@@ -60,6 +65,11 @@ namespace MaxMind.MinFraud.Exception
         /// </summary>
         public Uri Uri { get; }
 
+        /// <summary>
+        /// Populates a SerializationInfo with the data needed to serialize the target object.
+        /// </summary>
+        /// <param name="info">The SerializationInfo to populate with data.</param>
+        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             base.GetObjectData(info, context);

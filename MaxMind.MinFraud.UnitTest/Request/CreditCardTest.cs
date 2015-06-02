@@ -1,4 +1,5 @@
-﻿using MaxMind.MinFraud.Exception;
+﻿using System;
+using MaxMind.MinFraud.Exception;
 using NUnit.Framework;
 using MaxMind.MinFraud.Request;
 
@@ -16,19 +17,19 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestIssuerIdNumberThatIsTooLong()
         {
-            Assert.That(() => new CreditCard(issuerIdNumber: "1234567"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(issuerIdNumber: "1234567"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestIssuerIdNumberThatIsTooShort()
         {
-            Assert.That(() => new CreditCard(issuerIdNumber: "12345"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(issuerIdNumber: "12345"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestIssuerIdNumberThatHasLetters()
         {
-            Assert.That(() => new CreditCard(issuerIdNumber: "12345a"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(issuerIdNumber: "12345a"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
@@ -41,19 +42,19 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestLast4DigitsThatIsTooLong()
         {
-            Assert.That(() => new CreditCard(last4Digits: "12345"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(last4Digits: "12345"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestLast4DigitsThatIsTooShort()
         {
-            Assert.That(() => new CreditCard(last4Digits: "123"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(last4Digits: "123"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestLast4DigitsThatHasLetters()
         {
-            Assert.That(() => new CreditCard(last4Digits: "123a"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new CreditCard(last4Digits: "123a"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]

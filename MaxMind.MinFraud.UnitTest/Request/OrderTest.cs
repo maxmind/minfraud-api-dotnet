@@ -24,26 +24,26 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestCurrencyWithDigits()
         {
-            Assert.That(() => new Order(currency: "US1"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Order(currency: "US1"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestCurrencyThatIsTooShort()
         {
-            Assert.That(() => new Order(currency: "US"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Order(currency: "US"), Throws.TypeOf<ArgumentException>());
         }
 
 
         [Test]
         public void TestCurrencyThatIsTooLong()
         {
-            Assert.That(() => new Order(currency: "USDE"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Order(currency: "USDE"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestCurrencyInWrongCase()
         {
-            Assert.That(() => new Order(currency: "usd"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Order(currency: "usd"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]

@@ -20,6 +20,9 @@ using Newtonsoft.Json.Converters;
 
 namespace MaxMind.MinFraud
 {
+    /// <summary>
+    /// Client for querying the minFraud Score and Insights web services.
+    /// </summary>
     public class WebServiceClient : IDisposable
     {
         private static readonly Version Version = Assembly.GetExecutingAssembly().GetName().Version;
@@ -29,14 +32,14 @@ namespace MaxMind.MinFraud
         private bool _disposed;
 
         /// <summary>
-        /// 
+        /// Constructor for minFraud web service client.
         /// </summary>
-        /// <param name="userId"></param>
-        /// <param name="licenseKey"></param>
-        /// <param name="locales"></param>
-        /// <param name="host"></param>
-        /// <param name="timeout"></param>
-        /// <param name="httpMessageHandler"></param>
+        /// <param name="userId">Your MaxMind user ID.</param>
+        /// <param name="licenseKey">Your MaxMind license key.</param>
+        /// <param name="locales">A list of locale codes to use for name property.</param>
+        /// <param name="host">The host to use when connecting to the web service.</param>
+        /// <param name="timeout">The timeout to use for the request.</param>
+        /// <param name="httpMessageHandler">Handler to use in request. For unit testing only.</param>
         public WebServiceClient(
             int userId,
             string licenseKey,
@@ -67,28 +70,32 @@ namespace MaxMind.MinFraud
         }
 
         /// <summary>
-        /// 
+        /// Asynchronously query Insights endpoint with transaction data
         /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        public async Task<Insights> InsightsAsync(MinFraudRequest request)
+        /// <param name="transaction">Object containing the transaction data
+        /// to be sent to the minFraud web service.</param>
+        /// <returns>Task that produces an object modeling the minFraud
+        /// Insights response data</returns>
+        public async Task<Insights> InsightsAsync(Transaction transaction)
         {
-            var insights = await MakeRequest<Insights>(request).ConfigureAwait(false);
+            var insights = await MakeRequest<Insights>(transaction).ConfigureAwait(false);
             insights.IPLocation.SetLocales(_locales);
             return insights;
         }
 
         /// <summary>
-        /// 
+        /// Asynchronously query Score endpoint with transaction data
         /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        public async Task<Score> ScoreAsync(MinFraudRequest request)
+        /// <param name="transaction">Object containing the transaction data
+        /// to be sent to the minFraud web service.</param>
+        /// <returns>Task that produces an object modeling the minFraud Score
+        /// response data</returns>
+        public async Task<Score> ScoreAsync(Transaction transaction)
         {
-            return await MakeRequest<Score>(request).ConfigureAwait(false);
+            return await MakeRequest<Score>(transaction).ConfigureAwait(false);
         }
 
-        private async Task<T> MakeRequest<T>(MinFraudRequest request) where T : Score
+        private async Task<T> MakeRequest<T>(Transaction request) where T : Score
         {
             var settings = new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore};
             settings.Converters.Add(new IPAddressConverter());
@@ -221,12 +228,19 @@ namespace MaxMind.MinFraud
             }
         }
 
+        /// <summary>
+        /// Dispose of the underlying HttpClient.
+        /// </summary>
         public void Dispose()
         {
             Dispose(true);
             GC.SuppressFinalize(this);
         }
 
+        /// <summary>
+        /// Dispose of the underlying HttpClient.
+        /// </summary>
+        /// <param name="disposing"></param>
         protected virtual void Dispose(bool disposing)
         {
             if (_disposed)

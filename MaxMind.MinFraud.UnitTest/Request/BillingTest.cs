@@ -1,4 +1,5 @@
-﻿using MaxMind.MinFraud.Exception;
+﻿using System;
+using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
 using NUnit.Framework;
 
@@ -71,19 +72,19 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestCountryThatIsTooLong()
         {
-            Assert.That(() => new Billing(country: "USA"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Billing(country: "USA"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestCountryWithNumbers()
         {
-            Assert.That(() => new Billing(country: "U1"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Billing(country: "U1"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
         public void TestCountryInWrongCase()
         {
-            Assert.That(() => new Billing(country: "us"), Throws.TypeOf<InvalidInputException>());
+            Assert.That(() => new Billing(country: "us"), Throws.TypeOf<ArgumentException>());
         }
 
         [Test]
