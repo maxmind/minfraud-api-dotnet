@@ -36,8 +36,8 @@ namespace MaxMind.MinFraud.UnitTest
             CompareJson(responseContent, response);
 
             // The purpose here is to test that SetLocales worked as expected
-            Assert.AreEqual("London", response.IPLocation.City.Name);
-            Assert.AreEqual("United Kingdom", response.IPLocation.Country.Name);
+            Assert.AreEqual("London", response.IPAddress.City.Name);
+            Assert.AreEqual("United Kingdom", response.IPAddress.Country.Name);
         }
 
 
@@ -53,13 +53,13 @@ namespace MaxMind.MinFraud.UnitTest
             var actualResponse = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
 
             // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-            JObject ipLocation = (JObject) expectedResponse["ip_location"];
-            if (ipLocation != null)
+            JObject ipAddress = (JObject) expectedResponse["ip_address"];
+            if (ipAddress != null)
             {
-                ipLocation.Add("maxmind", new JObject());
-                ipLocation.Add("postal", new JObject());
+                ipAddress.Add("maxmind", new JObject());
+                ipAddress.Add("postal", new JObject());
                 var representedCountry = new JObject {{"names", new JObject()}};
-                ipLocation.Add("represented_country", representedCountry);
+                ipAddress.Add("represented_country", representedCountry);
             }
 
             var areEqual = JToken.DeepEquals(expectedResponse, actualResponse);

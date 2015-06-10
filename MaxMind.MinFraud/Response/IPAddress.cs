@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for minFraud GeoIP2 Insights data.
     /// </summary>
-    public class IPLocation : InsightsResponse
+    public class IPAddress : InsightsResponse
     {
         /// <summary>
         /// Country object for the requested IP address. This record represents the
@@ -21,6 +21,13 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonProperty("location")]
         new public GeoIP2Location Location { get; internal set; } = new GeoIP2Location();
+
+        /// <summary>
+        /// The risk associated with the IP address. The value ranges from 0.01 
+        /// to 99. A higher score indicates a higher risk.
+        /// </summary>
+        [JsonProperty("risk")]
+        public double? Risk { get; internal set; }
 
         internal new void SetLocales(List<string> locales)
         {
