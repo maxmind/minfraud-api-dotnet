@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             var insights = new JObject
             {
                 {"id", id},
-                {"ip_location", new JObject {{"country", new JObject {{"iso_code", "US"}}}}},
+                {"ip_address", new JObject {{"country", new JObject {{"iso_code", "US"}}}}},
                 {"credit_card", new JObject {{"is_prepaid", true}}},
                 {"shipping_address", new JObject {{"is_in_ip_country", true}}},
                 {"billing_address", new JObject {{"is_in_ip_country", true}}},
@@ -28,10 +28,10 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
             }.ToObject<Insights>();
 
-            Assert.AreEqual("US", insights.IPLocation.Country.IsoCode);
+            Assert.AreEqual("US", insights.IPAddress.Country.IsoCode);
             Assert.AreEqual(true, insights.CreditCard.IsPrepaid);
-            Assert.AreEqual(true, insights.ShippingAddress.IsInIpCountry);
-            Assert.AreEqual(true, insights.BillingAddress.IsInIpCountry);
+            Assert.AreEqual(true, insights.ShippingAddress.IsInIPCountry);
+            Assert.AreEqual(true, insights.BillingAddress.IsInIPCountry);
             Assert.AreEqual(id, insights.Id.ToString());
             Assert.AreEqual(123, insights.CreditsRemaining);
             Assert.AreEqual(0.01, insights.RiskScore);

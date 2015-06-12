@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Response
         /// IP address could not be geolocated, the property will be <c>null</c>.
         /// </summary>
         [JsonProperty("is_in_ip_country")]
-        public bool? IsInIpCountry { get; internal set; }
+        public bool? IsInIPCountry { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the postal code
@@ -41,7 +41,7 @@ namespace MaxMind.MinFraud.Response
         /// The distance in kilometers from the address to the IP location.
           /// </summary>
         [JsonProperty("distance_to_ip_location")]
-        public int? DistanceToIpLocation { get; internal set; }
+        public int? DistanceToIPLocation { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.
@@ -50,7 +50,7 @@ namespace MaxMind.MinFraud.Response
         public override string ToString()
         {
             return
-                $"IsInIpCountry: {IsInIpCountry}, IsPostalInCity: {IsPostalInCity}, Latitude: {Latitude}, Longitude: {Longitude}, DistanceToIpLocation: {DistanceToIpLocation}";
+                $"IsInIPCountry: {IsInIPCountry}, IsPostalInCity: {IsPostalInCity}, Latitude: {Latitude}, Longitude: {Longitude}, DistanceToIPLocation: {DistanceToIPLocation}";
         }
     }
 }

@@ -9,10 +9,10 @@ namespace MaxMind.MinFraud.Response
     {
         /// <summary>
         /// An object containing GeoIP2 and minFraud Insights information about
-        /// the geolocated IP address.
+        /// the IP address.
         /// </summary>
-        [JsonProperty("ip_location")]
-        public IPLocation IPLocation { get; internal set; } = new IPLocation();
+        [JsonProperty("ip_address")]
+        public IPAddress IPAddress { get; internal set; } = new IPAddress();
 
         /// <summary>
         /// An object containing minFraud data about the credit card used in
@@ -42,7 +42,7 @@ namespace MaxMind.MinFraud.Response
         public override string ToString()
         {
             return
-                $"{base.ToString()}, IPLocation: {{{IPLocation}}}, CreditCard: {{{CreditCard}}}, ShippingAddress: {{{ShippingAddress}}}, BillingAddress: {{{BillingAddress}}}";
+                $"{base.ToString()}, IPAddress: {{{IPAddress}}}, CreditCard: {{{CreditCard}}}, ShippingAddress: {{{ShippingAddress}}}, BillingAddress: {{{BillingAddress}}}";
         }
     }
 }

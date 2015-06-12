@@ -79,7 +79,7 @@ namespace MaxMind.MinFraud
         public async Task<Insights> InsightsAsync(Transaction transaction)
         {
             var insights = await MakeRequest<Insights>(transaction).ConfigureAwait(false);
-            insights.IPLocation.SetLocales(_locales);
+            insights.IPAddress.SetLocales(_locales);
             return insights;
         }
 
