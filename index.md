@@ -1,11 +1,11 @@
 ---
 layout: default
-title: MaxMind minFraud Score and Insights .NET APII
+title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
 version: v0.0.1
 ---
 
-# MaxMind minFraud Score and Insights .NET API
+# MaxMind minFraud v2.0 .NET API
 
 This is an early pre-release version. Don't use it.
 
