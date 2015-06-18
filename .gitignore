@@ -109,3 +109,5 @@ Backup*/
 UpgradeLog*.XML
 
 .gh-pages
+.doxygen.conf
+
