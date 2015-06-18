@@ -12,10 +12,8 @@ build:
   verbosity: minimal
 
 notifications:
-- provider: HipChat
-  room: dev
-  auth_token:
-    secure: NtKXu/kGk8Td4YqCH95camAcNQtB3rMll+5DALAmbDY=
-  on_build_success: true
+- provider: Email
+  to: dev@maxmind.com
+  on_build_success: false
   on_build_failure: true
-  on_build_status_changed: false
+  on_build_status_changed: true
