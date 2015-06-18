@@ -1,0 +1,17 @@
+language: csharp
+
+before_install:
+  - nuget restore MaxMind.MinFraud.sln
+  - wget https://github.com/nunit/nunit/releases/download/3.0.0-beta-2/NUnit-3.0.0-beta-2.zip
+  - unzip NUnit-3.0.0-beta-2.zip
+
+script:
+  - xbuild
+  - mono ./bin/nunit-console.exe ./MaxMind.MinFraud.UnitTest/bin/Debug/MaxMind.MinFraud.UnitTest.dll
+
+notifications:
+  email:
+    recipients:
+      - dev@maxmind.com
+    on_success: change
+    on_failure: always
