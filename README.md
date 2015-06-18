@@ -1,4 +1,4 @@
-# MaxMind minFraud v2.0 .NET API
+# .NET API for MaxMind minFraud Score and Insights
 
 This is an early pre-release version. Don't use it.
 
