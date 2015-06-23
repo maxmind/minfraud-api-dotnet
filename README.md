@@ -1,11 +1,11 @@
-# MaxMind minFraud v2.0 .NET API
+# .NET API for MaxMind minFraud Score and minFraud Insights
 
 This is an early pre-release version. Don't use it.
 
 ## Description ##
 
-This package provides an API for the [MaxMind minFraud Score and Insights
-web services](http://dev.maxmind.com/minfraud-score-and-insights-api-documentation).
+This package provides an API for the [MaxMind minFraud Score and
+minFraud Insights web services](http://dev.maxmind.com/minfraud/minfraud-score-and-insights-api-documentation/).
 
 ## Requirements ##
 
@@ -28,6 +28,10 @@ install-package MaxMind.MinFraud
 
 ## Usage ##
 
+This API uses the [async/await
+feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
+.NET 4.5 to provide non-blocking calls to the minFraud web services.
+
 To use this API, first create a new `WebServiceClient` object. The constructor
 takes your MaxMind user ID, license key, and an optional options array as
 arguments:
@@ -43,9 +47,9 @@ you are sending to minFraud:
 
 ```csharp
 var transaction = new Transaction(
-    device: new Device(IPAddress.Parse("81.2.69.160"),
+    device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
         userAgent:
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
+            "Mozilla/5.0 (X11; Linux x86_64)",
         acceptLanguage: "en-US,en;q=0.8"
         ),
     account:
@@ -57,14 +61,15 @@ var transaction = new Transaction(
 ```
 
 
-After creating the request object, send a Score request by calling the
-`ScoreAsync` method using the `await` keyword:
+After creating the request object, send a non-blocking minFraud Score request
+by calling the `ScoreAsync` method using the `await` keyword from a method
+marked as async:
 
 ```csharp
 var score = await client.ScoreAsync(transaction);
 ```
 
-or an Insights request by calling `InsightsAsynce` method:
+Or a minFRaud Insights request by calling `InsightsAsynce` method:
 
 ```csharp
 var score = await client.ScoreAsync(transaction);
@@ -98,107 +103,123 @@ Thrown by `ScoreAsync(transaction)` or `InsightsAsync(transaction)` on
 ## Example
 
 ```csharp
+using MaxMind.MinFraud;
+using MaxMind.MinFraud.Request;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-var transaction = new Transaction(
-    device: new Device(IPAddress.Parse("81.2.69.160"),
-        userAgent:
-            "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
-        acceptLanguage: "en-US,en;q=0.8"
-        ),
-    userEvent:
-        new Event
-            (
-            transactionId: "txn3134133",
-            shopId: "s2123",
-            time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
-            type: EventType.Purchase
-            ),
-    account:
-        new Account(
-            userId: "3132",
-            username: "fred"
-            ),
-    email:
-        new Email(
-            address: new MailAddress("test@maxmind.com"),
-            domain: "maxmind.com"
-            ),
-    billing:
-        new Billing(
-            firstName: "First",
-            lastName: "Last",
-            company: "Company",
-            address: "101 Address Rd.",
-            address2: "Unit 5",
-            city: "City of Thorns",
-            region: "CT",
-            country: "US",
-            postal: "06510",
-            phoneNumber: "323-123-4321",
-            phoneCountryCode: "1"
-            ),
-    shipping:
-        new Shipping(
-            firstName: "ShipFirst",
-            lastName: "ShipLast",
-            company: "ShipCo",
-            address: "322 Ship Addr. Ln.",
-            address2: "St. 43",
-            city: "Nowhere",
-            region: "OK",
-            country: "US",
-            postal: "73003",
-            phoneNumber: "403-321-2323",
-            phoneCountryCode: "1",
-            deliverySpeed: ShippingDeliverySpeed.SameDay
-            ),
-    payment:
-        new Payment(
-            processor: PaymentProcessor.Stripe,
-            wasAuthorized: false,
-            declineCode: "invalid number"
-            ),
-    creditCard:
-        new CreditCard(
-            issuerIdNumber: "323132",
-            bankName: "Bank of No Hope",
-            bankPhoneCountryCode: "1",
-            bankPhoneNumber: "800-342-1232",
-            avsResult: 'Y',
-            cvvResult: 'N',
-            last4Digits: "7643"
-            ),
-    order:
-        new Order(
-            amount: (decimal) 323.21,
-            currency: "USD",
-            discountCode: "FIRST",
-            affiliateId: "af12",
-            subaffiliateId: "saf42",
-            referrerUri: new Uri("http://www.amazon.com/")
-            ),
-    shoppingCart: new List<ShoppingCartItem>
-    {
-        new ShoppingCartItem(
-            category: "pets",
-            itemId: "ad23232",
-            quantity: 2,
-            price: (decimal) 20.43
-            ),
-        new ShoppingCartItem(
-            category: "beauty",
-            itemId: "bst112",
-            quantity: 1,
-            price: (decimal) 100.00
-            )
-    }
-    );
-
-using (var client = new WebServiceClient(6, "ABCD567890"))
+public class MinFraudExample
 {
-    // Use `InsightsAsync` if querying Insights
-    var score = await client.ScoreAsync(transaction);
-    Console.WriteLine(transaction);
+    static void Main()
+    {
+        MinFraudAsync().Wait();
+    }
+
+    static public async Task MinFraudAsync()
+    {
+        var transaction = new Transaction(
+            device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
+                userAgent:
+                "Mozilla/5.0 (X11; Linux x86_64)",
+                acceptLanguage: "en-US,en;q=0.8"
+            ),
+            userEvent:
+            new Event
+            (
+                transactionId: "txn3134133",
+                shopId: "s2123",
+                time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                type: EventType.Purchase
+            ),
+            account:
+            new Account(
+                userId: "3132",
+                username: "fred"
+            ),
+            email:
+            new Email(
+                address: new System.Net.Mail.MailAddress("test@maxmind.com"),
+                domain: "maxmind.com"
+            ),
+            billing:
+            new Billing(
+                firstName: "First",
+                lastName: "Last",
+                company: "Company",
+                address: "101 Address Rd.",
+                address2: "Unit 5",
+                city: "City of Thorns",
+                region: "CT",
+                country: "US",
+                postal: "06510",
+                phoneNumber: "323-123-4321",
+                phoneCountryCode: "1"
+            ),
+            shipping:
+            new Shipping(
+                firstName: "ShipFirst",
+                lastName: "ShipLast",
+                company: "ShipCo",
+                address: "322 Ship Addr. Ln.",
+                address2: "St. 43",
+                city: "Nowhere",
+                region: "OK",
+                country: "US",
+                postal: "73003",
+                phoneNumber: "403-321-2323",
+                phoneCountryCode: "1",
+                deliverySpeed: ShippingDeliverySpeed.SameDay
+            ),
+            payment:
+            new Payment(
+                processor: PaymentProcessor.Stripe,
+                wasAuthorized: false,
+                declineCode: "invalid number"
+            ),
+            creditCard:
+            new CreditCard(
+                issuerIdNumber: "323132",
+                bankName: "Bank of No Hope",
+                bankPhoneCountryCode: "1",
+                bankPhoneNumber: "800-342-1232",
+                avsResult: 'Y',
+                cvvResult: 'N',
+                last4Digits: "7643"
+            ),
+            order:
+            new Order(
+                amount: (decimal) 323.21,
+                currency: "USD",
+                discountCode: "FIRST",
+                affiliateId: "af12",
+                subaffiliateId: "saf42",
+                referrerUri: new Uri("http://www.amazon.com/")
+            ),
+            shoppingCart: new List<ShoppingCartItem>
+            {
+                new ShoppingCartItem(
+                    category: "pets",
+                    itemId: "ad23232",
+                    quantity: 2,
+                    price: (decimal) 20.43
+                ),
+                new ShoppingCartItem(
+                    category: "beauty",
+                    itemId: "bst112",
+                    quantity: 1,
+                    price: (decimal) 100.00
+                )
+            }
+        );
+
+        using (var client = new WebServiceClient(6, "ABCD567890"))
+        {
+            // Use `InsightsAsync` if querying Insights
+            var score = await client.ScoreAsync(transaction);
+            Console.WriteLine(score);
+        }
+    }
 }
 ```
 

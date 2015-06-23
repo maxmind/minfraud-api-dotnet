@@ -2,6 +2,9 @@ version: 1.0.{build}
 
 os: Visual Studio 2015 RC
 
+before_build:
+  - nuget restore -verbosity detailed
+
 install:
 - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
 
@@ -9,10 +12,8 @@ build:
   verbosity: minimal
 
 notifications:
-- provider: HipChat
-  room: dev
-  auth_token:
-    secure: NtKXu/kGk8Td4YqCH95camAcNQtB3rMll+5DALAmbDY=
-  on_build_success: true
+- provider: Email
+  to: dev@maxmind.com
+  on_build_success: false
   on_build_failure: true
-  on_build_status_changed: false
+  on_build_status_changed: true
