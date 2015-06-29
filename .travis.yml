@@ -8,6 +8,8 @@ script:
   - xbuild /p:TargetFrameworkVersion="v4.5"
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./MaxMind.MinFraud.UnitTest/bin/Debug/MaxMind.MinFraud.UnitTest.dll
 
+sudo: false
+
 notifications:
   email:
     recipients:
