@@ -48,6 +48,8 @@ EOF
 
 cat README.md >> $PAGE
 
+nuget restore MaxMind.MinFraud.sln
+
 xbuild /p:TargetFrameworkVersion="v4.5" /property:Configuration=Release
 monodocer -assembly:MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.dll -importslashdoc:MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.xml -path:/tmp/mf-dotnet-$TAG -pretty
 mdoc export-html -o .gh-pages/doc/$TAG /tmp/mf-dotnet-$TAG
