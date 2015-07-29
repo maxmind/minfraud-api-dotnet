@@ -13,6 +13,13 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
+        public MinFraudException() : base()
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         /// <param name="message">Exception message.</param>
         public MinFraudException(string message) : base(message)
         {
@@ -22,7 +29,7 @@ namespace MaxMind.MinFraud.Exception
         /// Constructor.
         /// </summary>
         /// <param name="message">Exception message.</param>
-        /// <param name="innerException">The previous exception.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
         public MinFraudException(string message, System.Exception innerException) : base(message, innerException)
         {
         }
