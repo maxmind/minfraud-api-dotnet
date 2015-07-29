@@ -1,7 +1,7 @@
-﻿using System;
-using System.Text.RegularExpressions;
-using MaxMind.MinFraud.Exception;
+﻿using MaxMind.MinFraud.Exception;
 using Newtonsoft.Json;
+using System;
+using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -17,24 +17,30 @@ namespace MaxMind.MinFraud.Request
         /// Constructor.
         /// </summary>
         /// <param name="amount">The total order amount for the transaction.</param>
-        /// <param name="currency">The ISO 4217 currency code for the currency 
+        /// <param name="currency">The ISO 4217 currency code for the currency
         /// used in the transaction.</param>
-        /// <param name="discountCode">The discount code applied to the 
-        /// transaction. If multiple discount codes were used, please separate 
+        /// <param name="discountCode">The discount code applied to the
+        /// transaction. If multiple discount codes were used, please separate
         /// them with a comma.</param>
-        /// <param name="affiliateId">The ID of the affiliate where the order is 
+        /// <param name="affiliateId">The ID of the affiliate where the order is
         /// coming from.</param>
-        /// <param name="subaffiliateId">The ID of the sub-affiliate where the 
+        /// <param name="subaffiliateId">The ID of the sub-affiliate where the
         /// order is coming from.</param>
-        /// <param name="referrerUri">The URI of the referring site for this 
+        /// <param name="referrerUri">The URI of the referring site for this
         /// order.</param>
+        /// <param name="isGift">Whether order was marked as a gift by the
+        /// purchaser.</param>
+        /// <param name="hasGiftMessage">Whether the purchaser included a gift
+        /// message.</param>
         public Order(
             decimal? amount = null,
             string currency = null,
             string discountCode = null,
             string affiliateId = null,
             string subaffiliateId = null,
-            Uri referrerUri = null
+            Uri referrerUri = null,
+            bool? isGift = null,
+            bool? hasGiftMessage = null
             )
         {
             Amount = amount;
@@ -43,6 +49,8 @@ namespace MaxMind.MinFraud.Request
             AffiliateId = affiliateId;
             SubaffiliateId = subaffiliateId;
             ReferrerUri = referrerUri;
+            IsGift = isGift;
+            HasGiftMessage = hasGiftMessage;
         }
 
         /// <summary>
@@ -74,7 +82,7 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// The discount code applied to the transaction. If multiple discount 
+        /// The discount code applied to the transaction. If multiple discount
         /// codes were used, please separate them with a comma.
         /// </summary>
         [JsonProperty("discount_code")]
@@ -99,13 +107,25 @@ namespace MaxMind.MinFraud.Request
         public Uri ReferrerUri { get; }
 
         /// <summary>
+        /// Whether order was marked as a gift by the purchaser.
+        /// </summary>
+        [JsonProperty("is_gift")]
+        public bool? IsGift { get; }
+
+        /// <summary>
+        /// Whether the purchaser included a gift message.
+        /// </summary>
+        [JsonProperty("has_gift_message")]
+        public bool? HasGiftMessage { get; }
+
+        /// <summary>
         /// Returns a string that represents the current object.
         /// </summary>
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return
-                $"Amount: {Amount}, Currency: {Currency}, DiscountCode: {DiscountCode}, AffiliateId: {AffiliateId}, SubaffiliateId: {SubaffiliateId}, ReferrerUri: {ReferrerUri}";
+                $"Amount: {Amount}, Currency: {Currency}, DiscountCode: {DiscountCode}, AffiliateId: {AffiliateId}, SubaffiliateId: {SubaffiliateId}, ReferrerUri: {ReferrerUri}, IsGift: {IsGift}, HasGiftMessage: {HasGiftMessage}";
         }
     }
 }

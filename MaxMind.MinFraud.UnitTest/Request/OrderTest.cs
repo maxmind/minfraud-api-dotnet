@@ -1,7 +1,7 @@
-﻿using System;
-using MaxMind.MinFraud.Exception;
+﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
 using NUnit.Framework;
+using System;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -10,8 +10,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestAmount()
         {
-            var order = new Order(amount: (decimal) 1.1);
-            Assert.AreEqual((decimal) 1.1, order.Amount);
+            var order = new Order(amount: (decimal)1.1);
+            Assert.AreEqual((decimal)1.1, order.Amount);
         }
 
         [Test]
@@ -32,7 +32,6 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             Assert.That(() => new Order(currency: "US"), Throws.TypeOf<ArgumentException>());
         }
-
 
         [Test]
         public void TestCurrencyThatIsTooLong()
@@ -73,6 +72,20 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var uri = new Uri("http://www.mm.com/");
             var order = new Order(referrerUri: uri);
             Assert.AreEqual(uri, order.ReferrerUri);
+        }
+
+        [Test]
+        public void TestIsGift()
+        {
+            var order = new Order(isGift: true);
+            Assert.AreEqual(order.IsGift, true);
+        }
+
+        [Test]
+        public void TestHasGiftMessage()
+        {
+            var order = new Order(hasGiftMessage: true);
+            Assert.AreEqual(order.HasGiftMessage, true);
         }
     }
 }
