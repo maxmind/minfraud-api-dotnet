@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Runtime.Serialization;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -10,20 +10,33 @@ namespace MaxMind.MinFraud.Request
     public enum EventType
     {
 #pragma warning disable CS1591
-        [EnumMember(Value = "account_creation")] AccountCreation,
-        [EnumMember(Value = "account_login")] AccountLogin,
-        [EnumMember(Value = "purchase")] Purchase,
-        [EnumMember(Value = "recurring_purchase")] RecurringPurchase,
-        [EnumMember(Value = "referral")] Referral,
-        [EnumMember(Value = "survey")] Survey
-#pragma warning restore 
+
+        [EnumMember(Value = "account_creation")]
+        AccountCreation,
+
+        [EnumMember(Value = "account_login")]
+        AccountLogin,
+
+        [EnumMember(Value = "purchase")]
+        Purchase,
+
+        [EnumMember(Value = "recurring_purchase")]
+        RecurringPurchase,
+
+        [EnumMember(Value = "referral")]
+        Referral,
+
+        [EnumMember(Value = "survey")]
+        Survey
+
+#pragma warning restore
     }
 
-        /// <summary>
-        /// Event information for the transaction being sent to the
-        /// web service.
-        /// </summary>
-    public class Event
+    /// <summary>
+    /// Event information for the transaction being sent to the
+    /// web service.
+    /// </summary>
+    public sealed class Event
     {
         /// <summary>
         /// Constructor.
@@ -67,7 +80,6 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonProperty("shop_id")]
         public string ShopId { get; }
-
 
         /// <summary>
         /// The date and time the event occurred.

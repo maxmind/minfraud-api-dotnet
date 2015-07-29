@@ -1,7 +1,7 @@
-﻿using System;
-using System.Text.RegularExpressions;
-using MaxMind.MinFraud.Exception;
+﻿using MaxMind.MinFraud.Exception;
 using Newtonsoft.Json;
+using System;
+using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
     /// The credit card information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class CreditCard
+    public sealed class CreditCard
     {
         private string _issuerIdNumber;
         private string _last4Digits;
@@ -17,20 +17,20 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="issuerIdNumber">The issuer ID number for the credit card. 
-        /// This is the first 6 digits of the credit card number. It identifies 
+        /// <param name="issuerIdNumber">The issuer ID number for the credit card.
+        /// This is the first 6 digits of the credit card number. It identifies
         /// the issuing bank.</param>
-        /// <param name="last4Digits">The last four digits of the credit card 
+        /// <param name="last4Digits">The last four digits of the credit card
         /// number.</param>
-        /// <param name="bankName">The name of the issuing bank as provided by 
+        /// <param name="bankName">The name of the issuing bank as provided by
         /// the end user</param>
         /// <param name="bankPhoneCountryCode">The phone country code for the
         ///  issuing bank as provided by the end user.</param>
-        /// <param name="bankPhoneNumber">The phone number, without the 
-        /// country code, for the issuing bank as provided by the end 
+        /// <param name="bankPhoneNumber">The phone number, without the
+        /// country code, for the issuing bank as provided by the end
         /// user.</param>
         /// <param name="avsResult">The address verification system (AVS)
-        /// check result, as returned to you by the credit card processor. 
+        /// check result, as returned to you by the credit card processor.
         /// The minFraud service supports the standard AVS codes.</param>
         /// <param name="cvvResult">The card verification value (CVV) code
         ///  as provided by the payment processor.</param>
@@ -54,7 +54,7 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// The issuer ID number for the credit card. This is the first 6 
+        /// The issuer ID number for the credit card. This is the first 6
         /// digits of the credit card number. It identifies the issuing bank.
         /// </summary>
         [JsonProperty("issuer_id_number")]
@@ -120,7 +120,7 @@ namespace MaxMind.MinFraud.Request
 
         /// <summary>
         /// The address verification system (AVS) check result, as
-        /// returned to you by the credit card processor. The minFraud 
+        /// returned to you by the credit card processor. The minFraud
         /// service supports the standard AVS codes.
         /// </summary>
         [JsonProperty("avs_result")]

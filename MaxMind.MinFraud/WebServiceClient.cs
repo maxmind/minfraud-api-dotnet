@@ -1,5 +1,11 @@
 ﻿#region
 
+using MaxMind.MinFraud.Exception;
+using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Response;
+using MaxMind.MinFraud.Util;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,12 +15,6 @@ using System.Net.Http.Headers;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using MaxMind.MinFraud.Exception;
-using MaxMind.MinFraud.Request;
-using MaxMind.MinFraud.Response;
-using MaxMind.MinFraud.Util;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 #endregion
 
@@ -23,7 +23,8 @@ namespace MaxMind.MinFraud
     /// <summary>
     /// Client for querying the minFraud Score and Insights web services.
     /// </summary>
-    public class WebServiceClient : IDisposable
+    public sealed class WebServiceClient : IDisposable
+    // If removing sealed, update Dispose methods.
     {
         private static readonly Version Version = Assembly.GetExecutingAssembly().GetName().Version;
         private const string BasePath = "/minfraud/v2.0/";
@@ -49,7 +50,7 @@ namespace MaxMind.MinFraud
             HttpMessageHandler httpMessageHandler = null
             )
         {
-            _locales = locales ?? new List<string> {"en"};
+            _locales = locales ?? new List<string> { "en" };
             _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
             {
                 BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
@@ -97,12 +98,12 @@ namespace MaxMind.MinFraud
 
         private async Task<T> MakeRequest<T>(Transaction request) where T : Score
         {
-            var settings = new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore};
+            var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
             settings.Converters.Add(new IPAddressConverter());
             settings.Converters.Add(new StringEnumConverter());
             var requestBody = JsonConvert.SerializeObject(request, settings);
 
-            var requestPath = typeof (T).Name.ToLower();
+            var requestPath = typeof(T).Name.ToLower();
             var response = await _httpClient.PostAsync(requestPath,
                 new StringContent(requestBody, Encoding.UTF8, "application/json"))
                 .ConfigureAwait(false);
@@ -122,14 +123,14 @@ namespace MaxMind.MinFraud
             if (!parsedOk || length <= 0)
             {
                 throw new HttpException(
-                    $"Received a 200 response for minFraud {typeof (T).Name} but there was no message body",
+                    $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
                     response.StatusCode, response.RequestMessage.RequestUri);
             }
             var contentType = response.Content.Headers.GetValues("Content-Type")?.FirstOrDefault();
             if (contentType == null || !contentType.Contains("json"))
             {
                 throw new MinFraudException(
-                    $"Received a 200 response for  {typeof (T).Name} but it does not appear to be JSON: {contentType}");
+                    $"Received a 200 response for  {typeof(T).Name} but it does not appear to be JSON: {contentType}");
             }
             using (var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
             using (var sr = new StreamReader(s))
@@ -151,7 +152,7 @@ namespace MaxMind.MinFraud
         private async Task HandleError(HttpResponseMessage response)
         {
             var uri = response.RequestMessage.RequestUri;
-            var status = (int) response.StatusCode;
+            var status = (int)response.StatusCode;
 
             if (status >= 400 && status < 500)
             {
@@ -172,7 +173,7 @@ namespace MaxMind.MinFraud
         private async Task Handle4xxStatus(HttpResponseMessage response)
         {
             var uri = response.RequestMessage.RequestUri;
-            var status = (int) response.StatusCode;
+            var status = (int)response.StatusCode;
 
             // The null guard is primarily because our unit testing mock library does not
             // set Content for the default response.
@@ -241,7 +242,7 @@ namespace MaxMind.MinFraud
         /// Dispose of the underlying HttpClient.
         /// </summary>
         /// <param name="disposing"></param>
-        protected virtual void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (_disposed)
                 return;

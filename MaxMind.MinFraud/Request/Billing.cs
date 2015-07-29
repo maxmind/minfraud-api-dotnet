@@ -4,7 +4,7 @@
     /// The billing information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Billing : Location
+    public sealed class Billing : Location
     {
         /// <summary>
         /// Constructor.

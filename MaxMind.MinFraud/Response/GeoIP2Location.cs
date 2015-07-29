@@ -1,6 +1,6 @@
-﻿using System;
-using MaxMind.GeoIP2.Model;
+﻿using MaxMind.GeoIP2.Model;
 using Newtonsoft.Json;
+using System;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// A subclass of the GeoIP2 Location model with minFraud-specific
     /// additions.
     /// </summary>
-    public class GeoIP2Location: Location
+    public sealed class GeoIP2Location : Location
     {
         /// <summary>
         /// The date and time of the transaction in the time

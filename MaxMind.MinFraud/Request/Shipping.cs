@@ -1,5 +1,5 @@
-﻿using System.Runtime.Serialization;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -9,10 +9,19 @@ namespace MaxMind.MinFraud.Request
     public enum ShippingDeliverySpeed
     {
 #pragma warning disable CS1591
-        [EnumMember(Value = "same_day")] SameDay,
-        [EnumMember(Value = "overnight")] Overnight,
-        [EnumMember(Value = "expedited")] Expedited,
-        [EnumMember(Value = "standard")] Standard
+
+        [EnumMember(Value = "same_day")]
+        SameDay,
+
+        [EnumMember(Value = "overnight")]
+        Overnight,
+
+        [EnumMember(Value = "expedited")]
+        Expedited,
+
+        [EnumMember(Value = "standard")]
+        Standard
+
 #pragma warning restore
     }
 
@@ -20,7 +29,7 @@ namespace MaxMind.MinFraud.Request
     /// The shipping information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Shipping : Location
+    public sealed class Shipping : Location
     {
         /// <summary>
         /// Constructor.

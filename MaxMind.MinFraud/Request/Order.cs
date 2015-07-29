@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
     /// The order information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Order
+    public sealed class Order
     {
         private string _currency;
 
