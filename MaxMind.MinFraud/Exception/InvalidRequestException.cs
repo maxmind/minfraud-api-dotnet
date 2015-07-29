@@ -35,7 +35,7 @@ namespace MaxMind.MinFraud.Exception
         /// Constructor.
         /// </summary>
         /// <param name="message">The message from the web service.</param>
-        /// <param name="innerException"></param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
         public InvalidRequestException(string message, System.Exception innerException) : base(message, innerException)
         {
         }
@@ -58,7 +58,7 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="message">The message from the web service.</param>
         /// <param name="code">The machine-readable error code.</param>
         /// <param name="uri">The URI that was queried.</param>
-        /// <param name="innerException"></param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
         public InvalidRequestException(string message, string code, Uri uri, System.Exception innerException) : base(message, innerException)
         {
             Code = code;

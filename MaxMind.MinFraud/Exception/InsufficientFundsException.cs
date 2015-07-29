@@ -27,8 +27,8 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="innerException"></param>
+        /// <param name="message">Exception message.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
         public InsufficientFundsException(string message, System.Exception innerException) : base(message, innerException)
         {
         }

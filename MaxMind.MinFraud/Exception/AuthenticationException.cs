@@ -32,7 +32,7 @@ namespace MaxMind.MinFraud.Exception
         /// Constructor.
         /// </summary>
         /// <param name="message">Exception message.</param>
-        /// <param name="innerException">Inner exception.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
         public AuthenticationException(string message, System.Exception innerException) : base(message, innerException)
         {
         }
