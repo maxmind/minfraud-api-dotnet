@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using MaxMind.GeoIP2.Model;
+﻿using MaxMind.GeoIP2.Model;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// A subclass of the GeoIP2 Country model with minFraud-specific
     /// additions.
     /// </summary>
-    public class GeoIP2Country: Country
+    public sealed class GeoIP2Country : Country
     {
         /// <summary>
         /// This is <c>true</c> if the IP country is high risk.

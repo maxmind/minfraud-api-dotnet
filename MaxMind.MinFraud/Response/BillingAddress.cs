@@ -3,7 +3,7 @@
     /// <summary>
     /// Information about the billing address.
     /// </summary>
-    public class BillingAddress : Address
+    public sealed class BillingAddress : Address
     {
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Security.Cryptography;
 using System.Text;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
     /// Account related data information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Account
+    public sealed class Account
     {
         /// <summary>
         /// Constructor.

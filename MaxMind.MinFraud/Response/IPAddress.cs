@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using MaxMind.GeoIP2.Responses;
+﻿using MaxMind.GeoIP2.Responses;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Response
 {
     /// <summary>
     /// Model for minFraud GeoIP2 Insights data.
     /// </summary>
-    public class IPAddress : InsightsResponse
+    public sealed class IPAddress : InsightsResponse
     {
         /// <summary>
         /// Country object for the requested IP address. This record represents the
@@ -23,7 +23,7 @@ namespace MaxMind.MinFraud.Response
         new public GeoIP2Location Location { get; internal set; } = new GeoIP2Location();
 
         /// <summary>
-        /// The risk associated with the IP address. The value ranges from 0.01 
+        /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
         [JsonProperty("risk")]

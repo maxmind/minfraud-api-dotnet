@@ -1,7 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Response
         private List<Warning> _warnings = new List<Warning>();
 
         /// <summary>
-        /// The approximate number of service credits remaining on your 
+        /// The approximate number of service credits remaining on your
         /// account.
         /// </summary>
         [JsonProperty("credits_remaining")]
@@ -22,7 +22,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// This is a UUID that identifies the minFraud request. Please use
-        /// this ID in support requests to MaxMind so that we can easily 
+        /// this ID in support requests to MaxMind so that we can easily
         /// identify a particular request.
         /// </summary>
         [JsonProperty("id")]
@@ -39,9 +39,9 @@ namespace MaxMind.MinFraud.Response
         public double? RiskScore { get; internal set; }
 
         /// <summary>
-        /// This list contains objects detailing issues with the request that 
-        /// was sent such as invalid or unknown inputs. It is highly 
-        /// recommended that you check this array for issues when integrating 
+        /// This list contains objects detailing issues with the request that
+        /// was sent such as invalid or unknown inputs. It is highly
+        /// recommended that you check this array for issues when integrating
         /// the web service.
         /// </summary>
         [JsonIgnore]

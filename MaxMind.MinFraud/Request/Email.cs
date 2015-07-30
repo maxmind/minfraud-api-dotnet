@@ -1,9 +1,9 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Exception;
+using Newtonsoft.Json;
+using System;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
-using MaxMind.MinFraud.Exception;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Request
     /// The email information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Email
+    public sealed class Email
     {
         private string _domain;
 

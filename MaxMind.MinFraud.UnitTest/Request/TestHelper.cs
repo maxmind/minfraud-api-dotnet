@@ -1,12 +1,12 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Request;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Mail;
-using MaxMind.MinFraud.Request;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -85,12 +85,14 @@ namespace MaxMind.MinFraud.UnitTest.Request
                         ),
                 order:
                     new Order(
-                        amount: (decimal) 323.21,
+                        amount: (decimal)323.21,
                         currency: "USD",
                         discountCode: "FIRST",
                         affiliateId: "af12",
                         subaffiliateId: "saf42",
-                        referrerUri: new Uri("http://www.amazon.com/")
+                        referrerUri: new Uri("http://www.amazon.com/"),
+                        isGift: true,
+                        hasGiftMessage: false
                         ),
                 shoppingCart: new List<ShoppingCartItem>
                 {
@@ -109,7 +111,6 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 }
                 );
         }
-
 
         public static string ReadJsonFile(string name)
         {

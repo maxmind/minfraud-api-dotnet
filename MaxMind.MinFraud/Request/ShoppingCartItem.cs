@@ -3,10 +3,10 @@
 namespace MaxMind.MinFraud.Request
 {
     /// <summary>
-    /// Information for an item in the shopping cart for the transaction 
+    /// Information for an item in the shopping cart for the transaction
     /// being sent to the web service.
     /// </summary>
-    public class ShoppingCartItem
+    public sealed class ShoppingCartItem
     {
         /// <summary>
         /// Constructor

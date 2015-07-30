@@ -1,12 +1,12 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Response
 {
     /// <summary>
     /// A warning returned by the web service.
     /// </summary>
-    public class Warning
+    public sealed class Warning
     {
         [JsonProperty("input")]
         internal List<string> _input = new List<string>();

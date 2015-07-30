@@ -1,5 +1,5 @@
-﻿using System.Net;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Net;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.Request
     /// The device information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public class Device
+    public sealed class Device
     {
         /// <summary>
         /// Constructor.

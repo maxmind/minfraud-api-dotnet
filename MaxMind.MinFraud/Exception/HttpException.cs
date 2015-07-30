@@ -18,6 +18,30 @@ namespace MaxMind.MinFraud.Exception
     public class HttpException : IOException
     {
         /// <summary>
+        /// Constructor.
+        /// </summary>
+        public HttpException() : base()
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">A message describing the reason why the exception was thrown.</param>
+        public HttpException(string message) : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">A message describing the reason why the exception was thrown.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
+        public HttpException(string message, System.Exception innerException) : base(message, innerException)
+        {
+        }
+
+        /// <summary>
         ///     Initializes a new instance of the <see cref="HttpException" /> class.
         /// </summary>
         /// <param name="message">A message describing the reason why the exception was thrown.</param>
@@ -51,8 +75,8 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="context">The source for this deserialization.</param>
         protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
-            HttpStatus = (HttpStatusCode) info.GetValue("HttpStatus", typeof (HttpStatusCode));
-            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+            HttpStatus = (HttpStatusCode)info.GetValue("HttpStatus", typeof(HttpStatusCode));
+            this.Uri = (Uri)info.GetValue("Uri", typeof(Uri));
         }
 
         /// <summary>

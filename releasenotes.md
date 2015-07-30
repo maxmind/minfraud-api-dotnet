@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.2.0 (2015-XX-XX)
+------------------
+
+* Add `is_gift` and `has_gift_message` order inputs.
+* Upgrade to the latest GeoIP2 release.
+
 0.1.1-beta1 (2015-06-30)
 ------------------------
 

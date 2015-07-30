@@ -1,9 +1,9 @@
 ﻿#region
 
+using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
-using Newtonsoft.Json;
 
 #endregion
 
@@ -19,10 +19,47 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
+        public InvalidRequestException() : base()
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">The message from the web service.</param>
+        public InvalidRequestException(string message) : base(message)
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">The message from the web service.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
+        public InvalidRequestException(string message, System.Exception innerException) : base(message, innerException)
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         /// <param name="message">The message from the web service.</param>
         /// <param name="code">The machine-readable error code.</param>
         /// <param name="uri">The URI that was queried.</param>
         public InvalidRequestException(string message, string code, Uri uri) : base(message)
+        {
+            Code = code;
+            this.Uri = uri;
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="message">The message from the web service.</param>
+        /// <param name="code">The machine-readable error code.</param>
+        /// <param name="uri">The URI that was queried.</param>
+        /// <param name="innerException">The underlying exception that caused this one.</param>
+        public InvalidRequestException(string message, string code, Uri uri, System.Exception innerException) : base(message, innerException)
         {
             Code = code;
             this.Uri = uri;
@@ -38,7 +75,7 @@ namespace MaxMind.MinFraud.Exception
             : base(info, context)
         {
             Code = info.GetString("Code");
-            this.Uri = (Uri) info.GetValue("Uri", typeof (Uri));
+            this.Uri = (Uri)info.GetValue("Uri", typeof(Uri));
         }
 
         /// <summary>

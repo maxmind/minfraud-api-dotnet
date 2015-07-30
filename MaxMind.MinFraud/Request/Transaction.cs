@@ -1,13 +1,12 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Request
 {
-
     /// <summary>
     /// The transaction to be sent to the web service.
     /// </summary>
-    public class Transaction
+    public sealed class Transaction
     {
         /// <summary>
         /// Constructor. See <a href="https://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Request_Body">

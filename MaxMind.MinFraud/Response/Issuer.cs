@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for the credit card issuer data from minFraud.
     /// </summary>
-    public class Issuer
+    public sealed class Issuer
     {
         /// <summary>
         /// The name of the bank which issued the credit card.
@@ -14,10 +14,10 @@ namespace MaxMind.MinFraud.Response
         public string Name { get; internal set; }
 
         /// <summary>
-        /// This property is <c>true</c> if the name matches the name 
+        /// This property is <c>true</c> if the name matches the name
         /// provided in the request for the card issuer. It is <c>false</c>
         /// if the name does not match. The property is <c>null</c> if
-        /// either no name or no issuer ID number (IIN) was provided in the 
+        /// either no name or no issuer ID number (IIN) was provided in the
         /// request or if MaxMind does not have a name associated with the IIN.
         /// </summary>
         [JsonProperty("matches_provided_name")]
@@ -31,11 +31,11 @@ namespace MaxMind.MinFraud.Response
         public string PhoneNumber { get; internal set; }
 
         /// <summary>
-        /// This property is <c>true</c> if the phone number matches 
-        /// the number provided in the request for the card issuer. It is 
-        /// <c>false</c> if the number does not match. It is 
-        /// <c>null</c> if either no phone number or no issuer ID 
-        /// number(IIN) was provided in the request or if MaxMind does not 
+        /// This property is <c>true</c> if the phone number matches
+        /// the number provided in the request for the card issuer. It is
+        /// <c>false</c> if the number does not match. It is
+        /// <c>null</c> if either no phone number or no issuer ID
+        /// number(IIN) was provided in the request or if MaxMind does not
         /// have a phone number associated with the IIN.
         /// </summary>
         [JsonProperty("matches_provided_phone_number")]
