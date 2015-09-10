@@ -1,7 +1,11 @@
-﻿using System;
-using System.Net;
+﻿#region
+
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Net;
+
+#endregion
 
 namespace MaxMind.MinFraud.Util
 {
@@ -10,12 +14,16 @@ namespace MaxMind.MinFraud.Util
     {
         public override bool CanConvert(Type objectType)
         {
-            return (objectType == typeof (IPAddress));
+            return (objectType == typeof(IPAddress));
         }
 
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
         {
-            var ip = (IPAddress) value;
+            if (writer == null)
+            {
+                throw new ArgumentNullException(nameof(writer));
+            }
+            var ip = (IPAddress)value;
             writer.WriteValue(ip.ToString());
         }
 

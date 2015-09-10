@@ -44,13 +44,13 @@ namespace MaxMind.MinFraud
         public WebServiceClient(
             int userId,
             string licenseKey,
-            List<string> locales = null,
+            IEnumerable<string> locales = null,
             string host = "minfraud.maxmind.com",
             TimeSpan? timeout = null,
             HttpMessageHandler httpMessageHandler = null
             )
         {
-            _locales = locales ?? new List<string> { "en" };
+            _locales = locales == null ? new List<string> { "en" } : new List<string>(locales);
             _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
             {
                 BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,

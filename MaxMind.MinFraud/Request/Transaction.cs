@@ -33,7 +33,7 @@ namespace MaxMind.MinFraud.Request
             Order order = null,
             Payment payment = null,
             Shipping shipping = null,
-            List<ShoppingCartItem> shoppingCart = default(List<ShoppingCartItem>)
+            IList<ShoppingCartItem> shoppingCart = default(List<ShoppingCartItem>)
             )
         {
             this.Device = device;
@@ -106,7 +106,7 @@ namespace MaxMind.MinFraud.Request
         /// List of shopping items in the transaction.
         /// </summary>
         [JsonProperty("shopping_cart")]
-        public List<ShoppingCartItem> ShoppingCart { get; }
+        public IList<ShoppingCartItem> ShoppingCart { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.
