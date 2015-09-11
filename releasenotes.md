@@ -1,11 +1,18 @@
 Release Notes
 =============
 
-0.2.0 (2015-XX-XX)
-------------------
+0.2.0-beta1 (2015-09-10)
+------------------------
 
 * Add `is_gift` and `has_gift_message` order inputs.
 * Upgrade to the latest GeoIP2 release.
+* `Score.CreditsRemaining` was change from a `ulong?` to `long?` in order to
+  be more CLS compliant.
+* GeoIP2 dependency was updated to a version that does not depend on
+  RestSharp.
+* Some parameters and properties were changed from using concrete classes to
+  interfaces.
+* The library now has a strong name.
 
 0.1.1-beta1 (2015-06-30)
 ------------------------

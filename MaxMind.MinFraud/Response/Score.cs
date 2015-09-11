@@ -18,7 +18,7 @@ namespace MaxMind.MinFraud.Response
         /// account.
         /// </summary>
         [JsonProperty("credits_remaining")]
-        public ulong? CreditsRemaining { get; internal set; }
+        public long? CreditsRemaining { get; internal set; }
 
         /// <summary>
         /// This is a UUID that identifies the minFraud request. Please use

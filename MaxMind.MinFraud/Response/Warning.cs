@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -36,7 +37,7 @@ namespace MaxMind.MinFraud.Response
         /// number for an array.
         /// </summary>
         [JsonIgnore]
-        public List<string> Input => new List<string>(_input);
+        public ReadOnlyCollection<string> Input => new ReadOnlyCollection<string>(_input);
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -76,7 +76,7 @@ marked as async:
 var score = await client.ScoreAsync(transaction);
 ```
 
-Or a minFRaud Insights request by calling `InsightsAsynce` method:
+Or a minFraud Insights request by calling `InsightsAsynce` method:
 
 ```csharp
 var score = await client.ScoreAsync(transaction);

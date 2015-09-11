@@ -97,6 +97,10 @@ namespace MaxMind.MinFraud.Exception
         [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
+            if (info == null)
+            {
+                throw new ArgumentNullException(nameof(info));
+            }
             info.AddValue("Code", Code);
             info.AddValue("Uri", this.Uri);
             base.GetObjectData(info, context);
