@@ -1,0 +1,768 @@
+<html>
+  <head>
+    <title>MaxMind.MinFraud.Request.PaymentProcessor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MaxMind.MinFraud</a> : <a href="index.html">MaxMind.MinFraud.Request Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.PaymentProcessor">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.PaymentProcessor:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.PaymentProcessor:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.PaymentProcessor:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MaxMind.MinFraud.Request.PaymentProcessor">PaymentProcessor  Enum</h1>
+    <p class="Summary" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Summary">
+            Enumerated payment processors supported by the web service.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Signature">public enum <b>PaymentProcessor</b></div>
+    </div>
+    <div class="Remarks" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Members</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Docs:Members">
+        <table class="Enumeration">
+          <tr>
+            <th>Member Name</th>
+            <th>Description</th>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Adyen">
+              <b>Adyen</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Altapay">
+              <b>Altapay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.AmazonPayments">
+              <b>AmazonPayments</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Authorizenet">
+              <b>Authorizenet</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Balanced">
+              <b>Balanced</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Beanstream">
+              <b>Beanstream</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Bluepay">
+              <b>Bluepay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Braintree">
+              <b>Braintree</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.ChasePaymentech">
+              <b>ChasePaymentech</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Cielo">
+              <b>Cielo</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Collector">
+              <b>Collector</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Compropago">
+              <b>Compropago</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Conekta">
+              <b>Conekta</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Cuentadigital">
+              <b>Cuentadigital</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Dibs">
+              <b>Dibs</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.DigitalRiver">
+              <b>DigitalRiver</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Elavon">
+              <b>Elavon</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Epayeu">
+              <b>Epayeu</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.EprocessingNetwork">
+              <b>EprocessingNetwork</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Eway">
+              <b>Eway</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.FirstData">
+              <b>FirstData</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.GlobalPayments">
+              <b>GlobalPayments</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Ingenico">
+              <b>Ingenico</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Internetsecure">
+              <b>Internetsecure</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.IntuitQuickbooksPayments">
+              <b>IntuitQuickbooksPayments</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Iugu">
+              <b>Iugu</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.MastercardPaymentGateway">
+              <b>MastercardPaymentGateway</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Mercadopago">
+              <b>Mercadopago</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.MerchantEsolutions">
+              <b>MerchantEsolutions</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Mirjeh">
+              <b>Mirjeh</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Mollie">
+              <b>Mollie</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.MonerisSolutions">
+              <b>MonerisSolutions</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Nmi">
+              <b>Nmi</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Openpaymx">
+              <b>Openpaymx</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.OptimalPayments">
+              <b>OptimalPayments</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Other">
+              <b>Other</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Payfast">
+              <b>Payfast</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Paygate">
+              <b>Paygate</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Payone">
+              <b>Payone</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Paypal">
+              <b>Paypal</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Paystation">
+              <b>Paystation</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Paytrace">
+              <b>Paytrace</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Paytrail">
+              <b>Paytrail</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Payture">
+              <b>Payture</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Payu">
+              <b>Payu</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Payulatam">
+              <b>Payulatam</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.PrincetonPaymentSolutions">
+              <b>PrincetonPaymentSolutions</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Psigate">
+              <b>Psigate</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Qiwi">
+              <b>Qiwi</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Raberil">
+              <b>Raberil</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Rede">
+              <b>Rede</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Redpagos">
+              <b>Redpagos</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Rewardspay">
+              <b>Rewardspay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Sagepay">
+              <b>Sagepay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.SimplifyCommerce">
+              <b>SimplifyCommerce</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Skrill">
+              <b>Skrill</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Smartcoin">
+              <b>Smartcoin</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.SpsDecidir">
+              <b>SpsDecidir</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Stripe">
+              <b>Stripe</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Telerecargas">
+              <b>Telerecargas</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Towah">
+              <b>Towah</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.UsaEpay">
+              <b>UsaEpay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Vindicia">
+              <b>Vindicia</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.VirtualCardServices">
+              <b>VirtualCardServices</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Vme">
+              <b>Vme</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+          <tr valign="top">
+            <td id="F:MaxMind.MinFraud.Request.PaymentProcessor.Worldpay">
+              <b>Worldpay</b>
+            </td>
+            <td>
+              <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Docs:Version Information">
+        <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.2.0.0</div>
+    </div>
+    <div class="Members" id="T:MaxMind.MinFraud.Request.PaymentProcessor:Members">
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

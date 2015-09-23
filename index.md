@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
-version: v0.1.1-beta1
+version: v0.2.0
 ---
 
 # .NET API for MaxMind minFraud Score and minFraud Insights
@@ -23,7 +23,7 @@ minFraud Insights web services](http://dev.maxmind.com/minfraud/minfraud-score-a
 
 ## Requirements ##
 
-This library works with .NET Framework version 4.0 and above. If you are
+This library works with .NET Framework version 4.5.2 and above. If you are
 using Mono, version 4 or greater is required.
 
 This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
@@ -83,7 +83,7 @@ marked as async:
 var score = await client.ScoreAsync(transaction);
 ```
 
-Or a minFRaud Insights request by calling `InsightsAsynce` method:
+Or a minFraud Insights request by calling `InsightsAsynce` method:
 
 ```csharp
 var score = await client.ScoreAsync(transaction);
