@@ -4,9 +4,13 @@ os: Visual Studio 2015
 
 before_build:
   - nuget restore -verbosity detailed
+  - nuget install NUnit.Console -version 3.0.0
 
 install:
 - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
+
+test_script:
+ - NUnit.Console.3.0.0\tools\nunit3-console.exe ".\MaxMind.MinFraud.UnitTest\bin\Debug\MaxMind.MinFraud.UnitTest.dll"
 
 build:
   verbosity: minimal

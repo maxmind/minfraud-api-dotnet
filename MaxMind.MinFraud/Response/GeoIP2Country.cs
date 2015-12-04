@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Response
         [JsonProperty("is_high_risk")]
         public bool? IsHighRisk { get; internal set; }
 
-        internal void SetLocales(List<string> locales) => base.Locales = locales;
+        internal void SetLocales(IEnumerable<string> locales) => base.Locales = locales;
 
         /// <summary>
         /// Returns a string that represents the current object.

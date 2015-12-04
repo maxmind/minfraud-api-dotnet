@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.3.0 (2015-12-04)
+------------------
+
+* Update `MaxMind.GeoIP2` to 2.5.0. This removes the BCL dependency.
+* Upgrade to NUnit 3.
+
 0.2.0 (2015-09-23)
 ------------------
 

@@ -29,10 +29,11 @@ namespace MaxMind.MinFraud.Response
         [JsonProperty("risk")]
         public double? Risk { get; internal set; }
 
-        internal new void SetLocales(List<string> locales)
+        internal new void SetLocales(IEnumerable<string> locales)
         {
-            base.SetLocales(locales);
-            Country.SetLocales(locales);
+            var l = new List<string>(locales);
+            base.SetLocales(l);
+            Country.SetLocales(l);
         }
 
         /// <summary>
