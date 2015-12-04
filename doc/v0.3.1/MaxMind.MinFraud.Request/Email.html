@@ -1,0 +1,443 @@
+<html>
+  <head>
+    <title>MaxMind.MinFraud.Request.Email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MaxMind.MinFraud</a> : <a href="index.html">MaxMind.MinFraud.Request Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Email">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Email:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Email:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Email:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MaxMind.MinFraud.Request.Email">Email  Class</h1>
+    <p class="Summary" id="T:MaxMind.MinFraud.Request.Email:Summary">
+            The email information for the transaction being sent to the
+            web service.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MaxMind.MinFraud.Request.Email:Signature">public sealed class  <b>Email</b></div>
+    </div>
+    <div class="Remarks" id="T:MaxMind.MinFraud.Request.Email:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.Email:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.Email:Docs:Version Information">
+        <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String)">Email</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailAddress">System.Net.Mail.MailAddress</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                </td>
+                <td>
+            Constructor.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.Email.Address">Address</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailAddress">System.Net.Mail.MailAddress</a>
+                  </i>. 
+            The email address used in the transaction.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.Email.AddressMD5">AddressMD5</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The MD5 generated from the email address.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.Email.Domain">Domain</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The domain of the email address.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MaxMind.MinFraud.Request.Email.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a string that represents the current object.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MaxMind.MinFraud.Request.Email:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String)">Email Constructor</h3>
+        <blockquote id="C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String):member">
+          <div class="msummary">
+            Constructor.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Email</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailAddress">System.Net.Mail.MailAddress</a> address, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> domain)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String):Parameters">
+            <dl>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The user's email address. This will be
+            converted into an MD5 before being sent to the web service.
+            </dd>
+              <dt>
+                <i>domain</i>
+              </dt>
+              <dd>The domain of the email address used in the
+            transaction. If <tt>address</tt> is passed to the constructor
+            and <tt>domain</tt> is not, the domain will be automatically
+            set from the address.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.Email(System.Net.Mail.MailAddress,System.String):Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.Email.Address">Address Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.Email.Address:member">
+          <div class="msummary">
+            The email address used in the transaction.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonIgnore]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Mail.MailAddress">System.Net.Mail.MailAddress</a> <b>Address</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.Email.Address:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.Address:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.Address:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.Email.AddressMD5">AddressMD5 Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.Email.AddressMD5:member">
+          <div class="msummary">
+            The MD5 generated from the email address.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("address")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>AddressMD5</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.Email.AddressMD5:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.AddressMD5:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.AddressMD5:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.Email.Domain">Domain Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.Email.Domain:member">
+          <div class="msummary">
+            The domain of the email address.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("domain")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Domain</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.Email.Domain:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.Domain:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Email.Domain:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MaxMind.MinFraud.Request.Email.ToString()">ToString Method</h3>
+        <blockquote id="M:MaxMind.MinFraud.Request.Email.ToString():member">
+          <div class="msummary">
+            Returns a string that represents the current object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MaxMind.MinFraud.Request.Email.ToString():Returns">A string that represents the current object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.Email.ToString():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.Email.ToString():Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.3.1.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
