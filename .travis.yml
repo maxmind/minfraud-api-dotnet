@@ -1,18 +1,18 @@
+---
+sudo: false
 language: csharp
-
 before_install:
   - nuget restore MaxMind.MinFraud.sln
   - nuget install NUnit.Console -Version 3.0.0
-
 script:
   - xbuild /p:TargetFrameworkVersion="v4.5"
   - mono ./NUnit.Console.3.0.0/tools/nunit3-console.exe ./MaxMind.MinFraud.UnitTest/bin/Debug/MaxMind.MinFraud.UnitTest.dll
-
-sudo: false
-
 notifications:
   email:
+    on_failure: always
+    on_success: change
     recipients:
       - dev-ci@maxmind.com
-    on_success: change
-    on_failure: always
+  slack:
+    rooms:
+      secure: "dFCtv/ne1uzIx8KwSpcEf72IXGeJi7yp9YkM5N3syiXG2XdZqmpDKXUW3pumsup8aU2rypq22AAPdtfHnJCERMhsi6/XUeR4ia7pezJPN0+YS2L594cvNma8emsn9sXHbYpgPpF5O6yVcyoTfWDXl84Cel+kDz91t3rRpE0PwXvxoK/DlUOJZSynEMXRXplbiH+Cs/nOlJkMBrbym8Iq3whjeMUxYFuTbYUk8ta9XoIjx594RmozAAnM3R07UKJpaUknEoNXkkLi/FvYUeXNsqv+MV7vmDcZOqyCFUktA6JSJB64puwF7uJwBOQc5/LkKlG25C+KU//tYqXXHMyAhje3trAUPQJMZ5EsVKU9i72knIO/A6+lFlGbHzGrzVNiE0aahqrcAy+ndT6PQTI1zuP/2P1S8cz+yhZGl3BLwfj/7zhKmR8TWuTvRWutGXZFciyzKXeoC1xQAr88phE22mBsZD3X2gu8olaKHct2sGnZk1n4yEQkiU2mP8aCs0FYmIJw2CAmZ2HCsCFy/XTXqQ+1ooqTgSx5jH+yn/UgyhIjrOWR/QCpCHzhuXaJwCuxJsRVONSI+i0StAYSU9QAiv2AaD1Ejfi40r4G3au9/B8GzmlpXNwe1QqwmRnGeGCDG2I1Ad1Vpo3psTWxAcHb/annk9FegZcuWOP2toCLTMI=\n"
