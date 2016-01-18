@@ -1,23 +1,27 @@
-version: 1.0.{build}
-
+---
+version: '1.0.{build}'
 os: Visual Studio 2015
-
 before_build:
   - nuget restore -verbosity detailed
   - nuget install NUnit.Console -version 3.0.0
-
 install:
-- set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
-
-test_script:
- - NUnit.Console.3.0.0\tools\nunit3-console.exe ".\MaxMind.MinFraud.UnitTest\bin\Debug\MaxMind.MinFraud.UnitTest.dll"
-
+  - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
 build:
-  verbosity: minimal
-
+  - verbosity: minimal
+test_script:
+  - NUnit.Console.3.0.0\tools\nunit3-console.exe ".\MaxMind.MinFraud.UnitTest\bin\Debug\MaxMind.MinFraud.UnitTest.dll"
 notifications:
-- provider: Email
-  to: dev-ci@maxmind.com
-  on_build_success: false
-  on_build_failure: true
-  on_build_status_changed: true
+  - auth_token:
+      secure: X+ymndzchVeC2LYsehzOt/GEMFfZJeTENeAU9lwNwTuCxBXFJNkuwZLd9joAtHgykHQoYqmEv/nH64+MA6nTlw==
+    channel: ci
+    on_build_failure: true
+    on_build_status_changed: true
+    on_build_success: false
+    provider: Slack
+  - on_build_failure: true
+    on_build_status_changed: true
+    on_build_success: false
+    provider: Email
+    subject: 'AppVeyor build {{status}}'
+    to:
+      - dev-ci@maxmind.com
