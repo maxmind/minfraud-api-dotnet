@@ -19,6 +19,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                     }
                 },
                 {
+                    "brand", "Visa"
+                },
+                {
                     "country",
                     "US"
                 }
@@ -30,6 +33,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {
                     "is_prepaid",
                     true
+                },
+                {
+                    "type", "credit"
                 }
             }.ToObject<CreditCard>();
 
@@ -37,6 +43,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.AreEqual("US", cc.Country);
             Assert.AreEqual(true, cc.IsPrepaid);
             Assert.AreEqual(true, cc.IsIssuedInBillingAddressCountry);
+            Assert.AreEqual("Visa", cc.Brand);
+            Assert.AreEqual("credit", cc.Type);
         }
     }
 }

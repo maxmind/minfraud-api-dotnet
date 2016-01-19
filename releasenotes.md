@@ -1,6 +1,19 @@
 Release Notes
 =============
 
+0.4.0 (2016-01-XX)
+------------------
+
+* Added support for new minFraud Insights outputs. These are:
+    * `/credit_card/brand`
+    * `/credit_card/type`
+    * `/device/id`
+    * `/email/is_free`
+    * `/emai/is_high_risk`
+* `Input` on the `Warning` response model has been replaced with
+  `InputPointer`. The latter is a JSON pointer to the input that caused the
+  warning.
+
 0.3.1 (2015-12-04)
 ------------------
 

@@ -9,9 +9,6 @@ namespace MaxMind.MinFraud.Response
     /// </summary>
     public sealed class Warning
     {
-        [JsonProperty("input")]
-        internal List<string> _input = new List<string>();
-
         /// <summary>
         /// This value is a machine-readable code identifying the
         /// warning. See the <a href="http://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Warning_Object">
@@ -30,14 +27,13 @@ namespace MaxMind.MinFraud.Response
         public string Message { get; internal set; }
 
         /// <summary>
-        /// This is a list of keys representing the path to the input that
-        /// the warning is associated with. For instance, if the warning was
-        /// about the billing city, the list would be
-        /// {"billing", "city"}. The key is used for an object and the index
-        /// number for an array.
+        /// A JSON Pointer to the input field that the warning is associated with.
+        /// For instance, if the warning was about the billing city, this would be
+        /// <c>/billing/city</c>. If it was for the price in the second shopping
+        /// cart item, it would be <c>/shopping_cart/1/price</c>.
         /// </summary>
-        [JsonIgnore]
-        public ReadOnlyCollection<string> Input => new ReadOnlyCollection<string>(_input);
+        [JsonProperty("input_pointer")]
+        public string InputPointer { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.
@@ -45,7 +41,7 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"Code: {Code}, Message: {Message}, Input: {Input}";
+            return $"Code: {Code}, Message: {Message}, InputPointer: {InputPointer}";
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using MaxMind.MinFraud.Response;
+﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
@@ -17,12 +17,12 @@ namespace MaxMind.MinFraud.UnitTest.Response
             {
                 {"code", code},
                 {"warning", msg},
-                {"input", new JArray {"first", "second"}}
+                {"input_pointer", "/first/second"}
             }.ToObject<Warning>();
 
             Assert.AreEqual(code, warning.Code);
             Assert.AreEqual(msg, warning.Message);
-            Assert.AreEqual(new List<string> {"first", "second"}, warning.Input);
+            Assert.AreEqual("/first/second", warning.InputPointer);
         }
     }
 }
