@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-0.4.0 (2016-01-XX)
+0.4.0 (2016-01-28)
 ------------------
 
 * Added support for new minFraud Insights outputs. These are:
@@ -13,6 +13,7 @@ Release Notes
 * `Input` on the `Warning` response model has been replaced with
   `InputPointer`. The latter is a JSON pointer to the input that caused the
   warning.
+* Updated GeoIP2 to 2.6.0-beta1.
 
 0.3.1 (2015-12-04)
 ------------------
