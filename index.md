@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
-version: v0.3.1
+version: v0.4.0-beta1
 ---
 
 # .NET API for MaxMind minFraud Score and minFraud Insights
@@ -257,6 +257,6 @@ This API uses [Semantic Versioning](http://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015 by MaxMind, Inc.
+This software is Copyright (c) 2016 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
