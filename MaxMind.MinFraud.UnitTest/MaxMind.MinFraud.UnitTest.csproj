@@ -84,6 +84,8 @@
   <ItemGroup>
     <Compile Include="Exception\HttpExceptionTest.cs" />
     <Compile Include="Exception\InvalidRequestExceptionTest.cs" />
+    <Compile Include="Response\DeviceTest.cs" />
+    <Compile Include="Response\EmailTest.cs" />
     <Compile Include="Response\GeoIP2CountryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Request\AccountTest.cs" />

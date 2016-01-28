@@ -8,10 +8,10 @@ namespace MaxMind.MinFraud.Response
     public sealed class CreditCard
     {
         /// <summary>
-        /// An object containing information about the credit card issuer.
+        /// The credit card brand.
         /// </summary>
-        [JsonProperty("issuer")]
-        public Issuer Issuer { get; internal set; } = new Issuer();
+        [JsonProperty("brand")]
+        public string Brand { get; internal set; }
 
         /// <summary>
         /// The two letter <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
@@ -38,6 +38,18 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonProperty("is_prepaid")]
         public bool? IsPrepaid { get; internal set; }
+
+        /// <summary>
+        /// An object containing information about the credit card issuer.
+        /// </summary>
+        [JsonProperty("issuer")]
+        public Issuer Issuer { get; internal set; } = new Issuer();
+
+        /// <summary>
+        /// The credit card type.
+        /// </summary>
+        [JsonProperty("type")]
+        public string Type { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -31,6 +31,7 @@ namespace MaxMind.MinFraud
         private readonly HttpClient _httpClient;
         private readonly List<string> _locales;
         private bool _disposed;
+        private readonly HttpMessageHandler _httpMessageHandler;
 
         /// <summary>
         /// Constructor for minFraud web service client.
@@ -41,6 +42,8 @@ namespace MaxMind.MinFraud
         /// <param name="host">The host to use when connecting to the web service.</param>
         /// <param name="timeout">The timeout to use for the request.</param>
         /// <param name="httpMessageHandler">Handler to use in request. For unit testing only.</param>
+        // I believe this warning to be in error.
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
         public WebServiceClient(
             int userId,
             string licenseKey,
@@ -51,22 +54,32 @@ namespace MaxMind.MinFraud
             )
         {
             _locales = locales == null ? new List<string> { "en" } : new List<string>(locales);
-            _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
+            _httpMessageHandler = httpMessageHandler ?? new HttpClientHandler();
+            try
             {
-                BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
-                DefaultRequestHeaders =
+                _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
                 {
-                    Authorization = new AuthenticationHeaderValue("Basic",
-                        Convert.ToBase64String(
-                            Encoding.ASCII.GetBytes(
-                                $"{userId}:{licenseKey}"))),
-                    Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
-                    UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version.ToString())}
+                    BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
+                    DefaultRequestHeaders =
+                    {
+                        Authorization = new AuthenticationHeaderValue("Basic",
+                            Convert.ToBase64String(
+                                Encoding.ASCII.GetBytes(
+                                    $"{userId}:{licenseKey}"))),
+                        Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
+                        UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version.ToString())}
+                    }
+                };
+                if (timeout != null)
+                {
+                    _httpClient.Timeout = timeout.Value;
                 }
-            };
-            if (timeout != null)
+            }
+            catch
             {
-                _httpClient.Timeout = timeout.Value;
+                _httpClient?.Dispose();
+                _httpMessageHandler.Dispose();
+                throw;
             }
         }
 
@@ -149,7 +162,7 @@ namespace MaxMind.MinFraud
             }
         }
 
-        private async Task HandleError(HttpResponseMessage response)
+        private static async Task HandleError(HttpResponseMessage response)
         {
             var uri = response.RequestMessage.RequestUri;
             var status = (int)response.StatusCode;
@@ -170,7 +183,7 @@ namespace MaxMind.MinFraud
             throw new HttpException(errorMessage, response.StatusCode, uri);
         }
 
-        private async Task Handle4xxStatus(HttpResponseMessage response)
+        private static async Task Handle4xxStatus(HttpResponseMessage response)
         {
             var uri = response.RequestMessage.RequestUri;
             var status = (int)response.StatusCode;
@@ -250,6 +263,7 @@ namespace MaxMind.MinFraud
             if (disposing)
             {
                 _httpClient.Dispose();
+                _httpMessageHandler.Dispose();
             }
 
             _disposed = true;

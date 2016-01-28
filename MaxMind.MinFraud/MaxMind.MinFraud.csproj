@@ -89,6 +89,8 @@
     <Compile Include="Response\Address.cs" />
     <Compile Include="Response\BillingAddress.cs" />
     <Compile Include="Response\CreditCard.cs" />
+    <Compile Include="Response\Device.cs" />
+    <Compile Include="Response\Email.cs" />
     <Compile Include="Response\GeoIP2Country.cs" />
     <Compile Include="Response\GeoIP2Location.cs" />
     <Compile Include="Response\Insights.cs" />
