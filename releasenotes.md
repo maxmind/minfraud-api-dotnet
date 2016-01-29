@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.4.0-beta2 (2016-01-29)
+------------------------
+
+* The target framework is now .NET 4.5 rather than 4.5.2.
+* Updated GeoIP2 to 2.6.0-beta2.
+
 0.4.0-beta1 (2016-01-28)
 ------------------------
 
