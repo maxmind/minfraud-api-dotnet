@@ -15,7 +15,7 @@ Release Notes
     * `/credit_card/type`
     * `/device/id`
     * `/email/is_free`
-    * `/emai/is_high_risk`
+    * `/email/is_high_risk`
 * `Input` on the `Warning` response model has been replaced with
   `InputPointer`. The latter is a JSON pointer to the input that caused the
   warning.
