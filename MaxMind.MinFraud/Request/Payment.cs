@@ -34,6 +34,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "braintree")]
         Braintree,
 
+        [EnumMember(Value = "ccnow")]
+        Ccnow,
+
         [EnumMember(Value = "chase_paymentech")]
         ChasePaymentech,
 
@@ -52,6 +55,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "cuentadigital")]
         Cuentadigital,
 
+        [EnumMember(Value = "dalpay")]
+        Dalpay,
+
         [EnumMember(Value = "dibs")]
         Dibs,
 
@@ -61,8 +67,8 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "elavon")]
         Elavon,
 
-        [EnumMember(Value = "epayeu")]
-        Epayeu,
+        [EnumMember(Value = "epay")]
+        Epay,
 
         [EnumMember(Value = "eprocessing_network")]
         EprocessingNetwork,
@@ -130,6 +136,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "paypal")]
         Paypal,
 
+        [EnumMember(Value = "payplus")]
+        Payplus,
+
         [EnumMember(Value = "paystation")]
         Paystation,
 
@@ -148,6 +157,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "payulatam")]
         Payulatam,
 
+        [EnumMember(Value = "pinpayments")]
+        Pinpayments,
+
         [EnumMember(Value = "princeton_payment_solutions")]
         PrincetonPaymentSolutions,
 
@@ -156,6 +168,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "qiwi")]
         Qiwi,
+
+        [EnumMember(Value = "quickpay")]
+        Quickpay,
 
         [EnumMember(Value = "raberil")]
         Raberil,
@@ -195,6 +210,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "usa_epay")]
         UsaEpay,
+
+        [EnumMember(Value = "verepay")]
+        Verepay,
 
         [EnumMember(Value = "vindicia")]
         Vindicia,
