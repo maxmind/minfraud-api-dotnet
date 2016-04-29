@@ -29,6 +29,12 @@ namespace MaxMind.MinFraud.Response
         public Guid? Id { get; internal set; }
 
         /// <summary>
+        /// An object containing information about the IP address's risk.
+        /// </summary>
+        [JsonProperty("ip_address")]
+        public IIPAddress IPAddress { get; internal set; } = new ScoreIPAddress();
+
+        /// <summary>
         /// This property contains the risk score, from 0.01 to 99. A
         /// higher score indicates a higher risk of fraud.For example, a score of 20
         /// indicates a 20% chance that a transaction is fraudulent.We never return a
@@ -45,7 +51,7 @@ namespace MaxMind.MinFraud.Response
         /// the web service.
         /// </summary>
         [JsonIgnore]
-        public List<Warning> Warnings => new List<Warning>(_warnings);
+        public IList<Warning> Warnings => new List<Warning>(_warnings);
 
         /// <summary>
         /// Returns a string that represents the current object.

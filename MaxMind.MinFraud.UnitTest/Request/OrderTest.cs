@@ -1,5 +1,4 @@
-﻿using MaxMind.MinFraud.Exception;
-using MaxMind.MinFraud.Request;
+﻿using MaxMind.MinFraud.Request;
 using NUnit.Framework;
 using System;
 

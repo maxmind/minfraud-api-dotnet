@@ -1,9 +1,8 @@
 ﻿#region
 
-using System;
-using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
 using NUnit.Framework;
+using System;
 
 #endregion
 

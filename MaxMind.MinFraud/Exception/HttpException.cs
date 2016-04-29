@@ -20,7 +20,7 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
-        public HttpException() : base()
+        public HttpException()
         {
         }
 

@@ -1,7 +1,6 @@
 ﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {

@@ -10,18 +10,20 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestScore()
         {
             var id = "b643d445-18b2-4b9d-bad4-c9c4366e402a";
-            var insights = new JObject
+            var score = new JObject
             {
                 {"id", id},
                 {"credits_remaining", 123},
+                {"ip_address", new JObject { { "risk", 0.01} } },
                 {"risk_score", 0.01},
                 {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
-            }.ToObject<Insights>();
+            }.ToObject<Score>();
 
-            Assert.AreEqual(id, insights.Id.ToString());
-            Assert.AreEqual(123, insights.CreditsRemaining);
-            Assert.AreEqual(0.01, insights.RiskScore);
-            Assert.AreEqual("INVALID_INPUT", insights.Warnings[0].Code);
+            Assert.AreEqual(id, score.Id.ToString());
+            Assert.AreEqual(123, score.CreditsRemaining);
+            Assert.AreEqual(0.01, score.IPAddress.Risk);
+            Assert.AreEqual(0.01, score.RiskScore);
+            Assert.AreEqual("INVALID_INPUT", score.Warnings[0].Code);
         }
     }
 }

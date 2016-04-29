@@ -45,15 +45,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MaxMind.Db, Version=2.0.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaxMind.Db.2.0.0-beta2\lib\net45\MaxMind.Db.dll</HintPath>
+      <HintPath>..\packages\MaxMind.Db.2.0.0\lib\net45\MaxMind.Db.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="MaxMind.GeoIP2, Version=2.6.0.0, Culture=neutral, PublicKeyToken=66afa4cc5ae853ac, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaxMind.GeoIP2.2.6.0-beta2\lib\net45\MaxMind.GeoIP2.dll</HintPath>
+      <HintPath>..\packages\MaxMind.GeoIP2.2.6.0\lib\net45\MaxMind.GeoIP2.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -74,6 +74,7 @@
     <Compile Include="Exception\InsufficientFundsException.cs" />
     <Compile Include="Exception\InvalidRequestException.cs" />
     <Compile Include="Exception\MinFraudException.cs" />
+    <Compile Include="Exception\PermissionRequiredException.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Request\Account.cs" />
     <Compile Include="Request\Billing.cs" />
@@ -92,13 +93,17 @@
     <Compile Include="Response\CreditCard.cs" />
     <Compile Include="Response\Device.cs" />
     <Compile Include="Response\Email.cs" />
+    <Compile Include="Response\Factors.cs" />
     <Compile Include="Response\GeoIP2Country.cs" />
     <Compile Include="Response\GeoIP2Location.cs" />
+    <Compile Include="Response\IIPAddress.cs" />
     <Compile Include="Response\Insights.cs" />
     <Compile Include="Response\IPAddress.cs" />
     <Compile Include="Response\Issuer.cs" />
     <Compile Include="Response\Score.cs" />
+    <Compile Include="Response\ScoreIPAddress.cs" />
     <Compile Include="Response\ShippingAddress.cs" />
+    <Compile Include="Response\Subscores.cs" />
     <Compile Include="Response\Warning.cs" />
     <Compile Include="Util\WebServiceError.cs" />
     <Compile Include="Util\IPAddressConverter.cs" />
