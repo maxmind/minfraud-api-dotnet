@@ -5,14 +5,14 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for Insights response.
     /// </summary>
-    public sealed class Insights : Score
+    public class Insights : Score
     {
         /// <summary>
         /// An object containing GeoIP2 and minFraud Insights information about
         /// the IP address.
         /// </summary>
         [JsonProperty("ip_address")]
-        public IPAddress IPAddress { get; internal set; } = new IPAddress();
+        public new IPAddress IPAddress { get; internal set; } = new IPAddress();
 
         /// <summary>
         /// An object containing minFraud data about the credit card used in

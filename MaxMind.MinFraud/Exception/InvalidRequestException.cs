@@ -1,6 +1,5 @@
 ﻿#region
 
-using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
@@ -19,7 +18,7 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
-        public InvalidRequestException() : base()
+        public InvalidRequestException()
         {
         }
 

@@ -1,7 +1,6 @@
-﻿using System;
-using MaxMind.MinFraud.Exception;
+﻿using MaxMind.MinFraud.Request;
 using NUnit.Framework;
-using MaxMind.MinFraud.Request;
+using System;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {

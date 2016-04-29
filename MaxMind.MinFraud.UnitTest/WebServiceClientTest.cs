@@ -1,14 +1,14 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Exception;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using NUnit.Framework;
+using RichardSzalay.MockHttp;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using NUnit.Framework;
 using System.Threading.Tasks;
-using MaxMind.MinFraud.Exception;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
-using RichardSzalay.MockHttp;
 
 namespace MaxMind.MinFraud.UnitTest
 {
@@ -22,9 +22,8 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("score", responseContent);
             var request = CreateFullRequest();
             var response = await client.ScoreAsync(request);
-            CompareJson(responseContent, response);
+            CompareJson(responseContent, response, false);
         }
-
 
         [Test]
         public async Task TestFullInsightsRequest()
@@ -33,15 +32,24 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("insights", responseContent);
             var request = CreateFullRequest();
             var response = await client.InsightsAsync(request);
-            CompareJson(responseContent, response);
+            CompareJson(responseContent, response, true);
 
             // The purpose here is to test that SetLocales worked as expected
             Assert.AreEqual("London", response.IPAddress.City.Name);
             Assert.AreEqual("United Kingdom", response.IPAddress.Country.Name);
         }
 
+        [Test]
+        public async Task TestFullFactorsRequest()
+        {
+            var responseContent = ReadJsonFile("factors-response");
+            var client = CreateSuccessClient("factors", responseContent);
+            var request = CreateFullRequest();
+            var response = await client.FactorsAsync(request);
+            CompareJson(responseContent, response, true);
+        }
 
-        private void CompareJson(string responseContent, Object response)
+        private void CompareJson(string responseContent, Object response, bool mungeIPAddress)
         {
             var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
 
@@ -52,13 +60,13 @@ namespace MaxMind.MinFraud.UnitTest
             };
             var actualResponse = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
 
-            // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-            JObject ipAddress = (JObject) expectedResponse["ip_address"];
-            if (ipAddress != null)
+            if (mungeIPAddress)
             {
+                // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
+                JObject ipAddress = (JObject)expectedResponse["ip_address"];
                 ipAddress.Add("maxmind", new JObject());
                 ipAddress.Add("postal", new JObject());
-                var representedCountry = new JObject {{"names", new JObject()}};
+                var representedCountry = new JObject { { "names", new JObject() } };
                 ipAddress.Add("represented_country", representedCountry);
             }
 
@@ -71,7 +79,6 @@ namespace MaxMind.MinFraud.UnitTest
 
             Assert.That(areEqual);
         }
-
 
         [Test]
         public void Test200WithNoBody()
@@ -119,6 +126,18 @@ namespace MaxMind.MinFraud.UnitTest
                 ),
                 Throws.TypeOf<AuthenticationException>()
                     .And.Message.EqualTo("Invalid auth"));
+        }
+
+        [Test]
+        public void TestPermissionRequired()
+        {
+            Assert.That(async () => await CreateInsightsError(
+                HttpStatusCode.PaymentRequired,
+                "application/json",
+                "{\"code\":\"PERMISSION_REQUIRED\",\"error\":\"Permission required\"}"
+                ),
+                Throws.TypeOf<PermissionRequiredException>()
+                    .And.Message.EqualTo("Permission required"));
         }
 
         [Test]
@@ -208,7 +227,6 @@ namespace MaxMind.MinFraud.UnitTest
                     .And.Message.EqualTo(
                         "Received a server (500) error for https://minfraud.maxmind.com/minfraud/v2.0/insights"));
         }
-
 
         private WebServiceClient CreateSuccessClient(string service, string responseContent)
         {
