@@ -24,7 +24,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the distance between the billing address
-        /// and the IP location for the given IP address.If present, this is a
+        /// and the IP location for the given IP address. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("billing_address_distance_to_ip_location")]
@@ -32,8 +32,8 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the browser attributes such as the
-        /// User-Agent and Accept-Language AVS result.If present, this is a value in
-        /// the range 0.01 to 99.
+        /// User-Agent and Accept-Language AVS result. If present, this is a
+        ///  value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("browser")]
         public double? Browser { get; internal set; }
@@ -41,22 +41,22 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// Individualized risk of chargeback for the given IP address on
         /// your account and shop ID.This is only available to users sending
-        /// chargeback data to MaxMind.If present, this is a value in the range 0.01
-        /// to 99.
+        /// chargeback data to MaxMind. If present, this is a value in the
+        /// range 0.01 to 99.
         /// </summary>
         [JsonProperty("chargeback")]
         public double? Chargeback { get; internal set; }
 
         /// <summary>
         /// The risk associated with the country the transaction originated
-        /// from.If present, this is a value in the range 0.01 to 99.
+        /// from. If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("country")]
         public double? Country { get; internal set; }
 
         /// <summary>
         /// The risk associated with the combination of IP country, card
-        /// issuer country, billing country, and shipping country.If present,
+        /// issuer country, billing country, and shipping country. If present,
         /// this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("country_mismatch")]
@@ -85,7 +85,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the issuer ID number on the email
-        /// domain.If present, this is a value in the range 0.01 to 99.
+        /// domain. If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("email_tenure")]
         public double? EmailTenure { get; internal set; }
@@ -100,7 +100,7 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The risk associated with the particular issuer ID number (IIN)
         /// given the billing location and the history of usage of the IIN on
-        /// your account and shop ID.If present, this is a value in the range
+        /// your account and shop ID. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
         [JsonProperty("issuer_id_number")]
@@ -108,7 +108,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the particular order amount for your
-        /// account and shop ID.If present, this is a value in the range
+        /// account and shop ID. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
         [JsonProperty("order_amount")]
@@ -123,7 +123,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the distance between the billing address
-        /// and the IP location for the given IP address.If present, this is a
+        /// and the IP location for the given IP address. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("shipping_address_distance_to_ip_location")]
@@ -131,7 +131,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the local time of day of the transaction
-        /// in the IP address location.If present, this is a value in the range
+        /// in the IP address location. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
         [JsonProperty("time_of_day")]
