@@ -32,8 +32,8 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The risk associated with the browser attributes such as the
-        /// User-Agent and Accept-Language AVS result. If present, this is a
-        ///  value in the range 0.01 to 99.
+        /// User-Agent and Accept-Language. If present, this is a value in the
+        /// range 0.01 to 99.
         /// </summary>
         [JsonProperty("browser")]
         public double? Browser { get; internal set; }
