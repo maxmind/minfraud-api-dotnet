@@ -7,12 +7,12 @@ namespace MaxMind.MinFraud.Exception
     /// This class represents an authentication error.
     /// </summary>
     [Serializable]
-    public class AuthenticationException : MinFraudException
+    public class PermissionRequiredException : MinFraudException
     {
         /// <summary>
         /// Constructor.
         /// </summary>
-        public AuthenticationException()
+        public PermissionRequiredException()
         {
         }
 
@@ -20,7 +20,7 @@ namespace MaxMind.MinFraud.Exception
         /// Constructor.
         /// </summary>
         /// <param name="message">Exception message.</param>
-        public AuthenticationException(string message) : base(message)
+        public PermissionRequiredException(string message) : base(message)
         {
         }
 
@@ -29,7 +29,7 @@ namespace MaxMind.MinFraud.Exception
         /// </summary>
         /// <param name="message">Exception message.</param>
         /// <param name="innerException">The underlying exception that caused this one.</param>
-        public AuthenticationException(string message, System.Exception innerException) : base(message, innerException)
+        public PermissionRequiredException(string message, System.Exception innerException) : base(message, innerException)
         {
         }
 
@@ -38,7 +38,7 @@ namespace MaxMind.MinFraud.Exception
         /// </summary>
         /// <param name="info">The object that holds the serialized object data.</param>
         /// <param name="context">The contextual information about the source or destination.</param>
-        protected AuthenticationException(SerializationInfo info, StreamingContext context) : base(info, context)
+        protected PermissionRequiredException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }

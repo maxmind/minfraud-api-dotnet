@@ -1,5 +1,4 @@
-﻿using MaxMind.MinFraud.Exception;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Net.Mail;
 using System.Security.Cryptography;

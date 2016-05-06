@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Text.RegularExpressions;
-using MaxMind.MinFraud.Exception;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {

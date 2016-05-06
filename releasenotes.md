@@ -1,9 +1,14 @@
 Release Notes
 =============
 
-0.4.0-beta3 (2016-XX-XX)
-------------------------
+0.5.0 (2016-XX-XX)
+------------------
 
+* Added support for the minFraud Factors.
+* Added IP address risk to the minFraud Score model.
+* Handle `PERMISSION_REQUIRED` errors by throwing a
+  `PermissionRequiredException`.
+* Updated dependencies.
 * Added the following new values to the `PaymentProcessor` enum:
   `Ccnow`, `Dalpay`, `Epay` (replaces `Epayeu`), `Payplus`, `Pinpayments`,
   `Quickpay`, and `Verepay`.

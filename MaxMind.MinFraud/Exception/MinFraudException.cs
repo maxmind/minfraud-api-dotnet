@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
-        public MinFraudException() : base()
+        public MinFraudException()
         {
         }
 
