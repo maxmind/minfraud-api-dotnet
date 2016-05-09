@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for Insights response.
     /// </summary>
-    public class Factors : Insights
+    public sealed class Factors : Insights
     {
         /// <summary>
         /// An object containing GeoIP2 and minFraud Insights information about

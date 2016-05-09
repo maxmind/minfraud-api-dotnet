@@ -6,7 +6,7 @@ namespace MaxMind.MinFraud.Response
     /// This class contains subscores for many of the individual components that are
     /// used to calculate the overall risk score.
     /// </summary>
-    public class Subscores
+    public sealed class Subscores
     {
         /// <summary>
         /// The risk associated with the AVS result. If present, this is a

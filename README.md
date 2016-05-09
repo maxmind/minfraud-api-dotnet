@@ -82,7 +82,7 @@ A minFraud Insights request by calling `InsightsAsync` method:
 var insights = await client.InsightsAsync(transaction);
 ```
 
-Or a minFraud Insights request by calling `FactorsAsync` method:
+Or a minFraud Factors request by calling `FactorsAsync` method:
 
 ```csharp
 var factors = await client.FactorsAsync(transaction);

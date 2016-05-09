@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// The IP addresses risk.
     /// </summary>
-    public class ScoreIPAddress : IIPAddress
+    public sealed class ScoreIPAddress : IIPAddress
     {
         /// <summary>
         /// The risk associated with the IP address. The value ranges from 0.01
