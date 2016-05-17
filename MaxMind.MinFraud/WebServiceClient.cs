@@ -84,6 +84,20 @@ namespace MaxMind.MinFraud
         }
 
         /// <summary>
+        /// Asynchronously query Factors endpoint with transaction data
+        /// </summary>
+        /// <param name="transaction">Object containing the transaction data
+        /// to be sent to the minFraud web service.</param>
+        /// <returns>Task that produces an object modeling the minFraud
+        /// Factors response data</returns>
+        public async Task<Insights> FactorsAsync(Transaction transaction)
+        {
+            var factors = await MakeRequest<Factors>(transaction).ConfigureAwait(false);
+            factors.IPAddress.SetLocales(_locales);
+            return factors;
+        }
+
+        /// <summary>
         /// Asynchronously query Insights endpoint with transaction data
         /// </summary>
         /// <param name="transaction">Object containing the transaction data
@@ -236,7 +250,8 @@ namespace MaxMind.MinFraud
                     throw new AuthenticationException(error.Error);
                 case "INSUFFICIENT_FUNDS":
                     throw new InsufficientFundsException(error.Error);
-
+                case "PERMISSION_REQUIRED":
+                    throw new PermissionRequiredException(error.Error);
                 default:
                     throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage.RequestUri);
             }

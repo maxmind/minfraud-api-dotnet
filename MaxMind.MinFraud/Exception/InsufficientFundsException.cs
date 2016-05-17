@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
-        public InsufficientFundsException() : base()
+        public InsufficientFundsException()
         {
         }
 
