@@ -1,0 +1,380 @@
+<html>
+  <head>
+    <title>MaxMind.MinFraud.Response.BillingAddress</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MaxMind.MinFraud</a> : <a href="index.html">MaxMind.MinFraud.Response Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MaxMind.MinFraud.Response.BillingAddress">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Response.BillingAddress:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Response.BillingAddress:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Response.BillingAddress:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MaxMind.MinFraud.Response.BillingAddress">BillingAddress  Class</h1>
+    <p class="Summary" id="T:MaxMind.MinFraud.Response.BillingAddress:Summary">
+            Information about the billing address.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MaxMind.MinFraud.Response.BillingAddress:Signature">public sealed class  <b>BillingAddress</b> : <a href="../MaxMind.MinFraud.Response/Address.html">Address</a></div>
+    </div>
+    <div class="Remarks" id="T:MaxMind.MinFraud.Response.BillingAddress:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Response.BillingAddress:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Response.BillingAddress:Docs:Version Information">
+        <b>Namespace: </b>MaxMind.MinFraud.Response<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MaxMind.MinFraud.Response.BillingAddress()">BillingAddress</a>
+                    </b>()</div>
+                </td>
+                <td>
+                  <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#P:MaxMind.MinFraud.Response.Address.DistanceToIPLocation">DistanceToIPLocation</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;int&gt;</a>
+                  </i>. 
+            The distance in kilometers from the address to the IP location.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#P:MaxMind.MinFraud.Response.Address.IsInIPCountry">IsInIPCountry</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;bool&gt;</a>
+                  </i>. 
+            This property is <tt>true</tt> if the address is in the
+            IP country.The property is <tt>false</tt> when the address is not in the IP
+            country. If the address could not be parsed or was not provided or if the
+            IP address could not be geolocated, the property will be <tt>null</tt>.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#P:MaxMind.MinFraud.Response.Address.IsPostalInCity">IsPostalInCity</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;bool&gt;</a>
+                  </i>. 
+            This property is <tt>true</tt> if the postal code
+            provided with the address is in the city for the address.The property is
+            <tt>false</tt> when the postal code is not in the city. If the address could
+            not be parsed or was not provided, the property will be <tt>null</tt>.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#P:MaxMind.MinFraud.Response.Address.Latitude">Latitude</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;double&gt;</a>
+                  </i>. 
+            The latitude associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#P:MaxMind.MinFraud.Response.Address.Longitude">Longitude</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;double&gt;</a>
+                  </i>. 
+            The longitude associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MaxMind.MinFraud.Response/Address.html#M:MaxMind.MinFraud.Response.Address.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a string that represents the current object.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Response/Address.html">Address</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MaxMind.MinFraud.Response.BillingAddress:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MaxMind.MinFraud.Response.BillingAddress()">BillingAddress Constructor</h3>
+        <blockquote id="C:MaxMind.MinFraud.Response.BillingAddress():member">
+          <div class="msummary">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>BillingAddress</b> ()</div>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Response.BillingAddress():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Response.BillingAddress():Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Response<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

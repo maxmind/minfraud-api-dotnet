@@ -1,0 +1,612 @@
+<html>
+  <head>
+    <title>MaxMind.MinFraud.Request.Shipping</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MaxMind.MinFraud</a> : <a href="index.html">MaxMind.MinFraud.Request Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Shipping">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Shipping:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Shipping:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.Shipping:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MaxMind.MinFraud.Request.Shipping">Shipping  Class</h1>
+    <p class="Summary" id="T:MaxMind.MinFraud.Request.Shipping:Summary">
+            The shipping information for the transaction being sent to the
+            web service.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MaxMind.MinFraud.Request.Shipping:Signature">public sealed class  <b>Shipping</b> : <a href="../MaxMind.MinFraud.Request/Location.html">Location</a></div>
+    </div>
+    <div class="Remarks" id="T:MaxMind.MinFraud.Request.Shipping:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.Shipping:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.Shipping:Docs:Version Information">
+        <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed})">Shipping</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;ShippingDeliverySpeed&gt;</a>)</div>
+                </td>
+                <td>
+            Constructor.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Address">Address</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The first line of the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Address2">Address2</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The second line of the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.City">City</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The city associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Company">Company</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The company name associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Country">Country</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The ISO 3166-1 alpha-2 country code for the country
+            associated with the address (e.g., "US")
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed">DeliverySpeed</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;ShippingDeliverySpeed&gt;</a>
+                  </i>. 
+            The shipping delivery speed for the order.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.FirstName">FirstName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The first name associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.LastName">LastName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The last name associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.PhoneCountryCode">PhoneCountryCode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The phone number, without the country code, associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.PhoneNumber">PhoneNumber</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The phone country code for the phone number associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Postal">Postal</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The postal code for associated with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#P:MaxMind.MinFraud.Request.Location.Region">Region</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The ISO 3166-2 subdivision code for the region associated
+            with the address.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MaxMind.MinFraud.Request.Shipping.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a string that represents the current object.
+            </blockquote></td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="../MaxMind.MinFraud.Request/Location.html#M:MaxMind.MinFraud.Request.Location.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a string that represents the current object.
+             (<i>Inherited from <a href="../MaxMind.MinFraud.Request/Location.html">Location</a>.</i>)</blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MaxMind.MinFraud.Request.Shipping:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed})">Shipping Constructor</h3>
+        <blockquote id="C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed}):member">
+          <div class="msummary">
+            Constructor.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>Shipping</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> firstName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> lastName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> company, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> address, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> address2, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> city, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> region, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> country, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> postal, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> phoneNumber, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> phoneCountryCode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;ShippingDeliverySpeed&gt;</a> deliverySpeed)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed}):Parameters">
+            <dl>
+              <dt>
+                <i>firstName</i>
+              </dt>
+              <dd>The first name of the end user as provided in their shipping information.</dd>
+              <dt>
+                <i>lastName</i>
+              </dt>
+              <dd>The last name of the end user as provided in their shipping information.</dd>
+              <dt>
+                <i>company</i>
+              </dt>
+              <dd>The company of the end user as provided in their shipping information.</dd>
+              <dt>
+                <i>address</i>
+              </dt>
+              <dd>The first line of the user’s shipping address.</dd>
+              <dt>
+                <i>address2</i>
+              </dt>
+              <dd>The second line of the user’s shipping address.</dd>
+              <dt>
+                <i>city</i>
+              </dt>
+              <dd>The city of the user’s shipping address.</dd>
+              <dt>
+                <i>region</i>
+              </dt>
+              <dd>The ISO 3166-2
+            subdivision code for the user’s shipping address.</dd>
+              <dt>
+                <i>country</i>
+              </dt>
+              <dd>The two character ISO
+            3166-1 alpha-2 country code of the user’s shipping address.</dd>
+              <dt>
+                <i>postal</i>
+              </dt>
+              <dd>The postal code of the user’s shipping address.</dd>
+              <dt>
+                <i>phoneNumber</i>
+              </dt>
+              <dd>The phone number without the country code for the user’s shipping address.</dd>
+              <dt>
+                <i>phoneCountryCode</i>
+              </dt>
+              <dd>The country code for phone number associated with the user’s shipping address.</dd>
+              <dt>
+                <i>deliverySpeed</i>
+              </dt>
+              <dd>The shipping delivery speed for the order.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.Shipping(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{MaxMind.MinFraud.Request.ShippingDeliverySpeed}):Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed">DeliverySpeed Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed:member">
+          <div class="msummary">
+            The shipping delivery speed for the order.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("delivery_speed")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;ShippingDeliverySpeed&gt;</a> <b>DeliverySpeed</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.Shipping.DeliverySpeed:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MaxMind.MinFraud.Request.Shipping.ToString()">ToString Method</h3>
+        <blockquote id="M:MaxMind.MinFraud.Request.Shipping.ToString():member">
+          <div class="msummary">
+            Returns a string that represents the current object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MaxMind.MinFraud.Request.Shipping.ToString():Returns">A string that represents the current object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.Shipping.ToString():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.Shipping.ToString():Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.5.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>

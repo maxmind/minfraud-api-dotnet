@@ -2,28 +2,28 @@
 layout: default
 title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
-version: v0.4.0-beta2
+version: v0.5.0
 ---
 
-# .NET API for MaxMind minFraud Score and minFraud Insights
+# .NET API for MaxMind minFraud Score, Insights, and Factors #
 
 ## Beta Note ##
 
 This is a beta release. The API may change before the first production
 release.
 
-You may find information on the changes in minFraud Score and minFraud
-Insights in our [What's New
+You may find information on the changes in minFraud Score, Insights, and
+Factors in our [What's New
 documentation](https://dev.maxmind.com/minfraud/whats-new-in-minfraud-score-and-minfraud-insights/).
 
 ## Description ##
 
-This package provides an API for the [MaxMind minFraud Score and
-minFraud Insights web services](http://dev.maxmind.com/minfraud/minfraud-score-and-insights-api-documentation/).
+This package provides an API for the [MaxMind minFraud Score, Insights, and
+Factors web services](http://dev.maxmind.com/minfraud/minfraud-score-and-insights-api-documentation/).
 
 ## Requirements ##
 
-This library works with .NET Framework version 4.5.2 and above. If you are
+This library works with .NET Framework version 4.5 and above. If you are
 using Mono, version 4 or greater is required.
 
 This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
@@ -83,10 +83,16 @@ marked as async:
 var score = await client.ScoreAsync(transaction);
 ```
 
-Or a minFraud Insights request by calling `InsightsAsynce` method:
+A minFraud Insights request by calling `InsightsAsync` method:
 
 ```csharp
-var score = await client.ScoreAsync(transaction);
+var insights = await client.InsightsAsync(transaction);
+```
+
+Or a minFraud Factors request by calling `FactorsAsync` method:
+
+```csharp
+var factors = await client.FactorsAsync(transaction);
 ```
 
 If the request succeeds, a model object will be returned for the endpoint. If
@@ -107,7 +113,9 @@ Thrown by `ScoreAsync(transaction)` or `InsightsAsync(transaction)` on
 * `AuthenticationException` - Thrown when the server is unable to authenticate
   the request, e.g., if the license key or user ID is invalid.
 * `InsufficientFundsException` - Thrown when your account is out of funds.
-* `InvalidRequestException` -  Thrown when the server rejects the request for
+* `PermissionRequireException` - Thrown when your account does not have
+  permission to access the service.
+* `InvalidRequestException` - Thrown when the server rejects the request for
   another reason such as invalid JSON in the POST.
 * `MinFraudException` - Thrown when the server returns an unexpected response.
   This also serves as the base class for the above exceptions.
@@ -257,6 +265,6 @@ This API uses [Semantic Versioning](http://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2016 by MaxMind, Inc.
+This software is Copyright (c) 2015-2016 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
