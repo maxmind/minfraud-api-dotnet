@@ -44,7 +44,7 @@ takes your MaxMind user ID, license key, and an optional options array as
 arguments:
 
 ```csharp
-var client = new WebServiceClient(10, 'LICENSEKEY');
+var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
 This object should be disposed of when you done using it.
@@ -204,7 +204,7 @@ public class MinFraudExample
             ),
             order:
             new Order(
-                amount: (decimal) 323.21,
+                amount: 323.21m,
                 currency: "USD",
                 discountCode: "FIRST",
                 affiliateId: "af12",
@@ -217,13 +217,13 @@ public class MinFraudExample
                     category: "pets",
                     itemId: "ad23232",
                     quantity: 2,
-                    price: (decimal) 20.43
+                    price: 20.43m
                 ),
                 new ShoppingCartItem(
                     category: "beauty",
                     itemId: "bst112",
                     quantity: 1,
-                    price: (decimal) 100.00
+                    price: 100.00m
                 )
             }
         );

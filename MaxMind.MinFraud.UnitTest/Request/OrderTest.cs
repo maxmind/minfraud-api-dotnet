@@ -9,8 +9,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestAmount()
         {
-            var order = new Order(amount: (decimal)1.1);
-            Assert.AreEqual((decimal)1.1, order.Amount);
+            var order = new Order(amount: 1.1m);
+            Assert.AreEqual(1.1m, order.Amount);
         }
 
         [Test]

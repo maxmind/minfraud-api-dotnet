@@ -29,8 +29,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestPrice()
         {
-            var item = new ShoppingCartItem(price: (decimal) 10);
-            Assert.AreEqual((decimal) 10, item.Price);
+            var item = new ShoppingCartItem(price: 10m);
+            Assert.AreEqual(10m, item.Price);
         }
     }
 }
