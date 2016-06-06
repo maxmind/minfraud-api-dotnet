@@ -20,7 +20,11 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"shipping_address", new JObject {{"is_in_ip_country", true}}},
                 {"billing_address", new JObject {{"is_in_ip_country", true}}},
                 {
-                    "credits_remaining",
+                    "funds_remaining",
+                    1.20
+                },
+                {
+                    "queries_remaining",
                     123
                 },
                 {
@@ -37,7 +41,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.IsTrue(insights.ShippingAddress.IsInIPCountry);
             Assert.IsTrue(insights.BillingAddress.IsInIPCountry);
             Assert.AreEqual(id, insights.Id.ToString());
-            Assert.AreEqual(123, insights.CreditsRemaining);
+            Assert.AreEqual(1.20, insights.FundsRemaining);
+            Assert.AreEqual(123, insights.QueriesRemaining);
             Assert.AreEqual(0.01, insights.RiskScore);
             Assert.AreEqual("INVALID_INPUT", insights.Warnings[0].Code);
         }

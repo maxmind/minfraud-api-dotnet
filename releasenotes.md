@@ -1,6 +1,15 @@
 Release Notes
 =============
 
+0.6.0 (2016-XX-XX)
+------------------
+
+* BREAKING CHANGE: `CreditsRemaining` has been removed from the web service
+  models and has been replaced by `QueriesRemaining`.
+* Added `QueriesRemaining` and `FundsRemaining`. Note that `FundsRemaining`
+  will not be returned by the web service until our new credit system is in
+  place.
+
 0.5.0 (2016-05-23)
 ------------------
 
@@ -12,7 +21,6 @@ Release Notes
 * Added the following new values to the `PaymentProcessor` enum:
   `Ccnow`, `Dalpay`, `Epay` (replaces `Epayeu`), `Payplus`, `Pinpayments`,
   `Quickpay`, and `Verepay`.
-
 
 0.4.0-beta2 (2016-01-29)
 ------------------------

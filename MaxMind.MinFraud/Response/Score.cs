@@ -14,11 +14,11 @@ namespace MaxMind.MinFraud.Response
         private List<Warning> _warnings = new List<Warning>();
 
         /// <summary>
-        /// The approximate number of service credits remaining on your
-        /// account.
+        /// The approximate US dollar value of the funds remaining on your
+        /// MaxMind account.
         /// </summary>
-        [JsonProperty("credits_remaining")]
-        public long? CreditsRemaining { get; internal set; }
+        [JsonProperty("funds_remaining")]
+        public decimal? FundsRemaining { get; internal set; }
 
         /// <summary>
         /// This is a UUID that identifies the minFraud request. Please use
@@ -33,6 +33,13 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonProperty("ip_address")]
         public IIPAddress IPAddress { get; internal set; } = new ScoreIPAddress();
+
+        /// <summary>
+        /// The approximate number of queries remaining for this service
+        /// before your account runs out of funds.
+        /// </summary>
+        [JsonProperty("queries_remaining")]
+        public long? QueriesRemaining { get; internal set; }
 
         /// <summary>
         /// This property contains the risk score, from 0.01 to 99. A
@@ -60,7 +67,7 @@ namespace MaxMind.MinFraud.Response
         public override string ToString()
         {
             var warnings = string.Join("; ", Warnings.Select(x => x.Message));
-            return $"Warnings: [{warnings}], CreditsRemaining: {CreditsRemaining}, Id: {Id}, RiskScore: {RiskScore}";
+            return $"Warnings: [{warnings}], FundsRemaining: {FundsRemaining}, Id: {Id},  QueriesRemaining: {QueriesRemaining}, RiskScore: {RiskScore}";
         }
     }
 }
