@@ -1,0 +1,616 @@
+<html>
+  <head>
+    <title>MaxMind.MinFraud.Request.CreditCard</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      a { text-decoration: none }
+
+      div.SideBar {
+        padding-left: 1em;
+        padding-right: 1em;
+        right: 0;
+        float: right;
+        border: thin solid black;
+        background-color: #f2f2f2;
+      }
+    
+      .CollectionTitle { font-weight: bold }
+      .PageTitle { font-size: 150%; font-weight: bold }
+
+      .Summary { }
+      .Signature { }          
+      .Remarks { }
+      .Members { }
+      .Copyright { }
+      
+      .Section { font-size: 125%; font-weight: bold }
+      p.Summary {
+        margin-left: 1em;
+      }
+      .SectionBox { margin-left: 2em }
+      .NamespaceName { font-size: 105%; font-weight: bold }
+      .NamespaceSumary { }
+      .MemberName { font-size: 115%; font-weight: bold; margin-top: 1em }
+      .Subsection { font-size: 105%; font-weight: bold }
+      .SubsectionBox { margin-left: 2em; margin-bottom: 1em }
+
+      .CodeExampleTable { background-color: #f5f5dd; border: thin solid black; padding: .25em; }
+      
+      .TypesListing {
+        border-collapse: collapse;
+      }
+
+      td {
+        vertical-align: top;
+      }
+      th {
+        text-align: left;
+      }
+
+      .TypesListing td { 
+        margin: 0px;  
+        padding: .25em;
+        border: solid gray 1px;
+      }
+
+      .TypesListing th { 
+        margin: 0px;  
+        padding: .25em;
+        background-color: #f2f2f2;
+        border: solid gray 1px;
+      }
+
+      div.Footer {
+        border-top: 1px solid gray;
+        margin-top: 1.5em;
+        padding-top: 0.6em;
+        text-align: center;
+        color: gray;
+      }
+
+      span.NotEntered /* Documentation for this section has not yet been entered */ {
+        font-style: italic;
+        color: red;	
+      }
+
+      div.Header {
+        background: #B0C4DE;
+        border: double;
+        border-color: white;
+        border-width: 7px;
+        padding: 0.5em;
+      }
+
+      div.Header * {
+        font-size: smaller;
+      }
+
+      div.Note {
+      }
+
+      i.ParamRef {
+      }
+
+      i.subtitle {
+      }
+
+      ul.TypeMembersIndex {
+        text-align: left;
+        background: #F8F8F8;
+      }
+
+      ul.TypeMembersIndex li {
+        display: inline;
+        margin:  0.5em;
+      }
+
+      table.HeaderTable {
+      }
+
+      table.SignatureTable {
+      }
+
+      table.Documentation, table.Enumeration, table.TypeDocumentation {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      table.Documentation tr th, table.TypeMembers tr th, table.Enumeration tr th, table.TypeDocumentation tr th {
+        background: whitesmoke;
+        padding: 0.8em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: bottom;
+      }
+
+      table.Documentation tr td, table.TypeMembers tr td, table.Enumeration tr td, table.TypeDocumentation tr td {
+        padding: 0.5em;
+        border: 1px solid gray;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      table.TypeMembers {
+        border: 1px solid #C0C0C0;
+        width: 100%;
+      }
+
+      table.TypeMembers tr td {
+        background: #F8F8F8;
+        border: white;
+      }
+
+      table.Documentation {
+      }
+
+      table.TypeMembers {
+      }
+
+      div.CodeExample {
+        width: 100%;
+        border: 1px solid #DDDDDD;
+        background-color: #F8F8F8;
+      }
+
+      div.CodeExample p {
+        margin: 0.5em;
+        border-bottom: 1px solid #DDDDDD;
+      }
+
+      div.CodeExample div {
+        margin: 0.5em;
+      }
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      div.Signature {
+        border: 1px solid #C0C0C0;
+        background: #F2F2F2;
+        padding: 1em;
+      }
+    </style>
+    <script type="text/JavaScript">
+      function toggle_display (block) {
+        var w = document.getElementById (block);
+        var t = document.getElementById (block + ":toggle");
+        if (w.style.display == "none") {
+          w.style.display = "block";
+          t.innerHTML = "⊟";
+        } else {
+          w.style.display = "none";
+          t.innerHTML = "⊞";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="CollectionTitle">
+      <a href="../index.html">MaxMind.MinFraud</a> : <a href="index.html">MaxMind.MinFraud.Request Namespace</a></div>
+    <div class="SideBar">
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.CreditCard">Overview</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.CreditCard:Signature">Signature</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.CreditCard:Docs">Remarks</a>
+      </p>
+      <p>
+        <a href="#Members">Members</a>
+      </p>
+      <p>
+        <a href="#T:MaxMind.MinFraud.Request.CreditCard:Members">Member Details</a>
+      </p>
+    </div>
+    <h1 class="PageTitle" id="T:MaxMind.MinFraud.Request.CreditCard">CreditCard  Class</h1>
+    <p class="Summary" id="T:MaxMind.MinFraud.Request.CreditCard:Summary">
+            The credit card information for the transaction being sent to the
+            web service.
+            </p>
+    <div>
+      <h2>Syntax</h2>
+      <div class="Signature" id="T:MaxMind.MinFraud.Request.CreditCard:Signature">public sealed class  <b>CreditCard</b></div>
+    </div>
+    <div class="Remarks" id="T:MaxMind.MinFraud.Request.CreditCard:Docs">
+      <h2 class="Section">Remarks</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.CreditCard:Docs:Remarks">
+        <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+      </div>
+      <h2 class="Section">Requirements</h2>
+      <div class="SectionBox" id="T:MaxMind.MinFraud.Request.CreditCard:Docs:Version Information">
+        <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+      <h2 class="Section" id="Members">Members</h2>
+      <div class="SectionBox" id="_Members">
+        <p>
+								See Also: Inherited members from
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>.
+							</p>
+        <h2 class="Section">Public Constructors</h2>
+        <div class="SectionBox" id="Public Constructors">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>
+                  </div>
+                </td>
+                <td>
+                  <div>
+                    <b>
+                      <a href="#C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char})">CreditCard</a>
+                    </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a>)</div>
+                </td>
+                <td>
+            Constructor.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Properties</h2>
+        <div class="SectionBox" id="Public Properties">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.AvsResult">AvsResult</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a>
+                  </i>. 
+            The address verification system (AVS) check result, as
+            returned to you by the credit card processor. The minFraud
+            service supports the standard AVS codes.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.BankName">BankName</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The name of the issuing bank as provided by the end user.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode">BankPhoneCountryCode</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The phone country code for the issuing bank as provided by
+            the end user.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber">BankPhoneNumber</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The phone number, without the country code, for the
+            issuing bank as provided by the end user.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.CvvResult">CvvResult</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a>
+                  </i>. 
+            The card verification value (CVV) code as provided by the
+            payment processor.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber">IssuerIdNumber</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The issuer ID number for the credit card. This is the first 6
+            digits of the credit card number. It identifies the issuing bank.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td>[read-only]<div></div></td>
+                <td>
+                  <b>
+                    <a href="#P:MaxMind.MinFraud.Request.CreditCard.Last4Digits">Last4Digits</a>
+                  </b>
+                </td>
+                <td>
+                  <i>
+                    <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                  </i>. 
+            The last four digits of the credit card number.
+            </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <h2 class="Section">Public Methods</h2>
+        <div class="SectionBox" id="Public Methods">
+          <div class="SubsectionBox">
+            <table class="TypeMembers">
+              <tr valign="top">
+                <td>
+                  <div>override </div>
+                </td>
+                <td colspan="2">
+                  <b>
+                    <a href="#M:MaxMind.MinFraud.Request.CreditCard.ToString()">ToString</a>
+                  </b>()<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a></nobr><blockquote>
+            Returns a string that represents the current object.
+            </blockquote></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Members" id="T:MaxMind.MinFraud.Request.CreditCard:Members">
+      <h2 class="Section" id="MemberDetails">Member Details</h2>
+      <div class="SectionBox" id="_MemberDetails">
+        <h3 id="C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char})">CreditCard Constructor</h3>
+        <blockquote id="C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char}):member">
+          <div class="msummary">
+            Constructor.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public  <b>CreditCard</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> issuerIdNumber, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> last4Digits, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> bankName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> bankPhoneCountryCode, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> bankPhoneNumber, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a> avsResult, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a> cvvResult)</div>
+          <h4 class="Subsection">Parameters</h4>
+          <blockquote class="SubsectionBox" id="C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char}):Parameters">
+            <dl>
+              <dt>
+                <i>issuerIdNumber</i>
+              </dt>
+              <dd>The issuer ID number for the credit card.
+            This is the first 6 digits of the credit card number. It identifies
+            the issuing bank.</dd>
+              <dt>
+                <i>last4Digits</i>
+              </dt>
+              <dd>The last four digits of the credit card
+            number.</dd>
+              <dt>
+                <i>bankName</i>
+              </dt>
+              <dd>The name of the issuing bank as provided by
+            the end user</dd>
+              <dt>
+                <i>bankPhoneCountryCode</i>
+              </dt>
+              <dd>The phone country code for the
+            issuing bank as provided by the end user.</dd>
+              <dt>
+                <i>bankPhoneNumber</i>
+              </dt>
+              <dd>The phone number, without the
+            country code, for the issuing bank as provided by the end
+            user.</dd>
+              <dt>
+                <i>avsResult</i>
+              </dt>
+              <dd>The address verification system (AVS)
+            check result, as returned to you by the credit card processor.
+            The minFraud service supports the standard AVS codes.</dd>
+              <dt>
+                <i>cvvResult</i>
+              </dt>
+              <dd>The card verification value (CVV) code
+            as provided by the payment processor.</dd>
+            </dl>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char}):Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="C:MaxMind.MinFraud.Request.CreditCard(System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Char},System.Nullable{System.Char}):Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.AvsResult">AvsResult Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.AvsResult:member">
+          <div class="msummary">
+            The address verification system (AVS) check result, as
+            returned to you by the credit card processor. The minFraud
+            service supports the standard AVS codes.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("avs_result")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a> <b>AvsResult</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.AvsResult:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.AvsResult:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.AvsResult:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.BankName">BankName Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.BankName:member">
+          <div class="msummary">
+            The name of the issuing bank as provided by the end user.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("bank_name")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>BankName</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankName:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankName:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankName:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode">BankPhoneCountryCode Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode:member">
+          <div class="msummary">
+            The phone country code for the issuing bank as provided by
+            the end user.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("bank_phone_country_code")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>BankPhoneCountryCode</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneCountryCode:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber">BankPhoneNumber Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber:member">
+          <div class="msummary">
+            The phone number, without the country code, for the
+            issuing bank as provided by the end user.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("bank_phone_number")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>BankPhoneNumber</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.BankPhoneNumber:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.CvvResult">CvvResult Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.CvvResult:member">
+          <div class="msummary">
+            The card verification value (CVV) code as provided by the
+            payment processor.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("cvv_result")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Nullable`1">Nullable&lt;char&gt;</a> <b>CvvResult</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.CvvResult:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.CvvResult:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.CvvResult:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber">IssuerIdNumber Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber:member">
+          <div class="msummary">
+            The issuer ID number for the credit card. This is the first 6
+            digits of the credit card number. It identifies the issuing bank.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("issuer_id_number")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>IssuerIdNumber</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.IssuerIdNumber:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="P:MaxMind.MinFraud.Request.CreditCard.Last4Digits">Last4Digits Property</h3>
+        <blockquote id="P:MaxMind.MinFraud.Request.CreditCard.Last4Digits:member">
+          <div class="msummary">
+            The last four digits of the credit card number.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">[Newtonsoft.Json.JsonProperty("last_4_digits")]<br />public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>Last4Digits</b>  { get; }</div>
+          <h4 class="Subsection">Value</h4>
+          <blockquote class="SubsectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.Last4Digits:Value">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.Last4Digits:Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="P:MaxMind.MinFraud.Request.CreditCard.Last4Digits:Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+        <h3 id="M:MaxMind.MinFraud.Request.CreditCard.ToString()">ToString Method</h3>
+        <blockquote id="M:MaxMind.MinFraud.Request.CreditCard.ToString():member">
+          <div class="msummary">
+            Returns a string that represents the current object.
+            </div>
+          <h2>Syntax</h2>
+          <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>ToString</b> ()</div>
+          <h4 class="Subsection">Returns</h4>
+          <blockquote class="SubsectionBox" id="M:MaxMind.MinFraud.Request.CreditCard.ToString():Returns">A string that represents the current object.</blockquote>
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.CreditCard.ToString():Remarks">
+            <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="M:MaxMind.MinFraud.Request.CreditCard.ToString():Version Information">
+            <b>Namespace: </b>MaxMind.MinFraud.Request<br /><b>Assembly: </b>MaxMind.MinFraud (in MaxMind.MinFraud.dll)<br /><b>Assembly Versions: </b>0.6.0.0</div>
+          <hr size="1" />
+        </blockquote>
+      </div>
+    </div>
+    <hr size="1" />
+    <div class="Copyright">
+    </div>
+  </body>
+</html>
