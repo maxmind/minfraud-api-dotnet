@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-0.6.0 (2016-XX-XX)
+0.6.0 (2016-06-08)
 ------------------
 
 * BREAKING CHANGE: `CreditsRemaining` has been removed from the web service
