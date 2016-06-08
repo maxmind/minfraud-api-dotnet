@@ -9,6 +9,8 @@ Release Notes
 * Added `QueriesRemaining` and `FundsRemaining`. Note that `FundsRemaining`
   will not be returned by the web service until our new credit system is in
   place.
+* `Confidence` and `LastSeen` were added to the `Device` response model.
+* `LocalTime` in the `GeoIP2Location` model is now nullable.
 
 0.5.0 (2016-05-23)
 ------------------

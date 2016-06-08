@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             }.ToObject<IPAddress>();
 
             Assert.AreEqual(99, address.Risk);
-            Assert.AreEqual(time, address.Location.LocalTime.ToString("yyyy-MM-ddTHH:mm:ssK"));
+            Assert.AreEqual(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));
             Assert.AreEqual(true, address.Country.IsHighRisk);
         }
     }

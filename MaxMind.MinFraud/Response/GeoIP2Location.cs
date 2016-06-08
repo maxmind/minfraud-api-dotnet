@@ -15,7 +15,7 @@ namespace MaxMind.MinFraud.Response
         /// zone associated with the IP address.
         /// </summary>
         [JsonProperty("local_time")]
-        public DateTimeOffset LocalTime { get; internal set; }
+        public DateTimeOffset? LocalTime { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.
