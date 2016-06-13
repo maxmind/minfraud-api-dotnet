@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Net.Mail;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -25,12 +25,12 @@ namespace MaxMind.MinFraud.Request
         /// and <c>domain</c> is not, the domain will be automatically
         /// set from the address.</param>
         public Email(
-            MailAddress address = null,
+            string address = null,
             string domain = null
             )
         {
             Address = address;
-            Domain = domain ?? address?.Host;
+            Domain = domain ?? address?.Split('@')[1];
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace MaxMind.MinFraud.Request
                 }
                 using (var md5Generator = MD5.Create())
                 {
-                    var bytes = Encoding.UTF8.GetBytes(Address.Address);
+                    var bytes = Encoding.UTF8.GetBytes(Address);
                     var md5 = md5Generator.ComputeHash(bytes);
                     return BitConverter.ToString(md5)
                         .Replace("-", string.Empty)
@@ -60,7 +60,8 @@ namespace MaxMind.MinFraud.Request
         /// The email address used in the transaction.
         /// </summary>
         [JsonIgnore]
-        public MailAddress Address { get; }
+        [EmailAddress]
+        public string Address { get; }
 
         /// <summary>
         /// The domain of the email address.
@@ -68,7 +69,7 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("domain")]
         public string Domain
         {
-            get { return _domain ?? Address?.Host; }
+            get { return _domain; }
             private set
             {
                 if (Uri.CheckHostName(value) == UriHostNameType.Unknown)

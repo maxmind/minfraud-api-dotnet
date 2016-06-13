@@ -154,7 +154,7 @@ public class MinFraudExample
             ),
             email:
             new Email(
-                address: new System.Net.Mail.MailAddress("test@maxmind.com"),
+                address: "test@maxmind.com",
                 domain: "maxmind.com"
             ),
             billing:

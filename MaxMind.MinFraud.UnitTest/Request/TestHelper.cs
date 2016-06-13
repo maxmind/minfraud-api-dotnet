@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Net.Mail;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -35,7 +34,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                         ),
                 email:
                     new Email(
-                        address: new MailAddress("test@maxmind.com"),
+                        address: "test@maxmind.com",
                         domain: "maxmind.com"
                         ),
                 billing:
@@ -112,10 +111,13 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 );
         }
 
+        public static string CurrentDirectory =>
+            Directory.GetCurrentDirectory();
+
         public static string ReadJsonFile(string name)
         {
             return
-                File.ReadAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "TestData",
+                File.ReadAllText(Path.Combine(CurrentDirectory, "TestData",
                     $"{name}.json"));
         }
 
