@@ -49,6 +49,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "compropago")]
         Compropago,
 
+        [EnumMember(Value = "concept_payments")]
+        ConceptPayments,
+
         [EnumMember(Value = "conekta")]
         Conekta,
 
@@ -63,6 +66,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "digital_river")]
         DigitalRiver,
+
+        [EnumMember(Value = "ecomm365")]
+        Ecomm365,
 
         [EnumMember(Value = "elavon")]
         Elavon,
@@ -123,6 +129,12 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "optimal_payments")]
         OptimalPayments,
+
+        [EnumMember(Value = "orangepay")]
+        Orangepay,
+
+        [EnumMember(Value = "pacnet_services")]
+        PacnetServices,
 
         [EnumMember(Value = "payfast")]
         Payfast,

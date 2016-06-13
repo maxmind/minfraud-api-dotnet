@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.6.1
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  `ConceptPayments`, `Ecomm365`, `Orangepay`, and `PacnetServices`.
+
 0.6.0 (2016-06-08)
 ------------------
 
