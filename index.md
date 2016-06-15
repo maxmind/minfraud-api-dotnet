@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
-version: v0.6.0
+version: v0.7.0-beta1
 ---
 
 # .NET API for MaxMind minFraud Score, Insights, and Factors #
@@ -161,7 +161,7 @@ public class MinFraudExample
             ),
             email:
             new Email(
-                address: new System.Net.Mail.MailAddress("test@maxmind.com"),
+                address: "test@maxmind.com",
                 domain: "maxmind.com"
             ),
             billing:
