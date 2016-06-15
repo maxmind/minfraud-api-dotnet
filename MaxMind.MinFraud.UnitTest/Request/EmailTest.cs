@@ -1,7 +1,6 @@
 ﻿using MaxMind.MinFraud.Request;
 using NUnit.Framework;
 using System;
-using System.Net.Mail;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -10,7 +9,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Test]
         public void TestAddress()
         {
-            var address = new MailAddress("test@maxmind.com");
+            var address = "test@maxmind.com";
             var email = new Email(address: address);
             Assert.AreEqual(address, email.Address);
             Assert.AreEqual("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);

@@ -1,15 +1,51 @@
 ---
 version: '1.0.{build}'
+
 os: Visual Studio 2015
-before_build:
-  - nuget restore -verbosity detailed
-  - nuget install NUnit.Console -version 3.0.0
-install:
-  - set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
-build:
-  verbosity: minimal
+
+environment:
+  matrix:
+    - Configuration: Debug
+      Framework: net451
+    - Configuration: Release
+      Framework: net451
+    - Configuration: Debug
+      Framework: netstandard1.5
+    - Configuration: Release
+      Framework: netstandard1.5
+
+build_script:
+  - git submodule update --init --recursive
+  - ps: |
+      if (gcm dotnet -errorAction SilentlyContinue) {
+        echo "Using dotnet '$((gcm dotnet).Path)'"
+        dotnet --info
+      }
+      else {
+        echo "dotnet.exe not found"
+        exit 1
+      }
+
+      # Restore packages
+      dotnet restore
+
+      if($env:Framework -eq "net45") {
+        $FrameworkLibsMoniker = "net45"
+      } else {
+        $FrameworkLibsMoniker = "netstandard1.5"
+      }
+
+      # Build projects
+      dotnet build -c $env:Configuration -f $FrameworkLibsMoniker .\MaxMind.MinFraud
+      dotnet build -c $env:Configuration -f $env:Framework .\MaxMind.MinFraud.UnitTest
+
 test_script:
-  - NUnit.Console.3.0.0\tools\nunit3-console.exe ".\MaxMind.MinFraud.UnitTest\bin\Debug\MaxMind.MinFraud.UnitTest.dll"
+  - ps: |
+      # Run tests
+      cd .\MaxMind.MinFraud.UnitTest
+
+      dotnet test -f $env:Framework -c $env:Configuration
+
 notifications:
   - auth_token:
       secure: X+ymndzchVeC2LYsehzOt/GEMFfZJeTENeAU9lwNwTuCxBXFJNkuwZLd9joAtHgykHQoYqmEv/nH64+MA6nTlw==

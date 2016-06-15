@@ -26,7 +26,11 @@ namespace MaxMind.MinFraud
     public sealed class WebServiceClient : IDisposable
     // If removing sealed, update Dispose methods.
     {
-        private static readonly Version Version = Assembly.GetExecutingAssembly().GetName().Version;
+        private static readonly string Version =
+            ((AssemblyInformationalVersionAttribute)
+                typeof(WebServiceClient).GetTypeInfo().Assembly.GetCustomAttribute(
+                    typeof(AssemblyInformationalVersionAttribute))).InformationalVersion;
+
         private const string BasePath = "/minfraud/v2.0/";
         private readonly HttpClient _httpClient;
         private readonly List<string> _locales;
@@ -42,8 +46,11 @@ namespace MaxMind.MinFraud
         /// <param name="host">The host to use when connecting to the web service.</param>
         /// <param name="timeout">The timeout to use for the request.</param>
         /// <param name="httpMessageHandler">Handler to use in request. For unit testing only.</param>
+#if !NETSTANDARD1_4
+
         // I believe this warning to be in error.
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
+#endif
         public WebServiceClient(
             int userId,
             string licenseKey,

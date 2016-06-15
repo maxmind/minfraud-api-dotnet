@@ -1,9 +1,14 @@
 Release Notes
 =============
 
-0.6.1
-------------------
+0.7.0-beta1 (2016-06-XX)
+------------------------
 
+* .NET Core support.
+* `Email` request class constructor now takes a `string` email address rather
+  than a `MailAddress`. This was does as CoreFX does not currently have
+  `System.Net.Mail`.
+* Exceptions are no longer serializable.
 * Added the following new values to the `PaymentProcessor` enum:
   `ConceptPayments`, `Ecomm365`, `Orangepay`, and `PacnetServices`.
 

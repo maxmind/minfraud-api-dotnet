@@ -1,8 +1,6 @@
 ﻿#region
 
 using System;
-using System.Runtime.Serialization;
-using System.Security.Permissions;
 
 #endregion
 
@@ -12,7 +10,6 @@ namespace MaxMind.MinFraud.Exception
     /// This class is thrown when the web service rejected the request. Check
     /// the value of <c>Code</c> for the reason code.
     /// </summary>
-    [Serializable]
     public class InvalidRequestException : MinFraudException
     {
         /// <summary>
@@ -65,19 +62,6 @@ namespace MaxMind.MinFraud.Exception
         }
 
         /// <summary>
-        /// Constructor for deserialization.
-        /// </summary>
-        /// <param name="info">The SerializationInfo with data.</param>
-        /// <param name="context">The source for this deserialization.</param>
-        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-        protected InvalidRequestException(SerializationInfo info, StreamingContext context)
-            : base(info, context)
-        {
-            Code = info.GetString("Code");
-            this.Uri = (Uri)info.GetValue("Uri", typeof(Uri));
-        }
-
-        /// <summary>
         /// The <a href="http://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Errors">
         /// reason code</a> for why the web service rejected the request.
         /// </summary>
@@ -87,22 +71,5 @@ namespace MaxMind.MinFraud.Exception
         /// The URI that was used for the request.
         /// </summary>
         public Uri Uri { get; }
-
-        /// <summary>
-        /// Populates a SerializationInfo with the data needed to serialize the target object.
-        /// </summary>
-        /// <param name="info">The SerializationInfo to populate with data.</param>
-        /// <param name="context">The destination (see StreamingContext) for this serialization.</param>
-        [SecurityPermission(SecurityAction.Demand, SerializationFormatter = true)]
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            if (info == null)
-            {
-                throw new ArgumentNullException(nameof(info));
-            }
-            info.AddValue("Code", Code);
-            info.AddValue("Uri", this.Uri);
-            base.GetObjectData(info, context);
-        }
     }
 }
