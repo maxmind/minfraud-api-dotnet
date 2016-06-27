@@ -49,7 +49,8 @@ namespace MaxMind.MinFraud.Request
         public int? Quantity { get; }
 
         /// <summary>
-        /// The price of the item in the shopping cart.
+        /// The per-unit price of the item in the shopping cart. This should
+        /// use the same currency as the order currency.
         /// </summary>
         [JsonProperty("price")]
         public decimal? Price { get; }
