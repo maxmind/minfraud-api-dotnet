@@ -10,9 +10,9 @@ environment:
     - Configuration: Release
       Framework: net451
     - Configuration: Debug
-      Framework: netstandard1.5
+      Framework: netstandard1.6
     - Configuration: Release
-      Framework: netstandard1.5
+      Framework: netstandard1.6
 
 build_script:
   - git submodule update --init --recursive
@@ -32,7 +32,7 @@ build_script:
       if($env:Framework -eq "net45") {
         $FrameworkLibsMoniker = "net45"
       } else {
-        $FrameworkLibsMoniker = "netstandard1.5"
+        $FrameworkLibsMoniker = "netstandard1.6"
       }
 
       # Build projects
