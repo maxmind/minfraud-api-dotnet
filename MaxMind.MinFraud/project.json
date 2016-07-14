@@ -6,9 +6,8 @@
     "authors": [
       "MaxMind, Inc."
     ],
-    "tags": [
-      ""
-    ],
+    "tags": ["maxmind", "minfraud", "fraud", "detection"],
+    "iconUrl": "https://raw.githubusercontent.com/maxmind/GeoIP2-dotnet/master/MaxMind-logo.png",
     "projectUrl": "https://github.com/maxmind/minfraud-api-dotnet",
     "licenseUrl": "https://github.com/maxmind/minfraud-api-dotnet/blob/master/LICENSE",
     "copyright": "Copyright © 2015-2016"

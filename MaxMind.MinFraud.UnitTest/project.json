@@ -2,17 +2,6 @@
   "version": "0.6.0",
   "name": "MaxMind.MinFraud.UnitTest",
   "description": "Test project for minFraud API",
-  "packOptions": {
-    "authors": [
-      "MaxMind, Inc."
-    ],
-    "tags": [
-      ""
-    ],
-    "projectUrl": "https://github.com/maxmind/minfraud-api-dotnet",
-    "licenseUrl": "https://github.com/maxmind/minfraud-api-dotnet/blob/master/LICENSE",
-    "copyright": "Copyright © 2015-2016"
-  },
   "buildOptions": {
     "keyFile": "../MaxMind.snk",
     "outputName": "MaxMind.MinFraud.UnitTest"
@@ -23,24 +12,18 @@
     },
     "dotnet-test-nunit": "3.4.0-beta-1",
     "MockHttpSigned": "1.3.0-netstandard-alpha3",
-    "NETStandard.Library": "1.6.0",
     "NUnit": "3.2.1"
   },
   "testRunner": "nunit",
   "frameworks": {
-    "net451": {},
-    "netstandard1.6": {
-      "imports": [
-        "dnxcore50",
-        "netcoreapp1.0",
-        "portable-net45+win8"
-      ],
+    "net451": { },
+    "netcoreapp1.0": {
+      "imports": "portable-net45+win8",
       "dependencies": {
         "Microsoft.NETCore.App": {
           "version": "1.0.0-*",
           "type": "platform"
-        },
-        "System.Console": "4.0.0"
+        }
       }
     }
   }

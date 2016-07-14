@@ -4,18 +4,30 @@ version: '1.0.{build}'
 os: Visual Studio 2015
 
 environment:
+  global:
+    MAXMIND_TEST_BASE_DIR: MaxMind.MinFraud.UnitTest
   matrix:
-    - Configuration: Debug
-      Framework: net451
-    - Configuration: Release
-      Framework: net451
-    - Configuration: Debug
-      Framework: netstandard1.6
-    - Configuration: Release
-      Framework: netstandard1.6
+    - CONFIGURATION: Debug
+      FRAMEWORK: net45
+      SECONDARYFRAMEWORK: net451
+      FrameworkLibsMoniker: net45
+    - CONFIGURATION: Release
+      FRAMEWORK: net45
+      SECONDARYFRAMEWORK: net451
+      FrameworkLibsMoniker: net45
+    - CONFIGURATION: Debug
+      FRAMEWORK: netcoreapp1.0
+      SECONDARYFRAMEWORK: netcoreapp1.0
+      FrameworkLibsMoniker: netstandard1.4
+    - CONFIGURATION: Release
+      FRAMEWORK: netcoreapp1.0
+      SECONDARYFRAMEWORK: netcoreapp1.0
+      FrameworkLibsMoniker: netstandard1.4
+
+before_build:
+  - git submodule update --init --recursive
 
 build_script:
-  - git submodule update --init --recursive
   - ps: |
       if (gcm dotnet -errorAction SilentlyContinue) {
         echo "Using dotnet '$((gcm dotnet).Path)'"
@@ -25,26 +37,22 @@ build_script:
         echo "dotnet.exe not found"
         exit 1
       }
-
-      # Restore packages
+      # Restore Packages
       dotnet restore
-
-      if($env:Framework -eq "net45") {
-        $FrameworkLibsMoniker = "net45"
-      } else {
-        $FrameworkLibsMoniker = "netstandard1.6"
-      }
-
-      # Build projects
-      dotnet build -c $env:Configuration -f $FrameworkLibsMoniker .\MaxMind.MinFraud
-      dotnet build -c $env:Configuration -f $env:Framework .\MaxMind.MinFraud.UnitTest
+      # Build Projects
+      dotnet build -c $env:CONFIGURATION -f $env:FrameworkLibsMoniker .\MaxMind.MinFraud
+      dotnet build -c $env:CONFIGURATION -f $env:SECONDARYFRAMEWORK .\MaxMind.MinFraud.UnitTest
 
 test_script:
-  - ps: |
-      # Run tests
-      cd .\MaxMind.MinFraud.UnitTest
+  # Run Unit Tests
+  - dotnet test -f %SECONDARYFRAMEWORK% -c %CONFIGURATION% MaxMind.MinFraud.UnitTest
 
-      dotnet test -f $env:Framework -c $env:Configuration
+after_test:
+  # Run Unit Tests
+  - dotnet pack -c %CONFIGURATION% MaxMind.MinFraud
+
+artifacts:
+  - path: 'MaxMind.MinFraud\bin\**\*.nupkg'
 
 notifications:
   - auth_token:
