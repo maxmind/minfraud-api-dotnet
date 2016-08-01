@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+0.7.0 (2016-08-01)
+------------------
+
+* .NET Core 1.0 support.
+* Clarification of unit price in documentation.
+
 0.7.0-beta1 (2016-06-15)
 ------------------------
 

@@ -53,9 +53,8 @@ popd
 pushd MaxMind.MinFraud.UnitTest
 
 dotnet restore
-dotnet build
-# Disabled until the NUnit test runner works better on Linux
-# dotnet run -c Release
+# netcoreapp1.0 only due to https://github.com/dotnet/cli/issues/3073
+dotnet test -c Release -f netcoreapp1.0
 
 popd
 
