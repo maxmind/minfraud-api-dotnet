@@ -1,12 +1,17 @@
 {
-  "version": "0.7.0-beta1",
+  "version": "0.7.0",
   "name": "MaxMind.MinFraud",
   "description": "API for MaxMind minFraud Score and Insights web services",
   "packOptions": {
     "authors": [
       "MaxMind, Inc."
     ],
-    "tags": ["maxmind", "minfraud", "fraud", "detection"],
+    "tags": [
+      "maxmind",
+      "minfraud",
+      "fraud",
+      "detection"
+    ],
     "iconUrl": "https://raw.githubusercontent.com/maxmind/GeoIP2-dotnet/master/MaxMind-logo.png",
     "projectUrl": "https://github.com/maxmind/minfraud-api-dotnet",
     "licenseUrl": "https://github.com/maxmind/minfraud-api-dotnet/blob/master/LICENSE",
