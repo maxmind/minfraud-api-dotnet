@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+0.7.1 (2016-08-08)
+------------------
+
+* Re-release of 0.7.0 to fix strong-name issue. No code changes.
+
 0.7.0 (2016-08-01)
 ------------------
 

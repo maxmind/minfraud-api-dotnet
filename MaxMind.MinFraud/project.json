@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.7.1",
   "name": "MaxMind.MinFraud",
   "description": "API for MaxMind minFraud Score and Insights web services",
   "packOptions": {
@@ -23,7 +23,7 @@
     "xmlDoc": true
   },
   "dependencies": {
-    "MaxMind.GeoIP2": "2.7.0-*",
+    "MaxMind.GeoIP2": "2.7.1-*",
     "Newtonsoft.Json": "9.0.1-*"
   },
   "frameworks": {

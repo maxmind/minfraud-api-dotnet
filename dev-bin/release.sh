@@ -46,7 +46,7 @@ pushd MaxMind.MinFraud
 
 dotnet restore
 dotnet build -c Release
-dotnet pack -c Release
+# dotnet pack -c Release
 
 popd
 
@@ -117,4 +117,5 @@ git tag "$TAG"
 git push
 git push --tags
 
-nuget push "MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.$VERSION.nupkg"
+# nuget push "MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.$VERSION.nupkg"
+echo "Remember to pack and release on Windows!"
