@@ -80,7 +80,7 @@ title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
 version: $tag
 ---
-"@ | Out-File -Encoding UTF8 -Append $page
+"@ | Out-File -Encoding UTF8 $page
 
 Get-Content -Encoding UTF8 'README.md' | Out-File -Encoding UTF8 -Append $page
 
