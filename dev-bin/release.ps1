@@ -71,18 +71,22 @@ if (& git status --porcelain) {
 }
 Pop-Location
 
-$page = '.gh-pages\index.md'
+$page = (Get-Item '.gh-pages\index.md').FullName
 
-@"
+$pageHeader = @"
 ---
 layout: default
 title: MaxMind minFraud Score and Insights .NET API
 language: dotnet
 version: $tag
 ---
-"@ | Out-File -Encoding UTF8 $page
+"@
 
-Get-Content -Encoding UTF8 'README.md' | Out-File -Encoding UTF8 -Append $page
+Remove-Item $page
+
+# PowerShell write a BOM by default. GitHub Pages can't handle this.
+$utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
+[IO.File]::WriteAllLines($page, $pageHeader, $utf8NoBomEncoding)
 
 & MSBuild.exe .\minfraud.shfbproj /p:OutputPath=.gh-pages\doc\$tag
 
