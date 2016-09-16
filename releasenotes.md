@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+1.0.0 (2016-09-16)
+------------------
+
+* First production release. No code changes.
+
 0.7.1 (2016-08-08)
 ------------------
 
