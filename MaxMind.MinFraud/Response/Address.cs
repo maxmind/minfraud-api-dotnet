@@ -20,7 +20,8 @@ namespace MaxMind.MinFraud.Response
         /// This property is <c>true</c> if the postal code
         /// provided with the address is in the city for the address.The property is
         /// <c>false</c> when the postal code is not in the city. If the address could
-        /// not be parsed or was not provided, the property will be <c>null</c>.
+        /// not be parsed or was not provided, the property will be <c>null</c>. This
+	/// property will only be present for USA addresses.
         /// </summary>
         [JsonProperty("is_postal_in_city")]
         public bool? IsPostalInCity { get; internal set; }
