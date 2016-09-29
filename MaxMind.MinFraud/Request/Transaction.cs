@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
     public sealed class Transaction
     {
         /// <summary>
-        /// Constructor. See <a href="https://dev.maxmind.com/minfraud-score-and-insights-api-documentation/#Request_Body">
+        /// Constructor. See <a href="https://dev.maxmind.com/minfraud/#Request_Body">
         /// the minFraud documentation</a> for a general overview of the request sent to the web
         /// service.
         /// </summary>
