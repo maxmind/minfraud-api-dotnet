@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+1.0.1 (2016-09-16)
+------------------
+
+* Added the following new values to the `EventType` enum: `EmailChange` and
+  `PasswordReset`.
+
 1.0.0 (2016-09-16)
 ------------------
 
