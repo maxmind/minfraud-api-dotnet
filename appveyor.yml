@@ -37,8 +37,10 @@ build_script:
         echo "dotnet.exe not found"
         exit 1
       }
+
       # Restore Packages
       dotnet restore
+
       # Build Projects
       dotnet build -c $env:CONFIGURATION -f $env:FrameworkLibsMoniker .\MaxMind.MinFraud
       dotnet build -c $env:CONFIGURATION -f $env:SECONDARYFRAMEWORK .\MaxMind.MinFraud.UnitTest
