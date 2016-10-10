@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.0.1 (2016-09-16)
+1.1.0 (2016-10-10)
 ------------------
 
 * Added the following new values to the `EventType` enum: `EmailChange` and
