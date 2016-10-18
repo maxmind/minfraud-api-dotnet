@@ -16,6 +16,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"ip_address", new JObject {{"country", new JObject {{"iso_code", "US"}}}}},
                 {"credit_card", new JObject {{"is_prepaid", true}}},
                 {"device", new JObject { { "id", id } } },
+                {"disposition", new JObject {{"action", "accept"}}},
                 {"email", new JObject { {"is_free", true} } },
                 {"shipping_address", new JObject {{"is_in_ip_country", true}}},
                 {"billing_address", new JObject {{"is_in_ip_country", true}}},
@@ -37,6 +38,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.AreEqual("US", insights.IPAddress.Country.IsoCode);
             Assert.IsTrue(insights.CreditCard.IsPrepaid);
             Assert.AreEqual(id, insights.Device.Id.ToString());
+            Assert.AreEqual("accept", insights.Disposition.Action);
             Assert.IsTrue(insights.Email.IsFree);
             Assert.IsTrue(insights.ShippingAddress.IsInIPCountry);
             Assert.IsTrue(insights.BillingAddress.IsInIPCountry);

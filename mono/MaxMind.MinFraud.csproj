@@ -93,6 +93,7 @@
     <Compile Include="../MaxMind.MinFraud/Response\BillingAddress.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\CreditCard.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\Device.cs" />
+    <Compile Include="../MaxMind.MinFraud/Response\Disposition.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\Email.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\Factors.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\GeoIP2Country.cs" />

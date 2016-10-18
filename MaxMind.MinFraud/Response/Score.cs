@@ -14,6 +14,13 @@ namespace MaxMind.MinFraud.Response
         private List<Warning> _warnings = new List<Warning>();
 
         /// <summary>
+        /// This object contains information about the disposition set by
+        /// custom rules.
+        /// </summary>
+        [JsonProperty("disposition")]
+        public Disposition Disposition { get; internal set; } = new Disposition();
+
+        /// <summary>
         /// The approximate US dollar value of the funds remaining on your
         /// MaxMind account.
         /// </summary>
@@ -67,7 +74,7 @@ namespace MaxMind.MinFraud.Response
         public override string ToString()
         {
             var warnings = string.Join("; ", Warnings.Select(x => x.Message));
-            return $"Warnings: [{warnings}], FundsRemaining: {FundsRemaining}, Id: {Id},  QueriesRemaining: {QueriesRemaining}, RiskScore: {RiskScore}";
+            return $"Warnings: [{warnings}], Disposition: {Disposition}, FundsRemaining: {FundsRemaining}, Id: {Id},  QueriesRemaining: {QueriesRemaining}, RiskScore: {RiskScore}";
         }
     }
 }
