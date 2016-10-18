@@ -85,6 +85,7 @@
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Exception\HttpExceptionTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Exception\InvalidRequestExceptionTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Response\DeviceTest.cs" />
+    <Compile Include="..\MaxMind.MinFraud.UnitTest\Response\DispositionTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Response\EmailTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Response\GeoIP2CountryTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Properties\AssemblyInfo.cs" />
