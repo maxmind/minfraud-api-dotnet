@@ -28,12 +28,10 @@
   },
   "frameworks": {
     "net45": {
-      "dependencies": {
-        "System.Net.Http": "4.0.0"
-      },
       "frameworkAssemblies": {
-        "System.ComponentModel.DataAnnotations": "4.0.0",
-        "System.Runtime.Serialization": "4.0.0.0"
+        "System.ComponentModel.DataAnnotations": "",
+        "System.Net.Http":"",
+        "System.Runtime.Serialization": ""
       }
     },
     "netstandard1.4": {
