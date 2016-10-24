@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+1.1.1
+------------------
+
+* Use framework assembly for `System.Net.Http` on .NET 4.5 rather than NuGet
+  package.
+
 1.1.0 (2016-10-11)
 ------------------
 
