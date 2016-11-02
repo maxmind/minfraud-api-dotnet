@@ -105,7 +105,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                         bankPhoneNumber: "800-342-1232",
                         avsResult: 'Y',
                         cvvResult: 'N',
-                        last4Digits: "7643"
+                        last4Digits: "7643",
+                        token: "123456abc1234"
                         ),
                 order:
                     new Order(

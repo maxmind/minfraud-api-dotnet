@@ -10,17 +10,13 @@ namespace MaxMind.MinFraud.Request
     {
 #pragma warning disable CS1591
 
-        [EnumMember(Value = "same_day")]
-        SameDay,
+        [EnumMember(Value = "same_day")] SameDay,
 
-        [EnumMember(Value = "overnight")]
-        Overnight,
+        [EnumMember(Value = "overnight")] Overnight,
 
-        [EnumMember(Value = "expedited")]
-        Expedited,
+        [EnumMember(Value = "expedited")] Expedited,
 
-        [EnumMember(Value = "standard")]
-        Standard
+        [EnumMember(Value = "standard")] Standard
 
 #pragma warning restore
     }
@@ -61,19 +57,19 @@ namespace MaxMind.MinFraud.Request
             string phoneNumber = null,
             string phoneCountryCode = null,
             ShippingDeliverySpeed? deliverySpeed = null
-            ) : base(
-                firstName: firstName,
-                lastName: lastName,
-                company: company,
-                address: address,
-                address2: address2,
-                city: city,
-                region: region,
-                country: country,
-                postal: postal,
-                phoneNumber: phoneNumber,
-                phoneCountryCode: phoneCountryCode
-                )
+        ) : base(
+            firstName: firstName,
+            lastName: lastName,
+            company: company,
+            address: address,
+            address2: address2,
+            city: city,
+            region: region,
+            country: country,
+            postal: postal,
+            phoneNumber: phoneNumber,
+            phoneCountryCode: phoneCountryCode
+        )
         {
             DeliverySpeed = deliverySpeed;
         }

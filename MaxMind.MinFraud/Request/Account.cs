@@ -25,7 +25,7 @@ namespace MaxMind.MinFraud.Request
         public Account(
             string userId = null,
             string username = null
-            )
+        )
         {
             UserId = userId;
             Username = username;

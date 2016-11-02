@@ -22,7 +22,7 @@ namespace MaxMind.MinFraud.Request
             IPAddress ipAddress,
             string userAgent = null,
             string acceptLanguage = null
-            )
+        )
         {
             this.IPAddress = ipAddress;
             UserAgent = userAgent;

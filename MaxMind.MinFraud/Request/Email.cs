@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.Request
         public Email(
             string address = null,
             string domain = null
-            )
+        )
         {
             Address = address;
             Domain = domain ?? address?.Split('@')[1];

@@ -22,7 +22,7 @@ namespace MaxMind.MinFraud.Request
             string itemId = null,
             int? quantity = null,
             decimal? price = null
-            )
+        )
         {
             Category = category;
             ItemId = itemId;
