@@ -1,9 +1,12 @@
 Release Notes
 =============
 
-1.1.1
+1.2.0
 ------------------
 
+* Added `/credit_card/token` input. Use the `token` constructor parameter on
+    `MaxMind.MinFraud.Request.CreditCard` to set it.
+* All validation regular expressions are now pre-compiled.
 * Use framework assembly for `System.Net.Http` on .NET 4.5 rather than NuGet
   package.
 

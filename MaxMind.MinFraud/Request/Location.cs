@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public abstract class Location
     {
-        private string _country;
+        private static readonly Regex CountryRe = new Regex("^[A-Z]{2}$", RegexOptions.Compiled);
 
         /// <summary>
         /// Constructor.
@@ -40,8 +40,12 @@ namespace MaxMind.MinFraud.Request
             string postal = null,
             string phoneNumber = null,
             string phoneCountryCode = null
-            )
+        )
         {
+            if (country != null && !CountryRe.IsMatch(country))
+            {
+                throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
+            }
             FirstName = firstName;
             LastName = lastName;
             Company = company;
@@ -103,23 +107,7 @@ namespace MaxMind.MinFraud.Request
         /// associated with the address (e.g., "US")
         /// </summary>
         [JsonProperty("country")]
-        public string Country
-        {
-            get { return _country; }
-            protected set
-            {
-                if (value == null)
-                {
-                    return;
-                }
-                var re = new Regex("^[A-Z]{2}$");
-                if (!re.IsMatch(value))
-                {
-                    throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
-                }
-                _country = value;
-            }
-        }
+        public string Country { get; protected set; }
 
         /// <summary>
         /// The postal code for associated with the address.

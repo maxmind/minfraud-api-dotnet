@@ -34,19 +34,19 @@
             string postal = null,
             string phoneNumber = null,
             string phoneCountryCode = null
-            ) : base(
-                firstName: firstName,
-                lastName: lastName,
-                company: company,
-                address: address,
-                address2: address2,
-                city: city,
-                region: region,
-                country: country,
-                postal: postal,
-                phoneNumber: phoneNumber,
-                phoneCountryCode: phoneCountryCode
-                )
+        ) : base(
+            firstName: firstName,
+            lastName: lastName,
+            company: company,
+            address: address,
+            address2: address2,
+            city: city,
+            region: region,
+            country: country,
+            postal: postal,
+            phoneNumber: phoneNumber,
+            phoneCountryCode: phoneCountryCode
+        )
         {
         }
     }

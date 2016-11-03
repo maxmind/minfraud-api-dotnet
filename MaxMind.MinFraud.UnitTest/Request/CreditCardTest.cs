@@ -91,5 +91,30 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var cc = new CreditCard(cvvResult: 'N');
             Assert.AreEqual('N', cc.CvvResult);
         }
+
+
+        [Test]
+        public void TestInvalidToken(
+            [Values(
+                 "4485921507912924",
+                 "432312",
+                 "this is invalid",
+                 "",
+                 "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+             )] string token)
+        {
+            Assert.That(() => new CreditCard(last4Digits: token), Throws.TypeOf<ArgumentException>());
+        }
+
+        [Test]
+        public void TestValidToken(
+            [Values("t4485921507912924",
+                 "a7f6%gf83fhAu",
+                 "valid_token"
+             )] string token)
+        {
+            var cc = new CreditCard(token: token);
+            Assert.AreEqual(token, cc.Token);
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Order
     {
-        private string _currency;
+        private static readonly Regex CurrencyRe = new Regex("^[A-Z]{3}$", RegexOptions.Compiled);
 
         /// <summary>
         /// Constructor.
@@ -40,8 +40,13 @@ namespace MaxMind.MinFraud.Request
             Uri referrerUri = null,
             bool? isGift = null,
             bool? hasGiftMessage = null
-            )
+        )
         {
+            if (currency != null && !CurrencyRe.IsMatch(currency))
+            {
+                throw new ArgumentException($"The currency code {currency} is invalid.");
+            }
+
             Amount = amount;
             Currency = currency;
             DiscountCode = discountCode;
@@ -62,23 +67,7 @@ namespace MaxMind.MinFraud.Request
         /// The ISO 4217 currency code for the currency used in the transaction.
         /// </summary>
         [JsonProperty("currency")]
-        public string Currency
-        {
-            get { return _currency; }
-            private set
-            {
-                if (value == null)
-                {
-                    return;
-                }
-                var re = new Regex("^[A-Z]{3}$");
-                if (!re.IsMatch(value))
-                {
-                    throw new ArgumentException($"The currency code {value} is invalid.");
-                }
-                _currency = value;
-            }
-        }
+        public string Currency { get; }
 
         /// <summary>
         /// The discount code applied to the transaction. If multiple discount

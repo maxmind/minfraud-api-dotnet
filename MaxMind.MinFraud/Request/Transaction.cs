@@ -34,7 +34,7 @@ namespace MaxMind.MinFraud.Request
             Payment payment = null,
             Shipping shipping = null,
             IList<ShoppingCartItem> shoppingCart = default(List<ShoppingCartItem>)
-            )
+        )
         {
             this.Device = device;
             this.Account = account;
