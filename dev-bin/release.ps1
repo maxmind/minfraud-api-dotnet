@@ -32,9 +32,7 @@ if ((Read-Host -Prompt 'Continue? (y/n)') -ne 'y') {
     Write-Error 'Aborting'
 }
 
-if (-Not(& git status --porcelain)) {
-    & git commit -m "Prepare for $version" -a
-}
+& git commit -m "Prepare for $version" -a
 
 Push-Location MaxMind.MinFraud
 
