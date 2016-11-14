@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.2.0
+1.2.0 (2016-11-14)
 ------------------
 
 * Added `/credit_card/token` input. Use the `token` constructor parameter on

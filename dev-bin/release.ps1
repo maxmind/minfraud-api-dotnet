@@ -102,8 +102,7 @@ if ((Read-Host -Prompt 'Should push? (y/n)') -ne 'y') {
 & git push
 
 Pop-Location
-& git tag "$tag"
+& hub release create "$tag"
 & git push
-& git push --tags
 
 & nuget push "MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.$version.nupkg" -Source https://www.nuget.org/api/v2/package
