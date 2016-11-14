@@ -33,8 +33,7 @@ if ((Read-Host -Prompt 'Continue? (y/n)') -ne 'y') {
 }
 
 if (-Not(& git status --porcelain)) {
-    & git add $projectJsonFile
-    & git commit -m "Prepare for $version"
+    & git commit -m "Prepare for $version" -a
 }
 
 Push-Location MaxMind.MinFraud
