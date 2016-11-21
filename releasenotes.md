@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+1.2.1 (2016-11-21)
+------------------
+
+* Fixed a bug where a null `username` passed to the request `Account` model
+  would cause an exception when attempting to encode the username as an MD5.
+
 1.2.0 (2016-11-14)
 ------------------
 
