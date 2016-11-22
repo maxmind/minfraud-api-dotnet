@@ -7,6 +7,7 @@ Release Notes
 * The disposition was added to the minFraud response models. This is used to
   return the disposition of the transaction as set by the custom rules for the
   account.
+* Update to .NET Core 1.1.
 
 1.2.1 (2016-11-21)
 ------------------

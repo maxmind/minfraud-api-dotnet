@@ -9,17 +9,18 @@ env:
 
 matrix:
   include:
-  - os: linux
-    dist: trusty # Ubuntu 14.04
-    dotnet: 1.0.0-preview2-003121
-    mono: none
-    env: DOTNETCORE=1
-    sudo: required
+  # Disabled due to https://github.com/travis-ci/travis-ci/issues/6920#issuecomment-262311895
+  # - os: linux
+  #   dist: trusty # Ubuntu 14.04
+  #   dotnet: 1.0.0-preview2-1-003177
+  #   mono: none
+  #   env: DOTNETCORE=1
+  #   sudo: required
   # This is temporarily disabled. See discussion on
   # https://github.com/maxmind/minfraud-api-dotnet/pull/19
   # - os: osx
   #   osx_image: xcode7.3 # macOS 10.11
-  #   dotnet: 1.0.0-preview2-003121
+  #   dotnet: 1.0.0-preview2-1-003177
   #   mono: none
   #   env: DOTNETCORE=1
   - os: linux
