@@ -1,6 +1,9 @@
 Release Notes
 =============
 
+* Updated the docs for `MaxMind.MinFraud.Response.Address` now that
+  `IsPostalInCity` may be returned for addresses world-wide.
+
 1.3.0 (2016-11-22)
 ------------------
 
