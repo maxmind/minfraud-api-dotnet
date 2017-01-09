@@ -74,7 +74,7 @@ namespace MaxMind.MinFraud
                                 Encoding.ASCII.GetBytes(
                                     $"{userId}:{licenseKey}"))),
                         Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
-                        UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version.ToString())}
+                        UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version)}
                     }
                 };
                 if (timeout != null)
