@@ -1,6 +1,10 @@
 Release Notes
 =============
 
+1.4.0
+------------------
+
+* Added support for custom inputs. These can be set up from your account portal.
 * Updated the docs for `MaxMind.MinFraud.Response.Address` now that
   `IsPostalInCity` may be returned for addresses world-wide.
 
