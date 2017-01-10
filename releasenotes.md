@@ -4,7 +4,7 @@ Release Notes
 1.4.0
 ------------------
 
-
+* Added support for custom inputs. These can be set up from your account portal.
 * Added support for the `/device/session_age` and `/device/session_id` inputs.
   Use the `sessionAge` and `sessionId` constructor parameters on
   `MaxMind.MinFraud.Request.Device` to set them.

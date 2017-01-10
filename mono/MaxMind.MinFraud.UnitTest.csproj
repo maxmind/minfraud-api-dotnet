@@ -100,6 +100,7 @@
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\AccountTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\BillingTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\CreditCardTest.cs" />
+    <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\CustomInputsTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\DeviceTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\EmailTest.cs" />
     <Compile Include="..\MaxMind.MinFraud.UnitTest\Request\EventTest.cs" />

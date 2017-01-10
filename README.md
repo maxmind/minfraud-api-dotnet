@@ -218,6 +218,13 @@ public class MinFraudExample
                     quantity: 1,
                     price: 100.00m
                 )
+            },
+            customInputs: new CustomInputs
+            {
+                { "float_input", 12.1d},
+                { "integer_input", 3123},
+                { "string_input", "This is a string input."},
+                { "boolean_input", true},
             }
         );
 

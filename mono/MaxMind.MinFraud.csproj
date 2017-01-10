@@ -80,6 +80,7 @@
     <Compile Include="../MaxMind.MinFraud/Request\Account.cs" />
     <Compile Include="../MaxMind.MinFraud/Request\Billing.cs" />
     <Compile Include="../MaxMind.MinFraud/Request\CreditCard.cs" />
+    <Compile Include="../MaxMind.MinFraud/Request\CustomInputs.cs" />
     <Compile Include="../MaxMind.MinFraud/Request\Device.cs" />
     <Compile Include="../MaxMind.MinFraud/Request\Email.cs" />
     <Compile Include="../MaxMind.MinFraud/Request\Event.cs" />
