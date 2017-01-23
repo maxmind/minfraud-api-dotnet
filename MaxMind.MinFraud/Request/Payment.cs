@@ -10,6 +10,21 @@ namespace MaxMind.MinFraud.Request
     {
 #pragma warning disable CS1591
 
+        // Note: when naming new payment processors, do
+        // _not_ make uppercase letters in the middle of words uppercase in
+        // for the member name (unless it is a two-letter acronym, in which
+        // case it should follow Microsoft guidelines and be all uppercase),
+        // e.g.:
+        //
+        // Hipay - (not HiPay) for the company "HiPay"
+        // LemonWay - for the company "Lemon Way"
+        // IO  - for the compnany "IO" (made up)
+        // Ebs - for the company "EBS"
+        //
+        // A letter should be uppercase iif it is (1) the first letter of
+        // the enum, (2) the enum value has an underscore before that letter
+        // (e.g., lemon_way), (3) it is part of a two-letter acronym.
+
         [EnumMember(Value = "adyen")]
         Adyen,
 
@@ -67,6 +82,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "digital_river")]
         DigitalRiver,
 
+        [EnumMember(Value = "ebs")]
+        Ebs,
+
         [EnumMember(Value = "ecomm365")]
         Ecomm365,
 
@@ -88,6 +106,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "global_payments")]
         GlobalPayments,
 
+        [EnumMember(Value = "hipay")]
+        Hipay,
+
         [EnumMember(Value = "ingenico")]
         Ingenico,
 
@@ -99,6 +120,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "iugu")]
         Iugu,
+
+        [EnumMember(Value = "lemon_way")]
+        LemonWay,
 
         [EnumMember(Value = "mastercard_payment_gateway")]
         MastercardPaymentGateway,
