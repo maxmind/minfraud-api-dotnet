@@ -1,21 +1,20 @@
 ﻿using MaxMind.MinFraud.Exception;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
 using RichardSzalay.MockHttp;
 using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using Xunit;
 using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
 
 namespace MaxMind.MinFraud.UnitTest
 {
-    [TestFixture]
     public class WebServiceClientTest
     {
-        [Test]
+        [Fact]
         public async Task TestFullScoreRequest()
         {
             var responseContent = ReadJsonFile("score-response");
@@ -25,7 +24,7 @@ namespace MaxMind.MinFraud.UnitTest
             CompareJson(responseContent, response, false);
         }
 
-        [Test]
+        [Fact]
         public async Task TestFullInsightsRequest()
         {
             var responseContent = ReadJsonFile("insights-response");
@@ -35,11 +34,11 @@ namespace MaxMind.MinFraud.UnitTest
             CompareJson(responseContent, response, true);
 
             // The purpose here is to test that SetLocales worked as expected
-            Assert.AreEqual("London", response.IPAddress.City.Name);
-            Assert.AreEqual("United Kingdom", response.IPAddress.Country.Name);
+            Assert.Equal("London", response.IPAddress.City.Name);
+            Assert.Equal("United Kingdom", response.IPAddress.Country.Name);
         }
 
-        [Test]
+        [Fact]
         public async Task TestFullFactorsRequest()
         {
             var responseContent = ReadJsonFile("factors-response");
@@ -58,15 +57,16 @@ namespace MaxMind.MinFraud.UnitTest
                 NullValueHandling = NullValueHandling.Ignore,
                 DefaultValueHandling = DefaultValueHandling.Ignore
             };
-            var actualResponse = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
+            var actualResponse =
+                JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
 
             if (mungeIPAddress)
             {
                 // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-                JObject ipAddress = (JObject)expectedResponse["ip_address"];
+                JObject ipAddress = (JObject) expectedResponse["ip_address"];
                 ipAddress.Add("maxmind", new JObject());
                 ipAddress.Add("postal", new JObject());
-                var representedCountry = new JObject { { "names", new JObject() } };
+                var representedCountry = new JObject {{"names", new JObject()}};
                 ipAddress.Add("represented_country", representedCountry);
             }
 
@@ -77,155 +77,180 @@ namespace MaxMind.MinFraud.UnitTest
                 Console.WriteLine($"Actual: {actualResponse}");
             }
 
-            Assert.That(areEqual);
+            Assert.True(areEqual);
         }
 
-        [Test]
-        public void Test200WithNoBody()
+        [Fact]
+        public async void Test200WithNoBody()
         {
             var client = CreateSuccessClient("insights", "");
             var request = CreateFullRequest();
 
-            Assert.That(async () => await client.InsightsAsync(request),
-                Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo("Received a 200 response for minFraud Insights but there was no message body"));
+            var exception = await Record.ExceptionAsync(async () => await client.InsightsAsync(request));
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Contains("Received a 200 response for minFraud Insights but there was no message body",
+                exception.Message);
         }
 
-        [Test]
-        public void Test200WithInvalidJson()
+        [Fact]
+        public async void Test200WithInvalidJson()
         {
             var client = CreateSuccessClient("insights", "{");
             var request = CreateFullRequest();
-            Assert.That(async () => await client.InsightsAsync(request),
-                Throws.TypeOf<MinFraudException>()
-                    .And.Message.EqualTo("Received a 200 response but not decode it as JSON"));
+
+            var exception = await Record.ExceptionAsync(async () => await client.InsightsAsync(request));
+            Assert.NotNull(exception);
+            Assert.IsType<MinFraudException>(exception);
+            Assert.Contains("Received a 200 response but not decode it as JSON", exception.Message);
         }
 
-        [Test]
-        public void TestInsufficientFunds()
+        [Fact]
+        public async void TestInsufficientFunds()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.PaymentRequired,
                 "application/json",
                 "{\"code\":\"INSUFFICIENT_FUNDS\",\"error\":\"out of funds\"}"
-                ),
-                Throws.TypeOf<InsufficientFundsException>()
-                    .And.Message.EqualTo("out of funds"));
+            ));
+
+            Assert.NotNull(exception);
+            Assert.IsType<InsufficientFundsException>(exception);
+            Assert.Contains("out of funds", exception.Message);
         }
 
-        [Test]
-        [TestCase("AUTHORIZATION_INVALID")]
-        [TestCase("LICENSE_KEY_REQUIRED")]
-        [TestCase("USER_ID_REQUIRED")]
-        public void TestInvalidAuth(string code)
+        [Theory]
+        [InlineData("AUTHORIZATION_INVALID")]
+        [InlineData("LICENSE_KEY_REQUIRED")]
+        [InlineData("USER_ID_REQUIRED")]
+        public async void TestInvalidAuth(string code)
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.Unauthorized,
                 "application/json",
                 $"{{\"code\":\"{code}\",\"error\":\"Invalid auth\"}}"
-                ),
-                Throws.TypeOf<AuthenticationException>()
-                    .And.Message.EqualTo("Invalid auth"));
+            ));
+            Assert.NotNull(exception);
+            Assert.IsType<AuthenticationException>(exception);
+            Assert.Contains("Invalid auth", exception.Message);
         }
 
-        [Test]
-        public void TestPermissionRequired()
+        [Fact]
+        public async void TestPermissionRequired()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.PaymentRequired,
                 "application/json",
                 "{\"code\":\"PERMISSION_REQUIRED\",\"error\":\"Permission required\"}"
-                ),
-                Throws.TypeOf<PermissionRequiredException>()
-                    .And.Message.EqualTo("Permission required"));
+            ));
+            Assert.NotNull(exception);
+            Assert.IsType<PermissionRequiredException>(exception);
+            Assert.Contains("Permission required", exception.Message);
         }
 
-        [Test]
-        public void TestInvalidRequest()
+        [Fact]
+        public async void TestInvalidRequest()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
                 "application/json",
                 "{\"code\":\"IP_ADDRESS_INVALID\",\"error\":\"IP invalid\"}"
-                ),
-                Throws.TypeOf<InvalidRequestException>()
-                    .And.Message.EqualTo("IP invalid"));
+            ));
+
+            Assert.NotNull(exception);
+            Assert.IsType<InvalidRequestException>(exception);
+            Assert.Contains("IP invalid", exception.Message);
         }
 
-        [Test]
-        public void Test400WithInvalidJson()
+        [Fact]
+        public async void Test400WithInvalidJson()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
                 "application/json",
                 "{blah}"
-                ),
-                Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: {blah}"));
+            ));
+
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal(
+                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: {blah}",
+                exception.Message);
         }
 
-        [Test]
-        public void Test400WithNoBody()
+        [Fact]
+        public async void Test400WithNoBody()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
                 "application/json",
                 ""
-                ),
-                Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights with no body"));
+            ));
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal("Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights with no body",
+                exception.Message);
         }
 
-        [Test]
-        public void Test400WithUnexpectedContentType()
+        [Fact]
+        public async void Test400WithUnexpectedContentType()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
                 "text/plain",
                 "text"
-                ),
-                Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: text"));
+            ));
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal(
+                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: text",
+                exception.Message);
         }
 
-        [Test]
-        public void Test400WithUnexpectedJson()
+        [Fact]
+        public async void Test400WithUnexpectedJson()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
                 "application/json",
                 "{\"not\":\"expected\"}"
-                ),
-                Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Error response contains JSON but it does not specify code or error keys: {\"not\":\"expected\"}"));
+            ));
+
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal(
+                "Error response contains JSON but it does not specify code or error keys: {\"not\":\"expected\"}",
+                exception.Message);
         }
 
-        [Test]
-        public void Test300()
+        [Fact]
+        public async void Test300()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.MultipleChoices,
                 "application/json",
-                "")
-                , Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Received an unexpected HTTP status (300) for https://minfraud.maxmind.com/minfraud/v2.0/insights"));
+                ""));
+
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal(
+                "Received an unexpected HTTP status (300) for https://minfraud.maxmind.com/minfraud/v2.0/insights",
+                exception.Message);
         }
 
-        [Test]
-        public void Test500()
+        [Fact]
+        public async void Test500()
         {
-            Assert.That(async () => await CreateInsightsError(
+            var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.InternalServerError,
                 "application/json",
                 ""
-                ), Throws.TypeOf<HttpException>()
-                    .And.Message.EqualTo(
-                        "Received a server (500) error for https://minfraud.maxmind.com/minfraud/v2.0/insights"));
+            ));
+
+            Assert.NotNull(exception);
+            Assert.IsType<HttpException>(exception);
+            Assert.Equal("Received a server (500) error for https://minfraud.maxmind.com/minfraud/v2.0/insights",
+                exception.Message);
         }
 
         private WebServiceClient CreateSuccessClient(string service, string responseContent)
@@ -235,7 +260,7 @@ namespace MaxMind.MinFraud.UnitTest
                 HttpStatusCode.OK,
                 $"application/vnd.maxmind.com-minfraud-{service}+json",
                 responseContent
-                );
+            );
         }
 
         private async Task CreateInsightsError(HttpStatusCode status, string contentType, string responseContent)
@@ -245,7 +270,7 @@ namespace MaxMind.MinFraud.UnitTest
                 status,
                 contentType,
                 responseContent
-                );
+            );
             await client.InsightsAsync(CreateFullRequest());
         }
 

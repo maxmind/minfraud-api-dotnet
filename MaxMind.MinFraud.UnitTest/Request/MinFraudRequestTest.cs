@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -9,75 +9,75 @@ namespace MaxMind.MinFraud.UnitTest.Request
     {
         private Device Device { get; } = new Device(IPAddress.Parse("1.1.1.1"));
 
-        [Test]
+        [Fact]
         public void TestAccount()
         {
             var request = new Transaction(device: Device, account: new Account(userId: "1"));
-            Assert.AreEqual("1", request.Account.UserId);
+            Assert.Equal("1", request.Account.UserId);
         }
 
-        [Test]
+        [Fact]
         public void TestBilling()
         {
             var request = new Transaction(device: Device, billing: new Billing(address: "add"));
-            Assert.AreEqual("add", request.Billing.Address);
+            Assert.Equal("add", request.Billing.Address);
         }
 
-        [Test]
+        [Fact]
         public void TestCreditCard()
         {
             var request = new Transaction(device: Device, creditCard: new CreditCard(bankName: "name"));
-            Assert.AreEqual("name", request.CreditCard.BankName);
+            Assert.Equal("name", request.CreditCard.BankName);
         }
 
-        [Test]
+        [Fact]
         public void TestDevice()
         {
             var request = new Transaction(device: Device);
-            Assert.AreEqual(IPAddress.Parse("1.1.1.1"), request.Device.IPAddress);
+            Assert.Equal(IPAddress.Parse("1.1.1.1"), request.Device.IPAddress);
         }
 
-        [Test]
+        [Fact]
         public void TestEmail()
         {
             var request = new Transaction(device: Device, email: new Email(domain: "test.com"));
-            Assert.AreEqual("test.com", request.Email.Domain);
+            Assert.Equal("test.com", request.Email.Domain);
         }
 
-        [Test]
+        [Fact]
         public void TestEvent()
         {
             var request = new Transaction(device: Device, userEvent: new Event(shopId: "1"));
-            Assert.AreEqual("1", request.Event.ShopId);
+            Assert.Equal("1", request.Event.ShopId);
         }
 
-        [Test]
+        [Fact]
         public void TestOrder()
         {
             var request = new Transaction(device: Device, order: new Order(affiliateId: "af1"));
-            Assert.AreEqual("af1", request.Order.AffiliateId);
+            Assert.Equal("af1", request.Order.AffiliateId);
         }
 
-        [Test]
+        [Fact]
         public void TestPayment()
         {
             var request = new Transaction(device: Device, payment: new Payment(declineCode: "d"));
-            Assert.AreEqual("d", request.Payment.DeclineCode);
+            Assert.Equal("d", request.Payment.DeclineCode);
         }
 
-        [Test]
+        [Fact]
         public void TestShipping()
         {
             var request = new Transaction(device: Device, shipping: new Shipping(lastName: "l"));
-            Assert.AreEqual("l", request.Shipping.LastName);
+            Assert.Equal("l", request.Shipping.LastName);
         }
 
-        [Test]
+        [Fact]
         public void TestShoppingCart()
         {
             var request = new Transaction(device: Device,
                 shoppingCart: new List<ShoppingCartItem> {new ShoppingCartItem(itemId: "1")});
-            Assert.AreEqual("1", request.ShoppingCart[0].ItemId);
+            Assert.Equal("1", request.ShoppingCart[0].ItemId);
         }
     }
 }

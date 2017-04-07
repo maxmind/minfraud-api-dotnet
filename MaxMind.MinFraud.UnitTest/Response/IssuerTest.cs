@@ -1,12 +1,12 @@
 ﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class IssuerTest
     {
-        [Test]
+        [Fact]
         public void TestIssuer()
         {
             var phone = "132-342-2131";
@@ -19,10 +19,10 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"matches_provided_phone_number", true}
             }.ToObject<Issuer>();
 
-            Assert.AreEqual("Bank", issuer.Name);
-            Assert.AreEqual(true, issuer.MatchesProvidedName);
-            Assert.AreEqual(phone, issuer.PhoneNumber);
-            Assert.AreEqual(true, issuer.MatchesProvidedPhoneNumber);
+            Assert.Equal("Bank", issuer.Name);
+            Assert.Equal(true, issuer.MatchesProvidedName);
+            Assert.Equal(phone, issuer.PhoneNumber);
+            Assert.Equal(true, issuer.MatchesProvidedPhoneNumber);
         }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class SubScoresTest
     {
-        [Test]
+        [Fact]
         public void TestSubscores()
         {
             var subscores = new JObject
@@ -30,23 +30,23 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"time_of_day", 0.17}
             }.ToObject<Subscores>();
 
-            Assert.AreEqual(0.01, subscores.AvsResult);
-            Assert.AreEqual(0.02, subscores.BillingAddress);
-            Assert.AreEqual(0.03, subscores.BillingAddressDistanceToIPLocation);
-            Assert.AreEqual(0.04, subscores.Browser);
-            Assert.AreEqual(0.05, subscores.Chargeback);
-            Assert.AreEqual(0.06, subscores.Country);
-            Assert.AreEqual(0.07, subscores.CountryMismatch);
-            Assert.AreEqual(0.08, subscores.CvvResult);
-            Assert.AreEqual(0.09, subscores.EmailAddress);
-            Assert.AreEqual(0.10, subscores.EmailDomain);
-            Assert.AreEqual(0.11, subscores.EmailTenure);
-            Assert.AreEqual(0.12, subscores.IPTenure);
-            Assert.AreEqual(0.13, subscores.IssuerIdNumber);
-            Assert.AreEqual(0.14, subscores.OrderAmount);
-            Assert.AreEqual(0.15, subscores.PhoneNumber);
-            Assert.AreEqual(0.16, subscores.ShippingAddressDistanceToIPLocation);
-            Assert.AreEqual(0.17, subscores.TimeOfDay);
+            Assert.Equal(0.01, subscores.AvsResult);
+            Assert.Equal(0.02, subscores.BillingAddress);
+            Assert.Equal(0.03, subscores.BillingAddressDistanceToIPLocation);
+            Assert.Equal(0.04, subscores.Browser);
+            Assert.Equal(0.05, subscores.Chargeback);
+            Assert.Equal(0.06, subscores.Country);
+            Assert.Equal(0.07, subscores.CountryMismatch);
+            Assert.Equal(0.08, subscores.CvvResult);
+            Assert.Equal(0.09, subscores.EmailAddress);
+            Assert.Equal(0.10, subscores.EmailDomain);
+            Assert.Equal(0.11, subscores.EmailTenure);
+            Assert.Equal(0.12, subscores.IPTenure);
+            Assert.Equal(0.13, subscores.IssuerIdNumber);
+            Assert.Equal(0.14, subscores.OrderAmount);
+            Assert.Equal(0.15, subscores.PhoneNumber);
+            Assert.Equal(0.16, subscores.ShippingAddressDistanceToIPLocation);
+            Assert.Equal(0.17, subscores.TimeOfDay);
         }
     }
 }

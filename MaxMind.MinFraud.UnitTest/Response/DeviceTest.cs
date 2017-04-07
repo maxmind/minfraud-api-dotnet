@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 using System;
 using Device = MaxMind.MinFraud.Response.Device;
 
@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
 {
     internal class DeviceTest
     {
-        [Test]
+        [Fact]
         public void TestDevice()
         {
             var id = "35e5e22c-8bf2-44f8-aa99-716ec7530281";
@@ -19,9 +19,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"last_seen", lastSeen},
             }.ToObject<Device>();
 
-            Assert.AreEqual(99, device.Confidence);
-            Assert.AreEqual(new Guid(id), device.Id);
-            Assert.AreEqual(lastSeen, device.LastSeen?.ToString("yyyy-MM-ddTHH:mm:ssK"));
+            Assert.Equal(99, device.Confidence);
+            Assert.Equal(new Guid(id), device.Id);
+            Assert.Equal(lastSeen, device.LastSeen?.ToString("yyyy-MM-ddTHH:mm:ssK"));
         }
     }
 }

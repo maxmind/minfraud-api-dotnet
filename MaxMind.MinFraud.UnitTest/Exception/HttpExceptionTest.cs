@@ -3,7 +3,7 @@
 using System;
 using System.Net;
 using MaxMind.MinFraud.Exception;
-using NUnit.Framework;
+using Xunit;
 
 #endregion
 
@@ -11,13 +11,13 @@ namespace MaxMind.MinFraud.UnitTest.Exception
 {
     public class HttpExceptionTest
     {
-        [Test]
+        [Fact]
         public void TestHttpException()
         {
             var url = new Uri("https://www.maxmind.com/");
             var e = new HttpException("message", HttpStatusCode.OK, url);
-            Assert.AreEqual(HttpStatusCode.OK, e.HttpStatus);
-            Assert.AreEqual(url, e.Uri);
+            Assert.Equal(HttpStatusCode.OK, e.HttpStatus);
+            Assert.Equal(url, e.Uri);
         }
     }
 }

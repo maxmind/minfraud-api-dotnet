@@ -1,29 +1,29 @@
 ﻿using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     public class PaymentTest
     {
-        [Test]
+        [Fact]
         public void TestProcessor()
         {
             var payment = new Payment(processor: PaymentProcessor.Adyen);
-            Assert.AreEqual(PaymentProcessor.Adyen, payment.Processor);
+            Assert.Equal(PaymentProcessor.Adyen, payment.Processor);
         }
 
-        [Test]
+        [Fact]
         public void TestWasAuthorized()
         {
             var payment = new Payment(wasAuthorized: true);
-            Assert.AreEqual(payment.WasAuthorized, true);
+            Assert.Equal(payment.WasAuthorized, true);
         }
 
-        [Test]
+        [Fact]
         public void TestDeclineCode()
         {
             var payment = new Payment(declineCode: "declined");
-            Assert.AreEqual("declined", payment.DeclineCode);
+            Assert.Equal("declined", payment.DeclineCode);
         }
     }
 }

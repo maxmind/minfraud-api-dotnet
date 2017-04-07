@@ -1,13 +1,13 @@
 ﻿using MaxMind.MinFraud.Response;
 using static MaxMind.MinFraud.UnitTest.Response.AddressTestHelper;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class ShippingAddressTest
     {
-        [Test]
+        [Fact]
         public void TestShippingAddress()
         {
             var address = new JObject
@@ -23,8 +23,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             TestAddress(address);
 
-            Assert.AreEqual(false, address.IsHighRisk);
-            Assert.AreEqual(200, address.DistanceToBillingAddress);
+            Assert.Equal(false, address.IsHighRisk);
+            Assert.Equal(200, address.DistanceToBillingAddress);
         }
     }
 }
