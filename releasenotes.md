@@ -1,15 +1,15 @@
 Release Notes
 =============
 
-* Added the following new values to the `PaymentProcessor` enum:
-  `Ebs`, `Hipay`, and `LemonWay`.
-
 1.4.0
 ------------------
 
-* Added support for custom inputs. These can be set up from your account portal.
+* Added the following new values to the `PaymentProcessor` enum:
+  `Ebs`, `Hipay`, and `LemonWay`.
 * Updated the docs for `MaxMind.MinFraud.Response.Address` now that
-  `IsPostalInCity` may be returned for addresses world-wide.
+ `IsPostalInCity` may be returned for addresses world-wide.
+* Switch to the updated MSBuild .NET Core build system.
+* Move tests from  NUnit to xUnit.net.
 
 1.3.0 (2016-11-22)
 ------------------
