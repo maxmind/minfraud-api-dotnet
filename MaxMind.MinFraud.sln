@@ -1,16 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{22ABC5EB-1243-4A43-8596-C9395960700E}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MaxMind.MinFraud", "MaxMind.MinFraud\MaxMind.MinFraud.xproj", "{7208D9C8-F862-4675-80E5-77A2F8901B96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxMind.MinFraud", "MaxMind.MinFraud\MaxMind.MinFraud.csproj", "{7208D9C8-F862-4675-80E5-77A2F8901B96}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MaxMind.MinFraud.UnitTest", "MaxMind.MinFraud.UnitTest\MaxMind.MinFraud.UnitTest.xproj", "{B94CD151-77D9-4423-BB17-504264B109D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MaxMind.MinFraud.UnitTest", "MaxMind.MinFraud.UnitTest\MaxMind.MinFraud.UnitTest.csproj", "{B94CD151-77D9-4423-BB17-504264B109D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

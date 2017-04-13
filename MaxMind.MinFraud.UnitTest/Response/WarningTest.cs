@@ -1,12 +1,12 @@
 ﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class WarningTest
     {
-        [Test]
+        [Fact]
         public void TestWarning()
         {
             var code = "INVALID_INPUT";
@@ -19,9 +19,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"input_pointer", "/first/second"}
             }.ToObject<Warning>();
 
-            Assert.AreEqual(code, warning.Code);
-            Assert.AreEqual(msg, warning.Message);
-            Assert.AreEqual("/first/second", warning.InputPointer);
+            Assert.Equal(code, warning.Code);
+            Assert.Equal(msg, warning.Message);
+            Assert.Equal("/first/second", warning.InputPointer);
         }
     }
 }

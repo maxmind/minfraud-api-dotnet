@@ -1,5 +1,5 @@
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 using System;
 using Device = MaxMind.MinFraud.Response.Disposition;
 
@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
 {
     internal class DispositionTest
     {
-        [Test]
+        [Fact]
         public void TestDisposition()
         {
             var disposition = new JObject
@@ -16,8 +16,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"reason", "custom_rule"},
             }.ToObject<Device>();
 
-            Assert.AreEqual("manual_review", disposition.Action);
-            Assert.AreEqual("custom_rule", disposition.Reason);
+            Assert.Equal("manual_review", disposition.Action);
+            Assert.Equal("custom_rule", disposition.Reason);
         }
     }
 }

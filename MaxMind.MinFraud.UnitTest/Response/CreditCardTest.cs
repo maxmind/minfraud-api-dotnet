@@ -1,12 +1,12 @@
 ﻿using MaxMind.MinFraud.Response;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class CreditCardTest
     {
-        [Test]
+        [Fact]
         public void TestCreditCard()
         {
             var cc = new JObject
@@ -24,8 +24,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {
                     "country",
                     "US"
-                }
-                ,
+                },
                 {
                     "is_issued_in_billing_address_country",
                     true
@@ -39,12 +38,12 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 }
             }.ToObject<CreditCard>();
 
-            Assert.AreEqual("Bank", cc.Issuer.Name);
-            Assert.AreEqual("US", cc.Country);
-            Assert.AreEqual(true, cc.IsPrepaid);
-            Assert.AreEqual(true, cc.IsIssuedInBillingAddressCountry);
-            Assert.AreEqual("Visa", cc.Brand);
-            Assert.AreEqual("credit", cc.Type);
+            Assert.Equal("Bank", cc.Issuer.Name);
+            Assert.Equal("US", cc.Country);
+            Assert.Equal(true, cc.IsPrepaid);
+            Assert.Equal(true, cc.IsIssuedInBillingAddressCountry);
+            Assert.Equal("Visa", cc.Brand);
+            Assert.Equal("credit", cc.Type);
         }
     }
 }

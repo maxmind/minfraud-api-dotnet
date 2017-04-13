@@ -1,7 +1,7 @@
 ﻿#region
 
 using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 using System;
 
 #endregion
@@ -11,111 +11,111 @@ namespace MaxMind.MinFraud.UnitTest.Request
     public class ShippingTest
     {
         // Same as code in BillingTest
-        [Test]
+        [Fact]
         public void TestFirstName()
         {
             var loc = new Shipping(
                 firstName: "frst"
-                );
-            Assert.AreEqual("frst", loc.FirstName);
+            );
+            Assert.Equal("frst", loc.FirstName);
         }
 
-        [Test]
+        [Fact]
         public void TestLastName()
         {
             var loc = new Shipping(lastName: "last");
-            Assert.AreEqual("last", loc.LastName);
+            Assert.Equal("last", loc.LastName);
         }
 
-        [Test]
+        [Fact]
         public void TestCompany()
         {
             var loc = new Shipping(company: "company");
-            Assert.AreEqual("company", loc.Company);
+            Assert.Equal("company", loc.Company);
         }
 
-        [Test]
+        [Fact]
         public void TestAddress()
         {
             var loc = new Shipping(address: "addr");
-            Assert.AreEqual("addr", loc.Address);
+            Assert.Equal("addr", loc.Address);
         }
 
-        [Test]
+        [Fact]
         public void TestAddress2()
         {
             var loc = new Shipping(address2: "addr2");
-            Assert.AreEqual("addr2", loc.Address2);
+            Assert.Equal("addr2", loc.Address2);
         }
 
-        [Test]
+        [Fact]
         public void TestCity()
         {
             var loc = new Shipping(city: "Pdx");
-            Assert.AreEqual("Pdx", loc.City);
+            Assert.Equal("Pdx", loc.City);
         }
 
-        [Test]
+        [Fact]
         public void TestRegion()
         {
             var loc = new Shipping(region: "MN");
-            Assert.AreEqual("MN", loc.Region);
+            Assert.Equal("MN", loc.Region);
         }
 
-        [Test]
+        [Fact]
         public void TestCountry()
         {
             var loc = new Shipping(country: "US");
-            Assert.AreEqual("US", loc.Country);
+            Assert.Equal("US", loc.Country);
         }
 
-        [Test]
+        [Fact]
         public void TestCountryThatIsTooLong()
         {
-            Assert.That(() => new Shipping(country: "USA"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Shipping(country: "USA"));
         }
 
-        [Test]
+        [Fact]
         public void TestCountryWithNumbers()
         {
-            Assert.That(() => new Shipping(country: "U1"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Shipping(country: "U1"));
         }
 
-        [Test]
+        [Fact]
         public void TestCountryInWrongCase()
         {
-            Assert.That(() => new Shipping(country: "us"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Shipping(country: "us"));
         }
 
-        [Test]
+        [Fact]
         public void TestPostal()
         {
             var loc = new Shipping(postal: "03231");
-            Assert.AreEqual("03231", loc.Postal);
+            Assert.Equal("03231", loc.Postal);
         }
 
-        [Test]
+        [Fact]
         public void TestPhoneNumber()
         {
             var phone = "321-321-3213";
             var loc = new Shipping(phoneNumber: phone);
-            Assert.AreEqual(phone, loc.PhoneNumber);
+            Assert.Equal(phone, loc.PhoneNumber);
         }
 
-        [Test]
+        [Fact]
         public void TestPhoneCountryCode()
         {
             var loc = new Shipping(phoneCountryCode: "1");
-            Assert.AreEqual("1", loc.PhoneCountryCode);
+            Assert.Equal("1", loc.PhoneCountryCode);
         }
 
         // End shared code
 
-        [Test]
+        [Fact]
         public void TestDeliverySpeed()
         {
             var loc = new Shipping(deliverySpeed: ShippingDeliverySpeed.Expedited);
-            Assert.AreEqual(ShippingDeliverySpeed.Expedited, loc.DeliverySpeed);
+            Assert.Equal(ShippingDeliverySpeed.Expedited, loc.DeliverySpeed);
         }
     }
 }

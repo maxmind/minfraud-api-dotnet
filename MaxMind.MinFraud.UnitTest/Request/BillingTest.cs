@@ -1,5 +1,5 @@
 ﻿using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 using System;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -10,102 +10,102 @@ namespace MaxMind.MinFraud.UnitTest.Request
     // but most defeat the purpose of the Tests.
     public class BillingTest
     {
-        [Test]
+        [Fact]
         public void TestFirstName()
         {
             var loc = new Billing(
                 firstName: "frst"
-                );
-            Assert.AreEqual("frst", loc.FirstName);
+            );
+            Assert.Equal("frst", loc.FirstName);
         }
 
-        [Test]
+        [Fact]
         public void TestLastName()
         {
             var loc = new Billing(lastName: "last");
-            Assert.AreEqual("last", loc.LastName);
+            Assert.Equal("last", loc.LastName);
         }
 
-        [Test]
+        [Fact]
         public void TestCompany()
         {
             var loc = new Billing(company: "company");
-            Assert.AreEqual("company", loc.Company);
+            Assert.Equal("company", loc.Company);
         }
 
-        [Test]
+        [Fact]
         public void TestAddress()
         {
             var loc = new Billing(address: "addr");
-            Assert.AreEqual("addr", loc.Address);
+            Assert.Equal("addr", loc.Address);
         }
 
-        [Test]
+        [Fact]
         public void TestAddress2()
         {
             var loc = new Billing(address2: "addr2");
-            Assert.AreEqual("addr2", loc.Address2);
+            Assert.Equal("addr2", loc.Address2);
         }
 
-        [Test]
+        [Fact]
         public void TestCity()
         {
             var loc = new Billing(city: "Pdx");
-            Assert.AreEqual("Pdx", loc.City);
+            Assert.Equal("Pdx", loc.City);
         }
 
-        [Test]
+        [Fact]
         public void TestRegion()
         {
             var loc = new Billing(region: "MN");
-            Assert.AreEqual("MN", loc.Region);
+            Assert.Equal("MN", loc.Region);
         }
 
-        [Test]
+        [Fact]
         public void TestCountry()
         {
             var loc = new Billing(country: "US");
-            Assert.AreEqual("US", loc.Country);
+            Assert.Equal("US", loc.Country);
         }
 
-        [Test]
+        [Fact]
         public void TestCountryThatIsTooLong()
         {
-            Assert.That(() => new Billing(country: "USA"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Billing(country: "USA"));
         }
 
-        [Test]
+        [Fact]
         public void TestCountryWithNumbers()
         {
-            Assert.That(() => new Billing(country: "U1"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Billing(country: "U1"));
         }
 
-        [Test]
+        [Fact]
         public void TestCountryInWrongCase()
         {
-            Assert.That(() => new Billing(country: "us"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Billing(country: "us"));
         }
 
-        [Test]
+        [Fact]
         public void TestPostal()
         {
             var loc = new Billing(postal: "03231");
-            Assert.AreEqual("03231", loc.Postal);
+            Assert.Equal("03231", loc.Postal);
         }
 
-        [Test]
+        [Fact]
         public void TestPhoneNumber()
         {
             string phone = "321-321-3213";
             var loc = new Billing(phoneNumber: phone);
-            Assert.AreEqual(phone, loc.PhoneNumber);
+            Assert.Equal(phone, loc.PhoneNumber);
         }
 
-        [Test]
+        [Fact]
         public void TestPhoneCountryCode()
         {
             var loc = new Billing(phoneCountryCode: "1");
-            Assert.AreEqual("1", loc.PhoneCountryCode);
+            Assert.Equal("1", loc.PhoneCountryCode);
         }
     }
 }

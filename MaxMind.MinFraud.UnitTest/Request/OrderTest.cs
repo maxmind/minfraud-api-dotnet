@@ -1,90 +1,90 @@
 ﻿using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 using System;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     public class OrderTest
     {
-        [Test]
+        [Fact]
         public void TestAmount()
         {
             var order = new Order(amount: 1.1m);
-            Assert.AreEqual(1.1m, order.Amount);
+            Assert.Equal(1.1m, order.Amount);
         }
 
-        [Test]
+        [Fact]
         public void TestCurrency()
         {
             var order = new Order(currency: "USD");
-            Assert.AreEqual("USD", order.Currency);
+            Assert.Equal("USD", order.Currency);
         }
 
-        [Test]
+        [Fact]
         public void TestCurrencyWithDigits()
         {
-            Assert.That(() => new Order(currency: "US1"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Order(currency: "US1"));
         }
 
-        [Test]
+        [Fact]
         public void TestCurrencyThatIsTooShort()
         {
-            Assert.That(() => new Order(currency: "US"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Order(currency: "US"));
         }
 
-        [Test]
+        [Fact]
         public void TestCurrencyThatIsTooLong()
         {
-            Assert.That(() => new Order(currency: "USDE"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Order(currency: "USDE"));
         }
 
-        [Test]
+        [Fact]
         public void TestCurrencyInWrongCase()
         {
-            Assert.That(() => new Order(currency: "usd"), Throws.TypeOf<ArgumentException>());
+            Assert.Throws<ArgumentException>(() => new Order(currency: "usd"));
         }
 
-        [Test]
+        [Fact]
         public void TestDiscountCode()
         {
             var order = new Order(discountCode: "dsc");
-            Assert.AreEqual("dsc", order.DiscountCode);
+            Assert.Equal("dsc", order.DiscountCode);
         }
 
-        [Test]
+        [Fact]
         public void TestAffiliateId()
         {
             var order = new Order(affiliateId: "af");
-            Assert.AreEqual("af", order.AffiliateId);
+            Assert.Equal("af", order.AffiliateId);
         }
 
-        [Test]
+        [Fact]
         public void TestSubaffiliateId()
         {
             var order = new Order(subaffiliateId: "saf");
-            Assert.AreEqual("saf", order.SubaffiliateId);
+            Assert.Equal("saf", order.SubaffiliateId);
         }
 
-        [Test]
+        [Fact]
         public void TestReferrerUri()
         {
             var uri = new Uri("http://www.mm.com/");
             var order = new Order(referrerUri: uri);
-            Assert.AreEqual(uri, order.ReferrerUri);
+            Assert.Equal(uri, order.ReferrerUri);
         }
 
-        [Test]
+        [Fact]
         public void TestIsGift()
         {
             var order = new Order(isGift: true);
-            Assert.AreEqual(order.IsGift, true);
+            Assert.Equal(order.IsGift, true);
         }
 
-        [Test]
+        [Fact]
         public void TestHasGiftMessage()
         {
             var order = new Order(hasGiftMessage: true);
-            Assert.AreEqual(order.HasGiftMessage, true);
+            Assert.Equal(order.HasGiftMessage, true);
         }
     }
 }

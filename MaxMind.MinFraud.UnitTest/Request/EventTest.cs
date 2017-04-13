@@ -1,38 +1,38 @@
 ﻿using System;
 using MaxMind.MinFraud.Request;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     public class EventTest
     {
-        [Test]
+        [Fact]
         public void TestTransactionId()
         {
             var eventReq = new Event(transactionId: "t12");
-            Assert.AreEqual("t12", eventReq.TransactionId);
+            Assert.Equal("t12", eventReq.TransactionId);
         }
 
-        [Test]
+        [Fact]
         public void TestShopId()
         {
             var eventReq = new Event(shopId: "s12");
-            Assert.AreEqual("s12", eventReq.ShopId);
+            Assert.Equal("s12", eventReq.ShopId);
         }
 
-        [Test]
+        [Fact]
         public void TestTime()
         {
             var date = new DateTimeOffset();
             var eventReq = new Event(time: date);
-            Assert.AreEqual(date, eventReq.Time);
+            Assert.Equal(date, eventReq.Time);
         }
 
-        [Test]
+        [Fact]
         public void TestType()
         {
             var eventReq = new Event(type: EventType.AccountCreation);
-            Assert.AreEqual(EventType.AccountCreation, eventReq.Type);
+            Assert.Equal(EventType.AccountCreation, eventReq.Type);
         }
     }
 }

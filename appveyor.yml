@@ -1,28 +1,24 @@
 ---
 version: '1.0.{build}'
 
-os: Visual Studio 2015
+os: Visual Studio 2017
 
 environment:
   global:
-    MAXMIND_TEST_BASE_DIR: MaxMind.MinFraud.UnitTest
+    MAXMIND_TEST_BASE_DIR: $(APPVEYOR_BUILD_FOLDER)/MaxMind.MinFraud.UnitTest
   matrix:
     - CONFIGURATION: Debug
-      FRAMEWORK: net45
-      SECONDARYFRAMEWORK: net451
-      FrameworkLibsMoniker: net45
+      LIB_FRAMEWORK: net45
+      TEST_FRAMEWORK: net452
     - CONFIGURATION: Release
-      FRAMEWORK: net45
-      SECONDARYFRAMEWORK: net451
-      FrameworkLibsMoniker: net45
+      LIB_FRAMEWORK: net45
+      TEST_FRAMEWORK: net452
     - CONFIGURATION: Debug
-      FRAMEWORK: netcoreapp1.0
-      SECONDARYFRAMEWORK: netcoreapp1.0
-      FrameworkLibsMoniker: netstandard1.4
+      LIB_FRAMEWORK: netstandard1.4
+      TEST_FRAMEWORK: netcoreapp1.0
     - CONFIGURATION: Release
-      FRAMEWORK: netcoreapp1.0
-      SECONDARYFRAMEWORK: netcoreapp1.0
-      FrameworkLibsMoniker: netstandard1.4
+      LIB_FRAMEWORK: netstandard1.4
+      TEST_FRAMEWORK: netcoreapp1.0
 
 before_build:
   - git submodule update --init --recursive
@@ -39,19 +35,19 @@ build_script:
       }
 
       # Restore Packages
-      dotnet restore
+      dotnet restore MaxMind.MinFraud.sln
 
       # Build Projects
-      dotnet build -c $env:CONFIGURATION -f $env:FrameworkLibsMoniker .\MaxMind.MinFraud
-      dotnet build -c $env:CONFIGURATION -f $env:SECONDARYFRAMEWORK .\MaxMind.MinFraud.UnitTest
+      dotnet build -c $env:CONFIGURATION -f $env:LIB_FRAMEWORK MaxMind.MinFraud\MaxMind.MinFraud.csproj
+      dotnet build -c $env:CONFIGURATION -f $env:TEST_FRAMEWORK MaxMind.MinFraud.UnitTest\MaxMind.MinFraud.UnitTest.csproj
 
 test_script:
   # Run Unit Tests
-  - dotnet test -f %SECONDARYFRAMEWORK% -c %CONFIGURATION% MaxMind.MinFraud.UnitTest
+  - dotnet test -f %TEST_FRAMEWORK% -c %CONFIGURATION% MaxMind.MinFraud.UnitTest\MaxMind.MinFraud.UnitTest.csproj
 
 after_test:
   # Run Unit Tests
-  - dotnet pack -c %CONFIGURATION% MaxMind.MinFraud
+  - dotnet pack -c %CONFIGURATION% MaxMind.MinFraud\MaxMind.MinFraud.csproj
 
 artifacts:
   - path: 'MaxMind.MinFraud\bin\**\*.nupkg'

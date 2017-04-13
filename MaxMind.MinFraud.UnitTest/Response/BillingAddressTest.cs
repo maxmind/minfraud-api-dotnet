@@ -1,13 +1,13 @@
 ﻿using MaxMind.MinFraud.Response;
 using static MaxMind.MinFraud.UnitTest.Response.AddressTestHelper;
 using Newtonsoft.Json.Linq;
-using NUnit.Framework;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
     public class BillingAddressTest
     {
-        [Test]
+        [Fact]
         public void TestBillingAddress()
         {
             var address = new JObject
