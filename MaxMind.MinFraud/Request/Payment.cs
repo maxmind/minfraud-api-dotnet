@@ -113,7 +113,7 @@ namespace MaxMind.MinFraud.Request
         Eway,
 
         [EnumMember(Value = "exact")]
-        EXact,
+        Exact,
 
         [EnumMember(Value = "first_data")]
         FirstData,
