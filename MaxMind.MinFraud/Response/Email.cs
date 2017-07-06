@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using MaxMind.MinFraud.Util;
 using Newtonsoft.Json;
 

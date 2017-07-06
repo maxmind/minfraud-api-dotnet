@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Util
     {
         public DateConverter()
         {
-            base.DateTimeFormat = "yyyy-MM-dd";
+            DateTimeFormat = "yyyy-MM-dd";
         }
     }
 }

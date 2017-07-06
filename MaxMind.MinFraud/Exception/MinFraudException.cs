@@ -1,7 +1,4 @@
-﻿using System;
-using System.Runtime.Serialization;
-
-namespace MaxMind.MinFraud.Exception
+﻿namespace MaxMind.MinFraud.Exception
 {
     /// <summary>
     /// This class represents a non-specific error with data returned by
