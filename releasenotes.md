@@ -4,6 +4,12 @@ Release Notes
 1.4.0
 ------------------
 
+
+* Added support for the `/device/session_age` and `/device/session_id` inputs.
+  Use the `sessionAge` and `sessionId` constructor parameters on
+  `MaxMind.MinFraud.Request.Device` to set them.
+* Added support for the `/email/first_seen` output. Use `FirstSeen` on
+  `MaxMind.MinFraud.Response.FirstSeen` to access it.
 * Added the following new values to the `PaymentProcessor` enum:
   `Ebs`, `Hipay`, and `LemonWay`.
 * Updated the docs for `MaxMind.MinFraud.Response.Address` now that
@@ -29,7 +35,7 @@ Release Notes
 ------------------
 
 * Added `/credit_card/token` input. Use the `token` constructor parameter on
-    `MaxMind.MinFraud.Request.CreditCard` to set it.
+  `MaxMind.MinFraud.Request.CreditCard` to set it.
 * All validation regular expressions are now pre-compiled.
 * Use framework assembly for `System.Net.Http` on .NET 4.5 rather than NuGet
   package.

@@ -128,7 +128,9 @@ public class MinFraudExample
             device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
                 userAgent:
                 "Mozilla/5.0 (X11; Linux x86_64)",
-                acceptLanguage: "en-US,en;q=0.8"
+                acceptLanguage: "en-US,en;q=0.8",
+                sessionAge: 3600,
+                sessionId: "a333a4e127f880d8820e56a66f40717c"
             ),
             userEvent:
             new Event
