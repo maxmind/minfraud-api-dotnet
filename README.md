@@ -38,7 +38,8 @@ arguments:
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
-This object should be disposed of when you done using it.
+This object is safe to share across threads. It should be disposed of when you
+done using it.
 
 Then create a new `Transaction` object. This represents the transaction that
 you are sending to minFraud:

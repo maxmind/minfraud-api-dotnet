@@ -57,6 +57,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="ipAddress"></param>
         /// <param name="userAgent"></param>
         /// <param name="acceptLanguage"></param>
+        [Obsolete]
         public Device(IPAddress ipAddress, string userAgent, string acceptLanguage) : this(ipAddress, userAgent,
             acceptLanguage, null, null)
         {

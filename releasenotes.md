@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.4.0
+1.4.0 (2017-07-07)
 ------------------
 
 * Added support for custom inputs. These can be set up from your account portal.
@@ -11,11 +11,26 @@ Release Notes
 * Added support for the `/email/first_seen` output. Use `FirstSeen` on
   `MaxMind.MinFraud.Response.FirstSeen` to access it.
 * Added the following new values to the `PaymentProcessor` enum:
-  `Ebs`, `Hipay`, and `LemonWay`.
+  * `AmericanExpressPaymentGateway`
+  * `Bluesnap`
+  * `Commdoo`
+  * `Curopayments`
+  * `Ebs`
+  * `Exact`
+  * `Hipay`
+  * `LemonWay`.
+  * `Oceanpayment`
+  * `Paymentwall`
+  * `Payza`
+  * `Securetrading`
+  * `SolidtrustPay`
+  * `Vantiv`
+  * `Vericheck`
+  * `Vpos`
 * Updated the docs for `MaxMind.MinFraud.Response.Address` now that
  `IsPostalInCity` may be returned for addresses world-wide.
-* Switch to the updated MSBuild .NET Core build system.
-* Move tests from  NUnit to xUnit.net.
+* Switched to the updated MSBuild .NET Core build system.
+* Moved tests from NUnit to xUnit.net.
 
 1.3.0 (2016-11-22)
 ------------------
@@ -23,7 +38,7 @@ Release Notes
 * The disposition was added to the minFraud response models. This is used to
   return the disposition of the transaction as set by the custom rules for the
   account.
-* Update to .NET Core 1.1.
+* Updated to .NET Core 1.1.
 
 1.2.1 (2016-11-21)
 ------------------
