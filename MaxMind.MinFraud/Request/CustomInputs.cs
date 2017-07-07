@@ -23,6 +23,9 @@ namespace MaxMind.MinFraud.Request
         {
         }
 
+        /// <summary>
+        /// Builder class for <code>CustomInputs</code> objects.
+        /// </summary>
         public sealed class Builder : IEnumerable<KeyValuePair<string, object>>
         {
             private const long NumMax = 1 << 53;
