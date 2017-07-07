@@ -1,0 +1,557 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="df210970-b8fd-4cd0-9366-cae1d7ac2319" Title="Namespaces" Url="html/R_Project_Documentation.htm">
+    <HelpTOCNode Id="1f2273cc-bb09-438a-a466-4599aa442a8c" Title="MaxMind.Db" Url="html/N_MaxMind_Db.htm">
+      <HelpTOCNode Id="ec0bf4eb-8b1d-40f7-b5b6-9ce3de9c573e" Title="ConstructorAttribute Class" Url="html/T_MaxMind_Db_ConstructorAttribute.htm">
+        <HelpTOCNode Title="ConstructorAttribute Constructor " Url="html/M_MaxMind_Db_ConstructorAttribute__ctor.htm" />
+        <HelpTOCNode Title="ConstructorAttribute Properties" Url="html/Properties_T_MaxMind_Db_ConstructorAttribute.htm" />
+        <HelpTOCNode Title="ConstructorAttribute Methods" Url="html/Methods_T_MaxMind_Db_ConstructorAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="55fd403e-ffda-4d0c-8c35-ec37adb51c27" Title="DeserializationException Class" Url="html/T_MaxMind_Db_DeserializationException.htm">
+        <HelpTOCNode Id="fa6ae5a3-3bfd-42fb-8e25-01b563266eee" Title="DeserializationException Constructor " Url="html/Overload_MaxMind_Db_DeserializationException__ctor.htm">
+          <HelpTOCNode Title="DeserializationException Constructor (String)" Url="html/M_MaxMind_Db_DeserializationException__ctor.htm" />
+          <HelpTOCNode Title="DeserializationException Constructor (String, Exception)" Url="html/M_MaxMind_Db_DeserializationException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="DeserializationException Properties" Url="html/Properties_T_MaxMind_Db_DeserializationException.htm" />
+        <HelpTOCNode Title="DeserializationException Methods" Url="html/Methods_T_MaxMind_Db_DeserializationException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="FileAccessMode Enumeration" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+      <HelpTOCNode Id="91f9bb61-4aa3-4327-906a-17332904d807" Title="InjectableValues Class" Url="html/T_MaxMind_Db_InjectableValues.htm">
+        <HelpTOCNode Title="InjectableValues Constructor " Url="html/M_MaxMind_Db_InjectableValues__ctor.htm" />
+        <HelpTOCNode Id="1c6a793f-ccca-4912-a71b-71025e5ccae3" Title="InjectableValues Methods" Url="html/Methods_T_MaxMind_Db_InjectableValues.htm">
+          <HelpTOCNode Title="AddValue Method " Url="html/M_MaxMind_Db_InjectableValues_AddValue.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1900c2d5-a0a3-40ea-ab9b-15a4bb076d64" Title="InjectAttribute Class" Url="html/T_MaxMind_Db_InjectAttribute.htm">
+        <HelpTOCNode Title="InjectAttribute Constructor " Url="html/M_MaxMind_Db_InjectAttribute__ctor.htm" />
+        <HelpTOCNode Id="aa2cd52c-bcf7-4e3c-aa62-b0d6690c8daf" Title="InjectAttribute Properties" Url="html/Properties_T_MaxMind_Db_InjectAttribute.htm">
+          <HelpTOCNode Title="ParameterName Property " Url="html/P_MaxMind_Db_InjectAttribute_ParameterName.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="InjectAttribute Methods" Url="html/Methods_T_MaxMind_Db_InjectAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="511776ee-6c2e-444f-a00d-f5a3ac26bfa9" Title="InvalidDatabaseException Class" Url="html/T_MaxMind_Db_InvalidDatabaseException.htm">
+        <HelpTOCNode Id="7207c4ba-a971-4915-957d-06b2443a8770" Title="InvalidDatabaseException Constructor " Url="html/Overload_MaxMind_Db_InvalidDatabaseException__ctor.htm">
+          <HelpTOCNode Title="InvalidDatabaseException Constructor (String)" Url="html/M_MaxMind_Db_InvalidDatabaseException__ctor.htm" />
+          <HelpTOCNode Title="InvalidDatabaseException Constructor (String, Exception)" Url="html/M_MaxMind_Db_InvalidDatabaseException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="InvalidDatabaseException Properties" Url="html/Properties_T_MaxMind_Db_InvalidDatabaseException.htm" />
+        <HelpTOCNode Title="InvalidDatabaseException Methods" Url="html/Methods_T_MaxMind_Db_InvalidDatabaseException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="36fab54b-3455-446e-8b8e-4988f747427d" Title="Metadata Class" Url="html/T_MaxMind_Db_Metadata.htm">
+        <HelpTOCNode Title="Metadata Constructor " Url="html/M_MaxMind_Db_Metadata__ctor.htm" />
+        <HelpTOCNode Id="6c26887e-fff7-4767-9684-9867a6d90779" Title="Metadata Properties" Url="html/Properties_T_MaxMind_Db_Metadata.htm">
+          <HelpTOCNode Title="BinaryFormatMajorVersion Property " Url="html/P_MaxMind_Db_Metadata_BinaryFormatMajorVersion.htm" />
+          <HelpTOCNode Title="BinaryFormatMinorVersion Property " Url="html/P_MaxMind_Db_Metadata_BinaryFormatMinorVersion.htm" />
+          <HelpTOCNode Title="BuildDate Property " Url="html/P_MaxMind_Db_Metadata_BuildDate.htm" />
+          <HelpTOCNode Title="DatabaseType Property " Url="html/P_MaxMind_Db_Metadata_DatabaseType.htm" />
+          <HelpTOCNode Title="Description Property " Url="html/P_MaxMind_Db_Metadata_Description.htm" />
+          <HelpTOCNode Title="IPVersion Property " Url="html/P_MaxMind_Db_Metadata_IPVersion.htm" />
+          <HelpTOCNode Title="Languages Property " Url="html/P_MaxMind_Db_Metadata_Languages.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Metadata Methods" Url="html/Methods_T_MaxMind_Db_Metadata.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7c9f6fc4-899e-44a0-bc0f-60e3f2405092" Title="ParameterAttribute Class" Url="html/T_MaxMind_Db_ParameterAttribute.htm">
+        <HelpTOCNode Title="ParameterAttribute Constructor " Url="html/M_MaxMind_Db_ParameterAttribute__ctor.htm" />
+        <HelpTOCNode Id="94165d2a-c9c2-4e62-a758-720b35898de4" Title="ParameterAttribute Properties" Url="html/Properties_T_MaxMind_Db_ParameterAttribute.htm">
+          <HelpTOCNode Title="AlwaysCreate Property " Url="html/P_MaxMind_Db_ParameterAttribute_AlwaysCreate.htm" />
+          <HelpTOCNode Title="ParameterName Property " Url="html/P_MaxMind_Db_ParameterAttribute_ParameterName.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ParameterAttribute Methods" Url="html/Methods_T_MaxMind_Db_ParameterAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="206a5757-6ec9-4971-ade5-750db28b0a61" Title="Reader Class" Url="html/T_MaxMind_Db_Reader.htm">
+        <HelpTOCNode Id="a0c46085-1a9c-4c38-b96f-e812cf51e558" Title="Reader Constructor " Url="html/Overload_MaxMind_Db_Reader__ctor.htm">
+          <HelpTOCNode Title="Reader Constructor (Stream)" Url="html/M_MaxMind_Db_Reader__ctor.htm" />
+          <HelpTOCNode Title="Reader Constructor (String)" Url="html/M_MaxMind_Db_Reader__ctor_1.htm" />
+          <HelpTOCNode Title="Reader Constructor (String, FileAccessMode)" Url="html/M_MaxMind_Db_Reader__ctor_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="923d4a00-da92-4d58-813f-f4da1c89fde0" Title="Reader Properties" Url="html/Properties_T_MaxMind_Db_Reader.htm">
+          <HelpTOCNode Title="Metadata Property " Url="html/P_MaxMind_Db_Reader_Metadata.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="49ca284f-dcde-42b9-8fb8-9a7a901aea5b" Title="Reader Methods" Url="html/Methods_T_MaxMind_Db_Reader.htm">
+          <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_Db_Reader_Dispose.htm" />
+          <HelpTOCNode Id="7e1a6ecf-b13f-4f8f-b8cc-501c1012dd88" Title="Find Method " Url="html/Overload_MaxMind_Db_Reader_Find.htm">
+            <HelpTOCNode Title="Find(T) Method (IPAddress, InjectableValues)" Url="html/M_MaxMind_Db_Reader_Find__1.htm" />
+            <HelpTOCNode Title="Find(T) Method (IPAddress, Int32, InjectableValues)" Url="html/M_MaxMind_Db_Reader_Find__1_1.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a373c153-2cf6-4403-baac-a7cbfc2838cc" Title="MaxMind.MinFraud Namespaces" Url="html/G_MaxMind_MinFraud.htm">
+      <HelpTOCNode Id="b1d6d692-0094-4c39-b255-a9f938171d8d" Title="MaxMind.MinFraud" Url="html/N_MaxMind_MinFraud.htm">
+        <HelpTOCNode Id="44163511-38fd-4c6e-a301-56f20009d8df" Title="WebServiceClient Class" Url="html/T_MaxMind_MinFraud_WebServiceClient.htm">
+          <HelpTOCNode Title="WebServiceClient Constructor " Url="html/M_MaxMind_MinFraud_WebServiceClient__ctor.htm" />
+          <HelpTOCNode Id="9a00f40d-80aa-4e8c-bfd2-9725ea0ae97d" Title="WebServiceClient Methods" Url="html/Methods_T_MaxMind_MinFraud_WebServiceClient.htm">
+            <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_Dispose.htm" />
+            <HelpTOCNode Title="FactorsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_FactorsAsync.htm" />
+            <HelpTOCNode Title="InsightsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_InsightsAsync.htm" />
+            <HelpTOCNode Title="ScoreAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_ScoreAsync.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="75ad9acd-314e-4988-ba82-179cb719e5fe" Title="MaxMind.MinFraud.Exception" Url="html/N_MaxMind_MinFraud_Exception.htm">
+        <HelpTOCNode Id="ca96b691-8d31-4987-ba05-c63b29b8bf3d" Title="AuthenticationException Class" Url="html/T_MaxMind_MinFraud_Exception_AuthenticationException.htm">
+          <HelpTOCNode Id="be0b4c49-2541-4002-b14a-9a1f1ebbb17f" Title="AuthenticationException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm">
+            <HelpTOCNode Title="AuthenticationException Constructor " Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm" />
+            <HelpTOCNode Title="AuthenticationException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor_1.htm" />
+            <HelpTOCNode Title="AuthenticationException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AuthenticationException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b0107c22-0cc6-4641-9015-58daadad1ad4" Title="HttpException Class" Url="html/T_MaxMind_MinFraud_Exception_HttpException.htm">
+          <HelpTOCNode Id="a4889031-d36d-4bed-b6b9-0559879a780f" Title="HttpException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_HttpException__ctor.htm">
+            <HelpTOCNode Title="HttpException Constructor " Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_1.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_2.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_3.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri, Exception)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f9c52a9a-2aed-41a1-9480-d337815adb90" Title="HttpException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_HttpException.htm">
+            <HelpTOCNode Title="HttpStatus Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_HttpStatus.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HttpException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+          <HelpTOCNode Title="HttpException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="73c91151-24c6-4396-8b47-b60bf15d0323" Title="InsufficientFundsException Class" Url="html/T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm">
+          <HelpTOCNode Id="8f18e165-f9d8-4024-89b7-f36a78c0e5d2" Title="InsufficientFundsException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm">
+            <HelpTOCNode Title="InsufficientFundsException Constructor " Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm" />
+            <HelpTOCNode Title="InsufficientFundsException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor_1.htm" />
+            <HelpTOCNode Title="InsufficientFundsException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InsufficientFundsException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+          <HelpTOCNode Title="InsufficientFundsException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+          <HelpTOCNode Title="InsufficientFundsException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="9060a59d-45b2-402a-93a1-8cebebe98c73" Title="InvalidRequestException Class" Url="html/T_MaxMind_MinFraud_Exception_InvalidRequestException.htm">
+          <HelpTOCNode Id="1244a0f7-e363-4ab0-af99-399ffaba0f20" Title="InvalidRequestException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm">
+            <HelpTOCNode Title="InvalidRequestException Constructor " Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_1.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_2.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, String, Uri)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_3.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, String, Uri, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9bfab8ff-c3c5-4d37-88c8-b6fe9040d2ce" Title="InvalidRequestException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Code.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InvalidRequestException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+          <HelpTOCNode Title="InvalidRequestException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b65751eb-70ca-4f60-acd7-bdeb0b2935b5" Title="MinFraudException Class" Url="html/T_MaxMind_MinFraud_Exception_MinFraudException.htm">
+          <HelpTOCNode Id="9dd0cfce-5d6d-48ad-aaa5-7bfc559ddbc9" Title="MinFraudException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm">
+            <HelpTOCNode Title="MinFraudException Constructor " Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm" />
+            <HelpTOCNode Title="MinFraudException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor_1.htm" />
+            <HelpTOCNode Title="MinFraudException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MinFraudException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+          <HelpTOCNode Title="MinFraudException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+          <HelpTOCNode Title="MinFraudException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="06827a0f-6660-4ede-9935-6ac5d08596e9" Title="PermissionRequiredException Class" Url="html/T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm">
+          <HelpTOCNode Id="e643e561-9990-41ef-b8e2-4f9c762112ce" Title="PermissionRequiredException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm">
+            <HelpTOCNode Title="PermissionRequiredException Constructor " Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm" />
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor_1.htm" />
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PermissionRequiredException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="325eb59b-a238-465b-bfd5-811a5fd34b4e" Title="MaxMind.MinFraud.Request" Url="html/N_MaxMind_MinFraud_Request.htm">
+        <HelpTOCNode Id="a046baff-fb0d-47f3-9530-eaf118f8207e" Title="Account Class" Url="html/T_MaxMind_MinFraud_Request_Account.htm">
+          <HelpTOCNode Title="Account Constructor " Url="html/M_MaxMind_MinFraud_Request_Account__ctor.htm" />
+          <HelpTOCNode Id="9b6284ed-e871-4b45-acee-46a51899b0fa" Title="Account Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Account.htm">
+            <HelpTOCNode Title="UserId Property " Url="html/P_MaxMind_MinFraud_Request_Account_UserId.htm" />
+            <HelpTOCNode Title="Username Property " Url="html/P_MaxMind_MinFraud_Request_Account_Username.htm" />
+            <HelpTOCNode Title="UsernameMD5 Property " Url="html/P_MaxMind_MinFraud_Request_Account_UsernameMD5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f28d7a0b-1fe1-4822-bbc7-20caae6915c8" Title="Account Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Account.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Account_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="5a9d57cb-0d14-415c-8db1-6195c58270d1" Title="Billing Class" Url="html/T_MaxMind_MinFraud_Request_Billing.htm">
+          <HelpTOCNode Title="Billing Constructor " Url="html/M_MaxMind_MinFraud_Request_Billing__ctor.htm" />
+          <HelpTOCNode Title="Billing Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Billing.htm" />
+          <HelpTOCNode Title="Billing Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Billing.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e0ba75cd-64c8-47bd-9263-73aae336cdb7" Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm">
+          <HelpTOCNode Id="9c76679d-1f51-43db-b6ae-8cca235138e7" Title="CreditCard Constructor " Url="html/Overload_MaxMind_MinFraud_Request_CreditCard__ctor.htm">
+            <HelpTOCNode Title="CreditCard Constructor (String, String, String, String, String, Nullable(Char), Nullable(Char))" Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor.htm" />
+            <HelpTOCNode Title="CreditCard Constructor (String, String, String, String, String, Nullable(Char), Nullable(Char), String)" Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bbff7cf6-27c4-4292-8b0e-590443399195" Title="CreditCard Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_CreditCard.htm">
+            <HelpTOCNode Title="AvsResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_AvsResult.htm" />
+            <HelpTOCNode Title="BankName Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankName.htm" />
+            <HelpTOCNode Title="BankPhoneCountryCode Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneCountryCode.htm" />
+            <HelpTOCNode Title="BankPhoneNumber Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneNumber.htm" />
+            <HelpTOCNode Title="CvvResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_CvvResult.htm" />
+            <HelpTOCNode Title="IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_IssuerIdNumber.htm" />
+            <HelpTOCNode Title="Last4Digits Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_Last4Digits.htm" />
+            <HelpTOCNode Title="Token Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_Token.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="def969e4-bea0-4fb3-9e87-8e5bdeb85edd" Title="CreditCard Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CreditCard.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7bc886ef-39be-416f-b438-fa2f9ce0155a" Title="CustomInputs Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs.htm">
+          <HelpTOCNode Title="CustomInputs Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2eefcd10-1794-49c4-9001-39bf6af2ae22" Title="CustomInputs.Builder Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm">
+          <HelpTOCNode Title="CustomInputs.Builder Constructor " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder__ctor.htm" />
+          <HelpTOCNode Id="8d78394d-b893-453d-bfba-8a4088bc5443" Title="Builder Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm">
+            <HelpTOCNode Id="0b3b36ae-ba8a-4233-96ad-2235aadf044b" Title="Add Method " Url="html/Overload_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm">
+              <HelpTOCNode Title="Add Method (String, Boolean)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm" />
+              <HelpTOCNode Title="Add Method (String, Double)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_1.htm" />
+              <HelpTOCNode Title="Add Method (String, Int32)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_2.htm" />
+              <HelpTOCNode Title="Add Method (String, Int64)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_3.htm" />
+              <HelpTOCNode Title="Add Method (String, Single)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_4.htm" />
+              <HelpTOCNode Title="Add Method (String, String)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_5.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="Build Method " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Build.htm" />
+            <HelpTOCNode Title="GetEnumerator Method " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_GetEnumerator.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="a9469915-3603-48bb-9f99-536de8c8b45e" Title="Device Class" Url="html/T_MaxMind_MinFraud_Request_Device.htm">
+          <HelpTOCNode Id="016cd037-fe22-4224-9f0d-54bdfe34b79e" Title="Device Constructor " Url="html/Overload_MaxMind_MinFraud_Request_Device__ctor.htm">
+            <HelpTOCNode Title="Device Constructor (IPAddress, String, String)" Url="html/M_MaxMind_MinFraud_Request_Device__ctor.htm" />
+            <HelpTOCNode Title="Device Constructor (IPAddress, String, String, Nullable(Double), String)" Url="html/M_MaxMind_MinFraud_Request_Device__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="13b466b4-b5a0-4dfc-b06b-e935708bea0d" Title="Device Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Device.htm">
+            <HelpTOCNode Title="AcceptLanguage Property " Url="html/P_MaxMind_MinFraud_Request_Device_AcceptLanguage.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Request_Device_IPAddress.htm" />
+            <HelpTOCNode Title="SessionAge Property " Url="html/P_MaxMind_MinFraud_Request_Device_SessionAge.htm" />
+            <HelpTOCNode Title="SessionId Property " Url="html/P_MaxMind_MinFraud_Request_Device_SessionId.htm" />
+            <HelpTOCNode Title="UserAgent Property " Url="html/P_MaxMind_MinFraud_Request_Device_UserAgent.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f2f482b6-396e-4f0a-8d66-eb48dab2e1c0" Title="Device Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Device.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Device_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e0e384bc-9a82-4d43-8426-e21310d8dc5e" Title="Email Class" Url="html/T_MaxMind_MinFraud_Request_Email.htm">
+          <HelpTOCNode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Request_Email__ctor.htm" />
+          <HelpTOCNode Id="15096c41-bda8-4952-a399-21fa7c952084" Title="Email Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Email.htm">
+            <HelpTOCNode Title="Address Property " Url="html/P_MaxMind_MinFraud_Request_Email_Address.htm" />
+            <HelpTOCNode Title="AddressMD5 Property " Url="html/P_MaxMind_MinFraud_Request_Email_AddressMD5.htm" />
+            <HelpTOCNode Title="Domain Property " Url="html/P_MaxMind_MinFraud_Request_Email_Domain.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9ce9aedd-d8a3-451e-bb20-c6a3f12a966a" Title="Email Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Email.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Email_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ea468623-d0cc-4ce2-871d-1c1acc5d6e45" Title="Event Class" Url="html/T_MaxMind_MinFraud_Request_Event.htm">
+          <HelpTOCNode Title="Event Constructor " Url="html/M_MaxMind_MinFraud_Request_Event__ctor.htm" />
+          <HelpTOCNode Id="b37b4617-fe8c-4db9-ae48-27b8e85f3224" Title="Event Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Event.htm">
+            <HelpTOCNode Title="ShopId Property " Url="html/P_MaxMind_MinFraud_Request_Event_ShopId.htm" />
+            <HelpTOCNode Title="Time Property " Url="html/P_MaxMind_MinFraud_Request_Event_Time.htm" />
+            <HelpTOCNode Title="TransactionId Property " Url="html/P_MaxMind_MinFraud_Request_Event_TransactionId.htm" />
+            <HelpTOCNode Title="Type Property " Url="html/P_MaxMind_MinFraud_Request_Event_Type.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="26209727-6589-4112-bbaa-acddbd038a7b" Title="Event Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Event.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Event_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="EventType Enumeration" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+        <HelpTOCNode Id="b613f3f7-da96-45b8-aebd-630711bf6d34" Title="Location Class" Url="html/T_MaxMind_MinFraud_Request_Location.htm">
+          <HelpTOCNode Title="Location Constructor " Url="html/M_MaxMind_MinFraud_Request_Location__ctor.htm" />
+          <HelpTOCNode Id="536d5032-9eec-4ad1-a6aa-132fb7f343ab" Title="Location Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Location.htm">
+            <HelpTOCNode Title="Address Property " Url="html/P_MaxMind_MinFraud_Request_Location_Address.htm" />
+            <HelpTOCNode Title="Address2 Property " Url="html/P_MaxMind_MinFraud_Request_Location_Address2.htm" />
+            <HelpTOCNode Title="City Property " Url="html/P_MaxMind_MinFraud_Request_Location_City.htm" />
+            <HelpTOCNode Title="Company Property " Url="html/P_MaxMind_MinFraud_Request_Location_Company.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Request_Location_Country.htm" />
+            <HelpTOCNode Title="FirstName Property " Url="html/P_MaxMind_MinFraud_Request_Location_FirstName.htm" />
+            <HelpTOCNode Title="LastName Property " Url="html/P_MaxMind_MinFraud_Request_Location_LastName.htm" />
+            <HelpTOCNode Title="PhoneCountryCode Property " Url="html/P_MaxMind_MinFraud_Request_Location_PhoneCountryCode.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Request_Location_PhoneNumber.htm" />
+            <HelpTOCNode Title="Postal Property " Url="html/P_MaxMind_MinFraud_Request_Location_Postal.htm" />
+            <HelpTOCNode Title="Region Property " Url="html/P_MaxMind_MinFraud_Request_Location_Region.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1b668bc3-768b-42ae-be8b-86830ffc26ee" Title="Location Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Location.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Location_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="2bc07b95-34af-4a79-805d-22ac98f1eb5f" Title="Order Class" Url="html/T_MaxMind_MinFraud_Request_Order.htm">
+          <HelpTOCNode Title="Order Constructor " Url="html/M_MaxMind_MinFraud_Request_Order__ctor.htm" />
+          <HelpTOCNode Id="794319bd-8e94-4b29-8bd1-1a528a59c241" Title="Order Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Order.htm">
+            <HelpTOCNode Title="AffiliateId Property " Url="html/P_MaxMind_MinFraud_Request_Order_AffiliateId.htm" />
+            <HelpTOCNode Title="Amount Property " Url="html/P_MaxMind_MinFraud_Request_Order_Amount.htm" />
+            <HelpTOCNode Title="Currency Property " Url="html/P_MaxMind_MinFraud_Request_Order_Currency.htm" />
+            <HelpTOCNode Title="DiscountCode Property " Url="html/P_MaxMind_MinFraud_Request_Order_DiscountCode.htm" />
+            <HelpTOCNode Title="HasGiftMessage Property " Url="html/P_MaxMind_MinFraud_Request_Order_HasGiftMessage.htm" />
+            <HelpTOCNode Title="IsGift Property " Url="html/P_MaxMind_MinFraud_Request_Order_IsGift.htm" />
+            <HelpTOCNode Title="ReferrerUri Property " Url="html/P_MaxMind_MinFraud_Request_Order_ReferrerUri.htm" />
+            <HelpTOCNode Title="SubaffiliateId Property " Url="html/P_MaxMind_MinFraud_Request_Order_SubaffiliateId.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a74ffa95-5f21-4fbe-ab96-1a0b9f93eee3" Title="Order Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Order.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Order_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e6654832-0c59-44b0-9c12-6d6c6175fb0f" Title="Payment Class" Url="html/T_MaxMind_MinFraud_Request_Payment.htm">
+          <HelpTOCNode Title="Payment Constructor " Url="html/M_MaxMind_MinFraud_Request_Payment__ctor.htm" />
+          <HelpTOCNode Id="f209f922-ab4e-4216-b0cd-3409482e4e33" Title="Payment Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Payment.htm">
+            <HelpTOCNode Title="DeclineCode Property " Url="html/P_MaxMind_MinFraud_Request_Payment_DeclineCode.htm" />
+            <HelpTOCNode Title="Processor Property " Url="html/P_MaxMind_MinFraud_Request_Payment_Processor.htm" />
+            <HelpTOCNode Title="WasAuthorized Property " Url="html/P_MaxMind_MinFraud_Request_Payment_WasAuthorized.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b5c3b724-9711-4962-bc81-a07338cd4f2d" Title="Payment Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Payment.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Payment_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="PaymentProcessor Enumeration" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+        <HelpTOCNode Id="1b401aee-fb40-4958-a8d7-eff04904038d" Title="Shipping Class" Url="html/T_MaxMind_MinFraud_Request_Shipping.htm">
+          <HelpTOCNode Title="Shipping Constructor " Url="html/M_MaxMind_MinFraud_Request_Shipping__ctor.htm" />
+          <HelpTOCNode Id="30b57cbe-c1f8-4a6f-bbb0-769600c9a252" Title="Shipping Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Shipping.htm">
+            <HelpTOCNode Title="DeliverySpeed Property " Url="html/P_MaxMind_MinFraud_Request_Shipping_DeliverySpeed.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f69c1210-f980-4b03-92b2-cf4951cfe76e" Title="Shipping Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Shipping.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Shipping_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="ShippingDeliverySpeed Enumeration" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+        <HelpTOCNode Id="f21b2df9-4221-4d56-8bfc-a623b1db7a63" Title="ShoppingCartItem Class" Url="html/T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+          <HelpTOCNode Title="ShoppingCartItem Constructor " Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem__ctor.htm" />
+          <HelpTOCNode Id="2fe4e919-e4a6-41d8-b36b-b9c3425b7242" Title="ShoppingCartItem Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+            <HelpTOCNode Title="Category Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Category.htm" />
+            <HelpTOCNode Title="ItemId Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_ItemId.htm" />
+            <HelpTOCNode Title="Price Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Price.htm" />
+            <HelpTOCNode Title="Quantity Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Quantity.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="80a5b66a-1046-4c24-8589-630214c8c503" Title="ShoppingCartItem Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="1853e38b-249a-4ded-9b0c-9fc7700636de" Title="Transaction Class" Url="html/T_MaxMind_MinFraud_Request_Transaction.htm">
+          <HelpTOCNode Id="4d383dd3-25ca-4ccf-a246-0f2794fd988d" Title="Transaction Constructor " Url="html/Overload_MaxMind_MinFraud_Request_Transaction__ctor.htm">
+            <HelpTOCNode Title="Transaction Constructor (Device, Account, Billing, CreditCard, Email, Event, Order, Payment, Shipping, IList(ShoppingCartItem))" Url="html/M_MaxMind_MinFraud_Request_Transaction__ctor_1.htm" />
+            <HelpTOCNode Title="Transaction Constructor (Device, Account, Billing, CreditCard, CustomInputs, Email, Event, Order, Payment, Shipping, IList(ShoppingCartItem))" Url="html/M_MaxMind_MinFraud_Request_Transaction__ctor.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="666aefb0-f63a-47d3-a2e5-65e8e5c616ee" Title="Transaction Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Transaction.htm">
+            <HelpTOCNode Title="Account Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Account.htm" />
+            <HelpTOCNode Title="Billing Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Billing.htm" />
+            <HelpTOCNode Title="CreditCard Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_CreditCard.htm" />
+            <HelpTOCNode Title="CustomInputs Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_CustomInputs.htm" />
+            <HelpTOCNode Title="Device Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Device.htm" />
+            <HelpTOCNode Title="Email Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Email.htm" />
+            <HelpTOCNode Title="Event Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Event.htm" />
+            <HelpTOCNode Title="Order Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Order.htm" />
+            <HelpTOCNode Title="Payment Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Payment.htm" />
+            <HelpTOCNode Title="Shipping Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Shipping.htm" />
+            <HelpTOCNode Title="ShoppingCart Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_ShoppingCart.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d44402df-bba7-4d14-82e5-44e28bbb27e7" Title="Transaction Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Transaction.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Transaction_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="1a876776-ef24-4a65-84d4-c7b6f05abb4a" Title="MaxMind.MinFraud.Response" Url="html/N_MaxMind_MinFraud_Response.htm">
+        <HelpTOCNode Id="3c3038b6-b63b-4b60-a773-95363a6f20f2" Title="Address Class" Url="html/T_MaxMind_MinFraud_Response_Address.htm">
+          <HelpTOCNode Title="Address Constructor " Url="html/M_MaxMind_MinFraud_Response_Address__ctor.htm" />
+          <HelpTOCNode Id="4908c3c3-775d-4857-9961-3056205781d8" Title="Address Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Address.htm">
+            <HelpTOCNode Title="DistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Address_DistanceToIPLocation.htm" />
+            <HelpTOCNode Title="IsInIPCountry Property " Url="html/P_MaxMind_MinFraud_Response_Address_IsInIPCountry.htm" />
+            <HelpTOCNode Title="IsPostalInCity Property " Url="html/P_MaxMind_MinFraud_Response_Address_IsPostalInCity.htm" />
+            <HelpTOCNode Title="Latitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Latitude.htm" />
+            <HelpTOCNode Title="Longitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Longitude.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2417c3b8-50b6-43cf-9b1e-3d27b8807aec" Title="Address Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Address.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Address_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="52ff8af2-094d-4644-beb7-66e459e88c01" Title="BillingAddress Class" Url="html/T_MaxMind_MinFraud_Response_BillingAddress.htm">
+          <HelpTOCNode Title="BillingAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_BillingAddress__ctor.htm" />
+          <HelpTOCNode Title="BillingAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+          <HelpTOCNode Title="BillingAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a622121b-1aeb-478a-9c23-04b5b712cff9" Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm">
+          <HelpTOCNode Title="CreditCard Constructor " Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
+          <HelpTOCNode Id="c3eec15b-82a5-4e2d-8e93-360c3655b3bf" Title="CreditCard Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_CreditCard.htm">
+            <HelpTOCNode Title="Brand Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Brand.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Country.htm" />
+            <HelpTOCNode Title="IsIssuedInBillingAddressCountry Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsIssuedInBillingAddressCountry.htm" />
+            <HelpTOCNode Title="IsPrepaid Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsPrepaid.htm" />
+            <HelpTOCNode Title="Issuer Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Issuer.htm" />
+            <HelpTOCNode Title="Type Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Type.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="2de92fae-593f-4823-8e5b-21e82d6a24d3" Title="CreditCard Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_CreditCard.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_CreditCard_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="a384d639-dd4c-4cd5-a9f3-18c2d1223f1f" Title="Device Class" Url="html/T_MaxMind_MinFraud_Response_Device.htm">
+          <HelpTOCNode Title="Device Constructor " Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
+          <HelpTOCNode Id="010936d2-9727-4750-818a-bd092c340ad4" Title="Device Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Device.htm">
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_MinFraud_Response_Device_Confidence.htm" />
+            <HelpTOCNode Title="Id Property " Url="html/P_MaxMind_MinFraud_Response_Device_Id.htm" />
+            <HelpTOCNode Title="LastSeen Property " Url="html/P_MaxMind_MinFraud_Response_Device_LastSeen.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f887b0d5-8950-41c6-9274-dc036fe1cf23" Title="Device Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Device.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Device_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3b474f72-e63b-4030-973c-e2cfe0768327" Title="Disposition Class" Url="html/T_MaxMind_MinFraud_Response_Disposition.htm">
+          <HelpTOCNode Title="Disposition Constructor " Url="html/M_MaxMind_MinFraud_Response_Disposition__ctor.htm" />
+          <HelpTOCNode Id="2e641bb4-3c9a-4eeb-949f-51be9ca9d195" Title="Disposition Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Disposition.htm">
+            <HelpTOCNode Title="Action Property " Url="html/P_MaxMind_MinFraud_Response_Disposition_Action.htm" />
+            <HelpTOCNode Title="Reason Property " Url="html/P_MaxMind_MinFraud_Response_Disposition_Reason.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="8a140ee8-aa05-4a0d-a24f-5784e466a846" Title="Disposition Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Disposition.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Disposition_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="71edebaf-a2ad-443a-a08c-8869dd2150f4" Title="Email Class" Url="html/T_MaxMind_MinFraud_Response_Email.htm">
+          <HelpTOCNode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Response_Email__ctor.htm" />
+          <HelpTOCNode Id="7545fb31-8799-4e4d-b9e1-294d6f52695b" Title="Email Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Email.htm">
+            <HelpTOCNode Title="FirstSeen Property " Url="html/P_MaxMind_MinFraud_Response_Email_FirstSeen.htm" />
+            <HelpTOCNode Title="IsFree Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsFree.htm" />
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="de4c039b-f99a-4189-9470-8957058b734c" Title="Email Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Email.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Email_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="f861f25d-a1dc-4e4b-9df4-aff804f94c6d" Title="Factors Class" Url="html/T_MaxMind_MinFraud_Response_Factors.htm">
+          <HelpTOCNode Title="Factors Constructor " Url="html/M_MaxMind_MinFraud_Response_Factors__ctor.htm" />
+          <HelpTOCNode Id="c9450333-c31e-4a65-93de-e3679c115967" Title="Factors Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Factors.htm">
+            <HelpTOCNode Title="Subscores Property " Url="html/P_MaxMind_MinFraud_Response_Factors_Subscores.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="840de0e5-1634-4d51-8f1a-bf711302ca42" Title="Factors Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Factors.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Factors_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="5e0eaef4-cac7-41e1-bfa6-54024b84c7ad" Title="GeoIP2Country Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+          <HelpTOCNode Title="GeoIP2Country Constructor " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country__ctor.htm" />
+          <HelpTOCNode Id="f3230c06-0ec7-4707-ac31-6aa2cc4a01a3" Title="GeoIP2Country Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Country_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a0f8ee7f-580f-4d22-876a-98c8903805a9" Title="GeoIP2Country Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="bf941c63-ee82-4d71-a934-f5dfb581b9c7" Title="GeoIP2Location Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+          <HelpTOCNode Title="GeoIP2Location Constructor " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location__ctor.htm" />
+          <HelpTOCNode Id="0f122dc3-18c6-4fad-83b0-60e498b485c0" Title="GeoIP2Location Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+            <HelpTOCNode Title="LocalTime Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Location_LocalTime.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a99682e1-5aa0-4a52-bcff-1c8a4da87723" Title="GeoIP2Location Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="100eac52-81c8-4e78-8681-642109005ec1" Title="IIPAddress Interface" Url="html/T_MaxMind_MinFraud_Response_IIPAddress.htm">
+          <HelpTOCNode Id="ef2e0307-6046-4a14-ac62-2f28fe55910d" Title="IIPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IIPAddress.htm">
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_IIPAddress_Risk.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="a8630580-de8a-4f2b-8e7a-366a47294648" Title="Insights Class" Url="html/T_MaxMind_MinFraud_Response_Insights.htm">
+          <HelpTOCNode Title="Insights Constructor " Url="html/M_MaxMind_MinFraud_Response_Insights__ctor.htm" />
+          <HelpTOCNode Id="c075023d-1cbd-4dee-882f-cca522aece30" Title="Insights Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Insights.htm">
+            <HelpTOCNode Title="BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_BillingAddress.htm" />
+            <HelpTOCNode Title="CreditCard Property " Url="html/P_MaxMind_MinFraud_Response_Insights_CreditCard.htm" />
+            <HelpTOCNode Title="Device Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Device.htm" />
+            <HelpTOCNode Title="Email Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Email.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_IPAddress.htm" />
+            <HelpTOCNode Title="ShippingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_ShippingAddress.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5eb24d1c-8b9d-4717-87a1-9655e69b6069" Title="Insights Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Insights.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Insights_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7a25b308-dbf1-4151-8b01-d541ee16ac14" Title="IPAddress Class" Url="html/T_MaxMind_MinFraud_Response_IPAddress.htm">
+          <HelpTOCNode Title="IPAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_IPAddress__ctor.htm" />
+          <HelpTOCNode Id="d820408f-d6f2-4838-a423-ab008f7ff82c" Title="IPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IPAddress.htm">
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Country.htm" />
+            <HelpTOCNode Title="Location Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Location.htm" />
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Risk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ba01cec5-24bc-4bae-adbd-f51c83a6cfc6" Title="IPAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_IPAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_IPAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="bbec8d71-cb57-4206-ab30-04adfac3c59d" Title="Issuer Class" Url="html/T_MaxMind_MinFraud_Response_Issuer.htm">
+          <HelpTOCNode Title="Issuer Constructor " Url="html/M_MaxMind_MinFraud_Response_Issuer__ctor.htm" />
+          <HelpTOCNode Id="cc9727ca-8322-48d7-b375-c509aa4aafe6" Title="Issuer Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Issuer.htm">
+            <HelpTOCNode Title="MatchesProvidedName Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedName.htm" />
+            <HelpTOCNode Title="MatchesProvidedPhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedPhoneNumber.htm" />
+            <HelpTOCNode Title="Name Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_Name.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_PhoneNumber.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="01fd4c54-c334-422f-a196-60b8abb10922" Title="Issuer Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Issuer.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Issuer_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="76dd9fd7-1ca2-4675-aeef-90800cf4721e" Title="Score Class" Url="html/T_MaxMind_MinFraud_Response_Score.htm">
+          <HelpTOCNode Title="Score Constructor " Url="html/M_MaxMind_MinFraud_Response_Score__ctor.htm" />
+          <HelpTOCNode Id="5962c4b0-c8d0-4465-b91c-5608eb60f14b" Title="Score Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Score.htm">
+            <HelpTOCNode Title="Disposition Property " Url="html/P_MaxMind_MinFraud_Response_Score_Disposition.htm" />
+            <HelpTOCNode Title="FundsRemaining Property " Url="html/P_MaxMind_MinFraud_Response_Score_FundsRemaining.htm" />
+            <HelpTOCNode Title="Id Property " Url="html/P_MaxMind_MinFraud_Response_Score_Id.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Score_IPAddress.htm" />
+            <HelpTOCNode Title="QueriesRemaining Property " Url="html/P_MaxMind_MinFraud_Response_Score_QueriesRemaining.htm" />
+            <HelpTOCNode Title="RiskScore Property " Url="html/P_MaxMind_MinFraud_Response_Score_RiskScore.htm" />
+            <HelpTOCNode Title="Warnings Property " Url="html/P_MaxMind_MinFraud_Response_Score_Warnings.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a4f15068-fd84-425e-8a87-d70fbb208ae1" Title="Score Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Score.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Score_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="0002469f-bee5-48b9-b983-522b4e1aa0e8" Title="ScoreIPAddress Class" Url="html/T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+          <HelpTOCNode Title="ScoreIPAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress__ctor.htm" />
+          <HelpTOCNode Id="b6912952-59c6-4c3d-bec8-4bda720c1956" Title="ScoreIPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_ScoreIPAddress_Risk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="53c3f537-9dec-46e2-af70-3c1714c929bb" Title="ScoreIPAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="28e0c71e-e938-44ab-b488-c5a8a6d1a471" Title="ShippingAddress Class" Url="html/T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+          <HelpTOCNode Title="ShippingAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_ShippingAddress__ctor.htm" />
+          <HelpTOCNode Id="e6175321-4fde-4972-ab35-9b9d9ed303b5" Title="ShippingAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+            <HelpTOCNode Title="DistanceToBillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_DistanceToBillingAddress.htm" />
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4576e701-be54-4872-ae82-eb23a90f1fc9" Title="ShippingAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_ShippingAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="53eb2ec3-9df3-4418-8849-889d00bbade9" Title="Subscores Class" Url="html/T_MaxMind_MinFraud_Response_Subscores.htm">
+          <HelpTOCNode Title="Subscores Constructor " Url="html/M_MaxMind_MinFraud_Response_Subscores__ctor.htm" />
+          <HelpTOCNode Id="c3b034e2-b7f4-4b3d-b0f2-30dfc3d228f6" Title="Subscores Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Subscores.htm">
+            <HelpTOCNode Title="AvsResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_AvsResult.htm" />
+            <HelpTOCNode Title="BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddress.htm" />
+            <HelpTOCNode Title="BillingAddressDistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddressDistanceToIPLocation.htm" />
+            <HelpTOCNode Title="Browser Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Browser.htm" />
+            <HelpTOCNode Title="Chargeback Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Chargeback.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Country.htm" />
+            <HelpTOCNode Title="CountryMismatch Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_CountryMismatch.htm" />
+            <HelpTOCNode Title="CvvResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_CvvResult.htm" />
+            <HelpTOCNode Title="EmailAddress Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailAddress.htm" />
+            <HelpTOCNode Title="EmailDomain Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailDomain.htm" />
+            <HelpTOCNode Title="EmailTenure Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailTenure.htm" />
+            <HelpTOCNode Title="IPTenure Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_IPTenure.htm" />
+            <HelpTOCNode Title="IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_IssuerIdNumber.htm" />
+            <HelpTOCNode Title="OrderAmount Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_OrderAmount.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_PhoneNumber.htm" />
+            <HelpTOCNode Title="ShippingAddressDistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_ShippingAddressDistanceToIPLocation.htm" />
+            <HelpTOCNode Title="TimeOfDay Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_TimeOfDay.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f2be057f-e69f-4c15-a099-f278a93ea1a0" Title="Subscores Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Subscores.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Subscores_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="27452e3e-0828-4691-bf3b-98bf35503963" Title="Warning Class" Url="html/T_MaxMind_MinFraud_Response_Warning.htm">
+          <HelpTOCNode Title="Warning Constructor " Url="html/M_MaxMind_MinFraud_Response_Warning__ctor.htm" />
+          <HelpTOCNode Id="9cc1ee7b-aeda-4fb7-87a4-83200fd6650a" Title="Warning Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Warning.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_MinFraud_Response_Warning_Code.htm" />
+            <HelpTOCNode Title="InputPointer Property " Url="html/P_MaxMind_MinFraud_Response_Warning_InputPointer.htm" />
+            <HelpTOCNode Title="Message Property " Url="html/P_MaxMind_MinFraud_Response_Warning_Message.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e729434a-2d5c-4ba3-9f10-dabeff1158ec" Title="Warning Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Warning.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Warning_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
