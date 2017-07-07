@@ -219,13 +219,13 @@ public class MinFraudExample
                     price: 100.00m
                 )
             },
-            customInputs: new CustomInputs
+            customInputs: new CustomInputs.Builder
             {
                 { "float_input", 12.1d},
                 { "integer_input", 3123},
                 { "string_input", "This is a string input."},
                 { "boolean_input", true},
-            }
+            }.Build()
         );
 
         using (var client = new WebServiceClient(6, "ABCD567890"))

@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestJson()
         {
-            var inputs = new CustomInputs
+            var inputs = new CustomInputs.Builder
             {
                 {"string_input_1", "test string"},
                 {"int_input", 19},
@@ -18,7 +18,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 {"float_input", 3.2f},
                 {"double_input", 32.123d},
                 {"bool_input", true}
-            };
+            }.Build();
 
             Assert.Equal(
                 new JObject
@@ -36,55 +36,70 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestStringThatIsTooLong()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"string_input_1", new string('x', 256)}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"string_input_1", new string('x', 256)}
+            }.Build());
         }
 
         [Fact]
         public void TestStringWithNewLine()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"string", "test\n"}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"string", "test\n"}
+            }.Build());
         }
 
         [Fact]
         public void TestInvalidKey()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"InvalidKey", "test"}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"InvalidKey", "test"}
+            }.Build());
         }
 
         [Fact]
         public void TestInvalidLong()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"invalid_long", 1L << 54}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"invalid_long", 1L << 54}
+            });
         }
 
         [Fact]
         public void TestInvalidFloat()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"invalid_float", (float) (1L << 54)}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"invalid_float", (float) (1L << 54)}
+            }.Build());
         }
 
         [Fact]
         public void TestInvalidDouble()
         {
-            Assert.Throws<ArgumentException>(() => new CustomInputs
-                {
-                    {"invalid_double", (double) (-1L << 54)}
-                });
+            Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
+            {
+                {"invalid_double", (double) (-1L << 54)}
+            }.Build());
+        }
+
+        [Fact]
+        public void TestBuilderCannotBeReused()
+        {
+            var builder = new CustomInputs.Builder
+            {
+                {"string", "test"}
+            };
+
+            builder.Build();
+
+            Assert.Throws<InvalidOperationException>(() => builder.Add("nope", true));
+            Assert.Throws<InvalidOperationException>(() => builder.Build());
+            Assert.Throws<InvalidOperationException>(() => builder.GetEnumerator());
         }
     }
 }

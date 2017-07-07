@@ -126,13 +126,13 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     last4Digits: "7643",
                     token: "123456abc1234"
                 ),
-                customInputs: new CustomInputs
+                customInputs: new CustomInputs.Builder
                 {
                     { "float_input", 12.1d},
                     { "integer_input", 3123},
                     { "string_input", "This is a string input."},
                     { "boolean_input", true},
-                },
+                }.Build(),
                 order:
                 new Order(
                     amount: 323.21m,
