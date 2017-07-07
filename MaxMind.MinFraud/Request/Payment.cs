@@ -34,6 +34,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "amazon_payments")]
         AmazonPayments,
 
+        [EnumMember(Value = "american_express_payment_gateway")]
+        AmericanExpressPaymentGateway,
+
         [EnumMember(Value = "authorizenet")]
         Authorizenet,
 
@@ -45,6 +48,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "bluepay")]
         Bluepay,
+
+        [EnumMember(Value = "bluesnap")]
+        Bluesnap,
 
         [EnumMember(Value = "braintree")]
         Braintree,
@@ -64,6 +70,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "compropago")]
         Compropago,
 
+        [EnumMember(Value = "commdoo")]
+        Commdoo,
+
         [EnumMember(Value = "concept_payments")]
         ConceptPayments,
 
@@ -72,6 +81,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "cuentadigital")]
         Cuentadigital,
+
+        [EnumMember(Value = "curopayments")]
+        Curopayments,
 
         [EnumMember(Value = "dalpay")]
         Dalpay,
@@ -99,6 +111,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "eway")]
         Eway,
+
+        [EnumMember(Value = "exact")]
+        Exact,
 
         [EnumMember(Value = "first_data")]
         FirstData,
@@ -145,6 +160,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "nmi")]
         Nmi,
 
+        [EnumMember(Value = "oceanpayment")]
+        Oceanpayment,
+
         [EnumMember(Value = "other")]
         Other,
 
@@ -165,6 +183,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "paygate")]
         Paygate,
+
+        [EnumMember(Value = "paymentwall")]
+        Paymentwall,
 
         [EnumMember(Value = "payone")]
         Payone,
@@ -196,6 +217,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "pinpayments")]
         Pinpayments,
 
+        [EnumMember(Value = "payza")]
+        Payza,
+
         [EnumMember(Value = "princeton_payment_solutions")]
         PrincetonPaymentSolutions,
 
@@ -223,6 +247,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "sagepay")]
         Sagepay,
 
+        [EnumMember(Value = "securetrading")]
+        Securetrading,
+
         [EnumMember(Value = "simplify_commerce")]
         SimplifyCommerce,
 
@@ -231,6 +258,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "smartcoin")]
         Smartcoin,
+
+        [EnumMember(Value = "solidtrust_pay")]
+        SolidtrustPay,
 
         [EnumMember(Value = "sps_decidir")]
         SpsDecidir,
@@ -247,8 +277,14 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "usa_epay")]
         UsaEpay,
 
+        [EnumMember(Value = "vantiv")]
+        Vantiv,
+
         [EnumMember(Value = "verepay")]
         Verepay,
+
+        [EnumMember(Value = "vericheck")]
+        Vericheck,
 
         [EnumMember(Value = "vindicia")]
         Vindicia,
@@ -258,6 +294,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "vme")]
         Vme,
+
+        [EnumMember(Value = "vpos")]
+        Vpos,
 
         [EnumMember(Value = "worldpay")]
         Worldpay
