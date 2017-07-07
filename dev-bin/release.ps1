@@ -1,7 +1,7 @@
 $ErrorActionPreference = 'Stop'
 $DebugPreference = 'Continue'
 
-$projectJsonFile=(Get-Item "MaxMind.MinFraud/project.json").FullName
+$projectFile=(Get-Item "MaxMind.MinFraud/MaxMind.MinFraud.csproj").FullName
 $matches = (Get-Content -Encoding UTF8 releasenotes.md) ` |
             Select-String '(\d+\.\d+\.\d+(?:-\w+)?) \((\d{4}-\d{2}-\d{2})\)' `
 
@@ -10,7 +10,6 @@ $date = $matches.Matches.Groups[2].Value
 
 if((Get-Date -format 'yyyy-MM-dd')  -ne $date ) {
     Write-Error "$date is not today!"
-    exit 1
 }
 
 $tag = "v$version"
@@ -19,12 +18,9 @@ if (& git status --porcelain) {
     Write-Error '. is not clean'
 }
 
-# Not using Powershell's built-in JSON support as that
-# reformats the file.
-(Get-Content -Encoding UTF8 $projectJsonFile) `
-    -replace '(?<=version"\s*:\s*")[^"]+', $version ` |
-  Out-File -Encoding UTF8 $projectJsonFile
-
+(Get-Content -Encoding UTF8 $projectFile) `
+    -replace '(?<=<VersionPrefix>)[^<]+', $version ` |
+  Out-File -Encoding UTF8 $projectFile
 
 & git diff
 
@@ -32,7 +28,7 @@ if ((Read-Host -Prompt 'Continue? (y/n)') -ne 'y') {
     Write-Error 'Aborting'
 }
 
-& git commit -m "Prepare for $version" -a
+& git commit -m "$version" -a
 
 Push-Location MaxMind.MinFraud
 
@@ -59,7 +55,7 @@ if (Test-Path .gh-pages ) {
     & git pull
 } else {
     Write-Debug "Checking out gh-pages in .gh-pages"
-    & git clone -b gh-pages git@github.com:maxmind/minfraud-api-dotnet.git .gh-pages
+    & git clone -b gh-pages https://github.com/maxmind/minfraud-api-dotnet.git .gh-pages
     Push-Location .gh-pages
 }
 
@@ -73,7 +69,7 @@ $page = (Get-Item '.gh-pages\index.md').FullName
 $pageHeader = @"
 ---
 layout: default
-title: MaxMind minFraud Score and Insights .NET API
+title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
 version: $tag
 ---
@@ -85,6 +81,7 @@ Remove-Item $page
 $utf8NoBomEncoding = New-Object System.Text.UTF8Encoding($False)
 [IO.File]::WriteAllLines($page, $pageHeader, $utf8NoBomEncoding)
 
+Get-Content -Encoding UTF8 'README.md' | Out-File -Encoding UTF8 -Append $page
 & MSBuild.exe .\minfraud.shfbproj /p:OutputPath=.gh-pages\doc\$tag
 
 Push-Location .gh-pages
