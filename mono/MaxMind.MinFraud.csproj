@@ -108,6 +108,7 @@
     <Compile Include="../MaxMind.MinFraud/Response\Subscores.cs" />
     <Compile Include="../MaxMind.MinFraud/Response\Warning.cs" />
     <Compile Include="../MaxMind.MinFraud/Util\WebServiceError.cs" />
+    <Compile Include="../MaxMind.MinFraud/Util\DateConverter.cs" />
     <Compile Include="../MaxMind.MinFraud/Util\IPAddressConverter.cs" />
     <Compile Include="../MaxMind.MinFraud/WebServiceClient.cs" />
     <Compile Include="../MaxMind.MinFraud/Properties\AssemblyInfo.cs" />

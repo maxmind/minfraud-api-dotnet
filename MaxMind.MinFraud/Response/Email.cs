@@ -1,4 +1,6 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using MaxMind.MinFraud.Util;
+using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -7,6 +9,13 @@ namespace MaxMind.MinFraud.Response
     /// </summary>
     public sealed class Email
     {
+        /// <summary>
+        /// The date the email address was first seen by MaxMind.
+        /// </summary>
+        [JsonProperty("first_seen")]
+        [JsonConverter(typeof(DateConverter))]
+        public DateTimeOffset? FirstSeen { get; internal set; }
+
         /// <summary>
         /// This property is true if MaxMind believes that this email is hosted by a free
         /// email provider such as Gmail or Yahoo! Mail.

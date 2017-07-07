@@ -69,7 +69,7 @@ namespace MaxMind.MinFraud.Request
         [JsonProperty("domain")]
         public string Domain
         {
-            get { return _domain; }
+            get => _domain;
             private set
             {
                 if (Uri.CheckHostName(value) == UriHostNameType.Unknown)

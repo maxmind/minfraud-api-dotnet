@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using System.Net;
 
 namespace MaxMind.MinFraud.Request
@@ -18,15 +19,47 @@ namespace MaxMind.MinFraud.Request
         /// browser used in the transaction.</param>
         /// <param name="acceptLanguage">The HTTP “Accept-Language” header of
         /// the device used in the transaction.</param>
+        /// <param name="sessionAge">The number of seconds between the
+        /// creation of the user's session and the time of the transaction.
+        /// Note that sessionAge is not the duration of the current visit, but 
+        /// the time since the start of the first visit.</param>
+        /// <param name="sessionId">A string up to 255 characters in length.
+        /// This is an ID that uniquely identifies a visitor's session on the
+        /// site.</param>
         public Device(
             IPAddress ipAddress,
             string userAgent = null,
-            string acceptLanguage = null
+            string acceptLanguage = null,
+            double? sessionAge = null,
+            string sessionId = null
         )
         {
             this.IPAddress = ipAddress;
             UserAgent = userAgent;
             AcceptLanguage = acceptLanguage;
+
+            if (sessionAge != null && sessionAge < 0)
+            {
+                throw new ArgumentException($"{nameof(sessionAge)} must be non-negative.");
+            }
+            SessionAge = sessionAge;
+
+            if (sessionId != null && sessionId.Length > 255)
+            {
+                throw new ArgumentException($"{nameof(sessionId)} must be less than 255 characters long.");
+            }
+            SessionId = sessionId;
+        }
+
+        /// <summary>
+        /// This constructor is for backward binary compatability.
+        /// </summary>
+        /// <param name="ipAddress"></param>
+        /// <param name="userAgent"></param>
+        /// <param name="acceptLanguage"></param>
+        public Device(IPAddress ipAddress, string userAgent, string acceptLanguage) : this(ipAddress, userAgent,
+            acceptLanguage, null, null)
+        {
         }
 
         /// <summary>
@@ -49,6 +82,22 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonProperty("accept_language")]
         public string AcceptLanguage { get; }
+
+        /// <summary>
+        /// The number of seconds between the creation of the user's
+        /// session and the time of the transaction. Note that 
+        /// sessionAge is not the duration of the current visit, but 
+        /// the time since the start of the first visit.
+        /// </summary>
+        [JsonProperty("session_age")]
+        public double? SessionAge { get; }
+
+        /// <summary>
+        /// A string up to 255 characters in length. This is an ID that
+        /// uniquely identifies a visitor's session on the site.
+        /// </summary>
+        [JsonProperty("session_id")]
+        public string SessionId { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.
