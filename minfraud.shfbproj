@@ -25,11 +25,12 @@
     <CleanIntermediates>True</CleanIntermediates>
     <DocumentationSources>
       <DocumentationSource sourceFile="MaxMind.MinFraud\bin\Release\net45\MaxMind.MinFraud.xml" />
-<DocumentationSource sourceFile="MaxMind.MinFraud\bin\Release\net45\MaxMind.MinFraud.dll" />
-<DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.dll" />
-<DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.xml" />
-<DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.dll" />
-<DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.xml" /></DocumentationSources>
+      <DocumentationSource sourceFile="MaxMind.MinFraud\bin\Release\net45\MaxMind.MinFraud.dll" />
+      <DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.dll" />
+      <DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.xml" />
+      <DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.dll" />
+      <DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.xml" />
+    </DocumentationSources>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>True</NamespaceGrouping>
@@ -71,10 +72,4 @@
     </PostBuildEvent>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
-  <ItemGroup>
-    <ProjectReference Include="MaxMind.MinFraud\MaxMind.MinFraud.xproj">
-      <Name>MaxMind.MinFraud</Name>
-      <Project>7208D9C8-F862-4675-80E5-77A2F8901B96</Project>
-    </ProjectReference>
-  </ItemGroup>
 </Project>
