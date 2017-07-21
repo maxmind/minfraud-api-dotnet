@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+1.4.1
+------------------
+
+* Fixed an issue where the client would throw an exception if the
+  `Content-Length` header was missing in the response. This could happen with
+  chunked responses.
+
 1.4.0 (2017-07-07)
 ------------------
 
