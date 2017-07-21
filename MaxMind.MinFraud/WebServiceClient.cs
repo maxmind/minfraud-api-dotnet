@@ -151,15 +151,6 @@ namespace MaxMind.MinFraud
 
         private static async Task<T> HandleSuccess<T>(HttpResponseMessage response) where T : Score
         {
-            int length;
-            var parsedOk = int.TryParse(response.Content.Headers.GetValues("Content-Length").FirstOrDefault(),
-                out length);
-            if (!parsedOk || length <= 0)
-            {
-                throw new HttpException(
-                    $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
-                    response.StatusCode, response.RequestMessage.RequestUri);
-            }
             var contentType = response.Content.Headers.GetValues("Content-Type")?.FirstOrDefault();
             if (contentType == null || !contentType.Contains("json"))
             {
@@ -168,17 +159,25 @@ namespace MaxMind.MinFraud
             }
             using (var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
             using (var sr = new StreamReader(s))
-            using (JsonReader reader = new JsonTextReader(sr))
             {
-                var serializer = new JsonSerializer();
-                try
+                if (sr.Peek() == -1)
                 {
-                    return serializer.Deserialize<T>(reader);
+                    throw new HttpException(
+                        $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
+                        response.StatusCode, response.RequestMessage.RequestUri);
                 }
-                catch (JsonSerializationException ex)
+                using (JsonReader reader = new JsonTextReader(sr))
                 {
-                    throw new MinFraudException(
-                        "Received a 200 response but not decode it as JSON", ex);
+                    var serializer = new JsonSerializer();
+                    try
+                    {
+                        return serializer.Deserialize<T>(reader);
+                    }
+                    catch (JsonSerializationException ex)
+                    {
+                        throw new MinFraudException(
+                            "Received a 200 response but not decode it as JSON", ex);
+                    }
                 }
             }
         }

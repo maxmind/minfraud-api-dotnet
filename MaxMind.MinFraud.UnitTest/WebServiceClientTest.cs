@@ -94,6 +94,27 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
+        public async void Test200WithNoContentLength()
+        {
+            var expectedResponse = ReadJsonFile("score-response");
+            var content = new StringContent(expectedResponse);
+            content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+            HttpResponseMessage message = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = content
+            };
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When(HttpMethod.Post, $"https://minfraud.maxmind.com/minfraud/v2.0/score")
+                .WithHeaders("Accept", "application/json")
+                .With(request => VerifyRequestFor("score", request))
+                .Respond(message);
+
+            var client = new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
+            var response = await client.ScoreAsync(CreateFullRequest());
+            CompareJson(expectedResponse, response, false);
+        }
+
+        [Fact]
         public async void Test200WithInvalidJson()
         {
             var client = CreateSuccessClient("insights", "{");
