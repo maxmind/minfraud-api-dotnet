@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.4.1
+1.4.1 (2017-07-21)
 ------------------
 
 * Fixed an issue where the client would throw an exception if the
