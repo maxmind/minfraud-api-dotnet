@@ -38,8 +38,11 @@ arguments:
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
-This object is safe to share across threads. It should be disposed of when you
-done using it.
+This object is safe to share across threads. If you are making multiple
+requests, the object should be reused to so that new connections are not
+created for each request. Once you have finished making requests, you
+should dispose of the object to ensure the connections are closed and any
+resources are promptly returned to the system.
 
 Then create a new `Transaction` object. This represents the transaction that
 you are sending to minFraud:
@@ -229,6 +232,9 @@ public class MinFraudExample
             }.Build()
         );
 
+        // If you are making multiple requests, a single WebServiceClient
+        // should be shared across requests to allow connection reuse. The
+        // class is thread safe.
         using (var client = new WebServiceClient(6, "ABCD567890"))
         {
             // Use `InsightsAsync` if querying Insights
@@ -259,6 +265,6 @@ This API uses [Semantic Versioning](http://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015-2016 by MaxMind, Inc.
+This software is Copyright (c) 2015-2017 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
