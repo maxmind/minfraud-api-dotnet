@@ -31,12 +31,14 @@ feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
 .NET 4.5 to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
-takes your MaxMind user ID, license key, and an optional options array as
-arguments:
+takes your MaxMind user ID and license key:
 
 ```csharp
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
+
+You may also specify the fall-back locales, the host, or the timeout as
+optional parameters. See the API docs for more information.
 
 This object is safe to share across threads. If you are making multiple
 requests, the object should be reused to so that new connections are not
@@ -235,6 +237,9 @@ public class MinFraudExample
         // If you are making multiple requests, a single WebServiceClient
         // should be shared across requests to allow connection reuse. The
         // class is thread safe.
+        //
+        // Replace "6" with your user ID and "ABCD567890" with your license
+        // key.
         using (var client = new WebServiceClient(6, "ABCD567890"))
         {
             // Use `InsightsAsync` if querying Insights
