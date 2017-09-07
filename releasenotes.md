@@ -7,6 +7,8 @@ Release Notes
 * Previously, it was possible to get an `IndexOutOfRangeException` when calling
   the `MaxMind.MinFraud.Request.Email` constructor with an invalid email
   address. Now an `ArgumentException` will be thrown.
+* When sending a hashed email address, the address is now lower-cased before
+  the MD5 is calculated.
 
 1.4.1 (2017-07-21)
 ------------------

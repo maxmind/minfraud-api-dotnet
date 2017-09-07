@@ -56,7 +56,7 @@ namespace MaxMind.MinFraud.Request
                 }
                 using (var md5Generator = MD5.Create())
                 {
-                    var bytes = Encoding.UTF8.GetBytes(Address);
+                    var bytes = Encoding.UTF8.GetBytes(Address.ToLower());
                     var md5 = md5Generator.ComputeHash(bytes);
                     return BitConverter.ToString(md5)
                         .Replace("-", string.Empty)
