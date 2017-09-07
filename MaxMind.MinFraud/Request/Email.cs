@@ -12,6 +12,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
+        private readonly bool _hashAddress;
         private string _domain;
 
         /// <summary>
@@ -24,9 +25,13 @@ namespace MaxMind.MinFraud.Request
         /// transaction. If <c>address</c> is passed to the constructor
         /// and <c>domain</c> is not, the domain will be automatically
         /// set from the address.</param>
+        /// <param name="hashAddress">By default, the <c>address</c> will
+        /// be sent in plain text. If <c>hashAddress</c> is set to true,
+        /// the address will instead be sent as an MD5 hash.</param>
         public Email(
             string address = null,
-            string domain = null
+            string domain = null,
+            bool hashAddress = false
         )
         {
             Address = address;
@@ -34,26 +39,33 @@ namespace MaxMind.MinFraud.Request
             {
                 var parts = address.Split('@');
                 if (parts.Length == 2)
-                {
                     domain = parts[1];
-                }
             }
             Domain = domain;
             _hashAddress = hashAddress;
         }
 
+        /// <inheritdoc />
+        /// <summary>
+        ///     This constructor is for backward binary compatability.
+        /// </summary>
+        /// <param name="address"></param>
+        /// <param name="domain"></param>
+        [Obsolete]
+        public Email(string address, string domain) : this(address, domain, false)
+        {
+        }
+
         /// <summary>
         /// The MD5 generated from the email address.
         /// </summary>
-        [JsonProperty("address")]
+        [JsonIgnore]
         public string AddressMD5
         {
             get
             {
                 if (Address == null)
-                {
                     return null;
-                }
                 using (var md5Generator = MD5.Create())
                 {
                     var bytes = Encoding.UTF8.GetBytes(Address.ToLower());
@@ -71,6 +83,9 @@ namespace MaxMind.MinFraud.Request
         [JsonIgnore]
         [EmailAddress]
         public string Address { get; }
+
+        [JsonProperty("address")]
+        private string JsonAddress => _hashAddress ? AddressMD5 : Address;
 
         /// <summary>
         /// The domain of the email address.
