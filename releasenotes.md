@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+1.5.x
+------------------
+
+* Previously, it was possible to get an `IndexOutOfRangeException` when calling
+  the `MaxMind.MinFraud.Request.Email` constructor with an invalid email
+  address. Now an `ArgumentException` will be thrown.
+
 1.4.1 (2017-07-21)
 ------------------
 

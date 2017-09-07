@@ -17,6 +17,12 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
+        public void TestInvalidAddress()
+        {
+            Assert.Throws<ArgumentException>(() => new Email(address: "no-domain"));
+        }
+
+        [Fact]
         public void TestDomain()
         {
             var domain = "domain.com";

@@ -30,7 +30,16 @@ namespace MaxMind.MinFraud.Request
         )
         {
             Address = address;
-            Domain = domain ?? address?.Split('@')[1];
+            if (domain == null && address != null)
+            {
+                var parts = address.Split('@');
+                if (parts.Length == 2)
+                {
+                    domain = parts[1];
+                }
+            }
+            Domain = domain;
+            _hashAddress = hashAddress;
         }
 
         /// <summary>
