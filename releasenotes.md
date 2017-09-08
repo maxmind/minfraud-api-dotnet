@@ -1,6 +1,21 @@
 Release Notes
 =============
 
+1.5.x
+------------------
+
+* Behavior change: When sending an email address to MaxMind, this library now
+  defaults to sending the plain text email address rather than its MD5 hash.
+  Previously only the MD5 hash of the email address would be sent and sending
+  the plain text email address was not possible. If you wish to send only the
+  MD5 hash of the email address, you must now set the `hashAddress` constructor
+  parameter to `true` on `MaxMind.MinFraud.Request.Email`.
+* Previously, it was possible to get an `IndexOutOfRangeException` when calling
+  the `MaxMind.MinFraud.Request.Email` constructor with an invalid email
+  address. Now an `ArgumentException` will be thrown.
+* When sending a hashed email address, the address is now lower-cased before
+  the MD5 is calculated.
+
 1.4.1 (2017-07-21)
 ------------------
 

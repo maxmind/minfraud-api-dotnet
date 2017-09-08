@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             var code = "INVALID_INPUT";
             var msg = "Input invalid";
 
-            Warning warning = new JObject
+            var warning = new JObject
             {
                 {"code", code},
                 {"warning", msg},

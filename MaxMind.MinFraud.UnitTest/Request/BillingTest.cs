@@ -96,7 +96,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestPhoneNumber()
         {
-            string phone = "321-321-3213";
+            var phone = "321-321-3213";
             var loc = new Billing(phoneNumber: phone);
             Assert.Equal(phone, loc.PhoneNumber);
         }
