@@ -73,7 +73,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestBankPhoneNumber()
         {
-            string phone = "231-323-3123";
+            var phone = "231-323-3123";
             var cc = new CreditCard(bankPhoneNumber: phone);
             Assert.Equal(phone, cc.BankPhoneNumber);
         }

@@ -55,7 +55,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestSessionIdIsTooLong()
         {
-            Assert.Throws<ArgumentException>(() => new Device(IP, sessionId: new String('x', 256)));
+            Assert.Throws<ArgumentException>(() => new Device(IP, sessionId: new string('x', 256)));
         }
     }
 }

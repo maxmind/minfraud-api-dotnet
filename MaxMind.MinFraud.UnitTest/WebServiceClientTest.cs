@@ -48,7 +48,7 @@ namespace MaxMind.MinFraud.UnitTest
             CompareJson(responseContent, response, true);
         }
 
-        private void CompareJson(string responseContent, Object response, bool mungeIPAddress)
+        private void CompareJson(string responseContent, object response, bool mungeIPAddress)
         {
             var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
 
@@ -63,7 +63,7 @@ namespace MaxMind.MinFraud.UnitTest
             if (mungeIPAddress)
             {
                 // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-                JObject ipAddress = (JObject) expectedResponse["ip_address"];
+                var ipAddress = (JObject) expectedResponse["ip_address"];
                 ipAddress.Add("maxmind", new JObject());
                 ipAddress.Add("postal", new JObject());
                 var representedCountry = new JObject {{"names", new JObject()}};
@@ -99,12 +99,12 @@ namespace MaxMind.MinFraud.UnitTest
             var expectedResponse = ReadJsonFile("score-response");
             var content = new StringContent(expectedResponse);
             content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
-            HttpResponseMessage message = new HttpResponseMessage(HttpStatusCode.OK)
+            var message = new HttpResponseMessage(HttpStatusCode.OK)
             {
                 Content = content
             };
             var mockHttp = new MockHttpMessageHandler();
-            mockHttp.When(HttpMethod.Post, $"https://minfraud.maxmind.com/minfraud/v2.0/score")
+            mockHttp.When(HttpMethod.Post, "https://minfraud.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
                 .With(request => VerifyRequestFor("score", request))
                 .Respond(message);
