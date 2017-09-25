@@ -15,6 +15,12 @@ Release Notes
   address. Now an `ArgumentException` will be thrown.
 * When sending a hashed email address, the address is now lower-cased before
   the MD5 is calculated.
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Bpoint`
+  * `CheckoutCom`
+  * `Emerchantpay`
+  * `Heartland`
+  * `Payway`
 
 1.4.1 (2017-07-21)
 ------------------
