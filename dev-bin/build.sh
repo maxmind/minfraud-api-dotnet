@@ -18,18 +18,19 @@ if [ -n "${DOTNETCORE:-}" ]; then
   dotnet restore ./MaxMind.MinFraud.sln
 
   # Running Unit Tests
-  dotnet test -f netcoreapp1.0 -c "$CONFIGURATION" ./MaxMind.MinFraud.UnitTest/MaxMind.MinFraud.UnitTest.csproj
+  dotnet test -f "$CONSOLE_FRAMEWORK" -c "$CONFIGURATION" ./MaxMind.MinFraud.UnitTest/MaxMind.MinFraud.UnitTest.csproj
 
 else
 
   echo Using Mono
 
-  nuget restore
+  msbuild /t:restore ./MaxMind.MinFraud.sln
 
-  xbuild /p:Configuration=$CONFIGURATION mono/MaxMind.MinFraud.sln
+  msbuild /t:build /p:Configuration=$CONFIGURATION /p:TargetFramework=net452 ./MaxMind.MinFraud.UnitTest/MaxMind.MinFraud.UnitTest.csproj
 
-  mono ./packages/xunit.runner.console.2.2.0/tools/xunit.console.exe ./mono/bin/$CONFIGURATION/MaxMind.MinFraud.UnitTest.dll
-  
+  nuget install xunit.runner.console -ExcludeVersion -Version 2.2.0 -OutputDirectory .
+  mono ./xunit.runner.console/tools/xunit.console.exe ./MaxMind.MinFraud.UnitTest/bin/$CONFIGURATION/net452/MaxMind.MinFraud.UnitTest.dll
+
 fi
 
 popd

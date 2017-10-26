@@ -1,6 +1,6 @@
 ---
 language: csharp
-solution: mono/MaxMind.MinFraud.sln
+solution: MaxMind.MinFraud.sln
 
 env:
   global:
@@ -13,13 +13,24 @@ matrix:
     dist: trusty # Ubuntu 14.04
     dotnet: 1.0.1
     mono: none
-    env: DOTNETCORE=1
     sudo: required
+    env: DOTNETCORE=1 CONSOLE_FRAMEWORK=netcoreapp1.0
   - os: osx
     osx_image: xcode7.3 # macOS 10.11
     dotnet: 1.0.1
     mono: none
-    env: DOTNETCORE=1
+    env: DOTNETCORE=1 CONSOLE_FRAMEWORK=netcoreapp1.0
+  - os: linux
+    dist: trusty # Ubuntu 14.04
+    dotnet: 2.0.0
+    mono: none
+    sudo: required
+    env: DOTNETCORE=1 CONSOLE_FRAMEWORK=netcoreapp2.0
+  - os: osx
+    osx_image: xcode9 # macOS 10.12
+    dotnet: 2.0.0
+    mono: none
+    env: DOTNETCORE=1 CONSOLE_FRAMEWORK=netcoreapp2.0
   - os: linux
     dist: trusty # Ubuntu 14.04
     mono: latest
@@ -27,6 +38,8 @@ matrix:
   - os: osx
     osx_image: xcode7.3 # macOS 10.11
     mono: latest
+
+install: git submodule update --init --recursive
 
 script: travis_wait ./dev-bin/build.sh
 

@@ -5,7 +5,7 @@ using Device = MaxMind.MinFraud.Response.Device;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
-    internal class DeviceTest
+    public class DeviceTest
     {
         [Fact]
         public void TestDevice()

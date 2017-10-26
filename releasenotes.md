@@ -21,6 +21,10 @@ Release Notes
   * `Emerchantpay`
   * `Heartland`
   * `Payway`
+* A `netstandard2.0` target was added to eliminate additional dependencies
+  required by the `netstandard1.4` target.
+* As part of the above work, the separate Mono build files were dropped. As
+  of Mono 5.0.0, `msbuild` is supported.
 
 1.4.1 (2017-07-21)
 ------------------
