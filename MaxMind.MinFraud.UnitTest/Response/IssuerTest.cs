@@ -20,9 +20,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
             }.ToObject<Issuer>();
 
             Assert.Equal("Bank", issuer.Name);
-            Assert.Equal(true, issuer.MatchesProvidedName);
+            Assert.True(issuer.MatchesProvidedName);
             Assert.Equal(phone, issuer.PhoneNumber);
-            Assert.Equal(true, issuer.MatchesProvidedPhoneNumber);
+            Assert.True(issuer.MatchesProvidedPhoneNumber);
         }
     }
 }

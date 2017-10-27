@@ -23,7 +23,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             TestAddress(address);
 
-            Assert.Equal(false, address.IsHighRisk);
+            Assert.False(address.IsHighRisk);
             Assert.Equal(200, address.DistanceToBillingAddress);
         }
     }

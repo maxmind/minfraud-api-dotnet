@@ -78,7 +78,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 email:
                 new Email(
                     address: "test@maxmind.com",
-                    domain: "maxmind.com"
+                    domain: "maxmind.com",
+                    hashAddress: false
                 ),
                 billing:
                 new Billing(

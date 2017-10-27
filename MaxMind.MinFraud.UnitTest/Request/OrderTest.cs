@@ -77,14 +77,14 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestIsGift()
         {
             var order = new Order(isGift: true);
-            Assert.Equal(order.IsGift, true);
+            Assert.True(order.IsGift);
         }
 
         [Fact]
         public void TestHasGiftMessage()
         {
             var order = new Order(hasGiftMessage: true);
-            Assert.Equal(order.HasGiftMessage, true);
+            Assert.True(order.HasGiftMessage);
         }
     }
 }
