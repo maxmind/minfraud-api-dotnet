@@ -40,8 +40,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             Assert.Equal("Bank", cc.Issuer.Name);
             Assert.Equal("US", cc.Country);
-            Assert.Equal(true, cc.IsPrepaid);
-            Assert.Equal(true, cc.IsIssuedInBillingAddressCountry);
+            Assert.True(cc.IsPrepaid);
+            Assert.True(cc.IsIssuedInBillingAddressCountry);
             Assert.Equal("Visa", cc.Brand);
             Assert.Equal("credit", cc.Type);
         }

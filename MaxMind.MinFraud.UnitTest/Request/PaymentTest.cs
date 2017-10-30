@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestWasAuthorized()
         {
             var payment = new Payment(wasAuthorized: true);
-            Assert.Equal(payment.WasAuthorized, true);
+            Assert.True(payment.WasAuthorized);
         }
 
         [Fact]

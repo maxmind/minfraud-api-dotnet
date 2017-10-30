@@ -4,7 +4,7 @@ using Device = MaxMind.MinFraud.Response.Disposition;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
-    internal class DispositionTest
+    public class DispositionTest
     {
         [Fact]
         public void TestDisposition()
