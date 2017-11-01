@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.5.x
+1.5.0
 ------------------
 
 * Behavior change: When sending an email address to MaxMind, this library now
@@ -25,6 +25,8 @@ Release Notes
   required by the `netstandard1.4` target.
 * As part of the above work, the separate Mono build files were dropped. As
   of Mono 5.0.0, `msbuild` is supported.
+* Updated `MaxMind.GeoIP2` dependency to add support for GeoIP2 Precision
+  Insights anonymizer fields.
 
 1.4.1 (2017-07-21)
 ------------------
