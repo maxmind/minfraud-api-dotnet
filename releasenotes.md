@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.5.0
+1.5.0 (2017-11-01)
 ------------------
 
 * Behavior change: When sending an email address to MaxMind, this library now
