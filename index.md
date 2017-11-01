@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v1.4.1
+version: v1.5.0
 ---
 # .NET API for MaxMind minFraud Score, Insights, and Factors #
 
@@ -37,15 +37,20 @@ feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
 .NET 4.5 to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
-takes your MaxMind user ID, license key, and an optional options array as
-arguments:
+takes your MaxMind user ID and license key:
 
 ```csharp
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
-This object is safe to share across threads. It should be disposed of when you
-done using it.
+You may also specify the fall-back locales, the host, or the timeout as
+optional parameters. See the API docs for more information.
+
+This object is safe to share across threads. If you are making multiple
+requests, the object should be reused to so that new connections are not
+created for each request. Once you have finished making requests, you
+should dispose of the object to ensure the connections are closed and any
+resources are promptly returned to the system.
 
 Then create a new `Transaction` object. This represents the transaction that
 you are sending to minFraud:
@@ -235,6 +240,12 @@ public class MinFraudExample
             }.Build()
         );
 
+        // If you are making multiple requests, a single WebServiceClient
+        // should be shared across requests to allow connection reuse. The
+        // class is thread safe.
+        //
+        // Replace "6" with your user ID and "ABCD567890" with your license
+        // key.
         using (var client = new WebServiceClient(6, "ABCD567890"))
         {
             // Use `InsightsAsync` if querying Insights
@@ -265,6 +276,6 @@ This API uses [Semantic Versioning](http://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015-2016 by MaxMind, Inc.
+This software is Copyright (c) 2015-2017 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
