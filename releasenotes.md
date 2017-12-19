@@ -1,6 +1,14 @@
 Release Notes
 =============
 
+1.6.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Cybersource`
+  * `TransactPro`
+  * `Wirecard`
+
 1.5.0 (2017-11-01)
 ------------------
 
