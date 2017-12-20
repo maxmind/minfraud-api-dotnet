@@ -91,6 +91,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "curopayments")]
         Curopayments,
 
+        [EnumMember(Value = "cybersource")]
+        Cybersource,
+
         [EnumMember(Value = "dalpay")]
         Dalpay,
 
@@ -289,6 +292,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "towah")]
         Towah,
 
+        [EnumMember(Value = "transact_pro")]
+        TransactPro,
+
         [EnumMember(Value = "usa_epay")]
         UsaEpay,
 
@@ -312,6 +318,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "vpos")]
         Vpos,
+
+        [EnumMember(Value = "wirecard")]
+        Wirecard,
 
         [EnumMember(Value = "worldpay")]
         Worldpay
