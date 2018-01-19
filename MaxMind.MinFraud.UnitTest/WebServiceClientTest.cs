@@ -36,6 +36,10 @@ namespace MaxMind.MinFraud.UnitTest
             // The purpose here is to test that SetLocales worked as expected
             Assert.Equal("London", response.IPAddress.City.Name);
             Assert.Equal("United Kingdom", response.IPAddress.Country.Name);
+
+            Assert.True(response.IPAddress.Country.IsInEuropeanUnion);
+            Assert.False(response.IPAddress.RegisteredCountry.IsInEuropeanUnion);
+            Assert.False(response.IPAddress.RepresentedCountry.IsInEuropeanUnion);
         }
 
         [Fact]
