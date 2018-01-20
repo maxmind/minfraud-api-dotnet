@@ -4,6 +4,11 @@ Release Notes
 1.6.0
 ------------------
 
+* Updated `MaxMind.GeoIP2` dependency. With this version, the
+  `IsInEuropeanUnion` property is now available on
+  `MaxMind.MinFraud.Response.GeoIP2Country` and
+  `MaxMind.GeoIP2.Model.RepresentedCountry`. `IsInEuropeanUnion` is `true` if
+  the country is a member state of the European Union.
 * Added the following new values to the `PaymentProcessor` enum:
   * `Cybersource`
   * `TransactPro`

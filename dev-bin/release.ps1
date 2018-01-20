@@ -96,7 +96,12 @@ if ((Read-Host -Prompt 'Should push? (y/n)') -ne 'y') {
 & git push
 
 Pop-Location
-& hub release create "$tag"
 & git push
+
+if ((Read-Host -Prompt 'Should release? (y/n)') -ne 'y') {
+    Write-Error 'Aborting'
+}
+
+& hub release create "$tag"
 
 & nuget push "MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.$version.nupkg" -Source https://www.nuget.org/api/v2/package

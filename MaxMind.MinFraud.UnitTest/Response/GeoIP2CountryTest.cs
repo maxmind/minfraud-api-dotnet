@@ -9,7 +9,12 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestIsHighRisk()
         {
-            var country = new JObject {{"is_high_risk", true}}.ToObject<GeoIP2Country>();
+            var country = new JObject
+            {
+                {"is_high_risk", true},
+                {"is_in_european_union", true }
+            }.ToObject<GeoIP2Country>();
+            Assert.True(country.IsInEuropeanUnion);
             Assert.True(country.IsHighRisk);
         }
     }
