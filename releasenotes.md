@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-1.6.0
+1.6.0 (2018-01-22)
 ------------------
 
 * Updated `MaxMind.GeoIP2` dependency. With this version, the
