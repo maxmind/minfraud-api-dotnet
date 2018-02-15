@@ -56,26 +56,6 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        ///     This constructor only exists for backward compatability.
-        /// </summary>
-        [Obsolete]
-        public Transaction(
-            Device device,
-            Account account,
-            Billing billing,
-            CreditCard creditCard,
-            Email email,
-            Event userEvent,
-            Order order,
-            Payment payment,
-            Shipping shipping,
-            IList<ShoppingCartItem> shoppingCart
-        ) : this(device, account, billing, creditCard, null, email,
-            userEvent, order, payment, shipping, shoppingCart)
-        {
-        }
-
-        /// <summary>
         ///     Account information for the transaction.
         /// </summary>
         [JsonProperty("account")]
