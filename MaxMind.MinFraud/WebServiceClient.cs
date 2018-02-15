@@ -46,11 +46,6 @@ namespace MaxMind.MinFraud
         /// <param name="host">The host to use when connecting to the web service.</param>
         /// <param name="timeout">The timeout to use for the request.</param>
         /// <param name="httpMessageHandler">Handler to use in request. For unit testing only.</param>
-#if !NETSTANDARD1_4
-
-        // I believe this warning to be in error.
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
-#endif
         public WebServiceClient(
             int accountId,
             string licenseKey,
