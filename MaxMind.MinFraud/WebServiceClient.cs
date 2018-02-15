@@ -40,7 +40,7 @@ namespace MaxMind.MinFraud
         /// <summary>
         /// Constructor for minFraud web service client.
         /// </summary>
-        /// <param name="userId">Your MaxMind user ID.</param>
+        /// <param name="accountId">Your MaxMind account ID.</param>
         /// <param name="licenseKey">Your MaxMind license key.</param>
         /// <param name="locales">A list of locale codes to use for name property.</param>
         /// <param name="host">The host to use when connecting to the web service.</param>
@@ -52,7 +52,7 @@ namespace MaxMind.MinFraud
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Reliability", "CA2000:Dispose objects before losing scope")]
 #endif
         public WebServiceClient(
-            int userId,
+            int accountId,
             string licenseKey,
             IEnumerable<string> locales = null,
             string host = "minfraud.maxmind.com",
@@ -72,7 +72,7 @@ namespace MaxMind.MinFraud
                         Authorization = new AuthenticationHeaderValue("Basic",
                             Convert.ToBase64String(
                                 Encoding.ASCII.GetBytes(
-                                    $"{userId}:{licenseKey}"))),
+                                    $"{accountId}:{licenseKey}"))),
                         Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
                         UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version)}
                     }
@@ -250,6 +250,7 @@ namespace MaxMind.MinFraud
                     response.RequestMessage.RequestUri);
             switch (error.Code)
             {
+                case "ACCOUNT_ID_REQUIRED":
                 case "AUTHORIZATION_INVALID":
                 case "LICENSE_KEY_REQUIRED":
                 case "USER_ID_REQUIRED":
