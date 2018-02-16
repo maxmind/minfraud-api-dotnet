@@ -45,17 +45,6 @@ namespace MaxMind.MinFraud.Request
             _hashAddress = hashAddress;
         }
 
-        /// <inheritdoc />
-        /// <summary>
-        ///     This constructor is for backward binary compatability.
-        /// </summary>
-        /// <param name="address"></param>
-        /// <param name="domain"></param>
-        [Obsolete]
-        public Email(string address, string domain) : this(address, domain, false)
-        {
-        }
-
         /// <summary>
         /// The MD5 generated from the email address.
         /// </summary>

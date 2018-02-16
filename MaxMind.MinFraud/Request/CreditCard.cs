@@ -77,23 +77,6 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// Constructor for backwards compatability with compiled code.
-        /// </summary>
-        public CreditCard(
-            string issuerIdNumber,
-            string last4Digits,
-            string bankName,
-            string bankPhoneCountryCodel,
-            string bankPhoneNumber,
-            char? avsResult,
-            char? cvvResult
-        ) : this(issuerIdNumber, last4Digits, bankName, bankPhoneCountryCodel,
-            bankPhoneNumber, avsResult, cvvResult, null
-        )
-        {
-        }
-
-        /// <summary>
         /// The issuer ID number for the credit card. This is the first 6
         /// digits of the credit card number. It identifies the issuing bank.
         /// </summary>

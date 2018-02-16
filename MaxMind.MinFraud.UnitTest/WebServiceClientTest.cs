@@ -145,6 +145,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Theory]
+        [InlineData("ACCOUNT_ID_REQUIRED")]
         [InlineData("AUTHORIZATION_INVALID")]
         [InlineData("LICENSE_KEY_REQUIRED")]
         [InlineData("USER_ID_REQUIRED")]
@@ -302,10 +303,10 @@ namespace MaxMind.MinFraud.UnitTest
         private WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
             string responseContent)
         {
-            StringContent content = new StringContent(responseContent);
+            var content = new StringContent(responseContent);
             content.Headers.ContentType = new MediaTypeHeaderValue(contentType);
             content.Headers.Add("Content-Length", responseContent.Length.ToString());
-            HttpResponseMessage message = new HttpResponseMessage(status)
+            var message = new HttpResponseMessage(status)
             {
                 Content = content
             };

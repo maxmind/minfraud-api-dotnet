@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestIPAddress()
         {
-            string time = "2015-04-19T12:59:23-01:00";
+            var time = "2015-04-19T12:59:23-01:00";
 
             var address = new JObject
             {

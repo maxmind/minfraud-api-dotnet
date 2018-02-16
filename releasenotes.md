@@ -1,5 +1,10 @@
 Release Notes
 =============
+2.0.0
+------------------
+
+* The `userId` constructor parameter for `WebServiceClient` was renamed to
+  `accountId` and support was added for the error code `ACCOUNT_ID_REQUIRED`.
 
 1.6.0 (2018-01-22)
 ------------------

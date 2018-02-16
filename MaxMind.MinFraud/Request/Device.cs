@@ -52,18 +52,6 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// This constructor is for backward binary compatability.
-        /// </summary>
-        /// <param name="ipAddress"></param>
-        /// <param name="userAgent"></param>
-        /// <param name="acceptLanguage"></param>
-        [Obsolete]
-        public Device(IPAddress ipAddress, string userAgent, string acceptLanguage) : this(ipAddress, userAgent,
-            acceptLanguage, null, null)
-        {
-        }
-
-        /// <summary>
         /// The IP address associated with the device used by the customer
         /// in the transaction.
         /// </summary>
