@@ -5,6 +5,12 @@ Release Notes
 
 * The `userId` constructor parameter for `WebServiceClient` was renamed to
   `accountId` and support was added for the error code `ACCOUNT_ID_REQUIRED`.
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Ccavenue`
+  * `CtPayments`
+  * `Dalenys`
+  * `Oney`
+  * `Posconnect`
 
 1.6.0 (2018-01-22)
 ------------------

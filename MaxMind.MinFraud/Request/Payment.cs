@@ -58,6 +58,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "braintree")]
         Braintree,
 
+        [EnumMember(Value = "ccavenue")]
+        Ccavenue,
+
         [EnumMember(Value = "ccnow")]
         Ccnow,
 
@@ -85,6 +88,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "conekta")]
         Conekta,
 
+        [EnumMember(Value = "ct_payments")]
+        CtPayments,
+
         [EnumMember(Value = "cuentadigital")]
         Cuentadigital,
 
@@ -93,6 +99,10 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "cybersource")]
         Cybersource,
+
+
+        [EnumMember(Value = "dalenys")]
+        Dalenys,
 
         [EnumMember(Value = "dalpay")]
         Dalpay,
@@ -178,6 +188,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "oceanpayment")]
         Oceanpayment,
 
+        [EnumMember(Value = "oney")]
+        Oney,
+
         [EnumMember(Value = "other")]
         Other,
 
@@ -237,6 +250,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "payza")]
         Payza,
+
+        [EnumMember(Value = "posconnect")]
+        Posconnect,
 
         [EnumMember(Value = "princeton_payment_solutions")]
         PrincetonPaymentSolutions,
