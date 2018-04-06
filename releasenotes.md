@@ -11,6 +11,8 @@ Release Notes
   * `Dalenys`
   * `Oney`
   * `Posconnect`
+* Added support for the `/device/local_time` output. This is exposed as
+  the `LocalTime` property on `MaxMind.MinFraud.Response.Device`.
 
 1.6.0 (2018-01-22)
 ------------------

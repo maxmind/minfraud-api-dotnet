@@ -39,11 +39,19 @@ namespace MaxMind.MinFraud.Response
         public DateTimeOffset? LastSeen { get; internal set; }
 
         /// <summary>
+        /// The local date and time of the transaction in the time zone of
+        /// the device. This is determined by using the UTC offset associated
+        /// with the device. This is an RFC 3339 date-time
+        /// </summary>
+        [JsonProperty("local_time")]
+        public DateTimeOffset? LocalTime { get; internal set; }
+
+        /// <summary>
         /// Returns a string that represents the current object.
         /// </summary>
         public override string ToString()
         {
-            return $"Confidence: {Confidence}, Id: {Id}, LastSeen: {LastSeen}";
+            return $"Confidence: {Confidence}, Id: {Id}, LastSeen: {LastSeen}, LocalTime: {LocalTime}";
         }
     }
 }
