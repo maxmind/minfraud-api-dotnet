@@ -13,6 +13,8 @@ Release Notes
   * `Posconnect`
 * Added support for the `/device/local_time` output. This is exposed as
   the `LocalTime` property on `MaxMind.MinFraud.Response.Device`.
+* Added support for the `/credit_card/is_virtual` output. This is exposed as
+  the `IsVirtual` property on `MaxMind.MinFraud.Response.CreditCard`.
 
 1.6.0 (2018-01-22)
 ------------------

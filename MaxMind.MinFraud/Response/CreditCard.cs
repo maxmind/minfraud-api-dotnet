@@ -40,6 +40,12 @@ namespace MaxMind.MinFraud.Response
         public bool? IsPrepaid { get; internal set; }
 
         /// <summary>
+        /// This property is <c>true</c> if the card is a virtual card.
+        /// </summary>
+        [JsonProperty("is_virtual")]
+        public bool? IsVirtual { get; internal set; }
+
+        /// <summary>
         /// An object containing information about the credit card issuer.
         /// </summary>
         [JsonProperty("issuer")]
@@ -57,8 +63,7 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return
-                $"Issuer: {{{Issuer}}}, Country: {Country}, IsIssuedInBillingAddressCountry: {IsIssuedInBillingAddressCountry}, IsPrepaid: {IsPrepaid}";
+            return $"{nameof(Brand)}: {Brand}, {nameof(Country)}: {Country}, {nameof(IsIssuedInBillingAddressCountry)}: {IsIssuedInBillingAddressCountry}, {nameof(IsPrepaid)}: {IsPrepaid}, {nameof(IsVirtual)}: {IsVirtual}, {nameof(Issuer)}: {Issuer}, {nameof(Type)}: {Type}";
         }
     }
 }

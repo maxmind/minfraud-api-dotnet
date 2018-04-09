@@ -34,6 +34,10 @@ namespace MaxMind.MinFraud.UnitTest.Response
                     true
                 },
                 {
+                    "is_virtual",
+                    true
+                },
+                {
                     "type", "credit"
                 }
             }.ToObject<CreditCard>();
@@ -42,6 +46,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal("US", cc.Country);
             Assert.True(cc.IsPrepaid);
             Assert.True(cc.IsIssuedInBillingAddressCountry);
+            Assert.True(cc.IsVirtual);
             Assert.Equal("Visa", cc.Brand);
             Assert.Equal("credit", cc.Type);
         }
