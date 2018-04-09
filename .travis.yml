@@ -41,7 +41,7 @@ matrix:
 
 install: git submodule update --init --recursive
 
-script: travis_wait ./dev-bin/build.sh
+script: ./dev-bin/build.sh
 
 notifications:
   email:
