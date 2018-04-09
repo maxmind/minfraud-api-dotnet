@@ -23,6 +23,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "password_reset")]
         PasswordReset,
 
+        [EnumMember(Value = "payout_change")]
+        PayoutChange,
+
         [EnumMember(Value = "purchase")]
         Purchase,
 
