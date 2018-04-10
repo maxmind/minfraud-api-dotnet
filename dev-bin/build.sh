@@ -15,7 +15,7 @@ if [ -n "${DOTNETCORE:-}" ]; then
     echo "new limit: `ulimit -n`"
   fi
 
-  dotnet restore ./MaxMind.MinFraud.sln
+  dotnet restore -v d ./MaxMind.MinFraud.sln
 
   # Running Unit Tests
   dotnet test -f "$CONSOLE_FRAMEWORK" -c "$CONFIGURATION" ./MaxMind.MinFraud.UnitTest/MaxMind.MinFraud.UnitTest.csproj
