@@ -1,6 +1,6 @@
 Release Notes
 =============
-2.0.0
+2.0.0 (2018-04-11)
 ------------------
 
 * The `userId` constructor parameter for `WebServiceClient` was renamed to
