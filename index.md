@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v1.6.0
+version: v2.0.0
 ---
 # .NET API for MaxMind minFraud Score, Insights, and Factors #
 
@@ -37,7 +37,7 @@ feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
 .NET 4.5 to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
-takes your MaxMind user ID and license key:
+takes your MaxMind account ID and license key:
 
 ```csharp
 var client = new WebServiceClient(10, "LICENSEKEY");
@@ -107,7 +107,7 @@ Thrown by `ScoreAsync(transaction)` or `InsightsAsync(transaction)` on
 `WebServiceClient`:
 
 * `AuthenticationException` - Thrown when the server is unable to authenticate
-  the request, e.g., if the license key or user ID is invalid.
+  the request, e.g., if the license key or account ID is invalid.
 * `InsufficientFundsException` - Thrown when your account is out of funds.
 * `PermissionRequireException` - Thrown when your account does not have
   permission to access the service.
@@ -244,7 +244,7 @@ public class MinFraudExample
         // should be shared across requests to allow connection reuse. The
         // class is thread safe.
         //
-        // Replace "6" with your user ID and "ABCD567890" with your license
+        // Replace "6" with your account ID and "ABCD567890" with your license
         // key.
         using (var client = new WebServiceClient(6, "ABCD567890"))
         {
