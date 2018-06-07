@@ -206,11 +206,17 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "pacnet_services")]
         PacnetServices,
 
+        [EnumMember(Value = "payeezy")]
+        Payeezy,
+
         [EnumMember(Value = "payfast")]
         Payfast,
 
         [EnumMember(Value = "paygate")]
         Paygate,
+
+        [EnumMember(Value = "payment_express")]
+        PaymentExpress,
 
         [EnumMember(Value = "paymentwall")]
         Paymentwall,

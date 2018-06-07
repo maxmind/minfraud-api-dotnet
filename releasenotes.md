@@ -1,5 +1,13 @@
 Release Notes
 =============
+
+2.1.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Payeezy`
+  * `PaymentExpress`
+
 2.0.0 (2018-04-11)
 ------------------
 
