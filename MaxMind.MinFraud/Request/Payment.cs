@@ -107,6 +107,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "dalpay")]
         Dalpay,
 
+        [EnumMember(Value = "datacash")]
+        DataCash,
+
         [EnumMember(Value = "dibs")]
         Dibs,
 
@@ -139,6 +142,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "first_data")]
         FirstData,
+
+        [EnumMember(Value = "gocardless")]
+        GoCardless,
 
         [EnumMember(Value = "global_payments")]
         GlobalPayments,
@@ -299,6 +305,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "smartcoin")]
         Smartcoin,
 
+        [EnumMember(Value = "smartdebit")]
+        SmartDebit,
+
         [EnumMember(Value = "solidtrust_pay")]
         SolidtrustPay,
 
@@ -307,6 +316,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "stripe")]
         Stripe,
+
+        [EnumMember(Value = "synapsefi")]
+        SynapseFI,
 
         [EnumMember(Value = "telerecargas")]
         Telerecargas,
