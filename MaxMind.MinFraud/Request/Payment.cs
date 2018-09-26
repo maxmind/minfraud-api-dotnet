@@ -20,10 +20,10 @@ namespace MaxMind.MinFraud.Request
         // IO  - for the compnany "IO" (made up)
         // Ebs - for the company "EBS"
         //
-        // A letter should be uppercase if it is (1) the first letter of
+        // A letter must be uppercase if it is (1) the first letter of
         // the enum, (2) just before an underscore in the corresponding value
         // (e.g. in the case of lemon_way => LemonWay), or (3) part of a
-        // two-letter acronym.
+        // two-letter acronym. All other letters must be lowercase.
 
         [EnumMember(Value = "adyen")]
         Adyen,
