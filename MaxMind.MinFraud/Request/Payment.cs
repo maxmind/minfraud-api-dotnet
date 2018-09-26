@@ -10,20 +10,20 @@ namespace MaxMind.MinFraud.Request
     {
 #pragma warning disable CS1591
 
-        // Note: when naming new payment processors, do
-        // _not_ make uppercase letters in the middle of words uppercase in
-        // for the member name (unless it is a two-letter acronym, in which
-        // case it should follow Microsoft guidelines and be all uppercase),
-        // e.g.:
+        // Note: when naming new payment processors, do _not_ use uppercase
+        // letters in the middle of words (unless it is a two-letter acronym,
+        // in which case it should follow Microsoft guidelines and be all
+        // uppercase). E.g.:
         //
         // Hipay - (not HiPay) for the company "HiPay"
         // LemonWay - for the company "Lemon Way"
         // IO  - for the compnany "IO" (made up)
         // Ebs - for the company "EBS"
         //
-        // A letter should be uppercase iif it is (1) the first letter of
-        // the enum, (2) the enum value has an underscore before that letter
-        // (e.g., lemon_way), (3) it is part of a two-letter acronym.
+        // A letter should be uppercase if it is (1) the first letter of
+        // the enum, (2) just before an underscore in the corresponding value
+        // (e.g. in the case of lemon_way => LemonWay), or (3) part of a
+        // two-letter acronym.
 
         [EnumMember(Value = "adyen")]
         Adyen,
