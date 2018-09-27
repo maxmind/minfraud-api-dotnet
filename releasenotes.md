@@ -5,8 +5,12 @@ Release Notes
 ------------------
 
 * Added the following new values to the `PaymentProcessor` enum:
+  * `DataCash`
+  * `GoCardless`
   * `Payeezy`
   * `PaymentExpress`
+  * `SmartDebit`
+  * `SynapseFI`
 
 2.0.0 (2018-04-11)
 ------------------
