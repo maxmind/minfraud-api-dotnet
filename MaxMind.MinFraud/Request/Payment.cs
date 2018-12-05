@@ -221,6 +221,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "paygate")]
         Paygate,
 
+        [EnumMember(Value = "paylike")]
+        Paylike,
+
         [EnumMember(Value = "payment_express")]
         PaymentExpress,
 

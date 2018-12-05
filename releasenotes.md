@@ -8,6 +8,7 @@ Release Notes
   * `DataCash`
   * `GoCardless`
   * `Payeezy`
+  * `Paylike`
   * `PaymentExpress`
   * `SmartDebit`
   * `SynapseFI`
