@@ -5,11 +5,15 @@ Release Notes
 ------------------
 
 * Added the following new values to the `PaymentProcessor` enum:
+  * `Afterpay`
   * `DataCash`
+  * `Dotpay`
   * `GoCardless`
+  * `Klarna`
   * `Payeezy`
   * `Paylike`
   * `PaymentExpress`
+  * `Paysafecard`
   * `SmartDebit`
   * `SynapseFI`
 

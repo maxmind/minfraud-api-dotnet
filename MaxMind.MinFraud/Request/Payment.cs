@@ -28,6 +28,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "adyen")]
         Adyen,
 
+        [EnumMember(Value = "afterpay")]
+        Afterpay,
+
         [EnumMember(Value = "altapay")]
         Altapay,
 
@@ -100,7 +103,6 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "cybersource")]
         Cybersource,
 
-
         [EnumMember(Value = "dalenys")]
         Dalenys,
 
@@ -115,6 +117,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "digital_river")]
         DigitalRiver,
+
+        [EnumMember(Value = "dotpay")]
+        Dotpay,
 
         [EnumMember(Value = "ebs")]
         Ebs,
@@ -166,6 +171,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "iugu")]
         Iugu,
+
+        [EnumMember(Value = "klarna")]
+        Klarna,
 
         [EnumMember(Value = "lemon_way")]
         LemonWay,
@@ -238,6 +246,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "payplus")]
         Payplus,
+
+        [EnumMember(Value = "paysafecard")]
+        Paysafecard,
 
         [EnumMember(Value = "paystation")]
         Paystation,
