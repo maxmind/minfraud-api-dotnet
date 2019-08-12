@@ -1,0 +1,1657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="AbstractCityResponse class">
+    <HelpKINode Title="AbstractCityResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm" />
+    <HelpKINode Title="about AbstractCityResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCityResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AbstractCityResponse.AbstractCityResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCityResponse__ctor.htm" />
+  <HelpKINode Title="AbstractCityResponse.City property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_City.htm" />
+  <HelpKINode Title="AbstractCityResponse.Location property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Location.htm" />
+  <HelpKINode Title="AbstractCityResponse.MostSpecificSubdivision property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_MostSpecificSubdivision.htm" />
+  <HelpKINode Title="AbstractCityResponse.Postal property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Postal.htm" />
+  <HelpKINode Title="AbstractCityResponse.SetLocales method" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_SetLocales.htm" />
+  <HelpKINode Title="AbstractCityResponse.Subdivisions property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Subdivisions.htm" />
+  <HelpKINode Title="AbstractCityResponse.ToString method" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_ToString.htm" />
+  <HelpKINode Title="AbstractCountryResponse class">
+    <HelpKINode Title="AbstractCountryResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm" />
+    <HelpKINode Title="about AbstractCountryResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCountryResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AbstractCountryResponse.AbstractCountryResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCountryResponse__ctor.htm" />
+  <HelpKINode Title="AbstractCountryResponse.Continent property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Continent.htm" />
+  <HelpKINode Title="AbstractCountryResponse.Country property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Country.htm" />
+  <HelpKINode Title="AbstractCountryResponse.MaxMind property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_MaxMind.htm" />
+  <HelpKINode Title="AbstractCountryResponse.RegisteredCountry property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RegisteredCountry.htm" />
+  <HelpKINode Title="AbstractCountryResponse.RepresentedCountry property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RepresentedCountry.htm" />
+  <HelpKINode Title="AbstractCountryResponse.SetLocales method" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_SetLocales.htm" />
+  <HelpKINode Title="AbstractCountryResponse.ToString method" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_ToString.htm" />
+  <HelpKINode Title="AbstractCountryResponse.Traits property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Traits.htm" />
+  <HelpKINode Title="AbstractResponse class">
+    <HelpKINode Title="AbstractResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractResponse.htm" />
+    <HelpKINode Title="about AbstractResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AbstractResponse.AbstractResponse constructor" Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse__ctor.htm" />
+  <HelpKINode Title="AbstractResponse.SetLocales method" Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse_SetLocales.htm" />
+  <HelpKINode Title="AcceptLanguage property" Url="html/P_MaxMind_MinFraud_Request_Device_AcceptLanguage.htm" />
+  <HelpKINode Title="Account class">
+    <HelpKINode Title="Account Class" Url="html/T_MaxMind_MinFraud_Request_Account.htm" />
+    <HelpKINode Title="about Account class" Url="html/T_MaxMind_MinFraud_Request_Account.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Account__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Account.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Account.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Account property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Account.htm" />
+  <HelpKINode Title="Account.Account constructor" Url="html/M_MaxMind_MinFraud_Request_Account__ctor.htm" />
+  <HelpKINode Title="Account.ToString method" Url="html/M_MaxMind_MinFraud_Request_Account_ToString.htm" />
+  <HelpKINode Title="Account.UserId property" Url="html/P_MaxMind_MinFraud_Request_Account_UserId.htm" />
+  <HelpKINode Title="Account.Username property" Url="html/P_MaxMind_MinFraud_Request_Account_Username.htm" />
+  <HelpKINode Title="Account.UsernameMD5 property" Url="html/P_MaxMind_MinFraud_Request_Account_UsernameMD5.htm" />
+  <HelpKINode Title="AccountCreation enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="AccountLogin enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="AccuracyRadius property" Url="html/P_MaxMind_GeoIP2_Model_Location_AccuracyRadius.htm" />
+  <HelpKINode Title="Action property" Url="html/P_MaxMind_MinFraud_Response_Disposition_Action.htm" />
+  <HelpKINode Title="Add method" Url="html/Overload_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm" />
+  <HelpKINode Title="Address class">
+    <HelpKINode Title="Address Class" Url="html/T_MaxMind_MinFraud_Response_Address.htm" />
+    <HelpKINode Title="about Address class" Url="html/T_MaxMind_MinFraud_Response_Address.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Address__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Address.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Address.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Address property">
+    <HelpKINode Title="Email.Address Property " Url="html/P_MaxMind_MinFraud_Request_Email_Address.htm" />
+    <HelpKINode Title="Location.Address Property " Url="html/P_MaxMind_MinFraud_Request_Location_Address.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Address.Address constructor" Url="html/M_MaxMind_MinFraud_Response_Address__ctor.htm" />
+  <HelpKINode Title="Address.DistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Address_DistanceToIPLocation.htm" />
+  <HelpKINode Title="Address.IsInIPCountry property" Url="html/P_MaxMind_MinFraud_Response_Address_IsInIPCountry.htm" />
+  <HelpKINode Title="Address.IsPostalInCity property" Url="html/P_MaxMind_MinFraud_Response_Address_IsPostalInCity.htm" />
+  <HelpKINode Title="Address.Latitude property" Url="html/P_MaxMind_MinFraud_Response_Address_Latitude.htm" />
+  <HelpKINode Title="Address.Longitude property" Url="html/P_MaxMind_MinFraud_Response_Address_Longitude.htm" />
+  <HelpKINode Title="Address.ToString method" Url="html/M_MaxMind_MinFraud_Response_Address_ToString.htm" />
+  <HelpKINode Title="Address2 property" Url="html/P_MaxMind_MinFraud_Request_Location_Address2.htm" />
+  <HelpKINode Title="AddressMD5 property" Url="html/P_MaxMind_MinFraud_Request_Email_AddressMD5.htm" />
+  <HelpKINode Title="AddressNotFoundException class">
+    <HelpKINode Title="AddressNotFoundException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+    <HelpKINode Title="about AddressNotFoundException class" Url="html/T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_AddressNotFoundException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddressNotFoundException.AddressNotFoundException constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_AddressNotFoundException__ctor.htm" />
+  <HelpKINode Title="AddValue method" Url="html/M_MaxMind_Db_InjectableValues_AddValue.htm" />
+  <HelpKINode Title="Adyen enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="AffiliateId property" Url="html/P_MaxMind_MinFraud_Request_Order_AffiliateId.htm" />
+  <HelpKINode Title="Afterpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Altapay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="AlwaysCreate property" Url="html/P_MaxMind_Db_ParameterAttribute_AlwaysCreate.htm" />
+  <HelpKINode Title="AmazonPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="AmericanExpressPaymentGateway enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Amount property" Url="html/P_MaxMind_MinFraud_Request_Order_Amount.htm" />
+  <HelpKINode Title="AnonymousIP method">
+    <HelpKINode Title="DatabaseReader.AnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_AnonymousIP.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.AnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_AnonymousIP.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymousIPResponse class">
+    <HelpKINode Title="AnonymousIPResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+    <HelpKINode Title="about AnonymousIPResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AnonymousIPResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AnonymousIPResponse.AnonymousIPResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AnonymousIPResponse__ctor.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IPAddress property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IPAddress.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IsAnonymous property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymous.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IsAnonymousVpn property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymousVpn.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IsHostingProvider property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsHostingProvider.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IsPublicProxy property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsPublicProxy.htm" />
+  <HelpKINode Title="AnonymousIPResponse.IsTorExitNode property" Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsTorExitNode.htm" />
+  <HelpKINode Title="Asn method">
+    <HelpKINode Title="DatabaseReader.Asn Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Asn.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.Asn Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Asn.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AsnResponse class">
+    <HelpKINode Title="AsnResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+    <HelpKINode Title="about AsnResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AsnResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AsnResponse.AsnResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_AsnResponse__ctor.htm" />
+  <HelpKINode Title="AsnResponse.AutonomousSystemNumber property" Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemNumber.htm" />
+  <HelpKINode Title="AsnResponse.AutonomousSystemOrganization property" Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemOrganization.htm" />
+  <HelpKINode Title="AsnResponse.IPAddress property" Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_IPAddress.htm" />
+  <HelpKINode Title="AuthenticationException class">
+    <HelpKINode Title="AuthenticationException Class" Url="html/T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+    <HelpKINode Title="AuthenticationException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+    <HelpKINode Title="about AuthenticationException class" Url="html/T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+    <HelpKINode Title="about AuthenticationException class" Url="html/T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_AuthenticationException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AuthenticationException.AuthenticationException constructor">
+    <HelpKINode Title="AuthenticationException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm" />
+    <HelpKINode Title="AuthenticationException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_AuthenticationException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Authorizenet enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="AutonomousSystemNumber property">
+    <HelpKINode Title="AsnResponse.AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemNumber.htm" />
+    <HelpKINode Title="IspResponse.AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemNumber.htm" />
+    <HelpKINode Title="Traits.AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemNumber.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AutonomousSystemOrganization property">
+    <HelpKINode Title="AsnResponse.AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemOrganization.htm" />
+    <HelpKINode Title="IspResponse.AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemOrganization.htm" />
+    <HelpKINode Title="Traits.AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemOrganization.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AverageIncome property" Url="html/P_MaxMind_GeoIP2_Model_Location_AverageIncome.htm" />
+  <HelpKINode Title="AvsResult property">
+    <HelpKINode Title="CreditCard.AvsResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_AvsResult.htm" />
+    <HelpKINode Title="Subscores.AvsResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_AvsResult.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Balanced enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="BankName property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankName.htm" />
+  <HelpKINode Title="BankPhoneCountryCode property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneCountryCode.htm" />
+  <HelpKINode Title="BankPhoneNumber property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneNumber.htm" />
+  <HelpKINode Title="Beanstream enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Billing class">
+    <HelpKINode Title="Billing Class" Url="html/T_MaxMind_MinFraud_Request_Billing.htm" />
+    <HelpKINode Title="about Billing class" Url="html/T_MaxMind_MinFraud_Request_Billing.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Billing__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Billing.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Billing.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Billing property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Billing.htm" />
+  <HelpKINode Title="Billing.Billing constructor" Url="html/M_MaxMind_MinFraud_Request_Billing__ctor.htm" />
+  <HelpKINode Title="BillingAddress class">
+    <HelpKINode Title="BillingAddress Class" Url="html/T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+    <HelpKINode Title="about BillingAddress class" Url="html/T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_BillingAddress__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BillingAddress property">
+    <HelpKINode Title="Insights.BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_BillingAddress.htm" />
+    <HelpKINode Title="Subscores.BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BillingAddress.BillingAddress constructor" Url="html/M_MaxMind_MinFraud_Response_BillingAddress__ctor.htm" />
+  <HelpKINode Title="BillingAddressDistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddressDistanceToIPLocation.htm" />
+  <HelpKINode Title="BinaryFormatMajorVersion property" Url="html/P_MaxMind_Db_Metadata_BinaryFormatMajorVersion.htm" />
+  <HelpKINode Title="BinaryFormatMinorVersion property" Url="html/P_MaxMind_Db_Metadata_BinaryFormatMinorVersion.htm" />
+  <HelpKINode Title="Bluepay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Bluesnap enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Bpoint enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Braintree enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Brand property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Brand.htm" />
+  <HelpKINode Title="Browser property" Url="html/P_MaxMind_MinFraud_Response_Subscores_Browser.htm" />
+  <HelpKINode Title="Build method" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Build.htm" />
+  <HelpKINode Title="BuildDate property" Url="html/P_MaxMind_Db_Metadata_BuildDate.htm" />
+  <HelpKINode Title="Builder class">
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Category property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Category.htm" />
+  <HelpKINode Title="Ccavenue enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Ccnow enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Chargeback property" Url="html/P_MaxMind_MinFraud_Response_Subscores_Chargeback.htm" />
+  <HelpKINode Title="ChasePaymentech enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="CheckoutCom enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Cielo enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="City class">
+    <HelpKINode Title="City Class" Url="html/T_MaxMind_GeoIP2_Model_City.htm" />
+    <HelpKINode Title="about City class" Url="html/T_MaxMind_GeoIP2_Model_City.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_City__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_City.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_City.htm" />
+  </HelpKINode>
+  <HelpKINode Title="City method">
+    <HelpKINode Title="DatabaseReader.City Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_City.htm" />
+    <HelpKINode Title="IGeoIP2Provider.City Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_City.htm" />
+    <HelpKINode Title="IGeoIP2WebServicesClient.City Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_City.htm" />
+    <HelpKINode Title="WebServiceClient.City Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_City.htm" />
+  </HelpKINode>
+  <HelpKINode Title="City property">
+    <HelpKINode Title="AbstractCityResponse.City Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_City.htm" />
+    <HelpKINode Title="Location.City Property " Url="html/P_MaxMind_MinFraud_Request_Location_City.htm" />
+  </HelpKINode>
+  <HelpKINode Title="City.City constructor" Url="html/Overload_MaxMind_GeoIP2_Model_City__ctor.htm" />
+  <HelpKINode Title="City.Confidence property" Url="html/P_MaxMind_GeoIP2_Model_City_Confidence.htm" />
+  <HelpKINode Title="CityAsync method">
+    <HelpKINode Title="IGeoIP2WebServicesClient.CityAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync.htm" />
+    <HelpKINode Title="WebServiceClient.CityAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CityAsync.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CityResponse class">
+    <HelpKINode Title="CityResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+    <HelpKINode Title="about CityResponse class" Url="html/T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_CityResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CityResponse.CityResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_CityResponse__ctor.htm" />
+  <HelpKINode Title="Code property">
+    <HelpKINode Title="Continent.Code Property " Url="html/P_MaxMind_GeoIP2_Model_Continent_Code.htm" />
+    <HelpKINode Title="InvalidRequestException.Code Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Code.htm" />
+    <HelpKINode Title="InvalidRequestException.Code Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Code.htm" />
+    <HelpKINode Title="Postal.Code Property " Url="html/P_MaxMind_GeoIP2_Model_Postal_Code.htm" />
+    <HelpKINode Title="Warning.Code Property " Url="html/P_MaxMind_MinFraud_Response_Warning_Code.htm" />
+    <HelpKINode Title="WebServiceError.Code Property " Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Code.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Collector enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Commdoo enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Company property" Url="html/P_MaxMind_MinFraud_Request_Location_Company.htm" />
+  <HelpKINode Title="Compropago enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="ConceptPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Conekta enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Confidence property">
+    <HelpKINode Title="City.Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_City_Confidence.htm" />
+    <HelpKINode Title="Country.Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Country_Confidence.htm" />
+    <HelpKINode Title="Device.Confidence Property " Url="html/P_MaxMind_MinFraud_Response_Device_Confidence.htm" />
+    <HelpKINode Title="Postal.Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Postal_Confidence.htm" />
+    <HelpKINode Title="Subdivision.Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Subdivision_Confidence.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectionType method">
+    <HelpKINode Title="DatabaseReader.ConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_ConnectionType.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.ConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_ConnectionType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectionType property">
+    <HelpKINode Title="ConnectionTypeResponse.ConnectionType Property " Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_ConnectionType.htm" />
+    <HelpKINode Title="Traits.ConnectionType Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_ConnectionType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectionTypeResponse class">
+    <HelpKINode Title="ConnectionTypeResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+    <HelpKINode Title="about ConnectionTypeResponse class" Url="html/T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_ConnectionTypeResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConnectionTypeResponse.ConnectionType property" Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_ConnectionType.htm" />
+  <HelpKINode Title="ConnectionTypeResponse.ConnectionTypeResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_ConnectionTypeResponse__ctor.htm" />
+  <HelpKINode Title="ConnectionTypeResponse.IPAddress property" Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_IPAddress.htm" />
+  <HelpKINode Title="ConstructorAttribute class">
+    <HelpKINode Title="ConstructorAttribute Class" Url="html/T_MaxMind_Db_ConstructorAttribute.htm" />
+    <HelpKINode Title="about ConstructorAttribute class" Url="html/T_MaxMind_Db_ConstructorAttribute.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_Db_ConstructorAttribute__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_ConstructorAttribute.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_ConstructorAttribute.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConstructorAttribute.ConstructorAttribute constructor" Url="html/M_MaxMind_Db_ConstructorAttribute__ctor.htm" />
+  <HelpKINode Title="Continent class">
+    <HelpKINode Title="Continent Class" Url="html/T_MaxMind_GeoIP2_Model_Continent.htm" />
+    <HelpKINode Title="about Continent class" Url="html/T_MaxMind_GeoIP2_Model_Continent.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Continent__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Continent.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Continent.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Continent property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Continent.htm" />
+  <HelpKINode Title="Continent.Code property" Url="html/P_MaxMind_GeoIP2_Model_Continent_Code.htm" />
+  <HelpKINode Title="Continent.Continent constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Continent__ctor.htm" />
+  <HelpKINode Title="Country class">
+    <HelpKINode Title="Country Class" Url="html/T_MaxMind_GeoIP2_Model_Country.htm" />
+    <HelpKINode Title="about Country class" Url="html/T_MaxMind_GeoIP2_Model_Country.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Country__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Country.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Country.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Country method">
+    <HelpKINode Title="DatabaseReader.Country Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Country.htm" />
+    <HelpKINode Title="IGeoIP2Provider.Country Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_Country.htm" />
+    <HelpKINode Title="IGeoIP2WebServicesClient.Country Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Country.htm" />
+    <HelpKINode Title="WebServiceClient.Country Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Country.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Country property">
+    <HelpKINode Title="AbstractCountryResponse.Country Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Country.htm" />
+    <HelpKINode Title="CreditCard.Country Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Country.htm" />
+    <HelpKINode Title="IPAddress.Country Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Country.htm" />
+    <HelpKINode Title="Location.Country Property " Url="html/P_MaxMind_MinFraud_Request_Location_Country.htm" />
+    <HelpKINode Title="Subscores.Country Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Country.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Country.Confidence property" Url="html/P_MaxMind_GeoIP2_Model_Country_Confidence.htm" />
+  <HelpKINode Title="Country.Country constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Country__ctor.htm" />
+  <HelpKINode Title="Country.IsInEuropeanUnion property" Url="html/P_MaxMind_GeoIP2_Model_Country_IsInEuropeanUnion.htm" />
+  <HelpKINode Title="Country.IsoCode property" Url="html/P_MaxMind_GeoIP2_Model_Country_IsoCode.htm" />
+  <HelpKINode Title="CountryAsync method">
+    <HelpKINode Title="IGeoIP2WebServicesClient.CountryAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync.htm" />
+    <HelpKINode Title="WebServiceClient.CountryAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CountryAsync.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CountryMismatch property" Url="html/P_MaxMind_MinFraud_Response_Subscores_CountryMismatch.htm" />
+  <HelpKINode Title="CountryResponse class">
+    <HelpKINode Title="CountryResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+    <HelpKINode Title="about CountryResponse class" Url="html/T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_CountryResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CountryResponse.CountryResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_CountryResponse__ctor.htm" />
+  <HelpKINode Title="CreditCard class">
+    <HelpKINode Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm" />
+    <HelpKINode Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm" />
+    <HelpKINode Title="about CreditCard class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm" />
+    <HelpKINode Title="about CreditCard class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CreditCard.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_CreditCard.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_CreditCard.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_CreditCard.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreditCard property">
+    <HelpKINode Title="Insights.CreditCard Property " Url="html/P_MaxMind_MinFraud_Response_Insights_CreditCard.htm" />
+    <HelpKINode Title="Transaction.CreditCard Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_CreditCard.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreditCard.AvsResult property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_AvsResult.htm" />
+  <HelpKINode Title="CreditCard.BankName property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankName.htm" />
+  <HelpKINode Title="CreditCard.BankPhoneCountryCode property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneCountryCode.htm" />
+  <HelpKINode Title="CreditCard.BankPhoneNumber property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneNumber.htm" />
+  <HelpKINode Title="CreditCard.Brand property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Brand.htm" />
+  <HelpKINode Title="CreditCard.Country property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Country.htm" />
+  <HelpKINode Title="CreditCard.CreditCard constructor">
+    <HelpKINode Title="CreditCard Constructor " Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
+    <HelpKINode Title="CreditCard Constructor " Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreditCard.CvvResult property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_CvvResult.htm" />
+  <HelpKINode Title="CreditCard.IsIssuedInBillingAddressCountry property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsIssuedInBillingAddressCountry.htm" />
+  <HelpKINode Title="CreditCard.IsPrepaid property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsPrepaid.htm" />
+  <HelpKINode Title="CreditCard.Issuer property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Issuer.htm" />
+  <HelpKINode Title="CreditCard.IssuerIdNumber property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_IssuerIdNumber.htm" />
+  <HelpKINode Title="CreditCard.IsVirtual property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsVirtual.htm" />
+  <HelpKINode Title="CreditCard.Last4Digits property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_Last4Digits.htm" />
+  <HelpKINode Title="CreditCard.Token property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_Token.htm" />
+  <HelpKINode Title="CreditCard.ToString method">
+    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
+    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Response_CreditCard_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreditCard.Type property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Type.htm" />
+  <HelpKINode Title="CtPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Cuentadigital enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Curopayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Currency property" Url="html/P_MaxMind_MinFraud_Request_Order_Currency.htm" />
+  <HelpKINode Title="CustomInputs class">
+    <HelpKINode Title="CustomInputs Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+    <HelpKINode Title="about CustomInputs class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CustomInputs property" Url="html/P_MaxMind_MinFraud_Request_Transaction_CustomInputs.htm" />
+  <HelpKINode Title="CustomInputs.Builder class">
+    <HelpKINode Title="CustomInputs.Builder Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm" />
+    <HelpKINode Title="about CustomInputs.Builder class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CustomInputs.Builder.Add method" Url="html/Overload_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm" />
+  <HelpKINode Title="CustomInputs.Builder.Build method" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Build.htm" />
+  <HelpKINode Title="CustomInputs.Builder.Builder constructor" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder__ctor.htm" />
+  <HelpKINode Title="CustomInputs.Builder.GetEnumerator method" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_GetEnumerator.htm" />
+  <HelpKINode Title="CvvResult property">
+    <HelpKINode Title="CreditCard.CvvResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_CvvResult.htm" />
+    <HelpKINode Title="Subscores.CvvResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_CvvResult.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cybersource enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Dalenys enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Dalpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="DatabaseReader class">
+    <HelpKINode Title="DatabaseReader Class" Url="html/T_MaxMind_GeoIP2_DatabaseReader.htm" />
+    <HelpKINode Title="about DatabaseReader class" Url="html/T_MaxMind_GeoIP2_DatabaseReader.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_DatabaseReader.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_DatabaseReader.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DatabaseReader.AnonymousIP method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_AnonymousIP.htm" />
+  <HelpKINode Title="DatabaseReader.Asn method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Asn.htm" />
+  <HelpKINode Title="DatabaseReader.City method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_City.htm" />
+  <HelpKINode Title="DatabaseReader.ConnectionType method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_ConnectionType.htm" />
+  <HelpKINode Title="DatabaseReader.Country method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Country.htm" />
+  <HelpKINode Title="DatabaseReader.DatabaseReader constructor" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader__ctor.htm" />
+  <HelpKINode Title="DatabaseReader.Dispose method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Dispose.htm" />
+  <HelpKINode Title="DatabaseReader.Domain method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Domain.htm" />
+  <HelpKINode Title="DatabaseReader.Enterprise method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Enterprise.htm" />
+  <HelpKINode Title="DatabaseReader.Isp method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Isp.htm" />
+  <HelpKINode Title="DatabaseReader.Metadata property" Url="html/P_MaxMind_GeoIP2_DatabaseReader_Metadata.htm" />
+  <HelpKINode Title="DatabaseReader.TryAnonymousIP method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAnonymousIP.htm" />
+  <HelpKINode Title="DatabaseReader.TryAsn method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAsn.htm" />
+  <HelpKINode Title="DatabaseReader.TryCity method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCity.htm" />
+  <HelpKINode Title="DatabaseReader.TryConnectionType method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryConnectionType.htm" />
+  <HelpKINode Title="DatabaseReader.TryCountry method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCountry.htm" />
+  <HelpKINode Title="DatabaseReader.TryDomain method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryDomain.htm" />
+  <HelpKINode Title="DatabaseReader.TryEnterprise method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryEnterprise.htm" />
+  <HelpKINode Title="DatabaseReader.TryIsp method" Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryIsp.htm" />
+  <HelpKINode Title="DatabaseType property" Url="html/P_MaxMind_Db_Metadata_DatabaseType.htm" />
+  <HelpKINode Title="Datacash enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="DeclineCode property" Url="html/P_MaxMind_MinFraud_Request_Payment_DeclineCode.htm" />
+  <HelpKINode Title="DeliverySpeed property" Url="html/P_MaxMind_MinFraud_Request_Shipping_DeliverySpeed.htm" />
+  <HelpKINode Title="Description property" Url="html/P_MaxMind_Db_Metadata_Description.htm" />
+  <HelpKINode Title="DeserializationException class">
+    <HelpKINode Title="DeserializationException Class" Url="html/T_MaxMind_Db_DeserializationException.htm" />
+    <HelpKINode Title="about DeserializationException class" Url="html/T_MaxMind_Db_DeserializationException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_Db_DeserializationException__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_DeserializationException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_DeserializationException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DeserializationException.DeserializationException constructor" Url="html/Overload_MaxMind_Db_DeserializationException__ctor.htm" />
+  <HelpKINode Title="Device class">
+    <HelpKINode Title="Device Class" Url="html/T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="Device Class" Url="html/T_MaxMind_MinFraud_Request_Device.htm" />
+    <HelpKINode Title="about Device class" Url="html/T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="about Device class" Url="html/T_MaxMind_MinFraud_Request_Device.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Device__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Device.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Device.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Device property">
+    <HelpKINode Title="Insights.Device Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Device.htm" />
+    <HelpKINode Title="Transaction.Device Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Device.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Device.AcceptLanguage property" Url="html/P_MaxMind_MinFraud_Request_Device_AcceptLanguage.htm" />
+  <HelpKINode Title="Device.Confidence property" Url="html/P_MaxMind_MinFraud_Response_Device_Confidence.htm" />
+  <HelpKINode Title="Device.Device constructor">
+    <HelpKINode Title="Device Constructor " Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
+    <HelpKINode Title="Device Constructor " Url="html/M_MaxMind_MinFraud_Request_Device__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Device.Id property" Url="html/P_MaxMind_MinFraud_Response_Device_Id.htm" />
+  <HelpKINode Title="Device.IPAddress property" Url="html/P_MaxMind_MinFraud_Request_Device_IPAddress.htm" />
+  <HelpKINode Title="Device.LastSeen property" Url="html/P_MaxMind_MinFraud_Response_Device_LastSeen.htm" />
+  <HelpKINode Title="Device.LocalTime property" Url="html/P_MaxMind_MinFraud_Response_Device_LocalTime.htm" />
+  <HelpKINode Title="Device.SessionAge property" Url="html/P_MaxMind_MinFraud_Request_Device_SessionAge.htm" />
+  <HelpKINode Title="Device.SessionId property" Url="html/P_MaxMind_MinFraud_Request_Device_SessionId.htm" />
+  <HelpKINode Title="Device.ToString method">
+    <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Device_ToString.htm" />
+    <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Device_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Device.UserAgent property" Url="html/P_MaxMind_MinFraud_Request_Device_UserAgent.htm" />
+  <HelpKINode Title="Dibs enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="DigitalRiver enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="DiscountCode property" Url="html/P_MaxMind_MinFraud_Request_Order_DiscountCode.htm" />
+  <HelpKINode Title="Dispose method">
+    <HelpKINode Title="DatabaseReader.Dispose Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Dispose.htm" />
+    <HelpKINode Title="Reader.Dispose Method " Url="html/M_MaxMind_Db_Reader_Dispose.htm" />
+    <HelpKINode Title="WebServiceClient.Dispose Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_Dispose.htm" />
+    <HelpKINode Title="WebServiceClient.Dispose Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Dispose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Disposition class">
+    <HelpKINode Title="Disposition Class" Url="html/T_MaxMind_MinFraud_Response_Disposition.htm" />
+    <HelpKINode Title="about Disposition class" Url="html/T_MaxMind_MinFraud_Response_Disposition.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Disposition__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Disposition.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Disposition.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Disposition property" Url="html/P_MaxMind_MinFraud_Response_Score_Disposition.htm" />
+  <HelpKINode Title="Disposition.Action property" Url="html/P_MaxMind_MinFraud_Response_Disposition_Action.htm" />
+  <HelpKINode Title="Disposition.Disposition constructor" Url="html/M_MaxMind_MinFraud_Response_Disposition__ctor.htm" />
+  <HelpKINode Title="Disposition.Reason property" Url="html/P_MaxMind_MinFraud_Response_Disposition_Reason.htm" />
+  <HelpKINode Title="Disposition.ToString method" Url="html/M_MaxMind_MinFraud_Response_Disposition_ToString.htm" />
+  <HelpKINode Title="DistanceToBillingAddress property" Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_DistanceToBillingAddress.htm" />
+  <HelpKINode Title="DistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Address_DistanceToIPLocation.htm" />
+  <HelpKINode Title="Domain method">
+    <HelpKINode Title="DatabaseReader.Domain Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Domain.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.Domain Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Domain.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Domain property">
+    <HelpKINode Title="DomainResponse.Domain Property " Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_Domain.htm" />
+    <HelpKINode Title="Email.Domain Property " Url="html/P_MaxMind_MinFraud_Request_Email_Domain.htm" />
+    <HelpKINode Title="Traits.Domain Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Domain.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DomainResponse class">
+    <HelpKINode Title="DomainResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+    <HelpKINode Title="about DomainResponse class" Url="html/T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_DomainResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DomainResponse.Domain property" Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_Domain.htm" />
+  <HelpKINode Title="DomainResponse.DomainResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_DomainResponse__ctor.htm" />
+  <HelpKINode Title="DomainResponse.IPAddress property" Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_IPAddress.htm" />
+  <HelpKINode Title="Dotpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Ebs enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Ecomm365 enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Elavon enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Email class">
+    <HelpKINode Title="Email Class" Url="html/T_MaxMind_MinFraud_Response_Email.htm" />
+    <HelpKINode Title="Email Class" Url="html/T_MaxMind_MinFraud_Request_Email.htm" />
+    <HelpKINode Title="about Email class" Url="html/T_MaxMind_MinFraud_Response_Email.htm" />
+    <HelpKINode Title="about Email class" Url="html/T_MaxMind_MinFraud_Request_Email.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Email__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Email__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Email.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Email.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Email.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Email.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Email property">
+    <HelpKINode Title="Insights.Email Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Email.htm" />
+    <HelpKINode Title="Transaction.Email Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Email.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Email.Address property" Url="html/P_MaxMind_MinFraud_Request_Email_Address.htm" />
+  <HelpKINode Title="Email.AddressMD5 property" Url="html/P_MaxMind_MinFraud_Request_Email_AddressMD5.htm" />
+  <HelpKINode Title="Email.Domain property" Url="html/P_MaxMind_MinFraud_Request_Email_Domain.htm" />
+  <HelpKINode Title="Email.Email constructor">
+    <HelpKINode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Request_Email__ctor.htm" />
+    <HelpKINode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Response_Email__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Email.FirstSeen property" Url="html/P_MaxMind_MinFraud_Response_Email_FirstSeen.htm" />
+  <HelpKINode Title="Email.IsFree property" Url="html/P_MaxMind_MinFraud_Response_Email_IsFree.htm" />
+  <HelpKINode Title="Email.IsHighRisk property" Url="html/P_MaxMind_MinFraud_Response_Email_IsHighRisk.htm" />
+  <HelpKINode Title="Email.ToString method">
+    <HelpKINode Title="Email.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Email_ToString.htm" />
+    <HelpKINode Title="Email.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Email_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EmailAddress property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailAddress.htm" />
+  <HelpKINode Title="EmailChange enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="EmailDomain property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailDomain.htm" />
+  <HelpKINode Title="EmailTenure property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailTenure.htm" />
+  <HelpKINode Title="Emerchantpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Enterprise method">
+    <HelpKINode Title="DatabaseReader.Enterprise Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Enterprise.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.Enterprise Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Enterprise.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnterpriseResponse class">
+    <HelpKINode Title="EnterpriseResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+    <HelpKINode Title="about EnterpriseResponse class" Url="html/T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_Responses_EnterpriseResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnterpriseResponse.EnterpriseResponse constructor" Url="html/M_MaxMind_GeoIP2_Responses_EnterpriseResponse__ctor.htm" />
+  <HelpKINode Title="Epay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="EprocessingNetwork enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Error property" Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Error.htm" />
+  <HelpKINode Title="Event class">
+    <HelpKINode Title="Event Class" Url="html/T_MaxMind_MinFraud_Request_Event.htm" />
+    <HelpKINode Title="about Event class" Url="html/T_MaxMind_MinFraud_Request_Event.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Event__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Event.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Event.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Event property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Event.htm" />
+  <HelpKINode Title="Event.Event constructor" Url="html/M_MaxMind_MinFraud_Request_Event__ctor.htm" />
+  <HelpKINode Title="Event.ShopId property" Url="html/P_MaxMind_MinFraud_Request_Event_ShopId.htm" />
+  <HelpKINode Title="Event.Time property" Url="html/P_MaxMind_MinFraud_Request_Event_Time.htm" />
+  <HelpKINode Title="Event.ToString method" Url="html/M_MaxMind_MinFraud_Request_Event_ToString.htm" />
+  <HelpKINode Title="Event.TransactionId property" Url="html/P_MaxMind_MinFraud_Request_Event_TransactionId.htm" />
+  <HelpKINode Title="Event.Type property" Url="html/P_MaxMind_MinFraud_Request_Event_Type.htm" />
+  <HelpKINode Title="EventType enumeration" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Eway enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Exact enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Expedited enumeration member" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="Factors class">
+    <HelpKINode Title="Factors Class" Url="html/T_MaxMind_MinFraud_Response_Factors.htm" />
+    <HelpKINode Title="about Factors class" Url="html/T_MaxMind_MinFraud_Response_Factors.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Factors__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Factors.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Factors.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Factors.Factors constructor" Url="html/M_MaxMind_MinFraud_Response_Factors__ctor.htm" />
+  <HelpKINode Title="Factors.Subscores property" Url="html/P_MaxMind_MinFraud_Response_Factors_Subscores.htm" />
+  <HelpKINode Title="Factors.ToString method" Url="html/M_MaxMind_MinFraud_Response_Factors_ToString.htm" />
+  <HelpKINode Title="FactorsAsync method" Url="html/M_MaxMind_MinFraud_WebServiceClient_FactorsAsync.htm" />
+  <HelpKINode Title="FileAccessMode enumeration" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+  <HelpKINode Title="Find method" Url="html/Overload_MaxMind_Db_Reader_Find.htm" />
+  <HelpKINode Title="FirstData enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="FirstName property" Url="html/P_MaxMind_MinFraud_Request_Location_FirstName.htm" />
+  <HelpKINode Title="FirstSeen property" Url="html/P_MaxMind_MinFraud_Response_Email_FirstSeen.htm" />
+  <HelpKINode Title="FundsRemaining property" Url="html/P_MaxMind_MinFraud_Response_Score_FundsRemaining.htm" />
+  <HelpKINode Title="GeoIP2Country class">
+    <HelpKINode Title="GeoIP2Country Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Country.htm" />
+    <HelpKINode Title="about GeoIP2Country class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Country.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Country.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Country.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GeoIP2Country.GeoIP2Country constructor" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country__ctor.htm" />
+  <HelpKINode Title="GeoIP2Country.IsHighRisk property" Url="html/P_MaxMind_MinFraud_Response_GeoIP2Country_IsHighRisk.htm" />
+  <HelpKINode Title="GeoIP2Country.ToString method" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country_ToString.htm" />
+  <HelpKINode Title="GeoIP2Exception class">
+    <HelpKINode Title="GeoIP2Exception Class" Url="html/T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+    <HelpKINode Title="about GeoIP2Exception class" Url="html/T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_GeoIP2Exception__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GeoIP2Exception.GeoIP2Exception constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_GeoIP2Exception__ctor.htm" />
+  <HelpKINode Title="GeoIP2Location class">
+    <HelpKINode Title="GeoIP2Location Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Location.htm" />
+    <HelpKINode Title="about GeoIP2Location class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Location.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Location.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Location.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GeoIP2Location.GeoIP2Location constructor" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location__ctor.htm" />
+  <HelpKINode Title="GeoIP2Location.LocalTime property" Url="html/P_MaxMind_MinFraud_Response_GeoIP2Location_LocalTime.htm" />
+  <HelpKINode Title="GeoIP2Location.ToString method" Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location_ToString.htm" />
+  <HelpKINode Title="GeoNameId property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_GeoNameId.htm" />
+  <HelpKINode Title="GetEnumerator method" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_GetEnumerator.htm" />
+  <HelpKINode Title="GlobalPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Gocardless enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="HasCoordinates property" Url="html/P_MaxMind_GeoIP2_Model_Location_HasCoordinates.htm" />
+  <HelpKINode Title="HasGiftMessage property" Url="html/P_MaxMind_MinFraud_Request_Order_HasGiftMessage.htm" />
+  <HelpKINode Title="Heartland enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Hipay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="HttpException class">
+    <HelpKINode Title="HttpException Class" Url="html/T_MaxMind_MinFraud_Exception_HttpException.htm" />
+    <HelpKINode Title="HttpException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+    <HelpKINode Title="about HttpException class" Url="html/T_MaxMind_MinFraud_Exception_HttpException.htm" />
+    <HelpKINode Title="about HttpException class" Url="html/T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_HttpException__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_HttpException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpException.HttpException constructor">
+    <HelpKINode Title="HttpException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_HttpException__ctor.htm" />
+    <HelpKINode Title="HttpException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_HttpException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpException.HttpStatus property">
+    <HelpKINode Title="HttpException.HttpStatus Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_HttpStatus.htm" />
+    <HelpKINode Title="HttpException.HttpStatus Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_HttpStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpException.Uri property">
+    <HelpKINode Title="HttpException.Uri Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_Uri.htm" />
+    <HelpKINode Title="HttpException.Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_Uri.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpStatus property">
+    <HelpKINode Title="HttpException.HttpStatus Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_HttpStatus.htm" />
+    <HelpKINode Title="HttpException.HttpStatus Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_HttpStatus.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Id property">
+    <HelpKINode Title="Device.Id Property " Url="html/P_MaxMind_MinFraud_Response_Device_Id.htm" />
+    <HelpKINode Title="Score.Id Property " Url="html/P_MaxMind_MinFraud_Response_Score_Id.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGeoIP2DatabaseReader interface">
+    <HelpKINode Title="IGeoIP2DatabaseReader Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm" />
+    <HelpKINode Title="about IGeoIP2DatabaseReader interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGeoIP2DatabaseReader.AnonymousIP method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_AnonymousIP.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.Asn method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Asn.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.ConnectionType method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_ConnectionType.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.Domain method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Domain.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.Enterprise method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Enterprise.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.Isp method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Isp.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryAnonymousIP method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAnonymousIP.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryAsn method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAsn.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryCity method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCity.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryConnectionType method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryConnectionType.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryCountry method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCountry.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryDomain method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryDomain.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryEnterprise method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryEnterprise.htm" />
+  <HelpKINode Title="IGeoIP2DatabaseReader.TryIsp method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryIsp.htm" />
+  <HelpKINode Title="IGeoIP2Provider interface">
+    <HelpKINode Title="IGeoIP2Provider Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2Provider.htm" />
+    <HelpKINode Title="about IGeoIP2Provider interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2Provider.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2Provider.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGeoIP2Provider.City method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_City.htm" />
+  <HelpKINode Title="IGeoIP2Provider.Country method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_Country.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient interface">
+    <HelpKINode Title="IGeoIP2WebServicesClient Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm" />
+    <HelpKINode Title="about IGeoIP2WebServicesClient interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGeoIP2WebServicesClient.City method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_City.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient.CityAsync method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient.Country method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Country.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient.CountryAsync method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient.Insights method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights.htm" />
+  <HelpKINode Title="IGeoIP2WebServicesClient.InsightsAsync method" Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync.htm" />
+  <HelpKINode Title="IIPAddress interface">
+    <HelpKINode Title="IIPAddress Interface" Url="html/T_MaxMind_MinFraud_Response_IIPAddress.htm" />
+    <HelpKINode Title="about IIPAddress interface" Url="html/T_MaxMind_MinFraud_Response_IIPAddress.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IIPAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IIPAddress.Risk property" Url="html/P_MaxMind_MinFraud_Response_IIPAddress_Risk.htm" />
+  <HelpKINode Title="Ingenico enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="InjectableValues class">
+    <HelpKINode Title="InjectableValues Class" Url="html/T_MaxMind_Db_InjectableValues.htm" />
+    <HelpKINode Title="about InjectableValues class" Url="html/T_MaxMind_Db_InjectableValues.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_Db_InjectableValues__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_InjectableValues.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InjectableValues.AddValue method" Url="html/M_MaxMind_Db_InjectableValues_AddValue.htm" />
+  <HelpKINode Title="InjectableValues.InjectableValues constructor" Url="html/M_MaxMind_Db_InjectableValues__ctor.htm" />
+  <HelpKINode Title="InjectAttribute class">
+    <HelpKINode Title="InjectAttribute Class" Url="html/T_MaxMind_Db_InjectAttribute.htm" />
+    <HelpKINode Title="about InjectAttribute class" Url="html/T_MaxMind_Db_InjectAttribute.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_Db_InjectAttribute__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_InjectAttribute.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_InjectAttribute.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InjectAttribute.InjectAttribute constructor" Url="html/M_MaxMind_Db_InjectAttribute__ctor.htm" />
+  <HelpKINode Title="InjectAttribute.ParameterName property" Url="html/P_MaxMind_Db_InjectAttribute_ParameterName.htm" />
+  <HelpKINode Title="InputPointer property" Url="html/P_MaxMind_MinFraud_Response_Warning_InputPointer.htm" />
+  <HelpKINode Title="Insights class">
+    <HelpKINode Title="Insights Class" Url="html/T_MaxMind_MinFraud_Response_Insights.htm" />
+    <HelpKINode Title="about Insights class" Url="html/T_MaxMind_MinFraud_Response_Insights.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Insights__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Insights.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Insights.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Insights method">
+    <HelpKINode Title="IGeoIP2WebServicesClient.Insights Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights.htm" />
+    <HelpKINode Title="WebServiceClient.Insights Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Insights.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Insights.BillingAddress property" Url="html/P_MaxMind_MinFraud_Response_Insights_BillingAddress.htm" />
+  <HelpKINode Title="Insights.CreditCard property" Url="html/P_MaxMind_MinFraud_Response_Insights_CreditCard.htm" />
+  <HelpKINode Title="Insights.Device property" Url="html/P_MaxMind_MinFraud_Response_Insights_Device.htm" />
+  <HelpKINode Title="Insights.Email property" Url="html/P_MaxMind_MinFraud_Response_Insights_Email.htm" />
+  <HelpKINode Title="Insights.Insights constructor" Url="html/M_MaxMind_MinFraud_Response_Insights__ctor.htm" />
+  <HelpKINode Title="Insights.IPAddress property" Url="html/P_MaxMind_MinFraud_Response_Insights_IPAddress.htm" />
+  <HelpKINode Title="Insights.ShippingAddress property" Url="html/P_MaxMind_MinFraud_Response_Insights_ShippingAddress.htm" />
+  <HelpKINode Title="Insights.ToString method" Url="html/M_MaxMind_MinFraud_Response_Insights_ToString.htm" />
+  <HelpKINode Title="InsightsAsync method">
+    <HelpKINode Title="IGeoIP2WebServicesClient.InsightsAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync.htm" />
+    <HelpKINode Title="WebServiceClient.InsightsAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_InsightsAsync.htm" />
+    <HelpKINode Title="WebServiceClient.InsightsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_InsightsAsync.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InsightsResponse class">
+    <HelpKINode Title="InsightsResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+    <HelpKINode Title="about InsightsResponse class" Url="html/T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_InsightsResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InsightsResponse.InsightsResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_InsightsResponse__ctor.htm" />
+  <HelpKINode Title="InsufficientFundsException class">
+    <HelpKINode Title="InsufficientFundsException Class" Url="html/T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+    <HelpKINode Title="about InsufficientFundsException class" Url="html/T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InsufficientFundsException.InsufficientFundsException constructor" Url="html/Overload_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm" />
+  <HelpKINode Title="Internetsecure enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="IntuitQuickbooksPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="InvalidDatabaseException class">
+    <HelpKINode Title="InvalidDatabaseException Class" Url="html/T_MaxMind_Db_InvalidDatabaseException.htm" />
+    <HelpKINode Title="about InvalidDatabaseException class" Url="html/T_MaxMind_Db_InvalidDatabaseException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_Db_InvalidDatabaseException__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_InvalidDatabaseException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_InvalidDatabaseException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidDatabaseException.InvalidDatabaseException constructor" Url="html/Overload_MaxMind_Db_InvalidDatabaseException__ctor.htm" />
+  <HelpKINode Title="InvalidRequestException class">
+    <HelpKINode Title="InvalidRequestException Class" Url="html/T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+    <HelpKINode Title="InvalidRequestException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+    <HelpKINode Title="about InvalidRequestException class" Url="html/T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+    <HelpKINode Title="about InvalidRequestException class" Url="html/T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_Exceptions_InvalidRequestException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidRequestException.Code property">
+    <HelpKINode Title="InvalidRequestException.Code Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Code.htm" />
+    <HelpKINode Title="InvalidRequestException.Code Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Code.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidRequestException.InvalidRequestException constructor">
+    <HelpKINode Title="InvalidRequestException Constructor " Url="html/M_MaxMind_GeoIP2_Exceptions_InvalidRequestException__ctor.htm" />
+    <HelpKINode Title="InvalidRequestException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidRequestException.Uri property">
+    <HelpKINode Title="InvalidRequestException.Uri Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Uri.htm" />
+    <HelpKINode Title="InvalidRequestException.Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Uri.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPAddress class">
+    <HelpKINode Title="IPAddress Class" Url="html/T_MaxMind_MinFraud_Response_IPAddress.htm" />
+    <HelpKINode Title="about IPAddress class" Url="html/T_MaxMind_MinFraud_Response_IPAddress.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_IPAddress__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_IPAddress.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IPAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPAddress property">
+    <HelpKINode Title="AnonymousIPResponse.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IPAddress.htm" />
+    <HelpKINode Title="AsnResponse.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_IPAddress.htm" />
+    <HelpKINode Title="ConnectionTypeResponse.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_IPAddress.htm" />
+    <HelpKINode Title="Device.IPAddress Property " Url="html/P_MaxMind_MinFraud_Request_Device_IPAddress.htm" />
+    <HelpKINode Title="DomainResponse.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_IPAddress.htm" />
+    <HelpKINode Title="Insights.IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_IPAddress.htm" />
+    <HelpKINode Title="IspResponse.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_IPAddress.htm" />
+    <HelpKINode Title="Score.IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Score_IPAddress.htm" />
+    <HelpKINode Title="Traits.IPAddress Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IPAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPAddress.Country property" Url="html/P_MaxMind_MinFraud_Response_IPAddress_Country.htm" />
+  <HelpKINode Title="IPAddress.IPAddress constructor" Url="html/M_MaxMind_MinFraud_Response_IPAddress__ctor.htm" />
+  <HelpKINode Title="IPAddress.Location property" Url="html/P_MaxMind_MinFraud_Response_IPAddress_Location.htm" />
+  <HelpKINode Title="IPAddress.Risk property" Url="html/P_MaxMind_MinFraud_Response_IPAddress_Risk.htm" />
+  <HelpKINode Title="IPAddress.ToString method" Url="html/M_MaxMind_MinFraud_Response_IPAddress_ToString.htm" />
+  <HelpKINode Title="IPTenure property" Url="html/P_MaxMind_MinFraud_Response_Subscores_IPTenure.htm" />
+  <HelpKINode Title="IPVersion property" Url="html/P_MaxMind_Db_Metadata_IPVersion.htm" />
+  <HelpKINode Title="IsAnonymous property">
+    <HelpKINode Title="AnonymousIPResponse.IsAnonymous Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymous.htm" />
+    <HelpKINode Title="Traits.IsAnonymous Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymous.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsAnonymousProxy property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousProxy.htm" />
+  <HelpKINode Title="IsAnonymousVpn property">
+    <HelpKINode Title="AnonymousIPResponse.IsAnonymousVpn Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymousVpn.htm" />
+    <HelpKINode Title="Traits.IsAnonymousVpn Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousVpn.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsFree property" Url="html/P_MaxMind_MinFraud_Response_Email_IsFree.htm" />
+  <HelpKINode Title="IsGift property" Url="html/P_MaxMind_MinFraud_Request_Order_IsGift.htm" />
+  <HelpKINode Title="IsHighRisk property">
+    <HelpKINode Title="Email.IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsHighRisk.htm" />
+    <HelpKINode Title="GeoIP2Country.IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Country_IsHighRisk.htm" />
+    <HelpKINode Title="ShippingAddress.IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_IsHighRisk.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsHostingProvider property">
+    <HelpKINode Title="AnonymousIPResponse.IsHostingProvider Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsHostingProvider.htm" />
+    <HelpKINode Title="Traits.IsHostingProvider Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsHostingProvider.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsInEuropeanUnion property" Url="html/P_MaxMind_GeoIP2_Model_Country_IsInEuropeanUnion.htm" />
+  <HelpKINode Title="IsInIPCountry property" Url="html/P_MaxMind_MinFraud_Response_Address_IsInIPCountry.htm" />
+  <HelpKINode Title="IsIssuedInBillingAddressCountry property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsIssuedInBillingAddressCountry.htm" />
+  <HelpKINode Title="IsLegitimateProxy property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsLegitimateProxy.htm" />
+  <HelpKINode Title="IsoCode property">
+    <HelpKINode Title="Country.IsoCode Property " Url="html/P_MaxMind_GeoIP2_Model_Country_IsoCode.htm" />
+    <HelpKINode Title="Subdivision.IsoCode Property " Url="html/P_MaxMind_GeoIP2_Model_Subdivision_IsoCode.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Isp method">
+    <HelpKINode Title="DatabaseReader.Isp Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Isp.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.Isp Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Isp.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Isp property">
+    <HelpKINode Title="IspResponse.Isp Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Isp.htm" />
+    <HelpKINode Title="Traits.Isp Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Isp.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsPostalInCity property" Url="html/P_MaxMind_MinFraud_Response_Address_IsPostalInCity.htm" />
+  <HelpKINode Title="IsPrepaid property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsPrepaid.htm" />
+  <HelpKINode Title="IspResponse class">
+    <HelpKINode Title="IspResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+    <HelpKINode Title="about IspResponse class" Url="html/T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_IspResponse__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IspResponse.AutonomousSystemNumber property" Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemNumber.htm" />
+  <HelpKINode Title="IspResponse.AutonomousSystemOrganization property" Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemOrganization.htm" />
+  <HelpKINode Title="IspResponse.IPAddress property" Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_IPAddress.htm" />
+  <HelpKINode Title="IspResponse.Isp property" Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Isp.htm" />
+  <HelpKINode Title="IspResponse.IspResponse constructor" Url="html/Overload_MaxMind_GeoIP2_Responses_IspResponse__ctor.htm" />
+  <HelpKINode Title="IspResponse.Organization property" Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Organization.htm" />
+  <HelpKINode Title="IsPublicProxy property">
+    <HelpKINode Title="AnonymousIPResponse.IsPublicProxy Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsPublicProxy.htm" />
+    <HelpKINode Title="Traits.IsPublicProxy Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsPublicProxy.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsSatelliteProvider property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsSatelliteProvider.htm" />
+  <HelpKINode Title="Issuer class">
+    <HelpKINode Title="Issuer Class" Url="html/T_MaxMind_MinFraud_Response_Issuer.htm" />
+    <HelpKINode Title="about Issuer class" Url="html/T_MaxMind_MinFraud_Response_Issuer.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Issuer__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Issuer.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Issuer.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Issuer property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_Issuer.htm" />
+  <HelpKINode Title="Issuer.Issuer constructor" Url="html/M_MaxMind_MinFraud_Response_Issuer__ctor.htm" />
+  <HelpKINode Title="Issuer.MatchesProvidedName property" Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedName.htm" />
+  <HelpKINode Title="Issuer.MatchesProvidedPhoneNumber property" Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedPhoneNumber.htm" />
+  <HelpKINode Title="Issuer.Name property" Url="html/P_MaxMind_MinFraud_Response_Issuer_Name.htm" />
+  <HelpKINode Title="Issuer.PhoneNumber property" Url="html/P_MaxMind_MinFraud_Response_Issuer_PhoneNumber.htm" />
+  <HelpKINode Title="Issuer.ToString method" Url="html/M_MaxMind_MinFraud_Response_Issuer_ToString.htm" />
+  <HelpKINode Title="IssuerIdNumber property">
+    <HelpKINode Title="CreditCard.IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_IssuerIdNumber.htm" />
+    <HelpKINode Title="Subscores.IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_IssuerIdNumber.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsTorExitNode property">
+    <HelpKINode Title="AnonymousIPResponse.IsTorExitNode Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsTorExitNode.htm" />
+    <HelpKINode Title="Traits.IsTorExitNode Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsTorExitNode.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsVirtual property" Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsVirtual.htm" />
+  <HelpKINode Title="ItemId property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_ItemId.htm" />
+  <HelpKINode Title="Iugu enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Klarna enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Languages property" Url="html/P_MaxMind_Db_Metadata_Languages.htm" />
+  <HelpKINode Title="Last4Digits property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_Last4Digits.htm" />
+  <HelpKINode Title="LastName property" Url="html/P_MaxMind_MinFraud_Request_Location_LastName.htm" />
+  <HelpKINode Title="LastSeen property" Url="html/P_MaxMind_MinFraud_Response_Device_LastSeen.htm" />
+  <HelpKINode Title="Latitude property">
+    <HelpKINode Title="Address.Latitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Latitude.htm" />
+    <HelpKINode Title="Location.Latitude Property " Url="html/P_MaxMind_GeoIP2_Model_Location_Latitude.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LemonWay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Locales property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Locales.htm" />
+  <HelpKINode Title="LocalTime property">
+    <HelpKINode Title="Device.LocalTime Property " Url="html/P_MaxMind_MinFraud_Response_Device_LocalTime.htm" />
+    <HelpKINode Title="GeoIP2Location.LocalTime Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Location_LocalTime.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Location class">
+    <HelpKINode Title="Location Class" Url="html/T_MaxMind_GeoIP2_Model_Location.htm" />
+    <HelpKINode Title="Location Class" Url="html/T_MaxMind_MinFraud_Request_Location.htm" />
+    <HelpKINode Title="about Location class" Url="html/T_MaxMind_MinFraud_Request_Location.htm" />
+    <HelpKINode Title="about Location class" Url="html/T_MaxMind_GeoIP2_Model_Location.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Location__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Location__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Location.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Location.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Location.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Location.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Location property">
+    <HelpKINode Title="AbstractCityResponse.Location Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Location.htm" />
+    <HelpKINode Title="IPAddress.Location Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Location.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Location.AccuracyRadius property" Url="html/P_MaxMind_GeoIP2_Model_Location_AccuracyRadius.htm" />
+  <HelpKINode Title="Location.Address property" Url="html/P_MaxMind_MinFraud_Request_Location_Address.htm" />
+  <HelpKINode Title="Location.Address2 property" Url="html/P_MaxMind_MinFraud_Request_Location_Address2.htm" />
+  <HelpKINode Title="Location.AverageIncome property" Url="html/P_MaxMind_GeoIP2_Model_Location_AverageIncome.htm" />
+  <HelpKINode Title="Location.City property" Url="html/P_MaxMind_MinFraud_Request_Location_City.htm" />
+  <HelpKINode Title="Location.Company property" Url="html/P_MaxMind_MinFraud_Request_Location_Company.htm" />
+  <HelpKINode Title="Location.Country property" Url="html/P_MaxMind_MinFraud_Request_Location_Country.htm" />
+  <HelpKINode Title="Location.FirstName property" Url="html/P_MaxMind_MinFraud_Request_Location_FirstName.htm" />
+  <HelpKINode Title="Location.HasCoordinates property" Url="html/P_MaxMind_GeoIP2_Model_Location_HasCoordinates.htm" />
+  <HelpKINode Title="Location.LastName property" Url="html/P_MaxMind_MinFraud_Request_Location_LastName.htm" />
+  <HelpKINode Title="Location.Latitude property" Url="html/P_MaxMind_GeoIP2_Model_Location_Latitude.htm" />
+  <HelpKINode Title="Location.Location constructor">
+    <HelpKINode Title="Location Constructor " Url="html/M_MaxMind_MinFraud_Request_Location__ctor.htm" />
+    <HelpKINode Title="Location Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Location__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Location.Longitude property" Url="html/P_MaxMind_GeoIP2_Model_Location_Longitude.htm" />
+  <HelpKINode Title="Location.MetroCode property" Url="html/P_MaxMind_GeoIP2_Model_Location_MetroCode.htm" />
+  <HelpKINode Title="Location.PhoneCountryCode property" Url="html/P_MaxMind_MinFraud_Request_Location_PhoneCountryCode.htm" />
+  <HelpKINode Title="Location.PhoneNumber property" Url="html/P_MaxMind_MinFraud_Request_Location_PhoneNumber.htm" />
+  <HelpKINode Title="Location.PopulationDensity property" Url="html/P_MaxMind_GeoIP2_Model_Location_PopulationDensity.htm" />
+  <HelpKINode Title="Location.Postal property" Url="html/P_MaxMind_MinFraud_Request_Location_Postal.htm" />
+  <HelpKINode Title="Location.Region property" Url="html/P_MaxMind_MinFraud_Request_Location_Region.htm" />
+  <HelpKINode Title="Location.TimeZone property" Url="html/P_MaxMind_GeoIP2_Model_Location_TimeZone.htm" />
+  <HelpKINode Title="Location.ToString method">
+    <HelpKINode Title="Location.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Location_ToString.htm" />
+    <HelpKINode Title="Location.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Location_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Longitude property">
+    <HelpKINode Title="Address.Longitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Longitude.htm" />
+    <HelpKINode Title="Location.Longitude Property " Url="html/P_MaxMind_GeoIP2_Model_Location_Longitude.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MastercardPaymentGateway enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="MatchesProvidedName property" Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedName.htm" />
+  <HelpKINode Title="MatchesProvidedPhoneNumber property" Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedPhoneNumber.htm" />
+  <HelpKINode Title="MaxMind class">
+    <HelpKINode Title="MaxMind Class" Url="html/T_MaxMind_GeoIP2_Model_MaxMind.htm" />
+    <HelpKINode Title="about MaxMind class" Url="html/T_MaxMind_GeoIP2_Model_MaxMind.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_MaxMind__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_MaxMind.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_MaxMind.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MaxMind property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_MaxMind.htm" />
+  <HelpKINode Title="MaxMind.Db namespace" Url="html/N_MaxMind_Db.htm" />
+  <HelpKINode Title="MaxMind.Db.ConstructorAttribute class" Url="html/T_MaxMind_Db_ConstructorAttribute.htm" />
+  <HelpKINode Title="MaxMind.Db.DeserializationException class" Url="html/T_MaxMind_Db_DeserializationException.htm" />
+  <HelpKINode Title="MaxMind.Db.FileAccessMode enumeration" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+  <HelpKINode Title="MaxMind.Db.InjectableValues class" Url="html/T_MaxMind_Db_InjectableValues.htm" />
+  <HelpKINode Title="MaxMind.Db.InjectAttribute class" Url="html/T_MaxMind_Db_InjectAttribute.htm" />
+  <HelpKINode Title="MaxMind.Db.InvalidDatabaseException class" Url="html/T_MaxMind_Db_InvalidDatabaseException.htm" />
+  <HelpKINode Title="MaxMind.Db.Metadata class" Url="html/T_MaxMind_Db_Metadata.htm" />
+  <HelpKINode Title="MaxMind.Db.ParameterAttribute class" Url="html/T_MaxMind_Db_ParameterAttribute.htm" />
+  <HelpKINode Title="MaxMind.Db.Reader class" Url="html/T_MaxMind_Db_Reader.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2 namespace" Url="html/N_MaxMind_GeoIP2.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.DatabaseReader class" Url="html/T_MaxMind_GeoIP2_DatabaseReader.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions namespace" Url="html/N_MaxMind_GeoIP2_Exceptions.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.AddressNotFoundException class" Url="html/T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.AuthenticationException class" Url="html/T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.GeoIP2Exception class" Url="html/T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.HttpException class" Url="html/T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.InvalidRequestException class" Url="html/T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.OutOfQueriesException class" Url="html/T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Exceptions.PermissionRequiredException class" Url="html/T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.IGeoIP2DatabaseReader interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.IGeoIP2Provider interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2Provider.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.IGeoIP2WebServicesClient interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model namespace" Url="html/N_MaxMind_GeoIP2_Model.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.City class" Url="html/T_MaxMind_GeoIP2_Model_City.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Continent class" Url="html/T_MaxMind_GeoIP2_Model_Continent.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Country class" Url="html/T_MaxMind_GeoIP2_Model_Country.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Location class" Url="html/T_MaxMind_GeoIP2_Model_Location.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.MaxMind class" Url="html/T_MaxMind_GeoIP2_Model_MaxMind.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.NamedEntity class" Url="html/T_MaxMind_GeoIP2_Model_NamedEntity.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Postal class" Url="html/T_MaxMind_GeoIP2_Model_Postal.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.RepresentedCountry class" Url="html/T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Subdivision class" Url="html/T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.Traits class" Url="html/T_MaxMind_GeoIP2_Model_Traits.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Model.WebServiceError class" Url="html/T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses namespace" Url="html/N_MaxMind_GeoIP2_Responses.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.AbstractCityResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.AbstractCountryResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.AbstractResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.AnonymousIPResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.AsnResponse class" Url="html/T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.CityResponse class" Url="html/T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.ConnectionTypeResponse class" Url="html/T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.CountryResponse class" Url="html/T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.DomainResponse class" Url="html/T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.EnterpriseResponse class" Url="html/T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.InsightsResponse class" Url="html/T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.Responses.IspResponse class" Url="html/T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+  <HelpKINode Title="MaxMind.GeoIP2.WebServiceClient class" Url="html/T_MaxMind_GeoIP2_WebServiceClient.htm" />
+  <HelpKINode Title="MaxMind.MaxMind constructor" Url="html/Overload_MaxMind_GeoIP2_Model_MaxMind__ctor.htm" />
+  <HelpKINode Title="MaxMind.MinFraud namespace" Url="html/N_MaxMind_MinFraud.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception namespace" Url="html/N_MaxMind_MinFraud_Exception.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.AuthenticationException class" Url="html/T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.HttpException class" Url="html/T_MaxMind_MinFraud_Exception_HttpException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.InsufficientFundsException class" Url="html/T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.InvalidRequestException class" Url="html/T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.MinFraudException class" Url="html/T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Exception.PermissionRequiredException class" Url="html/T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request namespace" Url="html/N_MaxMind_MinFraud_Request.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Account class" Url="html/T_MaxMind_MinFraud_Request_Account.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Billing class" Url="html/T_MaxMind_MinFraud_Request_Billing.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.CreditCard class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.CustomInputs class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.CustomInputs.Builder class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Device class" Url="html/T_MaxMind_MinFraud_Request_Device.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Email class" Url="html/T_MaxMind_MinFraud_Request_Email.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Event class" Url="html/T_MaxMind_MinFraud_Request_Event.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.EventType enumeration" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Location class" Url="html/T_MaxMind_MinFraud_Request_Location.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Order class" Url="html/T_MaxMind_MinFraud_Request_Order.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Payment class" Url="html/T_MaxMind_MinFraud_Request_Payment.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.PaymentProcessor enumeration" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Shipping class" Url="html/T_MaxMind_MinFraud_Request_Shipping.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.ShippingDeliverySpeed enumeration" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.ShoppingCartItem class" Url="html/T_MaxMind_MinFraud_Request_ShoppingCartItem.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Request.Transaction class" Url="html/T_MaxMind_MinFraud_Request_Transaction.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response namespace" Url="html/N_MaxMind_MinFraud_Response.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Address class" Url="html/T_MaxMind_MinFraud_Response_Address.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.BillingAddress class" Url="html/T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.CreditCard class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Device class" Url="html/T_MaxMind_MinFraud_Response_Device.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Disposition class" Url="html/T_MaxMind_MinFraud_Response_Disposition.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Email class" Url="html/T_MaxMind_MinFraud_Response_Email.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Factors class" Url="html/T_MaxMind_MinFraud_Response_Factors.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.GeoIP2Country class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Country.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.GeoIP2Location class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Location.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.IIPAddress interface" Url="html/T_MaxMind_MinFraud_Response_IIPAddress.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Insights class" Url="html/T_MaxMind_MinFraud_Response_Insights.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.IPAddress class" Url="html/T_MaxMind_MinFraud_Response_IPAddress.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Issuer class" Url="html/T_MaxMind_MinFraud_Response_Issuer.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Score class" Url="html/T_MaxMind_MinFraud_Response_Score.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.ScoreIPAddress class" Url="html/T_MaxMind_MinFraud_Response_ScoreIPAddress.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.ShippingAddress class" Url="html/T_MaxMind_MinFraud_Response_ShippingAddress.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Subscores class" Url="html/T_MaxMind_MinFraud_Response_Subscores.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.Response.Warning class" Url="html/T_MaxMind_MinFraud_Response_Warning.htm" />
+  <HelpKINode Title="MaxMind.MinFraud.WebServiceClient class" Url="html/T_MaxMind_MinFraud_WebServiceClient.htm" />
+  <HelpKINode Title="MaxMind.QueriesRemaining property" Url="html/P_MaxMind_GeoIP2_Model_MaxMind_QueriesRemaining.htm" />
+  <HelpKINode Title="MaxMind.ToString method" Url="html/M_MaxMind_GeoIP2_Model_MaxMind_ToString.htm" />
+  <HelpKINode Title="Memory enumeration member" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+  <HelpKINode Title="MemoryMapped enumeration member" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+  <HelpKINode Title="MemoryMappedGlobal enumeration member" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+  <HelpKINode Title="Mercadopago enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="MerchantEsolutions enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Message property" Url="html/P_MaxMind_MinFraud_Response_Warning_Message.htm" />
+  <HelpKINode Title="Metadata class">
+    <HelpKINode Title="Metadata Class" Url="html/T_MaxMind_Db_Metadata.htm" />
+    <HelpKINode Title="about Metadata class" Url="html/T_MaxMind_Db_Metadata.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_Db_Metadata__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_Metadata.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_Metadata.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Metadata property">
+    <HelpKINode Title="DatabaseReader.Metadata Property " Url="html/P_MaxMind_GeoIP2_DatabaseReader_Metadata.htm" />
+    <HelpKINode Title="Reader.Metadata Property " Url="html/P_MaxMind_Db_Reader_Metadata.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Metadata.BinaryFormatMajorVersion property" Url="html/P_MaxMind_Db_Metadata_BinaryFormatMajorVersion.htm" />
+  <HelpKINode Title="Metadata.BinaryFormatMinorVersion property" Url="html/P_MaxMind_Db_Metadata_BinaryFormatMinorVersion.htm" />
+  <HelpKINode Title="Metadata.BuildDate property" Url="html/P_MaxMind_Db_Metadata_BuildDate.htm" />
+  <HelpKINode Title="Metadata.DatabaseType property" Url="html/P_MaxMind_Db_Metadata_DatabaseType.htm" />
+  <HelpKINode Title="Metadata.Description property" Url="html/P_MaxMind_Db_Metadata_Description.htm" />
+  <HelpKINode Title="Metadata.IPVersion property" Url="html/P_MaxMind_Db_Metadata_IPVersion.htm" />
+  <HelpKINode Title="Metadata.Languages property" Url="html/P_MaxMind_Db_Metadata_Languages.htm" />
+  <HelpKINode Title="Metadata.Metadata constructor" Url="html/M_MaxMind_Db_Metadata__ctor.htm" />
+  <HelpKINode Title="MetroCode property" Url="html/P_MaxMind_GeoIP2_Model_Location_MetroCode.htm" />
+  <HelpKINode Title="MinFraudException class">
+    <HelpKINode Title="MinFraudException Class" Url="html/T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+    <HelpKINode Title="about MinFraudException class" Url="html/T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="MinFraudException.MinFraudException constructor" Url="html/Overload_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm" />
+  <HelpKINode Title="Mirjeh enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Mollie enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="MonerisSolutions enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="MostSpecificSubdivision property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_MostSpecificSubdivision.htm" />
+  <HelpKINode Title="Name property">
+    <HelpKINode Title="Issuer.Name Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_Name.htm" />
+    <HelpKINode Title="NamedEntity.Name Property " Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Name.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NamedEntity class">
+    <HelpKINode Title="NamedEntity Class" Url="html/T_MaxMind_GeoIP2_Model_NamedEntity.htm" />
+    <HelpKINode Title="about NamedEntity class" Url="html/T_MaxMind_GeoIP2_Model_NamedEntity.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_Model_NamedEntity__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_NamedEntity.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_NamedEntity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NamedEntity.GeoNameId property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_GeoNameId.htm" />
+  <HelpKINode Title="NamedEntity.Locales property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Locales.htm" />
+  <HelpKINode Title="NamedEntity.Name property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Name.htm" />
+  <HelpKINode Title="NamedEntity.NamedEntity constructor" Url="html/M_MaxMind_GeoIP2_Model_NamedEntity__ctor.htm" />
+  <HelpKINode Title="NamedEntity.Names property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Names.htm" />
+  <HelpKINode Title="NamedEntity.ToString method" Url="html/M_MaxMind_GeoIP2_Model_NamedEntity_ToString.htm" />
+  <HelpKINode Title="Names property" Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Names.htm" />
+  <HelpKINode Title="Nmi enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Oceanpayment enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Oney enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Openpaymx enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="OptimalPayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Orangepay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Order class">
+    <HelpKINode Title="Order Class" Url="html/T_MaxMind_MinFraud_Request_Order.htm" />
+    <HelpKINode Title="about Order class" Url="html/T_MaxMind_MinFraud_Request_Order.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Order__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Order.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Order.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Order property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Order.htm" />
+  <HelpKINode Title="Order.AffiliateId property" Url="html/P_MaxMind_MinFraud_Request_Order_AffiliateId.htm" />
+  <HelpKINode Title="Order.Amount property" Url="html/P_MaxMind_MinFraud_Request_Order_Amount.htm" />
+  <HelpKINode Title="Order.Currency property" Url="html/P_MaxMind_MinFraud_Request_Order_Currency.htm" />
+  <HelpKINode Title="Order.DiscountCode property" Url="html/P_MaxMind_MinFraud_Request_Order_DiscountCode.htm" />
+  <HelpKINode Title="Order.HasGiftMessage property" Url="html/P_MaxMind_MinFraud_Request_Order_HasGiftMessage.htm" />
+  <HelpKINode Title="Order.IsGift property" Url="html/P_MaxMind_MinFraud_Request_Order_IsGift.htm" />
+  <HelpKINode Title="Order.Order constructor" Url="html/M_MaxMind_MinFraud_Request_Order__ctor.htm" />
+  <HelpKINode Title="Order.ReferrerUri property" Url="html/P_MaxMind_MinFraud_Request_Order_ReferrerUri.htm" />
+  <HelpKINode Title="Order.SubaffiliateId property" Url="html/P_MaxMind_MinFraud_Request_Order_SubaffiliateId.htm" />
+  <HelpKINode Title="Order.ToString method" Url="html/M_MaxMind_MinFraud_Request_Order_ToString.htm" />
+  <HelpKINode Title="OrderAmount property" Url="html/P_MaxMind_MinFraud_Response_Subscores_OrderAmount.htm" />
+  <HelpKINode Title="Organization property">
+    <HelpKINode Title="IspResponse.Organization Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Organization.htm" />
+    <HelpKINode Title="Traits.Organization Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Organization.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Other enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="OutOfQueriesException class">
+    <HelpKINode Title="OutOfQueriesException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+    <HelpKINode Title="about OutOfQueriesException class" Url="html/T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_OutOfQueriesException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OutOfQueriesException.OutOfQueriesException constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_OutOfQueriesException__ctor.htm" />
+  <HelpKINode Title="Overnight enumeration member" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="PacnetServices enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="ParameterAttribute class">
+    <HelpKINode Title="ParameterAttribute Class" Url="html/T_MaxMind_Db_ParameterAttribute.htm" />
+    <HelpKINode Title="about ParameterAttribute class" Url="html/T_MaxMind_Db_ParameterAttribute.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_Db_ParameterAttribute__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_ParameterAttribute.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_ParameterAttribute.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParameterAttribute.AlwaysCreate property" Url="html/P_MaxMind_Db_ParameterAttribute_AlwaysCreate.htm" />
+  <HelpKINode Title="ParameterAttribute.ParameterAttribute constructor" Url="html/M_MaxMind_Db_ParameterAttribute__ctor.htm" />
+  <HelpKINode Title="ParameterAttribute.ParameterName property" Url="html/P_MaxMind_Db_ParameterAttribute_ParameterName.htm" />
+  <HelpKINode Title="ParameterName property">
+    <HelpKINode Title="InjectAttribute.ParameterName Property " Url="html/P_MaxMind_Db_InjectAttribute_ParameterName.htm" />
+    <HelpKINode Title="ParameterAttribute.ParameterName Property " Url="html/P_MaxMind_Db_ParameterAttribute_ParameterName.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PasswordReset enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Payeezy enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payfast enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paygate enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paylike enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payment class">
+    <HelpKINode Title="Payment Class" Url="html/T_MaxMind_MinFraud_Request_Payment.htm" />
+    <HelpKINode Title="about Payment class" Url="html/T_MaxMind_MinFraud_Request_Payment.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Payment__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Payment.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Payment.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Payment property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Payment.htm" />
+  <HelpKINode Title="Payment.DeclineCode property" Url="html/P_MaxMind_MinFraud_Request_Payment_DeclineCode.htm" />
+  <HelpKINode Title="Payment.Payment constructor" Url="html/M_MaxMind_MinFraud_Request_Payment__ctor.htm" />
+  <HelpKINode Title="Payment.Processor property" Url="html/P_MaxMind_MinFraud_Request_Payment_Processor.htm" />
+  <HelpKINode Title="Payment.ToString method" Url="html/M_MaxMind_MinFraud_Request_Payment_ToString.htm" />
+  <HelpKINode Title="Payment.WasAuthorized property" Url="html/P_MaxMind_MinFraud_Request_Payment_WasAuthorized.htm" />
+  <HelpKINode Title="PaymentExpress enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="PaymentProcessor enumeration" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paymentwall enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payone enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="PayoutChange enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Paypal enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payplus enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paysafecard enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paystation enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paytrace enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Paytrail enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payture enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payu enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payulatam enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payway enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Payza enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="PermissionRequiredException class">
+    <HelpKINode Title="PermissionRequiredException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+    <HelpKINode Title="PermissionRequiredException Class" Url="html/T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+    <HelpKINode Title="about PermissionRequiredException class" Url="html/T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+    <HelpKINode Title="about PermissionRequiredException class" Url="html/T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Exceptions_PermissionRequiredException__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+    <HelpKINode Title="events" Url="html/Events_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PermissionRequiredException.PermissionRequiredException constructor">
+    <HelpKINode Title="PermissionRequiredException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm" />
+    <HelpKINode Title="PermissionRequiredException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_PermissionRequiredException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PhoneCountryCode property" Url="html/P_MaxMind_MinFraud_Request_Location_PhoneCountryCode.htm" />
+  <HelpKINode Title="PhoneNumber property">
+    <HelpKINode Title="Issuer.PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_PhoneNumber.htm" />
+    <HelpKINode Title="Location.PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Request_Location_PhoneNumber.htm" />
+    <HelpKINode Title="Subscores.PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_PhoneNumber.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pinpayments enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="PopulationDensity property" Url="html/P_MaxMind_GeoIP2_Model_Location_PopulationDensity.htm" />
+  <HelpKINode Title="Posconnect enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Postal class">
+    <HelpKINode Title="Postal Class" Url="html/T_MaxMind_GeoIP2_Model_Postal.htm" />
+    <HelpKINode Title="about Postal class" Url="html/T_MaxMind_GeoIP2_Model_Postal.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Postal__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Postal.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Postal.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Postal property">
+    <HelpKINode Title="AbstractCityResponse.Postal Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Postal.htm" />
+    <HelpKINode Title="Location.Postal Property " Url="html/P_MaxMind_MinFraud_Request_Location_Postal.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Postal.Code property" Url="html/P_MaxMind_GeoIP2_Model_Postal_Code.htm" />
+  <HelpKINode Title="Postal.Confidence property" Url="html/P_MaxMind_GeoIP2_Model_Postal_Confidence.htm" />
+  <HelpKINode Title="Postal.Postal constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Postal__ctor.htm" />
+  <HelpKINode Title="Postal.ToString method" Url="html/M_MaxMind_GeoIP2_Model_Postal_ToString.htm" />
+  <HelpKINode Title="Price property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Price.htm" />
+  <HelpKINode Title="PrincetonPaymentSolutions enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Processor property" Url="html/P_MaxMind_MinFraud_Request_Payment_Processor.htm" />
+  <HelpKINode Title="Psigate enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Purchase enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Qiwi enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Quantity property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Quantity.htm" />
+  <HelpKINode Title="QueriesRemaining property">
+    <HelpKINode Title="MaxMind.QueriesRemaining Property " Url="html/P_MaxMind_GeoIP2_Model_MaxMind_QueriesRemaining.htm" />
+    <HelpKINode Title="Score.QueriesRemaining Property " Url="html/P_MaxMind_MinFraud_Response_Score_QueriesRemaining.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Quickpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Raberil enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Reader class">
+    <HelpKINode Title="Reader Class" Url="html/T_MaxMind_Db_Reader.htm" />
+    <HelpKINode Title="about Reader class" Url="html/T_MaxMind_Db_Reader.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_Db_Reader__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_Db_Reader.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_Db_Reader.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reader.Dispose method" Url="html/M_MaxMind_Db_Reader_Dispose.htm" />
+  <HelpKINode Title="Reader.Find method" Url="html/Overload_MaxMind_Db_Reader_Find.htm" />
+  <HelpKINode Title="Reader.Metadata property" Url="html/P_MaxMind_Db_Reader_Metadata.htm" />
+  <HelpKINode Title="Reader.Reader constructor" Url="html/Overload_MaxMind_Db_Reader__ctor.htm" />
+  <HelpKINode Title="Reason property" Url="html/P_MaxMind_MinFraud_Response_Disposition_Reason.htm" />
+  <HelpKINode Title="RecurringPurchase enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Rede enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Redpagos enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Referral enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="ReferrerUri property" Url="html/P_MaxMind_MinFraud_Request_Order_ReferrerUri.htm" />
+  <HelpKINode Title="Region property" Url="html/P_MaxMind_MinFraud_Request_Location_Region.htm" />
+  <HelpKINode Title="RegisteredCountry property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RegisteredCountry.htm" />
+  <HelpKINode Title="RepresentedCountry class">
+    <HelpKINode Title="RepresentedCountry Class" Url="html/T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+    <HelpKINode Title="about RepresentedCountry class" Url="html/T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_RepresentedCountry__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RepresentedCountry property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RepresentedCountry.htm" />
+  <HelpKINode Title="RepresentedCountry.RepresentedCountry constructor" Url="html/Overload_MaxMind_GeoIP2_Model_RepresentedCountry__ctor.htm" />
+  <HelpKINode Title="RepresentedCountry.Type property" Url="html/P_MaxMind_GeoIP2_Model_RepresentedCountry_Type.htm" />
+  <HelpKINode Title="Rewardspay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Risk property">
+    <HelpKINode Title="IIPAddress.Risk Property " Url="html/P_MaxMind_MinFraud_Response_IIPAddress_Risk.htm" />
+    <HelpKINode Title="IPAddress.Risk Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Risk.htm" />
+    <HelpKINode Title="ScoreIPAddress.Risk Property " Url="html/P_MaxMind_MinFraud_Response_ScoreIPAddress_Risk.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RiskScore property" Url="html/P_MaxMind_MinFraud_Response_Score_RiskScore.htm" />
+  <HelpKINode Title="Sagepay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="SameDay enumeration member" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="Score class">
+    <HelpKINode Title="Score Class" Url="html/T_MaxMind_MinFraud_Response_Score.htm" />
+    <HelpKINode Title="about Score class" Url="html/T_MaxMind_MinFraud_Response_Score.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Score__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Score.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Score.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Score.Disposition property" Url="html/P_MaxMind_MinFraud_Response_Score_Disposition.htm" />
+  <HelpKINode Title="Score.FundsRemaining property" Url="html/P_MaxMind_MinFraud_Response_Score_FundsRemaining.htm" />
+  <HelpKINode Title="Score.Id property" Url="html/P_MaxMind_MinFraud_Response_Score_Id.htm" />
+  <HelpKINode Title="Score.IPAddress property" Url="html/P_MaxMind_MinFraud_Response_Score_IPAddress.htm" />
+  <HelpKINode Title="Score.QueriesRemaining property" Url="html/P_MaxMind_MinFraud_Response_Score_QueriesRemaining.htm" />
+  <HelpKINode Title="Score.RiskScore property" Url="html/P_MaxMind_MinFraud_Response_Score_RiskScore.htm" />
+  <HelpKINode Title="Score.Score constructor" Url="html/M_MaxMind_MinFraud_Response_Score__ctor.htm" />
+  <HelpKINode Title="Score.ToString method" Url="html/M_MaxMind_MinFraud_Response_Score_ToString.htm" />
+  <HelpKINode Title="Score.Warnings property" Url="html/P_MaxMind_MinFraud_Response_Score_Warnings.htm" />
+  <HelpKINode Title="ScoreAsync method" Url="html/M_MaxMind_MinFraud_WebServiceClient_ScoreAsync.htm" />
+  <HelpKINode Title="ScoreIPAddress class">
+    <HelpKINode Title="ScoreIPAddress Class" Url="html/T_MaxMind_MinFraud_Response_ScoreIPAddress.htm" />
+    <HelpKINode Title="about ScoreIPAddress class" Url="html/T_MaxMind_MinFraud_Response_ScoreIPAddress.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ScoreIPAddress.Risk property" Url="html/P_MaxMind_MinFraud_Response_ScoreIPAddress_Risk.htm" />
+  <HelpKINode Title="ScoreIPAddress.ScoreIPAddress constructor" Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress__ctor.htm" />
+  <HelpKINode Title="ScoreIPAddress.ToString method" Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress_ToString.htm" />
+  <HelpKINode Title="Securetrading enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="SessionAge property" Url="html/P_MaxMind_MinFraud_Request_Device_SessionAge.htm" />
+  <HelpKINode Title="SessionId property" Url="html/P_MaxMind_MinFraud_Request_Device_SessionId.htm" />
+  <HelpKINode Title="SetLocales method">
+    <HelpKINode Title="AbstractCityResponse.SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_SetLocales.htm" />
+    <HelpKINode Title="AbstractCountryResponse.SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_SetLocales.htm" />
+    <HelpKINode Title="AbstractResponse.SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse_SetLocales.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Shipping class">
+    <HelpKINode Title="Shipping Class" Url="html/T_MaxMind_MinFraud_Request_Shipping.htm" />
+    <HelpKINode Title="about Shipping class" Url="html/T_MaxMind_MinFraud_Request_Shipping.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Shipping__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Shipping.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Shipping.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Shipping property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Shipping.htm" />
+  <HelpKINode Title="Shipping.DeliverySpeed property" Url="html/P_MaxMind_MinFraud_Request_Shipping_DeliverySpeed.htm" />
+  <HelpKINode Title="Shipping.Shipping constructor" Url="html/M_MaxMind_MinFraud_Request_Shipping__ctor.htm" />
+  <HelpKINode Title="Shipping.ToString method" Url="html/M_MaxMind_MinFraud_Request_Shipping_ToString.htm" />
+  <HelpKINode Title="ShippingAddress class">
+    <HelpKINode Title="ShippingAddress Class" Url="html/T_MaxMind_MinFraud_Response_ShippingAddress.htm" />
+    <HelpKINode Title="about ShippingAddress class" Url="html/T_MaxMind_MinFraud_Response_ShippingAddress.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_ShippingAddress__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ShippingAddress.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ShippingAddress.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShippingAddress property" Url="html/P_MaxMind_MinFraud_Response_Insights_ShippingAddress.htm" />
+  <HelpKINode Title="ShippingAddress.DistanceToBillingAddress property" Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_DistanceToBillingAddress.htm" />
+  <HelpKINode Title="ShippingAddress.IsHighRisk property" Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_IsHighRisk.htm" />
+  <HelpKINode Title="ShippingAddress.ShippingAddress constructor" Url="html/M_MaxMind_MinFraud_Response_ShippingAddress__ctor.htm" />
+  <HelpKINode Title="ShippingAddress.ToString method" Url="html/M_MaxMind_MinFraud_Response_ShippingAddress_ToString.htm" />
+  <HelpKINode Title="ShippingAddressDistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Subscores_ShippingAddressDistanceToIPLocation.htm" />
+  <HelpKINode Title="ShippingDeliverySpeed enumeration" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="ShopId property" Url="html/P_MaxMind_MinFraud_Request_Event_ShopId.htm" />
+  <HelpKINode Title="ShoppingCart property" Url="html/P_MaxMind_MinFraud_Request_Transaction_ShoppingCart.htm" />
+  <HelpKINode Title="ShoppingCartItem class">
+    <HelpKINode Title="ShoppingCartItem Class" Url="html/T_MaxMind_MinFraud_Request_ShoppingCartItem.htm" />
+    <HelpKINode Title="about ShoppingCartItem class" Url="html/T_MaxMind_MinFraud_Request_ShoppingCartItem.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShoppingCartItem.Category property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Category.htm" />
+  <HelpKINode Title="ShoppingCartItem.ItemId property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_ItemId.htm" />
+  <HelpKINode Title="ShoppingCartItem.Price property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Price.htm" />
+  <HelpKINode Title="ShoppingCartItem.Quantity property" Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Quantity.htm" />
+  <HelpKINode Title="ShoppingCartItem.ShoppingCartItem constructor" Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem__ctor.htm" />
+  <HelpKINode Title="ShoppingCartItem.ToString method" Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem_ToString.htm" />
+  <HelpKINode Title="SimplifyCommerce enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Skrill enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Smartcoin enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Smartdebit enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="SolidtrustPay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="SpsDecidir enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Standard enumeration member" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+  <HelpKINode Title="Stripe enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="SubaffiliateId property" Url="html/P_MaxMind_MinFraud_Request_Order_SubaffiliateId.htm" />
+  <HelpKINode Title="Subdivision class">
+    <HelpKINode Title="Subdivision Class" Url="html/T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+    <HelpKINode Title="about Subdivision class" Url="html/T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Subdivision__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Subdivision.Confidence property" Url="html/P_MaxMind_GeoIP2_Model_Subdivision_Confidence.htm" />
+  <HelpKINode Title="Subdivision.IsoCode property" Url="html/P_MaxMind_GeoIP2_Model_Subdivision_IsoCode.htm" />
+  <HelpKINode Title="Subdivision.Subdivision constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Subdivision__ctor.htm" />
+  <HelpKINode Title="Subdivisions property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Subdivisions.htm" />
+  <HelpKINode Title="Subscores class">
+    <HelpKINode Title="Subscores Class" Url="html/T_MaxMind_MinFraud_Response_Subscores.htm" />
+    <HelpKINode Title="about Subscores class" Url="html/T_MaxMind_MinFraud_Response_Subscores.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Subscores__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Subscores.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Subscores.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Subscores property" Url="html/P_MaxMind_MinFraud_Response_Factors_Subscores.htm" />
+  <HelpKINode Title="Subscores.AvsResult property" Url="html/P_MaxMind_MinFraud_Response_Subscores_AvsResult.htm" />
+  <HelpKINode Title="Subscores.BillingAddress property" Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddress.htm" />
+  <HelpKINode Title="Subscores.BillingAddressDistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddressDistanceToIPLocation.htm" />
+  <HelpKINode Title="Subscores.Browser property" Url="html/P_MaxMind_MinFraud_Response_Subscores_Browser.htm" />
+  <HelpKINode Title="Subscores.Chargeback property" Url="html/P_MaxMind_MinFraud_Response_Subscores_Chargeback.htm" />
+  <HelpKINode Title="Subscores.Country property" Url="html/P_MaxMind_MinFraud_Response_Subscores_Country.htm" />
+  <HelpKINode Title="Subscores.CountryMismatch property" Url="html/P_MaxMind_MinFraud_Response_Subscores_CountryMismatch.htm" />
+  <HelpKINode Title="Subscores.CvvResult property" Url="html/P_MaxMind_MinFraud_Response_Subscores_CvvResult.htm" />
+  <HelpKINode Title="Subscores.EmailAddress property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailAddress.htm" />
+  <HelpKINode Title="Subscores.EmailDomain property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailDomain.htm" />
+  <HelpKINode Title="Subscores.EmailTenure property" Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailTenure.htm" />
+  <HelpKINode Title="Subscores.IPTenure property" Url="html/P_MaxMind_MinFraud_Response_Subscores_IPTenure.htm" />
+  <HelpKINode Title="Subscores.IssuerIdNumber property" Url="html/P_MaxMind_MinFraud_Response_Subscores_IssuerIdNumber.htm" />
+  <HelpKINode Title="Subscores.OrderAmount property" Url="html/P_MaxMind_MinFraud_Response_Subscores_OrderAmount.htm" />
+  <HelpKINode Title="Subscores.PhoneNumber property" Url="html/P_MaxMind_MinFraud_Response_Subscores_PhoneNumber.htm" />
+  <HelpKINode Title="Subscores.ShippingAddressDistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Subscores_ShippingAddressDistanceToIPLocation.htm" />
+  <HelpKINode Title="Subscores.Subscores constructor" Url="html/M_MaxMind_MinFraud_Response_Subscores__ctor.htm" />
+  <HelpKINode Title="Subscores.TimeOfDay property" Url="html/P_MaxMind_MinFraud_Response_Subscores_TimeOfDay.htm" />
+  <HelpKINode Title="Subscores.ToString method" Url="html/M_MaxMind_MinFraud_Response_Subscores_ToString.htm" />
+  <HelpKINode Title="Survey enumeration member" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+  <HelpKINode Title="Synapsefi enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Telerecargas enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Time property" Url="html/P_MaxMind_MinFraud_Request_Event_Time.htm" />
+  <HelpKINode Title="TimeOfDay property" Url="html/P_MaxMind_MinFraud_Response_Subscores_TimeOfDay.htm" />
+  <HelpKINode Title="TimeZone property" Url="html/P_MaxMind_GeoIP2_Model_Location_TimeZone.htm" />
+  <HelpKINode Title="Token property" Url="html/P_MaxMind_MinFraud_Request_CreditCard_Token.htm" />
+  <HelpKINode Title="ToString method">
+    <HelpKINode Title="AbstractCityResponse.ToString Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_ToString.htm" />
+    <HelpKINode Title="AbstractCountryResponse.ToString Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_ToString.htm" />
+    <HelpKINode Title="Account.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Account_ToString.htm" />
+    <HelpKINode Title="Address.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Address_ToString.htm" />
+    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
+    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Response_CreditCard_ToString.htm" />
+    <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Device_ToString.htm" />
+    <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Device_ToString.htm" />
+    <HelpKINode Title="Disposition.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Disposition_ToString.htm" />
+    <HelpKINode Title="Email.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Email_ToString.htm" />
+    <HelpKINode Title="Email.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Email_ToString.htm" />
+    <HelpKINode Title="Event.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Event_ToString.htm" />
+    <HelpKINode Title="Factors.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Factors_ToString.htm" />
+    <HelpKINode Title="GeoIP2Country.ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country_ToString.htm" />
+    <HelpKINode Title="GeoIP2Location.ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location_ToString.htm" />
+    <HelpKINode Title="Insights.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Insights_ToString.htm" />
+    <HelpKINode Title="IPAddress.ToString Method " Url="html/M_MaxMind_MinFraud_Response_IPAddress_ToString.htm" />
+    <HelpKINode Title="Issuer.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Issuer_ToString.htm" />
+    <HelpKINode Title="Location.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Location_ToString.htm" />
+    <HelpKINode Title="Location.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Location_ToString.htm" />
+    <HelpKINode Title="MaxMind.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_MaxMind_ToString.htm" />
+    <HelpKINode Title="NamedEntity.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_NamedEntity_ToString.htm" />
+    <HelpKINode Title="Order.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Order_ToString.htm" />
+    <HelpKINode Title="Payment.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Payment_ToString.htm" />
+    <HelpKINode Title="Postal.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Postal_ToString.htm" />
+    <HelpKINode Title="Score.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Score_ToString.htm" />
+    <HelpKINode Title="ScoreIPAddress.ToString Method " Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress_ToString.htm" />
+    <HelpKINode Title="Shipping.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Shipping_ToString.htm" />
+    <HelpKINode Title="ShippingAddress.ToString Method " Url="html/M_MaxMind_MinFraud_Response_ShippingAddress_ToString.htm" />
+    <HelpKINode Title="ShoppingCartItem.ToString Method " Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem_ToString.htm" />
+    <HelpKINode Title="Subscores.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Subscores_ToString.htm" />
+    <HelpKINode Title="Traits.ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Traits_ToString.htm" />
+    <HelpKINode Title="Transaction.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Transaction_ToString.htm" />
+    <HelpKINode Title="Warning.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Warning_ToString.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Towah enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Traits class">
+    <HelpKINode Title="Traits Class" Url="html/T_MaxMind_GeoIP2_Model_Traits.htm" />
+    <HelpKINode Title="about Traits class" Url="html/T_MaxMind_GeoIP2_Model_Traits.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Traits__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Traits.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Traits.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Traits property" Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Traits.htm" />
+  <HelpKINode Title="Traits.AutonomousSystemNumber property" Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemNumber.htm" />
+  <HelpKINode Title="Traits.AutonomousSystemOrganization property" Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemOrganization.htm" />
+  <HelpKINode Title="Traits.ConnectionType property" Url="html/P_MaxMind_GeoIP2_Model_Traits_ConnectionType.htm" />
+  <HelpKINode Title="Traits.Domain property" Url="html/P_MaxMind_GeoIP2_Model_Traits_Domain.htm" />
+  <HelpKINode Title="Traits.IPAddress property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IPAddress.htm" />
+  <HelpKINode Title="Traits.IsAnonymous property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymous.htm" />
+  <HelpKINode Title="Traits.IsAnonymousProxy property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousProxy.htm" />
+  <HelpKINode Title="Traits.IsAnonymousVpn property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousVpn.htm" />
+  <HelpKINode Title="Traits.IsHostingProvider property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsHostingProvider.htm" />
+  <HelpKINode Title="Traits.IsLegitimateProxy property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsLegitimateProxy.htm" />
+  <HelpKINode Title="Traits.Isp property" Url="html/P_MaxMind_GeoIP2_Model_Traits_Isp.htm" />
+  <HelpKINode Title="Traits.IsPublicProxy property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsPublicProxy.htm" />
+  <HelpKINode Title="Traits.IsSatelliteProvider property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsSatelliteProvider.htm" />
+  <HelpKINode Title="Traits.IsTorExitNode property" Url="html/P_MaxMind_GeoIP2_Model_Traits_IsTorExitNode.htm" />
+  <HelpKINode Title="Traits.Organization property" Url="html/P_MaxMind_GeoIP2_Model_Traits_Organization.htm" />
+  <HelpKINode Title="Traits.ToString method" Url="html/M_MaxMind_GeoIP2_Model_Traits_ToString.htm" />
+  <HelpKINode Title="Traits.Traits constructor" Url="html/Overload_MaxMind_GeoIP2_Model_Traits__ctor.htm" />
+  <HelpKINode Title="Traits.UserType property" Url="html/P_MaxMind_GeoIP2_Model_Traits_UserType.htm" />
+  <HelpKINode Title="Transaction class">
+    <HelpKINode Title="Transaction Class" Url="html/T_MaxMind_MinFraud_Request_Transaction.htm" />
+    <HelpKINode Title="about Transaction class" Url="html/T_MaxMind_MinFraud_Request_Transaction.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Transaction__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Transaction.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Transaction.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Transaction.Account property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Account.htm" />
+  <HelpKINode Title="Transaction.Billing property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Billing.htm" />
+  <HelpKINode Title="Transaction.CreditCard property" Url="html/P_MaxMind_MinFraud_Request_Transaction_CreditCard.htm" />
+  <HelpKINode Title="Transaction.CustomInputs property" Url="html/P_MaxMind_MinFraud_Request_Transaction_CustomInputs.htm" />
+  <HelpKINode Title="Transaction.Device property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Device.htm" />
+  <HelpKINode Title="Transaction.Email property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Email.htm" />
+  <HelpKINode Title="Transaction.Event property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Event.htm" />
+  <HelpKINode Title="Transaction.Order property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Order.htm" />
+  <HelpKINode Title="Transaction.Payment property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Payment.htm" />
+  <HelpKINode Title="Transaction.Shipping property" Url="html/P_MaxMind_MinFraud_Request_Transaction_Shipping.htm" />
+  <HelpKINode Title="Transaction.ShoppingCart property" Url="html/P_MaxMind_MinFraud_Request_Transaction_ShoppingCart.htm" />
+  <HelpKINode Title="Transaction.ToString method" Url="html/M_MaxMind_MinFraud_Request_Transaction_ToString.htm" />
+  <HelpKINode Title="Transaction.Transaction constructor" Url="html/M_MaxMind_MinFraud_Request_Transaction__ctor.htm" />
+  <HelpKINode Title="TransactionId property" Url="html/P_MaxMind_MinFraud_Request_Event_TransactionId.htm" />
+  <HelpKINode Title="TransactPro enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="TryAnonymousIP method">
+    <HelpKINode Title="DatabaseReader.TryAnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAnonymousIP.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryAnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAnonymousIP.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryAsn method">
+    <HelpKINode Title="DatabaseReader.TryAsn Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAsn.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryAsn Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAsn.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryCity method">
+    <HelpKINode Title="DatabaseReader.TryCity Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCity.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryCity Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryConnectionType method">
+    <HelpKINode Title="DatabaseReader.TryConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryConnectionType.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryConnectionType.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryCountry method">
+    <HelpKINode Title="DatabaseReader.TryCountry Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCountry.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryCountry Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCountry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryDomain method">
+    <HelpKINode Title="DatabaseReader.TryDomain Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryDomain.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryDomain Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryDomain.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryEnterprise method">
+    <HelpKINode Title="DatabaseReader.TryEnterprise Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryEnterprise.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryEnterprise Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryEnterprise.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TryIsp method">
+    <HelpKINode Title="DatabaseReader.TryIsp Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryIsp.htm" />
+    <HelpKINode Title="IGeoIP2DatabaseReader.TryIsp Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryIsp.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Type property">
+    <HelpKINode Title="CreditCard.Type Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Type.htm" />
+    <HelpKINode Title="Event.Type Property " Url="html/P_MaxMind_MinFraud_Request_Event_Type.htm" />
+    <HelpKINode Title="RepresentedCountry.Type Property " Url="html/P_MaxMind_GeoIP2_Model_RepresentedCountry_Type.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Uri property">
+    <HelpKINode Title="HttpException.Uri Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_Uri.htm" />
+    <HelpKINode Title="HttpException.Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_Uri.htm" />
+    <HelpKINode Title="InvalidRequestException.Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Uri.htm" />
+    <HelpKINode Title="InvalidRequestException.Uri Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Uri.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UsaEpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="UserAgent property" Url="html/P_MaxMind_MinFraud_Request_Device_UserAgent.htm" />
+  <HelpKINode Title="UserId property" Url="html/P_MaxMind_MinFraud_Request_Account_UserId.htm" />
+  <HelpKINode Title="Username property" Url="html/P_MaxMind_MinFraud_Request_Account_Username.htm" />
+  <HelpKINode Title="UsernameMD5 property" Url="html/P_MaxMind_MinFraud_Request_Account_UsernameMD5.htm" />
+  <HelpKINode Title="UserType property" Url="html/P_MaxMind_GeoIP2_Model_Traits_UserType.htm" />
+  <HelpKINode Title="Vantiv enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Verepay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Vericheck enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Vindicia enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="VirtualCardServices enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Vme enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Vpos enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Warning class">
+    <HelpKINode Title="Warning Class" Url="html/T_MaxMind_MinFraud_Response_Warning.htm" />
+    <HelpKINode Title="about Warning class" Url="html/T_MaxMind_MinFraud_Response_Warning.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Warning__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Warning.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Warning.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Warning.Code property" Url="html/P_MaxMind_MinFraud_Response_Warning_Code.htm" />
+  <HelpKINode Title="Warning.InputPointer property" Url="html/P_MaxMind_MinFraud_Response_Warning_InputPointer.htm" />
+  <HelpKINode Title="Warning.Message property" Url="html/P_MaxMind_MinFraud_Response_Warning_Message.htm" />
+  <HelpKINode Title="Warning.ToString method" Url="html/M_MaxMind_MinFraud_Response_Warning_ToString.htm" />
+  <HelpKINode Title="Warning.Warning constructor" Url="html/M_MaxMind_MinFraud_Response_Warning__ctor.htm" />
+  <HelpKINode Title="Warnings property" Url="html/P_MaxMind_MinFraud_Response_Score_Warnings.htm" />
+  <HelpKINode Title="WasAuthorized property" Url="html/P_MaxMind_MinFraud_Request_Payment_WasAuthorized.htm" />
+  <HelpKINode Title="WebServiceClient class">
+    <HelpKINode Title="WebServiceClient Class" Url="html/T_MaxMind_GeoIP2_WebServiceClient.htm" />
+    <HelpKINode Title="WebServiceClient Class" Url="html/T_MaxMind_MinFraud_WebServiceClient.htm" />
+    <HelpKINode Title="about WebServiceClient class" Url="html/T_MaxMind_MinFraud_WebServiceClient.htm" />
+    <HelpKINode Title="about WebServiceClient class" Url="html/T_MaxMind_GeoIP2_WebServiceClient.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_WebServiceClient__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_WebServiceClient__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_WebServiceClient.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_WebServiceClient.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebServiceClient.City method" Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_City.htm" />
+  <HelpKINode Title="WebServiceClient.CityAsync method" Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CityAsync.htm" />
+  <HelpKINode Title="WebServiceClient.Country method" Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Country.htm" />
+  <HelpKINode Title="WebServiceClient.CountryAsync method" Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CountryAsync.htm" />
+  <HelpKINode Title="WebServiceClient.Dispose method">
+    <HelpKINode Title="WebServiceClient.Dispose Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_Dispose.htm" />
+    <HelpKINode Title="WebServiceClient.Dispose Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Dispose.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebServiceClient.FactorsAsync method" Url="html/M_MaxMind_MinFraud_WebServiceClient_FactorsAsync.htm" />
+  <HelpKINode Title="WebServiceClient.Insights method" Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Insights.htm" />
+  <HelpKINode Title="WebServiceClient.InsightsAsync method">
+    <HelpKINode Title="WebServiceClient.InsightsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_InsightsAsync.htm" />
+    <HelpKINode Title="WebServiceClient.InsightsAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_InsightsAsync.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebServiceClient.ScoreAsync method" Url="html/M_MaxMind_MinFraud_WebServiceClient_ScoreAsync.htm" />
+  <HelpKINode Title="WebServiceClient.WebServiceClient constructor">
+    <HelpKINode Title="WebServiceClient Constructor " Url="html/M_MaxMind_GeoIP2_WebServiceClient__ctor.htm" />
+    <HelpKINode Title="WebServiceClient Constructor " Url="html/M_MaxMind_MinFraud_WebServiceClient__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebServiceError class">
+    <HelpKINode Title="WebServiceError Class" Url="html/T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+    <HelpKINode Title="about WebServiceError class" Url="html/T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_GeoIP2_Model_WebServiceError__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebServiceError.Code property" Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Code.htm" />
+  <HelpKINode Title="WebServiceError.Error property" Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Error.htm" />
+  <HelpKINode Title="WebServiceError.WebServiceError constructor" Url="html/M_MaxMind_GeoIP2_Model_WebServiceError__ctor.htm" />
+  <HelpKINode Title="Wirecard enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+  <HelpKINode Title="Worldpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+</HelpKI>
