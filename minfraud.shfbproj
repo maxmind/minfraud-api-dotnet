@@ -26,9 +26,7 @@
     <DocumentationSources>
       <DocumentationSource sourceFile="MaxMind.MinFraud\bin\Release\net45\MaxMind.MinFraud.xml" />
       <DocumentationSource sourceFile="MaxMind.MinFraud\bin\Release\net45\MaxMind.MinFraud.dll" />
-      <DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.dll" />
-      <DocumentationSource sourceFile="..\GeoIP2-dotnet\GeoIP2\bin\Release\net45\MaxMind.GeoIP2.xml" />
-      <DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.dll" />
+      <DocumentationSource sourceFile="..\GeoIP2-dotnet\MaxMind.GeoIP2\bin\Release\net45\MaxMind.GeoIP2.dll" /> <DocumentationSource sourceFile="..\GeoIP2-dotnet\MaxMind.GeoIP2\bin\Release\net45\MaxMind.GeoIP2.xml" /> <DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.dll" />
       <DocumentationSource sourceFile="..\MaxMind-DB-Reader-dotnet\MaxMind.Db\bin\Release\net45\MaxMind.Db.xml" />
     </DocumentationSources>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
