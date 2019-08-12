@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.1.0
+2.1.0 (2019-08-12)
 ------------------
 
 * Previously, `FactorsAsync` would incorrectly return an `Insights`
@@ -19,6 +19,7 @@ Release Notes
   * `Paysafecard`
   * `SmartDebit`
   * `SynapseFI`
+* Dependencies were updated.
 
 2.0.0 (2018-04-11)
 ------------------
