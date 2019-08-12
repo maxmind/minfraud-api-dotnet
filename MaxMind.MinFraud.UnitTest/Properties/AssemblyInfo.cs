@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("MaxMind.MinFraud.UnitTest")]
-[assembly: AssemblyCopyright("Copyright ©  2015-2018")]
+[assembly: AssemblyCopyright("Copyright ©  2015-2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
