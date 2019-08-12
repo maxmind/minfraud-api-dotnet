@@ -92,7 +92,7 @@ namespace MaxMind.MinFraud
         /// to be sent to the minFraud web service.</param>
         /// <returns>Task that produces an object modeling the minFraud
         /// Factors response data</returns>
-        public async Task<Insights> FactorsAsync(Transaction transaction)
+        public async Task<Factors> FactorsAsync(Transaction transaction)
         {
             var factors = await MakeRequest<Factors>(transaction).ConfigureAwait(false);
             factors.IPAddress.SetLocales(_locales);

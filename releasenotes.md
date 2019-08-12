@@ -4,6 +4,9 @@ Release Notes
 2.1.0
 ------------------
 
+* Previously, `FactorsAsync` would incorrectly return an `Insights`
+  object, hiding Factors-specific fields. Bug reported by Bogdan
+  Polovyk. GitHub #49.
 * Added the following new values to the `PaymentProcessor` enum:
   * `Afterpay`
   * `DataCash`
