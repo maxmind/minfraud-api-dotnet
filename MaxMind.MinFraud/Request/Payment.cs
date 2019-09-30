@@ -17,7 +17,7 @@ namespace MaxMind.MinFraud.Request
         //
         // Hipay - (not HiPay) for the company "HiPay"
         // LemonWay - for the company "Lemon Way"
-        // IO  - for the compnany "IO" (made up)
+        // IO  - for the company "IO" (made up)
         // Ebs - for the company "EBS"
         //
         // A letter must be uppercase if it is (1) the first letter of
@@ -27,6 +27,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "adyen")]
         Adyen,
+
+        [EnumMember(Value = "affirm")]
+        Affirm,
 
         [EnumMember(Value = "afterpay")]
         Afterpay,
@@ -162,6 +165,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "ingenico")]
         Ingenico,
+
+        [EnumMember(Value = "interac")]
+        Interac,
 
         [EnumMember(Value = "internetsecure")]
         Internetsecure,
