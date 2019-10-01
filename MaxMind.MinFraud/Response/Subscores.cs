@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -88,6 +89,7 @@ namespace MaxMind.MinFraud.Response
         /// domain. If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("email_tenure")]
+        [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address subscore MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
         public double? EmailTenure { get; internal set; }
 
         /// <summary>
@@ -95,6 +97,7 @@ namespace MaxMind.MinFraud.Response
         /// If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonProperty("ip_tenure")]
+        [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
         public double? IPTenure { get; internal set; }
 
         /// <summary>
