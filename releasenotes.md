@@ -9,6 +9,7 @@ Release Notes
   * `Interac`
 * Deprecated the `EmailTenure` and `IPTenure` properties of 
   `MaxMind.MinFraud.Response.Subscores`. 
+* Deprecated the `IsHighRisk` property of `MaxMind.MinFraud.Response.GeoIP2Country`.
 
 2.1.0 (2019-08-12)
 ------------------
