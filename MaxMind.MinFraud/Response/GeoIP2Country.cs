@@ -1,5 +1,6 @@
 ﻿using MaxMind.GeoIP2.Model;
 using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Response
@@ -14,6 +15,7 @@ namespace MaxMind.MinFraud.Response
         /// This is <c>true</c> if the IP country is high risk.
         /// </summary>
         [JsonProperty("is_high_risk")]
+        [Obsolete("Deprecated effective August 29, 2019.")]
         public bool? IsHighRisk { get; internal set; }
 
         internal void SetLocales(IEnumerable<string> locales) => Locales = locales;

@@ -3,9 +3,13 @@ Release Notes
 
 2.2.0
 ------------------
+
 * Added the following new values to the `PaymentProcessor` enum:
   * `Affirm`
   * `Interac`
+* Deprecated the `EmailTenure` and `IPTenure` properties of 
+  `MaxMind.MinFraud.Response.Subscores`. 
+* Deprecated the `IsHighRisk` property of `MaxMind.MinFraud.Response.GeoIP2Country`.
 
 2.1.0 (2019-08-12)
 ------------------
