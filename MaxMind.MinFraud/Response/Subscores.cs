@@ -146,7 +146,9 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             return $"AvsResult: {AvsResult}, BillingAddress: {BillingAddress}, BillingAddressDistanceToIPLocation: {BillingAddressDistanceToIPLocation}, Browser: {Browser}, Chargeback: {Chargeback}, Country: {Country}, CountryMismatch: {CountryMismatch}, CvvResult: {CvvResult}, EmailAddress: {EmailAddress}, EmailDomain: {EmailDomain}, EmailTenure: {EmailTenure}, IPTenure: {IPTenure}, IssuerIdMumber: {IssuerIdNumber}, OrderAmount: {OrderAmount}, PhoneNumber: {PhoneNumber}, ShippingAddressDistanceToIPLocation: {ShippingAddressDistanceToIPLocation}, TimeOfDay: {TimeOfDay}";
+#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }
