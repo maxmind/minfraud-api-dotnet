@@ -1,6 +1,6 @@
-﻿using System;
-using MaxMind.MinFraud.Util;
+﻿using MaxMind.MinFraud.Util;
 using Newtonsoft.Json;
+using System;
 
 namespace MaxMind.MinFraud.Response
 {

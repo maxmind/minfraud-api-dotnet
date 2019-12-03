@@ -1,6 +1,6 @@
-﻿using System;
-using MaxMind.MinFraud.Request;
+﻿using MaxMind.MinFraud.Request;
 using Newtonsoft.Json.Linq;
+using System;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request

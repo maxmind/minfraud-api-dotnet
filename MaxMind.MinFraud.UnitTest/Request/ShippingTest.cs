@@ -1,8 +1,8 @@
 ﻿#region
 
 using MaxMind.MinFraud.Request;
-using Xunit;
 using System;
+using Xunit;
 
 #endregion
 

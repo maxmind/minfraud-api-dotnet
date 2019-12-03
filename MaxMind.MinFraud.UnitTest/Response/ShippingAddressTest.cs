@@ -1,7 +1,7 @@
 ﻿using MaxMind.MinFraud.Response;
-using static MaxMind.MinFraud.UnitTest.Response.AddressTestHelper;
 using Newtonsoft.Json.Linq;
 using Xunit;
+using static MaxMind.MinFraud.UnitTest.Response.AddressTestHelper;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {

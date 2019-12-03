@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-using Newtonsoft.Json;
 
 namespace MaxMind.MinFraud.Request
 {

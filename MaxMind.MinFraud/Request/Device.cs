@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 using System.Net;
 
 namespace MaxMind.MinFraud.Request

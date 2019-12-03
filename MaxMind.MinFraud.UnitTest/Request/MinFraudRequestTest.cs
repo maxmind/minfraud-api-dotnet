@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using MaxMind.MinFraud.Request;
+using System.Collections.Generic;
 using System.Net;
-using MaxMind.MinFraud.Request;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -76,7 +76,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestShoppingCart()
         {
             var request = new Transaction(device: Device,
-                shoppingCart: new List<ShoppingCartItem> {new ShoppingCartItem(itemId: "1")});
+                shoppingCart: new List<ShoppingCartItem> { new ShoppingCartItem(itemId: "1") });
             Assert.Equal("1", request.ShoppingCart![0].ItemId);
         }
     }

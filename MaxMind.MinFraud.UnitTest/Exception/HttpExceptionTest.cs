@@ -1,8 +1,8 @@
 ﻿#region
 
+using MaxMind.MinFraud.Exception;
 using System;
 using System.Net;
-using MaxMind.MinFraud.Exception;
 using Xunit;
 
 #endregion
