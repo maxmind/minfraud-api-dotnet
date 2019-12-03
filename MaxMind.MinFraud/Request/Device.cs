@@ -28,10 +28,10 @@ namespace MaxMind.MinFraud.Request
         /// site.</param>
         public Device(
             IPAddress ipAddress,
-            string userAgent = null,
-            string acceptLanguage = null,
+            string? userAgent = null,
+            string? acceptLanguage = null,
             double? sessionAge = null,
-            string sessionId = null
+            string? sessionId = null
         )
         {
             this.IPAddress = ipAddress;
@@ -63,14 +63,14 @@ namespace MaxMind.MinFraud.Request
         /// transaction.
         /// </summary>
         [JsonProperty("user_agent")]
-        public string UserAgent { get; }
+        public string? UserAgent { get; }
 
         /// <summary>
         /// The HTTP “Accept-Language” header of the device used in the
         /// transaction.
         /// </summary>
         [JsonProperty("accept_language")]
-        public string AcceptLanguage { get; }
+        public string? AcceptLanguage { get; }
 
         /// <summary>
         /// The number of seconds between the creation of the user's
@@ -86,7 +86,7 @@ namespace MaxMind.MinFraud.Request
         /// uniquely identifies a visitor's session on the site.
         /// </summary>
         [JsonProperty("session_id")]
-        public string SessionId { get; }
+        public string? SessionId { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.

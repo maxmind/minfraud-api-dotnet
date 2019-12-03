@@ -4,6 +4,8 @@ Release Notes
 2.2.0
 ------------------
 
+* This library has been updated to support the nullable reference types
+  introduced in C# 8.0.
 * Added the following new values to the `PaymentProcessor` enum:
   * `Affirm`
   * `Interac`

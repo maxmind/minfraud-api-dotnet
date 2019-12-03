@@ -34,6 +34,7 @@ namespace MaxMind.MinFraud.Request
             // We do the builder this way so that we don't have to
             // make a copy of the dictionary after construction
             private CustomInputs _customInputs = new CustomInputs();
+            private bool alreadyBuilt = false;
 
             /// <summary>
             ///     Returns an enumerator that iterates through the inputs.
@@ -65,7 +66,8 @@ namespace MaxMind.MinFraud.Request
 
                 // Invalidate the builder so additional inputs cannot be
                 // added.
-                _customInputs = null;
+                alreadyBuilt = true;
+
                 return customInputs;
             }
 
@@ -168,7 +170,7 @@ namespace MaxMind.MinFraud.Request
 
             private void ValidateState()
             {
-                if (_customInputs == null)
+                if (alreadyBuilt)
                     throw new InvalidOperationException(
                         "CustomInputs.Builder cannot be reused after Build() has been called.");
             }

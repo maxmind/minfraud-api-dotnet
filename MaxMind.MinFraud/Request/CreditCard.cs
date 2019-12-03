@@ -39,14 +39,14 @@ namespace MaxMind.MinFraud.Request
         /// <param name="token">A token uniquely identifying the card. This
         /// should not be the actual credit card number.</param>
         public CreditCard(
-            string issuerIdNumber = null,
-            string last4Digits = null,
-            string bankName = null,
-            string bankPhoneCountryCode = null,
-            string bankPhoneNumber = null,
+            string? issuerIdNumber = null,
+            string? last4Digits = null,
+            string? bankName = null,
+            string? bankPhoneCountryCode = null,
+            string? bankPhoneNumber = null,
             char? avsResult = null,
             char? cvvResult = null,
-            string token = null
+            string? token = null
         )
         {
             if (issuerIdNumber != null && !IssuerIdNumberRe.IsMatch(issuerIdNumber))
@@ -81,33 +81,33 @@ namespace MaxMind.MinFraud.Request
         /// digits of the credit card number. It identifies the issuing bank.
         /// </summary>
         [JsonProperty("issuer_id_number")]
-        public string IssuerIdNumber { get; }
+        public string? IssuerIdNumber { get; }
 
         /// <summary>
         /// The last four digits of the credit card number.
         /// </summary>
         [JsonProperty("last_4_digits")]
-        public string Last4Digits { get; }
+        public string? Last4Digits { get; }
 
         /// <summary>
         /// The name of the issuing bank as provided by the end user.
         /// </summary>
         [JsonProperty("bank_name")]
-        public string BankName { get; }
+        public string? BankName { get; }
 
         /// <summary>
         /// The phone country code for the issuing bank as provided by
         /// the end user.
         /// </summary>
         [JsonProperty("bank_phone_country_code")]
-        public string BankPhoneCountryCode { get; }
+        public string? BankPhoneCountryCode { get; }
 
         /// <summary>
         /// The phone number, without the country code, for the
         /// issuing bank as provided by the end user.
         /// </summary>
         [JsonProperty("bank_phone_number")]
-        public string BankPhoneNumber { get; }
+        public string? BankPhoneNumber { get; }
 
         /// <summary>
         /// The address verification system (AVS) check result, as
@@ -130,7 +130,7 @@ namespace MaxMind.MinFraud.Request
         /// the actual credit card number.
         /// </summary>
         [JsonProperty("token")]
-        public string Token { get; set; }
+        public string? Token { get; set; }
 
         /// <summary>
         /// Returns a string that represents the current object.

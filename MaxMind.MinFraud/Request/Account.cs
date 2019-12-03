@@ -23,8 +23,8 @@ namespace MaxMind.MinFraud.Request
         /// This is not the MD5 of username. Rather, the MD is automatically
         /// generated from this string.</param>
         public Account(
-            string userId = null,
-            string username = null
+            string? userId = null,
+            string? username = null
         )
         {
             UserId = userId;
@@ -53,7 +53,7 @@ namespace MaxMind.MinFraud.Request
         /// ID.
         /// </summary>
         [JsonProperty("user_id")]
-        public string UserId { get; }
+        public string? UserId { get; }
 
         /// <summary>
         /// The username associated with the account. This is
@@ -61,13 +61,13 @@ namespace MaxMind.MinFraud.Request
         /// generated from this string.
         /// </summary>
         [JsonIgnore]
-        public string Username { get; }
+        public string? Username { get; }
 
         /// <summary>
         /// The MD5 generated from the <c>Username</c>
         /// </summary>
         [JsonProperty("username_md5")]
-        public string UsernameMD5 { get; }
+        public string? UsernameMD5 { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.

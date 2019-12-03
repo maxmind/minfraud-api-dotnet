@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Response
         ///  codes.
         ///</summary>
         [JsonProperty("code")]
-        public string Code { get; internal set; }
+        public string? Code { get; internal set; }
 
         /// <summary>
         /// This property provides a human-readable explanation of the
@@ -22,7 +22,7 @@ namespace MaxMind.MinFraud.Response
         /// matched against.
         /// </summary>
         [JsonProperty("warning")]
-        public string Message { get; internal set; }
+        public string? Message { get; internal set; }
 
         /// <summary>
         /// A JSON Pointer to the input field that the warning is associated with.
@@ -31,7 +31,7 @@ namespace MaxMind.MinFraud.Response
         /// cart item, it would be <c>/shopping_cart/1/price</c>.
         /// </summary>
         [JsonProperty("input_pointer")]
-        public string InputPointer { get; internal set; }
+        public string? InputPointer { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.

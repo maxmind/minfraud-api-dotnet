@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.Request
     public sealed class Email
     {
         private readonly bool _hashAddress;
-        private string _domain;
+        private string? _domain;
 
         /// <summary>
         /// Constructor.
@@ -29,8 +29,8 @@ namespace MaxMind.MinFraud.Request
         /// be sent in plain text. If <c>hashAddress</c> is set to true,
         /// the address will instead be sent as an MD5 hash.</param>
         public Email(
-            string address = null,
-            string domain = null,
+            string? address = null,
+            string? domain = null,
             bool hashAddress = false
         )
         {
@@ -49,7 +49,7 @@ namespace MaxMind.MinFraud.Request
         /// The MD5 generated from the email address.
         /// </summary>
         [JsonIgnore]
-        public string AddressMD5
+        public string? AddressMD5
         {
             get
             {
@@ -71,16 +71,16 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonIgnore]
         [EmailAddress]
-        public string Address { get; }
+        public string? Address { get; }
 
         [JsonProperty("address")]
-        private string JsonAddress => _hashAddress ? AddressMD5 : Address;
+        private string? JsonAddress => _hashAddress ? AddressMD5 : Address;
 
         /// <summary>
         /// The domain of the email address.
         /// </summary>
         [JsonProperty("domain")]
-        public string Domain
+        public string? Domain
         {
             get => _domain;
             private set
