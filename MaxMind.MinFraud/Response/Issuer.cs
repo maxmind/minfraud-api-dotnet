@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
         /// The name of the bank which issued the credit card.
         /// </summary>
         [JsonProperty("name")]
-        public string Name { get; internal set; }
+        public string? Name { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the name matches the name
@@ -28,7 +28,7 @@ namespace MaxMind.MinFraud.Response
         /// cases the phone number we return may be out of date.
         /// </summary>
         [JsonProperty("phone_number")]
-        public string PhoneNumber { get; internal set; }
+        public string? PhoneNumber { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the phone number matches

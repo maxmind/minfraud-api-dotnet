@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
         /// The credit card brand.
         /// </summary>
         [JsonProperty("brand")]
-        public string Brand { get; internal set; }
+        public string? Brand { get; internal set; }
 
         /// <summary>
         /// The two letter <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
@@ -22,7 +22,7 @@ namespace MaxMind.MinFraud.Response
         /// the card.
         /// </summary>
         [JsonProperty("country")]
-        public string Country { get; internal set; }
+        public string? Country { get; internal set; }
 
         /// <summary>
         /// This field is <c>true</c> if the country of the billing address
@@ -55,7 +55,7 @@ namespace MaxMind.MinFraud.Response
         /// The credit card type.
         /// </summary>
         [JsonProperty("type")]
-        public string Type { get; internal set; }
+        public string? Type { get; internal set; }
 
         /// <summary>
         /// Returns a string that represents the current object.

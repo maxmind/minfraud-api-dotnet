@@ -15,7 +15,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"is_in_european_union", true }
             }.ToObject<GeoIP2Country>();
             Assert.True(country.IsInEuropeanUnion);
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.True(country.IsHighRisk);
+#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

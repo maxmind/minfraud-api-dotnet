@@ -45,17 +45,17 @@ namespace MaxMind.MinFraud.Request
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s shipping address.</param>
         /// <param name="deliverySpeed">The shipping delivery speed for the order.</param>
         public Shipping(
-            string firstName = null,
-            string lastName = null,
-            string company = null,
-            string address = null,
-            string address2 = null,
-            string city = null,
-            string region = null,
-            string country = null,
-            string postal = null,
-            string phoneNumber = null,
-            string phoneCountryCode = null,
+            string? firstName = null,
+            string? lastName = null,
+            string? company = null,
+            string? address = null,
+            string? address2 = null,
+            string? city = null,
+            string? region = null,
+            string? country = null,
+            string? postal = null,
+            string? phoneNumber = null,
+            string? phoneCountryCode = null,
             ShippingDeliverySpeed? deliverySpeed = null
         ) : base(
             firstName: firstName,

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
-using Xunit;
 using System;
+using Xunit;
 using Device = MaxMind.MinFraud.Response.Device;
 
 namespace MaxMind.MinFraud.UnitTest.Response

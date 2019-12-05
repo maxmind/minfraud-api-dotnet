@@ -33,11 +33,11 @@ namespace MaxMind.MinFraud.Request
         /// message.</param>
         public Order(
             decimal? amount = null,
-            string currency = null,
-            string discountCode = null,
-            string affiliateId = null,
-            string subaffiliateId = null,
-            Uri referrerUri = null,
+            string? currency = null,
+            string? discountCode = null,
+            string? affiliateId = null,
+            string? subaffiliateId = null,
+            Uri? referrerUri = null,
             bool? isGift = null,
             bool? hasGiftMessage = null
         )
@@ -67,32 +67,32 @@ namespace MaxMind.MinFraud.Request
         /// The ISO 4217 currency code for the currency used in the transaction.
         /// </summary>
         [JsonProperty("currency")]
-        public string Currency { get; }
+        public string? Currency { get; }
 
         /// <summary>
         /// The discount code applied to the transaction. If multiple discount
         /// codes were used, please separate them with a comma.
         /// </summary>
         [JsonProperty("discount_code")]
-        public string DiscountCode { get; }
+        public string? DiscountCode { get; }
 
         /// <summary>
         /// The ID of the affiliate where the order is coming from.
         /// </summary>
         [JsonProperty("affiliate_id")]
-        public string AffiliateId { get; }
+        public string? AffiliateId { get; }
 
         /// <summary>
         /// The ID of the sub-affiliate where the order is coming from.
         /// </summary>
         [JsonProperty("subaffiliate_id")]
-        public string SubaffiliateId { get; }
+        public string? SubaffiliateId { get; }
 
         /// <summary>
         /// The URI of the referring site for this order.
         /// </summary>
         [JsonProperty("referrer_uri")]
-        public Uri ReferrerUri { get; }
+        public Uri? ReferrerUri { get; }
 
         /// <summary>
         /// Whether order was marked as a gift by the purchaser.

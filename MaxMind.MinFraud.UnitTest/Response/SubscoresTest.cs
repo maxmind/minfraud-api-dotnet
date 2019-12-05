@@ -40,8 +40,10 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal(0.08, subscores.CvvResult);
             Assert.Equal(0.09, subscores.EmailAddress);
             Assert.Equal(0.10, subscores.EmailDomain);
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.Equal(0.11, subscores.EmailTenure);
             Assert.Equal(0.12, subscores.IPTenure);
+#pragma warning restore CS0618 // Type or member is obsolete
             Assert.Equal(0.13, subscores.IssuerIdNumber);
             Assert.Equal(0.14, subscores.OrderAmount);
             Assert.Equal(0.15, subscores.PhoneNumber);

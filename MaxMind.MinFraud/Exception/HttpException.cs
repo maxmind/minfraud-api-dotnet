@@ -69,11 +69,11 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         ///     The HTTP status code returned by the web service.
         /// </summary>
-        public HttpStatusCode HttpStatus { get; }
+        public HttpStatusCode? HttpStatus { get; }
 
         /// <summary>
         ///     The URI queried by the web service.
         /// </summary>
-        public Uri Uri { get; }
+        public Uri? Uri { get; }
     }
 }

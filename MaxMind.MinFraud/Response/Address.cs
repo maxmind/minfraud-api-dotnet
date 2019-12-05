@@ -39,7 +39,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The distance in kilometers from the address to the IP location.
-          /// </summary>
+        /// </summary>
         [JsonProperty("distance_to_ip_location")]
         public int? DistanceToIPLocation { get; internal set; }
 

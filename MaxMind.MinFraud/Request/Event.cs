@@ -62,8 +62,8 @@ namespace MaxMind.MinFraud.Request
         /// field is not in the request, the current time will be used.</param>
         /// <param name="type">The type of event being scored.</param>
         public Event(
-            string transactionId = null,
-            string shopId = null,
+            string? transactionId = null,
+            string? shopId = null,
             DateTimeOffset? time = null,
             EventType? type = null
             )
@@ -80,7 +80,7 @@ namespace MaxMind.MinFraud.Request
         /// alerts and notifications from us to you.
         /// </summary>
         [JsonProperty("transaction_id")]
-        public string TransactionId { get; }
+        public string? TransactionId { get; }
 
         /// <summary>
         /// Your internal ID for the shop, affiliate, or merchant this order is
@@ -88,7 +88,7 @@ namespace MaxMind.MinFraud.Request
         /// providers, gateways and affiliate networks.
         /// </summary>
         [JsonProperty("shop_id")]
-        public string ShopId { get; }
+        public string? ShopId { get; }
 
         /// <summary>
         /// The date and time the event occurred.

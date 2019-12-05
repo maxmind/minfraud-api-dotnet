@@ -18,8 +18,8 @@ namespace MaxMind.MinFraud.Request
         /// <param name="price">The price of the item in the shopping cart. This
         /// should be the same currency as the order currency.</param>
         public ShoppingCartItem(
-            string category = null,
-            string itemId = null,
+            string? category = null,
+            string? itemId = null,
             int? quantity = null,
             decimal? price = null
         )
@@ -34,13 +34,13 @@ namespace MaxMind.MinFraud.Request
         /// The category of the item.
         /// </summary>
         [JsonProperty("category")]
-        public string Category { get; }
+        public string? Category { get; }
 
         /// <summary>
         /// Your internal ID for the item.
         /// </summary>
         [JsonProperty("item_id")]
-        public string ItemId { get; }
+        public string? ItemId { get; }
 
         /// <summary>
         /// The quantity of the item in the shopping cart.

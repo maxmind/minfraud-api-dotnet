@@ -67,10 +67,10 @@ namespace MaxMind.MinFraud.UnitTest
             if (mungeIPAddress)
             {
                 // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-                var ipAddress = (JObject) expectedResponse["ip_address"];
+                var ipAddress = (JObject)expectedResponse["ip_address"];
                 ipAddress.Add("maxmind", new JObject());
                 ipAddress.Add("postal", new JObject());
-                var representedCountry = new JObject {{"names", new JObject()}};
+                var representedCountry = new JObject { { "names", new JObject() } };
                 ipAddress.Add("represented_country", representedCountry);
             }
 

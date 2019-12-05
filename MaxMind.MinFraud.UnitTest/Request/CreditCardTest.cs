@@ -1,6 +1,6 @@
 ﻿using MaxMind.MinFraud.Request;
-using Xunit;
 using System;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {

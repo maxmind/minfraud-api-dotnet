@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -29,16 +29,16 @@ namespace MaxMind.MinFraud.Request
         /// <param name="shoppingCart">List of shopping items in the transaction.</param>
         public Transaction(
             Device device,
-            Account account = null,
-            Billing billing = null,
-            CreditCard creditCard = null,
-            CustomInputs customInputs = null,
-            Email email = null,
-            Event userEvent = null,
-            Order order = null,
-            Payment payment = null,
-            Shipping shipping = null,
-            IList<ShoppingCartItem> shoppingCart = default(List<ShoppingCartItem>)
+            Account? account = null,
+            Billing? billing = null,
+            CreditCard? creditCard = null,
+            CustomInputs? customInputs = null,
+            Email? email = null,
+            Event? userEvent = null,
+            Order? order = null,
+            Payment? payment = null,
+            Shipping? shipping = null,
+            IList<ShoppingCartItem>? shoppingCart = default(List<ShoppingCartItem>)
         )
         {
             Device = device;
@@ -58,25 +58,25 @@ namespace MaxMind.MinFraud.Request
         ///     Account information for the transaction.
         /// </summary>
         [JsonProperty("account")]
-        public Account Account { get; }
+        public Account? Account { get; }
 
         /// <summary>
         ///     Information about the account used in the transaction.
         /// </summary>
         [JsonProperty("billing")]
-        public Billing Billing { get; }
+        public Billing? Billing { get; }
 
         /// <summary>
         ///     Information about the credit card used in the transaction.
         /// </summary>
         [JsonProperty("credit_card")]
-        public CreditCard CreditCard { get; }
+        public CreditCard? CreditCard { get; }
 
         /// <summary>
         ///     Custom inputs as configured on your account portal.
         /// </summary>
         [JsonProperty("custom_inputs")]
-        public CustomInputs CustomInputs { get; }
+        public CustomInputs? CustomInputs { get; }
 
         /// <summary>
         ///     Information about the device used in the transaction.
@@ -88,37 +88,37 @@ namespace MaxMind.MinFraud.Request
         ///     Information about the email used in the transaction.
         /// </summary>
         [JsonProperty("email")]
-        public Email Email { get; }
+        public Email? Email { get; }
 
         /// <summary>
         ///     Details about the event such as the time.
         /// </summary>
         [JsonProperty("event")]
-        public Event Event { get; }
+        public Event? Event { get; }
 
         /// <summary>
         ///     Details about the order.
         /// </summary>
         [JsonProperty("order")]
-        public Order Order { get; }
+        public Order? Order { get; }
 
         /// <summary>
         ///     Information about the payment processing.
         /// </summary>
         [JsonProperty("payment")]
-        public Payment Payment { get; }
+        public Payment? Payment { get; }
 
         /// <summary>
         ///     Shipping information used in the transaction.
         /// </summary>
         [JsonProperty("shipping")]
-        public Shipping Shipping { get; }
+        public Shipping? Shipping { get; }
 
         /// <summary>
         ///     List of shopping items in the transaction.
         /// </summary>
         [JsonProperty("shopping_cart")]
-        public IList<ShoppingCartItem> ShoppingCart { get; }
+        public IList<ShoppingCartItem>? ShoppingCart { get; }
 
         /// <summary>
         ///     Returns a string that represents the current object.

@@ -23,17 +23,17 @@
         /// <param name="phoneNumber">The phone number without the country code for the user’s billing address.</param>
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s billing address.</param>
         public Billing(
-            string firstName = null,
-            string lastName = null,
-            string company = null,
-            string address = null,
-            string address2 = null,
-            string city = null,
-            string region = null,
-            string country = null,
-            string postal = null,
-            string phoneNumber = null,
-            string phoneCountryCode = null
+            string? firstName = null,
+            string? lastName = null,
+            string? company = null,
+            string? address = null,
+            string? address2 = null,
+            string? city = null,
+            string? region = null,
+            string? country = null,
+            string? postal = null,
+            string? phoneNumber = null,
+            string? phoneCountryCode = null
         ) : base(
             firstName: firstName,
             lastName: lastName,

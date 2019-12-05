@@ -402,7 +402,7 @@ namespace MaxMind.MinFraud.Request
         public Payment(
             PaymentProcessor? processor = null,
             bool? wasAuthorized = null,
-            string declineCode = null
+            string? declineCode = null
             )
         {
             Processor = processor;
@@ -429,7 +429,7 @@ namespace MaxMind.MinFraud.Request
         /// transaction was not declined, do not include this field.
         /// </summary>
         [JsonProperty("decline_code")]
-        public string DeclineCode { get; }
+        public string? DeclineCode { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.

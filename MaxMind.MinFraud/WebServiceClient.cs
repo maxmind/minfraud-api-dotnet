@@ -49,10 +49,10 @@ namespace MaxMind.MinFraud
         public WebServiceClient(
             int accountId,
             string licenseKey,
-            IEnumerable<string> locales = null,
+            IEnumerable<string>? locales = null,
             string host = "minfraud.maxmind.com",
             TimeSpan? timeout = null,
-            HttpMessageHandler httpMessageHandler = null
+            HttpMessageHandler? httpMessageHandler = null
             )
         {
             _locales = locales == null ? new List<string> { "en" } : new List<string>(locales);
@@ -218,7 +218,7 @@ namespace MaxMind.MinFraud
             {
                 var error = JsonConvert.DeserializeObject<WebServiceError>(content);
 
-                HandleErrorWithJsonBody(error, response, content);
+                HandleErrorWithJsonBody(error, response, content!);
             }
             catch (JsonReaderException ex)
             {

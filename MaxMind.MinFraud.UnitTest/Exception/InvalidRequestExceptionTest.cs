@@ -1,7 +1,7 @@
 ﻿#region
 
-using System;
 using MaxMind.MinFraud.Exception;
+using System;
 using Xunit;
 
 #endregion

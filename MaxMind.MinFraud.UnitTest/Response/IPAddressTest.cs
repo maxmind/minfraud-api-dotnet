@@ -30,7 +30,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             Assert.Equal(99, address.Risk);
             Assert.Equal(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.True(address.Country.IsHighRisk);
+#pragma warning restore CS0618 // Type or member is obsolete
             Assert.True(address.Traits.IsAnonymous);
             Assert.True(address.Traits.IsAnonymousVpn);
             Assert.True(address.Traits.IsHostingProvider);

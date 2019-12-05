@@ -1,8 +1,8 @@
 ﻿using MaxMind.MinFraud.Request;
-using Xunit;
-using System;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {

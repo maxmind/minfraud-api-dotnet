@@ -26,7 +26,9 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             return $"{base.ToString()}, IsHighRisk: {IsHighRisk}";
+#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }
