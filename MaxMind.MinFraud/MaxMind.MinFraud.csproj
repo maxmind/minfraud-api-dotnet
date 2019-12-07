@@ -11,7 +11,7 @@
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
     <PackageId>MaxMind.MinFraud</PackageId>
     <PackageTags>maxmind;minfraud;fraud;detection</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/maxmind/GeoIP2-dotnet/master/MaxMind-logo.png</PackageIconUrl>
+    <PackageIcon>MaxMind-logo.png</PackageIcon>
     <PackageProjectUrl>https://github.com/maxmind/minfraud-api-dotnet</PackageProjectUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
@@ -53,6 +53,13 @@
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\MaxMind-logo.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
