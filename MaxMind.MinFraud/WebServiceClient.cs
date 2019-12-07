@@ -129,6 +129,7 @@ namespace MaxMind.MinFraud
         {
             var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
             settings.Converters.Add(new IPAddressConverter());
+            settings.Converters.Add(new NetworkConverter());
             settings.Converters.Add(new StringEnumConverter());
             var requestBody = JsonConvert.SerializeObject(request, settings);
 
@@ -157,7 +158,9 @@ namespace MaxMind.MinFraud
             {
                 using (JsonReader reader = new JsonTextReader(sr))
                 {
-                    var serializer = new JsonSerializer();
+                    var settings = new JsonSerializerSettings();
+                    settings.Converters.Add(new NetworkConverter());
+                    var serializer = JsonSerializer.Create(settings);
                     try
                     {
                         var model = serializer.Deserialize<T>(reader);

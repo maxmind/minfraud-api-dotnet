@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -59,7 +60,8 @@ namespace MaxMind.MinFraud.UnitTest
             var settings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore
+                DefaultValueHandling = DefaultValueHandling.Ignore,
+                Converters = new List<JsonConverter>() { new NetworkConverter() },
             };
             var actualResponse =
                 JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
