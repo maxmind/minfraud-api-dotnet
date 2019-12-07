@@ -17,7 +17,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"matches_provided_name", true},
                 {"phone_number", phone},
                 {"matches_provided_phone_number", true}
-            }.ToObject<Issuer>();
+            }.ToObject<Issuer>()!;
 
             Assert.Equal("Bank", issuer.Name);
             Assert.True(issuer.MatchesProvidedName);

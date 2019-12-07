@@ -26,7 +26,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                         {"is_tor_exit_node", true},
                     }
                 }
-            }.ToObject<IPAddress>();
+            }.ToObject<IPAddress>()!;
 
             Assert.Equal(99, address.Risk);
             Assert.Equal(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));

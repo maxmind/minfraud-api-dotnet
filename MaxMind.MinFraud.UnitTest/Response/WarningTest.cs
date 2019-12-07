@@ -17,7 +17,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"code", code},
                 {"warning", msg},
                 {"input_pointer", "/first/second"}
-            }.ToObject<Warning>();
+            }.ToObject<Warning>()!;
 
             Assert.Equal(code, warning.Code);
             Assert.Equal(msg, warning.Message);

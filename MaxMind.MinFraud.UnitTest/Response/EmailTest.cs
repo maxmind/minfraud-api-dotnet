@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"first_seen", "2017-01-02" },
                 {"is_free", true},
                 {"is_high_risk", true}
-            }.ToObject<Email>();
+            }.ToObject<Email>()!;
 
             Assert.Equal("2017-01-02", email.FirstSeen?.ToString("yyyy-MM-dd"));
             Assert.True(email.IsFree);

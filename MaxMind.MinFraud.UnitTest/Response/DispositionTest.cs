@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             {
                 {"action", "manual_review"},
                 {"reason", "custom_rule"},
-            }.ToObject<Device>();
+            }.ToObject<Device>()!;
 
             Assert.Equal("manual_review", disposition.Action);
             Assert.Equal("custom_rule", disposition.Reason);

@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"ip_address", new JObject {{"risk", 0.01}}},
                 {"risk_score", 0.01},
                 {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
-            }.ToObject<Score>();
+            }.ToObject<Score>()!;
 
             Assert.Equal(id, score.Id.ToString());
             Assert.Equal(1.20m, score.FundsRemaining);
