@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"is_postal_in_city", true},
                 {"is_high_risk", false},
                 {"distance_to_billing_address", 200}
-            }.ToObject<ShippingAddress>();
+            }.ToObject<ShippingAddress>()!;
 
             TestAddress(address);
 

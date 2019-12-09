@@ -40,7 +40,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {
                     "type", "credit"
                 }
-            }.ToObject<CreditCard>();
+            }.ToObject<CreditCard>()!;
 
             Assert.Equal("Bank", cc.Issuer.Name);
             Assert.Equal("US", cc.Country);

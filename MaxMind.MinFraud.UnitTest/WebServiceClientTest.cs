@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -59,7 +60,8 @@ namespace MaxMind.MinFraud.UnitTest
             var settings = new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore
+                DefaultValueHandling = DefaultValueHandling.Ignore,
+                Converters = new List<JsonConverter>() { new NetworkConverter() },
             };
             var actualResponse =
                 JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
@@ -67,7 +69,7 @@ namespace MaxMind.MinFraud.UnitTest
             if (mungeIPAddress)
             {
                 // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-                var ipAddress = (JObject)expectedResponse["ip_address"];
+                var ipAddress = (JObject)expectedResponse!["ip_address"]!;
                 ipAddress.Add("maxmind", new JObject());
                 ipAddress.Add("postal", new JObject());
                 var representedCountry = new JObject { { "names", new JObject() } };

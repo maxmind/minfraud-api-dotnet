@@ -33,7 +33,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                     0.01
                 },
                 {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
-            }.ToObject<Insights>();
+            }.ToObject<Insights>()!;
 
             Assert.Equal("US", insights.IPAddress.Country.IsoCode);
             Assert.True(insights.CreditCard.IsPrepaid);

@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"id", id},
                 {"last_seen", lastSeen},
                 {"local_time", localTime }
-            }.ToObject<Device>();
+            }.ToObject<Device>()!;
 
             Assert.Equal(99, device.Confidence);
             Assert.Equal(new Guid(id), device.Id);

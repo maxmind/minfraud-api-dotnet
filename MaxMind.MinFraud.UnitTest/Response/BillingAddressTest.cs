@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"is_postal_in_city", true}
             }.ToObject<BillingAddress>();
 
-            TestAddress(address);
+            TestAddress(address!);
         }
     }
 }

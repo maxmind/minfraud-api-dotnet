@@ -28,7 +28,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"phone_number", 0.15},
                 {"shipping_address_distance_to_ip_location", 0.16},
                 {"time_of_day", 0.17}
-            }.ToObject<Subscores>();
+            }.ToObject<Subscores>()!;
 
             Assert.Equal(0.01, subscores.AvsResult);
             Assert.Equal(0.02, subscores.BillingAddress);

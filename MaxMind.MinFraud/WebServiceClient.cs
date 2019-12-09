@@ -129,6 +129,7 @@ namespace MaxMind.MinFraud
         {
             var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
             settings.Converters.Add(new IPAddressConverter());
+            settings.Converters.Add(new NetworkConverter());
             settings.Converters.Add(new StringEnumConverter());
             var requestBody = JsonConvert.SerializeObject(request, settings);
 
@@ -155,18 +156,21 @@ namespace MaxMind.MinFraud
             using (var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
             using (var sr = new StreamReader(s))
             {
-                if (sr.Peek() == -1)
-                {
-                    throw new HttpException(
-                        $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
-                        response.StatusCode, response.RequestMessage.RequestUri);
-                }
                 using (JsonReader reader = new JsonTextReader(sr))
                 {
-                    var serializer = new JsonSerializer();
+                    var settings = new JsonSerializerSettings();
+                    settings.Converters.Add(new NetworkConverter());
+                    var serializer = JsonSerializer.Create(settings);
                     try
                     {
-                        return serializer.Deserialize<T>(reader);
+                        var model = serializer.Deserialize<T>(reader);
+                        if (model == null)
+                        {
+                            throw new HttpException(
+                                $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
+                                response.StatusCode, response.RequestMessage.RequestUri);
+                        }
+                        return model;
                     }
                     catch (JsonSerializationException ex)
                     {
@@ -216,7 +220,7 @@ namespace MaxMind.MinFraud
 
             try
             {
-                var error = JsonConvert.DeserializeObject<WebServiceError>(content);
+                var error = JsonConvert.DeserializeObject<WebServiceError>(content!);
 
                 HandleErrorWithJsonBody(error, response, content!);
             }

@@ -12,6 +12,7 @@ Release Notes
 * Deprecated the `EmailTenure` and `IPTenure` properties of 
   `MaxMind.MinFraud.Response.Subscores`. 
 * Deprecated the `IsHighRisk` property of `MaxMind.MinFraud.Response.GeoIP2Country`.
+* `netstandard2.1` was added as a target framework.
 
 2.1.0 (2019-08-12)
 ------------------
