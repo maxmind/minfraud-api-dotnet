@@ -28,7 +28,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         public sealed class Builder : IEnumerable<KeyValuePair<string, object>>
         {
-            private const long NumMax = 1 << 53;
+            private const long NumMax = (long) 1e13;
             private static readonly Regex KeyRe = new Regex("^[a-z0-9_]{1,25}$", RegexOptions.Compiled);
 
             // We do the builder this way so that we don't have to
@@ -86,7 +86,7 @@ namespace MaxMind.MinFraud.Request
             /// </summary>
             /// <param name="key">The key for the numeric input defined in your account portal.</param>
             /// <param name="value">
-            ///     The input. The value must be between -2^53 and 2^53,
+            ///     The input. The value must be between -10^13 and 10^13,
             ///     exclusive.
             /// </param>
             public void Add(string key, long value)
@@ -102,7 +102,7 @@ namespace MaxMind.MinFraud.Request
             /// </summary>
             /// <param name="key">The key for the numeric input defined in your account portal.</param>
             /// <param name="value">
-            ///     The input value. The value must be between -2^53 and 2^53,
+            ///     The input value. The value must be between -10^13 and 10^13,
             ///     exclusive.
             /// </param>
             public void Add(string key, float value)
@@ -118,7 +118,7 @@ namespace MaxMind.MinFraud.Request
             /// </summary>
             /// <param name="key">The key for the numeric input defined in your account portal.</param>
             /// <param name="value">
-            ///     The input value. The value must be between -2^53 and 2^53,
+            ///     The input value. The value must be between -10^13 and 10^13,
             ///     exclusive.
             /// </param>
             public void Add(string key, double value)
