@@ -6,11 +6,14 @@ Release Notes
 
 * This library has been updated to support the nullable reference types
   introduced in C# 8.0.
+* The client-side validation for numeric custom inputs has been updated to
+  match the server-side validation. The valid range is -9,999,999,999,999
+  to 9,999,999,999,999. Previously, larger numbers were allowed.
 * Added the following new values to the `PaymentProcessor` enum:
   * `Affirm`
   * `Interac`
-* Deprecated the `EmailTenure` and `IPTenure` properties of 
-  `MaxMind.MinFraud.Response.Subscores`. 
+* Deprecated the `EmailTenure` and `IPTenure` properties of
+  `MaxMind.MinFraud.Response.Subscores`.
 * Deprecated the `IsHighRisk` property of `MaxMind.MinFraud.Response.GeoIP2Country`.
 * `netstandard2.1` was added as a target framework.
 

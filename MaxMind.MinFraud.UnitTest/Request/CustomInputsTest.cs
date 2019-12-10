@@ -65,7 +65,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
             {
-                {"invalid_long", 1L << 54}
+                {"invalid_long", (long) 1e13}
             });
         }
 
@@ -74,7 +74,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
             {
-                {"invalid_float", (float) (1L << 54)}
+                {"invalid_float", (float) 1e13}
             }.Build());
         }
 
@@ -83,7 +83,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             Assert.Throws<ArgumentException>(() => new CustomInputs.Builder
             {
-                {"invalid_double", (double) (-1L << 54)}
+                {"invalid_double", (double) -1e13}
             }.Build());
         }
 
