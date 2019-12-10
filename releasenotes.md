@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.2.0
+2.2.0 (2019-12-10)
 ------------------
 
 * This library has been updated to support the nullable reference types
