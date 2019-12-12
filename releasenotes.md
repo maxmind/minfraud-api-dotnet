@@ -1,6 +1,15 @@
 Release Notes
 =============
 
+2.3.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Cetelem`
+  * `Ecommpay`
+  * `G2aPay`
+  * `Mercanet`
+
 2.2.0 (2019-12-10)
 ------------------
 

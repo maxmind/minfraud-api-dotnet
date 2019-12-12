@@ -70,6 +70,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "ccnow")]
         Ccnow,
 
+        [EnumMember(Value = "cetelem")]
+        Cetelem,
+
         [EnumMember(Value = "chase_paymentech")]
         ChasePaymentech,
 
@@ -130,6 +133,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "ecomm365")]
         Ecomm365,
 
+        [EnumMember(Value = "ecommpay")]
+        Ecommpay,
+
         [EnumMember(Value = "elavon")]
         Elavon,
 
@@ -150,6 +156,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "first_data")]
         FirstData,
+
+        [EnumMember(Value = "g2a_pay")]
+        G2aPay,
 
         [EnumMember(Value = "gocardless")]
         Gocardless,
@@ -189,6 +198,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "mercadopago")]
         Mercadopago,
+
+        [EnumMember(Value = "mercanet")]
+        Mercanet,
 
         [EnumMember(Value = "merchant_esolutions")]
         MerchantEsolutions,
