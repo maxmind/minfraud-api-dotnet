@@ -4,6 +4,9 @@ Release Notes
 2.3.0
 ------------------
 
+* Added support for the `/email/is_disposable` output in minFraud Insights
+  and Factors. This is available as the `IsDisposable` property on
+  `MaxMind.MinFraud.Response`.
 * Added the following new values to the `PaymentProcessor` enum:
   * `Cetelem`
   * `Ecommpay`
