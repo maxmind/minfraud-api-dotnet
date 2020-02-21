@@ -17,6 +17,14 @@ namespace MaxMind.MinFraud.Response
         public DateTimeOffset? FirstSeen { get; internal set; }
 
         /// <summary>
+        /// This property incidates whether the email is from a disposable
+        /// email provider. The value will be <c>null</c> if no email address
+        /// or email domain was passed as an input.
+        /// </summary>
+        [JsonProperty("is_disposable")]
+        public bool? IsDisposable { get; internal set; }
+
+        /// <summary>
         /// This property is true if MaxMind believes that this email is hosted by a free
         /// email provider such as Gmail or Yahoo! Mail.
         /// </summary>
@@ -36,7 +44,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         public override string ToString()
         {
-            return $"IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
+            return $"IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
         }
     }
 }
