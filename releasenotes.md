@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.3.0
+2.3.0 (2020-02-21)
 ------------------
 
 * Added support for the `/email/is_disposable` output in minFraud Insights
