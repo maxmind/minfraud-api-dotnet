@@ -44,7 +44,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         public override string ToString()
         {
-            return $"IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
+            return $"FirstSeen: {FirstSeen}, IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
         }
     }
 }
