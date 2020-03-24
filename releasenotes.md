@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+2.4.0
+------------------
+
+* Added support for the `/email/domain/first_seen` output in minFraud Insights
+  and Factors. This is available as the `FirstSeen` property on
+  `MaxMind.MinFraud.Response.EmailDomain`.
+
 2.3.0 (2020-02-21)
 ------------------
 

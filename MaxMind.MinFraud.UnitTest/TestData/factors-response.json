@@ -130,6 +130,9 @@
     "local_time": "2016-06-10T14:19:10-08:00"
   },
   "email": {
+    "domain": {
+      "first_seen":  "2014-02-03"
+    },
     "first_seen": "2017-01-02",
     "is_disposable": true,
     "is_free": true,

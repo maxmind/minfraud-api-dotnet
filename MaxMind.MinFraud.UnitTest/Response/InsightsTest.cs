@@ -17,7 +17,13 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"credit_card", new JObject {{"is_prepaid", true}}},
                 {"device", new JObject {{"id", id}}},
                 {"disposition", new JObject {{"action", "accept"}}},
-                {"email", new JObject {{"is_free", true}}},
+                {
+                    "email", 
+                    new JObject {
+                        {"domain", new JObject {{ "first_seen", "2014-02-03"}}},
+                        {"is_free", true}
+                    }
+                },
                 {"shipping_address", new JObject {{"is_in_ip_country", true}}},
                 {"billing_address", new JObject {{"is_in_ip_country", true}}},
                 {
@@ -35,6 +41,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
             }.ToObject<Insights>()!;
 
+            Assert.Equal("2014-02-03", insights.Email.Domain.FirstSeen?.ToString("yyyy-MM-dd"));
             Assert.Equal("US", insights.IPAddress.Country.IsoCode);
             Assert.True(insights.CreditCard.IsPrepaid);
             Assert.Equal(id, insights.Device.Id.ToString());

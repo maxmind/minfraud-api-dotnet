@@ -10,6 +10,12 @@ namespace MaxMind.MinFraud.Response
     public sealed class Email
     {
         /// <summary>
+        /// An object containing information about the email address domain.
+        /// </summary>
+        [JsonProperty("domain")]
+        public EmailDomain Domain { get; internal set; } = new EmailDomain();
+
+        /// <summary>
         /// The date the email address was first seen by MaxMind.
         /// </summary>
         [JsonProperty("first_seen")]
@@ -44,7 +50,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         public override string ToString()
         {
-            return $"FirstSeen: {FirstSeen}, IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
+            return $"Domain: {Domain}, FirstSeen: {FirstSeen}, IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
         }
     }
 }
