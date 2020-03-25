@@ -64,6 +64,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "braintree")]
         Braintree,
 
+        [EnumMember(Value = "cardpay")]
+        Cardpay,
+
         [EnumMember(Value = "ccavenue")]
         Ccavenue,
 
@@ -147,6 +150,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "eprocessing_network")]
         EprocessingNetwork,
+
+        [EnumMember(Value = "epx")]
+        Epx,
 
         [EnumMember(Value = "eway")]
         Eway,

@@ -7,6 +7,9 @@ Release Notes
 * Added support for the `/email/domain/first_seen` output in minFraud Insights
   and Factors. This is available as the `FirstSeen` property on
   `MaxMind.MinFraud.Response.EmailDomain`.
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Cardpay`
+  * `Epx`
 
 2.3.0 (2020-02-21)
 ------------------
