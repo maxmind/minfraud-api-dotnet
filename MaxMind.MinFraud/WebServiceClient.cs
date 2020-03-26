@@ -45,7 +45,7 @@ namespace MaxMind.MinFraud
         /// <param name="locales">A list of locale codes to use for name property.</param>
         /// <param name="host">The host to use when connecting to the web service.</param>
         /// <param name="timeout">The timeout to use for the request.</param>
-        /// <param name="httpMessageHandler">Handler to use in request. For unit testing only.</param>
+        /// <param name="httpMessageHandler">Handler to use in request.</param>
         public WebServiceClient(
             int accountId,
             string licenseKey,
