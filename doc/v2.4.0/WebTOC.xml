@@ -1,0 +1,1172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="f6198d97-884f-4503-8e6d-2f5ebf04be70" Title="Namespaces" Url="html/R_Project_Documentation.htm">
+    <HelpTOCNode Id="25f81bdf-9ac7-4925-8973-c4b4edfb75c5" Title="MaxMind.Db" Url="html/N_MaxMind_Db.htm">
+      <HelpTOCNode Id="a25325f6-262f-4bc8-8d4a-7616ca5d4d8d" Title="ConstructorAttribute Class" Url="html/T_MaxMind_Db_ConstructorAttribute.htm">
+        <HelpTOCNode Title="ConstructorAttribute Constructor " Url="html/M_MaxMind_Db_ConstructorAttribute__ctor.htm" />
+        <HelpTOCNode Title="ConstructorAttribute Properties" Url="html/Properties_T_MaxMind_Db_ConstructorAttribute.htm" />
+        <HelpTOCNode Title="ConstructorAttribute Methods" Url="html/Methods_T_MaxMind_Db_ConstructorAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5205b902-3122-4fe7-afc7-58added5439e" Title="DeserializationException Class" Url="html/T_MaxMind_Db_DeserializationException.htm">
+        <HelpTOCNode Id="40117ece-6534-4f31-9969-af9bdf8af4b9" Title="DeserializationException Constructor " Url="html/Overload_MaxMind_Db_DeserializationException__ctor.htm">
+          <HelpTOCNode Title="DeserializationException Constructor (String)" Url="html/M_MaxMind_Db_DeserializationException__ctor.htm" />
+          <HelpTOCNode Title="DeserializationException Constructor (String, Exception)" Url="html/M_MaxMind_Db_DeserializationException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="DeserializationException Properties" Url="html/Properties_T_MaxMind_Db_DeserializationException.htm" />
+        <HelpTOCNode Title="DeserializationException Methods" Url="html/Methods_T_MaxMind_Db_DeserializationException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Title="FileAccessMode Enumeration" Url="html/T_MaxMind_Db_FileAccessMode.htm" />
+      <HelpTOCNode Id="6d80d64c-c4c2-49c5-b1f9-de36d72d7672" Title="InjectableValues Class" Url="html/T_MaxMind_Db_InjectableValues.htm">
+        <HelpTOCNode Title="InjectableValues Constructor " Url="html/M_MaxMind_Db_InjectableValues__ctor.htm" />
+        <HelpTOCNode Id="84629734-43fb-4783-98ea-2870ab5f767f" Title="InjectableValues Methods" Url="html/Methods_T_MaxMind_Db_InjectableValues.htm">
+          <HelpTOCNode Title="AddValue Method " Url="html/M_MaxMind_Db_InjectableValues_AddValue.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="6f0e3f5d-78d8-4d1f-a20a-2c1199b65984" Title="InjectAttribute Class" Url="html/T_MaxMind_Db_InjectAttribute.htm">
+        <HelpTOCNode Title="InjectAttribute Constructor " Url="html/M_MaxMind_Db_InjectAttribute__ctor.htm" />
+        <HelpTOCNode Id="13eb9565-2afd-4c62-b107-6f9c9ee1630a" Title="InjectAttribute Properties" Url="html/Properties_T_MaxMind_Db_InjectAttribute.htm">
+          <HelpTOCNode Title="ParameterName Property " Url="html/P_MaxMind_Db_InjectAttribute_ParameterName.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="InjectAttribute Methods" Url="html/Methods_T_MaxMind_Db_InjectAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0139d929-7247-46a9-8548-0a93d2eb9e05" Title="InvalidDatabaseException Class" Url="html/T_MaxMind_Db_InvalidDatabaseException.htm">
+        <HelpTOCNode Id="d0f91b38-06d0-4c24-b15d-44e7c5564972" Title="InvalidDatabaseException Constructor " Url="html/Overload_MaxMind_Db_InvalidDatabaseException__ctor.htm">
+          <HelpTOCNode Title="InvalidDatabaseException Constructor (String)" Url="html/M_MaxMind_Db_InvalidDatabaseException__ctor.htm" />
+          <HelpTOCNode Title="InvalidDatabaseException Constructor (String, Exception)" Url="html/M_MaxMind_Db_InvalidDatabaseException__ctor_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="InvalidDatabaseException Properties" Url="html/Properties_T_MaxMind_Db_InvalidDatabaseException.htm" />
+        <HelpTOCNode Title="InvalidDatabaseException Methods" Url="html/Methods_T_MaxMind_Db_InvalidDatabaseException.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="dedbd74d-a08a-4ff0-93a6-36ad64ad8796" Title="Metadata Class" Url="html/T_MaxMind_Db_Metadata.htm">
+        <HelpTOCNode Title="Metadata Constructor " Url="html/M_MaxMind_Db_Metadata__ctor.htm" />
+        <HelpTOCNode Id="1ac7c273-ebf0-4a59-b4d5-8e970574a3ab" Title="Metadata Properties" Url="html/Properties_T_MaxMind_Db_Metadata.htm">
+          <HelpTOCNode Title="BinaryFormatMajorVersion Property " Url="html/P_MaxMind_Db_Metadata_BinaryFormatMajorVersion.htm" />
+          <HelpTOCNode Title="BinaryFormatMinorVersion Property " Url="html/P_MaxMind_Db_Metadata_BinaryFormatMinorVersion.htm" />
+          <HelpTOCNode Title="BuildDate Property " Url="html/P_MaxMind_Db_Metadata_BuildDate.htm" />
+          <HelpTOCNode Title="DatabaseType Property " Url="html/P_MaxMind_Db_Metadata_DatabaseType.htm" />
+          <HelpTOCNode Title="Description Property " Url="html/P_MaxMind_Db_Metadata_Description.htm" />
+          <HelpTOCNode Title="IPVersion Property " Url="html/P_MaxMind_Db_Metadata_IPVersion.htm" />
+          <HelpTOCNode Title="Languages Property " Url="html/P_MaxMind_Db_Metadata_Languages.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Metadata Methods" Url="html/Methods_T_MaxMind_Db_Metadata.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="86d6402f-f00b-4240-9595-b5bad72183cf" Title="Network Class" Url="html/T_MaxMind_Db_Network.htm">
+        <HelpTOCNode Title="Network Constructor " Url="html/M_MaxMind_Db_Network__ctor.htm" />
+        <HelpTOCNode Id="6800503f-9bd1-4850-9591-e65bc54df295" Title="Network Properties" Url="html/Properties_T_MaxMind_Db_Network.htm">
+          <HelpTOCNode Title="NetworkAddress Property " Url="html/P_MaxMind_Db_Network_NetworkAddress.htm" />
+          <HelpTOCNode Title="PrefixLength Property " Url="html/P_MaxMind_Db_Network_PrefixLength.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="3f1eb260-debb-4d06-a0ea-1fe1907e25e9" Title="Network Methods" Url="html/Methods_T_MaxMind_Db_Network.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_Db_Network_ToString.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="047af69d-542b-4a45-851d-c8e24ff85a41" Title="NetworkAttribute Class" Url="html/T_MaxMind_Db_NetworkAttribute.htm">
+        <HelpTOCNode Title="NetworkAttribute Constructor " Url="html/M_MaxMind_Db_NetworkAttribute__ctor.htm" />
+        <HelpTOCNode Title="NetworkAttribute Properties" Url="html/Properties_T_MaxMind_Db_NetworkAttribute.htm" />
+        <HelpTOCNode Title="NetworkAttribute Methods" Url="html/Methods_T_MaxMind_Db_NetworkAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="14f660b3-2822-4b10-b9fc-5cefde187451" Title="ParameterAttribute Class" Url="html/T_MaxMind_Db_ParameterAttribute.htm">
+        <HelpTOCNode Title="ParameterAttribute Constructor " Url="html/M_MaxMind_Db_ParameterAttribute__ctor.htm" />
+        <HelpTOCNode Id="635932b7-677d-4696-a6e6-649c72d2a12d" Title="ParameterAttribute Properties" Url="html/Properties_T_MaxMind_Db_ParameterAttribute.htm">
+          <HelpTOCNode Title="AlwaysCreate Property " Url="html/P_MaxMind_Db_ParameterAttribute_AlwaysCreate.htm" />
+          <HelpTOCNode Title="ParameterName Property " Url="html/P_MaxMind_Db_ParameterAttribute_ParameterName.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ParameterAttribute Methods" Url="html/Methods_T_MaxMind_Db_ParameterAttribute.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="29a5a025-07c9-4409-95ef-9afd763f2f38" Title="Reader Class" Url="html/T_MaxMind_Db_Reader.htm">
+        <HelpTOCNode Id="3df4aa3f-471f-48af-95ec-3ab0cf4875cb" Title="Reader Constructor " Url="html/Overload_MaxMind_Db_Reader__ctor.htm">
+          <HelpTOCNode Title="Reader Constructor (Stream)" Url="html/M_MaxMind_Db_Reader__ctor.htm" />
+          <HelpTOCNode Title="Reader Constructor (String)" Url="html/M_MaxMind_Db_Reader__ctor_1.htm" />
+          <HelpTOCNode Title="Reader Constructor (String, FileAccessMode)" Url="html/M_MaxMind_Db_Reader__ctor_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ac0b879c-3b07-4d12-a406-f747f3fc07e6" Title="Reader Properties" Url="html/Properties_T_MaxMind_Db_Reader.htm">
+          <HelpTOCNode Title="Metadata Property " Url="html/P_MaxMind_Db_Reader_Metadata.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="43ce0423-89af-40e2-8dda-43cf4e34bc8b" Title="Reader Methods" Url="html/Methods_T_MaxMind_Db_Reader.htm">
+          <HelpTOCNode Id="918207bf-ac7b-4d12-b99a-39149f64a1be" Title="CreateAsync Method " Url="html/Overload_MaxMind_Db_Reader_CreateAsync.htm">
+            <HelpTOCNode Title="CreateAsync Method (Stream)" Url="html/M_MaxMind_Db_Reader_CreateAsync.htm" />
+            <HelpTOCNode Title="CreateAsync Method (String)" Url="html/M_MaxMind_Db_Reader_CreateAsync_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_Db_Reader_Dispose.htm" />
+          <HelpTOCNode Id="f3edea50-b28f-430a-bb76-7e68e47706c1" Title="Find Method " Url="html/Overload_MaxMind_Db_Reader_Find.htm">
+            <HelpTOCNode Title="Find(T) Method (IPAddress, InjectableValues)" Url="html/M_MaxMind_Db_Reader_Find__1.htm" />
+            <HelpTOCNode Title="Find(T) Method (IPAddress, Int32, InjectableValues)" Url="html/M_MaxMind_Db_Reader_Find__1_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="FindAll(T) Method " Url="html/M_MaxMind_Db_Reader_FindAll__1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8973188f-2e68-4130-a422-b373b4aab21d" Title="Reader.ReaderIteratorNode(T) Structure" Url="html/T_MaxMind_Db_Reader_ReaderIteratorNode_1.htm">
+        <HelpTOCNode Id="444e8956-6a4e-4258-85d6-c02cead0ab8e" Title="ReaderIteratorNode(T) Properties" Url="html/Properties_T_MaxMind_Db_Reader_ReaderIteratorNode_1.htm">
+          <HelpTOCNode Title="Data Property " Url="html/P_MaxMind_Db_Reader_ReaderIteratorNode_1_Data.htm" />
+          <HelpTOCNode Title="PrefixLength Property " Url="html/P_MaxMind_Db_Reader_ReaderIteratorNode_1_PrefixLength.htm" />
+          <HelpTOCNode Title="Start Property " Url="html/P_MaxMind_Db_Reader_ReaderIteratorNode_1_Start.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ReaderIteratorNode(T) Methods" Url="html/Methods_T_MaxMind_Db_Reader_ReaderIteratorNode_1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="99913155-f451-485e-9478-5b929895c6e6" Title="MaxMind.GeoIP2 Namespaces" Url="html/G_MaxMind_GeoIP2.htm">
+      <HelpTOCNode Id="bf3830cf-0605-4100-9bb3-793f4e42887e" Title="MaxMind.GeoIP2" Url="html/N_MaxMind_GeoIP2.htm">
+        <HelpTOCNode Id="97ae8dc7-82d4-48af-8677-2dea5b6e4ed3" Title="DatabaseReader Class" Url="html/T_MaxMind_GeoIP2_DatabaseReader.htm">
+          <HelpTOCNode Id="d49646d6-4b99-4370-a967-c303fef46144" Title="DatabaseReader Constructor " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader__ctor.htm">
+            <HelpTOCNode Title="DatabaseReader Constructor (Stream)" Url="html/M_MaxMind_GeoIP2_DatabaseReader__ctor.htm" />
+            <HelpTOCNode Title="DatabaseReader Constructor (Stream, IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_DatabaseReader__ctor_1.htm" />
+            <HelpTOCNode Title="DatabaseReader Constructor (String, FileAccessMode)" Url="html/M_MaxMind_GeoIP2_DatabaseReader__ctor_2.htm" />
+            <HelpTOCNode Title="DatabaseReader Constructor (String, IEnumerable(String), FileAccessMode)" Url="html/M_MaxMind_GeoIP2_DatabaseReader__ctor_3.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="999b8b1b-1354-4d73-a833-3727675d30bb" Title="DatabaseReader Properties" Url="html/Properties_T_MaxMind_GeoIP2_DatabaseReader.htm">
+            <HelpTOCNode Title="Metadata Property " Url="html/P_MaxMind_GeoIP2_DatabaseReader_Metadata.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4d746e67-05c4-445a-9245-3bc39e0f6b84" Title="DatabaseReader Methods" Url="html/Methods_T_MaxMind_GeoIP2_DatabaseReader.htm">
+            <HelpTOCNode Id="d81ee2b4-e484-49ce-8ea0-8072b6e4eb4b" Title="AnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_AnonymousIP.htm">
+              <HelpTOCNode Title="AnonymousIP Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_AnonymousIP.htm" />
+              <HelpTOCNode Title="AnonymousIP Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_AnonymousIP_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="ad33134c-0616-45cf-a4a6-683b8d3eafa7" Title="Asn Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Asn.htm">
+              <HelpTOCNode Title="Asn Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Asn.htm" />
+              <HelpTOCNode Title="Asn Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Asn_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="74c60c0e-0578-4fd1-ba56-fdd03e14fcf0" Title="City Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_City.htm">
+              <HelpTOCNode Title="City Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_City.htm" />
+              <HelpTOCNode Title="City Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_City_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="5dbfc651-8dcb-433e-b3c9-3cebb9543dac" Title="ConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_ConnectionType.htm">
+              <HelpTOCNode Title="ConnectionType Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_ConnectionType.htm" />
+              <HelpTOCNode Title="ConnectionType Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_ConnectionType_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="a46321ff-71a4-4e3f-9c08-14aed043a46e" Title="Country Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Country.htm">
+              <HelpTOCNode Title="Country Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Country.htm" />
+              <HelpTOCNode Title="Country Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Country_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="c39f6f95-c8fb-42f1-8bc1-bcaceef0c3c5" Title="Dispose Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Dispose.htm">
+              <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_GeoIP2_DatabaseReader_Dispose.htm" />
+              <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Dispose_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="1f2586cd-c270-44b8-8f1f-e52dd24c2eab" Title="Domain Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Domain.htm">
+              <HelpTOCNode Title="Domain Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Domain.htm" />
+              <HelpTOCNode Title="Domain Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Domain_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="e0da6901-57db-4f5e-b329-17545fb52e4e" Title="Enterprise Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Enterprise.htm">
+              <HelpTOCNode Title="Enterprise Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Enterprise.htm" />
+              <HelpTOCNode Title="Enterprise Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Enterprise_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="811b88d5-11ae-4dab-bec7-f40cbb45347f" Title="Isp Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_Isp.htm">
+              <HelpTOCNode Title="Isp Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Isp.htm" />
+              <HelpTOCNode Title="Isp Method (String)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_Isp_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="e1a7dcd6-cbf3-48df-a0b4-b50315a40b5c" Title="TryAnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAnonymousIP.htm">
+              <HelpTOCNode Title="TryAnonymousIP Method (IPAddress, AnonymousIPResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryAnonymousIP.htm" />
+              <HelpTOCNode Title="TryAnonymousIP Method (String, AnonymousIPResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryAnonymousIP_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="2a86cf63-a52c-408a-88ad-fa5ac0f3633c" Title="TryAsn Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryAsn.htm">
+              <HelpTOCNode Title="TryAsn Method (IPAddress, AsnResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryAsn.htm" />
+              <HelpTOCNode Title="TryAsn Method (String, AsnResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryAsn_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="688f20bd-20a7-4cd8-82e6-2b0a9b4da1f7" Title="TryCity Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCity.htm">
+              <HelpTOCNode Title="TryCity Method (IPAddress, CityResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryCity.htm" />
+              <HelpTOCNode Title="TryCity Method (String, CityResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryCity_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="1b4ddd47-b3cb-4871-a8b7-dda1ce5daa94" Title="TryConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryConnectionType.htm">
+              <HelpTOCNode Title="TryConnectionType Method (IPAddress, ConnectionTypeResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryConnectionType.htm" />
+              <HelpTOCNode Title="TryConnectionType Method (String, ConnectionTypeResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryConnectionType_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="c1105e84-86d0-4271-99b7-37f187867c80" Title="TryCountry Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryCountry.htm">
+              <HelpTOCNode Title="TryCountry Method (IPAddress, CountryResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryCountry.htm" />
+              <HelpTOCNode Title="TryCountry Method (String, CountryResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryCountry_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="75bde769-0261-431d-bb99-8b034f389894" Title="TryDomain Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryDomain.htm">
+              <HelpTOCNode Title="TryDomain Method (IPAddress, DomainResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryDomain.htm" />
+              <HelpTOCNode Title="TryDomain Method (String, DomainResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryDomain_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="814ac6fa-1b12-4f8a-b7a5-96c7f847750f" Title="TryEnterprise Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryEnterprise.htm">
+              <HelpTOCNode Title="TryEnterprise Method (IPAddress, EnterpriseResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryEnterprise.htm" />
+              <HelpTOCNode Title="TryEnterprise Method (String, EnterpriseResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryEnterprise_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="5fba86fe-98a7-423e-83a5-156e530efe0d" Title="TryIsp Method " Url="html/Overload_MaxMind_GeoIP2_DatabaseReader_TryIsp.htm">
+              <HelpTOCNode Title="TryIsp Method (IPAddress, IspResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryIsp.htm" />
+              <HelpTOCNode Title="TryIsp Method (String, IspResponse)" Url="html/M_MaxMind_GeoIP2_DatabaseReader_TryIsp_1.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="97634554-e891-4cd0-9f83-7010311050c5" Title="IGeoIP2DatabaseReader Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm">
+          <HelpTOCNode Id="364479c1-cba4-47ca-9ff0-541b0996c70a" Title="IGeoIP2DatabaseReader Methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2DatabaseReader.htm">
+            <HelpTOCNode Id="e4861552-6e9d-480c-9cda-4d953014279a" Title="AnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_AnonymousIP.htm">
+              <HelpTOCNode Title="AnonymousIP Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_AnonymousIP.htm" />
+              <HelpTOCNode Title="AnonymousIP Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_AnonymousIP_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="c1413132-d023-4b84-8b22-66f574941808" Title="Asn Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Asn.htm">
+              <HelpTOCNode Title="Asn Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Asn.htm" />
+              <HelpTOCNode Title="Asn Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Asn_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="91287c12-469e-4600-93d6-3e7fa3bd0ee1" Title="ConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_ConnectionType.htm">
+              <HelpTOCNode Title="ConnectionType Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_ConnectionType.htm" />
+              <HelpTOCNode Title="ConnectionType Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_ConnectionType_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="27ddbfa4-ba68-4c6e-9582-a59cae83f5e6" Title="Domain Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Domain.htm">
+              <HelpTOCNode Title="Domain Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Domain.htm" />
+              <HelpTOCNode Title="Domain Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Domain_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="142251a0-1c7c-4e70-a263-3245c37131b9" Title="Enterprise Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Enterprise.htm">
+              <HelpTOCNode Title="Enterprise Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Enterprise.htm" />
+              <HelpTOCNode Title="Enterprise Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Enterprise_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="2c4b2a73-2215-48c9-ae27-eb2ab592243f" Title="Isp Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Isp.htm">
+              <HelpTOCNode Title="Isp Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Isp.htm" />
+              <HelpTOCNode Title="Isp Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_Isp_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="9133fd74-2250-44e7-ae85-cdee91176da7" Title="TryAnonymousIP Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAnonymousIP.htm">
+              <HelpTOCNode Title="TryAnonymousIP Method (IPAddress, AnonymousIPResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAnonymousIP.htm" />
+              <HelpTOCNode Title="TryAnonymousIP Method (String, AnonymousIPResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAnonymousIP_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="bd7d624e-8f71-4a71-9281-aa62f3f129e5" Title="TryAsn Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAsn.htm">
+              <HelpTOCNode Title="TryAsn Method (IPAddress, AsnResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAsn.htm" />
+              <HelpTOCNode Title="TryAsn Method (String, AsnResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryAsn_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="77679857-d184-48d1-8c58-2720a58a836f" Title="TryCity Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCity.htm">
+              <HelpTOCNode Title="TryCity Method (IPAddress, CityResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCity.htm" />
+              <HelpTOCNode Title="TryCity Method (String, CityResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCity_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="bc59d64c-7354-4ad0-bb56-d4f78e7cc98b" Title="TryConnectionType Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryConnectionType.htm">
+              <HelpTOCNode Title="TryConnectionType Method (IPAddress, ConnectionTypeResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryConnectionType.htm" />
+              <HelpTOCNode Title="TryConnectionType Method (String, ConnectionTypeResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryConnectionType_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="fc395392-56ef-4940-a11f-933bb344fa9a" Title="TryCountry Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCountry.htm">
+              <HelpTOCNode Title="TryCountry Method (IPAddress, CountryResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCountry.htm" />
+              <HelpTOCNode Title="TryCountry Method (String, CountryResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryCountry_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="f30a9db6-4817-4ffa-81f1-e8dc275e4e8f" Title="TryDomain Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryDomain.htm">
+              <HelpTOCNode Title="TryDomain Method (IPAddress, DomainResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryDomain.htm" />
+              <HelpTOCNode Title="TryDomain Method (String, DomainResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryDomain_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="442df643-1655-4b9a-b5a3-7ce2aa45ca14" Title="TryEnterprise Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryEnterprise.htm">
+              <HelpTOCNode Title="TryEnterprise Method (IPAddress, EnterpriseResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryEnterprise.htm" />
+              <HelpTOCNode Title="TryEnterprise Method (String, EnterpriseResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryEnterprise_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="7b78d536-29e3-4917-a0fb-78f6f508076b" Title="TryIsp Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryIsp.htm">
+              <HelpTOCNode Title="TryIsp Method (IPAddress, IspResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryIsp.htm" />
+              <HelpTOCNode Title="TryIsp Method (String, IspResponse)" Url="html/M_MaxMind_GeoIP2_IGeoIP2DatabaseReader_TryIsp_1.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="cefffdaf-a552-4c0f-bbed-eac48871c9f4" Title="IGeoIP2Provider Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2Provider.htm">
+          <HelpTOCNode Id="93fbb053-b994-40a1-a0ee-35443222fc0c" Title="IGeoIP2Provider Methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2Provider.htm">
+            <HelpTOCNode Id="8977bebb-e606-4e5f-b4a7-87931841a281" Title="City Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_City.htm">
+              <HelpTOCNode Title="City Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2Provider_City.htm" />
+              <HelpTOCNode Title="City Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2Provider_City_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="96b2cc6e-65f4-4a96-85e8-2a537779efe5" Title="Country Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2Provider_Country.htm">
+              <HelpTOCNode Title="Country Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2Provider_Country.htm" />
+              <HelpTOCNode Title="Country Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2Provider_Country_1.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d6b0c1d7-1dba-4d84-b3d7-e2864dfe3df9" Title="IGeoIP2WebServicesClient Interface" Url="html/T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm">
+          <HelpTOCNode Id="b9e28abc-cfbf-4c9b-a1c8-ad4bb6a30337" Title="IGeoIP2WebServicesClient Methods" Url="html/Methods_T_MaxMind_GeoIP2_IGeoIP2WebServicesClient.htm">
+            <HelpTOCNode Id="5f9281a3-9024-4a39-a13d-1504d4da73b3" Title="City Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_City.htm">
+              <HelpTOCNode Title="City Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_City.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="19190a67-66fe-4a1b-945c-615cdf327045" Title="CityAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync.htm">
+              <HelpTOCNode Title="CityAsync Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync.htm" />
+              <HelpTOCNode Title="CityAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync_1.htm" />
+              <HelpTOCNode Title="CityAsync Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CityAsync_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="cc9ebcc1-6266-4297-aef8-ca004ae7d093" Title="Country Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Country.htm">
+              <HelpTOCNode Title="Country Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Country.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="0d98dd73-bc43-4059-852a-8f40a1f871e0" Title="CountryAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync.htm">
+              <HelpTOCNode Title="CountryAsync Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync.htm" />
+              <HelpTOCNode Title="CountryAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync_1.htm" />
+              <HelpTOCNode Title="CountryAsync Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_CountryAsync_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="cdb52017-4616-4847-8f33-3c3412a4d062" Title="Insights Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights.htm">
+              <HelpTOCNode Title="Insights Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights.htm" />
+              <HelpTOCNode Title="Insights Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights_1.htm" />
+              <HelpTOCNode Title="Insights Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_Insights_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="ba381860-17e3-45c1-8f5d-a42b725e5cc7" Title="InsightsAsync Method " Url="html/Overload_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync.htm">
+              <HelpTOCNode Title="InsightsAsync Method " Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync.htm" />
+              <HelpTOCNode Title="InsightsAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync_1.htm" />
+              <HelpTOCNode Title="InsightsAsync Method (String)" Url="html/M_MaxMind_GeoIP2_IGeoIP2WebServicesClient_InsightsAsync_2.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="953239b5-7f1d-40d6-8198-5505bcdc9f73" Title="WebServiceClient Class" Url="html/T_MaxMind_GeoIP2_WebServiceClient.htm">
+          <HelpTOCNode Title="WebServiceClient Constructor " Url="html/M_MaxMind_GeoIP2_WebServiceClient__ctor.htm" />
+          <HelpTOCNode Id="ad4ac01e-d490-4686-8460-ee17b83a8839" Title="WebServiceClient Methods" Url="html/Methods_T_MaxMind_GeoIP2_WebServiceClient.htm">
+            <HelpTOCNode Id="8980bda6-ba12-4e7e-94f3-3c87e6d06b1c" Title="City Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_City.htm">
+              <HelpTOCNode Title="City Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_City.htm" />
+              <HelpTOCNode Title="City Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_City_1.htm" />
+              <HelpTOCNode Title="City Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_City_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="ee313e67-6c92-4772-9735-c1d1b4461ed4" Title="CityAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CityAsync.htm">
+              <HelpTOCNode Title="CityAsync Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_CityAsync.htm" />
+              <HelpTOCNode Title="CityAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_CityAsync_1.htm" />
+              <HelpTOCNode Title="CityAsync Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_CityAsync_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="5be48b12-8751-4dd2-abdc-ac3b91c504bf" Title="Country Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Country.htm">
+              <HelpTOCNode Title="Country Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_Country.htm" />
+              <HelpTOCNode Title="Country Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_Country_1.htm" />
+              <HelpTOCNode Title="Country Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_Country_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="8ad6fb9c-b00f-446b-949d-eb7902479b6f" Title="CountryAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_CountryAsync.htm">
+              <HelpTOCNode Title="CountryAsync Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_CountryAsync.htm" />
+              <HelpTOCNode Title="CountryAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_CountryAsync_1.htm" />
+              <HelpTOCNode Title="CountryAsync Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_CountryAsync_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="0b03070b-5c91-48e6-a845-87f68ed027c7" Title="Dispose Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Dispose.htm">
+              <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_Dispose.htm" />
+              <HelpTOCNode Title="Dispose Method (Boolean)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_Dispose_1.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="5afa442a-eec5-426b-bc37-c10a7b7c9293" Title="Insights Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_Insights.htm">
+              <HelpTOCNode Title="Insights Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_Insights.htm" />
+              <HelpTOCNode Title="Insights Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_Insights_1.htm" />
+              <HelpTOCNode Title="Insights Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_Insights_2.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Id="f9f8625c-b63d-409b-bc28-1856c1e96913" Title="InsightsAsync Method " Url="html/Overload_MaxMind_GeoIP2_WebServiceClient_InsightsAsync.htm">
+              <HelpTOCNode Title="InsightsAsync Method " Url="html/M_MaxMind_GeoIP2_WebServiceClient_InsightsAsync.htm" />
+              <HelpTOCNode Title="InsightsAsync Method (IPAddress)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_InsightsAsync_1.htm" />
+              <HelpTOCNode Title="InsightsAsync Method (String)" Url="html/M_MaxMind_GeoIP2_WebServiceClient_InsightsAsync_2.htm" />
+            </HelpTOCNode>
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="6733ac39-ea79-427b-b95a-596c82099b44" Title="MaxMind.GeoIP2.Exceptions" Url="html/N_MaxMind_GeoIP2_Exceptions.htm">
+        <HelpTOCNode Id="804af27d-bbc4-43da-a535-17fe5ea9f8cc" Title="AddressNotFoundException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm">
+          <HelpTOCNode Id="68c41cc8-3275-4ba0-bc18-dfab5644e0cc" Title="AddressNotFoundException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_AddressNotFoundException__ctor.htm">
+            <HelpTOCNode Title="AddressNotFoundException Constructor (String)" Url="html/M_MaxMind_GeoIP2_Exceptions_AddressNotFoundException__ctor.htm" />
+            <HelpTOCNode Title="AddressNotFoundException Constructor (String, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_AddressNotFoundException__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AddressNotFoundException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+          <HelpTOCNode Title="AddressNotFoundException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+          <HelpTOCNode Title="AddressNotFoundException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_AddressNotFoundException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a933af0a-7325-457d-8b1d-0c7c9ec97530" Title="AuthenticationException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm">
+          <HelpTOCNode Id="1aa1ad69-b260-4c02-a856-9754b4a0c792" Title="AuthenticationException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_AuthenticationException__ctor.htm">
+            <HelpTOCNode Title="AuthenticationException Constructor (String)" Url="html/M_MaxMind_GeoIP2_Exceptions_AuthenticationException__ctor.htm" />
+            <HelpTOCNode Title="AuthenticationException Constructor (String, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_AuthenticationException__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AuthenticationException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_AuthenticationException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b354efd3-3f80-45bc-ac3f-472365ecc9d4" Title="GeoIP2Exception Class" Url="html/T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm">
+          <HelpTOCNode Id="02e84d83-973f-4cbe-8fce-bfe84e5223d7" Title="GeoIP2Exception Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_GeoIP2Exception__ctor.htm">
+            <HelpTOCNode Title="GeoIP2Exception Constructor (String)" Url="html/M_MaxMind_GeoIP2_Exceptions_GeoIP2Exception__ctor.htm" />
+            <HelpTOCNode Title="GeoIP2Exception Constructor (String, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_GeoIP2Exception__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="GeoIP2Exception Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+          <HelpTOCNode Title="GeoIP2Exception Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+          <HelpTOCNode Title="GeoIP2Exception Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_GeoIP2Exception.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="31599136-3ddc-4f3d-bafe-f140b140d9ef" Title="HttpException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_HttpException.htm">
+          <HelpTOCNode Id="853d637b-8db1-475e-96fa-ff92be399477" Title="HttpException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_HttpException__ctor.htm">
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri)" Url="html/M_MaxMind_GeoIP2_Exceptions_HttpException__ctor.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_HttpException__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d87d9191-6f2d-4427-892b-519e469c2573" Title="HttpException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_HttpException.htm">
+            <HelpTOCNode Title="HttpStatus Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_HttpStatus.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_HttpException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HttpException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+          <HelpTOCNode Title="HttpException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_HttpException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="2eec4d5d-af2c-494e-a648-4103c7103958" Title="InvalidRequestException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm">
+          <HelpTOCNode Title="InvalidRequestException Constructor " Url="html/M_MaxMind_GeoIP2_Exceptions_InvalidRequestException__ctor.htm" />
+          <HelpTOCNode Id="540e7c94-1218-4eaf-9fc1-567d913d2d78" Title="InvalidRequestException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Code.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_GeoIP2_Exceptions_InvalidRequestException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InvalidRequestException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+          <HelpTOCNode Title="InvalidRequestException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_InvalidRequestException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f30bdf25-f8bd-4f6f-beb7-b45adff7cccf" Title="OutOfQueriesException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm">
+          <HelpTOCNode Id="9847cee5-c1a7-4b2b-ab6a-ee4489f420f3" Title="OutOfQueriesException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_OutOfQueriesException__ctor.htm">
+            <HelpTOCNode Title="OutOfQueriesException Constructor (String)" Url="html/M_MaxMind_GeoIP2_Exceptions_OutOfQueriesException__ctor.htm" />
+            <HelpTOCNode Title="OutOfQueriesException Constructor (String, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_OutOfQueriesException__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="OutOfQueriesException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+          <HelpTOCNode Title="OutOfQueriesException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+          <HelpTOCNode Title="OutOfQueriesException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_OutOfQueriesException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="884ec4ec-f67f-4fb0-ba16-32efcabead49" Title="PermissionRequiredException Class" Url="html/T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm">
+          <HelpTOCNode Id="c8215849-c512-4d22-8556-25937c57749d" Title="PermissionRequiredException Constructor " Url="html/Overload_MaxMind_GeoIP2_Exceptions_PermissionRequiredException__ctor.htm">
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String)" Url="html/M_MaxMind_GeoIP2_Exceptions_PermissionRequiredException__ctor.htm" />
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String, Exception)" Url="html/M_MaxMind_GeoIP2_Exceptions_PermissionRequiredException__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PermissionRequiredException Properties" Url="html/Properties_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Methods" Url="html/Methods_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Events" Url="html/Events_T_MaxMind_GeoIP2_Exceptions_PermissionRequiredException.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="8015416b-fa65-4f1c-8a4a-9371a8270e5b" Title="MaxMind.GeoIP2.Model" Url="html/N_MaxMind_GeoIP2_Model.htm">
+        <HelpTOCNode Id="2e26c9dd-93b6-4531-a5fe-058e5023b09c" Title="City Class" Url="html/T_MaxMind_GeoIP2_Model_City.htm">
+          <HelpTOCNode Id="cb7ff3da-4ab6-4c60-aef8-9a5f1ee36843" Title="City Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_City__ctor.htm">
+            <HelpTOCNode Title="City Constructor " Url="html/M_MaxMind_GeoIP2_Model_City__ctor.htm" />
+            <HelpTOCNode Title="City Constructor (Nullable(Int32), Nullable(Int64), IDictionary(String, String), IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_Model_City__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="89138322-a2c5-4e3a-bded-eb645611f288" Title="City Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_City.htm">
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_City_Confidence.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="City Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_City.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e148c699-1ebc-449a-a5b2-44c5323b73cf" Title="Continent Class" Url="html/T_MaxMind_GeoIP2_Model_Continent.htm">
+          <HelpTOCNode Id="7306ba0a-b106-46ba-a53a-a6e8181cb8aa" Title="Continent Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Continent__ctor.htm">
+            <HelpTOCNode Title="Continent Constructor " Url="html/M_MaxMind_GeoIP2_Model_Continent__ctor.htm" />
+            <HelpTOCNode Title="Continent Constructor (String, Nullable(Int64), IDictionary(String, String), IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_Model_Continent__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="708f62cb-b7b5-4768-bbd6-955eeb6d802e" Title="Continent Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Continent.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_GeoIP2_Model_Continent_Code.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Continent Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Continent.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="893dc301-d9cc-4a73-b452-8ec6e8e4106f" Title="Country Class" Url="html/T_MaxMind_GeoIP2_Model_Country.htm">
+          <HelpTOCNode Id="d608981a-6ceb-47d7-b74e-5688435d0cbc" Title="Country Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Country__ctor.htm">
+            <HelpTOCNode Title="Country Constructor " Url="html/M_MaxMind_GeoIP2_Model_Country__ctor.htm" />
+            <HelpTOCNode Title="Country Constructor (Nullable(Int32), Nullable(Int64), Boolean, String, IDictionary(String, String), IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_Model_Country__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ea103d08-1bdf-43bc-b189-79e9243f3652" Title="Country Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Country.htm">
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Country_Confidence.htm" />
+            <HelpTOCNode Title="IsInEuropeanUnion Property " Url="html/P_MaxMind_GeoIP2_Model_Country_IsInEuropeanUnion.htm" />
+            <HelpTOCNode Title="IsoCode Property " Url="html/P_MaxMind_GeoIP2_Model_Country_IsoCode.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Country Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Country.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a68a189d-bd90-445e-8c3d-9ebd32601bad" Title="Location Class" Url="html/T_MaxMind_GeoIP2_Model_Location.htm">
+          <HelpTOCNode Id="669d8a0b-5d81-476d-8f2f-a93987cc685b" Title="Location Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Location__ctor.htm">
+            <HelpTOCNode Title="Location Constructor " Url="html/M_MaxMind_GeoIP2_Model_Location__ctor.htm" />
+            <HelpTOCNode Title="Location Constructor (Nullable(Int32), Nullable(Double), Nullable(Double), Nullable(Int32), String)" Url="html/M_MaxMind_GeoIP2_Model_Location__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="5356f136-ab06-4d4e-88fc-eb01aeafe758" Title="Location Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Location.htm">
+            <HelpTOCNode Title="AccuracyRadius Property " Url="html/P_MaxMind_GeoIP2_Model_Location_AccuracyRadius.htm" />
+            <HelpTOCNode Title="AverageIncome Property " Url="html/P_MaxMind_GeoIP2_Model_Location_AverageIncome.htm" />
+            <HelpTOCNode Title="HasCoordinates Property " Url="html/P_MaxMind_GeoIP2_Model_Location_HasCoordinates.htm" />
+            <HelpTOCNode Title="Latitude Property " Url="html/P_MaxMind_GeoIP2_Model_Location_Latitude.htm" />
+            <HelpTOCNode Title="Longitude Property " Url="html/P_MaxMind_GeoIP2_Model_Location_Longitude.htm" />
+            <HelpTOCNode Title="MetroCode Property " Url="html/P_MaxMind_GeoIP2_Model_Location_MetroCode.htm" />
+            <HelpTOCNode Title="PopulationDensity Property " Url="html/P_MaxMind_GeoIP2_Model_Location_PopulationDensity.htm" />
+            <HelpTOCNode Title="TimeZone Property " Url="html/P_MaxMind_GeoIP2_Model_Location_TimeZone.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="49d52dcc-8d4e-4476-86ad-96521d63b098" Title="Location Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Location.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Location_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="2f9d27d6-d75b-4f6b-8a27-950b8e7df745" Title="MaxMind Class" Url="html/T_MaxMind_GeoIP2_Model_MaxMind.htm">
+          <HelpTOCNode Id="861b9b34-c9e0-4150-899e-d5e075f8acb0" Title="MaxMind Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_MaxMind__ctor.htm">
+            <HelpTOCNode Title="MaxMind Constructor " Url="html/M_MaxMind_GeoIP2_Model_MaxMind__ctor.htm" />
+            <HelpTOCNode Title="MaxMind Constructor (Nullable(Int32))" Url="html/M_MaxMind_GeoIP2_Model_MaxMind__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="98e6f55d-e778-495f-9581-8e811a446e97" Title="MaxMind Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_MaxMind.htm">
+            <HelpTOCNode Title="QueriesRemaining Property " Url="html/P_MaxMind_GeoIP2_Model_MaxMind_QueriesRemaining.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9b29d7d9-2546-4a51-a2e6-53cf93ec070d" Title="MaxMind Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_MaxMind.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Model_MaxMind_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="d76e4cba-81a9-47e0-b340-bb6d5caffcfb" Title="NamedEntity Class" Url="html/T_MaxMind_GeoIP2_Model_NamedEntity.htm">
+          <HelpTOCNode Title="NamedEntity Constructor " Url="html/M_MaxMind_GeoIP2_Model_NamedEntity__ctor.htm" />
+          <HelpTOCNode Id="904bc578-7ecc-4ee4-86b7-cf5ed804c2dd" Title="NamedEntity Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_NamedEntity.htm">
+            <HelpTOCNode Title="GeoNameId Property " Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_GeoNameId.htm" />
+            <HelpTOCNode Title="Locales Property " Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Locales.htm" />
+            <HelpTOCNode Title="Name Property " Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Name.htm" />
+            <HelpTOCNode Title="Names Property " Url="html/P_MaxMind_GeoIP2_Model_NamedEntity_Names.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="38f09c26-406f-46b1-a457-954b76ff885d" Title="NamedEntity Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_NamedEntity.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Model_NamedEntity_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="51b8ddff-7965-4e0e-b3ab-7b5f18346da1" Title="Postal Class" Url="html/T_MaxMind_GeoIP2_Model_Postal.htm">
+          <HelpTOCNode Id="e0431fa0-a8d7-4514-b6ef-7acbbc0c7804" Title="Postal Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Postal__ctor.htm">
+            <HelpTOCNode Title="Postal Constructor " Url="html/M_MaxMind_GeoIP2_Model_Postal__ctor.htm" />
+            <HelpTOCNode Title="Postal Constructor (String, Nullable(Int32))" Url="html/M_MaxMind_GeoIP2_Model_Postal__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f8beddb6-08d7-4fc4-a43e-b31ee3b68532" Title="Postal Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Postal.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_GeoIP2_Model_Postal_Code.htm" />
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Postal_Confidence.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c8d7b4fe-2244-44ac-8471-a321e82532d1" Title="Postal Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Postal.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Postal_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="14593e94-87f3-49b9-aa52-dc548f3a1856" Title="RepresentedCountry Class" Url="html/T_MaxMind_GeoIP2_Model_RepresentedCountry.htm">
+          <HelpTOCNode Id="6a1c1660-0117-4880-88ec-00b28a32149f" Title="RepresentedCountry Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_RepresentedCountry__ctor.htm">
+            <HelpTOCNode Title="RepresentedCountry Constructor " Url="html/M_MaxMind_GeoIP2_Model_RepresentedCountry__ctor.htm" />
+            <HelpTOCNode Title="RepresentedCountry Constructor (String, Nullable(Int32), Nullable(Int64), Boolean, String, IDictionary(String, String), IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_Model_RepresentedCountry__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c024a7f5-92b6-410c-82a3-27fff022141c" Title="RepresentedCountry Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_RepresentedCountry.htm">
+            <HelpTOCNode Title="Type Property " Url="html/P_MaxMind_GeoIP2_Model_RepresentedCountry_Type.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="RepresentedCountry Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_RepresentedCountry.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a67d78c5-9d9e-4ebe-9029-8e34b854b6ce" Title="Subdivision Class" Url="html/T_MaxMind_GeoIP2_Model_Subdivision.htm">
+          <HelpTOCNode Id="7f5892bc-3932-4b55-ac39-52e43eb210cc" Title="Subdivision Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Subdivision__ctor.htm">
+            <HelpTOCNode Title="Subdivision Constructor " Url="html/M_MaxMind_GeoIP2_Model_Subdivision__ctor.htm" />
+            <HelpTOCNode Title="Subdivision Constructor (Nullable(Int32), Nullable(Int64), String, IDictionary(String, String), IEnumerable(String))" Url="html/M_MaxMind_GeoIP2_Model_Subdivision__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="15f0fae4-be90-406f-a5b8-8ba3bc951f7b" Title="Subdivision Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Subdivision.htm">
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_GeoIP2_Model_Subdivision_Confidence.htm" />
+            <HelpTOCNode Title="IsoCode Property " Url="html/P_MaxMind_GeoIP2_Model_Subdivision_IsoCode.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="Subdivision Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Subdivision.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="d34c2ac4-2846-405d-9ba6-49d7a8f76d27" Title="Traits Class" Url="html/T_MaxMind_GeoIP2_Model_Traits.htm">
+          <HelpTOCNode Id="ad18c322-aa95-4dc6-b7b5-9c0d1b3b6cb2" Title="Traits Constructor " Url="html/Overload_MaxMind_GeoIP2_Model_Traits__ctor.htm">
+            <HelpTOCNode Title="Traits Constructor " Url="html/M_MaxMind_GeoIP2_Model_Traits__ctor.htm" />
+            <HelpTOCNode Title="Traits Constructor (Nullable(Int64), String, String, String, String, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, String, String, String, Network, Nullable(Double), Nullable(Int32))" Url="html/M_MaxMind_GeoIP2_Model_Traits__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="30ef54b1-5dfa-447a-8249-440067a659b7" Title="Traits Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_Traits.htm">
+            <HelpTOCNode Title="AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemNumber.htm" />
+            <HelpTOCNode Title="AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_AutonomousSystemOrganization.htm" />
+            <HelpTOCNode Title="ConnectionType Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_ConnectionType.htm" />
+            <HelpTOCNode Title="Domain Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Domain.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IPAddress.htm" />
+            <HelpTOCNode Title="IsAnonymous Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymous.htm" />
+            <HelpTOCNode Title="IsAnonymousProxy Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousProxy.htm" />
+            <HelpTOCNode Title="IsAnonymousVpn Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsAnonymousVpn.htm" />
+            <HelpTOCNode Title="IsHostingProvider Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsHostingProvider.htm" />
+            <HelpTOCNode Title="IsLegitimateProxy Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsLegitimateProxy.htm" />
+            <HelpTOCNode Title="Isp Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Isp.htm" />
+            <HelpTOCNode Title="IsPublicProxy Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsPublicProxy.htm" />
+            <HelpTOCNode Title="IsSatelliteProvider Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsSatelliteProvider.htm" />
+            <HelpTOCNode Title="IsTorExitNode Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_IsTorExitNode.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Network.htm" />
+            <HelpTOCNode Title="Organization Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_Organization.htm" />
+            <HelpTOCNode Title="StaticIPScore Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_StaticIPScore.htm" />
+            <HelpTOCNode Title="UserCount Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_UserCount.htm" />
+            <HelpTOCNode Title="UserType Property " Url="html/P_MaxMind_GeoIP2_Model_Traits_UserType.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="abf98aaf-fce4-47f4-b91c-87290590cdb6" Title="Traits Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_Traits.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Model_Traits_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="5841f4f7-5d1f-413e-8863-0383209ad1ce" Title="WebServiceError Class" Url="html/T_MaxMind_GeoIP2_Model_WebServiceError.htm">
+          <HelpTOCNode Title="WebServiceError Constructor " Url="html/M_MaxMind_GeoIP2_Model_WebServiceError__ctor.htm" />
+          <HelpTOCNode Id="e963b4c1-855e-4c1a-9f7e-90e82d4ccb0d" Title="WebServiceError Properties" Url="html/Properties_T_MaxMind_GeoIP2_Model_WebServiceError.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Code.htm" />
+            <HelpTOCNode Title="Error Property " Url="html/P_MaxMind_GeoIP2_Model_WebServiceError_Error.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="WebServiceError Methods" Url="html/Methods_T_MaxMind_GeoIP2_Model_WebServiceError.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ca6b37e8-d6e8-499e-8ab9-e19ad865a6c3" Title="MaxMind.GeoIP2.Responses" Url="html/N_MaxMind_GeoIP2_Responses.htm">
+        <HelpTOCNode Id="3397eea0-a30f-4f8f-810a-86e46eee5a10" Title="AbstractCityResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm">
+          <HelpTOCNode Id="f9444176-4e83-4b47-b30c-370debbab11b" Title="AbstractCityResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCityResponse__ctor.htm">
+            <HelpTOCNode Title="AbstractCityResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse__ctor.htm" />
+            <HelpTOCNode Title="AbstractCityResponse Constructor (City, Continent, Country, Location, MaxMind, Postal, Country, RepresentedCountry, IEnumerable(Subdivision), Traits)" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="fc634a46-e1d0-499d-8bbf-e4e19daf00ca" Title="AbstractCityResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm">
+            <HelpTOCNode Title="City Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_City.htm" />
+            <HelpTOCNode Title="Location Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Location.htm" />
+            <HelpTOCNode Title="MostSpecificSubdivision Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_MostSpecificSubdivision.htm" />
+            <HelpTOCNode Title="Postal Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Postal.htm" />
+            <HelpTOCNode Title="Subdivisions Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCityResponse_Subdivisions.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bed76da6-ff4b-410b-b86e-40f2a7106b0a" Title="AbstractCityResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractCityResponse.htm">
+            <HelpTOCNode Title="SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_SetLocales.htm" />
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCityResponse_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ab56cc0a-4138-4fe7-ab2d-a960097cb4a1" Title="AbstractCountryResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm">
+          <HelpTOCNode Id="3de79173-3e37-402c-9e12-eebe79cccfde" Title="AbstractCountryResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_AbstractCountryResponse__ctor.htm">
+            <HelpTOCNode Title="AbstractCountryResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse__ctor.htm" />
+            <HelpTOCNode Title="AbstractCountryResponse Constructor (Continent, Country, MaxMind, Country, RepresentedCountry, Traits)" Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a6321919-bdb0-4a8a-b71b-61d392975fae" Title="AbstractCountryResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm">
+            <HelpTOCNode Title="Continent Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Continent.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Country.htm" />
+            <HelpTOCNode Title="MaxMind Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_MaxMind.htm" />
+            <HelpTOCNode Title="RegisteredCountry Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RegisteredCountry.htm" />
+            <HelpTOCNode Title="RepresentedCountry Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_RepresentedCountry.htm" />
+            <HelpTOCNode Title="Traits Property " Url="html/P_MaxMind_GeoIP2_Responses_AbstractCountryResponse_Traits.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="808bd932-8972-4205-b71d-a5dd3714c2f3" Title="AbstractCountryResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractCountryResponse.htm">
+            <HelpTOCNode Title="SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_SetLocales.htm" />
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractCountryResponse_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="2b50c3df-c8e7-401f-a536-202d71186a96" Title="AbstractResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AbstractResponse.htm">
+          <HelpTOCNode Title="AbstractResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse__ctor.htm" />
+          <HelpTOCNode Id="84f1b231-bde8-4ffa-81e9-ba1484c021dd" Title="AbstractResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AbstractResponse.htm">
+            <HelpTOCNode Title="SetLocales Method " Url="html/M_MaxMind_GeoIP2_Responses_AbstractResponse_SetLocales.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="675e7af6-1231-4bb2-a8a4-83038d325395" Title="AnonymousIPResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm">
+          <HelpTOCNode Id="dfd49005-6100-440c-89a5-7448857b4a69" Title="AnonymousIPResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_AnonymousIPResponse__ctor.htm">
+            <HelpTOCNode Title="AnonymousIPResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_AnonymousIPResponse__ctor.htm" />
+            <HelpTOCNode Title="AnonymousIPResponse Constructor (Boolean, Boolean, Boolean, Boolean, Boolean, String, Network)" Url="html/M_MaxMind_GeoIP2_Responses_AnonymousIPResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="6ddf5767-cc66-438f-9703-b0be728c9ac9" Title="AnonymousIPResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm">
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IPAddress.htm" />
+            <HelpTOCNode Title="IsAnonymous Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymous.htm" />
+            <HelpTOCNode Title="IsAnonymousVpn Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsAnonymousVpn.htm" />
+            <HelpTOCNode Title="IsHostingProvider Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsHostingProvider.htm" />
+            <HelpTOCNode Title="IsPublicProxy Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsPublicProxy.htm" />
+            <HelpTOCNode Title="IsTorExitNode Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_IsTorExitNode.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Responses_AnonymousIPResponse_Network.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AnonymousIPResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AnonymousIPResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="89c62944-68a8-4a98-a672-ee4c6602085d" Title="AsnResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_AsnResponse.htm">
+          <HelpTOCNode Id="b095858c-4751-43f5-861f-12766169ecca" Title="AsnResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_AsnResponse__ctor.htm">
+            <HelpTOCNode Title="AsnResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_AsnResponse__ctor.htm" />
+            <HelpTOCNode Title="AsnResponse Constructor (Nullable(Int64), String, String, Network)" Url="html/M_MaxMind_GeoIP2_Responses_AsnResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="1bf11b5f-483b-4cd7-8750-e0745e22225b" Title="AsnResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_AsnResponse.htm">
+            <HelpTOCNode Title="AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemNumber.htm" />
+            <HelpTOCNode Title="AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_AutonomousSystemOrganization.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_IPAddress.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Responses_AsnResponse_Network.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AsnResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_AsnResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ecc9c8d2-0fd9-4125-8189-fc02e79646c3" Title="CityResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_CityResponse.htm">
+          <HelpTOCNode Id="85654f07-0301-4590-8577-f7bc928c4e99" Title="CityResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_CityResponse__ctor.htm">
+            <HelpTOCNode Title="CityResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_CityResponse__ctor.htm" />
+            <HelpTOCNode Title="CityResponse Constructor (City, Continent, Country, Location, MaxMind, Postal, Country, RepresentedCountry, IEnumerable(Subdivision), Traits)" Url="html/M_MaxMind_GeoIP2_Responses_CityResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="CityResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+          <HelpTOCNode Title="CityResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_CityResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="aba90d3e-4eba-4f26-95d6-4bbb2684722d" Title="ConnectionTypeResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm">
+          <HelpTOCNode Id="710d8974-9be2-4ca8-9865-f2ab3831d666" Title="ConnectionTypeResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_ConnectionTypeResponse__ctor.htm">
+            <HelpTOCNode Title="ConnectionTypeResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_ConnectionTypeResponse__ctor.htm" />
+            <HelpTOCNode Title="ConnectionTypeResponse Constructor (String, String, Network)" Url="html/M_MaxMind_GeoIP2_Responses_ConnectionTypeResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0cac7b7e-ca8a-4f4f-b750-91df4908cd45" Title="ConnectionTypeResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm">
+            <HelpTOCNode Title="ConnectionType Property " Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_ConnectionType.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_IPAddress.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Responses_ConnectionTypeResponse_Network.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="ConnectionTypeResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_ConnectionTypeResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="b90efd74-4781-4ec8-862a-2c573a07c0f1" Title="CountryResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_CountryResponse.htm">
+          <HelpTOCNode Id="0b92a8f7-2fc9-4528-90d0-b51ef45db2da" Title="CountryResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_CountryResponse__ctor.htm">
+            <HelpTOCNode Title="CountryResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_CountryResponse__ctor.htm" />
+            <HelpTOCNode Title="CountryResponse Constructor (Continent, Country, MaxMind, Country, RepresentedCountry, Traits)" Url="html/M_MaxMind_GeoIP2_Responses_CountryResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="CountryResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+          <HelpTOCNode Title="CountryResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_CountryResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="8520181d-e30d-4fce-a87d-78c505cbde6a" Title="DomainResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_DomainResponse.htm">
+          <HelpTOCNode Id="6dcd28a1-90ca-44d8-89b8-80938de0d877" Title="DomainResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_DomainResponse__ctor.htm">
+            <HelpTOCNode Title="DomainResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_DomainResponse__ctor.htm" />
+            <HelpTOCNode Title="DomainResponse Constructor (String, String, Network)" Url="html/M_MaxMind_GeoIP2_Responses_DomainResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a2d32d7e-f0ed-495d-b02d-32e2e54e2299" Title="DomainResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_DomainResponse.htm">
+            <HelpTOCNode Title="Domain Property " Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_Domain.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_IPAddress.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Responses_DomainResponse_Network.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="DomainResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_DomainResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="18e2952a-3835-4cd0-ae38-adb2060e3568" Title="EnterpriseResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm">
+          <HelpTOCNode Title="EnterpriseResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_EnterpriseResponse__ctor.htm" />
+          <HelpTOCNode Title="EnterpriseResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+          <HelpTOCNode Title="EnterpriseResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_EnterpriseResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="0619b18f-58e6-4a89-a4d5-92550d6d1dbc" Title="InsightsResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_InsightsResponse.htm">
+          <HelpTOCNode Id="b906cdac-db8f-43c5-acee-152bce2d4f1a" Title="InsightsResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_InsightsResponse__ctor.htm">
+            <HelpTOCNode Title="InsightsResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_InsightsResponse__ctor.htm" />
+            <HelpTOCNode Title="InsightsResponse Constructor (City, Continent, Country, Location, MaxMind, Postal, Country, RepresentedCountry, IEnumerable(Subdivision), Traits)" Url="html/M_MaxMind_GeoIP2_Responses_InsightsResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InsightsResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+          <HelpTOCNode Title="InsightsResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_InsightsResponse.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="a4bd8613-f060-4ecb-928a-7895e44e22d4" Title="IspResponse Class" Url="html/T_MaxMind_GeoIP2_Responses_IspResponse.htm">
+          <HelpTOCNode Id="a86edb61-3e82-46d3-ab1f-3e3c35e8a0a6" Title="IspResponse Constructor " Url="html/Overload_MaxMind_GeoIP2_Responses_IspResponse__ctor.htm">
+            <HelpTOCNode Title="IspResponse Constructor " Url="html/M_MaxMind_GeoIP2_Responses_IspResponse__ctor.htm" />
+            <HelpTOCNode Title="IspResponse Constructor (Nullable(Int64), String, String, String, String, Network)" Url="html/M_MaxMind_GeoIP2_Responses_IspResponse__ctor_1.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="22b96bf3-990b-46a3-89c0-6d3e466ce698" Title="IspResponse Properties" Url="html/Properties_T_MaxMind_GeoIP2_Responses_IspResponse.htm">
+            <HelpTOCNode Title="AutonomousSystemNumber Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemNumber.htm" />
+            <HelpTOCNode Title="AutonomousSystemOrganization Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_AutonomousSystemOrganization.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_IPAddress.htm" />
+            <HelpTOCNode Title="Isp Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Isp.htm" />
+            <HelpTOCNode Title="Network Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Network.htm" />
+            <HelpTOCNode Title="Organization Property " Url="html/P_MaxMind_GeoIP2_Responses_IspResponse_Organization.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="IspResponse Methods" Url="html/Methods_T_MaxMind_GeoIP2_Responses_IspResponse.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="618fa192-82b1-4d94-9b3a-5aa7b190292a" Title="MaxMind.MinFraud Namespaces" Url="html/G_MaxMind_MinFraud.htm">
+      <HelpTOCNode Id="8d5fca07-47fc-4e67-ab7e-7d20fcb44627" Title="MaxMind.MinFraud" Url="html/N_MaxMind_MinFraud.htm">
+        <HelpTOCNode Id="4c721f6d-d3c0-451c-9ba7-9a299304afac" Title="WebServiceClient Class" Url="html/T_MaxMind_MinFraud_WebServiceClient.htm">
+          <HelpTOCNode Title="WebServiceClient Constructor " Url="html/M_MaxMind_MinFraud_WebServiceClient__ctor.htm" />
+          <HelpTOCNode Id="3be1186e-4722-4bb8-b3de-df3a6d1dfc7a" Title="WebServiceClient Methods" Url="html/Methods_T_MaxMind_MinFraud_WebServiceClient.htm">
+            <HelpTOCNode Title="Dispose Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_Dispose.htm" />
+            <HelpTOCNode Title="FactorsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_FactorsAsync.htm" />
+            <HelpTOCNode Title="InsightsAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_InsightsAsync.htm" />
+            <HelpTOCNode Title="ScoreAsync Method " Url="html/M_MaxMind_MinFraud_WebServiceClient_ScoreAsync.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="c52f48cd-a043-4f0b-919b-1fd9c35f2efe" Title="MaxMind.MinFraud.Exception" Url="html/N_MaxMind_MinFraud_Exception.htm">
+        <HelpTOCNode Id="3a6966f3-d03c-4e1f-9fc4-fe5c1666d4dd" Title="AuthenticationException Class" Url="html/T_MaxMind_MinFraud_Exception_AuthenticationException.htm">
+          <HelpTOCNode Id="92f9f861-f0e9-4dc9-af21-1173afeaa62b" Title="AuthenticationException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm">
+            <HelpTOCNode Title="AuthenticationException Constructor " Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor.htm" />
+            <HelpTOCNode Title="AuthenticationException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor_1.htm" />
+            <HelpTOCNode Title="AuthenticationException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_AuthenticationException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="AuthenticationException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+          <HelpTOCNode Title="AuthenticationException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_AuthenticationException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="113c8927-244f-4051-b75a-6bcebadefc7a" Title="HttpException Class" Url="html/T_MaxMind_MinFraud_Exception_HttpException.htm">
+          <HelpTOCNode Id="2bafb7e0-a72e-4d13-8ba5-7a75f1c75c44" Title="HttpException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_HttpException__ctor.htm">
+            <HelpTOCNode Title="HttpException Constructor " Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_1.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_2.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_3.htm" />
+            <HelpTOCNode Title="HttpException Constructor (String, HttpStatusCode, Uri, Exception)" Url="html/M_MaxMind_MinFraud_Exception_HttpException__ctor_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="966254fd-2caa-41b8-8cf6-0d1b9ddfc26a" Title="HttpException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_HttpException.htm">
+            <HelpTOCNode Title="HttpStatus Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_HttpStatus.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_MinFraud_Exception_HttpException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="HttpException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+          <HelpTOCNode Title="HttpException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_HttpException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="ed5d998b-8831-4933-a5d5-59f350393542" Title="InsufficientFundsException Class" Url="html/T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm">
+          <HelpTOCNode Id="d7a8b6d3-1655-47cc-a452-e6159600eb34" Title="InsufficientFundsException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm">
+            <HelpTOCNode Title="InsufficientFundsException Constructor " Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor.htm" />
+            <HelpTOCNode Title="InsufficientFundsException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor_1.htm" />
+            <HelpTOCNode Title="InsufficientFundsException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InsufficientFundsException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InsufficientFundsException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+          <HelpTOCNode Title="InsufficientFundsException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+          <HelpTOCNode Title="InsufficientFundsException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_InsufficientFundsException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6fb3757b-017a-4841-8df2-44e589f0d521" Title="InvalidRequestException Class" Url="html/T_MaxMind_MinFraud_Exception_InvalidRequestException.htm">
+          <HelpTOCNode Id="2a3c1d9c-cf7a-47f8-b726-e717af5b628f" Title="InvalidRequestException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm">
+            <HelpTOCNode Title="InvalidRequestException Constructor " Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_1.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_2.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, String, Uri)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_3.htm" />
+            <HelpTOCNode Title="InvalidRequestException Constructor (String, String, Uri, Exception)" Url="html/M_MaxMind_MinFraud_Exception_InvalidRequestException__ctor_4.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="df6a5971-ba5a-4d96-bc30-440f5390c417" Title="InvalidRequestException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Code.htm" />
+            <HelpTOCNode Title="Uri Property " Url="html/P_MaxMind_MinFraud_Exception_InvalidRequestException_Uri.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="InvalidRequestException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+          <HelpTOCNode Title="InvalidRequestException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_InvalidRequestException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="921b5df6-9918-47ed-a6a2-ffaa170b7fd1" Title="MinFraudException Class" Url="html/T_MaxMind_MinFraud_Exception_MinFraudException.htm">
+          <HelpTOCNode Id="cc127315-a8ee-43c1-b10a-2d9ae7d3fa62" Title="MinFraudException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm">
+            <HelpTOCNode Title="MinFraudException Constructor " Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor.htm" />
+            <HelpTOCNode Title="MinFraudException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor_1.htm" />
+            <HelpTOCNode Title="MinFraudException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_MinFraudException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="MinFraudException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+          <HelpTOCNode Title="MinFraudException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+          <HelpTOCNode Title="MinFraudException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_MinFraudException.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6f72c31e-2de9-41a6-8f74-3d850b2fccc8" Title="PermissionRequiredException Class" Url="html/T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm">
+          <HelpTOCNode Id="a2e78dc2-d127-4dae-922e-59eea944e3c0" Title="PermissionRequiredException Constructor " Url="html/Overload_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm">
+            <HelpTOCNode Title="PermissionRequiredException Constructor " Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor.htm" />
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String)" Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor_1.htm" />
+            <HelpTOCNode Title="PermissionRequiredException Constructor (String, Exception)" Url="html/M_MaxMind_MinFraud_Exception_PermissionRequiredException__ctor_2.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Title="PermissionRequiredException Properties" Url="html/Properties_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Methods" Url="html/Methods_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+          <HelpTOCNode Title="PermissionRequiredException Events" Url="html/Events_T_MaxMind_MinFraud_Exception_PermissionRequiredException.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="6ef6b4ad-864c-4698-94ea-b199765f58f8" Title="MaxMind.MinFraud.Request" Url="html/N_MaxMind_MinFraud_Request.htm">
+        <HelpTOCNode Id="f95fb0da-877d-4605-b3cf-90264121fac6" Title="Account Class" Url="html/T_MaxMind_MinFraud_Request_Account.htm">
+          <HelpTOCNode Title="Account Constructor " Url="html/M_MaxMind_MinFraud_Request_Account__ctor.htm" />
+          <HelpTOCNode Id="d1f9fdba-5183-46fd-bbe4-691fed6251b8" Title="Account Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Account.htm">
+            <HelpTOCNode Title="UserId Property " Url="html/P_MaxMind_MinFraud_Request_Account_UserId.htm" />
+            <HelpTOCNode Title="Username Property " Url="html/P_MaxMind_MinFraud_Request_Account_Username.htm" />
+            <HelpTOCNode Title="UsernameMD5 Property " Url="html/P_MaxMind_MinFraud_Request_Account_UsernameMD5.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4c3cf54c-cd6b-4139-97a3-4ca530109beb" Title="Account Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Account.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Account_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="30447b90-13a3-44cf-926b-6570b9440e9f" Title="Billing Class" Url="html/T_MaxMind_MinFraud_Request_Billing.htm">
+          <HelpTOCNode Title="Billing Constructor " Url="html/M_MaxMind_MinFraud_Request_Billing__ctor.htm" />
+          <HelpTOCNode Title="Billing Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Billing.htm" />
+          <HelpTOCNode Title="Billing Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Billing.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="f9adda20-de4b-4904-ad29-2fd8dc142d8a" Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm">
+          <HelpTOCNode Title="CreditCard Constructor " Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor.htm" />
+          <HelpTOCNode Id="ae0f5966-2785-45b0-b1bf-83c7a9be7b84" Title="CreditCard Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_CreditCard.htm">
+            <HelpTOCNode Title="AvsResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_AvsResult.htm" />
+            <HelpTOCNode Title="BankName Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankName.htm" />
+            <HelpTOCNode Title="BankPhoneCountryCode Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneCountryCode.htm" />
+            <HelpTOCNode Title="BankPhoneNumber Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_BankPhoneNumber.htm" />
+            <HelpTOCNode Title="CvvResult Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_CvvResult.htm" />
+            <HelpTOCNode Title="IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_IssuerIdNumber.htm" />
+            <HelpTOCNode Title="Last4Digits Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_Last4Digits.htm" />
+            <HelpTOCNode Title="Token Property " Url="html/P_MaxMind_MinFraud_Request_CreditCard_Token.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="9762307c-ff0b-4ec8-b3ea-dbcc727b7c93" Title="CreditCard Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CreditCard.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="019267eb-13a2-4e69-b42d-7f625e9cd44a" Title="CustomInputs Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs.htm">
+          <HelpTOCNode Title="CustomInputs Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6646c5be-1325-4b8a-87f4-8a71da32ee11" Title="CustomInputs.Builder Class" Url="html/T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm">
+          <HelpTOCNode Title="CustomInputs.Builder Constructor " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder__ctor.htm" />
+          <HelpTOCNode Id="8d3fb501-19db-4a81-ab5b-0df137617835" Title="Builder Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CustomInputs_Builder.htm">
+            <HelpTOCNode Id="e935aae2-967c-401c-87cb-8d875f0274e3" Title="Add Method " Url="html/Overload_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm">
+              <HelpTOCNode Title="Add Method (String, Boolean)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add.htm" />
+              <HelpTOCNode Title="Add Method (String, Double)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_1.htm" />
+              <HelpTOCNode Title="Add Method (String, Int32)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_2.htm" />
+              <HelpTOCNode Title="Add Method (String, Int64)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_3.htm" />
+              <HelpTOCNode Title="Add Method (String, Single)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_4.htm" />
+              <HelpTOCNode Title="Add Method (String, String)" Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Add_5.htm" />
+            </HelpTOCNode>
+            <HelpTOCNode Title="Build Method " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_Build.htm" />
+            <HelpTOCNode Title="GetEnumerator Method " Url="html/M_MaxMind_MinFraud_Request_CustomInputs_Builder_GetEnumerator.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3a3c6f9b-89c9-4339-af6f-1b023239566a" Title="Device Class" Url="html/T_MaxMind_MinFraud_Request_Device.htm">
+          <HelpTOCNode Title="Device Constructor " Url="html/M_MaxMind_MinFraud_Request_Device__ctor.htm" />
+          <HelpTOCNode Id="3207f335-bee9-4a84-a16a-54b8f87d6dca" Title="Device Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Device.htm">
+            <HelpTOCNode Title="AcceptLanguage Property " Url="html/P_MaxMind_MinFraud_Request_Device_AcceptLanguage.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Request_Device_IPAddress.htm" />
+            <HelpTOCNode Title="SessionAge Property " Url="html/P_MaxMind_MinFraud_Request_Device_SessionAge.htm" />
+            <HelpTOCNode Title="SessionId Property " Url="html/P_MaxMind_MinFraud_Request_Device_SessionId.htm" />
+            <HelpTOCNode Title="UserAgent Property " Url="html/P_MaxMind_MinFraud_Request_Device_UserAgent.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0b125211-0c5e-4758-9838-3394ad73b5c7" Title="Device Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Device.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Device_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="5b0ec979-b98f-4aa9-850b-dc16c45b84b6" Title="Email Class" Url="html/T_MaxMind_MinFraud_Request_Email.htm">
+          <HelpTOCNode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Request_Email__ctor.htm" />
+          <HelpTOCNode Id="8849fb04-d3b1-456c-b662-06ed32411414" Title="Email Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Email.htm">
+            <HelpTOCNode Title="Address Property " Url="html/P_MaxMind_MinFraud_Request_Email_Address.htm" />
+            <HelpTOCNode Title="AddressMD5 Property " Url="html/P_MaxMind_MinFraud_Request_Email_AddressMD5.htm" />
+            <HelpTOCNode Title="Domain Property " Url="html/P_MaxMind_MinFraud_Request_Email_Domain.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="b7e5d3ec-c367-4d41-ad39-9cab669bb7b6" Title="Email Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Email.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Email_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="9b8e5ffc-a52a-44b9-b615-3373d1338e42" Title="Event Class" Url="html/T_MaxMind_MinFraud_Request_Event.htm">
+          <HelpTOCNode Title="Event Constructor " Url="html/M_MaxMind_MinFraud_Request_Event__ctor.htm" />
+          <HelpTOCNode Id="afebafa6-ed0e-441a-a3fb-c4d39f8126e6" Title="Event Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Event.htm">
+            <HelpTOCNode Title="ShopId Property " Url="html/P_MaxMind_MinFraud_Request_Event_ShopId.htm" />
+            <HelpTOCNode Title="Time Property " Url="html/P_MaxMind_MinFraud_Request_Event_Time.htm" />
+            <HelpTOCNode Title="TransactionId Property " Url="html/P_MaxMind_MinFraud_Request_Event_TransactionId.htm" />
+            <HelpTOCNode Title="Type Property " Url="html/P_MaxMind_MinFraud_Request_Event_Type.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="4bc87e95-5d48-46db-b101-1bcbfaad35c6" Title="Event Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Event.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Event_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="EventType Enumeration" Url="html/T_MaxMind_MinFraud_Request_EventType.htm" />
+        <HelpTOCNode Id="f6a830e0-8456-4147-86be-069fa52de4a6" Title="Location Class" Url="html/T_MaxMind_MinFraud_Request_Location.htm">
+          <HelpTOCNode Title="Location Constructor " Url="html/M_MaxMind_MinFraud_Request_Location__ctor.htm" />
+          <HelpTOCNode Id="2cbac6fa-2944-4906-9b2b-c5ee3df6de84" Title="Location Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Location.htm">
+            <HelpTOCNode Title="Address Property " Url="html/P_MaxMind_MinFraud_Request_Location_Address.htm" />
+            <HelpTOCNode Title="Address2 Property " Url="html/P_MaxMind_MinFraud_Request_Location_Address2.htm" />
+            <HelpTOCNode Title="City Property " Url="html/P_MaxMind_MinFraud_Request_Location_City.htm" />
+            <HelpTOCNode Title="Company Property " Url="html/P_MaxMind_MinFraud_Request_Location_Company.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Request_Location_Country.htm" />
+            <HelpTOCNode Title="FirstName Property " Url="html/P_MaxMind_MinFraud_Request_Location_FirstName.htm" />
+            <HelpTOCNode Title="LastName Property " Url="html/P_MaxMind_MinFraud_Request_Location_LastName.htm" />
+            <HelpTOCNode Title="PhoneCountryCode Property " Url="html/P_MaxMind_MinFraud_Request_Location_PhoneCountryCode.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Request_Location_PhoneNumber.htm" />
+            <HelpTOCNode Title="Postal Property " Url="html/P_MaxMind_MinFraud_Request_Location_Postal.htm" />
+            <HelpTOCNode Title="Region Property " Url="html/P_MaxMind_MinFraud_Request_Location_Region.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="94db3492-0e55-46df-ada0-fadbd36ce460" Title="Location Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Location.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Location_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="0e148a7a-54c7-4228-9a44-9928a47b6e5a" Title="Order Class" Url="html/T_MaxMind_MinFraud_Request_Order.htm">
+          <HelpTOCNode Title="Order Constructor " Url="html/M_MaxMind_MinFraud_Request_Order__ctor.htm" />
+          <HelpTOCNode Id="69cf2a9e-148a-436e-9f26-4d2986df5f7c" Title="Order Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Order.htm">
+            <HelpTOCNode Title="AffiliateId Property " Url="html/P_MaxMind_MinFraud_Request_Order_AffiliateId.htm" />
+            <HelpTOCNode Title="Amount Property " Url="html/P_MaxMind_MinFraud_Request_Order_Amount.htm" />
+            <HelpTOCNode Title="Currency Property " Url="html/P_MaxMind_MinFraud_Request_Order_Currency.htm" />
+            <HelpTOCNode Title="DiscountCode Property " Url="html/P_MaxMind_MinFraud_Request_Order_DiscountCode.htm" />
+            <HelpTOCNode Title="HasGiftMessage Property " Url="html/P_MaxMind_MinFraud_Request_Order_HasGiftMessage.htm" />
+            <HelpTOCNode Title="IsGift Property " Url="html/P_MaxMind_MinFraud_Request_Order_IsGift.htm" />
+            <HelpTOCNode Title="ReferrerUri Property " Url="html/P_MaxMind_MinFraud_Request_Order_ReferrerUri.htm" />
+            <HelpTOCNode Title="SubaffiliateId Property " Url="html/P_MaxMind_MinFraud_Request_Order_SubaffiliateId.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ef8643e4-b8bb-4d16-ba11-a4f0a548fc45" Title="Order Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Order.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Order_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="52ddeeb8-4490-4315-9eb1-e6c0999277cb" Title="Payment Class" Url="html/T_MaxMind_MinFraud_Request_Payment.htm">
+          <HelpTOCNode Title="Payment Constructor " Url="html/M_MaxMind_MinFraud_Request_Payment__ctor.htm" />
+          <HelpTOCNode Id="715b1bde-2db7-49b6-94ac-27b868a5a7d3" Title="Payment Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Payment.htm">
+            <HelpTOCNode Title="DeclineCode Property " Url="html/P_MaxMind_MinFraud_Request_Payment_DeclineCode.htm" />
+            <HelpTOCNode Title="Processor Property " Url="html/P_MaxMind_MinFraud_Request_Payment_Processor.htm" />
+            <HelpTOCNode Title="WasAuthorized Property " Url="html/P_MaxMind_MinFraud_Request_Payment_WasAuthorized.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c9932e19-780c-491b-83a2-626bd38b1e5f" Title="Payment Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Payment.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Payment_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="PaymentProcessor Enumeration" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
+        <HelpTOCNode Id="7b8c5d8a-81fd-4c60-ba70-8a74d71c473b" Title="Shipping Class" Url="html/T_MaxMind_MinFraud_Request_Shipping.htm">
+          <HelpTOCNode Title="Shipping Constructor " Url="html/M_MaxMind_MinFraud_Request_Shipping__ctor.htm" />
+          <HelpTOCNode Id="55ee028a-5490-4a53-8848-7b6933df44e0" Title="Shipping Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Shipping.htm">
+            <HelpTOCNode Title="DeliverySpeed Property " Url="html/P_MaxMind_MinFraud_Request_Shipping_DeliverySpeed.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d42fcd90-07a5-4888-b58f-7ddb90794aee" Title="Shipping Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Shipping.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Shipping_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Title="ShippingDeliverySpeed Enumeration" Url="html/T_MaxMind_MinFraud_Request_ShippingDeliverySpeed.htm" />
+        <HelpTOCNode Id="aa235d06-5ca5-4767-820a-244fbeee9856" Title="ShoppingCartItem Class" Url="html/T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+          <HelpTOCNode Title="ShoppingCartItem Constructor " Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem__ctor.htm" />
+          <HelpTOCNode Id="0f061112-26c6-4b79-a597-eb007c2efaed" Title="ShoppingCartItem Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+            <HelpTOCNode Title="Category Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Category.htm" />
+            <HelpTOCNode Title="ItemId Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_ItemId.htm" />
+            <HelpTOCNode Title="Price Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Price.htm" />
+            <HelpTOCNode Title="Quantity Property " Url="html/P_MaxMind_MinFraud_Request_ShoppingCartItem_Quantity.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f8f0997c-28b4-4163-abdf-21a51e7e5e25" Title="ShoppingCartItem Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_ShoppingCartItem.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_ShoppingCartItem_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="3b6e0ae3-d40a-4afd-8588-0d76cd9b5f76" Title="Transaction Class" Url="html/T_MaxMind_MinFraud_Request_Transaction.htm">
+          <HelpTOCNode Title="Transaction Constructor " Url="html/M_MaxMind_MinFraud_Request_Transaction__ctor.htm" />
+          <HelpTOCNode Id="33660496-b349-41e6-89fc-9e6a096c1b2a" Title="Transaction Properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Transaction.htm">
+            <HelpTOCNode Title="Account Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Account.htm" />
+            <HelpTOCNode Title="Billing Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Billing.htm" />
+            <HelpTOCNode Title="CreditCard Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_CreditCard.htm" />
+            <HelpTOCNode Title="CustomInputs Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_CustomInputs.htm" />
+            <HelpTOCNode Title="Device Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Device.htm" />
+            <HelpTOCNode Title="Email Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Email.htm" />
+            <HelpTOCNode Title="Event Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Event.htm" />
+            <HelpTOCNode Title="Order Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Order.htm" />
+            <HelpTOCNode Title="Payment Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Payment.htm" />
+            <HelpTOCNode Title="Shipping Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_Shipping.htm" />
+            <HelpTOCNode Title="ShoppingCart Property " Url="html/P_MaxMind_MinFraud_Request_Transaction_ShoppingCart.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c3db742a-5e39-4571-b65c-9226954aea23" Title="Transaction Methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Transaction.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Request_Transaction_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="5ef64717-6c60-438a-a62a-fadf271d04ea" Title="MaxMind.MinFraud.Response" Url="html/N_MaxMind_MinFraud_Response.htm">
+        <HelpTOCNode Id="262969fc-d172-4d02-81bf-e7506ced49b6" Title="Address Class" Url="html/T_MaxMind_MinFraud_Response_Address.htm">
+          <HelpTOCNode Title="Address Constructor " Url="html/M_MaxMind_MinFraud_Response_Address__ctor.htm" />
+          <HelpTOCNode Id="ad34a637-818b-4e1e-8b15-6e5022f824fd" Title="Address Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Address.htm">
+            <HelpTOCNode Title="DistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Address_DistanceToIPLocation.htm" />
+            <HelpTOCNode Title="IsInIPCountry Property " Url="html/P_MaxMind_MinFraud_Response_Address_IsInIPCountry.htm" />
+            <HelpTOCNode Title="IsPostalInCity Property " Url="html/P_MaxMind_MinFraud_Response_Address_IsPostalInCity.htm" />
+            <HelpTOCNode Title="Latitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Latitude.htm" />
+            <HelpTOCNode Title="Longitude Property " Url="html/P_MaxMind_MinFraud_Response_Address_Longitude.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="23628471-cf9b-4971-8db7-fcb3f8806eb5" Title="Address Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Address.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Address_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="bc8a60df-fe8f-4c2d-8209-739bdd10dc6d" Title="BillingAddress Class" Url="html/T_MaxMind_MinFraud_Response_BillingAddress.htm">
+          <HelpTOCNode Title="BillingAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_BillingAddress__ctor.htm" />
+          <HelpTOCNode Title="BillingAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+          <HelpTOCNode Title="BillingAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_BillingAddress.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="029ec6d8-0eff-4254-859c-0d7092a6f132" Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm">
+          <HelpTOCNode Title="CreditCard Constructor " Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
+          <HelpTOCNode Id="961b934d-016b-4f7b-90a6-8b80de9e679f" Title="CreditCard Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_CreditCard.htm">
+            <HelpTOCNode Title="Brand Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Brand.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Country.htm" />
+            <HelpTOCNode Title="IsIssuedInBillingAddressCountry Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsIssuedInBillingAddressCountry.htm" />
+            <HelpTOCNode Title="IsPrepaid Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsPrepaid.htm" />
+            <HelpTOCNode Title="Issuer Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Issuer.htm" />
+            <HelpTOCNode Title="IsVirtual Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_IsVirtual.htm" />
+            <HelpTOCNode Title="Type Property " Url="html/P_MaxMind_MinFraud_Response_CreditCard_Type.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="c4da25d8-de76-4491-8fdd-f53c73fe545f" Title="CreditCard Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_CreditCard.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_CreditCard_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="64d901b9-cd8f-46ad-ab80-e54ac262d708" Title="Device Class" Url="html/T_MaxMind_MinFraud_Response_Device.htm">
+          <HelpTOCNode Title="Device Constructor " Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
+          <HelpTOCNode Id="610d733d-b8ea-442d-8827-3dcefa1abb45" Title="Device Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Device.htm">
+            <HelpTOCNode Title="Confidence Property " Url="html/P_MaxMind_MinFraud_Response_Device_Confidence.htm" />
+            <HelpTOCNode Title="Id Property " Url="html/P_MaxMind_MinFraud_Response_Device_Id.htm" />
+            <HelpTOCNode Title="LastSeen Property " Url="html/P_MaxMind_MinFraud_Response_Device_LastSeen.htm" />
+            <HelpTOCNode Title="LocalTime Property " Url="html/P_MaxMind_MinFraud_Response_Device_LocalTime.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="67dece9d-496f-44ff-bf51-8bd42d6cf834" Title="Device Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Device.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Device_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="775f19fe-da70-4c58-8c8b-929158108d43" Title="Disposition Class" Url="html/T_MaxMind_MinFraud_Response_Disposition.htm">
+          <HelpTOCNode Title="Disposition Constructor " Url="html/M_MaxMind_MinFraud_Response_Disposition__ctor.htm" />
+          <HelpTOCNode Id="1ac12c27-bb16-4880-a7a2-11f68ff1989f" Title="Disposition Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Disposition.htm">
+            <HelpTOCNode Title="Action Property " Url="html/P_MaxMind_MinFraud_Response_Disposition_Action.htm" />
+            <HelpTOCNode Title="Reason Property " Url="html/P_MaxMind_MinFraud_Response_Disposition_Reason.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ec11349e-5da1-4ca1-95d8-03731cf9a0b3" Title="Disposition Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Disposition.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Disposition_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="7a1e5643-bcdd-4410-94a3-ad66a8a3b226" Title="Email Class" Url="html/T_MaxMind_MinFraud_Response_Email.htm">
+          <HelpTOCNode Title="Email Constructor " Url="html/M_MaxMind_MinFraud_Response_Email__ctor.htm" />
+          <HelpTOCNode Id="21430014-7ff6-4446-bf03-2494dcf076b9" Title="Email Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Email.htm">
+            <HelpTOCNode Title="Domain Property " Url="html/P_MaxMind_MinFraud_Response_Email_Domain.htm" />
+            <HelpTOCNode Title="FirstSeen Property " Url="html/P_MaxMind_MinFraud_Response_Email_FirstSeen.htm" />
+            <HelpTOCNode Title="IsDisposable Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsDisposable.htm" />
+            <HelpTOCNode Title="IsFree Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsFree.htm" />
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_Email_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bd7d9ace-87aa-42fd-a298-e15e11f35890" Title="Email Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Email.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Email_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="700c4d2d-9349-4ed3-a138-5a7dc0b43a6c" Title="EmailDomain Class" Url="html/T_MaxMind_MinFraud_Response_EmailDomain.htm">
+          <HelpTOCNode Title="EmailDomain Constructor " Url="html/M_MaxMind_MinFraud_Response_EmailDomain__ctor.htm" />
+          <HelpTOCNode Id="413163ed-0a67-4e77-a5ba-457c62e7df25" Title="EmailDomain Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_EmailDomain.htm">
+            <HelpTOCNode Title="FirstSeen Property " Url="html/P_MaxMind_MinFraud_Response_EmailDomain_FirstSeen.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="d9e21f20-cb06-4875-b820-8e82e5678d3a" Title="EmailDomain Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_EmailDomain.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_EmailDomain_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="0ae20c30-3387-4ba4-b4f9-b478bf922093" Title="Factors Class" Url="html/T_MaxMind_MinFraud_Response_Factors.htm">
+          <HelpTOCNode Title="Factors Constructor " Url="html/M_MaxMind_MinFraud_Response_Factors__ctor.htm" />
+          <HelpTOCNode Id="d1212464-6edc-4952-b634-2cede09f866b" Title="Factors Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Factors.htm">
+            <HelpTOCNode Title="Subscores Property " Url="html/P_MaxMind_MinFraud_Response_Factors_Subscores.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="ba9b7a7c-ee05-4425-b78e-cb5160f6660e" Title="Factors Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Factors.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Factors_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="ac1a541c-5f2d-4817-90af-455d8a52b2ab" Title="GeoIP2Country Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+          <HelpTOCNode Title="GeoIP2Country Constructor " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country__ctor.htm" />
+          <HelpTOCNode Id="b40f8c44-8c99-49b3-ba67-11bc5320dc94" Title="GeoIP2Country Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Country_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="185872c7-5450-4398-9de4-9120e2c022a4" Title="GeoIP2Country Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Country.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Country_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="85730d77-9ebc-4c1a-9576-1a8770c63faf" Title="GeoIP2Location Class" Url="html/T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+          <HelpTOCNode Title="GeoIP2Location Constructor " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location__ctor.htm" />
+          <HelpTOCNode Id="d5841a45-f547-45cd-a693-3a58837f12ab" Title="GeoIP2Location Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+            <HelpTOCNode Title="LocalTime Property " Url="html/P_MaxMind_MinFraud_Response_GeoIP2Location_LocalTime.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="476416d4-71a1-4bb1-818e-68b29dee4995" Title="GeoIP2Location Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_GeoIP2Location.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_GeoIP2Location_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="f43a67b2-252a-4222-a971-81729b62a230" Title="IIPAddress Interface" Url="html/T_MaxMind_MinFraud_Response_IIPAddress.htm">
+          <HelpTOCNode Id="852a6f90-f702-4e2b-a9d1-a4d977680ece" Title="IIPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IIPAddress.htm">
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_IIPAddress_Risk.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="e333cde3-7373-48f5-bd5c-c6f19baff880" Title="Insights Class" Url="html/T_MaxMind_MinFraud_Response_Insights.htm">
+          <HelpTOCNode Title="Insights Constructor " Url="html/M_MaxMind_MinFraud_Response_Insights__ctor.htm" />
+          <HelpTOCNode Id="12033757-5ad6-46f6-83f5-088d0085da0b" Title="Insights Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Insights.htm">
+            <HelpTOCNode Title="BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_BillingAddress.htm" />
+            <HelpTOCNode Title="CreditCard Property " Url="html/P_MaxMind_MinFraud_Response_Insights_CreditCard.htm" />
+            <HelpTOCNode Title="Device Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Device.htm" />
+            <HelpTOCNode Title="Email Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Email.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_IPAddress.htm" />
+            <HelpTOCNode Title="ShippingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Insights_ShippingAddress.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="0a735b49-5d76-48a7-8ae1-023f76f27a08" Title="Insights Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Insights.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Insights_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="8367dea0-450f-4a97-a43c-ed1f43eeb1c3" Title="IPAddress Class" Url="html/T_MaxMind_MinFraud_Response_IPAddress.htm">
+          <HelpTOCNode Title="IPAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_IPAddress__ctor.htm" />
+          <HelpTOCNode Id="cf7ea898-53cf-4736-8626-6900bfb1f4a5" Title="IPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_IPAddress.htm">
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Country.htm" />
+            <HelpTOCNode Title="Location Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Location.htm" />
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_IPAddress_Risk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f735785a-a202-4231-afaa-37ca60f7f935" Title="IPAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_IPAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_IPAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="1e476096-33d8-4053-a50f-7396f579ff45" Title="Issuer Class" Url="html/T_MaxMind_MinFraud_Response_Issuer.htm">
+          <HelpTOCNode Title="Issuer Constructor " Url="html/M_MaxMind_MinFraud_Response_Issuer__ctor.htm" />
+          <HelpTOCNode Id="50185b8c-f0a2-4e36-8e55-c3c82ed82cfe" Title="Issuer Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Issuer.htm">
+            <HelpTOCNode Title="MatchesProvidedName Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedName.htm" />
+            <HelpTOCNode Title="MatchesProvidedPhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_MatchesProvidedPhoneNumber.htm" />
+            <HelpTOCNode Title="Name Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_Name.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Issuer_PhoneNumber.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="da334d2b-1bae-4d76-85c1-010fdfb90093" Title="Issuer Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Issuer.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Issuer_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="2a450329-6597-4235-a9a0-07e80a7f6616" Title="Score Class" Url="html/T_MaxMind_MinFraud_Response_Score.htm">
+          <HelpTOCNode Title="Score Constructor " Url="html/M_MaxMind_MinFraud_Response_Score__ctor.htm" />
+          <HelpTOCNode Id="226f0b19-3e18-444c-a559-d65893f8ae2a" Title="Score Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Score.htm">
+            <HelpTOCNode Title="Disposition Property " Url="html/P_MaxMind_MinFraud_Response_Score_Disposition.htm" />
+            <HelpTOCNode Title="FundsRemaining Property " Url="html/P_MaxMind_MinFraud_Response_Score_FundsRemaining.htm" />
+            <HelpTOCNode Title="Id Property " Url="html/P_MaxMind_MinFraud_Response_Score_Id.htm" />
+            <HelpTOCNode Title="IPAddress Property " Url="html/P_MaxMind_MinFraud_Response_Score_IPAddress.htm" />
+            <HelpTOCNode Title="QueriesRemaining Property " Url="html/P_MaxMind_MinFraud_Response_Score_QueriesRemaining.htm" />
+            <HelpTOCNode Title="RiskScore Property " Url="html/P_MaxMind_MinFraud_Response_Score_RiskScore.htm" />
+            <HelpTOCNode Title="Warnings Property " Url="html/P_MaxMind_MinFraud_Response_Score_Warnings.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="a25a4b8f-c364-4f88-a609-588ecd6aca10" Title="Score Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Score.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Score_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="1dda1d9f-cc97-490c-a915-00dcd491abdb" Title="ScoreIPAddress Class" Url="html/T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+          <HelpTOCNode Title="ScoreIPAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress__ctor.htm" />
+          <HelpTOCNode Id="3c89b2cd-d863-46ad-97b3-548e35fdece3" Title="ScoreIPAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+            <HelpTOCNode Title="Risk Property " Url="html/P_MaxMind_MinFraud_Response_ScoreIPAddress_Risk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="bcee2f17-e5e8-4aba-b654-2303d266a1a1" Title="ScoreIPAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ScoreIPAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_ScoreIPAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="10f34e54-c177-4855-a035-476c639896d2" Title="ShippingAddress Class" Url="html/T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+          <HelpTOCNode Title="ShippingAddress Constructor " Url="html/M_MaxMind_MinFraud_Response_ShippingAddress__ctor.htm" />
+          <HelpTOCNode Id="bdf8f3dc-c48d-45af-a170-bb04bb9133c0" Title="ShippingAddress Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+            <HelpTOCNode Title="DistanceToBillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_DistanceToBillingAddress.htm" />
+            <HelpTOCNode Title="IsHighRisk Property " Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_IsHighRisk.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="f53f9a0a-7ff6-40a1-8c1e-656fe3bf724a" Title="ShippingAddress Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_ShippingAddress.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_ShippingAddress_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="005ee3ad-350c-4819-ad13-f6cd40edd6a4" Title="Subscores Class" Url="html/T_MaxMind_MinFraud_Response_Subscores.htm">
+          <HelpTOCNode Title="Subscores Constructor " Url="html/M_MaxMind_MinFraud_Response_Subscores__ctor.htm" />
+          <HelpTOCNode Id="f3f255a9-32d3-4683-afed-bf0fbdc51fbf" Title="Subscores Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Subscores.htm">
+            <HelpTOCNode Title="AvsResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_AvsResult.htm" />
+            <HelpTOCNode Title="BillingAddress Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddress.htm" />
+            <HelpTOCNode Title="BillingAddressDistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_BillingAddressDistanceToIPLocation.htm" />
+            <HelpTOCNode Title="Browser Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Browser.htm" />
+            <HelpTOCNode Title="Chargeback Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Chargeback.htm" />
+            <HelpTOCNode Title="Country Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_Country.htm" />
+            <HelpTOCNode Title="CountryMismatch Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_CountryMismatch.htm" />
+            <HelpTOCNode Title="CvvResult Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_CvvResult.htm" />
+            <HelpTOCNode Title="EmailAddress Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailAddress.htm" />
+            <HelpTOCNode Title="EmailDomain Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailDomain.htm" />
+            <HelpTOCNode Title="EmailTenure Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_EmailTenure.htm" />
+            <HelpTOCNode Title="IPTenure Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_IPTenure.htm" />
+            <HelpTOCNode Title="IssuerIdNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_IssuerIdNumber.htm" />
+            <HelpTOCNode Title="OrderAmount Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_OrderAmount.htm" />
+            <HelpTOCNode Title="PhoneNumber Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_PhoneNumber.htm" />
+            <HelpTOCNode Title="ShippingAddressDistanceToIPLocation Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_ShippingAddressDistanceToIPLocation.htm" />
+            <HelpTOCNode Title="TimeOfDay Property " Url="html/P_MaxMind_MinFraud_Response_Subscores_TimeOfDay.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="e76e7399-fcdc-4f21-8582-94adda48aa94" Title="Subscores Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Subscores.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Subscores_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+        <HelpTOCNode Id="a8002214-1240-4fcd-98e1-d16bb709e600" Title="Warning Class" Url="html/T_MaxMind_MinFraud_Response_Warning.htm">
+          <HelpTOCNode Title="Warning Constructor " Url="html/M_MaxMind_MinFraud_Response_Warning__ctor.htm" />
+          <HelpTOCNode Id="ee605063-5826-4287-9349-358457bbcbb7" Title="Warning Properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Warning.htm">
+            <HelpTOCNode Title="Code Property " Url="html/P_MaxMind_MinFraud_Response_Warning_Code.htm" />
+            <HelpTOCNode Title="InputPointer Property " Url="html/P_MaxMind_MinFraud_Response_Warning_InputPointer.htm" />
+            <HelpTOCNode Title="Message Property " Url="html/P_MaxMind_MinFraud_Response_Warning_Message.htm" />
+          </HelpTOCNode>
+          <HelpTOCNode Id="26988270-06d7-45b6-a90f-84d86e9d95b7" Title="Warning Methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Warning.htm">
+            <HelpTOCNode Title="ToString Method " Url="html/M_MaxMind_MinFraud_Response_Warning_ToString.htm" />
+          </HelpTOCNode>
+        </HelpTOCNode>
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
