@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.4.0
+2.4.0 (2020-03-26)
 ------------------
 
 * Added support for the `/email/domain/first_seen` output in minFraud Insights
