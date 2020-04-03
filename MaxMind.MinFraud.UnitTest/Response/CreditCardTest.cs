@@ -26,6 +26,10 @@ namespace MaxMind.MinFraud.UnitTest.Response
                     "US"
                 },
                 {
+                    "is_business",
+                    true
+                },
+                {
                     "is_issued_in_billing_address_country",
                     true
                 },
@@ -44,6 +48,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             Assert.Equal("Bank", cc.Issuer.Name);
             Assert.Equal("US", cc.Country);
+            Assert.True(cc.IsBusiness);
             Assert.True(cc.IsPrepaid);
             Assert.True(cc.IsIssuedInBillingAddressCountry);
             Assert.True(cc.IsVirtual);
