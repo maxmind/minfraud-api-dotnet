@@ -1,6 +1,15 @@
 Release Notes
 =============
 
+2.5.0
+------------------
+
+* Added support for the new credit card output `/credit_card/is_business`.
+  This indicates whether the card is a business card. It may be accessed via
+  `response.CreditCard.IsBusiness` on the minFraud Insights and Factors
+  response objects.
+
+
 2.4.0 (2020-03-26)
 ------------------
 

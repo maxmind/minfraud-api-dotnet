@@ -25,6 +25,12 @@ namespace MaxMind.MinFraud.Response
         public string? Country { get; internal set; }
 
         /// <summary>
+        /// This property is <c>true</c> if the card is a business card.
+        /// </summary>
+        [JsonProperty("is_business")]
+        public bool? IsBusiness { get; internal set; }
+
+        /// <summary>
         /// This field is <c>true</c> if the country of the billing address
         /// matches the country of the majority of customers using that IIN.
         /// In cases where the location of customers is highly mixed, the
@@ -63,7 +69,7 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"{nameof(Brand)}: {Brand}, {nameof(Country)}: {Country}, {nameof(IsIssuedInBillingAddressCountry)}: {IsIssuedInBillingAddressCountry}, {nameof(IsPrepaid)}: {IsPrepaid}, {nameof(IsVirtual)}: {IsVirtual}, {nameof(Issuer)}: {Issuer}, {nameof(Type)}: {Type}";
+            return $"{nameof(Brand)}: {Brand}, {nameof(Country)}: {Country}, {nameof(IsBusiness)}: {IsBusiness}, {nameof(IsIssuedInBillingAddressCountry)}: {IsIssuedInBillingAddressCountry}, {nameof(IsPrepaid)}: {IsPrepaid}, {nameof(IsVirtual)}: {IsVirtual}, {nameof(Issuer)}: {Issuer}, {nameof(Type)}: {Type}";
         }
     }
 }
