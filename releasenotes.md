@@ -9,7 +9,6 @@ Release Notes
   `response.CreditCard.IsBusiness` on the minFraud Insights and Factors
   response objects.
 
-
 2.4.0 (2020-03-26)
 ------------------
 
