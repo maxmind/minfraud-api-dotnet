@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.5.0
+2.5.0 (2020-04-06)
 ------------------
 
 * Added support for the new credit card output `/credit_card/is_business`.
