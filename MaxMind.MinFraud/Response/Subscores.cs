@@ -41,7 +41,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// Individualized risk of chargeback for the given IP address on
-        /// your account and shop ID.This is only available to users sending
+        /// your account and shop ID. This is only available to users sending
         /// chargeback data to MaxMind. If present, this is a value in the
         /// range 0.01 to 99.
         /// </summary>

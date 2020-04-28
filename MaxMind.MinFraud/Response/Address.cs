@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Response
     {
         /// <summary>
         /// This property is <c>true</c> if the address is in the
-        /// IP country.The property is <c>false</c> when the address is not in the IP
+        /// IP country. The property is <c>false</c> when the address is not in the IP
         /// country. If the address could not be parsed or was not provided or if the
         /// IP address could not be geolocated, the property will be <c>null</c>.
         /// </summary>
@@ -18,7 +18,7 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// This property is <c>true</c> if the postal code
-        /// provided with the address is in the city for the address.The property is
+        /// provided with the address is in the city for the address. The property is
         /// <c>false</c> when the postal code is not in the city. If the address was
         /// not provided or could not be parsed, the property will be <c>null</c>.
         /// </summary>
