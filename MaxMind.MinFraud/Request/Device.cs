@@ -94,7 +94,7 @@ namespace MaxMind.MinFraud.Request
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"IPAddress: {IPAddress}, UserAgent: {UserAgent}, AcceptLanguage: {AcceptLanguage}";
+            return $"IPAddress: {IPAddress}, UserAgent: {UserAgent}, AcceptLanguage: {AcceptLanguage}, SessionAge: {SessionAge}, SessionId: {SessionId}";
         }
     }
 }
