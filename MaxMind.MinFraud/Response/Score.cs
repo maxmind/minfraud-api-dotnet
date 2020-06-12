@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
     public class Score
     {
         [JsonProperty("warnings")]
-        private List<Warning> _warnings = new List<Warning>();
+        private readonly List<Warning> _warnings = new List<Warning>();
 
         /// <summary>
         /// This object contains information about the disposition set by

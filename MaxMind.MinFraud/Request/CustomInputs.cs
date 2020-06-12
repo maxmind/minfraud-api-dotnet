@@ -33,7 +33,7 @@ namespace MaxMind.MinFraud.Request
 
             // We do the builder this way so that we don't have to
             // make a copy of the dictionary after construction
-            private CustomInputs _customInputs = new CustomInputs();
+            private readonly CustomInputs _customInputs = new CustomInputs();
             private bool alreadyBuilt = false;
 
             /// <summary>

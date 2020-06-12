@@ -325,7 +325,7 @@ namespace MaxMind.MinFraud.UnitTest
             await client.InsightsAsync(CreateFullRequest());
         }
 
-        private WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
+        private static WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
             string responseContent)
         {
             var content = new StringContent(responseContent);
