@@ -172,7 +172,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
 
         public static bool VerifyRequestFor(string service, HttpRequestMessage message)
         {
-            var requestBody = ReadJsonFile("full-request");
+            var requestFile = service == "transactions/report" ? "report-request" : "full-request";
+            var requestBody = ReadJsonFile(requestFile);
 
             if (message.Content.Headers.ContentType.ToString() != "application/json; charset=utf-8")
             {

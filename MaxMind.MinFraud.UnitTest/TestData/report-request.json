@@ -1,0 +1,9 @@
+{
+  "ip_address": "1.1.1.1",
+  "tag": "suspected_fraud",
+  "chargeback_code": "AA",
+  "maxmind_id": "a1b2c3d4",
+  "minfraud_id": "9194a1ac-0a81-475a-bf81-9bf8543a3f8f",
+  "notes": "note",
+  "transaction_id": "txn1"
+}

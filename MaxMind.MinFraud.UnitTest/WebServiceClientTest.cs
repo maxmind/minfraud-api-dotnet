@@ -1,4 +1,5 @@
 ﻿using MaxMind.MinFraud.Exception;
+using MaxMind.MinFraud.Request;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
@@ -51,6 +52,28 @@ namespace MaxMind.MinFraud.UnitTest
             var request = CreateFullRequest();
             var response = await client.FactorsAsync(request);
             CompareJson(responseContent, response, true);
+        }
+
+        [Fact]
+        public async Task TestFullReportRequest()
+        {
+            var client = CreateClient(
+                "transactions/report",
+                HttpStatusCode.NoContent,
+                "application/json",
+                ""
+            );
+            var request = new TransactionReport(
+                ipAddress: IPAddress.Parse("1.1.1.1"),
+                tag: TransactionReportTag.SuspectedFraud,
+                chargebackCode: "AA",
+                maxmindId: "a1b2c3d4",
+                minfraudId: new Guid("9194a1ac-0a81-475a-bf81-9bf8543a3f8f"),
+                notes: "note",
+                transactionId: "txn1");
+            var exception = await Record.ExceptionAsync(() => client.ReportAsync(request));
+
+            Assert.Null(exception);
         }
 
         private void CompareJson(string responseContent, object response, bool mungeIPAddress)

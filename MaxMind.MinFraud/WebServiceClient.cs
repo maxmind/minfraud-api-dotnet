@@ -94,7 +94,7 @@ namespace MaxMind.MinFraud
         /// Factors response data</returns>
         public async Task<Factors> FactorsAsync(Transaction transaction)
         {
-            var factors = await MakeRequest<Factors>(transaction).ConfigureAwait(false);
+            var factors = await MakeResponse<Factors>(transaction).ConfigureAwait(false);
             factors.IPAddress.SetLocales(_locales);
             return factors;
         }
@@ -108,7 +108,7 @@ namespace MaxMind.MinFraud
         /// Insights response data</returns>
         public async Task<Insights> InsightsAsync(Transaction transaction)
         {
-            var insights = await MakeRequest<Insights>(transaction).ConfigureAwait(false);
+            var insights = await MakeResponse<Insights>(transaction).ConfigureAwait(false);
             insights.IPAddress.SetLocales(_locales);
             return insights;
         }
@@ -122,10 +122,34 @@ namespace MaxMind.MinFraud
         /// response data</returns>
         public async Task<Score> ScoreAsync(Transaction transaction)
         {
-            return await MakeRequest<Score>(transaction).ConfigureAwait(false);
+            return await MakeResponse<Score>(transaction).ConfigureAwait(false);
         }
 
-        private async Task<T> MakeRequest<T>(Transaction request) where T : Score
+        /// <summary>
+        /// Asynchronously query the minFraud Report Transaction API.
+        /// </summary>
+        /// <remarks>
+        /// Reporting transactions to MaxMind helps us detect about 10-50% more
+        /// fraud and reduce false positives for you. We offer two ways to
+        /// report transactions, through an online form or via an API that is
+        /// documented on this page.
+        /// </remarks>
+        /// <param name="report">The transaction report you would like to send.</param>
+        /// <returns>The Task on which to await. The web service returns no data and
+        /// this API will throw an exception if there is an error.</returns>
+        public async Task ReportAsync(TransactionReport report)
+        {
+            await MakeRequest("transactions/report", report);
+        }
+
+        private async Task<T> MakeResponse<T>(Transaction request) where T : Score
+        {
+            var requestPath = typeof(T).Name.ToLower();
+            var response = await MakeRequest(requestPath, request).ConfigureAwait(false);
+            return await HandleSuccess<T>(response).ConfigureAwait(false);
+        }
+
+        private async Task<HttpResponseMessage> MakeRequest(string path, Object request)
         {
             var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
             settings.Converters.Add(new IPAddressConverter());
@@ -133,8 +157,7 @@ namespace MaxMind.MinFraud
             settings.Converters.Add(new StringEnumConverter());
             var requestBody = JsonConvert.SerializeObject(request, settings);
 
-            var requestPath = typeof(T).Name.ToLower();
-            var response = await _httpClient.PostAsync(requestPath,
+            var response = await _httpClient.PostAsync(path,
                 new StringContent(requestBody, Encoding.UTF8, "application/json"))
                 .ConfigureAwait(false);
 
@@ -142,7 +165,7 @@ namespace MaxMind.MinFraud
             {
                 await HandleError(response).ConfigureAwait(false);
             }
-            return await HandleSuccess<T>(response).ConfigureAwait(false);
+            return response;
         }
 
         private static async Task<T> HandleSuccess<T>(HttpResponseMessage response) where T : Score
@@ -151,33 +174,30 @@ namespace MaxMind.MinFraud
             if (contentType == null || !contentType.Contains("json"))
             {
                 throw new MinFraudException(
-                    $"Received a 200 response for  {typeof(T).Name} but it does not appear to be JSON: {contentType}");
+                    $"Received a {(int)response.StatusCode} response for {typeof(T).Name} but it does not appear to be JSON: {contentType}");
             }
-            using (var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false))
-            using (var sr = new StreamReader(s))
+            using var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+            using var sr = new StreamReader(s);
+            using JsonReader reader = new JsonTextReader(sr);
+
+            var settings = new JsonSerializerSettings();
+            settings.Converters.Add(new NetworkConverter());
+            var serializer = JsonSerializer.Create(settings);
+            try
             {
-                using (JsonReader reader = new JsonTextReader(sr))
+                var model = serializer.Deserialize<T>(reader);
+                if (model == null)
                 {
-                    var settings = new JsonSerializerSettings();
-                    settings.Converters.Add(new NetworkConverter());
-                    var serializer = JsonSerializer.Create(settings);
-                    try
-                    {
-                        var model = serializer.Deserialize<T>(reader);
-                        if (model == null)
-                        {
-                            throw new HttpException(
-                                $"Received a 200 response for minFraud {typeof(T).Name} but there was no message body",
-                                response.StatusCode, response.RequestMessage.RequestUri);
-                        }
-                        return model;
-                    }
-                    catch (JsonSerializationException ex)
-                    {
-                        throw new MinFraudException(
-                            "Received a 200 response but not decode it as JSON", ex);
-                    }
+                    throw new HttpException(
+                        $"Received a {(int)response.StatusCode} response for minFraud {typeof(T).Name} but there was no message body",
+                        response.StatusCode, response.RequestMessage.RequestUri);
                 }
+                return model;
+            }
+            catch (JsonSerializationException ex)
+            {
+                throw new MinFraudException(
+                    $"Received a {(int)response.StatusCode} response but not decode it as JSON", ex);
             }
         }
 
