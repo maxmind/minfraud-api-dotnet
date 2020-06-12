@@ -1,9 +1,13 @@
-# .NET API for MaxMind minFraud Score, Insights, and Factors #
+# .NET API for MaxMind minFraud Services #
 
 ## Description ##
 
-This package provides an API for the [MaxMind minFraud Score, Insights, and
-Factors web services](http://dev.maxmind.com/minfraud/).
+This package provides an API for the [MaxMind minFraud web services](http://dev.maxmind.com/minfraud/).
+This includes minFraud Score, Insights, and Factors. It also includes our
+[minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-transaction/).
+
+The legacy minFraud Standard and Premium services are not supported by this
+API.
 
 ## Requirements ##
 
@@ -46,8 +50,10 @@ created for each request. Once you have finished making requests, you
 should dispose of the object to ensure the connections are closed and any
 resources are promptly returned to the system.
 
-Then create a new `Transaction` object. This represents the transaction that
-you are sending to minFraud:
+### Making a minFraud Score, Insights, or Factors Request ##
+
+Create a new `Transaction` object. This represents the transaction that you
+are sending to minFraud:
 
 ```csharp
 var transaction = new Transaction(
@@ -73,13 +79,13 @@ marked as async:
 var score = await client.ScoreAsync(transaction);
 ```
 
-A minFraud Insights request by calling `InsightsAsync` method:
+A minFraud Insights request by calling the `InsightsAsync` method:
 
 ```csharp
 var insights = await client.InsightsAsync(transaction);
 ```
 
-Or a minFraud Factors request by calling `FactorsAsync` method:
+Or a minFraud Factors request by calling the `FactorsAsync` method:
 
 ```csharp
 var factors = await client.FactorsAsync(transaction);
@@ -90,6 +96,33 @@ the request fails, an exception will be thrown.
 
 See the API documentation for more details.
 
+### Reporting a Transaction to MaxMind ##
+
+If a transaction was scored incorrectly or you received a chargeback, you may
+report it to MaxMind. To do this, create a new `TransactionReport` object:
+
+```csharp
+var report = new TransactionReport(
+    ipAddress: IPAddress.Parse("104.16.148.244"), 
+    tag: TransactionReportTag.Chargeback,
+    chargebackCode: "BL",
+    maxmindId: "abcd1234",
+    minfraudId: new Guid("01c25cb0-f067-4e02-8ed0-a094c580f5e4"),
+    notes: "Suspicious account behavior",
+    transactionId: "txn123");
+```
+
+Only the `ipAddress` and `tag` parameters are required.
+
+Send the report by calling the `ReportAsync` method using the `await` keyword:
+
+```csharp
+await client.ReportAsync(report);
+```
+
+The endpoint does not return any data and the method does not return a value.
+If there is an error, an exception will be thrown.
+
 ### Exceptions ###
 
 Thrown by the request models:
@@ -97,8 +130,7 @@ Thrown by the request models:
 * `ArgumentException` - Thrown when invalid data is passed to the model
   constructor.
 
-Thrown by `ScoreAsync(transaction)` or `InsightsAsync(transaction)` on
-`WebServiceClient`:
+Thrown by `WebServiceClient` method calls:
 
 * `AuthenticationException` - Thrown when the server is unable to authenticate
   the request, e.g., if the license key or account ID is invalid.
