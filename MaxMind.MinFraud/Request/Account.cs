@@ -34,14 +34,13 @@ namespace MaxMind.MinFraud.Request
             {
                 return;
             }
-            using (var md5Generator = MD5.Create())
-            {
-                var bytes = Encoding.UTF8.GetBytes(Username);
-                var md5 = md5Generator.ComputeHash(bytes);
-                UsernameMD5 = BitConverter.ToString(md5)
-                    .Replace("-", string.Empty)
-                    .ToLower();
-            }
+            using var md5Generator = MD5.Create();
+
+            var bytes = Encoding.UTF8.GetBytes(Username);
+            var md5 = md5Generator.ComputeHash(bytes);
+            UsernameMD5 = BitConverter.ToString(md5)
+                .Replace("-", string.Empty)
+                .ToLower();
         }
 
         /// <summary>

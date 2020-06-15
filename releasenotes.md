@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+2.6.0
+------------------
+
+* Added support for the minFraud Report Transaction API. Reporting
+  transactions to MaxMind helps us detect about 10-50% more fraud and
+  reduce false positives for you.
+
 2.5.0 (2020-04-06)
 ------------------
 

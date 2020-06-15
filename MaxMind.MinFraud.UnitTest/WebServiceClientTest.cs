@@ -1,4 +1,5 @@
 ﻿using MaxMind.MinFraud.Exception;
+using MaxMind.MinFraud.Request;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
@@ -53,6 +54,28 @@ namespace MaxMind.MinFraud.UnitTest
             CompareJson(responseContent, response, true);
         }
 
+        [Fact]
+        public async Task TestFullReportRequest()
+        {
+            var client = CreateClient(
+                "transactions/report",
+                HttpStatusCode.NoContent,
+                "application/json",
+                ""
+            );
+            var request = new TransactionReport(
+                ipAddress: IPAddress.Parse("1.1.1.1"),
+                tag: TransactionReportTag.SuspectedFraud,
+                chargebackCode: "AA",
+                maxmindId: "a1b2c3d4",
+                minfraudId: new Guid("9194a1ac-0a81-475a-bf81-9bf8543a3f8f"),
+                notes: "note",
+                transactionId: "txn1");
+            var exception = await Record.ExceptionAsync(() => client.ReportAsync(request));
+
+            Assert.Null(exception);
+        }
+
         private void CompareJson(string responseContent, object response, bool mungeIPAddress)
         {
             var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
@@ -87,7 +110,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test200WithNoBody()
+        public async Task Test200WithNoBody()
         {
             var client = CreateSuccessClient("insights", "");
             var request = CreateFullRequest();
@@ -100,7 +123,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test200WithNoContentLength()
+        public async Task Test200WithNoContentLength()
         {
             var expectedResponse = ReadJsonFile("score-response");
             var content = new StringContent(expectedResponse);
@@ -121,7 +144,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test200WithInvalidJson()
+        public async Task Test200WithInvalidJson()
         {
             var client = CreateSuccessClient("insights", "{");
             var request = CreateFullRequest();
@@ -129,11 +152,11 @@ namespace MaxMind.MinFraud.UnitTest
             var exception = await Record.ExceptionAsync(async () => await client.InsightsAsync(request));
             Assert.NotNull(exception);
             Assert.IsType<MinFraudException>(exception);
-            Assert.Contains("Received a 200 response but not decode it as JSON", exception.Message);
+            Assert.Contains("Received a 200 response but could not decode it as JSON", exception.Message);
         }
 
         [Fact]
-        public async void TestInsufficientFunds()
+        public async Task TestInsufficientFunds()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.PaymentRequired,
@@ -151,7 +174,7 @@ namespace MaxMind.MinFraud.UnitTest
         [InlineData("AUTHORIZATION_INVALID")]
         [InlineData("LICENSE_KEY_REQUIRED")]
         [InlineData("USER_ID_REQUIRED")]
-        public async void TestInvalidAuth(string code)
+        public async Task TestInvalidAuth(string code)
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.Unauthorized,
@@ -164,7 +187,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void TestPermissionRequired()
+        public async Task TestPermissionRequired()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.PaymentRequired,
@@ -177,7 +200,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void TestInvalidRequest()
+        public async Task TestInvalidRequest()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
@@ -191,7 +214,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test400WithInvalidJson()
+        public async Task Test400WithInvalidJson()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
@@ -207,7 +230,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test400WithNoBody()
+        public async Task Test400WithNoBody()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
@@ -221,7 +244,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test400WithUnexpectedContentType()
+        public async Task Test400WithUnexpectedContentType()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
@@ -236,7 +259,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test400WithUnexpectedJson()
+        public async Task Test400WithUnexpectedJson()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.BadRequest,
@@ -252,7 +275,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test300()
+        public async Task Test300()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.MultipleChoices,
@@ -267,7 +290,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
-        public async void Test500()
+        public async Task Test500()
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(
                 HttpStatusCode.InternalServerError,
@@ -302,7 +325,7 @@ namespace MaxMind.MinFraud.UnitTest
             await client.InsightsAsync(CreateFullRequest());
         }
 
-        private WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
+        private static WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
             string responseContent)
         {
             var content = new StringContent(responseContent);
