@@ -197,7 +197,7 @@ namespace MaxMind.MinFraud
             catch (JsonSerializationException ex)
             {
                 throw new MinFraudException(
-                    $"Received a {(int)response.StatusCode} response but not decode it as JSON", ex);
+                    $"Received a {(int)response.StatusCode} response but could not decode it as JSON", ex);
             }
         }
 

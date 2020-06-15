@@ -152,7 +152,7 @@ namespace MaxMind.MinFraud.UnitTest
             var exception = await Record.ExceptionAsync(async () => await client.InsightsAsync(request));
             Assert.NotNull(exception);
             Assert.IsType<MinFraudException>(exception);
-            Assert.Contains("Received a 200 response but not decode it as JSON", exception.Message);
+            Assert.Contains("Received a 200 response but could not decode it as JSON", exception.Message);
         }
 
         [Fact]
