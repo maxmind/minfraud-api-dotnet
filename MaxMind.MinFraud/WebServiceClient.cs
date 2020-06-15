@@ -130,9 +130,7 @@ namespace MaxMind.MinFraud
         /// </summary>
         /// <remarks>
         /// Reporting transactions to MaxMind helps us detect about 10-50% more
-        /// fraud and reduce false positives for you. We offer two ways to
-        /// report transactions, through an online form or via an API that is
-        /// documented on this page.
+        /// fraud and reduce false positives for you.
         /// </remarks>
         /// <param name="report">The transaction report you would like to send.</param>
         /// <returns>The Task on which to await. The web service returns no data and
