@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.6.0
+2.6.0 (2020-06-19)
 ------------------
 
 * Added support for the minFraud Report Transaction API. Reporting
