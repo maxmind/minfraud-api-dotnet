@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>API for MaxMind minFraud Score and Insights web services</Description>
-    <VersionPrefix>2.5.0</VersionPrefix>
+    <VersionPrefix>2.6.0</VersionPrefix>
     <TargetFrameworks>net45;netstandard1.4;netstandard2.0;netstandard2.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>MaxMind.MinFraud</AssemblyName>
