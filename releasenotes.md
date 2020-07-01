@@ -1,6 +1,17 @@
 Release Notes
 =============
 
+2.7.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Cashfree`
+  * `FirstAtlanticCommerce`
+  * `Komoju`
+  * `Paytm`
+  * `Razorpay`
+  * `Systempay`
+
 2.6.0 (2020-06-19)
 ------------------
 
