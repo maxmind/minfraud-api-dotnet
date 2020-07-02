@@ -67,6 +67,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "cardpay")]
         Cardpay,
 
+        [EnumMember(Value = "cashfree")]
+        Cashfree,
+
         [EnumMember(Value = "ccavenue")]
         Ccavenue,
 
@@ -160,6 +163,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "exact")]
         Exact,
 
+        [EnumMember(Value = "first_atlantic_commerce")]
+        FirstAtlanticCommerce,
+
         [EnumMember(Value = "first_data")]
         FirstData,
 
@@ -195,6 +201,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "klarna")]
         Klarna,
+
+        [EnumMember(Value = "komoju")]
+        Komoju,
 
         [EnumMember(Value = "lemon_way")]
         LemonWay,
@@ -277,6 +286,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "paystation")]
         Paystation,
 
+        [EnumMember(Value = "paytm")]
+        Paytm,
+
         [EnumMember(Value = "paytrace")]
         Paytrace,
 
@@ -319,6 +331,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "raberil")]
         Raberil,
 
+        [EnumMember(Value = "razorpay")]
+        Razorpay,
+
         [EnumMember(Value = "rede")]
         Rede,
 
@@ -357,6 +372,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "synapsefi")]
         Synapsefi,
+
+        [EnumMember(Value = "systempay")]
+        Systempay,
 
         [EnumMember(Value = "telerecargas")]
         Telerecargas,
