@@ -11,6 +11,10 @@ Release Notes
   * `Paytm`
   * `Razorpay`
   * `Systempay`
+* Added support for new Subscores outputs. These are
+  available as the `Device`, `EmailLocalPart` and `ShippingAddress` properties
+  on `MaxMind.MinFraud.Response.Subscores` on minFraud Factors response
+  objects.
 
 2.6.0 (2020-06-19)
 ------------------
