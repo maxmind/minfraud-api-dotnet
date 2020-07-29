@@ -19,15 +19,18 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 {"country", 0.06},
                 {"country_mismatch", 0.07},
                 {"cvv_result", 0.08},
-                {"email_address", 0.09},
-                {"email_domain", 0.10},
-                {"email_tenure", 0.11},
-                {"ip_tenure", 0.12},
-                {"issuer_id_number", 0.13},
-                {"order_amount", 0.14},
-                {"phone_number", 0.15},
-                {"shipping_address_distance_to_ip_location", 0.16},
-                {"time_of_day", 0.17}
+                {"device", 0.09},
+                {"email_address", 0.10},
+                {"email_domain", 0.11},
+                {"email_local_part", 0.12},
+                {"email_tenure", 0.13},
+                {"ip_tenure", 0.14},
+                {"issuer_id_number", 0.15},
+                {"order_amount", 0.16},
+                {"phone_number", 0.17},
+                {"shipping_address", 0.18},
+                {"shipping_address_distance_to_ip_location", 0.19},
+                {"time_of_day", 0.20}
             }.ToObject<Subscores>()!;
 
             Assert.Equal(0.01, subscores.AvsResult);
@@ -38,17 +41,20 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal(0.06, subscores.Country);
             Assert.Equal(0.07, subscores.CountryMismatch);
             Assert.Equal(0.08, subscores.CvvResult);
-            Assert.Equal(0.09, subscores.EmailAddress);
-            Assert.Equal(0.10, subscores.EmailDomain);
+            Assert.Equal(0.09, subscores.Device);
+            Assert.Equal(0.10, subscores.EmailAddress);
+            Assert.Equal(0.11, subscores.EmailDomain);
+            Assert.Equal(0.12, subscores.EmailLocalPart);
 #pragma warning disable CS0618 // Type or member is obsolete
-            Assert.Equal(0.11, subscores.EmailTenure);
-            Assert.Equal(0.12, subscores.IPTenure);
+            Assert.Equal(0.13, subscores.EmailTenure);
+            Assert.Equal(0.14, subscores.IPTenure);
 #pragma warning restore CS0618 // Type or member is obsolete
-            Assert.Equal(0.13, subscores.IssuerIdNumber);
-            Assert.Equal(0.14, subscores.OrderAmount);
-            Assert.Equal(0.15, subscores.PhoneNumber);
-            Assert.Equal(0.16, subscores.ShippingAddressDistanceToIPLocation);
-            Assert.Equal(0.17, subscores.TimeOfDay);
+            Assert.Equal(0.15, subscores.IssuerIdNumber);
+            Assert.Equal(0.16, subscores.OrderAmount);
+            Assert.Equal(0.17, subscores.PhoneNumber);
+            Assert.Equal(0.18, subscores.ShippingAddress);
+            Assert.Equal(0.19, subscores.ShippingAddressDistanceToIPLocation);
+            Assert.Equal(0.20, subscores.TimeOfDay);
         }
     }
 }

@@ -50,7 +50,7 @@ created for each request. Once you have finished making requests, you
 should dispose of the object to ensure the connections are closed and any
 resources are promptly returned to the system.
 
-### Making a minFraud Score, Insights, or Factors Request ##
+### Making a minFraud Score, Insights, or Factors Request ###
 
 Create a new `Transaction` object. This represents the transaction that you
 are sending to minFraud:
@@ -96,7 +96,7 @@ the request fails, an exception will be thrown.
 
 See the API documentation for more details.
 
-### Reporting a Transaction to MaxMind ##
+### Reporting a Transaction to MaxMind ###
 
 If a transaction was scored incorrectly or you received a chargeback, you may
 report it to MaxMind. To do this, create a new `TransactionReport` object:

@@ -71,6 +71,13 @@ namespace MaxMind.MinFraud.Response
         public double? CvvResult { get; internal set; }
 
         /// <summary>
+        /// The risk associated with the device. If present, this is a value
+        /// in the range 0.01 to 99.
+        /// </summary>
+        [JsonProperty("device")]
+        public double? Device { get; internal set; }
+
+        /// <summary>
         /// The risk associated with the particular email address. If
         /// present, this is a value in the range 0.01 to 99.
         /// </summary>
@@ -83,6 +90,14 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonProperty("email_domain")]
         public double? EmailDomain { get; internal set; }
+
+        /// <summary>
+        /// The risk associated with the email address local part (the part of
+        /// the email address before the @ symbol). If present, this is a
+        /// value in the range 0.01 to 99.
+        /// </summary>
+        [JsonProperty("email_local_part")]
+        public double? EmailLocalPart{ get; internal set; }
 
         /// <summary>
         /// The risk associated with the issuer ID number on the email
@@ -123,6 +138,13 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonProperty("phone_number")]
         public double? PhoneNumber { get; internal set; }
+
+        /// <summary>
+        /// The risk associated with the shipping address. If present, this is
+        /// a value in the range 0.01 to 99.
+        /// </summary>
+        [JsonProperty("shipping_address")]
+        public double? ShippingAddress { get; internal set; }
 
         /// <summary>
         /// The risk associated with the distance between the shipping address
