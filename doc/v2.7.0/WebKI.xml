@@ -126,8 +126,8 @@
   <HelpKINode Title="CreditCard class">
     <HelpKINode Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Request_CreditCard.htm" />
     <HelpKINode Title="CreditCard Class" Url="html/T_MaxMind_MinFraud_Response_CreditCard.htm" />
-    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
     <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_CreditCard__ctor.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_CreditCard__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_CreditCard.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_CreditCard.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_CreditCard.htm" />
@@ -189,14 +189,14 @@
   <HelpKINode Title="DeclineCode property" Url="html/P_MaxMind_MinFraud_Request_Payment_DeclineCode.htm" />
   <HelpKINode Title="DeliverySpeed property" Url="html/P_MaxMind_MinFraud_Request_Shipping_DeliverySpeed.htm" />
   <HelpKINode Title="Device class">
-    <HelpKINode Title="Device Class" Url="html/T_MaxMind_MinFraud_Request_Device.htm" />
     <HelpKINode Title="Device Class" Url="html/T_MaxMind_MinFraud_Response_Device.htm" />
-    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
+    <HelpKINode Title="Device Class" Url="html/T_MaxMind_MinFraud_Request_Device.htm" />
     <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Device__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Response_Device__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Device.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Device.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Device.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Device.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Device.htm" />
   </HelpKINode>
   <HelpKINode Title="Device property">
     <HelpKINode Title="Insights.Device Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Device.htm" />
@@ -238,8 +238,8 @@
   <HelpKINode Title="DistanceToBillingAddress property" Url="html/P_MaxMind_MinFraud_Response_ShippingAddress_DistanceToBillingAddress.htm" />
   <HelpKINode Title="DistanceToIPLocation property" Url="html/P_MaxMind_MinFraud_Response_Address_DistanceToIPLocation.htm" />
   <HelpKINode Title="Domain property">
-    <HelpKINode Title="Email.Domain Property " Url="html/P_MaxMind_MinFraud_Response_Email_Domain.htm" />
     <HelpKINode Title="Email.Domain Property " Url="html/P_MaxMind_MinFraud_Request_Email_Domain.htm" />
+    <HelpKINode Title="Email.Domain Property " Url="html/P_MaxMind_MinFraud_Response_Email_Domain.htm" />
   </HelpKINode>
   <HelpKINode Title="Dotpay enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
   <HelpKINode Title="Ebs enumeration member" Url="html/T_MaxMind_MinFraud_Request_PaymentProcessor.htm" />
@@ -253,8 +253,8 @@
     <HelpKINode Title="constructor" Url="html/M_MaxMind_MinFraud_Request_Email__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Request_Email.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_MaxMind_MinFraud_Response_Email.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Email.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Response_Email.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_MaxMind_MinFraud_Request_Email.htm" />
   </HelpKINode>
   <HelpKINode Title="Email property">
     <HelpKINode Title="Insights.Email Property " Url="html/P_MaxMind_MinFraud_Response_Insights_Email.htm" />
@@ -794,8 +794,8 @@
   <HelpKINode Title="ToString method">
     <HelpKINode Title="Account.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Account_ToString.htm" />
     <HelpKINode Title="Address.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Address_ToString.htm" />
-    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
     <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Response_CreditCard_ToString.htm" />
+    <HelpKINode Title="CreditCard.ToString Method " Url="html/M_MaxMind_MinFraud_Request_CreditCard_ToString.htm" />
     <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Request_Device_ToString.htm" />
     <HelpKINode Title="Device.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Device_ToString.htm" />
     <HelpKINode Title="Disposition.ToString Method " Url="html/M_MaxMind_MinFraud_Response_Disposition_ToString.htm" />
