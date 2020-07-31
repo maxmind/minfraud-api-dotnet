@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.7.0
+2.7.0 (2020-07-31)
 ------------------
 
 * Added the following new values to the `PaymentProcessor` enum:
