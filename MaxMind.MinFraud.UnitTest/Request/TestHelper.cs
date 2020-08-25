@@ -118,7 +118,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 ),
                 creditCard:
                 new CreditCard(
-                    issuerIdNumber: "323132",
+                    issuerIdNumber: "411111",
                     bankName: "Bank of No Hope",
                     bankPhoneCountryCode: "1",
                     bankPhoneNumber: "800-342-1232",
