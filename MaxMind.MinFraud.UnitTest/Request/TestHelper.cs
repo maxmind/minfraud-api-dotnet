@@ -92,7 +92,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     region: "CT",
                     country: "US",
                     postal: "06510",
-                    phoneNumber: "323-123-4321",
+                    phoneNumber: "123-456-7890",
                     phoneCountryCode: "1"
                 ),
                 shipping:
@@ -106,7 +106,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     region: "OK",
                     country: "US",
                     postal: "73003",
-                    phoneNumber: "403-321-2323",
+                    phoneNumber: "123-456-0000",
                     phoneCountryCode: "1",
                     deliverySpeed: ShippingDeliverySpeed.SameDay
                 ),
@@ -121,7 +121,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     issuerIdNumber: "411111",
                     bankName: "Bank of No Hope",
                     bankPhoneCountryCode: "1",
-                    bankPhoneNumber: "800-342-1232",
+                    bankPhoneNumber: "123-456-1234",
                     avsResult: 'Y',
                     cvvResult: 'N',
                     last4Digits: "7643",
