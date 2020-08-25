@@ -57,7 +57,7 @@ are sending to minFraud:
 
 ```csharp
 var transaction = new Transaction(
-    device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
+    device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
         userAgent:
             "Mozilla/5.0 (X11; Linux x86_64)",
         acceptLanguage: "en-US,en;q=0.8"
@@ -163,7 +163,7 @@ public class MinFraudExample
     static public async Task MinFraudAsync()
     {
         var transaction = new Transaction(
-            device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
+            device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
                 userAgent:
                 "Mozilla/5.0 (X11; Linux x86_64)",
                 acceptLanguage: "en-US,en;q=0.8",
