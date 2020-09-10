@@ -55,7 +55,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public static Transaction CreateFullRequest()
         {
             return new Transaction(
-                device: new Device(IPAddress.Parse("81.2.69.160"),
+                device: new Device(IPAddress.Parse("152.216.7.110"),
                     userAgent:
                     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
                     acceptLanguage: "en-US,en;q=0.8",
@@ -92,7 +92,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     region: "CT",
                     country: "US",
                     postal: "06510",
-                    phoneNumber: "323-123-4321",
+                    phoneNumber: "123-456-7890",
                     phoneCountryCode: "1"
                 ),
                 shipping:
@@ -106,7 +106,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     region: "OK",
                     country: "US",
                     postal: "73003",
-                    phoneNumber: "403-321-2323",
+                    phoneNumber: "123-456-0000",
                     phoneCountryCode: "1",
                     deliverySpeed: ShippingDeliverySpeed.SameDay
                 ),
@@ -118,10 +118,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 ),
                 creditCard:
                 new CreditCard(
-                    issuerIdNumber: "323132",
+                    issuerIdNumber: "411111",
                     bankName: "Bank of No Hope",
                     bankPhoneCountryCode: "1",
-                    bankPhoneNumber: "800-342-1232",
+                    bankPhoneNumber: "123-456-1234",
                     avsResult: 'Y',
                     cvvResult: 'N',
                     last4Digits: "7643",
