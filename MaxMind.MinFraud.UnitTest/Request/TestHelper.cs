@@ -10,7 +10,7 @@ using System.Net.Http;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
-    internal class TestHelper
+    internal static class TestHelper
     {
         public static string TestDirectory { get; } = GetTestDirectory();
 
