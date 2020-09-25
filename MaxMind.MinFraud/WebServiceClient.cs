@@ -174,7 +174,7 @@ namespace MaxMind.MinFraud
                 throw new MinFraudException(
                     $"Received a {(int)response.StatusCode} response for {typeof(T).Name} but it does not appear to be JSON: {contentType}");
             }
-            using var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+            var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
             using var sr = new StreamReader(s);
             using JsonReader reader = new JsonTextReader(sr);
 

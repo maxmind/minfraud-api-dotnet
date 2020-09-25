@@ -42,6 +42,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.True(response.IPAddress.Country.IsInEuropeanUnion);
             Assert.False(response.IPAddress.RegisteredCountry.IsInEuropeanUnion);
             Assert.False(response.IPAddress.RepresentedCountry.IsInEuropeanUnion);
+            Assert.True(response.IPAddress.Traits.IsResidentialProxy);
         }
 
         [Fact]

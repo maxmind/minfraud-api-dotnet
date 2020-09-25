@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+2.8.0 (2020-09-25)
+------------------
+
+* Added `response.IPAddress.Traits.IsResidentialProxy` to the minFraud
+  Insights and Factors models. This indicates whether the IP address is on a
+  suspected anonymizing network and belongs to a residential ISP.
+
 2.7.0 (2020-07-31)
 ------------------
 

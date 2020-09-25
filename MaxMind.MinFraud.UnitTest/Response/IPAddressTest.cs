@@ -23,6 +23,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                         {"is_anonymous_vpn", true},
                         {"is_hosting_provider", true},
                         {"is_public_proxy", true},
+                        {"is_residential_proxy", true},
                         {"is_tor_exit_node", true},
                     }
                 }
@@ -37,6 +38,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.True(address.Traits.IsAnonymousVpn);
             Assert.True(address.Traits.IsHostingProvider);
             Assert.True(address.Traits.IsPublicProxy);
+            Assert.True(address.Traits.IsResidentialProxy);
             Assert.True(address.Traits.IsTorExitNode);
         }
     }
