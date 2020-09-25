@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v2.7.0
+version: v2.8.0
 ---
 # .NET API for MaxMind minFraud Services #
 
@@ -63,7 +63,7 @@ are sending to minFraud:
 
 ```csharp
 var transaction = new Transaction(
-    device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
+    device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
         userAgent:
             "Mozilla/5.0 (X11; Linux x86_64)",
         acceptLanguage: "en-US,en;q=0.8"
@@ -169,7 +169,7 @@ public class MinFraudExample
     static public async Task MinFraudAsync()
     {
         var transaction = new Transaction(
-            device: new Device(System.Net.IPAddress.Parse("81.2.69.160"),
+            device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
                 userAgent:
                 "Mozilla/5.0 (X11; Linux x86_64)",
                 acceptLanguage: "en-US,en;q=0.8",
@@ -205,7 +205,7 @@ public class MinFraudExample
                 region: "CT",
                 country: "US",
                 postal: "06510",
-                phoneNumber: "323-123-4321",
+                phoneNumber: "123-456-7890",
                 phoneCountryCode: "1"
             ),
             shipping:
@@ -219,7 +219,7 @@ public class MinFraudExample
                 region: "OK",
                 country: "US",
                 postal: "73003",
-                phoneNumber: "403-321-2323",
+                phoneNumber: "123-456-0000",
                 phoneCountryCode: "1",
                 deliverySpeed: ShippingDeliverySpeed.SameDay
             ),
@@ -231,10 +231,10 @@ public class MinFraudExample
             ),
             creditCard:
             new CreditCard(
-                issuerIdNumber: "323132",
+                issuerIdNumber: "411111",
                 bankName: "Bank of No Hope",
                 bankPhoneCountryCode: "1",
-                bankPhoneNumber: "800-342-1232",
+                bankPhoneNumber: "123-456-1234",
                 avsResult: 'Y',
                 cvvResult: 'N',
                 last4Digits: "7643"
