@@ -385,6 +385,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "transact_pro")]
         TransactPro,
 
+        [EnumMember(Value = "tsys")]
+        Tsys,
+
         [EnumMember(Value = "usa_epay")]
         UsaEpay,
 

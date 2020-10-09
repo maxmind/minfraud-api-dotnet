@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+2.9.0
+------------------
+
+* Added `Tsys` to the `PaymentProcessor` enum.
+
 2.8.0 (2020-09-25)
 ------------------
 
