@@ -12,7 +12,7 @@ API.
 ## Requirements ##
 
 This library works with .NET Framework version 4.5 and above and .NET Standard
-1.4 or above. If you are using Mono, version 4 or greater is required.
+2.0 or above.
 
 This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.
