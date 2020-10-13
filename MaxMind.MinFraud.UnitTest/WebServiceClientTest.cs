@@ -174,7 +174,6 @@ namespace MaxMind.MinFraud.UnitTest
         [InlineData("ACCOUNT_ID_REQUIRED")]
         [InlineData("AUTHORIZATION_INVALID")]
         [InlineData("LICENSE_KEY_REQUIRED")]
-        [InlineData("USER_ID_REQUIRED")]
         public async Task TestInvalidAuth(string code)
         {
             var exception = await Record.ExceptionAsync(async () => await CreateInsightsError(

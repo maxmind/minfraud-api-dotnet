@@ -270,7 +270,6 @@ namespace MaxMind.MinFraud
                 case "ACCOUNT_ID_REQUIRED":
                 case "AUTHORIZATION_INVALID":
                 case "LICENSE_KEY_REQUIRED":
-                case "USER_ID_REQUIRED":
                     throw new AuthenticationException(error.Error);
                 case "INSUFFICIENT_FUNDS":
                     throw new InsufficientFundsException(error.Error);
