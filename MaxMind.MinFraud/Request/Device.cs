@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.Request
         /// This is an ID that uniquely identifies a visitor's session on the
         /// site.</param>
         public Device(
-            IPAddress ipAddress,
+            IPAddress? ipAddress = null,
             string? userAgent = null,
             string? acceptLanguage = null,
             double? sessionAge = null,
@@ -56,7 +56,7 @@ namespace MaxMind.MinFraud.Request
         /// in the transaction.
         /// </summary>
         [JsonProperty("ip_address")]
-        public IPAddress IPAddress { get; }
+        public IPAddress? IPAddress { get; }
 
         /// <summary>
         /// The HTTP “User-Agent” header of the browser used in the
