@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-2.9.0
+2.9.0 (2020-10-14)
 ------------------
 
 * This library now requires .NET Framework 4.5 or greater or .NET Standard
