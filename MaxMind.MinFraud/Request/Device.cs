@@ -21,7 +21,7 @@ namespace MaxMind.MinFraud.Request
         /// the device used in the transaction.</param>
         /// <param name="sessionAge">The number of seconds between the
         /// creation of the user's session and the time of the transaction.
-        /// Note that sessionAge is not the duration of the current visit, but 
+        /// Note that sessionAge is not the duration of the current visit, but
         /// the time since the start of the first visit.</param>
         /// <param name="sessionId">A string up to 255 characters in length.
         /// This is an ID that uniquely identifies a visitor's session on the

@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Request
         ///     for a general overview of the request sent to the web
         ///     service.
         /// </summary>
-        /// <param name="device">Information about the device used in the transaction. This param is required.</param>
+        /// <param name="device">Information about the device used in the transaction.</param>
         /// <param name="account">Information about the account used in the transaction.</param>
         /// <param name="billing">Billing information used in the transaction.</param>
         /// <param name="creditCard">Information about the credit card used in the transaction.</param>
