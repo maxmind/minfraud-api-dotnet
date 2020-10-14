@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Request
         ///     for a general overview of the request sent to the web
         ///     service.
         /// </summary>
-        /// <param name="device">Information about the device used in the transaction. This param is required.</param>
+        /// <param name="device">Information about the device used in the transaction.</param>
         /// <param name="account">Information about the account used in the transaction.</param>
         /// <param name="billing">Billing information used in the transaction.</param>
         /// <param name="creditCard">Information about the credit card used in the transaction.</param>
@@ -28,7 +28,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="shipping">Shipping information used in the transaction.</param>
         /// <param name="shoppingCart">List of shopping items in the transaction.</param>
         public Transaction(
-            Device device,
+            Device? device = null,
             Account? account = null,
             Billing? billing = null,
             CreditCard? creditCard = null,
@@ -82,7 +82,7 @@ namespace MaxMind.MinFraud.Request
         ///     Information about the device used in the transaction.
         /// </summary>
         [JsonProperty("device")]
-        public Device Device { get; }
+        public Device? Device { get; }
 
         /// <summary>
         ///     Information about the email used in the transaction.

@@ -6,6 +6,7 @@ Release Notes
 
 * This library now requires .NET Framework 4.5 or greater or .NET Standard
   2.0 or greater.
+* The device IP address is no longer a required input.
 * Added `Tsys` to the `PaymentProcessor` enum.
 
 2.8.0 (2020-09-25)
