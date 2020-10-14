@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v2.8.0
+version: v2.9.0
 ---
 # .NET API for MaxMind minFraud Services #
 
@@ -18,7 +18,7 @@ API.
 ## Requirements ##
 
 This library works with .NET Framework version 4.5 and above and .NET Standard
-1.4 or above. If you are using Mono, version 4 or greater is required.
+2.0 or above.
 
 This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.
@@ -63,9 +63,9 @@ are sending to minFraud:
 
 ```csharp
 var transaction = new Transaction(
-    device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
-        userAgent:
-            "Mozilla/5.0 (X11; Linux x86_64)",
+    device: new Device(
+        ipAddress: System.Net.IPAddress.Parse("152.216.7.110"),
+        userAgent: "Mozilla/5.0 (X11; Linux x86_64)",
         acceptLanguage: "en-US,en;q=0.8"
         ),
     account:
@@ -75,7 +75,6 @@ var transaction = new Transaction(
             )
     );
 ```
-
 
 After creating the request object, send a non-blocking minFraud Score request
 by calling the `ScoreAsync` method using the `await` keyword from a method
@@ -169,9 +168,9 @@ public class MinFraudExample
     static public async Task MinFraudAsync()
     {
         var transaction = new Transaction(
-            device: new Device(System.Net.IPAddress.Parse("152.216.7.110"),
-                userAgent:
-                "Mozilla/5.0 (X11; Linux x86_64)",
+            device: new Device(
+                ipAddress: System.Net.IPAddress.Parse("152.216.7.110"),
+                userAgent: "Mozilla/5.0 (X11; Linux x86_64)",
                 acceptLanguage: "en-US,en;q=0.8",
                 sessionAge: 3600,
                 sessionId: "a333a4e127f880d8820e56a66f40717c"
