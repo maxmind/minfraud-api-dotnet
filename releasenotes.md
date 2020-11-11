@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+2.10.0
+-------------------
+
+* You may now create `WebServiceClient` as a typed client with
+  `IHttpClientFactory` in .NET Core 2.1+.
+
 2.9.0 (2020-10-14)
 ------------------
 
