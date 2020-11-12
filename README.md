@@ -95,6 +95,60 @@ the request fails, an exception will be thrown.
 
 See the API documentation for more details.
 
+### ASP.NET Core Usage ###
+
+To use the web service API with HttpClient factory pattern as a 
+[Typed client](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#typed-clients)
+you need to do the following:
+
+1. Add the following lines to `Startup.cs` `ConfigureServices` method:
+
+```csharp
+// Configure to read configuration options from MinFraud section
+services.Configure<WebServiceClientOptions>(Configuration.GetSection("MinFraud"));
+
+// Configure dependency injection for WebServiceClient
+services.AddHttpClient<WebServiceClient>();
+```
+
+2. Add configuration in your `appsettings.json` with your account ID and license key.
+
+```jsonc
+...
+  "MinFraud": {
+    "AccountId": 10,
+    "LicenseKey": "LICENSEKEY",
+    "Timeout": TimeSpan.FromSeconds(5), // optional
+    "Host": "minfraud.maxmind.com" // optional
+  },
+...
+```
+
+3. Inject the `WebServiceClient` where you need to make the call and use it.
+
+```csharp
+[ApiController]
+[Route("[controller]")]
+public class MinFraudController : ControllerBase
+{
+    private readonly WebServiceClient _minfraudClient;
+
+    public MaxMindController(WebServiceClient minfraudClient)
+    {
+        _minfraudClient = minfraudClient;
+    }
+
+    [HttpGet]
+    public async Task<double?> RiskScore(Transaction transaction)
+    {
+        var score = await _minfraudClient.ScoreAsync(transaction);
+
+        return score.RiskScore;
+    }
+}
+```
+
+
 ### Reporting a Transaction to MaxMind ###
 
 If a transaction was scored incorrectly or you received a chargeback, you may

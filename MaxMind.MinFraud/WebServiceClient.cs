@@ -1,6 +1,9 @@
 ﻿#region
 
 using MaxMind.MinFraud.Exception;
+#if !NET45 && !NET46
+using Microsoft.Extensions.Options;
+#endif
 using MaxMind.MinFraud.Request;
 using MaxMind.MinFraud.Response;
 using MaxMind.MinFraud.Util;
@@ -35,8 +38,27 @@ namespace MaxMind.MinFraud
         private readonly HttpClient _httpClient;
         private readonly List<string> _locales;
         private bool _disposed;
-        private readonly HttpMessageHandler _httpMessageHandler;
 
+#if !NET45 && !NET46
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="WebServiceClient" /> class.
+        /// </summary>
+        /// <param name="httpClient">Injected HttpClient.</param>
+        /// <param name="options">Injected Options.</param>
+        [CLSCompliant(false)]
+        public WebServiceClient(
+            HttpClient httpClient,
+            IOptions<WebServiceClientOptions> options
+        ) : this(
+            options.Value.AccountId,
+            options.Value.LicenseKey,
+            options.Value.Locales,
+            options.Value.Host,
+            options.Value.Timeout,
+            httpClient)
+        {
+        }
+#endif
         /// <summary>
         /// Constructor for minFraud web service client.
         /// </summary>
@@ -45,7 +67,7 @@ namespace MaxMind.MinFraud
         /// <param name="locales">A list of locale codes to use for name property.</param>
         /// <param name="host">The host to use when connecting to the web service.</param>
         /// <param name="timeout">The timeout to use for the request.</param>
-        /// <param name="httpMessageHandler">Handler to use in request.</param>
+        /// <param name="httpMessageHandler">Handler to use in request. The handler will be disposed.</param>
         public WebServiceClient(
             int accountId,
             string licenseKey,
@@ -53,36 +75,44 @@ namespace MaxMind.MinFraud
             string host = "minfraud.maxmind.com",
             TimeSpan? timeout = null,
             HttpMessageHandler? httpMessageHandler = null
-            )
+            ) : this(
+                accountId, 
+                licenseKey, 
+                locales, 
+                host, 
+                timeout,
+                new HttpClient(httpMessageHandler ?? new HttpClientHandler(), true))
+        {
+        }
+
+        internal WebServiceClient(
+         int accountId,
+         string licenseKey,
+         IEnumerable<string>? locales,
+         string host,
+         TimeSpan? timeout,
+         HttpClient httpClient
+         )
         {
             _locales = locales == null ? new List<string> { "en" } : new List<string>(locales);
-            _httpMessageHandler = httpMessageHandler ?? new HttpClientHandler();
-            try
+
+            httpClient.BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri;
+
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(
+                "Basic",
+                Convert.ToBase64String(
+                    Encoding.ASCII.GetBytes($"{accountId}:{licenseKey}")
+                    )
+                );
+            httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            httpClient.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("minFraud-api-dotnet", Version));
+
+            if (timeout != null)
             {
-                _httpClient = new HttpClient(httpMessageHandler ?? new HttpClientHandler())
-                {
-                    BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri,
-                    DefaultRequestHeaders =
-                    {
-                        Authorization = new AuthenticationHeaderValue("Basic",
-                            Convert.ToBase64String(
-                                Encoding.ASCII.GetBytes(
-                                    $"{accountId}:{licenseKey}"))),
-                        Accept = {new MediaTypeWithQualityHeaderValue("application/json")},
-                        UserAgent = {new ProductInfoHeaderValue("minFraud-api-dotnet", Version)}
-                    }
-                };
-                if (timeout != null)
-                {
-                    _httpClient.Timeout = timeout.Value;
-                }
+                httpClient.Timeout = (TimeSpan)timeout;
             }
-            catch
-            {
-                _httpClient?.Dispose();
-                _httpMessageHandler.Dispose();
-                throw;
-            }
+
+            _httpClient = httpClient;
         }
 
         /// <summary>
@@ -301,7 +331,6 @@ namespace MaxMind.MinFraud
             if (disposing)
             {
                 _httpClient.Dispose();
-                _httpMessageHandler.Dispose();
             }
 
             _disposed = true;

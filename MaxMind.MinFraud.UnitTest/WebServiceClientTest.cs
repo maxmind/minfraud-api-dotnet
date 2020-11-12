@@ -1,5 +1,8 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
+#if !NET452 && !NET46
+using Microsoft.Extensions.Options;
+#endif
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
@@ -76,6 +79,42 @@ namespace MaxMind.MinFraud.UnitTest
 
             Assert.Null(exception);
         }
+
+#if !NET452 && !NET46
+        [Fact]
+        public async Task TestWebServiceClientOptionsConstructor()
+        {
+            var responseContent = ReadJsonFile("score-response");
+            var content = new StringContent(responseContent);
+            content.Headers.ContentType = new MediaTypeHeaderValue(
+                "application/vnd.maxmind.com-minfraud-score+json");
+            content.Headers.Add("Content-Length", responseContent.Length.ToString());
+            var message = new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                Content = content
+            };
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When(HttpMethod.Post, $"https://test.maxmind.com/minfraud/v2.0/score")
+                .WithHeaders("Accept", "application/json")
+                .With(request => VerifyRequestFor("score", request))
+                .Respond(message);
+
+            IOptions<WebServiceClientOptions> options = Options.Create(new WebServiceClientOptions
+            {
+                AccountId = 6,
+                LicenseKey = "0123456789",
+                Host = "test.maxmind.com",
+                Timeout = TimeSpan.FromSeconds(5),
+                Locales = new List<string> { "en" }
+            });
+
+            var client = new WebServiceClient(new HttpClient(mockHttp), options);
+            var request = CreateFullRequest();
+            var response = await client.ScoreAsync(request);
+
+            CompareJson(responseContent, response, false);
+        }
+#endif
 
         private void CompareJson(string responseContent, object response, bool mungeIPAddress)
         {
