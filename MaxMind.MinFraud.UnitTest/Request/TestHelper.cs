@@ -175,7 +175,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var requestFile = service == "transactions/report" ? "report-request" : "full-request";
             var requestBody = ReadJsonFile(requestFile);
 
-            if (message.Content.Headers.ContentType.ToString() != "application/json; charset=utf-8")
+            if (message.Content?.Headers.ContentType?.ToString() != "application/json; charset=utf-8")
             {
                 return false;
             }
