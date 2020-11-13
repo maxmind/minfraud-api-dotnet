@@ -36,7 +36,7 @@ namespace MaxMind.MinFraud.Request
             }
             using var md5Generator = MD5.Create();
 
-            var bytes = Encoding.UTF8.GetBytes(Username);
+            var bytes = Encoding.UTF8.GetBytes(username);
             var md5 = md5Generator.ComputeHash(bytes);
             UsernameMD5 = BitConverter.ToString(md5)
                 .Replace("-", string.Empty)

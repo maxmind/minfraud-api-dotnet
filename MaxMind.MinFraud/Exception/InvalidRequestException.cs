@@ -42,7 +42,7 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="message">The message from the web service.</param>
         /// <param name="code">The machine-readable error code.</param>
         /// <param name="uri">The URI that was queried.</param>
-        public InvalidRequestException(string message, string code, Uri uri) : base(message)
+        public InvalidRequestException(string message, string code, Uri? uri) : base(message)
         {
             Code = code;
             this.Uri = uri;
@@ -55,7 +55,7 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="code">The machine-readable error code.</param>
         /// <param name="uri">The URI that was queried.</param>
         /// <param name="innerException">The underlying exception that caused this one.</param>
-        public InvalidRequestException(string message, string code, Uri uri, System.Exception innerException) : base(message, innerException)
+        public InvalidRequestException(string message, string code, Uri? uri, System.Exception innerException) : base(message, innerException)
         {
             Code = code;
             this.Uri = uri;

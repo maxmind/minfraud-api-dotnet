@@ -116,7 +116,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 #endif
 
-        private void CompareJson(string responseContent, object response, bool mungeIPAddress)
+        private static void CompareJson(string responseContent, object response, bool mungeIPAddress)
         {
             var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
 
@@ -343,7 +343,7 @@ namespace MaxMind.MinFraud.UnitTest
                 exception.Message);
         }
 
-        private WebServiceClient CreateSuccessClient(string service, string responseContent)
+        private static WebServiceClient CreateSuccessClient(string service, string responseContent)
         {
             return CreateClient(
                 service,
@@ -353,7 +353,7 @@ namespace MaxMind.MinFraud.UnitTest
             );
         }
 
-        private async Task CreateInsightsError(HttpStatusCode status, string contentType, string responseContent)
+        private static async Task CreateInsightsError(HttpStatusCode status, string contentType, string responseContent)
         {
             var client = CreateClient(
                 "insights",

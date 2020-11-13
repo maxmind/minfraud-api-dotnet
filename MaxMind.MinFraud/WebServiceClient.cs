@@ -30,9 +30,9 @@ namespace MaxMind.MinFraud
     // If removing sealed, update Dispose methods.
     {
         private static readonly string Version =
-            ((AssemblyInformationalVersionAttribute)
+            ((AssemblyInformationalVersionAttribute?)
                 typeof(WebServiceClient).GetTypeInfo().Assembly.GetCustomAttribute(
-                    typeof(AssemblyInformationalVersionAttribute))).InformationalVersion;
+                    typeof(AssemblyInformationalVersionAttribute)))?.InformationalVersion ?? "unknown";
 
         private const string BasePath = "/minfraud/v2.0/";
         private readonly HttpClient _httpClient;
@@ -218,7 +218,7 @@ namespace MaxMind.MinFraud
                 {
                     throw new HttpException(
                         $"Received a {(int)response.StatusCode} response for minFraud {typeof(T).Name} but there was no message body",
-                        response.StatusCode, response.RequestMessage.RequestUri);
+                        response.StatusCode, response.RequestMessage?.RequestUri);
                 }
                 return model;
             }
@@ -231,7 +231,7 @@ namespace MaxMind.MinFraud
 
         private static async Task HandleError(HttpResponseMessage response)
         {
-            var uri = response.RequestMessage.RequestUri;
+            var uri = response.RequestMessage?.RequestUri;
             var status = (int)response.StatusCode;
 
             if (status >= 400 && status < 500)
@@ -252,7 +252,7 @@ namespace MaxMind.MinFraud
 
         private static async Task Handle4xxStatus(HttpResponseMessage response)
         {
-            var uri = response.RequestMessage.RequestUri;
+            var uri = response.RequestMessage?.RequestUri;
             var status = (int)response.StatusCode;
 
             // The null guard is primarily because our unit testing mock library does not
@@ -294,7 +294,7 @@ namespace MaxMind.MinFraud
                 throw new HttpException(
                     $"Error response contains JSON but it does not specify code or error keys: {content}",
                     response.StatusCode,
-                    response.RequestMessage.RequestUri);
+                    response.RequestMessage?.RequestUri);
             switch (error.Code)
             {
                 case "ACCOUNT_ID_REQUIRED":
@@ -306,7 +306,7 @@ namespace MaxMind.MinFraud
                 case "PERMISSION_REQUIRED":
                     throw new PermissionRequiredException(error.Error);
                 default:
-                    throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage.RequestUri);
+                    throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage?.RequestUri);
             }
         }
 

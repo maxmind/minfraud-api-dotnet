@@ -45,7 +45,7 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="message">A message describing the reason why the exception was thrown.</param>
         /// <param name="httpStatus">The HTTP status of the response that caused the exception.</param>
         /// <param name="uri">The URL queried.</param>
-        public HttpException(string message, HttpStatusCode httpStatus, Uri uri)
+        public HttpException(string message, HttpStatusCode httpStatus, Uri? uri)
             : base(message)
         {
             HttpStatus = httpStatus;
@@ -59,7 +59,7 @@ namespace MaxMind.MinFraud.Exception
         /// <param name="httpStatus">The HTTP status of the response that caused the exception.</param>
         /// <param name="uri">The URL queried.</param>
         /// <param name="innerException">The underlying exception that caused this one.</param>
-        public HttpException(string message, HttpStatusCode httpStatus, Uri uri, System.Exception innerException)
+        public HttpException(string message, HttpStatusCode httpStatus, Uri? uri, System.Exception innerException)
             : base(message, innerException)
         {
             HttpStatus = httpStatus;
