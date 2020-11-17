@@ -8,6 +8,7 @@ Release Notes
 * .NET 5.0 was added as a target framework.
 * You may now create `WebServiceClient` as a typed client with
   `IHttpClientFactory` in .NET Core 2.1+.
+* Exception objects now correctly implement `ISerializable`.
 
 2.9.0 (2020-10-14)
 ------------------
