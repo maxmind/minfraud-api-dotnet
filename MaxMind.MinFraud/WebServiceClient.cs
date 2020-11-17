@@ -1,7 +1,7 @@
 ﻿#region
 
 using MaxMind.MinFraud.Exception;
-#if !NET45 && !NET46
+#if !NET461
 using Microsoft.Extensions.Options;
 #endif
 using MaxMind.MinFraud.Request;
@@ -39,7 +39,7 @@ namespace MaxMind.MinFraud
         private readonly List<string> _locales;
         private bool _disposed;
 
-#if !NET45 && !NET46
+#if !NET461
         /// <summary>
         ///     Initializes a new instance of the <see cref="WebServiceClient" /> class.
         /// </summary>

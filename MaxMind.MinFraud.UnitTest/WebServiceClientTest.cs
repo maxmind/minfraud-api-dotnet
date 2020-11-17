@@ -1,6 +1,6 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
-#if !NET452 && !NET46
+#if !NET461
 using Microsoft.Extensions.Options;
 #endif
 using Newtonsoft.Json;
@@ -80,7 +80,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.Null(exception);
         }
 
-#if !NET452 && !NET46
+#if !NET461
         [Fact]
         public async Task TestWebServiceClientOptionsConstructor()
         {
