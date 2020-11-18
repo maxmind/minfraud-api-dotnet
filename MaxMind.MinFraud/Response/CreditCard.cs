@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -10,7 +10,8 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The credit card brand.
         /// </summary>
-        [JsonProperty("brand")]
+        [JsonInclude]
+        [JsonPropertyName("brand")]
         public string? Brand { get; internal set; }
 
         /// <summary>
@@ -21,13 +22,15 @@ namespace MaxMind.MinFraud.Response
         /// is highly mixed, this defaults to the country of the bank issuing
         /// the card.
         /// </summary>
-        [JsonProperty("country")]
+        [JsonInclude]
+        [JsonPropertyName("country")]
         public string? Country { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a business card.
         /// </summary>
-        [JsonProperty("is_business")]
+        [JsonInclude]
+        [JsonPropertyName("is_business")]
         public bool? IsBusiness { get; internal set; }
 
         /// <summary>
@@ -36,31 +39,36 @@ namespace MaxMind.MinFraud.Response
         /// In cases where the location of customers is highly mixed, the
         /// match is to the country of the bank issuing the card.
         /// </summary>
-        [JsonProperty("is_issued_in_billing_address_country")]
+        [JsonInclude]
+        [JsonPropertyName("is_issued_in_billing_address_country")]
         public bool? IsIssuedInBillingAddressCountry { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a prepaid card.
         /// </summary>
-        [JsonProperty("is_prepaid")]
+        [JsonInclude]
+        [JsonPropertyName("is_prepaid")]
         public bool? IsPrepaid { get; internal set; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a virtual card.
         /// </summary>
-        [JsonProperty("is_virtual")]
+        [JsonInclude]
+        [JsonPropertyName("is_virtual")]
         public bool? IsVirtual { get; internal set; }
 
         /// <summary>
         /// An object containing information about the credit card issuer.
         /// </summary>
-        [JsonProperty("issuer")]
+        [JsonInclude]
+        [JsonPropertyName("issuer")]
         public Issuer Issuer { get; internal set; } = new Issuer();
 
         /// <summary>
         /// The credit card type.
         /// </summary>
-        [JsonProperty("type")]
+        [JsonInclude]
+        [JsonPropertyName("type")]
         public string? Type { get; internal set; }
 
         /// <summary>

@@ -60,8 +60,14 @@
       "longitude": -0.0931,
       "time_zone": "Europe\/London"
     },
+    "maxmind": {},
+    "postal": {
+      "code": "90001",
+      "confidence": 10
+    },
     "registered_country": {
       "geoname_id": 6252001,
+      "is_in_european_union": true,
       "iso_code": "US",
       "names": {
         "de": "USA",
@@ -73,6 +79,22 @@
         "ru": "США",
         "zh-CN": "美国"
       }
+    },
+    "represented_country": {
+      "geoname_id": 6252001,
+      "is_in_european_union": true,
+      "iso_code": "US",
+      "names": {
+        "de": "USA",
+        "en": "United States",
+        "es": "Estados Unidos",
+        "fr": "États-Unis",
+        "ja": "アメリカ合衆国",
+        "pt-BR": "Estados Unidos",
+        "ru": "США",
+        "zh-CN": "美国"
+      },
+      "type": "military"
     },
     "subdivisions": [
       {
@@ -91,8 +113,10 @@
       "domain": "in-addr.arpa",
       "ip_address": "152.216.7.110",
       "is_anonymous": true,
+      "is_anonymous_proxy": true,
       "is_anonymous_vpn": true,
       "is_hosting_provider": true,
+      "is_legitimate_proxy": false,
       "is_public_proxy": true,
       "is_residential_proxy": true,
       "is_satellite_provider": true,
@@ -127,7 +151,7 @@
   "device": {
     "confidence": 99.0,
     "id": "7835b099-d385-4e5b-969e-7df26181d73b",
-    "last_seen": "2016-06-08T14:16:38-00:00"
+    "last_seen": "2016-06-08T14:16:38+00:00"
   },
   "email": {
     "domain": {

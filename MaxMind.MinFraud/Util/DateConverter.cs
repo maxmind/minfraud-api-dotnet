@@ -1,14 +1,33 @@
 ﻿#region
-using Newtonsoft.Json.Converters;
+using System;
+using System.Globalization;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 #endregion
 
 namespace MaxMind.MinFraud.Util
 {
-    internal class DateConverter : IsoDateTimeConverter
+    internal class DateConverter : JsonConverter<DateTimeOffset?>
     {
-        public DateConverter()
+        private const string format = "yyyy-MM-dd";
+
+        public override DateTimeOffset? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            DateTimeFormat = "yyyy-MM-dd";
+            var v = reader.GetString();
+            if (v == null)
+            {
+                return null;
+            }
+            return DateTimeOffset.ParseExact(
+                v,
+                format,
+                DateTimeFormatInfo.InvariantInfo,
+                DateTimeStyles.None);
+        }
+
+        public override void Write(Utf8JsonWriter writer, DateTimeOffset? value, JsonSerializerOptions options)
+        {
+            writer.WriteStringValue(value?.ToString(format));
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -10,7 +10,8 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The name of the bank which issued the credit card.
         /// </summary>
-        [JsonProperty("name")]
+        [JsonInclude]
+        [JsonPropertyName("name")]
         public string? Name { get; internal set; }
 
         /// <summary>
@@ -20,14 +21,16 @@ namespace MaxMind.MinFraud.Response
         /// either no name or no issuer ID number (IIN) was provided in the
         /// request or if MaxMind does not have a name associated with the IIN.
         /// </summary>
-        [JsonProperty("matches_provided_name")]
+        [JsonInclude]
+        [JsonPropertyName("matches_provided_name")]
         public bool? MatchesProvidedName { get; internal set; }
 
         /// <summary>
         /// The phone number of the bank which issued the credit card. In some
         /// cases the phone number we return may be out of date.
         /// </summary>
-        [JsonProperty("phone_number")]
+        [JsonInclude]
+        [JsonPropertyName("phone_number")]
         public string? PhoneNumber { get; internal set; }
 
         /// <summary>
@@ -38,7 +41,8 @@ namespace MaxMind.MinFraud.Response
         /// number(IIN) was provided in the request or if MaxMind does not
         /// have a phone number associated with the IIN.
         /// </summary>
-        [JsonProperty("matches_provided_phone_number")]
+        [JsonInclude]
+        [JsonPropertyName("matches_provided_phone_number")]
         public bool? MatchesProvidedPhoneNumber { get; internal set; }
 
         /// <summary>

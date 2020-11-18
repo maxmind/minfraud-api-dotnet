@@ -1,5 +1,5 @@
 ﻿using MaxMind.MinFraud.Response;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using Xunit;
 using static MaxMind.MinFraud.UnitTest.Response.AddressTestHelper;
 
@@ -10,14 +10,16 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestBillingAddress()
         {
-            var address = new JObject
-            {
-                {"is_in_ip_country", true},
-                {"latitude", 43.1},
-                {"longitude", 32.1},
-                {"distance_to_ip_location", 100},
-                {"is_postal_in_city", true}
-            }.ToObject<BillingAddress>();
+            var address = JsonSerializer.Deserialize<BillingAddress>(
+                @"
+                {
+                    ""is_in_ip_country"": true,
+                    ""latitude"": 43.1,
+                    ""longitude"": 32.1,
+                    ""distance_to_ip_location"": 100,
+                    ""is_postal_in_city"": true
+                }
+                ");
 
             TestAddress(address!);
         }

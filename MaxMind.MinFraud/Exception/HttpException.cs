@@ -51,7 +51,7 @@ namespace MaxMind.MinFraud.Exception
             : base(message)
         {
             HttpStatus = httpStatus;
-            this.Uri = uri;
+            Uri = uri;
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace MaxMind.MinFraud.Exception
             : base(message, innerException)
         {
             HttpStatus = httpStatus;
-            this.Uri = uri;
+            Uri = uri;
         }
         /// <summary>
         ///     Constructor for deserialization.

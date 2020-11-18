@@ -1,12 +1,12 @@
 ﻿using MaxMind.MinFraud.Request;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text.Json;
+using Xunit.Abstractions;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -170,21 +170,31 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     $"{name}.json"));
         }
 
-        public static bool VerifyRequestFor(string service, HttpRequestMessage message)
+        public static bool VerifyRequestFor(string service, HttpRequestMessage message, ITestOutputHelper output)
         {
             var requestFile = service == "transactions/report" ? "report-request" : "full-request";
             var requestBody = ReadJsonFile(requestFile);
 
             if (message.Content?.Headers.ContentType?.ToString() != "application/json; charset=utf-8")
             {
+                output.WriteLine("Unexpected content type: " + message.Content?.Headers.ContentType);
                 return false;
             }
             var contentTask = message.Content.ReadAsStringAsync();
             contentTask.Wait();
             var content = contentTask.Result;
-            var expectedRequest = JsonConvert.DeserializeObject<JObject>(requestBody);
-            var request = JsonConvert.DeserializeObject<JObject>(content);
-            return JToken.DeepEquals(expectedRequest, request);
+            var expectedRequest = JsonDocument.Parse(requestBody);
+            var request = JsonDocument.Parse(content);
+
+            var comparer = new JsonElementComparer();
+
+            var areEqual = comparer.JsonEquals(expectedRequest, request);
+            if (!areEqual)
+            {
+                output.WriteLine($"Expected: {requestBody}");
+                output.WriteLine($"Actual: {content}");
+            }
+            return areEqual;
         }
     }
 }

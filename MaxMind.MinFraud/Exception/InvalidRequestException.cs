@@ -47,7 +47,7 @@ namespace MaxMind.MinFraud.Exception
         public InvalidRequestException(string message, string code, Uri? uri) : base(message)
         {
             Code = code;
-            this.Uri = uri;
+            Uri = uri;
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ namespace MaxMind.MinFraud.Exception
         public InvalidRequestException(string message, string code, Uri? uri, System.Exception innerException) : base(message, innerException)
         {
             Code = code;
-            this.Uri = uri;
+            Uri = uri;
         }
 
         /// <summary>

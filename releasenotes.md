@@ -6,9 +6,21 @@ Release Notes
 
 * This library now requires .NET Framework 4.6.1 or greater or .NET Standard
 * .NET 5.0 was added as a target framework.
+* `System.Text.Json` is now used for serializing and deserializing JSON.
+  If you are serializing the objects yourself, the `Newtonsoft.Json`
+  attributes have been removed and you will need to switch to
+   `System.Text.Json`.
 * You may now create `WebServiceClient` as a typed client with
   `IHttpClientFactory` in .NET Core 2.1+.
 * Exception objects now correctly implement `ISerializable`.
+* The `Warnings` properties on the response models are now an
+  `IReadOnlyList<Warning>` rather than an `IList<Warning>`.
+* The `Names` properties on `NamedEntity` models are now
+  `IReadOnlyDictionary<string, string>`.
+* The `Subdivisions` property on `MaxMind.MinFraud.Response.IPAddress` is now
+  an `IReadOnlyList<Subdivision>`.
+* `GeoNameId` properties on `NamedEntity` models are now `long?` rather than
+  `int?` to match the underlying database.
 
 2.9.0 (2020-10-14)
 ------------------

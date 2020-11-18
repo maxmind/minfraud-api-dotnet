@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
@@ -60,50 +60,50 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The total order amount for the transaction.
         /// </summary>
-        [JsonProperty("amount")]
+        [JsonPropertyName("amount")]
         public decimal? Amount { get; }
 
         /// <summary>
         /// The ISO 4217 currency code for the currency used in the transaction.
         /// </summary>
-        [JsonProperty("currency")]
+        [JsonPropertyName("currency")]
         public string? Currency { get; }
 
         /// <summary>
         /// The discount code applied to the transaction. If multiple discount
         /// codes were used, please separate them with a comma.
         /// </summary>
-        [JsonProperty("discount_code")]
+        [JsonPropertyName("discount_code")]
         public string? DiscountCode { get; }
 
         /// <summary>
         /// The ID of the affiliate where the order is coming from.
         /// </summary>
-        [JsonProperty("affiliate_id")]
+        [JsonPropertyName("affiliate_id")]
         public string? AffiliateId { get; }
 
         /// <summary>
         /// The ID of the sub-affiliate where the order is coming from.
         /// </summary>
-        [JsonProperty("subaffiliate_id")]
+        [JsonPropertyName("subaffiliate_id")]
         public string? SubaffiliateId { get; }
 
         /// <summary>
         /// The URI of the referring site for this order.
         /// </summary>
-        [JsonProperty("referrer_uri")]
+        [JsonPropertyName("referrer_uri")]
         public Uri? ReferrerUri { get; }
 
         /// <summary>
         /// Whether order was marked as a gift by the purchaser.
         /// </summary>
-        [JsonProperty("is_gift")]
+        [JsonPropertyName("is_gift")]
         public bool? IsGift { get; }
 
         /// <summary>
         /// Whether the purchaser included a gift message.
         /// </summary>
-        [JsonProperty("has_gift_message")]
+        [JsonPropertyName("has_gift_message")]
         public bool? HasGiftMessage { get; }
 
         /// <summary>

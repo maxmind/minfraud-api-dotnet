@@ -1,5 +1,5 @@
 ﻿using MaxMind.MinFraud.Response;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
@@ -11,23 +11,22 @@ namespace MaxMind.MinFraud.UnitTest.Response
         {
             var time = "2015-04-19T12:59:23-01:00";
 
-            var address = new JObject
-            {
-                {"risk", 99},
-                {"country", new JObject {{"is_high_risk", true}}},
-                {"location", new JObject {{"local_time", time}}},
-                {
-                    "traits", new JObject
-                    {
-                        {"is_anonymous", true},
-                        {"is_anonymous_vpn", true},
-                        {"is_hosting_provider", true},
-                        {"is_public_proxy", true},
-                        {"is_residential_proxy", true},
-                        {"is_tor_exit_node", true},
-                    }
-                }
-            }.ToObject<IPAddress>()!;
+            var address = JsonSerializer.Deserialize<IPAddress>(
+                $@"
+                    {{
+                        ""risk"": 99,
+                        ""country"": {{""is_high_risk"": true}},
+                        ""location"": {{""local_time"": ""{time}""}},
+                        ""traits"": {{
+                            ""is_anonymous"": true,
+                            ""is_anonymous_vpn"": true,
+                            ""is_hosting_provider"": true,
+                            ""is_public_proxy"": true,
+                            ""is_residential_proxy"": true,
+                            ""is_tor_exit_node"": true
+                         }}
+                    }}
+                ")!;
 
             Assert.Equal(99, address.Risk);
             Assert.Equal(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));

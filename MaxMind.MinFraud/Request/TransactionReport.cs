@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Net;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -81,7 +81,7 @@ namespace MaxMind.MinFraud.Request
             string? transactionId = null
         )
         {
-            this.IPAddress = ipAddress;
+            IPAddress = ipAddress;
             Tag = tag;
             ChargebackCode = chargebackCode;
 
@@ -99,14 +99,16 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The IP address reported to MaxMind for the transaction.
         /// </summary>
-        [JsonProperty("ip_address")]
+        [JsonPropertyName("ip_address")]
+        [JsonConverter(typeof(IPAddressConverter))]
         public IPAddress IPAddress { get; }
 
         /// <summary>
         /// The <c>TransactionReportTag</c> indicating the type of report
         /// being made.
         /// </summary>
-        [JsonProperty("tag")]
+        [JsonConverter(typeof(EnumMemberValueConverter<TransactionReportTag>))]
+        [JsonPropertyName("tag")]
         public TransactionReportTag Tag { get; }
 
         /// <summary>
@@ -114,7 +116,7 @@ namespace MaxMind.MinFraud.Request
         /// <a href="https://en.wikipedia.org/wiki/Chargeback#Reason_codes">
         /// the reason for the chargeback</a>.
         /// </summary>
-        [JsonProperty("chargeback_code")]
+        [JsonPropertyName("chargeback_code")]
         public string? ChargebackCode { get; }
 
         /// <summary>
@@ -123,7 +125,7 @@ namespace MaxMind.MinFraud.Request
         /// field of a response for a successful minFraud request. This field
         /// is not required, but you are encouraged to provide it, if possible.
         /// </summary>
-        [JsonProperty("maxmind_id")]
+        [JsonPropertyName("maxmind_id")]
         public string? MaxMindId { get; }
 
         /// <summary>
@@ -132,7 +134,7 @@ namespace MaxMind.MinFraud.Request
         /// response. This field is not required, but you are encouraged to
         /// provide it if the request was made to one of these services.
         /// </summary>
-        [JsonProperty("minfraud_id")]
+        [JsonPropertyName("minfraud_id")]
         public Guid? MinFraudId { get; }
 
         /// <summary>
@@ -141,7 +143,7 @@ namespace MaxMind.MinFraud.Request
         /// for you so any additional details to help us understand context
         /// are helpful.
         /// </summary>
-        [JsonProperty("notes")]
+        [JsonPropertyName("notes")]
         public string? Notes { get; }
 
         /// <summary>
@@ -149,7 +151,7 @@ namespace MaxMind.MinFraud.Request
         /// is not required, but you are encouraged to provide it or the
         /// transaction's <c>>maxmindId</c> or <c>minfraudId</c>.
         /// </summary>
-        [JsonProperty("transaction_id")]
+        [JsonPropertyName("transaction_id")]
         public string? TransactionId { get; }
 
         /// <summary>

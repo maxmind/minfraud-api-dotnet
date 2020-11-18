@@ -1,5 +1,5 @@
 ﻿using MaxMind.MinFraud.Response;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
@@ -9,19 +9,16 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestEmail()
         {
-            var email = new JObject
-            {
-                {
-                    "domain", 
-                    new JObject {
-                        { "first_seen", "2014-02-03" }
+            var email = JsonSerializer.Deserialize<Email>(
+                @"
+                    {
+                        ""domain"": { ""first_seen"": ""2014-02-03"" },
+                        ""first_seen"": ""2017-01-02"",
+                        ""is_disposable"": true,
+                        ""is_free"": true,
+                        ""is_high_risk"": true
                     }
-                },
-                {"first_seen", "2017-01-02" },
-                {"is_disposable", true},
-                {"is_free", true},
-                {"is_high_risk", true}
-            }.ToObject<Email>()!;
+                ")!;
 
             Assert.Equal("2014-02-03", email.Domain.FirstSeen?.ToString("yyyy-MM-dd"));
             Assert.Equal("2017-01-02", email.FirstSeen?.ToString("yyyy-MM-dd"));

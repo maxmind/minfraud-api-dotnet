@@ -1,7 +1,6 @@
 ﻿using MaxMind.MinFraud.Request;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
+using System.Text.Json;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -19,14 +18,20 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
             Assert.Equal(domain, email.Domain);
 
-            var json = JsonConvert.SerializeObject(email);
-            Assert.Equal(
-                new JObject
-                {
-                    {"address", address},
-                    {"domain", domain}
-                },
-                JObject.Parse(json)
+            var json = JsonSerializer.Serialize(email);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        $@"
+                        {{
+                            ""address"": ""{address}"",
+                            ""domain"": ""{domain}""
+                        }}
+                        "),
+                    JsonDocument.Parse(json)
+                ),
+                json
             );
         }
 
@@ -42,14 +47,19 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal(md5, email.AddressMD5);
             Assert.Equal("maxmind.com", email.Domain);
 
-            var json = JsonConvert.SerializeObject(email);
-            Assert.Equal(
-                new JObject
-                {
-                    {"address", md5},
-                    {"domain", domain}
-                },
-                JObject.Parse(json)
+            var json = JsonSerializer.Serialize(email);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        $@"
+                        {{
+                            ""address"": ""{md5}"",
+                            ""domain"": ""{domain}""
+                        }}
+                        "),
+                    JsonDocument.Parse(json)
+                )
             );
         }
 

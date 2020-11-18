@@ -1,42 +1,26 @@
-﻿#region
-
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
+﻿using System;
 using System.Net;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
-#endregion
-
-namespace MaxMind.MinFraud.Util
+namespace MaxMind.MinFraud
 {
-    // http://stackoverflow.com/questions/18668617/json-net-error-getting-value-from-scopeid-on-system-net-ipaddress
-    internal class IPAddressConverter : JsonConverter
+    internal class IPAddressConverter : JsonConverter<IPAddress?>
     {
-        public override bool CanConvert(Type objectType)
+        public override void Write(Utf8JsonWriter writer, IPAddress? value, JsonSerializerOptions options)
         {
-            return objectType == typeof(IPAddress);
+            writer.WriteStringValue(value?.ToString());
         }
 
-        public override void WriteJson(JsonWriter writer, object? value, JsonSerializer serializer)
+        public override IPAddress? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (writer == null)
-            {
-                throw new ArgumentNullException(nameof(writer));
-            }
+            var value = reader.GetString();
             if (value == null)
             {
-                writer.WriteNull();
-                return;
+                return null;
             }
-            var ip = (IPAddress)value;
-            writer.WriteValue(ip.ToString());
-        }
 
-        public override object ReadJson(JsonReader reader, Type objectType, object? existingValue,
-            JsonSerializer serializer)
-        {
-            var token = JToken.Load(reader);
-            return IPAddress.Parse(token.Value<string>());
+            return IPAddress.Parse(value);
         }
     }
 }

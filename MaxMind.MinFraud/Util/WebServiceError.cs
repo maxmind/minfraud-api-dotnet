@@ -1,14 +1,16 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Util
 {
     internal class WebServiceError
     {
-        [JsonProperty("code")]
-        internal string? Code { get; set; }
+        [JsonInclude]
+        [JsonPropertyName("code")]
+        public string? Code { get; internal set; }
 
-        [JsonProperty("error")]
-        internal string? Error { get; set; }
+        [JsonInclude]
+        [JsonPropertyName("error")]
+        public string? Error { get; internal set; }
 
         public override string ToString()
         {

@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
@@ -80,33 +80,33 @@ namespace MaxMind.MinFraud.Request
         /// The issuer ID number for the credit card. This is the first 6
         /// digits of the credit card number. It identifies the issuing bank.
         /// </summary>
-        [JsonProperty("issuer_id_number")]
+        [JsonPropertyName("issuer_id_number")]
         public string? IssuerIdNumber { get; }
 
         /// <summary>
         /// The last four digits of the credit card number.
         /// </summary>
-        [JsonProperty("last_4_digits")]
+        [JsonPropertyName("last_4_digits")]
         public string? Last4Digits { get; }
 
         /// <summary>
         /// The name of the issuing bank as provided by the end user.
         /// </summary>
-        [JsonProperty("bank_name")]
+        [JsonPropertyName("bank_name")]
         public string? BankName { get; }
 
         /// <summary>
         /// The phone country code for the issuing bank as provided by
         /// the end user.
         /// </summary>
-        [JsonProperty("bank_phone_country_code")]
+        [JsonPropertyName("bank_phone_country_code")]
         public string? BankPhoneCountryCode { get; }
 
         /// <summary>
         /// The phone number, without the country code, for the
         /// issuing bank as provided by the end user.
         /// </summary>
-        [JsonProperty("bank_phone_number")]
+        [JsonPropertyName("bank_phone_number")]
         public string? BankPhoneNumber { get; }
 
         /// <summary>
@@ -114,14 +114,14 @@ namespace MaxMind.MinFraud.Request
         /// returned to you by the credit card processor. The minFraud
         /// service supports the standard AVS codes.
         /// </summary>
-        [JsonProperty("avs_result")]
+        [JsonPropertyName("avs_result")]
         public char? AvsResult { get; }
 
         /// <summary>
         /// The card verification value (CVV) code as provided by the
         /// payment processor.
         /// </summary>
-        [JsonProperty("cvv_result")]
+        [JsonPropertyName("cvv_result")]
         public char? CvvResult { get; }
 
 
@@ -129,8 +129,8 @@ namespace MaxMind.MinFraud.Request
         /// A token uniquely identifying the card. This should not be
         /// the actual credit card number.
         /// </summary>
-        [JsonProperty("token")]
-        public string? Token { get; set; }
+        [JsonPropertyName("token")]
+        public string? Token { get; }
 
         /// <summary>
         /// Returns a string that represents the current object.

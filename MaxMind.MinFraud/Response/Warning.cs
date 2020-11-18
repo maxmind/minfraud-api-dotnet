@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -13,7 +13,8 @@ namespace MaxMind.MinFraud.Response
         /// web service documentation</a> for the current list of of warning
         ///  codes.
         ///</summary>
-        [JsonProperty("code")]
+        [JsonInclude]
+        [JsonPropertyName("code")]
         public string? Code { get; internal set; }
 
         /// <summary>
@@ -21,7 +22,8 @@ namespace MaxMind.MinFraud.Response
         /// warning. The description may change at any time and should not be
         /// matched against.
         /// </summary>
-        [JsonProperty("warning")]
+        [JsonInclude]
+        [JsonPropertyName("warning")]
         public string? Message { get; internal set; }
 
         /// <summary>
@@ -30,7 +32,8 @@ namespace MaxMind.MinFraud.Response
         /// <c>/billing/city</c>. If it was for the price in the second shopping
         /// cart item, it would be <c>/shopping_cart/1/price</c>.
         /// </summary>
-        [JsonProperty("input_pointer")]
+        [JsonInclude]
+        [JsonPropertyName("input_pointer")]
         public string? InputPointer { get; internal set; }
 
         /// <summary>

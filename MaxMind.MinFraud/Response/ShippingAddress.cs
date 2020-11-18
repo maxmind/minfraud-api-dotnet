@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -14,14 +14,16 @@ namespace MaxMind.MinFraud.Response
         /// parsed or was not provided or the IP address could not be
         /// geolocated, then the property is <c>null</c>.
         /// </summary>
-        [JsonProperty("is_high_risk")]
+        [JsonInclude]
+        [JsonPropertyName("is_high_risk")]
         public bool? IsHighRisk { get; internal set; }
 
         /// <summary>
         /// The distance in kilometers from the shipping address to billing
         /// address.
         /// </summary>
-        [JsonProperty("distance_to_billing_address")]
+        [JsonInclude]
+        [JsonPropertyName("distance_to_billing_address")]
         public int? DistanceToBillingAddress { get; internal set; }
 
         /// <summary>
