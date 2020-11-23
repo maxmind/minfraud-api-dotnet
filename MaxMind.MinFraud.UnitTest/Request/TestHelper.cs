@@ -52,7 +52,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             return currentDirectory;
         }
 
-        public static Transaction CreateFullRequest()
+        public static Transaction CreateFullRequestUsingConstructors()
         {
             return new Transaction(
                 device: new Device(IPAddress.Parse("152.216.7.110"),
@@ -163,7 +163,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             );
         }
 
-        public static Transaction CreateFullRequestUsingOnlySetters()
+        public static Transaction CreateFullRequest()
         {
             return new Transaction
             {
