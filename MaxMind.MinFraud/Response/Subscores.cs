@@ -13,7 +13,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the AVS result. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("avs_result")]
         public double? AvsResult { get; init; }
 
@@ -21,7 +20,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the billing address. If present, this is
         /// a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("billing_address")]
         public double? BillingAddress { get; init; }
 
@@ -30,7 +28,6 @@ namespace MaxMind.MinFraud.Response
         /// and the location for the given IP address. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("billing_address_distance_to_ip_location")]
         public double? BillingAddressDistanceToIPLocation { get; init; }
 
@@ -39,7 +36,6 @@ namespace MaxMind.MinFraud.Response
         /// User-Agent and Accept-Language. If present, this is a value in the
         /// range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("browser")]
         public double? Browser { get; init; }
 
@@ -49,7 +45,6 @@ namespace MaxMind.MinFraud.Response
         /// chargeback data to MaxMind. If present, this is a value in the
         /// range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("chargeback")]
         public double? Chargeback { get; init; }
 
@@ -57,7 +52,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the country the transaction originated
         /// from. If present, this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("country")]
         public double? Country { get; init; }
 
@@ -66,7 +60,6 @@ namespace MaxMind.MinFraud.Response
         /// issuer country, billing country, and shipping country. If present,
         /// this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("country_mismatch")]
         public double? CountryMismatch { get; init; }
 
@@ -74,7 +67,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the CVV result. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("cvv_result")]
         public double? CvvResult { get; init; }
 
@@ -82,7 +74,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the device. If present, this is a value
         /// in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("device")]
         public double? Device { get; init; }
 
@@ -90,7 +81,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the particular email address. If
         /// present, this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("email_address")]
         public double? EmailAddress { get; init; }
 
@@ -98,7 +88,6 @@ namespace MaxMind.MinFraud.Response
         /// The general risk associated with the email domain. If present,
         /// this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("email_domain")]
         public double? EmailDomain { get; init; }
 
@@ -107,7 +96,6 @@ namespace MaxMind.MinFraud.Response
         /// the email address before the @ symbol). If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("email_local_part")]
         public double? EmailLocalPart{ get; init; }
 
@@ -115,7 +103,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the issuer ID number on the email
         /// domain. If present, this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("email_tenure")]
         [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address subscore MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
         public double? EmailTenure { get; init; }
@@ -124,7 +111,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the issuer ID number on the IP address.
         /// If present, this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("ip_tenure")]
         [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
         public double? IPTenure { get; init; }
@@ -135,7 +121,6 @@ namespace MaxMind.MinFraud.Response
         /// your account and shop ID. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("issuer_id_number")]
         public double? IssuerIdNumber { get; init; }
 
@@ -144,7 +129,6 @@ namespace MaxMind.MinFraud.Response
         /// account and shop ID. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("order_amount")]
         public double? OrderAmount { get; init; }
 
@@ -152,7 +136,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the particular phone number. If present,
         /// this is a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("phone_number")]
         public double? PhoneNumber { get; init; }
 
@@ -160,7 +143,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the shipping address. If present, this is
         /// a value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("shipping_address")]
         public double? ShippingAddress { get; init; }
 
@@ -169,7 +151,6 @@ namespace MaxMind.MinFraud.Response
         /// and the location for the given IP address. If present, this is a
         /// value in the range 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("shipping_address_distance_to_ip_location")]
         public double? ShippingAddressDistanceToIPLocation { get; init; }
 
@@ -178,7 +159,6 @@ namespace MaxMind.MinFraud.Response
         /// in the IP address location. If present, this is a value in the range
         /// 0.01 to 99.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("time_of_day")]
         public double? TimeOfDay { get; init; }
 

@@ -14,14 +14,12 @@ namespace MaxMind.MinFraud.Response
         /// Country object for the requested IP address. This record represents the
         /// country where MaxMind believes the IP is located.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("country")]
         public new GeoIP2Country Country { get; init; } = new GeoIP2Country();
 
         /// <summary>
         /// Location object for the requested IP address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("location")]
         public new GeoIP2Location Location { get; init; } = new GeoIP2Location();
 
@@ -37,7 +35,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("risk")]
         public double? Risk { get; init; }
 

@@ -4,11 +4,9 @@ namespace MaxMind.MinFraud.Util
 {
     internal class WebServiceError
     {
-        [JsonInclude]
         [JsonPropertyName("code")]
         public string? Code { get; init; }
 
-        [JsonInclude]
         [JsonPropertyName("error")]
         public string? Error { get; init; }
 

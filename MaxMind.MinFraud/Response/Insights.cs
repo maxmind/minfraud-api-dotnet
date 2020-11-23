@@ -11,7 +11,6 @@ namespace MaxMind.MinFraud.Response
         /// An object containing GeoIP2 and minFraud Insights information about
         /// the IP address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("ip_address")]
         public new IPAddress IPAddress { get; init; } = new IPAddress();
 
@@ -19,7 +18,6 @@ namespace MaxMind.MinFraud.Response
         /// An object containing minFraud data about the credit card used in
         /// the transaction.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("credit_card")]
         public CreditCard CreditCard { get; init; } = new CreditCard();
 
@@ -27,7 +25,6 @@ namespace MaxMind.MinFraud.Response
         /// This object contains information about the device that MaxMind
         /// believes is associated with the IP address passed in the request.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("device")]
         public Device Device { get; init; } = new Device();
 
@@ -35,7 +32,6 @@ namespace MaxMind.MinFraud.Response
         /// This object contains information about the email address passed in
         ///  the request.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("email")]
         public Email Email { get; init; } = new Email();
 
@@ -43,7 +39,6 @@ namespace MaxMind.MinFraud.Response
         /// An object containing minFraud data related to the shipping address
         ///  used in the transaction.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("shipping_address")]
         public ShippingAddress ShippingAddress { get; init; } = new ShippingAddress();
 
@@ -51,7 +46,6 @@ namespace MaxMind.MinFraud.Response
         /// An object containing minFraud data related to the billing address
         /// used in the transaction.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("billing_address")]
         public BillingAddress BillingAddress { get; init; } = new BillingAddress();
 

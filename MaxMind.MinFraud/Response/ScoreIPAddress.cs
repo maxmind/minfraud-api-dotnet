@@ -11,7 +11,6 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("risk")]
         public double? Risk { get; init; }
 

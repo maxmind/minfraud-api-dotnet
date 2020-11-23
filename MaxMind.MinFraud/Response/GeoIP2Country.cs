@@ -14,7 +14,6 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// This is <c>true</c> if the IP country is high risk.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("is_high_risk")]
         [Obsolete("Deprecated effective August 29, 2019.")]
         public bool? IsHighRisk { get; init; }

@@ -15,7 +15,6 @@ namespace MaxMind.MinFraud.Response
         /// This object contains information about the disposition set by
         /// custom rules.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("disposition")]
         public Disposition Disposition { get; init; } = new Disposition();
 
@@ -23,7 +22,6 @@ namespace MaxMind.MinFraud.Response
         /// The approximate US dollar value of the funds remaining on your
         /// MaxMind account.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("funds_remaining")]
         public decimal? FundsRemaining { get; init; }
 
@@ -32,14 +30,12 @@ namespace MaxMind.MinFraud.Response
         /// this ID in support requests to MaxMind so that we can easily
         /// identify a particular request.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("id")]
         public Guid? Id { get; init; }
 
         /// <summary>
         /// An object containing information about the IP address's risk.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("ip_address")]
         [JsonConverter(typeof(ScoreIPAddressConverter))]
         public IIPAddress IPAddress { get; init; } = new ScoreIPAddress();
@@ -48,7 +44,6 @@ namespace MaxMind.MinFraud.Response
         /// The approximate number of queries remaining for this service
         /// before your account runs out of funds.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("queries_remaining")]
         public long? QueriesRemaining { get; init; }
 
@@ -59,7 +54,6 @@ namespace MaxMind.MinFraud.Response
         /// risk score of 0, since all transactions have the possibility of being
         /// fraudulent.Likewise we never return a risk score of 100.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("risk_score")]
         public double? RiskScore { get; init; }
 
@@ -69,7 +63,6 @@ namespace MaxMind.MinFraud.Response
         /// recommended that you check this array for issues when integrating
         /// the web service.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("warnings")]
         public IReadOnlyList<Warning> Warnings { get; init; } = new List<Warning>().AsReadOnly();
 

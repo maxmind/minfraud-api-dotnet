@@ -13,7 +13,6 @@ namespace MaxMind.MinFraud.Response
         /// and "reject". If you do not have custom rules set up, <c>null</c>
         /// will be returned.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("action")]
         public string? Action { get; init; }
 
@@ -22,7 +21,6 @@ namespace MaxMind.MinFraud.Response
         /// "custom_rule", "block_list", and "default". If you do not have
         /// custom rules set up, <c>null</c> will be returned.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("reason")]
         public string? Reason { get; init; }
 

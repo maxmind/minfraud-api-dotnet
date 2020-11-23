@@ -14,7 +14,6 @@ namespace MaxMind.MinFraud.Response
         /// parsed or was not provided or the IP address could not be
         /// geolocated, then the property is <c>null</c>.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("is_high_risk")]
         public bool? IsHighRisk { get; init; }
 
@@ -22,7 +21,6 @@ namespace MaxMind.MinFraud.Response
         /// The distance in kilometers from the shipping address to billing
         /// address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("distance_to_billing_address")]
         public int? DistanceToBillingAddress { get; init; }
 

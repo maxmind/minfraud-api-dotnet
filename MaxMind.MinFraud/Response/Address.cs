@@ -13,7 +13,6 @@ namespace MaxMind.MinFraud.Response
         /// country. If the address could not be parsed or was not provided or if the
         /// IP address could not be geolocated, the property will be <c>null</c>.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("is_in_ip_country")]
         public bool? IsInIPCountry { get; init; }
 
@@ -23,28 +22,24 @@ namespace MaxMind.MinFraud.Response
         /// <c>false</c> when the postal code is not in the city. If the address was
         /// not provided or could not be parsed, the property will be <c>null</c>.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("is_postal_in_city")]
         public bool? IsPostalInCity { get; init; }
 
         /// <summary>
         /// The latitude associated with the address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("latitude")]
         public double? Latitude { get; init; }
 
         /// <summary>
         /// The longitude associated with the address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("longitude")]
         public double? Longitude { get; init; }
 
         /// <summary>
         /// The distance in kilometers from the address to the IP location.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("distance_to_ip_location")]
         public int? DistanceToIPLocation { get; init; }
 

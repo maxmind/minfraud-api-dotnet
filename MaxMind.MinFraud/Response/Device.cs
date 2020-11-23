@@ -19,7 +19,6 @@ namespace MaxMind.MinFraud.Response
         /// devices. A confidence of 0.01 indicates very low confidence that
         /// the device is unique, whereas 99 indicates very high confidence.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("confidence")]
         public double? Confidence { get; init; }
 
@@ -30,14 +29,12 @@ namespace MaxMind.MinFraud.Response
         /// model and OS release). In these cases, the minFraud service will
         /// simply not return a UUID for that device.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("id")]
         public Guid? Id { get; init; }
 
         /// <summary>
         /// The date and time of the last sighting of the device.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("last_seen")]
         public DateTimeOffset? LastSeen { get; init; }
 
@@ -46,7 +43,6 @@ namespace MaxMind.MinFraud.Response
         /// the device. This is determined by using the UTC offset associated
         /// with the device. This is an RFC 3339 date-time
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("local_time")]
         public DateTimeOffset? LocalTime { get; init; }
 

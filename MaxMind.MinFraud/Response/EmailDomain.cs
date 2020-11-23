@@ -13,7 +13,6 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The date the email address domain was first seen by MaxMind.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("first_seen")]
         [JsonConverter(typeof(DateConverter))]
         public DateTimeOffset? FirstSeen { get; init; }
