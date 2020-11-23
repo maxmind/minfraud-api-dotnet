@@ -9,6 +9,6 @@
         /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
-        double? Risk { get; }
+        double? Risk { get; init; }
     }
 }

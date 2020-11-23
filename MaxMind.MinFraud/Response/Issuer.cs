@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("name")]
-        public string? Name { get; internal set; }
+        public string? Name { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the name matches the name
@@ -23,7 +23,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("matches_provided_name")]
-        public bool? MatchesProvidedName { get; internal set; }
+        public bool? MatchesProvidedName { get; init; }
 
         /// <summary>
         /// The phone number of the bank which issued the credit card. In some
@@ -31,7 +31,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("phone_number")]
-        public string? PhoneNumber { get; internal set; }
+        public string? PhoneNumber { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the phone number matches
@@ -43,7 +43,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("matches_provided_phone_number")]
-        public bool? MatchesProvidedPhoneNumber { get; internal set; }
+        public bool? MatchesProvidedPhoneNumber { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

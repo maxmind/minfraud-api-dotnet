@@ -15,7 +15,7 @@ namespace MaxMind.MinFraud.Response
         ///</summary>
         [JsonInclude]
         [JsonPropertyName("code")]
-        public string? Code { get; internal set; }
+        public string? Code { get; init; }
 
         /// <summary>
         /// This property provides a human-readable explanation of the
@@ -24,7 +24,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("warning")]
-        public string? Message { get; internal set; }
+        public string? Message { get; init; }
 
         /// <summary>
         /// A JSON Pointer to the input field that the warning is associated with.
@@ -34,7 +34,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("input_pointer")]
-        public string? InputPointer { get; internal set; }
+        public string? InputPointer { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -17,7 +17,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("disposition")]
-        public Disposition Disposition { get; internal set; } = new Disposition();
+        public Disposition Disposition { get; init; } = new Disposition();
 
         /// <summary>
         /// The approximate US dollar value of the funds remaining on your
@@ -25,7 +25,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("funds_remaining")]
-        public decimal? FundsRemaining { get; internal set; }
+        public decimal? FundsRemaining { get; init; }
 
         /// <summary>
         /// This is a UUID that identifies the minFraud request. Please use
@@ -34,7 +34,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("id")]
-        public Guid? Id { get; internal set; }
+        public Guid? Id { get; init; }
 
         /// <summary>
         /// An object containing information about the IP address's risk.
@@ -42,7 +42,7 @@ namespace MaxMind.MinFraud.Response
         [JsonInclude]
         [JsonPropertyName("ip_address")]
         [JsonConverter(typeof(ScoreIPAddressConverter))]
-        public IIPAddress IPAddress { get; internal set; } = new ScoreIPAddress();
+        public IIPAddress IPAddress { get; init; } = new ScoreIPAddress();
 
         /// <summary>
         /// The approximate number of queries remaining for this service
@@ -50,7 +50,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("queries_remaining")]
-        public long? QueriesRemaining { get; internal set; }
+        public long? QueriesRemaining { get; init; }
 
         /// <summary>
         /// This property contains the risk score, from 0.01 to 99. A
@@ -61,7 +61,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("risk_score")]
-        public double? RiskScore { get; internal set; }
+        public double? RiskScore { get; init; }
 
         /// <summary>
         /// This list contains objects detailing issues with the request that
@@ -71,7 +71,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("warnings")]
-        public IReadOnlyList<Warning> Warnings { get; internal set; } = new List<Warning>().AsReadOnly();
+        public IReadOnlyList<Warning> Warnings { get; init; } = new List<Warning>().AsReadOnly();
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("subscores")]
-        public Subscores Subscores { get; internal set; } = new Subscores();
+        public Subscores Subscores { get; init; } = new Subscores();
 
         /// <summary>
         /// Returns a string that represents the current object.

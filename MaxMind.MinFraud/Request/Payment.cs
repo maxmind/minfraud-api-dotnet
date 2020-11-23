@@ -454,7 +454,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<PaymentProcessor>))]
         [JsonPropertyName("processor")]
-        public PaymentProcessor? Processor { get; }
+        public PaymentProcessor? Processor { get; init; }
 
         /// <summary>
         /// The authorization outcome from the payment processor. If the
@@ -462,14 +462,14 @@ namespace MaxMind.MinFraud.Request
         /// this field.
         /// </summary>
         [JsonPropertyName("was_authorized")]
-        public bool? WasAuthorized { get; }
+        public bool? WasAuthorized { get; init; }
 
         /// <summary>
         /// The decline code as provided by your payment processor. If the
         /// transaction was not declined, do not include this field.
         /// </summary>
         [JsonPropertyName("decline_code")]
-        public string? DeclineCode { get; }
+        public string? DeclineCode { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

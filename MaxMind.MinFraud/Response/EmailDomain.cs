@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Response
         [JsonInclude]
         [JsonPropertyName("first_seen")]
         [JsonConverter(typeof(DateConverter))]
-        public DateTimeOffset? FirstSeen { get; internal set; }
+        public DateTimeOffset? FirstSeen { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -15,7 +15,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("avs_result")]
-        public double? AvsResult { get; internal set; }
+        public double? AvsResult { get; init; }
 
         /// <summary>
         /// The risk associated with the billing address. If present, this is
@@ -23,7 +23,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("billing_address")]
-        public double? BillingAddress { get; internal set; }
+        public double? BillingAddress { get; init; }
 
         /// <summary>
         /// The risk associated with the distance between the billing address
@@ -32,7 +32,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("billing_address_distance_to_ip_location")]
-        public double? BillingAddressDistanceToIPLocation { get; internal set; }
+        public double? BillingAddressDistanceToIPLocation { get; init; }
 
         /// <summary>
         /// The risk associated with the browser attributes such as the
@@ -41,7 +41,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("browser")]
-        public double? Browser { get; internal set; }
+        public double? Browser { get; init; }
 
         /// <summary>
         /// Individualized risk of chargeback for the given IP address on
@@ -51,7 +51,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("chargeback")]
-        public double? Chargeback { get; internal set; }
+        public double? Chargeback { get; init; }
 
         /// <summary>
         /// The risk associated with the country the transaction originated
@@ -59,7 +59,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("country")]
-        public double? Country { get; internal set; }
+        public double? Country { get; init; }
 
         /// <summary>
         /// The risk associated with the combination of IP country, card
@@ -68,7 +68,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("country_mismatch")]
-        public double? CountryMismatch { get; internal set; }
+        public double? CountryMismatch { get; init; }
 
         /// <summary>
         /// The risk associated with the CVV result. If present, this is a
@@ -76,7 +76,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("cvv_result")]
-        public double? CvvResult { get; internal set; }
+        public double? CvvResult { get; init; }
 
         /// <summary>
         /// The risk associated with the device. If present, this is a value
@@ -84,7 +84,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("device")]
-        public double? Device { get; internal set; }
+        public double? Device { get; init; }
 
         /// <summary>
         /// The risk associated with the particular email address. If
@@ -92,7 +92,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("email_address")]
-        public double? EmailAddress { get; internal set; }
+        public double? EmailAddress { get; init; }
 
         /// <summary>
         /// The general risk associated with the email domain. If present,
@@ -100,7 +100,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("email_domain")]
-        public double? EmailDomain { get; internal set; }
+        public double? EmailDomain { get; init; }
 
         /// <summary>
         /// The risk associated with the email address local part (the part of
@@ -109,7 +109,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("email_local_part")]
-        public double? EmailLocalPart{ get; internal set; }
+        public double? EmailLocalPart{ get; init; }
 
         /// <summary>
         /// The risk associated with the issuer ID number on the email
@@ -118,7 +118,7 @@ namespace MaxMind.MinFraud.Response
         [JsonInclude]
         [JsonPropertyName("email_tenure")]
         [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address subscore MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
-        public double? EmailTenure { get; internal set; }
+        public double? EmailTenure { get; init; }
 
         /// <summary>
         /// The risk associated with the issuer ID number on the IP address.
@@ -127,7 +127,7 @@ namespace MaxMind.MinFraud.Response
         [JsonInclude]
         [JsonPropertyName("ip_tenure")]
         [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
-        public double? IPTenure { get; internal set; }
+        public double? IPTenure { get; init; }
 
         /// <summary>
         /// The risk associated with the particular issuer ID number (IIN)
@@ -137,7 +137,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("issuer_id_number")]
-        public double? IssuerIdNumber { get; internal set; }
+        public double? IssuerIdNumber { get; init; }
 
         /// <summary>
         /// The risk associated with the particular order amount for your
@@ -146,7 +146,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("order_amount")]
-        public double? OrderAmount { get; internal set; }
+        public double? OrderAmount { get; init; }
 
         /// <summary>
         /// The risk associated with the particular phone number. If present,
@@ -154,7 +154,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("phone_number")]
-        public double? PhoneNumber { get; internal set; }
+        public double? PhoneNumber { get; init; }
 
         /// <summary>
         /// The risk associated with the shipping address. If present, this is
@@ -162,7 +162,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("shipping_address")]
-        public double? ShippingAddress { get; internal set; }
+        public double? ShippingAddress { get; init; }
 
         /// <summary>
         /// The risk associated with the distance between the shipping address
@@ -171,7 +171,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("shipping_address_distance_to_ip_location")]
-        public double? ShippingAddressDistanceToIPLocation { get; internal set; }
+        public double? ShippingAddressDistanceToIPLocation { get; init; }
 
         /// <summary>
         /// The risk associated with the local time of day of the transaction
@@ -180,7 +180,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("time_of_day")]
-        public double? TimeOfDay { get; internal set; }
+        public double? TimeOfDay { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

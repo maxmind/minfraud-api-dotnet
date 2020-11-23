@@ -17,7 +17,7 @@ namespace MaxMind.MinFraud.Response
         [JsonInclude]
         [JsonPropertyName("is_high_risk")]
         [Obsolete("Deprecated effective August 29, 2019.")]
-        public bool? IsHighRisk { get; internal set; }
+        public bool? IsHighRisk { get; init; }
 
         internal void SetLocales(IReadOnlyList<string> locales)
         {

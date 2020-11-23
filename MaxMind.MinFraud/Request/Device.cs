@@ -10,6 +10,9 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Device
     {
+        private double? _sessionAge;
+        private string? _sessionId;
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -37,17 +40,7 @@ namespace MaxMind.MinFraud.Request
             IPAddress = ipAddress;
             UserAgent = userAgent;
             AcceptLanguage = acceptLanguage;
-
-            if (sessionAge != null && sessionAge < 0)
-            {
-                throw new ArgumentException($"{nameof(sessionAge)} must be non-negative.");
-            }
             SessionAge = sessionAge;
-
-            if (sessionId != null && sessionId.Length > 255)
-            {
-                throw new ArgumentException($"{nameof(sessionId)} must be less than 255 characters long.");
-            }
             SessionId = sessionId;
         }
 
@@ -57,21 +50,21 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("ip_address")]
         [JsonConverter(typeof(IPAddressConverter))]
-        public IPAddress? IPAddress { get; }
+        public IPAddress? IPAddress { get; init; }
 
         /// <summary>
         /// The HTTP “User-Agent” header of the browser used in the
         /// transaction.
         /// </summary>
         [JsonPropertyName("user_agent")]
-        public string? UserAgent { get; }
+        public string? UserAgent { get; init; }
 
         /// <summary>
         /// The HTTP “Accept-Language” header of the device used in the
         /// transaction.
         /// </summary>
         [JsonPropertyName("accept_language")]
-        public string? AcceptLanguage { get; }
+        public string? AcceptLanguage { get; init; }
 
         /// <summary>
         /// The number of seconds between the creation of the user's
@@ -80,14 +73,34 @@ namespace MaxMind.MinFraud.Request
         /// the time since the start of the first visit.
         /// </summary>
         [JsonPropertyName("session_age")]
-        public double? SessionAge { get; }
+        public double? SessionAge { 
+            get => _sessionAge;
+            init
+            {
+                if (value != null && value < 0)
+                {
+                    throw new ArgumentException($"{nameof(value)} must be non-negative.");
+                }
+                _sessionAge = value;
+            }
+        }
 
         /// <summary>
         /// A string up to 255 characters in length. This is an ID that
         /// uniquely identifies a visitor's session on the site.
         /// </summary>
         [JsonPropertyName("session_id")]
-        public string? SessionId { get; }
+        public string? SessionId { 
+            get => _sessionId;
+            init
+            {
+                if (value != null && value.Length > 255)
+                {
+                    throw new ArgumentException($"{nameof(value)} must be less than 255 characters long.");
+                }
+                _sessionId = value;
+            }
+        }
 
         /// <summary>
         /// Returns a string that represents the current object.

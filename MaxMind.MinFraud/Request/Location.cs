@@ -11,6 +11,7 @@ namespace MaxMind.MinFraud.Request
     public abstract class Location
     {
         private static readonly Regex CountryRe = new Regex("^[A-Z]{2}$", RegexOptions.Compiled);
+        private string? _country;
 
         /// <summary>
         /// Constructor.
@@ -42,10 +43,6 @@ namespace MaxMind.MinFraud.Request
             string? phoneCountryCode = null
         )
         {
-            if (country != null && !CountryRe.IsMatch(country))
-            {
-                throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
-            }
             FirstName = firstName;
             LastName = lastName;
             Company = company;
@@ -63,69 +60,79 @@ namespace MaxMind.MinFraud.Request
         /// The first name associated with the address.
         /// </summary>
         [JsonPropertyName("first_name")]
-        public string? FirstName { get; protected set; }
+        public string? FirstName { get; init; }
 
         /// <summary>
         /// The last name associated with the address.
         /// </summary>
         [JsonPropertyName("last_name")]
-        public string? LastName { get; protected set; }
+        public string? LastName { get; init; }
 
         /// <summary>
         /// The company name associated with the address.
         /// </summary>
         [JsonPropertyName("company")]
-        public string? Company { get; protected set; }
+        public string? Company { get; init; }
 
         /// <summary>
         /// The first line of the address.
         /// </summary>
         [JsonPropertyName("address")]
-        public string? Address { get; protected set; }
+        public string? Address { get; init; }
 
         /// <summary>
         /// The second line of the address.
         /// </summary>
         [JsonPropertyName("address_2")]
-        public string? Address2 { get; protected set; }
+        public string? Address2 { get; init; }
 
         /// <summary>
         /// The city associated with the address.
         /// </summary>
         [JsonPropertyName("city")]
-        public string? City { get; protected set; }
+        public string? City { get; init; }
 
         /// <summary>
         /// The ISO 3166-2 subdivision code for the region associated
         /// with the address.
         /// </summary>
         [JsonPropertyName("region")]
-        public string? Region { get; protected set; }
+        public string? Region { get; init; }
 
         /// <summary>
         /// The ISO 3166-1 alpha-2 country code for the country
         /// associated with the address (e.g., "US")
         /// </summary>
         [JsonPropertyName("country")]
-        public string? Country { get; protected set; }
+        public string? Country { 
+            get => _country; 
+            init
+            {
+                if (value != null && !CountryRe.IsMatch(value))
+                {
+                    throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
+                }
+                _country = value;
+            }
+        }
 
         /// <summary>
         /// The postal code for associated with the address.
         /// </summary>
         [JsonPropertyName("postal")]
-        public string? Postal { get; protected set; }
+        public string? Postal { get; init; }
 
         /// <summary>
         /// The phone country code for the phone number associated with the address.
         /// </summary>
         [JsonPropertyName("phone_number")]
-        public string? PhoneNumber { get; protected set; }
+        public string? PhoneNumber { get; init; }
 
         /// <summary>
         /// The phone number, without the country code, associated with the address.
         /// </summary>
         [JsonPropertyName("phone_country_code")]
-        public string? PhoneCountryCode { get; protected set; }
+        public string? PhoneCountryCode { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

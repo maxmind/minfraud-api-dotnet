@@ -80,7 +80,7 @@ namespace MaxMind.MinFraud.Request
         /// alerts and notifications from us to you.
         /// </summary>
         [JsonPropertyName("transaction_id")]
-        public string? TransactionId { get; }
+        public string? TransactionId { get; init; }
 
         /// <summary>
         /// Your internal ID for the shop, affiliate, or merchant this order is
@@ -88,20 +88,20 @@ namespace MaxMind.MinFraud.Request
         /// providers, gateways and affiliate networks.
         /// </summary>
         [JsonPropertyName("shop_id")]
-        public string? ShopId { get; }
+        public string? ShopId { get; init; }
 
         /// <summary>
         /// The date and time the event occurred.
         /// </summary>
         [JsonPropertyName("time")]
-        public DateTimeOffset? Time { get; }
+        public DateTimeOffset? Time { get; init; }
 
         /// <summary>
         /// The type of event being scored.
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<EventType>))]
         [JsonPropertyName("type")]
-        public EventType? Type { get; }
+        public EventType? Type { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

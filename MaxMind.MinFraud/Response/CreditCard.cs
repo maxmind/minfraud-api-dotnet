@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("brand")]
-        public string? Brand { get; internal set; }
+        public string? Brand { get; init; }
 
         /// <summary>
         /// The two letter <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">
@@ -24,14 +24,14 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("country")]
-        public string? Country { get; internal set; }
+        public string? Country { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a business card.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("is_business")]
-        public bool? IsBusiness { get; internal set; }
+        public bool? IsBusiness { get; init; }
 
         /// <summary>
         /// This field is <c>true</c> if the country of the billing address
@@ -41,35 +41,35 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("is_issued_in_billing_address_country")]
-        public bool? IsIssuedInBillingAddressCountry { get; internal set; }
+        public bool? IsIssuedInBillingAddressCountry { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a prepaid card.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("is_prepaid")]
-        public bool? IsPrepaid { get; internal set; }
+        public bool? IsPrepaid { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the card is a virtual card.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("is_virtual")]
-        public bool? IsVirtual { get; internal set; }
+        public bool? IsVirtual { get; init; }
 
         /// <summary>
         /// An object containing information about the credit card issuer.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("issuer")]
-        public Issuer Issuer { get; internal set; } = new Issuer();
+        public Issuer Issuer { get; init; } = new Issuer();
 
         /// <summary>
         /// The credit card type.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("type")]
-        public string? Type { get; internal set; }
+        public string? Type { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

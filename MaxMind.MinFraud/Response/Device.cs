@@ -21,7 +21,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("confidence")]
-        public double? Confidence { get; internal set; }
+        public double? Confidence { get; init; }
 
         /// <summary>
         /// A UUID that MaxMind uses for the device associated with this IP
@@ -32,14 +32,14 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("id")]
-        public Guid? Id { get; internal set; }
+        public Guid? Id { get; init; }
 
         /// <summary>
         /// The date and time of the last sighting of the device.
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("last_seen")]
-        public DateTimeOffset? LastSeen { get; internal set; }
+        public DateTimeOffset? LastSeen { get; init; }
 
         /// <summary>
         /// The local date and time of the transaction in the time zone of
@@ -48,7 +48,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("local_time")]
-        public DateTimeOffset? LocalTime { get; internal set; }
+        public DateTimeOffset? LocalTime { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

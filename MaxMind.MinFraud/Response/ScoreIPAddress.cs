@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("risk")]
-        public double? Risk { get; internal set; }
+        public double? Risk { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

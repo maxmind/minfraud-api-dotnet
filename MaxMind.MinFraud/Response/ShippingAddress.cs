@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("is_high_risk")]
-        public bool? IsHighRisk { get; internal set; }
+        public bool? IsHighRisk { get; init; }
 
         /// <summary>
         /// The distance in kilometers from the shipping address to billing
@@ -24,7 +24,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("distance_to_billing_address")]
-        public int? DistanceToBillingAddress { get; internal set; }
+        public int? DistanceToBillingAddress { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

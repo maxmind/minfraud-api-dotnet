@@ -15,7 +15,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("action")]
-        public string? Action { get; internal set; }
+        public string? Action { get; init; }
 
         /// <summary>
         /// The reason for the action. The current possible values are
@@ -24,7 +24,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("reason")]
-        public string? Reason { get; internal set; }
+        public string? Reason { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

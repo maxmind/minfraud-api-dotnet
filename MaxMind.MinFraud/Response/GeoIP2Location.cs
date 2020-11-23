@@ -16,7 +16,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("local_time")]
-        public DateTimeOffset? LocalTime { get; internal set; }
+        public DateTimeOffset? LocalTime { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -163,6 +163,121 @@ namespace MaxMind.MinFraud.UnitTest.Request
             );
         }
 
+        public static Transaction CreateFullRequestUsingOnlySetters()
+        {
+            return new Transaction
+            {
+                Device = new Device
+                {
+                    IPAddress = IPAddress.Parse("152.216.7.110"),
+                    UserAgent =
+                        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
+                    AcceptLanguage = "en-US,en;q=0.8",
+                    SessionAge = 3600.5,
+                    SessionId = "foobar"
+                },
+                Event = new Event
+                {
+                    TransactionId = "txn3134133",
+                    ShopId = "s2123",
+                    Time = new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                    Type = EventType.Purchase
+                },
+                Account = new Account
+                {
+                    UserId = "3132",
+                    Username = "fred"
+                },
+                Email = new Email
+                {
+                    Address = "test@maxmind.com",
+                    Domain = "maxmind.com",
+                    HashAddress = false
+                },
+                Billing = new Billing
+                {
+                    FirstName = "First",
+                    LastName = "Last",
+                    Company = "Company",
+                    Address = "101 Address Rd.",
+                    Address2 = "Unit 5",
+                    City = "City of Thorns",
+                    Region = "CT",
+                    Country = "US",
+                    Postal = "06510",
+                    PhoneNumber = "123-456-7890",
+                    PhoneCountryCode = "1"
+                },
+                Shipping = new Shipping
+                {
+                    FirstName = "ShipFirst",
+                    LastName = "ShipLast",
+                    Company = "ShipCo",
+                    Address = "322 Ship Addr. Ln.",
+                    Address2 = "St. 43",
+                    City = "Nowhere",
+                    Region = "OK",
+                    Country = "US",
+                    Postal = "73003",
+                    PhoneNumber = "123-456-0000",
+                    PhoneCountryCode = "1",
+                    DeliverySpeed = ShippingDeliverySpeed.SameDay
+                },
+                Payment = new Payment
+                {
+                    Processor = PaymentProcessor.Stripe,
+                    WasAuthorized = false,
+                    DeclineCode = "invalid number"
+                },
+                CreditCard = new CreditCard
+                {
+                    IssuerIdNumber = "411111",
+                    BankName = "Bank of No Hope",
+                    BankPhoneCountryCode = "1",
+                    BankPhoneNumber = "123-456-1234",
+                    AvsResult = 'Y',
+                    CvvResult = 'N',
+                    Last4Digits = "7643",
+                    Token = "123456abc1234"
+                },
+                CustomInputs = new CustomInputs.Builder
+                {
+                    { "float_input", 12.1d},
+                    { "integer_input", 3123},
+                    { "string_input", "This is a string input."},
+                    { "boolean_input", true},
+                }.Build(),
+                Order = new Order
+                {
+                    Amount = 323.21m,
+                    Currency = "USD",
+                    DiscountCode = "FIRST",
+                    AffiliateId = "af12",
+                    SubaffiliateId = "saf42",
+                    ReferrerUri = new Uri("http://www.amazon.com/"),
+                    IsGift = true,
+                    HasGiftMessage = false
+                },
+                ShoppingCart = new List<ShoppingCartItem>
+                {
+                    new ShoppingCartItem
+                    {
+                        Category = "pets",
+                        ItemId = "ad23232",
+                        Quantity = 2,
+                        Price = 20.43m
+                    },
+                    new ShoppingCartItem
+                    {
+                        Category = "beauty",
+                        ItemId = "bst112",
+                        Quantity = 1,
+                        Price = 100.00m
+                    }
+                }
+            };
+        }
+
         public static string ReadJsonFile(string name)
         {
             return

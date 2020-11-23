@@ -11,6 +11,7 @@ namespace MaxMind.MinFraud.Request
     public sealed class Order
     {
         private static readonly Regex CurrencyRe = new Regex("^[A-Z]{3}$", RegexOptions.Compiled);
+        private string? _currency;
 
         /// <summary>
         /// Constructor.
@@ -42,11 +43,6 @@ namespace MaxMind.MinFraud.Request
             bool? hasGiftMessage = null
         )
         {
-            if (currency != null && !CurrencyRe.IsMatch(currency))
-            {
-                throw new ArgumentException($"The currency code {currency} is invalid.");
-            }
-
             Amount = amount;
             Currency = currency;
             DiscountCode = discountCode;
@@ -61,50 +57,60 @@ namespace MaxMind.MinFraud.Request
         /// The total order amount for the transaction.
         /// </summary>
         [JsonPropertyName("amount")]
-        public decimal? Amount { get; }
+        public decimal? Amount { get; init; }
 
         /// <summary>
         /// The ISO 4217 currency code for the currency used in the transaction.
         /// </summary>
         [JsonPropertyName("currency")]
-        public string? Currency { get; }
+        public string? Currency { 
+            get => _currency;
+            init
+            {
+                if (value != null && !CurrencyRe.IsMatch(value))
+                {
+                    throw new ArgumentException($"The currency code {value} is invalid.");
+                }
+                _currency = value;
+            }
+        }
 
         /// <summary>
         /// The discount code applied to the transaction. If multiple discount
         /// codes were used, please separate them with a comma.
         /// </summary>
         [JsonPropertyName("discount_code")]
-        public string? DiscountCode { get; }
+        public string? DiscountCode { get; init; }
 
         /// <summary>
         /// The ID of the affiliate where the order is coming from.
         /// </summary>
         [JsonPropertyName("affiliate_id")]
-        public string? AffiliateId { get; }
+        public string? AffiliateId { get; init; }
 
         /// <summary>
         /// The ID of the sub-affiliate where the order is coming from.
         /// </summary>
         [JsonPropertyName("subaffiliate_id")]
-        public string? SubaffiliateId { get; }
+        public string? SubaffiliateId { get; init; }
 
         /// <summary>
         /// The URI of the referring site for this order.
         /// </summary>
         [JsonPropertyName("referrer_uri")]
-        public Uri? ReferrerUri { get; }
+        public Uri? ReferrerUri { get; init; }
 
         /// <summary>
         /// Whether order was marked as a gift by the purchaser.
         /// </summary>
         [JsonPropertyName("is_gift")]
-        public bool? IsGift { get; }
+        public bool? IsGift { get; init; }
 
         /// <summary>
         /// Whether the purchaser included a gift message.
         /// </summary>
         [JsonPropertyName("has_gift_message")]
-        public bool? HasGiftMessage { get; }
+        public bool? HasGiftMessage { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

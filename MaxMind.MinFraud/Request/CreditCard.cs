@@ -15,6 +15,10 @@ namespace MaxMind.MinFraud.Request
 
         private static readonly Regex TokenRe = new Regex("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
+        private string? _issuerIdNumber;
+        private string? _last4Digits;
+        private string? _token;
+
 
         /// <summary>
         /// Constructor.
@@ -49,23 +53,6 @@ namespace MaxMind.MinFraud.Request
             string? token = null
         )
         {
-            if (issuerIdNumber != null && !IssuerIdNumberRe.IsMatch(issuerIdNumber))
-            {
-                throw new ArgumentException($"The issuer ID number {issuerIdNumber} is of the wrong format.");
-            }
-
-            if (last4Digits != null && !Last4Re.IsMatch(last4Digits))
-            {
-                throw new ArgumentException($"The last 4 credit card digits {last4Digits} is of the wrong format.");
-            }
-
-            if (token != null && !TokenRe.IsMatch(token))
-            {
-                throw new ArgumentException($"The credit card token {token} was invalid. "
-                                            + "Tokens must be non-space ASCII printable characters. If the "
-                                            + "token consists of all digits, it must be more than 19 digits.");
-            }
-
             IssuerIdNumber = issuerIdNumber;
             Last4Digits = last4Digits;
             BankName = bankName;
@@ -81,33 +68,55 @@ namespace MaxMind.MinFraud.Request
         /// digits of the credit card number. It identifies the issuing bank.
         /// </summary>
         [JsonPropertyName("issuer_id_number")]
-        public string? IssuerIdNumber { get; }
+        public string? IssuerIdNumber
+        {
+            get => _issuerIdNumber;
+            init
+            {
+                if (value != null && !IssuerIdNumberRe.IsMatch(value))
+                {
+                    throw new ArgumentException($"The issuer ID number {value} is of the wrong format.");
+                }
+                _issuerIdNumber = value;
+            }
+        }
 
         /// <summary>
         /// The last four digits of the credit card number.
         /// </summary>
         [JsonPropertyName("last_4_digits")]
-        public string? Last4Digits { get; }
+        public string? Last4Digits
+        {
+            get => _last4Digits;
+            init
+            {
+                if (value != null && !Last4Re.IsMatch(value))
+                {
+                    throw new ArgumentException($"The last 4 credit card digits {value} is of the wrong format.");
+                }
+                _last4Digits = value;
+            }
+        }
 
         /// <summary>
         /// The name of the issuing bank as provided by the end user.
         /// </summary>
         [JsonPropertyName("bank_name")]
-        public string? BankName { get; }
+        public string? BankName { get; init; }
 
         /// <summary>
         /// The phone country code for the issuing bank as provided by
         /// the end user.
         /// </summary>
         [JsonPropertyName("bank_phone_country_code")]
-        public string? BankPhoneCountryCode { get; }
+        public string? BankPhoneCountryCode { get; init; }
 
         /// <summary>
         /// The phone number, without the country code, for the
         /// issuing bank as provided by the end user.
         /// </summary>
         [JsonPropertyName("bank_phone_number")]
-        public string? BankPhoneNumber { get; }
+        public string? BankPhoneNumber { get; init; }
 
         /// <summary>
         /// The address verification system (AVS) check result, as
@@ -115,14 +124,14 @@ namespace MaxMind.MinFraud.Request
         /// service supports the standard AVS codes.
         /// </summary>
         [JsonPropertyName("avs_result")]
-        public char? AvsResult { get; }
+        public char? AvsResult { get; init; }
 
         /// <summary>
         /// The card verification value (CVV) code as provided by the
         /// payment processor.
         /// </summary>
         [JsonPropertyName("cvv_result")]
-        public char? CvvResult { get; }
+        public char? CvvResult { get; init; }
 
 
         /// <summary>
@@ -130,7 +139,20 @@ namespace MaxMind.MinFraud.Request
         /// the actual credit card number.
         /// </summary>
         [JsonPropertyName("token")]
-        public string? Token { get; }
+        public string? Token
+        {
+            get => _token;
+            init
+            {
+                if (value != null && !TokenRe.IsMatch(value))
+                {
+                    throw new ArgumentException($"The credit card token {value} was invalid. "
+                                                + "Tokens must be non-space ASCII printable characters. If the "
+                                                + "token consists of all digits, it must be more than 19 digits.");
+                }
+                _token = value;
+            }
+        }
 
         /// <summary>
         /// Returns a string that represents the current object.

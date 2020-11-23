@@ -13,7 +13,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("ip_address")]
-        public new IPAddress IPAddress { get; internal set; } = new IPAddress();
+        public new IPAddress IPAddress { get; init; } = new IPAddress();
 
         /// <summary>
         /// An object containing minFraud data about the credit card used in
@@ -21,7 +21,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("credit_card")]
-        public CreditCard CreditCard { get; internal set; } = new CreditCard();
+        public CreditCard CreditCard { get; init; } = new CreditCard();
 
         /// <summary>
         /// This object contains information about the device that MaxMind
@@ -29,7 +29,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("device")]
-        public Device Device { get; internal set; } = new Device();
+        public Device Device { get; init; } = new Device();
 
         /// <summary>
         /// This object contains information about the email address passed in
@@ -37,7 +37,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("email")]
-        public Email Email { get; internal set; } = new Email();
+        public Email Email { get; init; } = new Email();
 
         /// <summary>
         /// An object containing minFraud data related to the shipping address
@@ -45,7 +45,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("shipping_address")]
-        public ShippingAddress ShippingAddress { get; internal set; } = new ShippingAddress();
+        public ShippingAddress ShippingAddress { get; init; } = new ShippingAddress();
 
         /// <summary>
         /// An object containing minFraud data related to the billing address
@@ -53,7 +53,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonInclude]
         [JsonPropertyName("billing_address")]
-        public BillingAddress BillingAddress { get; internal set; } = new BillingAddress();
+        public BillingAddress BillingAddress { get; init; } = new BillingAddress();
 
         /// <summary>
         /// Returns a string that represents the current object.
