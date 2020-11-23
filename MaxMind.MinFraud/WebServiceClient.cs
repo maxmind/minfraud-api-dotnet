@@ -178,8 +178,10 @@ namespace MaxMind.MinFraud
 
         private async Task<HttpResponseMessage> MakeRequest<T>(string path, T request)
         {
-            var options = new JsonSerializerOptions();
-            options.IgnoreNullValues = true;
+            var options = new JsonSerializerOptions
+            {
+                IgnoreNullValues = true
+            };
 
             var response = await _httpClient.PostAsJsonAsync<T>(
                 path,
