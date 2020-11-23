@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -13,7 +13,8 @@ namespace MaxMind.MinFraud.Response
         /// and "reject". If you do not have custom rules set up, <c>null</c>
         /// will be returned.
         /// </summary>
-        [JsonProperty("action")]
+        [JsonInclude]
+        [JsonPropertyName("action")]
         public string? Action { get; internal set; }
 
         /// <summary>
@@ -21,7 +22,8 @@ namespace MaxMind.MinFraud.Response
         /// "custom_rule", "block_list", and "default". If you do not have
         /// custom rules set up, <c>null</c> will be returned.
         /// </summary>
-        [JsonProperty("reason")]
+        [JsonInclude]
+        [JsonPropertyName("reason")]
         public string? Reason { get; internal set; }
 
         /// <summary>

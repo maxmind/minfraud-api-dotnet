@@ -1,6 +1,6 @@
 ﻿using MaxMind.MinFraud.Util;
-using Newtonsoft.Json;
 using System;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -12,13 +12,15 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// An object containing information about the email address domain.
         /// </summary>
-        [JsonProperty("domain")]
+        [JsonInclude]
+        [JsonPropertyName("domain")]
         public EmailDomain Domain { get; internal set; } = new EmailDomain();
 
         /// <summary>
         /// The date the email address was first seen by MaxMind.
         /// </summary>
-        [JsonProperty("first_seen")]
+        [JsonInclude]
+        [JsonPropertyName("first_seen")]
         [JsonConverter(typeof(DateConverter))]
         public DateTimeOffset? FirstSeen { get; internal set; }
 
@@ -27,14 +29,16 @@ namespace MaxMind.MinFraud.Response
         /// email provider. The value will be <c>null</c> if no email address
         /// or email domain was passed as an input.
         /// </summary>
-        [JsonProperty("is_disposable")]
+        [JsonInclude]
+        [JsonPropertyName("is_disposable")]
         public bool? IsDisposable { get; internal set; }
 
         /// <summary>
         /// This property is true if MaxMind believes that this email is hosted by a free
         /// email provider such as Gmail or Yahoo! Mail.
         /// </summary>
-        [JsonProperty("is_free")]
+        [JsonInclude]
+        [JsonPropertyName("is_free")]
         public bool? IsFree { get; internal set; }
 
         /// <summary>
@@ -42,7 +46,8 @@ namespace MaxMind.MinFraud.Response
         ///  for fraud. Note that this is also factored into the overall risk_score in the
         /// response as well.
         /// </summary>
-        [JsonProperty("is_high_risk")]
+        [JsonInclude]
+        [JsonPropertyName("is_high_risk")]
         public bool? IsHighRisk { get; internal set; }
 
         /// <summary>

@@ -1,8 +1,12 @@
-﻿namespace MaxMind.MinFraud.Exception
+﻿using System;
+using System.Runtime.Serialization;
+
+namespace MaxMind.MinFraud.Exception
 {
     /// <summary>
     /// This class is thrown when the request fails due to insufficient funds.
     /// </summary>
+    [Serializable]
     public class InsufficientFundsException : System.Exception
     {
         /// <summary>
@@ -26,6 +30,15 @@
         /// <param name="message">Exception message.</param>
         /// <param name="innerException">The underlying exception that caused this one.</param>
         public InsufficientFundsException(string message, System.Exception innerException) : base(message, innerException)
+        {
+        }
+
+        /// <summary>
+        ///     Constructor for deserialization.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected InsufficientFundsException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
         }
     }

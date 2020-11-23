@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -72,13 +72,16 @@ namespace MaxMind.MinFraud.Request
         [EmailAddress]
         public string? Address { get; }
 
-        [JsonProperty("address")]
-        private string? JsonAddress => _hashAddress ? AddressMD5 : Address;
+        /// <summary>
+        ///     The address value that will be sent in the request.
+        /// </summary>
+        [JsonPropertyName("address")]
+        public string? RequestAddress => _hashAddress ? AddressMD5 : Address;
 
         /// <summary>
         /// The domain of the email address.
         /// </summary>
-        [JsonProperty("domain")]
+        [JsonPropertyName("domain")]
         public string? Domain
         {
             get => _domain;

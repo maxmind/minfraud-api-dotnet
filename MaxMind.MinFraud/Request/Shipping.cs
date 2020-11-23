@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -77,7 +77,8 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The shipping delivery speed for the order.
         /// </summary>
-        [JsonProperty("delivery_speed")]
+        [JsonConverter(typeof(EnumMemberValueConverter<ShippingDeliverySpeed>))]
+        [JsonPropertyName("delivery_speed")]
         public ShippingDeliverySpeed? DeliverySpeed { get; }
 
         /// <summary>

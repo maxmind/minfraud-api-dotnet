@@ -11,8 +11,8 @@ API.
 
 ## Requirements ##
 
-This library works with .NET Framework version 4.5 and above and .NET Standard
-2.0 or above.
+This library works with .NET Framework version 4.6.1 and above and .NET
+Standard 2.0 or above.
 
 This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.

@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
@@ -11,10 +12,9 @@ namespace MaxMind.MinFraud.Request
     ///     <a href="https://www.maxmind.com/en/minfraud-interactive/#/custom-rules">Custom Rules</a>.
     ///     In order to use custom inputs, you must set them up from your account portal.
     /// </summary>
-    [JsonObject]
     public sealed class CustomInputs
     {
-        [JsonExtensionData] private readonly Dictionary<string, object> _inputs = new Dictionary<string, object>();
+        private readonly Dictionary<string, object> _inputs = new Dictionary<string, object>();
 
         /// <summary>
         ///     This is only to be used by the Builder.
@@ -22,6 +22,12 @@ namespace MaxMind.MinFraud.Request
         private CustomInputs()
         {
         }
+
+        /// <summary>
+        ///     The custom inputs to be sent to the web service.
+        /// </summary>
+        [JsonExtensionData]
+        public IDictionary<string, object> Inputs => new ReadOnlyDictionary<string, object>(_inputs);
 
         /// <summary>
         /// Builder class for <code>CustomInputs</code> objects.

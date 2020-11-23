@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using System.Runtime.Serialization;
 
 #endregion
 
@@ -10,6 +11,7 @@ namespace MaxMind.MinFraud.Exception
     /// This class is thrown when the web service rejected the request. Check
     /// the value of <c>Code</c> for the reason code.
     /// </summary>
+    [Serializable]
     public class InvalidRequestException : MinFraudException
     {
         /// <summary>
@@ -45,7 +47,7 @@ namespace MaxMind.MinFraud.Exception
         public InvalidRequestException(string message, string code, Uri? uri) : base(message)
         {
             Code = code;
-            this.Uri = uri;
+            Uri = uri;
         }
 
         /// <summary>
@@ -58,7 +60,33 @@ namespace MaxMind.MinFraud.Exception
         public InvalidRequestException(string message, string code, Uri? uri, System.Exception innerException) : base(message, innerException)
         {
             Code = code;
-            this.Uri = uri;
+            Uri = uri;
+        }
+
+        /// <summary>
+        ///     Constructor for deserialization.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected InvalidRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            Code = info.GetString("MaxMind.MinFraud.Exception.InvalidRequestException.Code")
+                ?? throw new SerializationException("Unexpected null Code value");
+            Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", typeof(Uri))
+                ?? throw new SerializationException("Unexpected null Uri value"));
+        }
+
+        /// <summary>
+        ///     Method to serialize data.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+
+            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Code", Code);
+            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", Uri, typeof(Uri));
         }
 
         /// <summary>

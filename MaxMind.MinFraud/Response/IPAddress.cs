@@ -1,6 +1,7 @@
 ﻿using MaxMind.GeoIP2.Responses;
-using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -13,23 +14,34 @@ namespace MaxMind.MinFraud.Response
         /// Country object for the requested IP address. This record represents the
         /// country where MaxMind believes the IP is located.
         /// </summary>
-        [JsonProperty("country")]
+        [JsonInclude]
+        [JsonPropertyName("country")]
         public new GeoIP2Country Country { get; internal set; } = new GeoIP2Country();
 
         /// <summary>
         /// Location object for the requested IP address.
         /// </summary>
-        [JsonProperty("location")]
+        [JsonInclude]
+        [JsonPropertyName("location")]
         public new GeoIP2Location Location { get; internal set; } = new GeoIP2Location();
+
+
+        /// <summary>
+        /// This property is not provided by minFraud.
+        /// </summary>
+        [JsonIgnore]
+        [Obsolete("This is not provided in a minFraud response.")]
+        public new GeoIP2.Model.MaxMind MaxMind { get; internal set; } = new GeoIP2.Model.MaxMind();
 
         /// <summary>
         /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
-        [JsonProperty("risk")]
+        [JsonInclude]
+        [JsonPropertyName("risk")]
         public double? Risk { get; internal set; }
 
-        internal new void SetLocales(IEnumerable<string> locales)
+        internal new void SetLocales(IReadOnlyList<string> locales)
         {
             var l = new List<string>(locales);
             base.SetLocales(l);

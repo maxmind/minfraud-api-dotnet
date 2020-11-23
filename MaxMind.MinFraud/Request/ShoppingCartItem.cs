@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -33,26 +33,26 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The category of the item.
         /// </summary>
-        [JsonProperty("category")]
+        [JsonPropertyName("category")]
         public string? Category { get; }
 
         /// <summary>
         /// Your internal ID for the item.
         /// </summary>
-        [JsonProperty("item_id")]
+        [JsonPropertyName("item_id")]
         public string? ItemId { get; }
 
         /// <summary>
         /// The quantity of the item in the shopping cart.
         /// </summary>
-        [JsonProperty("quantity")]
+        [JsonPropertyName("quantity")]
         public int? Quantity { get; }
 
         /// <summary>
         /// The per-unit price of the item in the shopping cart. This should
         /// use the same currency as the order currency.
         /// </summary>
-        [JsonProperty("price")]
+        [JsonPropertyName("price")]
         public decimal? Price { get; }
 
         /// <summary>

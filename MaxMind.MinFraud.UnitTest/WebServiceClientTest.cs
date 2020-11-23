@@ -1,24 +1,31 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
-#if !NET452 && !NET46
+#if !NET461
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
 #endif
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using RichardSzalay.MockHttp;
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Xunit;
 using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
+using System.Text.Json;
+using Xunit.Abstractions;
 
 namespace MaxMind.MinFraud.UnitTest
 {
     public class WebServiceClientTest
     {
+        private readonly ITestOutputHelper output;
+
+        public WebServiceClientTest(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
+
         [Fact]
         public async Task TestFullScoreRequest()
         {
@@ -26,7 +33,7 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("score", responseContent);
             var request = CreateFullRequest();
             var response = await client.ScoreAsync(request);
-            CompareJson(responseContent, response, false);
+            CompareJson(responseContent, response);
         }
 
         [Fact]
@@ -36,15 +43,15 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("insights", responseContent);
             var request = CreateFullRequest();
             var response = await client.InsightsAsync(request);
-            CompareJson(responseContent, response, true);
+            CompareJson(responseContent, response);
 
             // The purpose here is to test that SetLocales worked as expected
             Assert.Equal("London", response.IPAddress.City.Name);
             Assert.Equal("United Kingdom", response.IPAddress.Country.Name);
 
             Assert.True(response.IPAddress.Country.IsInEuropeanUnion);
-            Assert.False(response.IPAddress.RegisteredCountry.IsInEuropeanUnion);
-            Assert.False(response.IPAddress.RepresentedCountry.IsInEuropeanUnion);
+            Assert.True(response.IPAddress.RegisteredCountry.IsInEuropeanUnion);
+            Assert.True(response.IPAddress.RepresentedCountry.IsInEuropeanUnion);
             Assert.True(response.IPAddress.Traits.IsResidentialProxy);
         }
 
@@ -55,7 +62,7 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("factors", responseContent);
             var request = CreateFullRequest();
             var response = await client.FactorsAsync(request);
-            CompareJson(responseContent, response, true);
+            CompareJson(responseContent, response);
         }
 
         [Fact]
@@ -80,7 +87,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.Null(exception);
         }
 
-#if !NET452 && !NET46
+#if !NET461
         [Fact]
         public async Task TestWebServiceClientOptionsConstructor()
         {
@@ -96,10 +103,10 @@ namespace MaxMind.MinFraud.UnitTest
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(HttpMethod.Post, $"https://test.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
-                .With(request => VerifyRequestFor("score", request))
-                .Respond(message);
+                .With(request => VerifyRequestFor("score", request, output))
+                .Respond(req => message);
 
-            IOptions<WebServiceClientOptions> options = Options.Create(new WebServiceClientOptions
+            var options = Options.Create(new WebServiceClientOptions
             {
                 AccountId = 6,
                 LicenseKey = "0123456789",
@@ -112,38 +119,26 @@ namespace MaxMind.MinFraud.UnitTest
             var request = CreateFullRequest();
             var response = await client.ScoreAsync(request);
 
-            CompareJson(responseContent, response, false);
+            CompareJson(responseContent, response);
         }
 #endif
 
-        private static void CompareJson(string responseContent, object response, bool mungeIPAddress)
+        private void CompareJson(string responseContent, object response )
         {
-            var expectedResponse = JsonConvert.DeserializeObject<JObject>(responseContent);
+            var expectedResponse = JsonDocument.Parse(responseContent);
 
-            var settings = new JsonSerializerSettings
-            {
-                NullValueHandling = NullValueHandling.Ignore,
-                DefaultValueHandling = DefaultValueHandling.Ignore,
-                Converters = new List<JsonConverter>() { new NetworkConverter() },
-            };
-            var actualResponse =
-                JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(response, settings));
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new NetworkConverter());
+            options.IgnoreNullValues = true;
 
-            if (mungeIPAddress)
-            {
-                // These are empty objects. There isn't an easy way to ignore them with JSON.NET.
-                var ipAddress = (JObject)expectedResponse!["ip_address"]!;
-                ipAddress.Add("maxmind", new JObject());
-                ipAddress.Add("postal", new JObject());
-                var representedCountry = new JObject { { "names", new JObject() } };
-                ipAddress.Add("represented_country", representedCountry);
-            }
+            var actualJson = JsonSerializer.Serialize(response, options);
+            var actualResponse = JsonDocument.Parse(actualJson);
 
-            var areEqual = JToken.DeepEquals(expectedResponse, actualResponse);
+            var areEqual = new JsonElementComparer().JsonEquals(expectedResponse, actualResponse);
             if (!areEqual)
             {
-                Console.WriteLine($"Expected: {expectedResponse}");
-                Console.WriteLine($"Actual: {actualResponse}");
+                output.WriteLine($"Expected: {responseContent}");
+                output.WriteLine($"Actual: {actualJson}");
             }
 
             Assert.True(areEqual);
@@ -157,8 +152,8 @@ namespace MaxMind.MinFraud.UnitTest
 
             var exception = await Record.ExceptionAsync(async () => await client.InsightsAsync(request));
             Assert.NotNull(exception);
-            Assert.IsType<HttpException>(exception);
-            Assert.Contains("Received a 200 response for minFraud Insights but there was no message body",
+            Assert.IsType<MinFraudException>(exception);
+            Assert.Contains("Received a 200 response but could not decode it as JSON",
                 exception.Message);
         }
 
@@ -175,12 +170,12 @@ namespace MaxMind.MinFraud.UnitTest
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(HttpMethod.Post, "https://minfraud.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
-                .With(request => VerifyRequestFor("score", request))
-                .Respond(message);
+                .With(request => VerifyRequestFor("score", request, output))
+                .Respond(req => message);
 
             var client = new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
             var response = await client.ScoreAsync(CreateFullRequest());
-            CompareJson(expectedResponse, response, false);
+            CompareJson(expectedResponse, response);
         }
 
         [Fact]
@@ -264,7 +259,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.NotNull(exception);
             Assert.IsType<HttpException>(exception);
             Assert.Equal(
-                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: {blah}",
+                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but there was an error parsing it as JSON: {blah}",
                 exception.Message);
         }
 
@@ -293,7 +288,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.NotNull(exception);
             Assert.IsType<HttpException>(exception);
             Assert.Equal(
-                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but it did not include the expected JSON body: text",
+                "Received a 400 error for https://minfraud.maxmind.com/minfraud/v2.0/insights but there was an error parsing it as JSON: text",
                 exception.Message);
         }
 
@@ -343,7 +338,7 @@ namespace MaxMind.MinFraud.UnitTest
                 exception.Message);
         }
 
-        private static WebServiceClient CreateSuccessClient(string service, string responseContent)
+        private WebServiceClient CreateSuccessClient(string service, string responseContent)
         {
             return CreateClient(
                 service,
@@ -353,7 +348,7 @@ namespace MaxMind.MinFraud.UnitTest
             );
         }
 
-        private static async Task CreateInsightsError(HttpStatusCode status, string contentType, string responseContent)
+        private async Task CreateInsightsError(HttpStatusCode status, string contentType, string responseContent)
         {
             var client = CreateClient(
                 "insights",
@@ -364,7 +359,7 @@ namespace MaxMind.MinFraud.UnitTest
             await client.InsightsAsync(CreateFullRequest());
         }
 
-        private static WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
+        private WebServiceClient CreateClient(string service, HttpStatusCode status, string contentType,
             string responseContent)
         {
             var content = new StringContent(responseContent);
@@ -374,11 +369,12 @@ namespace MaxMind.MinFraud.UnitTest
             {
                 Content = content
             };
+
             var mockHttp = new MockHttpMessageHandler();
             mockHttp.When(HttpMethod.Post, $"https://minfraud.maxmind.com/minfraud/v2.0/{service}")
                 .WithHeaders("Accept", "application/json")
-                .With(request => VerifyRequestFor(service, request))
-                .Respond(message);
+                .With(request => VerifyRequestFor(service, request, output))
+                .Respond(req => message);
 
             return new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
         }

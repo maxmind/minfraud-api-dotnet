@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -11,7 +11,8 @@ namespace MaxMind.MinFraud.Response
         /// An object containing GeoIP2 and minFraud Insights information about
         /// the IP address.
         /// </summary>
-        [JsonProperty("subscores")]
+        [JsonInclude]
+        [JsonPropertyName("subscores")]
         public Subscores Subscores { get; internal set; } = new Subscores();
 
         /// <summary>

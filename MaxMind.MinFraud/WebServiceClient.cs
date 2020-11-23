@@ -1,22 +1,21 @@
 ﻿#region
 
 using MaxMind.MinFraud.Exception;
-#if !NET45 && !NET46
+#if !NET461
 using Microsoft.Extensions.Options;
 #endif
 using MaxMind.MinFraud.Request;
 using MaxMind.MinFraud.Response;
 using MaxMind.MinFraud.Util;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 #endregion
@@ -39,7 +38,7 @@ namespace MaxMind.MinFraud
         private readonly List<string> _locales;
         private bool _disposed;
 
-#if !NET45 && !NET46
+#if !NET461
         /// <summary>
         ///     Initializes a new instance of the <see cref="WebServiceClient" /> class.
         /// </summary>
@@ -177,17 +176,15 @@ namespace MaxMind.MinFraud
             return await HandleSuccess<T>(response).ConfigureAwait(false);
         }
 
-        private async Task<HttpResponseMessage> MakeRequest(string path, Object request)
+        private async Task<HttpResponseMessage> MakeRequest<T>(string path, T request)
         {
-            var settings = new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore };
-            settings.Converters.Add(new IPAddressConverter());
-            settings.Converters.Add(new NetworkConverter());
-            settings.Converters.Add(new StringEnumConverter());
-            var requestBody = JsonConvert.SerializeObject(request, settings);
+            var options = new JsonSerializerOptions();
+            options.IgnoreNullValues = true;
 
-            var response = await _httpClient.PostAsync(path,
-                new StringContent(requestBody, Encoding.UTF8, "application/json"))
-                .ConfigureAwait(false);
+            var response = await _httpClient.PostAsJsonAsync<T>(
+                path,
+                request,
+                options).ConfigureAwait(false);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -204,16 +201,11 @@ namespace MaxMind.MinFraud
                 throw new MinFraudException(
                     $"Received a {(int)response.StatusCode} response for {typeof(T).Name} but it does not appear to be JSON: {contentType}");
             }
-            var s = await response.Content.ReadAsStreamAsync().ConfigureAwait(false);
-            using var sr = new StreamReader(s);
-            using JsonReader reader = new JsonTextReader(sr);
+            var options = new JsonSerializerOptions();
+            options.Converters.Add(new NetworkConverter());
 
-            var settings = new JsonSerializerSettings();
-            settings.Converters.Add(new NetworkConverter());
-            var serializer = JsonSerializer.Create(settings);
-            try
-            {
-                var model = serializer.Deserialize<T>(reader);
+            try {
+                var model = await response.Content.ReadFromJsonAsync<T>(options).ConfigureAwait(false);
                 if (model == null)
                 {
                     throw new HttpException(
@@ -222,7 +214,7 @@ namespace MaxMind.MinFraud
                 }
                 return model;
             }
-            catch (JsonSerializationException ex)
+            catch (JsonException ex)
             {
                 throw new MinFraudException(
                     $"Received a {(int)response.StatusCode} response but could not decode it as JSON", ex);
@@ -259,7 +251,7 @@ namespace MaxMind.MinFraud
             // set Content for the default response.
             var content = response.Content != null ? await response.Content.ReadAsStringAsync().ConfigureAwait(false) : null;
 
-            if (string.IsNullOrEmpty(content))
+            if (content == null || content.Length == 0)
             {
                 throw new HttpException(
                     $"Received a {status} error for {uri} with no body",
@@ -268,22 +260,21 @@ namespace MaxMind.MinFraud
 
             try
             {
-                var error = JsonConvert.DeserializeObject<WebServiceError>(content!);
+                var error = JsonSerializer.Deserialize<WebServiceError>(content);
 
-                HandleErrorWithJsonBody(error, response, content!);
+                if (error == null)
+                {
+                    throw new HttpException(
+                        $"Received a {status} error for {uri} but it did not include the expected JSON body: {content}",
+                        response.StatusCode, uri);
+                }
+                HandleErrorWithJsonBody(error, response, content);
             }
-            catch (JsonReaderException ex)
+            catch (JsonException ex)
             {
                 throw new HttpException(
-                    $"Received a {status} error for {uri} but it did not include the expected JSON body: {content}",
+                    $"Received a {status} error for {uri} but there was an error parsing it as JSON: {content}",
                     response.StatusCode, uri, ex);
-            }
-            catch (JsonSerializationException ex)
-            {
-                throw new HttpException(
-                    $"Error response contains JSON but it does not specify code or error keys: {content}",
-                    response.StatusCode,
-                    uri, ex);
             }
         }
 
@@ -291,10 +282,12 @@ namespace MaxMind.MinFraud
             string content)
         {
             if (error.Code == null || error.Error == null)
+            {
                 throw new HttpException(
                     $"Error response contains JSON but it does not specify code or error keys: {content}",
                     response.StatusCode,
                     response.RequestMessage?.RequestUri);
+            }
             switch (error.Code)
             {
                 case "ACCOUNT_ID_REQUIRED":

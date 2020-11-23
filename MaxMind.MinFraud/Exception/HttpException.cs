@@ -3,6 +3,7 @@
 using System;
 using System.IO;
 using System.Net;
+using System.Runtime.Serialization;
 
 #endregion
 
@@ -13,6 +14,7 @@ namespace MaxMind.MinFraud.Exception
     ///     by the web service itself. As such, it is a IOException instead of a
     ///     MinFraudException.
     /// </summary>
+    [Serializable]
     public class HttpException : IOException
     {
         /// <summary>
@@ -49,7 +51,7 @@ namespace MaxMind.MinFraud.Exception
             : base(message)
         {
             HttpStatus = httpStatus;
-            this.Uri = uri;
+            Uri = uri;
         }
 
         /// <summary>
@@ -63,7 +65,32 @@ namespace MaxMind.MinFraud.Exception
             : base(message, innerException)
         {
             HttpStatus = httpStatus;
-            this.Uri = uri;
+            Uri = uri;
+        }
+        /// <summary>
+        ///     Constructor for deserialization.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
+        {
+            HttpStatus = (HttpStatusCode)(info.GetValue("MaxMind.MinFraud.Exception.HttpException.HttpStatus", typeof(HttpStatusCode))
+                ?? throw new SerializationException("Unexpected null HttpStatus value"));
+            Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.HttpException.Uri", typeof(Uri))
+                ?? throw new SerializationException("Unexpected null Uri value"));
+        }
+
+        /// <summary>
+        ///     Method to serialize data.
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
+        public override void GetObjectData(SerializationInfo info, StreamingContext context)
+        {
+            base.GetObjectData(info, context);
+
+            info.AddValue("MaxMind.MinFraud.Exception.HttpException.HttpStatus", HttpStatus, typeof(HttpStatusCode));
+            info.AddValue("MaxMind.MinFraud.Exception.HttpException.Uri", Uri, typeof(Uri));
         }
 
         /// <summary>

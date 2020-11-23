@@ -1,6 +1,6 @@
 ﻿using MaxMind.GeoIP2.Model;
-using Newtonsoft.Json;
 using System;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -14,7 +14,8 @@ namespace MaxMind.MinFraud.Response
         /// The date and time of the transaction in the time
         /// zone associated with the IP address.
         /// </summary>
-        [JsonProperty("local_time")]
+        [JsonInclude]
+        [JsonPropertyName("local_time")]
         public DateTimeOffset? LocalTime { get; internal set; }
 
         /// <summary>

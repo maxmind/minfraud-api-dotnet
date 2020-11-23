@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using MaxMind.MinFraud.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -10,21 +11,20 @@ namespace MaxMind.MinFraud.Response
     /// </summary>
     public class Score
     {
-        [JsonProperty("warnings")]
-        private readonly List<Warning> _warnings = new List<Warning>();
-
         /// <summary>
         /// This object contains information about the disposition set by
         /// custom rules.
         /// </summary>
-        [JsonProperty("disposition")]
+        [JsonInclude]
+        [JsonPropertyName("disposition")]
         public Disposition Disposition { get; internal set; } = new Disposition();
 
         /// <summary>
         /// The approximate US dollar value of the funds remaining on your
         /// MaxMind account.
         /// </summary>
-        [JsonProperty("funds_remaining")]
+        [JsonInclude]
+        [JsonPropertyName("funds_remaining")]
         public decimal? FundsRemaining { get; internal set; }
 
         /// <summary>
@@ -32,20 +32,24 @@ namespace MaxMind.MinFraud.Response
         /// this ID in support requests to MaxMind so that we can easily
         /// identify a particular request.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonInclude]
+        [JsonPropertyName("id")]
         public Guid? Id { get; internal set; }
 
         /// <summary>
         /// An object containing information about the IP address's risk.
         /// </summary>
-        [JsonProperty("ip_address")]
+        [JsonInclude]
+        [JsonPropertyName("ip_address")]
+        [JsonConverter(typeof(ScoreIPAddressConverter))]
         public IIPAddress IPAddress { get; internal set; } = new ScoreIPAddress();
 
         /// <summary>
         /// The approximate number of queries remaining for this service
         /// before your account runs out of funds.
         /// </summary>
-        [JsonProperty("queries_remaining")]
+        [JsonInclude]
+        [JsonPropertyName("queries_remaining")]
         public long? QueriesRemaining { get; internal set; }
 
         /// <summary>
@@ -55,7 +59,8 @@ namespace MaxMind.MinFraud.Response
         /// risk score of 0, since all transactions have the possibility of being
         /// fraudulent.Likewise we never return a risk score of 100.
         /// </summary>
-        [JsonProperty("risk_score")]
+        [JsonInclude]
+        [JsonPropertyName("risk_score")]
         public double? RiskScore { get; internal set; }
 
         /// <summary>
@@ -64,8 +69,9 @@ namespace MaxMind.MinFraud.Response
         /// recommended that you check this array for issues when integrating
         /// the web service.
         /// </summary>
-        [JsonIgnore]
-        public IList<Warning> Warnings => new List<Warning>(_warnings);
+        [JsonInclude]
+        [JsonPropertyName("warnings")]
+        public IReadOnlyList<Warning> Warnings { get; internal set; } = new List<Warning>().AsReadOnly();
 
         /// <summary>
         /// Returns a string that represents the current object.

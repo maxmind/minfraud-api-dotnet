@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -11,7 +11,8 @@ namespace MaxMind.MinFraud.Response
         /// The risk associated with the IP address. The value ranges from 0.01
         /// to 99. A higher score indicates a higher risk.
         /// </summary>
-        [JsonProperty("risk")]
+        [JsonInclude]
+        [JsonPropertyName("risk")]
         public double? Risk { get; internal set; }
 
         /// <summary>

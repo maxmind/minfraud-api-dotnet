@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -57,67 +57,67 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         ///     Account information for the transaction.
         /// </summary>
-        [JsonProperty("account")]
+        [JsonPropertyName("account")]
         public Account? Account { get; }
 
         /// <summary>
         ///     Information about the account used in the transaction.
         /// </summary>
-        [JsonProperty("billing")]
+        [JsonPropertyName("billing")]
         public Billing? Billing { get; }
 
         /// <summary>
         ///     Information about the credit card used in the transaction.
         /// </summary>
-        [JsonProperty("credit_card")]
+        [JsonPropertyName("credit_card")]
         public CreditCard? CreditCard { get; }
 
         /// <summary>
         ///     Custom inputs as configured on your account portal.
         /// </summary>
-        [JsonProperty("custom_inputs")]
+        [JsonPropertyName("custom_inputs")]
         public CustomInputs? CustomInputs { get; }
 
         /// <summary>
         ///     Information about the device used in the transaction.
         /// </summary>
-        [JsonProperty("device")]
+        [JsonPropertyName("device")]
         public Device? Device { get; }
 
         /// <summary>
         ///     Information about the email used in the transaction.
         /// </summary>
-        [JsonProperty("email")]
+        [JsonPropertyName("email")]
         public Email? Email { get; }
 
         /// <summary>
         ///     Details about the event such as the time.
         /// </summary>
-        [JsonProperty("event")]
+        [JsonPropertyName("event")]
         public Event? Event { get; }
 
         /// <summary>
         ///     Details about the order.
         /// </summary>
-        [JsonProperty("order")]
+        [JsonPropertyName("order")]
         public Order? Order { get; }
 
         /// <summary>
         ///     Information about the payment processing.
         /// </summary>
-        [JsonProperty("payment")]
+        [JsonPropertyName("payment")]
         public Payment? Payment { get; }
 
         /// <summary>
         ///     Shipping information used in the transaction.
         /// </summary>
-        [JsonProperty("shipping")]
+        [JsonPropertyName("shipping")]
         public Shipping? Shipping { get; }
 
         /// <summary>
         ///     List of shopping items in the transaction.
         /// </summary>
-        [JsonProperty("shopping_cart")]
+        [JsonPropertyName("shopping_cart")]
         public IList<ShoppingCartItem>? ShoppingCart { get; }
 
         /// <summary>

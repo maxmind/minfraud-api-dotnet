@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Net;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -34,7 +34,7 @@ namespace MaxMind.MinFraud.Request
             string? sessionId = null
         )
         {
-            this.IPAddress = ipAddress;
+            IPAddress = ipAddress;
             UserAgent = userAgent;
             AcceptLanguage = acceptLanguage;
 
@@ -55,21 +55,22 @@ namespace MaxMind.MinFraud.Request
         /// The IP address associated with the device used by the customer
         /// in the transaction.
         /// </summary>
-        [JsonProperty("ip_address")]
+        [JsonPropertyName("ip_address")]
+        [JsonConverter(typeof(IPAddressConverter))]
         public IPAddress? IPAddress { get; }
 
         /// <summary>
         /// The HTTP “User-Agent” header of the browser used in the
         /// transaction.
         /// </summary>
-        [JsonProperty("user_agent")]
+        [JsonPropertyName("user_agent")]
         public string? UserAgent { get; }
 
         /// <summary>
         /// The HTTP “Accept-Language” header of the device used in the
         /// transaction.
         /// </summary>
-        [JsonProperty("accept_language")]
+        [JsonPropertyName("accept_language")]
         public string? AcceptLanguage { get; }
 
         /// <summary>
@@ -78,14 +79,14 @@ namespace MaxMind.MinFraud.Request
         /// sessionAge is not the duration of the current visit, but 
         /// the time since the start of the first visit.
         /// </summary>
-        [JsonProperty("session_age")]
+        [JsonPropertyName("session_age")]
         public double? SessionAge { get; }
 
         /// <summary>
         /// A string up to 255 characters in length. This is an ID that
         /// uniquely identifies a visitor's session on the site.
         /// </summary>
-        [JsonProperty("session_id")]
+        [JsonPropertyName("session_id")]
         public string? SessionId { get; }
 
         /// <summary>

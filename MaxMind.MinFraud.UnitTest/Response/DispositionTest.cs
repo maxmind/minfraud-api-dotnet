@@ -1,6 +1,6 @@
-using Newtonsoft.Json.Linq;
+using MaxMind.MinFraud.Response;
+using System.Text.Json;
 using Xunit;
-using Device = MaxMind.MinFraud.Response.Disposition;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
@@ -9,11 +9,13 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestDisposition()
         {
-            var disposition = new JObject
-            {
-                {"action", "manual_review"},
-                {"reason", "custom_rule"},
-            }.ToObject<Device>()!;
+            var disposition = JsonSerializer.Deserialize<Disposition>(
+                @"
+                    {
+                        ""action"": ""manual_review"",
+                        ""reason"": ""custom_rule""
+                    }
+                ")!;
 
             Assert.Equal("manual_review", disposition.Action);
             Assert.Equal("custom_rule", disposition.Reason);

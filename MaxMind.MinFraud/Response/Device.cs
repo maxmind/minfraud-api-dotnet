@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -19,7 +19,8 @@ namespace MaxMind.MinFraud.Response
         /// devices. A confidence of 0.01 indicates very low confidence that
         /// the device is unique, whereas 99 indicates very high confidence.
         /// </summary>
-        [JsonProperty("confidence")]
+        [JsonInclude]
+        [JsonPropertyName("confidence")]
         public double? Confidence { get; internal set; }
 
         /// <summary>
@@ -29,13 +30,15 @@ namespace MaxMind.MinFraud.Response
         /// model and OS release). In these cases, the minFraud service will
         /// simply not return a UUID for that device.
         /// </summary>
-        [JsonProperty("id")]
+        [JsonInclude]
+        [JsonPropertyName("id")]
         public Guid? Id { get; internal set; }
 
         /// <summary>
         /// The date and time of the last sighting of the device.
         /// </summary>
-        [JsonProperty("last_seen")]
+        [JsonInclude]
+        [JsonPropertyName("last_seen")]
         public DateTimeOffset? LastSeen { get; internal set; }
 
         /// <summary>
@@ -43,7 +46,8 @@ namespace MaxMind.MinFraud.Response
         /// the device. This is determined by using the UTC offset associated
         /// with the device. This is an RFC 3339 date-time
         /// </summary>
-        [JsonProperty("local_time")]
+        [JsonInclude]
+        [JsonPropertyName("local_time")]
         public DateTimeOffset? LocalTime { get; internal set; }
 
         /// <summary>

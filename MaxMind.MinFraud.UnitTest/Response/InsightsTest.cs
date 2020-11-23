@@ -1,5 +1,5 @@
 ﻿using MaxMind.MinFraud.Response;
-using Newtonsoft.Json.Linq;
+using System.Text.Json;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
@@ -10,36 +10,27 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestInsights()
         {
             var id = "b643d445-18b2-4b9d-bad4-c9c4366e402a";
-            var insights = new JObject
-            {
-                {"id", id},
-                {"ip_address", new JObject {{"country", new JObject {{"iso_code", "US"}}}}},
-                {"credit_card", new JObject {{"is_business", true}, {"is_prepaid", true}}},
-                {"device", new JObject {{"id", id}}},
-                {"disposition", new JObject {{"action", "accept"}}},
-                {
-                    "email", 
-                    new JObject {
-                        {"domain", new JObject {{ "first_seen", "2014-02-03"}}},
-                        {"is_free", true}
-                    }
-                },
-                {"shipping_address", new JObject {{"is_in_ip_country", true}}},
-                {"billing_address", new JObject {{"is_in_ip_country", true}}},
-                {
-                    "funds_remaining",
-                    1.20
-                },
-                {
-                    "queries_remaining",
-                    123
-                },
-                {
-                    "risk_score",
-                    0.01
-                },
-                {"warnings", new JArray {new JObject {{"code", "INVALID_INPUT"}}}}
-            }.ToObject<Insights>()!;
+            var insights = JsonSerializer.Deserialize<Insights>(
+                $@"
+                    {{
+                        ""id"": ""{id}"",
+                        ""ip_address"": {{""country"": {{""iso_code"": ""US""}}}},
+                        ""credit_card"": {{""is_business"": true, ""is_prepaid"": true}},
+                        ""device"": {{""id"": ""{id}""}},
+                        ""disposition"": {{""action"": ""accept""}},
+                        ""email"": 
+                            {{
+                                ""domain"": {{ ""first_seen"": ""2014-02-03""}},
+                                ""is_free"": true
+                            }},
+                        ""shipping_address"": {{""is_in_ip_country"": true}},
+                        ""billing_address"": {{""is_in_ip_country"": true}},
+                        ""funds_remaining"": 1.20,
+                        ""queries_remaining"": 123,
+                        ""risk_score"": 0.01,
+                        ""warnings"": [{{""code"": ""INVALID_INPUT""}}]
+                    }}
+                ")!;
 
             Assert.Equal("2014-02-03", insights.Email.Domain.FirstSeen?.ToString("yyyy-MM-dd"));
             Assert.Equal("US", insights.IPAddress.Country.IsoCode);

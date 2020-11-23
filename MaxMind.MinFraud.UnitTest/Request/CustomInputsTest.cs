@@ -1,6 +1,6 @@
 ﻿using MaxMind.MinFraud.Request;
-using Newtonsoft.Json.Linq;
 using System;
+using System.Text.Json;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -20,17 +20,24 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 {"bool_input", true}
             }.Build();
 
-            Assert.Equal(
-                new JObject
-                {
-                    {"string_input_1", "test string"},
-                    {"int_input", 19},
-                    {"long_input", 12L},
-                    {"float_input", 3.2f},
-                    {"double_input", 32.123d},
-                    {"bool_input", true}
-                },
-                JToken.FromObject(inputs));
+            var json = JsonSerializer.Serialize(inputs);
+            var comparer = new JsonElementComparer();
+            Assert.True(comparer.JsonEquals(
+                JsonDocument.Parse(
+                    @"
+                    {
+                        ""string_input_1"": ""test string"",
+                        ""int_input"": 19,
+                        ""long_input"": 12,
+                        ""float_input"": 3.20000005,
+                        ""double_input"": 32.122999999999998,
+                        ""bool_input"": true
+                    }
+                    "),
+                JsonDocument.Parse(json)
+                ),
+                json
+            );
         }
 
         [Fact]

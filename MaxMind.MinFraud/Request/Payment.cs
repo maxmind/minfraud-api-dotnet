@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using System.Runtime.Serialization;
+﻿using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -452,7 +452,8 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The payment processor used for the transaction.
         /// </summary>
-        [JsonProperty("processor")]
+        [JsonConverter(typeof(EnumMemberValueConverter<PaymentProcessor>))]
+        [JsonPropertyName("processor")]
         public PaymentProcessor? Processor { get; }
 
         /// <summary>
@@ -460,14 +461,14 @@ namespace MaxMind.MinFraud.Request
         /// transaction has not yet been approved or denied, do not include
         /// this field.
         /// </summary>
-        [JsonProperty("was_authorized")]
+        [JsonPropertyName("was_authorized")]
         public bool? WasAuthorized { get; }
 
         /// <summary>
         /// The decline code as provided by your payment processor. If the
         /// transaction was not declined, do not include this field.
         /// </summary>
-        [JsonProperty("decline_code")]
+        [JsonPropertyName("decline_code")]
         public string? DeclineCode { get; }
 
         /// <summary>

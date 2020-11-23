@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -71,7 +71,7 @@ namespace MaxMind.MinFraud.Request
             TransactionId = transactionId;
             ShopId = shopId;
             Time = time;
-            this.Type = type;
+            Type = type;
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace MaxMind.MinFraud.Request
         /// specific transaction in our logs, and it will also show up in email
         /// alerts and notifications from us to you.
         /// </summary>
-        [JsonProperty("transaction_id")]
+        [JsonPropertyName("transaction_id")]
         public string? TransactionId { get; }
 
         /// <summary>
@@ -87,19 +87,20 @@ namespace MaxMind.MinFraud.Request
         /// coming from. Required for minFraud users who are resellers, payment
         /// providers, gateways and affiliate networks.
         /// </summary>
-        [JsonProperty("shop_id")]
+        [JsonPropertyName("shop_id")]
         public string? ShopId { get; }
 
         /// <summary>
         /// The date and time the event occurred.
         /// </summary>
-        [JsonProperty("time")]
+        [JsonPropertyName("time")]
         public DateTimeOffset? Time { get; }
 
         /// <summary>
         /// The type of event being scored.
         /// </summary>
-        [JsonProperty("type")]
+        [JsonConverter(typeof(EnumMemberValueConverter<EventType>))]
+        [JsonPropertyName("type")]
         public EventType? Type { get; }
 
         /// <summary>

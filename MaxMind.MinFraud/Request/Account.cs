@@ -1,7 +1,7 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -51,7 +51,7 @@ namespace MaxMind.MinFraud.Request
         /// ID that does not change. This is not your MaxMind user
         /// ID.
         /// </summary>
-        [JsonProperty("user_id")]
+        [JsonPropertyName("user_id")]
         public string? UserId { get; }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The MD5 generated from the <c>Username</c>
         /// </summary>
-        [JsonProperty("username_md5")]
+        [JsonPropertyName("username_md5")]
         public string? UsernameMD5 { get; }
 
         /// <summary>
