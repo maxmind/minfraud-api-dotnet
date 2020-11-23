@@ -79,7 +79,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<ShippingDeliverySpeed>))]
         [JsonPropertyName("delivery_speed")]
-        public ShippingDeliverySpeed? DeliverySpeed { get; }
+        public ShippingDeliverySpeed? DeliverySpeed { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

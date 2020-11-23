@@ -34,26 +34,26 @@ namespace MaxMind.MinFraud.Request
         /// The category of the item.
         /// </summary>
         [JsonPropertyName("category")]
-        public string? Category { get; }
+        public string? Category { get; init; }
 
         /// <summary>
         /// Your internal ID for the item.
         /// </summary>
         [JsonPropertyName("item_id")]
-        public string? ItemId { get; }
+        public string? ItemId { get; init; }
 
         /// <summary>
         /// The quantity of the item in the shopping cart.
         /// </summary>
         [JsonPropertyName("quantity")]
-        public int? Quantity { get; }
+        public int? Quantity { get; init; }
 
         /// <summary>
         /// The per-unit price of the item in the shopping cart. This should
         /// use the same currency as the order currency.
         /// </summary>
         [JsonPropertyName("price")]
-        public decimal? Price { get; }
+        public decimal? Price { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -29,18 +29,6 @@ namespace MaxMind.MinFraud.Request
         {
             UserId = userId;
             Username = username;
-
-            if (username == null)
-            {
-                return;
-            }
-            using var md5Generator = MD5.Create();
-
-            var bytes = Encoding.UTF8.GetBytes(username);
-            var md5 = md5Generator.ComputeHash(bytes);
-            UsernameMD5 = BitConverter.ToString(md5)
-                .Replace("-", string.Empty)
-                .ToLower();
         }
 
         /// <summary>
@@ -52,7 +40,7 @@ namespace MaxMind.MinFraud.Request
         /// ID.
         /// </summary>
         [JsonPropertyName("user_id")]
-        public string? UserId { get; }
+        public string? UserId { get; init; }
 
         /// <summary>
         /// The username associated with the account. This is
@@ -60,13 +48,28 @@ namespace MaxMind.MinFraud.Request
         /// generated from this string.
         /// </summary>
         [JsonIgnore]
-        public string? Username { get; }
+        public string? Username { get; init; }
 
         /// <summary>
         /// The MD5 generated from the <c>Username</c>
         /// </summary>
         [JsonPropertyName("username_md5")]
-        public string? UsernameMD5 { get; }
+        public string? UsernameMD5 {
+            get
+            {
+                if (Username == null)
+                {
+                    return null;
+                }
+                using var md5Generator = MD5.Create();
+
+                var bytes = Encoding.UTF8.GetBytes(Username);
+                var md5 = md5Generator.ComputeHash(bytes);
+                return BitConverter.ToString(md5)
+                    .Replace("-", string.Empty)
+                    .ToLower();
+            }
+        }
 
         /// <summary>
         /// Returns a string that represents the current object.

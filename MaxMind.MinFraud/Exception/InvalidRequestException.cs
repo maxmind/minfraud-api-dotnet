@@ -93,11 +93,11 @@ namespace MaxMind.MinFraud.Exception
         /// The <a href="https://dev.maxmind.com/minfraud/#Errors">
         /// reason code</a> for why the web service rejected the request.
         /// </summary>
-        public string? Code { get; }
+        public string? Code { get; init; }
 
         /// <summary>
         /// The URI that was used for the request.
         /// </summary>
-        public Uri? Uri { get; }
+        public Uri? Uri { get; init; }
     }
 }

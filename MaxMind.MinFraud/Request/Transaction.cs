@@ -58,67 +58,67 @@ namespace MaxMind.MinFraud.Request
         ///     Account information for the transaction.
         /// </summary>
         [JsonPropertyName("account")]
-        public Account? Account { get; }
+        public Account? Account { get; init; }
 
         /// <summary>
         ///     Information about the account used in the transaction.
         /// </summary>
         [JsonPropertyName("billing")]
-        public Billing? Billing { get; }
+        public Billing? Billing { get; init; }
 
         /// <summary>
         ///     Information about the credit card used in the transaction.
         /// </summary>
         [JsonPropertyName("credit_card")]
-        public CreditCard? CreditCard { get; }
+        public CreditCard? CreditCard { get; init; }
 
         /// <summary>
         ///     Custom inputs as configured on your account portal.
         /// </summary>
         [JsonPropertyName("custom_inputs")]
-        public CustomInputs? CustomInputs { get; }
+        public CustomInputs? CustomInputs { get; init; }
 
         /// <summary>
         ///     Information about the device used in the transaction.
         /// </summary>
         [JsonPropertyName("device")]
-        public Device? Device { get; }
+        public Device? Device { get; init; }
 
         /// <summary>
         ///     Information about the email used in the transaction.
         /// </summary>
         [JsonPropertyName("email")]
-        public Email? Email { get; }
+        public Email? Email { get; init; }
 
         /// <summary>
         ///     Details about the event such as the time.
         /// </summary>
         [JsonPropertyName("event")]
-        public Event? Event { get; }
+        public Event? Event { get; init; }
 
         /// <summary>
         ///     Details about the order.
         /// </summary>
         [JsonPropertyName("order")]
-        public Order? Order { get; }
+        public Order? Order { get; init; }
 
         /// <summary>
         ///     Information about the payment processing.
         /// </summary>
         [JsonPropertyName("payment")]
-        public Payment? Payment { get; }
+        public Payment? Payment { get; init; }
 
         /// <summary>
         ///     Shipping information used in the transaction.
         /// </summary>
         [JsonPropertyName("shipping")]
-        public Shipping? Shipping { get; }
+        public Shipping? Shipping { get; init; }
 
         /// <summary>
         ///     List of shopping items in the transaction.
         /// </summary>
         [JsonPropertyName("shopping_cart")]
-        public IList<ShoppingCartItem>? ShoppingCart { get; }
+        public IList<ShoppingCartItem>? ShoppingCart { get; init; }
 
         /// <summary>
         ///     Returns a string that represents the current object.

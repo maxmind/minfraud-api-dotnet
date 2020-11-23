@@ -11,9 +11,8 @@ namespace MaxMind.MinFraud.Response
         /// An object containing GeoIP2 and minFraud Insights information about
         /// the IP address.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("subscores")]
-        public Subscores Subscores { get; internal set; } = new Subscores();
+        public Subscores Subscores { get; init; } = new Subscores();
 
         /// <summary>
         /// Returns a string that represents the current object.

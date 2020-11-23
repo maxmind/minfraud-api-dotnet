@@ -43,6 +43,8 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class TransactionReport
     {
+        private string? _maxmindId;
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -84,13 +86,7 @@ namespace MaxMind.MinFraud.Request
             IPAddress = ipAddress;
             Tag = tag;
             ChargebackCode = chargebackCode;
-
-            if (maxmindId != null && maxmindId.Length != 8)
-            {
-                throw new ArgumentException($"{nameof(maxmindId)} must be an eight character string.");
-            }
             MaxMindId = maxmindId;
-
             MinFraudId = minfraudId;
             Notes = notes;
             TransactionId = transactionId;
@@ -101,7 +97,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("ip_address")]
         [JsonConverter(typeof(IPAddressConverter))]
-        public IPAddress IPAddress { get; }
+        public IPAddress IPAddress { get; init; }
 
         /// <summary>
         /// The <c>TransactionReportTag</c> indicating the type of report
@@ -109,7 +105,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<TransactionReportTag>))]
         [JsonPropertyName("tag")]
-        public TransactionReportTag Tag { get; }
+        public TransactionReportTag Tag { get; init; }
 
         /// <summary>
         /// A string which is provided by your payment processor indicating
@@ -117,7 +113,7 @@ namespace MaxMind.MinFraud.Request
         /// the reason for the chargeback</a>.
         /// </summary>
         [JsonPropertyName("chargeback_code")]
-        public string? ChargebackCode { get; }
+        public string? ChargebackCode { get; init; }
 
         /// <summary>
         /// A unique eight character string identifying a minFraud Standard or
@@ -126,7 +122,17 @@ namespace MaxMind.MinFraud.Request
         /// is not required, but you are encouraged to provide it, if possible.
         /// </summary>
         [JsonPropertyName("maxmind_id")]
-        public string? MaxMindId { get; }
+        public string? MaxMindId { 
+            get => _maxmindId;
+            init
+            {
+                if (value != null && value.Length != 8)
+                {
+                    throw new ArgumentException($"{nameof(value)} must be an eight character string.");
+                }
+                _maxmindId = value;
+            }
+        }
 
         /// <summary>
         /// A UUID that identifies a minFraud Score, minFraud Insights, or
@@ -135,7 +141,7 @@ namespace MaxMind.MinFraud.Request
         /// provide it if the request was made to one of these services.
         /// </summary>
         [JsonPropertyName("minfraud_id")]
-        public Guid? MinFraudId { get; }
+        public Guid? MinFraudId { get; init; }
 
         /// <summary>
         /// Your notes on the fraud tag associated with the transaction. We
@@ -144,7 +150,7 @@ namespace MaxMind.MinFraud.Request
         /// are helpful.
         /// </summary>
         [JsonPropertyName("notes")]
-        public string? Notes { get; }
+        public string? Notes { get; init; }
 
         /// <summary>
         /// The transaction ID you originally passed to minFraud. This field
@@ -152,7 +158,7 @@ namespace MaxMind.MinFraud.Request
         /// transaction's <c>>maxmindId</c> or <c>minfraudId</c>.
         /// </summary>
         [JsonPropertyName("transaction_id")]
-        public string? TransactionId { get; }
+        public string? TransactionId { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

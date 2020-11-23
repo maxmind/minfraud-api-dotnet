@@ -13,18 +13,16 @@ namespace MaxMind.MinFraud.Response
         /// and "reject". If you do not have custom rules set up, <c>null</c>
         /// will be returned.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("action")]
-        public string? Action { get; internal set; }
+        public string? Action { get; init; }
 
         /// <summary>
         /// The reason for the action. The current possible values are
         /// "custom_rule", "block_list", and "default". If you do not have
         /// custom rules set up, <c>null</c> will be returned.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("reason")]
-        public string? Reason { get; internal set; }
+        public string? Reason { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

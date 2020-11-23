@@ -11,6 +11,8 @@ Release Notes
   If you are serializing the objects yourself, the `Newtonsoft.Json`
   attributes have been removed and you will need to switch to
    `System.Text.Json`.
+* When creating a `Transaction` object, you may now use init-only properties
+  rather than constructor parameters.
 * You may now create `WebServiceClient` as a typed client with
   `IHttpClientFactory` in .NET Core 2.1+.
 * Exception objects now correctly implement `ISerializable`.

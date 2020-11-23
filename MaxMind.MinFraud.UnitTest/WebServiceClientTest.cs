@@ -66,6 +66,18 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
+        public async Task TestFullFactorsRequestUsingConstructors()
+        {
+            var responseContent = ReadJsonFile("factors-response");
+            var client = CreateSuccessClient("factors", responseContent);
+            var request = CreateFullRequestUsingConstructors();
+            var response = await client.FactorsAsync(request);
+            CompareJson(responseContent, response);
+
+            Assert.Equal("London", response.IPAddress.City.Name);
+        }
+
+        [Fact]
         public async Task TestFullReportRequest()
         {
             var client = CreateClient(

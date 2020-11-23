@@ -10,9 +10,8 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The name of the bank which issued the credit card.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("name")]
-        public string? Name { get; internal set; }
+        public string? Name { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the name matches the name
@@ -21,17 +20,15 @@ namespace MaxMind.MinFraud.Response
         /// either no name or no issuer ID number (IIN) was provided in the
         /// request or if MaxMind does not have a name associated with the IIN.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("matches_provided_name")]
-        public bool? MatchesProvidedName { get; internal set; }
+        public bool? MatchesProvidedName { get; init; }
 
         /// <summary>
         /// The phone number of the bank which issued the credit card. In some
         /// cases the phone number we return may be out of date.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("phone_number")]
-        public string? PhoneNumber { get; internal set; }
+        public string? PhoneNumber { get; init; }
 
         /// <summary>
         /// This property is <c>true</c> if the phone number matches
@@ -41,9 +38,8 @@ namespace MaxMind.MinFraud.Response
         /// number(IIN) was provided in the request or if MaxMind does not
         /// have a phone number associated with the IIN.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("matches_provided_phone_number")]
-        public bool? MatchesProvidedPhoneNumber { get; internal set; }
+        public bool? MatchesProvidedPhoneNumber { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

@@ -13,18 +13,16 @@ namespace MaxMind.MinFraud.Response
         /// web service documentation</a> for the current list of of warning
         ///  codes.
         ///</summary>
-        [JsonInclude]
         [JsonPropertyName("code")]
-        public string? Code { get; internal set; }
+        public string? Code { get; init; }
 
         /// <summary>
         /// This property provides a human-readable explanation of the
         /// warning. The description may change at any time and should not be
         /// matched against.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("warning")]
-        public string? Message { get; internal set; }
+        public string? Message { get; init; }
 
         /// <summary>
         /// A JSON Pointer to the input field that the warning is associated with.
@@ -32,9 +30,8 @@ namespace MaxMind.MinFraud.Response
         /// <c>/billing/city</c>. If it was for the price in the second shopping
         /// cart item, it would be <c>/shopping_cart/1/price</c>.
         /// </summary>
-        [JsonInclude]
         [JsonPropertyName("input_pointer")]
-        public string? InputPointer { get; internal set; }
+        public string? InputPointer { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.

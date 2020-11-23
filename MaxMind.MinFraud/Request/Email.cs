@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -12,7 +12,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
-        private readonly bool _hashAddress;
+        private string? _address;
         private string? _domain;
 
         /// <summary>
@@ -35,14 +35,8 @@ namespace MaxMind.MinFraud.Request
         )
         {
             Address = address;
-            if (domain == null && address != null)
-            {
-                var parts = address.Split('@');
-                if (parts.Length == 2)
-                    domain = parts[1];
-            }
             Domain = domain;
-            _hashAddress = hashAddress;
+            HashAddress = hashAddress;
         }
 
         /// <summary>
@@ -69,14 +63,34 @@ namespace MaxMind.MinFraud.Request
         /// The email address used in the transaction.
         /// </summary>
         [JsonIgnore]
-        [EmailAddress]
-        public string? Address { get; }
+        public string? Address {
+            get => _address;
+            init
+            {
+                if (value == null)
+                {
+                    return;
+                }
+                var parts = value.Split('@');
+                if (parts.Length < 2)
+                {
+                    throw new ArgumentException($"The email address {value} is invalid");
+                }
+
+                if (_domain == null)
+                {
+                    _domain = parts.Last();
+                }
+                _address = value;
+
+            }
+        }
 
         /// <summary>
         ///     The address value that will be sent in the request.
         /// </summary>
         [JsonPropertyName("address")]
-        public string? RequestAddress => _hashAddress ? AddressMD5 : Address;
+        public string? RequestAddress => HashAddress ? AddressMD5 : Address;
 
         /// <summary>
         /// The domain of the email address.
@@ -85,8 +99,12 @@ namespace MaxMind.MinFraud.Request
         public string? Domain
         {
             get => _domain;
-            private set
+            init 
             {
+                if (value == null)
+                {
+                    return;
+                }
                 if (Uri.CheckHostName(value) == UriHostNameType.Unknown)
                 {
                     throw new ArgumentException($"The email domain {value} is not valid.");
@@ -94,6 +112,14 @@ namespace MaxMind.MinFraud.Request
                 _domain = value;
             }
         }
+
+        /// <summary>
+        /// By default, the <c>address</c> will  be sent in plain text. If 
+        /// this is set to true, the address will instead be sent as an MD5
+        /// hash.
+        /// </summary>
+        [JsonIgnore]
+        public bool HashAddress { get; init; } = false;
 
         /// <summary>
         /// Returns a string that represents the current object.
