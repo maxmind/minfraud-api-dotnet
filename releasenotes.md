@@ -5,6 +5,7 @@ Release Notes
 -------------------
 
 * This library now requires .NET Framework 4.6.1 or greater or .NET Standard
+  2.0 or greater.
 * .NET 5.0 was added as a target framework.
 * `System.Text.Json` is now used for serializing and deserializing JSON.
   If you are serializing the objects yourself, the `Newtonsoft.Json`
