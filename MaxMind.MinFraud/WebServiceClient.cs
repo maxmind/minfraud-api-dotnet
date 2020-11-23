@@ -249,7 +249,7 @@ namespace MaxMind.MinFraud
 
             // The null guard is primarily because our unit testing mock library does not
             // set Content for the default response.
-            var content = response.Content != null ? await response.Content.ReadAsByteArrayAsync().ConfigureAwait(false) : null;
+            var content = response.Content != null ? await response.Content.ReadAsStringAsync().ConfigureAwait(false) : null;
 
             if (content == null || content.Length == 0)
             {
@@ -258,8 +258,6 @@ namespace MaxMind.MinFraud
                     response.StatusCode, uri);
             }
 
-            var decoded = Encoding.UTF8.GetString(content);
-
             try
             {
                 var error = JsonSerializer.Deserialize<WebServiceError>(content);
@@ -267,15 +265,15 @@ namespace MaxMind.MinFraud
                 if (error == null)
                 {
                     throw new HttpException(
-                        $"Received a {status} error for {uri} but it did not include the expected JSON body: {decoded}",
+                        $"Received a {status} error for {uri} but it did not include the expected JSON body: {content}",
                         response.StatusCode, uri);
                 }
-                HandleErrorWithJsonBody(error, response, decoded);
+                HandleErrorWithJsonBody(error, response, content);
             }
             catch (JsonException ex)
             {
                 throw new HttpException(
-                    $"Received a {status} error for {uri} but there was an error parsing it as JSON: {decoded}",
+                    $"Received a {status} error for {uri} but there was an error parsing it as JSON: {content}",
                     response.StatusCode, uri, ex);
             }
         }
