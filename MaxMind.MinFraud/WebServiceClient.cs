@@ -290,19 +290,14 @@ namespace MaxMind.MinFraud
                     response.StatusCode,
                     response.RequestMessage?.RequestUri);
             }
-            switch (error.Code)
+            throw error.Code switch
             {
-                case "ACCOUNT_ID_REQUIRED":
-                case "AUTHORIZATION_INVALID":
-                case "LICENSE_KEY_REQUIRED":
-                    throw new AuthenticationException(error.Error);
-                case "INSUFFICIENT_FUNDS":
-                    throw new InsufficientFundsException(error.Error);
-                case "PERMISSION_REQUIRED":
-                    throw new PermissionRequiredException(error.Error);
-                default:
-                    throw new InvalidRequestException(error.Error, error.Code, response.RequestMessage?.RequestUri);
-            }
+                "ACCOUNT_ID_REQUIRED" or "AUTHORIZATION_INVALID" or "LICENSE_KEY_REQUIRED" 
+                    => new AuthenticationException(error.Error),
+                "INSUFFICIENT_FUNDS" => new InsufficientFundsException(error.Error),
+                "PERMISSION_REQUIRED" => new PermissionRequiredException(error.Error),
+                _ => new InvalidRequestException(error.Error, error.Code, response.RequestMessage?.RequestUri),
+            };
         }
 
         /// <summary>
