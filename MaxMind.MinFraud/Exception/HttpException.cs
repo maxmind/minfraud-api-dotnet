@@ -75,9 +75,9 @@ namespace MaxMind.MinFraud.Exception
         protected HttpException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             HttpStatus = (HttpStatusCode)(info.GetValue("MaxMind.MinFraud.Exception.HttpException.HttpStatus", typeof(HttpStatusCode))
-                ?? throw new SerializationException("Unexcepted null HttpStatus value"));
+                ?? throw new SerializationException("Unexpected null HttpStatus value"));
             Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.HttpException.Uri", typeof(Uri))
-                ?? throw new SerializationException("Unexcepted null Uri value"));
+                ?? throw new SerializationException("Unexpected null Uri value"));
         }
 
         /// <summary>

@@ -71,9 +71,9 @@ namespace MaxMind.MinFraud.Exception
         protected InvalidRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
         {
             Code = info.GetString("MaxMind.MinFraud.Exception.InvalidRequestException.Code")
-                ?? throw new SerializationException("Unexcepted null Code value");
+                ?? throw new SerializationException("Unexpected null Code value");
             Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", typeof(Uri))
-                ?? throw new SerializationException("Unexcepted null Uri value"));
+                ?? throw new SerializationException("Unexpected null Uri value"));
         }
 
         /// <summary>
