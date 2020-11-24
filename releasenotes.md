@@ -1,8 +1,8 @@
 Release Notes
 =============
 
-3.0.0
--------------------
+3.0.0 (2020-11-24)
+------------------
 
 * This library now requires .NET Framework 4.6.1 or greater or .NET Standard
   2.0 or greater.
