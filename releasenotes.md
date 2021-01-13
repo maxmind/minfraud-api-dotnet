@@ -5,6 +5,8 @@ Release Notes
 ------------------
 
 * Added `ApplePay` and `ApsPayments` to the `PaymentProcessor` enum.
+* Added additional normalizing of the request email address in
+  `MaxMind.MinFraud.Request.Email` when `hashAddress` is set to `true`.
 
 3.0.0 (2020-11-24)
 ------------------

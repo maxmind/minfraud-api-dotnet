@@ -64,12 +64,82 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
-        public void TestAddressMD5WithUppercase()
+        public void TestNormalizing()
         {
-            var email = new Email("Test@maxmind.com");
-            Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
-        }
+            Email e;
 
+            e = new Email(address: "test@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "  Test@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test+alias@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test+007+008@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test+@maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test@maxmind.com.", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal("maxmind.com.", e.Domain);
+
+            e = new Email(address: "+@maxmind.com", hashAddress: true);
+            Assert.Equal("aa57884e48f0dda9fc6f4cb2bffb1dd2", e.AddressMD5);
+            Assert.Equal("maxmind.com", e.Domain);
+
+            e = new Email(address: "Test@ maxmind.com", hashAddress: true);
+            Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+            Assert.Equal(" maxmind.com", e.Domain);
+
+            e = new Email(address: "Test+foo@yahoo.com", hashAddress: true);
+            Assert.Equal("a5f830c699fd71ad653aa59fa688c6d9", e.AddressMD5);
+            Assert.Equal("yahoo.com", e.Domain);
+
+            e = new Email(address: "Test-foo@yahoo.com", hashAddress: true);
+            Assert.Equal("88e478531ab3bc303f1b5da82c2e9bbb", e.AddressMD5);
+            Assert.Equal("yahoo.com", e.Domain);
+
+            e = new Email(address: "Test-foo-foo2@yahoo.com", hashAddress: true);
+            Assert.Equal("88e478531ab3bc303f1b5da82c2e9bbb", e.AddressMD5);
+            Assert.Equal("yahoo.com", e.Domain);
+
+            e = new Email(address: "Test-foo@gmail.com", hashAddress: true);
+            Assert.Equal("6f3ff986fa5e830dbbf08a942777a17c", e.AddressMD5);
+            Assert.Equal("gmail.com", e.Domain);
+
+            e = new Email(address: "test@gmail.com", hashAddress: true);
+            Assert.Equal("1aedb8d9dc4751e229a335e371db8058", e.AddressMD5);
+            Assert.Equal("gmail.com", e.Domain);
+
+            e = new Email(address: "test@gamil.com", hashAddress: true);
+            Assert.Equal("1aedb8d9dc4751e229a335e371db8058", e.AddressMD5);
+            Assert.Equal("gamil.com", e.Domain);
+
+            e = new Email(address: "test@bücher.com", hashAddress: true);
+            Assert.Equal("24948acabac551360cd510d5e5e2b464", e.AddressMD5);
+            Assert.Equal("bücher.com", e.Domain);
+
+            e = new Email(address: "Test+alias@Bücher.com", hashAddress: true);
+            Assert.Equal("24948acabac551360cd510d5e5e2b464", e.AddressMD5);
+            Assert.Equal("Bücher.com", e.Domain);
+
+            e = new Email(address: "test@", hashAddress: true);
+            Assert.Equal("246a848af2f8394e3adbc738dbe43720", e.AddressMD5);
+            Assert.Equal("", e.Domain);
+        }
 
         [Fact]
         public void TestInvalidAddress()
