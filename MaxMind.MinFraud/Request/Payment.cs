@@ -43,6 +43,12 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "american_express_payment_gateway")]
         AmericanExpressPaymentGateway,
 
+        [EnumMember(Value = "apple_pay")]
+        ApplePay,
+
+        [EnumMember(Value = "aps_payments")]
+        ApsPayments,
+
         [EnumMember(Value = "authorizenet")]
         Authorizenet,
 
