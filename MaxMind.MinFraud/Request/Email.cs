@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -12,6 +14,21 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
+        private static readonly IdnMapping _idn = new IdnMapping();
+        private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
+        {
+            // gmail.com
+            {"35gmai.com", "gmail.com"},
+            {"636gmail.com", "gmail.com"},
+            {"gamil.com", "gmail.com"},
+            {"gmail.comu", "gmail.com"},
+            {"gmial.com", "gmail.com"},
+            {"gmil.com", "gmail.com"},
+            {"yahoogmail.com", "gmail.com"},
+            // outlook.com
+            {"putlook.com", "outlook.com"},
+        };
+
         private string? _address;
         private string? _domain;
 
@@ -51,7 +68,7 @@ namespace MaxMind.MinFraud.Request
                     return null;
 
                 using var md5Generator = MD5.Create();
-                var bytes = Encoding.UTF8.GetBytes(Address.ToLower());
+                var bytes = Encoding.UTF8.GetBytes(CleanAddress(Address));
                 var md5 = md5Generator.ComputeHash(bytes);
                 return BitConverter.ToString(md5)
                     .Replace("-", string.Empty)
@@ -128,6 +145,51 @@ namespace MaxMind.MinFraud.Request
         public override string ToString()
         {
             return $"Address: {Address}, Domain: {Domain}";
+        }
+
+        private static string CleanAddress(string address)
+        {
+            address = address.Trim().ToLower();
+
+            int domainIndex = address.LastIndexOf('@');
+            if (domainIndex == -1 || domainIndex + 1 == address.Length)
+            {
+                return address;
+            }
+
+            var localPart = address.Substring(0, domainIndex);
+            var domain = address.Substring(domainIndex + 1);
+
+            domain = CleanDomain(domain);
+
+            var divider = domain == "yahoo.com" ? '-' : '+';
+
+            var dividerIdx = localPart.IndexOf(divider);
+            if (dividerIdx > 0)
+            {
+                localPart = localPart.Substring(0, dividerIdx);
+            }
+
+            return $"{localPart}@{domain}";
+        }
+
+        private static string CleanDomain(string domain)
+        {
+            domain = domain.Trim();
+
+            if (domain.EndsWith("."))
+            {
+                domain = domain.Substring(0, domain.Length - 1);
+            }
+
+            domain = _idn.GetAscii(domain);
+
+            if (_typoDomains.ContainsKey(domain))
+            {
+                domain = _typoDomains[domain];
+            }
+
+            return domain;
         }
     }
 }
