@@ -15,6 +15,16 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 $@"
                     {{
                         ""risk"": 99,
+                        ""risk_reasons"": [
+                            {{
+                                ""code"": ""ANONYMOUS_IP"",
+                                ""reason"": ""The IP address belongs to an anonymous network. See /ip_address/traits for more details.""
+                            }},
+                            {{
+                                ""code"": ""MINFRAUD_NETWORK_ACTIVITY"",
+                                ""reason"": ""Suspicious activity has been seen on this IP address across minFraud customers.""
+                            }}
+                        ],
                         ""country"": {{""is_high_risk"": true}},
                         ""location"": {{""local_time"": ""{time}""}},
                         ""traits"": {{
@@ -29,6 +39,16 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 ")!;
 
             Assert.Equal(99, address.Risk);
+            Assert.Equal("ANONYMOUS_IP", address.RiskReasons[0].Code);
+            Assert.Equal(
+                "The IP address belongs to an anonymous network. See /ip_address/traits for more details.",
+                address.RiskReasons[0].Reason
+            );
+            Assert.Equal("MINFRAUD_NETWORK_ACTIVITY", address.RiskReasons[1].Code);
+            Assert.Equal(
+                "Suspicious activity has been seen on this IP address across minFraud customers.",
+                address.RiskReasons[1].Reason
+            );
             Assert.Equal(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));
 #pragma warning disable CS0618 // Type or member is obsolete
             Assert.True(address.Country.IsHighRisk);

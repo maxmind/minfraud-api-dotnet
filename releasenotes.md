@@ -7,6 +7,9 @@ Release Notes
 * Added `ApplePay` and `ApsPayments` to the `PaymentProcessor` enum.
 * Added additional normalizing of the request email address in
   `MaxMind.MinFraud.Request.Email` when `hashAddress` is set to `true`.
+* Added support for the IP address risk reasons in the minFraud Insights and
+  Factors responses. This is available at `response.IPAddress.RiskReasons`.
+  It is a list of `MaxMind.MinFraud.Response.IPRiskReason` objects.
 
 3.0.0 (2020-11-24)
 ------------------
