@@ -151,7 +151,7 @@ namespace MaxMind.MinFraud.Request
         {
             address = address.Trim().ToLower();
 
-            int domainIndex = address.LastIndexOf('@');
+            var domainIndex = address.LastIndexOf('@');
             if (domainIndex == -1 || domainIndex + 1 == address.Length)
             {
                 return address;

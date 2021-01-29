@@ -38,6 +38,15 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("risk")]
         public double? Risk { get; init; }
 
+        /// <summary>
+        /// This list contains objects identifying the reasons why the IP
+        /// address received the associated risk. This will be an empty list
+        /// if there are no reasons.
+        /// </summary>
+        [JsonPropertyName("risk_reasons")]
+        public IReadOnlyList<IPRiskReason> RiskReasons { get; init; }
+            = new List<IPRiskReason>().AsReadOnly();
+
         internal new void SetLocales(IReadOnlyList<string> locales)
         {
             var l = new List<string>(locales);
