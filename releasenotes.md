@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-3.1.0
+3.1.0 (2021-02-02)
 ------------------
 
 * Added `ApplePay` and `ApsPayments` to the `PaymentProcessor` enum.
