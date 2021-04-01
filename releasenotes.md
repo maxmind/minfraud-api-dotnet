@@ -1,6 +1,17 @@
 Release Notes
 =============
 
+3.2.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Cardknox`
+  * `Creditguard`
+  * `Credorax`
+  * `Dlocal`
+  * `Onpay`
+  * `Safecharge`
+
 3.1.0 (2021-02-02)
 ------------------
 
