@@ -70,6 +70,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "braintree")]
         Braintree,
 
+        [EnumMember(Value = "cardknox")]
+        Cardknox,
+
         [EnumMember(Value = "cardpay")]
         Cardpay,
 
@@ -109,6 +112,12 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "conekta")]
         Conekta,
 
+        [EnumMember(Value = "creditguard")]
+        Creditguard,
+
+        [EnumMember(Value = "credorax")]
+        Credorax,
+
         [EnumMember(Value = "ct_payments")]
         CtPayments,
 
@@ -135,6 +144,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "digital_river")]
         DigitalRiver,
+
+        [EnumMember(Value = "dlocal")]
+        Dlocal,
 
         [EnumMember(Value = "dotpay")]
         Dotpay,
@@ -244,6 +256,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "oney")]
         Oney,
 
+        [EnumMember(Value = "onpay")]
+        Onpay,
+
         [EnumMember(Value = "other")]
         Other,
 
@@ -348,6 +363,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "rewardspay")]
         Rewardspay,
+
+        [EnumMember(Value = "safecharge")]
+        Safecharge,
 
         [EnumMember(Value = "sagepay")]
         Sagepay,
