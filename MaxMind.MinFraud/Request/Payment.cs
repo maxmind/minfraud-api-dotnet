@@ -136,6 +136,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "dalpay")]
         Dalpay,
 
+        [EnumMember(Value = "datacap")]
+        Datacap,
+
         [EnumMember(Value = "datacash")]
         Datacash,
 

@@ -8,6 +8,7 @@ Release Notes
   * `Cardknox`
   * `Creditguard`
   * `Credorax`
+  * `Datacap`
   * `Dlocal`
   * `Onpay`
   * `Safecharge`
