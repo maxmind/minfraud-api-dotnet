@@ -42,8 +42,13 @@ namespace MaxMind.MinFraud.Request
         ///  as provided by the payment processor.</param>
         /// <param name="token">A token uniquely identifying the card. This
         /// should not be the actual credit card number.</param>
-        /// <param name="was3dSecureSuccessful">Whether or not the 3DS check was
-        /// successful, as provided by the end user.</param>
+        /// <param name="was3dSecureSuccessful">Whether or not the 3D-Secure
+        /// verification (e.g. Safekey, SecureCode, Verified by Visa) was
+        /// successful, as provided by the end user. `true` if customer
+        /// verification was successful, or `false` if the customer failed
+        /// verification. If 3-D Secure verification was not used, was
+        /// unavailable, or resulted in an outcome other than success or
+        /// failure, do not include this parameter.</param>
         public CreditCard(
             string? issuerIdNumber = null,
             string? last4Digits = null,
@@ -158,8 +163,12 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// Whether or not the 3DS check was successful, as provided by the end
-        /// user.
+        /// Whether or not the 3D-Secure verification (e.g. Safekey, SecureCode,
+        /// Verified by Visa) was successful, as provided by the end user.
+        /// `true` if customer verification was successful, or `false` if the
+        /// customer failed verification. If 3-D Secure verification was not
+        /// used, was unavailable, or resulted in an outcome other than success
+        /// or failure, do not include this parameter.
         /// </summary>
         [JsonPropertyName("was_3d_secure_successful")]
         public bool? Was3dSecureSuccessful { get; init; }
