@@ -42,7 +42,7 @@ namespace MaxMind.MinFraud.Request
         ///  as provided by the payment processor.</param>
         /// <param name="token">A token uniquely identifying the card. This
         /// should not be the actual credit card number.</param>
-        /// <param name="was3dSecureSuccessful">Whether or not the 3D-Secure
+        /// <param name="was3DSecureSuccessful">Whether or not the 3D-Secure
         /// verification (e.g. Safekey, SecureCode, Verified by Visa) was
         /// successful, as provided by the end user. `true` if customer
         /// verification was successful, or `false` if the customer failed
@@ -58,7 +58,7 @@ namespace MaxMind.MinFraud.Request
             char? avsResult = null,
             char? cvvResult = null,
             string? token = null,
-            bool? was3dSecureSuccessful = null
+            bool? was3DSecureSuccessful = null
         )
         {
             IssuerIdNumber = issuerIdNumber;
@@ -69,7 +69,7 @@ namespace MaxMind.MinFraud.Request
             AvsResult = avsResult;
             CvvResult = cvvResult;
             Token = token;
-            Was3dSecureSuccessful = was3dSecureSuccessful;
+            Was3DSecureSuccessful = was3DSecureSuccessful;
         }
 
         /// <summary>
@@ -187,7 +187,7 @@ namespace MaxMind.MinFraud.Request
         /// or failure, do not include this parameter.
         /// </summary>
         [JsonPropertyName("was_3d_secure_successful")]
-        public bool? Was3dSecureSuccessful { get; init; }
+        public bool? Was3DSecureSuccessful { get; init; }
 
         /// <summary>
         /// Returns a string that represents the current object.
@@ -196,7 +196,7 @@ namespace MaxMind.MinFraud.Request
         public override string ToString()
         {
             return
-                $"IssuerIdNumber: {IssuerIdNumber}, Last4Digits: {Last4Digits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3dSecureSuccessful: {Was3dSecureSuccessful}";
+                $"IssuerIdNumber: {IssuerIdNumber}, Last4Digits: {Last4Digits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
         }
     }
 }

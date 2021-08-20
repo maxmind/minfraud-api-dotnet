@@ -115,10 +115,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
-        public void TestWas3dSecureSuccessful()
+        public void TestWas3DSecureSuccessful()
         {
-            var cc = new CreditCard(was3dSecureSuccessful: true);
-            Assert.True(cc.Was3dSecureSuccessful);
+            var cc = new CreditCard(was3DSecureSuccessful: true);
+            Assert.True(cc.Was3DSecureSuccessful);
         }
     }
 }

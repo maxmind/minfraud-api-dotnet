@@ -126,7 +126,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     cvvResult: 'N',
                     last4Digits: "7643",
                     token: "123456abc1234",
-                    was3dSecureSuccessful: false
+                    was3DSecureSuccessful: false
                 ),
                 customInputs: new CustomInputs.Builder
                 {
@@ -240,7 +240,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     CvvResult = 'N',
                     Last4Digits = "7643",
                     Token = "123456abc1234",
-                    Was3dSecureSuccessful = false,
+                    Was3DSecureSuccessful = false,
                 },
                 CustomInputs = new CustomInputs.Builder
                 {
