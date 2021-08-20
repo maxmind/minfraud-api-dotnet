@@ -10,8 +10,8 @@ namespace MaxMind.MinFraud.Response
         /// <summary>
         /// The action to take on the transaction as defined by your custom
         /// rules. The current set of values are "accept", "manual_review",
-        /// and "reject". If you do not have custom rules set up, <c>null</c>
-        /// will be returned.
+        /// "reject" and "test". If you do not have custom rules set up,
+        /// <c>null</c> will be returned.
         /// </summary>
         [JsonPropertyName("action")]
         public string? Action { get; init; }

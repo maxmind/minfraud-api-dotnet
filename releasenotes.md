@@ -12,6 +12,7 @@ Release Notes
   * `Dlocal`
   * `Onpay`
   * `Safecharge`
+* Documented the new "test" disposition.
 
 3.1.0 (2021-02-02)
 ------------------
