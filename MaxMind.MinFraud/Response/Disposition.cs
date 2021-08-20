@@ -25,11 +25,20 @@ namespace MaxMind.MinFraud.Response
         public string? Reason { get; init; }
 
         /// <summary>
+        /// The label of the custom rule that was triggered. If you do not have
+        /// custom rules set up, the triggered custom rule does not have a
+        /// label, or no custom rule was triggered, <c>null</c> will be
+        /// returned.
+        /// </summary>
+        [JsonPropertyName("rule_label")]
+        public string? RuleLabel { get; init; }
+
+        /// <summary>
         /// Returns a string that represents the current object.
         /// </summary>
         public override string ToString()
         {
-            return $"Action: {Action}, Reason: {Reason}";
+            return $"Action: {Action}, Reason: {Reason}, Rule Label: {RuleLabel}";
         }
     }
 }

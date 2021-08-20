@@ -13,6 +13,10 @@ Release Notes
   * `Onpay`
   * `Safecharge`
 * Documented the new "test" disposition.
+* Added support for the `/disposition/risk_label` output in Score, Insights and
+  Factors. This is the available as the `RiskLabel` property of
+  `MaxMind.MinFraud.Response.Disposition`, and is the label of the custom rule
+  that was triggered by the transaction.
 
 3.1.0 (2021-02-02)
 ------------------
