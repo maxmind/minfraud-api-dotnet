@@ -287,7 +287,8 @@ public class MinFraudExample
                 AvsResult = 'Y',
                 CvvResult = 'N',
                 Last4Digits = "7643",
-                Token = "123456abc1234"
+                Token = "123456abc1234",
+                Was3dSecureSuccessful = true
             },
             CustomInputs = new CustomInputs.Builder
             {
