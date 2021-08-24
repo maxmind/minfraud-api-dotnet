@@ -42,6 +42,13 @@ namespace MaxMind.MinFraud.Request
         ///  as provided by the payment processor.</param>
         /// <param name="token">A token uniquely identifying the card. This
         /// should not be the actual credit card number.</param>
+        /// <param name="was3DSecureSuccessful">Whether or not the 3D-Secure
+        /// verification (e.g. Safekey, SecureCode, Verified by Visa) was
+        /// successful, as provided by the end user. `true` if customer
+        /// verification was successful, or `false` if the customer failed
+        /// verification. If 3-D Secure verification was not used, was
+        /// unavailable, or resulted in an outcome other than success or
+        /// failure, do not include this parameter.</param>
         public CreditCard(
             string? issuerIdNumber = null,
             string? last4Digits = null,
@@ -50,7 +57,8 @@ namespace MaxMind.MinFraud.Request
             string? bankPhoneNumber = null,
             char? avsResult = null,
             char? cvvResult = null,
-            string? token = null
+            string? token = null,
+            bool? was3DSecureSuccessful = null
         )
         {
             IssuerIdNumber = issuerIdNumber;
@@ -61,6 +69,23 @@ namespace MaxMind.MinFraud.Request
             AvsResult = avsResult;
             CvvResult = cvvResult;
             Token = token;
+            Was3DSecureSuccessful = was3DSecureSuccessful;
+        }
+
+        /// <summary>
+        /// [Obsolete("Legacy constructor for backwards compatibility")]
+        /// </summary>
+        public CreditCard(
+            string? issuerIdNumber,
+            string? last4Digits,
+            string? bankName,
+            string? bankPhoneCountryCode,
+            string? bankPhoneNumber,
+            char? avsResult,
+            char? cvvResult,
+            string? token
+        ) : this(issuerIdNumber, last4Digits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, null)
+        {
         }
 
         /// <summary>
@@ -133,7 +158,6 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("cvv_result")]
         public char? CvvResult { get; init; }
 
-
         /// <summary>
         /// A token uniquely identifying the card. This should not be
         /// the actual credit card number.
@@ -155,13 +179,24 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
+        /// Whether or not the 3D-Secure verification (e.g. Safekey, SecureCode,
+        /// Verified by Visa) was successful, as provided by the end user.
+        /// `true` if customer verification was successful, or `false` if the
+        /// customer failed verification. If 3-D Secure verification was not
+        /// used, was unavailable, or resulted in an outcome other than success
+        /// or failure, do not include this parameter.
+        /// </summary>
+        [JsonPropertyName("was_3d_secure_successful")]
+        public bool? Was3DSecureSuccessful { get; init; }
+
+        /// <summary>
         /// Returns a string that represents the current object.
         /// </summary>
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
             return
-                $"IssuerIdNumber: {IssuerIdNumber}, Last4Digits: {Last4Digits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}";
+                $"IssuerIdNumber: {IssuerIdNumber}, Last4Digits: {Last4Digits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
         }
     }
 }

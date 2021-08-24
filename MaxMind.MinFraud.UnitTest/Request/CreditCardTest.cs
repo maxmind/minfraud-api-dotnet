@@ -92,7 +92,6 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal('N', cc.CvvResult);
         }
 
-
         [Theory]
         [InlineData("4485921507912924")]
         [InlineData("432312")]
@@ -113,6 +112,13 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             var cc = new CreditCard(token: token);
             Assert.Equal(token, cc.Token);
+        }
+
+        [Fact]
+        public void TestWas3DSecureSuccessful()
+        {
+            var cc = new CreditCard(was3DSecureSuccessful: true);
+            Assert.True(cc.Was3DSecureSuccessful);
         }
     }
 }

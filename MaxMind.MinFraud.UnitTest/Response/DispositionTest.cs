@@ -13,12 +13,14 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 @"
                     {
                         ""action"": ""manual_review"",
-                        ""reason"": ""custom_rule""
+                        ""reason"": ""custom_rule"",
+                        ""rule_label"": ""the rule's label""
                     }
                 ")!;
 
             Assert.Equal("manual_review", disposition.Action);
             Assert.Equal("custom_rule", disposition.Reason);
+            Assert.Equal("the rule's label", disposition.RuleLabel);
         }
     }
 }
