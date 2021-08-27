@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v3.1.0
+version: v3.2.0
 ---
 # .NET API for MaxMind minFraud Services #
 
@@ -293,7 +293,8 @@ public class MinFraudExample
                 AvsResult = 'Y',
                 CvvResult = 'N',
                 Last4Digits = "7643",
-                Token = "123456abc1234"
+                Token = "123456abc1234",
+                Was3DSecureSuccessful = true
             },
             CustomInputs = new CustomInputs.Builder
             {
@@ -368,6 +369,6 @@ This API uses [Semantic Versioning](http://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015-2020 by MaxMind, Inc.
+This software is Copyright (c) 2015-2021 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
