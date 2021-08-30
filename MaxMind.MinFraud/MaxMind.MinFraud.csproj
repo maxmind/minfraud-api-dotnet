@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <Description>API for MaxMind minFraud Score and Insights web services</Description>
-    <VersionPrefix>3.1.0</VersionPrefix>
+    <VersionPrefix>3.2.0</VersionPrefix>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net461;net5.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net5.0;netstandard2.0;netstandard2.1</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>

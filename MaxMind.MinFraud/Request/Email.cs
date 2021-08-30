@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
-        private static readonly IdnMapping _idn = new IdnMapping();
+        private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
         {
             // gmail.com
