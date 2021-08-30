@@ -26,6 +26,9 @@
     <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
     <LangVersion>9.0</LangVersion>
     <Nullable>enable</Nullable>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
   </PropertyGroup>
 
   <ItemGroup>
@@ -50,7 +53,7 @@
       <Version>5.0.0</Version>
     </PackageReference>
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Include="..\MaxMind-logo.png">
       <Pack>True</Pack>
