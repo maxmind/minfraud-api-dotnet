@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Response
     {
         /// <summary>
         /// This value is a machine-readable code identifying the
-        /// warning. See the <a href="https://dev.maxmind.com/minfraud/#Warning">
+        /// warning. See the <a href="https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#schema--response--warning">
         /// web service documentation</a> for the current list of of warning
         ///  codes.
         ///</summary>
