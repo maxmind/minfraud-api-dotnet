@@ -90,7 +90,7 @@ namespace MaxMind.MinFraud.Exception
         }
 
         /// <summary>
-        /// The <a href="https://dev.maxmind.com/minfraud/#Errors">
+        /// The <a href="https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#errors">
         /// reason code</a> for why the web service rejected the request.
         /// </summary>
         public string? Code { get; init; }

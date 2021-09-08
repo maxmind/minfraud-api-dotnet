@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// believes is associated with the IP address passed in the request.
     /// In order to receive device output from minFraud Insights or
     /// minFraud Factors, you must be using the
-    /// <see href="https://dev.maxmind.com/minfraud/device/">Device
+    /// <see href="https://dev.maxmind.com/minfraud/track-devices?lang=en">Device
     /// Tracking Add-on</see>.
     /// </summary>
     public sealed class Device

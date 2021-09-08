@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.Request
     {
         /// <summary>
         ///     Constructor. See
-        ///     <a href="https://dev.maxmind.com/minfraud/#Request_Body">
+        ///     <a href="https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en">
         ///         the minFraud documentation
         ///     </a>
         ///     for a general overview of the request sent to the web
