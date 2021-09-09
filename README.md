@@ -2,7 +2,7 @@
 
 ## Description ##
 
-This package provides an API for the [MaxMind minFraud web services](http://dev.maxmind.com/minfraud?lang=en).
+This package provides an API for the [MaxMind minFraud web services](https://dev.maxmind.com/minfraud?lang=en).
 This includes minFraud Score, Insights, and Factors. It also includes our
 [minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-a-transaction?lang=en).
 
@@ -14,7 +14,7 @@ API.
 This library works with .NET Framework version 4.6.1 and above and .NET
 Standard 2.0 or above.
 
-This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
+This library depends on [GeoIP2](https://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.
 
 ## Installation ##
@@ -350,7 +350,7 @@ Please report all issues with this code using the
 
 If you are having an issue with the minFraud service that is not specific
 to the client API, please see
-[our support page](http://www.maxmind.com/en/support).
+[our support page](https://www.maxmind.com/en/support).
 
 ## Contributing ##
 
@@ -359,7 +359,7 @@ possible.
 
 ## Versioning ##
 
-This API uses [Semantic Versioning](http://semver.org/).
+This API uses [Semantic Versioning](https://semver.org/).
 
 ## Copyright and License ##
 
