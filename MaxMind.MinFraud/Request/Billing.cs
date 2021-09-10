@@ -15,9 +15,9 @@
         /// <param name="address">The first line of the user’s billing address.</param>
         /// <param name="address2">The second line of the user’s billing address.</param>
         /// <param name="city">The city of the user’s billing address.</param>
-        /// <param name="region">The <a href="http://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a>
+        /// <param name="region">The <a href="https://en.wikipedia.org/wiki/ISO_3166-2">ISO 3166-2</a>
         /// subdivision code for the user’s billing address.</param>
-        /// <param name="country">The two character <a href="http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO
+        /// <param name="country">The two character <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO
         /// 3166-1 alpha-2</a> country code of the user’s billing address.</param>
         /// <param name="postal">The postal code of the user’s billing address.</param>
         /// <param name="phoneNumber">The phone number without the country code for the user’s billing address.</param>

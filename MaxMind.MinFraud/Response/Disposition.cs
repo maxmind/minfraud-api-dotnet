@@ -18,8 +18,8 @@ namespace MaxMind.MinFraud.Response
 
         /// <summary>
         /// The reason for the action. The current possible values are
-        /// "custom_rule", "block_list", and "default". If you do not have
-        /// custom rules set up, <c>null</c> will be returned.
+        /// "custom_rule" and "default". If you do not have custom rules set
+        /// up, <c>null</c> will be returned.
         /// </summary>
         [JsonPropertyName("reason")]
         public string? Reason { get; init; }
