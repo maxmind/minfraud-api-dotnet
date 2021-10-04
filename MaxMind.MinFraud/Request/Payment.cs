@@ -64,6 +64,12 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "bluesnap")]
         Bluesnap,
 
+        [EnumMember(Value = "boacompra")]
+        Boacompra,
+
+        [EnumMember(Value = "boku")]
+        Boku,
+
         [EnumMember(Value = "bpoint")]
         Bpoint,
 
@@ -111,6 +117,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "conekta")]
         Conekta,
+
+        [EnumMember(Value = "coregateway")]
+        Coregateway,
 
         [EnumMember(Value = "creditguard")]
         Creditguard,
@@ -190,6 +199,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "first_data")]
         FirstData,
 
+        [EnumMember(Value = "fiserv")]
+        Fiserv,
+
         [EnumMember(Value = "g2a_pay")]
         G2aPay,
 
@@ -250,6 +262,12 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "moneris_solutions")]
         MonerisSolutions,
 
+        [EnumMember(Value = "neopay")]
+        Neopay,
+
+        [EnumMember(Value = "neosurf")]
+        Neosurf,
+
         [EnumMember(Value = "nmi")]
         Nmi,
 
@@ -261,6 +279,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "onpay")]
         Onpay,
+
+        [EnumMember(Value = "openbucks")]
+        Openbucks,
 
         [EnumMember(Value = "other")]
         Other,
@@ -307,6 +328,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "paysafecard")]
         Paysafecard,
 
+        [EnumMember(Value = "paysera")]
+        Paysera,
+
         [EnumMember(Value = "paystation")]
         Paystation,
 
@@ -327,6 +351,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "payulatam")]
         Payulatam,
+
+        [EnumMember(Value = "payvision")]
+        Payvision,
 
         [EnumMember(Value = "payway")]
         Payway,
@@ -411,6 +438,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "transact_pro")]
         TransactPro,
+
+        [EnumMember(Value = "trustly")]
+        Trustly,
 
         [EnumMember(Value = "tsys")]
         Tsys,
