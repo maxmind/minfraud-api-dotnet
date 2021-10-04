@@ -1,6 +1,21 @@
 Release Notes
 =============
 
+3.3.0
+------------------
+
+* Added the following new values to the `PaymentProcessor` enum:
+  * `Boacompra`
+  * `Boku`
+  * `Coregateway`
+  * `Fiserv`
+  * `Neopay`
+  * `Neosurf`
+  * `Openbucks`
+  * `Paysera`
+  * `Payvision`
+  * `Trustly`
+
 3.2.0 (2021-08-27)
 ------------------
 
