@@ -135,7 +135,7 @@ namespace MaxMind.MinFraud.UnitTest
         }
 #endif
 
-        private void CompareJson(string responseContent, object response )
+        private void CompareJson(string responseContent, object response)
         {
             var expectedResponse = JsonDocument.Parse(responseContent);
 

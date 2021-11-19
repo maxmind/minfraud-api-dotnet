@@ -104,8 +104,9 @@ namespace MaxMind.MinFraud.Request
         /// associated with the address (e.g., "US")
         /// </summary>
         [JsonPropertyName("country")]
-        public string? Country { 
-            get => _country; 
+        public string? Country
+        {
+            get => _country;
             init
             {
                 if (value != null && !CountryRe.IsMatch(value))

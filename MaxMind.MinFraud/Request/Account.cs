@@ -54,7 +54,8 @@ namespace MaxMind.MinFraud.Request
         /// The MD5 generated from the <c>Username</c>
         /// </summary>
         [JsonPropertyName("username_md5")]
-        public string? UsernameMD5 {
+        public string? UsernameMD5
+        {
             get
             {
                 if (Username == null)

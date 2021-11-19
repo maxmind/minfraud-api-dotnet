@@ -75,10 +75,10 @@ namespace MaxMind.MinFraud
             TimeSpan? timeout = null,
             HttpMessageHandler? httpMessageHandler = null
             ) : this(
-                accountId, 
-                licenseKey, 
-                locales, 
-                host, 
+                accountId,
+                licenseKey,
+                locales,
+                host,
                 timeout,
                 new HttpClient(httpMessageHandler ?? new HttpClientHandler(), true))
         {
@@ -206,7 +206,8 @@ namespace MaxMind.MinFraud
             var options = new JsonSerializerOptions();
             options.Converters.Add(new NetworkConverter());
 
-            try {
+            try
+            {
                 var model = await response.Content.ReadFromJsonAsync<T>(options).ConfigureAwait(false);
                 if (model == null)
                 {
@@ -292,7 +293,7 @@ namespace MaxMind.MinFraud
             }
             throw error.Code switch
             {
-                "ACCOUNT_ID_REQUIRED" or "AUTHORIZATION_INVALID" or "LICENSE_KEY_REQUIRED" 
+                "ACCOUNT_ID_REQUIRED" or "AUTHORIZATION_INVALID" or "LICENSE_KEY_REQUIRED"
                     => new AuthenticationException(error.Error),
                 "INSUFFICIENT_FUNDS" => new InsufficientFundsException(error.Error),
                 "PERMISSION_REQUIRED" => new PermissionRequiredException(error.Error),
