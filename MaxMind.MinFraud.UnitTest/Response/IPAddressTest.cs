@@ -33,7 +33,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                             ""is_hosting_provider"": true,
                             ""is_public_proxy"": true,
                             ""is_residential_proxy"": true,
-                            ""is_tor_exit_node"": true
+                            ""is_tor_exit_node"": true,
+                            ""mobile_country_code"" : ""310"",
+                            ""mobile_network_code"" : ""004""
                          }}
                     }}
                 ")!;
@@ -59,6 +61,8 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.True(address.Traits.IsPublicProxy);
             Assert.True(address.Traits.IsResidentialProxy);
             Assert.True(address.Traits.IsTorExitNode);
+            Assert.Equal("310", address.Traits.MobileCountryCode);
+            Assert.Equal("004", address.Traits.MobileNetworkCode);
         }
     }
 }
