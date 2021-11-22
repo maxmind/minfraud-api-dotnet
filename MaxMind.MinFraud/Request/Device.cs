@@ -73,7 +73,8 @@ namespace MaxMind.MinFraud.Request
         /// the time since the start of the first visit.
         /// </summary>
         [JsonPropertyName("session_age")]
-        public double? SessionAge { 
+        public double? SessionAge
+        {
             get => _sessionAge;
             init
             {
@@ -90,7 +91,8 @@ namespace MaxMind.MinFraud.Request
         /// uniquely identifies a visitor's session on the site.
         /// </summary>
         [JsonPropertyName("session_id")]
-        public string? SessionId { 
+        public string? SessionId
+        {
             get => _sessionId;
             init
             {

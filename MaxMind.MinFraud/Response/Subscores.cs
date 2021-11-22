@@ -97,7 +97,7 @@ namespace MaxMind.MinFraud.Response
         /// value in the range 0.01 to 99.
         /// </summary>
         [JsonPropertyName("email_local_part")]
-        public double? EmailLocalPart{ get; init; }
+        public double? EmailLocalPart { get; init; }
 
         /// <summary>
         /// The risk associated with the issuer ID number on the email

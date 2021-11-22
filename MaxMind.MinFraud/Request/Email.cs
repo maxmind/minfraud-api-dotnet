@@ -80,7 +80,8 @@ namespace MaxMind.MinFraud.Request
         /// The email address used in the transaction.
         /// </summary>
         [JsonIgnore]
-        public string? Address {
+        public string? Address
+        {
             get => _address;
             init
             {
@@ -116,7 +117,7 @@ namespace MaxMind.MinFraud.Request
         public string? Domain
         {
             get => _domain;
-            init 
+            init
             {
                 if (value == null)
                 {

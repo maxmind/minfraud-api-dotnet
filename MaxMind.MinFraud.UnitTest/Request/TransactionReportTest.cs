@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var transactionId = "txn123";
 
             var report = new TransactionReport(
-                ipAddress: IP, 
+                ipAddress: IP,
                 tag: TransactionReportTag.Chargeback,
                 chargebackCode: chargebackCode,
                 maxmindId: maxmindId,

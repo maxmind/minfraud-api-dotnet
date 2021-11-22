@@ -63,7 +63,8 @@ namespace MaxMind.MinFraud.Request
         /// The ISO 4217 currency code for the currency used in the transaction.
         /// </summary>
         [JsonPropertyName("currency")]
-        public string? Currency { 
+        public string? Currency
+        {
             get => _currency;
             init
             {

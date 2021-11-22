@@ -122,7 +122,8 @@ namespace MaxMind.MinFraud.Request
         /// is not required, but you are encouraged to provide it, if possible.
         /// </summary>
         [JsonPropertyName("maxmind_id")]
-        public string? MaxMindId { 
+        public string? MaxMindId
+        {
             get => _maxmindId;
             init
             {
