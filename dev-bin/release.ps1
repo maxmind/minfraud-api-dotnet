@@ -102,6 +102,6 @@ if ((Read-Host -Prompt 'Should release? (y/n)') -ne 'y') {
     Write-Error 'Aborting'
 }
 
-& hub release create "$tag"
+& gh release create --target "$(git branch --show-current)" -t "$version" "$tag"
 
 & nuget push "MaxMind.MinFraud/bin/Release/MaxMind.MinFraud.$version.nupkg" -Source https://www.nuget.org/api/v2/package
