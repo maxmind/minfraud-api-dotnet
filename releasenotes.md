@@ -20,6 +20,7 @@ Release Notes
   * `Paysera`
   * `Payvision`
   * `Trustly`
+  * `Windcave`
 
 3.2.0 (2021-08-27)
 ------------------

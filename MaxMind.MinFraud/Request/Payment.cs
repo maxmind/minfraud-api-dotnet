@@ -469,6 +469,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "vpos")]
         Vpos,
 
+        [EnumMember(Value = "windcave")]
+        Windcave,
+
         [EnumMember(Value = "wirecard")]
         Wirecard,
 
