@@ -8,8 +8,9 @@ namespace MaxMind.MinFraud.Response
     public sealed class Factors : Insights
     {
         /// <summary>
-        /// An object containing GeoIP2 and minFraud Insights information about
-        /// the IP address.
+        /// An object containing the risk factor scores for many of the
+        /// individual components that are used in calculating the overall
+        /// risk score.
         /// </summary>
         [JsonPropertyName("subscores")]
         public Subscores Subscores { get; init; } = new Subscores();
