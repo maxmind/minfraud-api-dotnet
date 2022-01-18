@@ -4,8 +4,8 @@ using System.Text.Json.Serialization;
 namespace MaxMind.MinFraud.Response
 {
     /// <summary>
-    /// This class contains subscores for many of the individual components that are
-    /// used to calculate the overall risk score.
+    /// This class contains scores for many of the individual risk
+    /// factors that are used to calculate the overall risk score.
     /// </summary>
     public sealed class Subscores
     {
@@ -104,7 +104,7 @@ namespace MaxMind.MinFraud.Response
         /// domain. If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonPropertyName("email_tenure")]
-        [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address subscore MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
+        [Obsolete("Deprecated effective August 29, 2019. This risk factor score will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address risk factor score, MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
         public double? EmailTenure { get; init; }
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace MaxMind.MinFraud.Response
         /// If present, this is a value in the range 0.01 to 99.
         /// </summary>
         [JsonPropertyName("ip_tenure")]
-        [Obsolete("Deprecated effective August 29, 2019. This subscore will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
+        [Obsolete("Deprecated effective August 29, 2019. This risk factor score will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
         public double? IPTenure { get; init; }
 
         /// <summary>
