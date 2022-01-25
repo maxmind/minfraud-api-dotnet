@@ -21,6 +21,22 @@ Release Notes
   * `Payvision`
   * `Trustly`
   * `Windcave`
+* The `last4Digits` constructor parameter and and `Last4Digits` property of
+  `MaxMind.MinFraud.Request.CreditCard` have been deprecated in favor of
+  `lastDigits` / `LastDigits` respectively and will be removed in a future
+  release. `lastDigits` / `LastDigits` also now supports two digit values in
+  addition to the previous four digit values.
+* Eight digit `MaxMind.MinFraud.Request.CreditCard.issuerIdNumber` inputs are
+  now supported in addition to the previously accepted six digit `issuerIdNumber`.
+  In most cases, you should send the last four digits for
+  `MaxMind.MinFraud.Request.CreditCard.lastDigits`. If you send a `issuerIdNumber`
+  that contains an eight digit IIN, and if the credit card brand is not one of the
+  following, you should send the last two digits for `lastDigits`:
+  * `Discover`
+  * `JCB`
+  * `Mastercard`
+  * `UnionPay`
+  * `Visa`
 
 3.2.0 (2021-08-27)
 ------------------

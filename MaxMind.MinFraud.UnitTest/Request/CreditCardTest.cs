@@ -9,14 +9,23 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestIssuerIdNumber()
         {
-            var cc = new CreditCard(issuerIdNumber: "123456");
-            Assert.Equal("123456", cc.IssuerIdNumber);
+            var cc6 = new CreditCard(issuerIdNumber: "123456");
+            Assert.Equal("123456", cc6.IssuerIdNumber);
+
+            var cc8 = new CreditCard(issuerIdNumber: "12345678");
+            Assert.Equal("12345678", cc8.IssuerIdNumber);
+        }
+
+        [Fact]
+        public void TestIssuerIdNumberThatIsInvalidLength()
+        {
+            Assert.Throws<ArgumentException>(() => new CreditCard(issuerIdNumber: "1234567"));
         }
 
         [Fact]
         public void TestIssuerIdNumberThatIsTooLong()
         {
-            Assert.Throws<ArgumentException>(() => new CreditCard(issuerIdNumber: "1234567"));
+            Assert.Throws<ArgumentException>(() => new CreditCard(issuerIdNumber: "123456789"));
         }
 
         [Fact]
@@ -34,26 +43,39 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestLast4Digits()
         {
-            var cc = new CreditCard(last4Digits: "1234");
-            Assert.Equal("1234", cc.Last4Digits);
+            var cc2 = new CreditCard(last4Digits: "12");
+            Assert.Equal("12", cc2.Last4Digits);
+
+            var cc4 = new CreditCard(last4Digits: "1234");
+            Assert.Equal("1234", cc4.Last4Digits);
         }
 
         [Fact]
-        public void TestLast4DigitsThatIsTooLong()
+        public void TestLastDigits()
         {
-            Assert.Throws<ArgumentException>(() => new CreditCard(last4Digits: "12345"));
+            var cc2 = new CreditCard(lastDigits: "12");
+            Assert.Equal("12", cc2.LastDigits);
+
+            var cc4 = new CreditCard(lastDigits: "1234");
+            Assert.Equal("1234", cc4.LastDigits);
         }
 
         [Fact]
-        public void TestLast4DigitsThatIsTooShort()
+        public void TestLastDigitsThatIsTooLong()
         {
-            Assert.Throws<ArgumentException>(() => new CreditCard(last4Digits: "123"));
+            Assert.Throws<ArgumentException>(() => new CreditCard(lastDigits: "12345"));
         }
 
         [Fact]
-        public void TestLast4DigitsThatHasLetters()
+        public void TestLastDigitsThatIsTooShort()
         {
-            Assert.Throws<ArgumentException>(() => new CreditCard(last4Digits: "123a"));
+            Assert.Throws<ArgumentException>(() => new CreditCard(lastDigits: "1"));
+        }
+
+        [Fact]
+        public void TestLastDigitsThatHasLetters()
+        {
+            Assert.Throws<ArgumentException>(() => new CreditCard(lastDigits: "123a"));
         }
 
         [Fact]
@@ -101,7 +123,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")]
         public void TestInvalidToken(string token)
         {
-            Assert.Throws<ArgumentException>(() => new CreditCard(last4Digits: token));
+            Assert.Throws<ArgumentException>(() => new CreditCard(token: token));
         }
 
         [Theory]

@@ -10,13 +10,13 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CreditCard
     {
-        private static readonly Regex IssuerIdNumberRe = new Regex("^[0-9]{6}$", RegexOptions.Compiled);
-        private static readonly Regex Last4Re = new Regex("^[0-9]{4}$", RegexOptions.Compiled);
+        private static readonly Regex IssuerIdNumberRe = new Regex("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
+        private static readonly Regex LastDigitsRe = new Regex("^[0-9]{2}$|^[0-9]{4}$", RegexOptions.Compiled);
 
         private static readonly Regex TokenRe = new Regex("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
         private string? _issuerIdNumber;
-        private string? _last4Digits;
+        private string? _lastDigits;
         private string? _token;
 
 
@@ -24,10 +24,10 @@ namespace MaxMind.MinFraud.Request
         /// Constructor.
         /// </summary>
         /// <param name="issuerIdNumber">The issuer ID number for the credit card.
-        /// This is the first 6 digits of the credit card number. It identifies
-        /// the issuing bank.</param>
-        /// <param name="last4Digits">The last four digits of the credit card
-        /// number.</param>
+        /// This is the first six or eight digits of the credit card number. It
+        /// identifies the issuing bank.</param>
+        /// <param name="lastDigits">The last two or four digits of the credit
+        /// card number.</param>
         /// <param name="bankName">The name of the issuing bank as provided by
         /// the end user</param>
         /// <param name="bankPhoneCountryCode">The phone country code for the
@@ -49,20 +49,24 @@ namespace MaxMind.MinFraud.Request
         /// verification. If 3-D Secure verification was not used, was
         /// unavailable, or resulted in an outcome other than success or
         /// failure, do not include this parameter.</param>
+        /// <param name="last4Digits">The last two or four digits of the credit
+        /// card number. last4Digits is obsolete. Use lastDigits instead.
+        /// </param>
         public CreditCard(
             string? issuerIdNumber = null,
-            string? last4Digits = null,
+            string? lastDigits = null,
             string? bankName = null,
             string? bankPhoneCountryCode = null,
             string? bankPhoneNumber = null,
             char? avsResult = null,
             char? cvvResult = null,
             string? token = null,
-            bool? was3DSecureSuccessful = null
+            bool? was3DSecureSuccessful = null,
+            string? last4Digits = null
         )
         {
             IssuerIdNumber = issuerIdNumber;
-            Last4Digits = last4Digits;
+            LastDigits = lastDigits ?? last4Digits;
             BankName = bankName;
             BankPhoneCountryCode = bankPhoneCountryCode;
             BankPhoneNumber = bankPhoneNumber;
@@ -70,6 +74,23 @@ namespace MaxMind.MinFraud.Request
             CvvResult = cvvResult;
             Token = token;
             Was3DSecureSuccessful = was3DSecureSuccessful;
+        }
+
+        /// <summary>
+        /// [Obsolete("Legacy constructor for backwards compatibility")]
+        /// </summary>
+        public CreditCard(
+            string? issuerIdNumber,
+            string? last4Digits,
+            string? bankName,
+            string? bankPhoneCountryCode,
+            string? bankPhoneNumber,
+            char? avsResult,
+            char? cvvResult,
+            string? token,
+            bool? was3DSecureSuccessful
+        ) : this(issuerIdNumber, last4Digits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, was3DSecureSuccessful, null)
+        {
         }
 
         /// <summary>
@@ -107,19 +128,37 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// The last four digits of the credit card number.
+        /// The last two or four digits of the credit card number.
         /// </summary>
-        [JsonPropertyName("last_4_digits")]
+        [Obsolete("Last4Digits is obsolete. Use LastDigits instead.")]
+        [JsonIgnore]
         public string? Last4Digits
         {
-            get => _last4Digits;
+            get => _lastDigits;
             init
             {
-                if (value != null && !Last4Re.IsMatch(value))
+                if (value != null && !LastDigitsRe.IsMatch(value))
                 {
-                    throw new ArgumentException($"The last 4 credit card digits {value} is of the wrong format.");
+                    throw new ArgumentException($"The last credit card digits {value} is of the wrong format.");
                 }
-                _last4Digits = value;
+                _lastDigits = value;
+            }
+        }
+
+        /// <summary>
+        /// The last two or four digits of the credit card number.
+        /// </summary>
+        [JsonPropertyName("last_digits")]
+        public string? LastDigits
+        {
+            get => _lastDigits;
+            init
+            {
+                if (value != null && !LastDigitsRe.IsMatch(value))
+                {
+                    throw new ArgumentException($"The last credit card digits {value} is of the wrong format.");
+                }
+                _lastDigits = value;
             }
         }
 
@@ -196,7 +235,7 @@ namespace MaxMind.MinFraud.Request
         public override string ToString()
         {
             return
-                $"IssuerIdNumber: {IssuerIdNumber}, Last4Digits: {Last4Digits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
+                $"IssuerIdNumber: {IssuerIdNumber}, LastDigits: {LastDigits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
         }
     }
 }
