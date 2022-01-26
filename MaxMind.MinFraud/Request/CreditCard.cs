@@ -134,14 +134,10 @@ namespace MaxMind.MinFraud.Request
         [JsonIgnore]
         public string? Last4Digits
         {
-            get => _lastDigits;
+            get => LastDigits;
             init
             {
-                if (value != null && !LastDigitsRe.IsMatch(value))
-                {
-                    throw new ArgumentException($"The last credit card digits {value} is of the wrong format.");
-                }
-                _lastDigits = value;
+                LastDigits = value;
             }
         }
 
