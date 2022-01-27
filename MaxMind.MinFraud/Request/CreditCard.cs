@@ -137,10 +137,7 @@ namespace MaxMind.MinFraud.Request
         public string? Last4Digits
         {
             get => LastDigits;
-            init
-            {
-                LastDigits = value;
-            }
+            init => LastDigits = value;
         }
 
         /// <summary>
