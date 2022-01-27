@@ -77,8 +77,9 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// [Obsolete("Legacy constructor for backwards compatibility")]
+        /// Legacy constructor for backwards compatibility.
         /// </summary>
+        [Obsolete("Legacy constructor for backwards compatibility")]
         public CreditCard(
             string? issuerIdNumber,
             string? last4Digits,
@@ -94,8 +95,9 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// [Obsolete("Legacy constructor for backwards compatibility")]
+        /// Legacy constructor for backwards compatibility.
         /// </summary>
+        [Obsolete("Legacy constructor for backwards compatibility")]
         public CreditCard(
             string? issuerIdNumber,
             string? last4Digits,
