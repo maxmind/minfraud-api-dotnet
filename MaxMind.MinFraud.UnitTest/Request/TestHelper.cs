@@ -124,7 +124,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     bankPhoneNumber: "123-456-1234",
                     avsResult: 'Y',
                     cvvResult: 'N',
-                    last4Digits: "7643",
+                    lastDigits: "7643",
                     token: "123456abc1234",
                     was3DSecureSuccessful: false
                 ),
@@ -238,7 +238,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     BankPhoneNumber = "123-456-1234",
                     AvsResult = 'Y',
                     CvvResult = 'N',
-                    Last4Digits = "7643",
+                    LastDigits = "7643",
                     Token = "123456abc1234",
                     Was3DSecureSuccessful = false,
                 },
