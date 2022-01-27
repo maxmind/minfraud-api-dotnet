@@ -2,15 +2,15 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v3.2.0
+version: v3.3.0
 ---
 # .NET API for MaxMind minFraud Services #
 
 ## Description ##
 
-This package provides an API for the [MaxMind minFraud web services](http://dev.maxmind.com/minfraud/).
+This package provides an API for the [MaxMind minFraud web services](https://dev.maxmind.com/minfraud?lang=en).
 This includes minFraud Score, Insights, and Factors. It also includes our
-[minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-transaction/).
+[minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-a-transaction?lang=en).
 
 The legacy minFraud Standard and Premium services are not supported by this
 API.
@@ -20,7 +20,7 @@ API.
 This library works with .NET Framework version 4.6.1 and above and .NET
 Standard 2.0 or above.
 
-This library depends on [GeoIP2](http://www.nuget.org/packages/MaxMind.GeoIP2/)
+This library depends on [GeoIP2](https://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.
 
 ## Installation ##
@@ -356,7 +356,7 @@ Please report all issues with this code using the
 
 If you are having an issue with the minFraud service that is not specific
 to the client API, please see
-[our support page](http://www.maxmind.com/en/support).
+[our support page](https://www.maxmind.com/en/support).
 
 ## Contributing ##
 
@@ -365,10 +365,10 @@ possible.
 
 ## Versioning ##
 
-This API uses [Semantic Versioning](http://semver.org/).
+This API uses [Semantic Versioning](https://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015-2021 by MaxMind, Inc.
+This software is Copyright (c) 2015-2022 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
