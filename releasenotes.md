@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-3.3.0
+3.3.0 (2022-01-27)
 ------------------
 
 * Upgraded `MaxMind.GeoIP2` to 4.1.0. This adds mobile country code (MCC)
