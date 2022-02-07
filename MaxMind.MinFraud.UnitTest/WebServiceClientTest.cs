@@ -117,7 +117,7 @@ namespace MaxMind.MinFraud.UnitTest
                 Content = content
             };
             var mockHttp = new MockHttpMessageHandler();
-            mockHttp.When(HttpMethod.Post, $"https://test.maxmind.com/minfraud/v2.0/score")
+            mockHttp.When(HttpMethod.Post, "https://test.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
                 .With(request => VerifyRequestFor("score", request, output))
                 .Respond(req => message);
