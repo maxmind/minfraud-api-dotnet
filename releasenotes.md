@@ -6,6 +6,14 @@ Release Notes
 
 * This library no longer targets .NET 4.6.1.
 * .NET 6.0 was added as a target.
+* Removed deprecated code, include:
+  * The class `MaxMind.MinFraud.Response.GeoIP2Country` was removed. This was
+    a subclass of `MaxMind.GeoIP2.Model.Country` that added an `IsHighRisk`
+    property. This property was marked obsolete in 2019. Now
+    `MaxMind.GeoIP2.Model.Country` is used directly.
+  * In `MaxMind.MinFraud.Response.Subscores`, the properties `EmailTenure`
+    and `IPTenure` were removed. These were deprecated in the web service
+    and always return a fixed value.
 
 3.3.0 (2022-01-27)
 ------------------

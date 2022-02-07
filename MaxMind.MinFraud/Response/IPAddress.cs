@@ -11,13 +11,6 @@ namespace MaxMind.MinFraud.Response
     public sealed class IPAddress : InsightsResponse, IIPAddress
     {
         /// <summary>
-        /// Country object for the requested IP address. This record represents the
-        /// country where MaxMind believes the IP is located.
-        /// </summary>
-        [JsonPropertyName("country")]
-        public new GeoIP2Country Country { get; init; } = new GeoIP2Country();
-
-        /// <summary>
         /// Location object for the requested IP address.
         /// </summary>
         [JsonPropertyName("location")]
@@ -50,7 +43,6 @@ namespace MaxMind.MinFraud.Response
         {
             var l = new List<string>(locales);
             base.SetLocales(l);
-            Country.SetLocales(l);
         }
 
         /// <summary>
