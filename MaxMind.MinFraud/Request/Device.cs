@@ -68,8 +68,8 @@ namespace MaxMind.MinFraud.Request
 
         /// <summary>
         /// The number of seconds between the creation of the user's
-        /// session and the time of the transaction. Note that 
-        /// sessionAge is not the duration of the current visit, but 
+        /// session and the time of the transaction. Note that
+        /// sessionAge is not the duration of the current visit, but
         /// the time since the start of the first visit.
         /// </summary>
         [JsonPropertyName("session_age")]

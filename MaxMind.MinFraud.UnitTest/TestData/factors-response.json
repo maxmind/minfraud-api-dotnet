@@ -50,7 +50,6 @@
     "country": {
       "confidence": 99,
       "geoname_id": 2635167,
-      "is_high_risk": false,
       "is_in_european_union": true,
       "iso_code": "GB",
       "names": {
@@ -197,8 +196,6 @@
     "email_address": 0.10,
     "email_domain": 0.11,
     "email_local_part": 0.12,
-    "email_tenure": 0.13,
-    "ip_tenure": 0.14,
     "issuer_id_number": 0.15,
     "order_amount": 0.16,
     "phone_number": 0.17,

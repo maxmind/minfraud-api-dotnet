@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CustomInputs
     {
-        private readonly Dictionary<string, object> _inputs = new Dictionary<string, object>();
+        private readonly Dictionary<string, object> _inputs = new();
 
         /// <summary>
         ///     This is only to be used by the Builder.
@@ -30,16 +30,16 @@ namespace MaxMind.MinFraud.Request
         public IDictionary<string, object> Inputs => new ReadOnlyDictionary<string, object>(_inputs);
 
         /// <summary>
-        /// Builder class for <code>CustomInputs</code> objects.
+        /// Builder class for <c>CustomInputs</c> objects.
         /// </summary>
         public sealed class Builder : IEnumerable<KeyValuePair<string, object>>
         {
             private const long NumMax = (long)1e13;
-            private static readonly Regex KeyRe = new Regex("^[a-z0-9_]{1,25}$", RegexOptions.Compiled);
+            private static readonly Regex KeyRe = new("^[a-z0-9_]{1,25}$", RegexOptions.Compiled);
 
             // We do the builder this way so that we don't have to
             // make a copy of the dictionary after construction
-            private readonly CustomInputs _customInputs = new CustomInputs();
+            private readonly CustomInputs _customInputs = new();
             private bool alreadyBuilt = false;
 
             /// <summary>
@@ -61,9 +61,9 @@ namespace MaxMind.MinFraud.Request
             }
 
             /// <summary>
-            ///     Build the <code>CustomInputs</code> object.
+            ///     Build the <c>CustomInputs</c> object.
             /// </summary>
-            /// <returns>The constructed <code>CustomInputs</code> object.</returns>
+            /// <returns>The constructed <c>CustomInputs</c> object.</returns>
             public CustomInputs Build()
             {
                 ValidateState();
@@ -98,8 +98,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, long value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -114,8 +117,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, float value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -130,8 +136,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, double value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -146,8 +155,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, string value)
             {
                 if (value.Length > 255 || value.Contains("\n"))
+                {
                     throw new ArgumentException($"The custom input string {value} is invalid. " +
                                                 "The string length must be <= 255 and it must not contain a newline.");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -177,8 +189,10 @@ namespace MaxMind.MinFraud.Request
             private void ValidateState()
             {
                 if (alreadyBuilt)
+                {
                     throw new InvalidOperationException(
                         "CustomInputs.Builder cannot be reused after Build() has been called.");
+                }
             }
         }
     }

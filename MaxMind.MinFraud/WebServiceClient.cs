@@ -17,6 +17,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 #endregion
 
@@ -180,7 +181,7 @@ namespace MaxMind.MinFraud
         {
             var options = new JsonSerializerOptions
             {
-                IgnoreNullValues = true
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
             var response = await _httpClient.PostAsJsonAsync<T>(
@@ -254,7 +255,7 @@ namespace MaxMind.MinFraud
             // set Content for the default response.
             var content = response.Content != null ? await response.Content.ReadAsStringAsync().ConfigureAwait(false) : null;
 
-            if (content == null || content.Length == 0)
+            if (string.IsNullOrEmpty(content))
             {
                 throw new HttpException(
                     $"Received a {status} error for {uri} with no body",

@@ -62,24 +62,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     sessionAge: 3600.5,
                     sessionId: "foobar"
                 ),
-                userEvent:
-                new Event
-                (
-                    transactionId: "txn3134133",
-                    shopId: "s2123",
-                    time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
-                    type: EventType.Purchase
-                ),
                 account:
                 new Account(
                     userId: "3132",
                     username: "fred"
-                ),
-                email:
-                new Email(
-                    address: "test@maxmind.com",
-                    domain: "maxmind.com",
-                    hashAddress: false
                 ),
                 billing:
                 new Billing(
@@ -94,27 +80,6 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     postal: "06510",
                     phoneNumber: "123-456-7890",
                     phoneCountryCode: "1"
-                ),
-                shipping:
-                new Shipping(
-                    firstName: "ShipFirst",
-                    lastName: "ShipLast",
-                    company: "ShipCo",
-                    address: "322 Ship Addr. Ln.",
-                    address2: "St. 43",
-                    city: "Nowhere",
-                    region: "OK",
-                    country: "US",
-                    postal: "73003",
-                    phoneNumber: "123-456-0000",
-                    phoneCountryCode: "1",
-                    deliverySpeed: ShippingDeliverySpeed.SameDay
-                ),
-                payment:
-                new Payment(
-                    processor: PaymentProcessor.Stripe,
-                    wasAuthorized: false,
-                    declineCode: "invalid number"
                 ),
                 creditCard:
                 new CreditCard(
@@ -135,6 +100,20 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     { "string_input", "This is a string input."},
                     { "boolean_input", true},
                 }.Build(),
+                email:
+                new Email(
+                    address: "test@maxmind.com",
+                    domain: "maxmind.com",
+                    hashAddress: false
+                ),
+                userEvent:
+                new Event
+                (
+                    transactionId: "txn3134133",
+                    shopId: "s2123",
+                    time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                    type: EventType.Purchase
+                ),
                 order:
                 new Order(
                     amount: 323.21m,
@@ -145,6 +124,27 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     referrerUri: new Uri("http://www.amazon.com/"),
                     isGift: true,
                     hasGiftMessage: false
+                ),
+                payment:
+                new Payment(
+                    processor: PaymentProcessor.Stripe,
+                    wasAuthorized: false,
+                    declineCode: "invalid number"
+                ),
+                shipping:
+                new Shipping(
+                    firstName: "ShipFirst",
+                    lastName: "ShipLast",
+                    company: "ShipCo",
+                    address: "322 Ship Addr. Ln.",
+                    address2: "St. 43",
+                    city: "Nowhere",
+                    region: "OK",
+                    country: "US",
+                    postal: "73003",
+                    phoneNumber: "123-456-0000",
+                    phoneCountryCode: "1",
+                    deliverySpeed: ShippingDeliverySpeed.SameDay
                 ),
                 shoppingCart: new List<ShoppingCartItem>
                 {

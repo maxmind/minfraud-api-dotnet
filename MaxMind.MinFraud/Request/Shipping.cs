@@ -8,8 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public enum ShippingDeliverySpeed
     {
-#pragma warning disable CS1591
-
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         [EnumMember(Value = "same_day")] SameDay,
 
         [EnumMember(Value = "overnight")] Overnight,
@@ -17,8 +16,7 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "expedited")] Expedited,
 
         [EnumMember(Value = "standard")] Standard
-
-#pragma warning restore
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 
     /// <summary>

@@ -52,7 +52,7 @@ namespace MaxMind.MinFraud.Request
         ///     transaction.</param>
         /// <param name="tag">The <c>TransactionReportTag</c> indicating the
         ///     type of report being made.</param>
-        /// <param name="chargebackCode">A string which is provided by your 
+        /// <param name="chargebackCode">A string which is provided by your
         ///     payment processor indicating <a href="https://en.wikipedia.org/wiki/Chargeback#Reason_codes">
         ///     the reason for the chargeback</a>.</param>
         /// <param name="maxmindId">A unique eight character string identifying

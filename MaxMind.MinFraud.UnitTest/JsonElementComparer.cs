@@ -5,7 +5,6 @@ using System.Text.Json;
 
 namespace MaxMind.MinFraud.UnitTest
 {
-
     // This is taken from https://stackoverflow.com/questions/60580743/what-is-equivalent-in-jtoken-deepequal-in-system-text-json
     //
     // Per https://stackoverflow.com/help/licensing, it is licensed under CC BY-SA 4.0.
@@ -109,10 +108,14 @@ namespace MaxMind.MinFraud.UnitTest
 
                 case JsonValueKind.Array:
                     if (depth != MaxHashDepth)
+                    {
                         foreach (var item in obj.EnumerateArray())
                             ComputeHashCode(item, ref hash, depth + 1);
+                    }
                     else
+                    {
                         hash.Add(obj.GetArrayLength());
+                    }
                     break;
 
                 case JsonValueKind.Object:

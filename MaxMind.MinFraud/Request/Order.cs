@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Order
     {
-        private static readonly Regex CurrencyRe = new Regex("^[A-Z]{3}$", RegexOptions.Compiled);
+        private static readonly Regex CurrencyRe = new("^[A-Z]{3}$", RegexOptions.Compiled);
         private string? _currency;
 
         /// <summary>

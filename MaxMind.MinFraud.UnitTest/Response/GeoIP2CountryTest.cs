@@ -1,4 +1,4 @@
-﻿using MaxMind.MinFraud.Response;
+﻿using MaxMind.GeoIP2.Model;
 using System.Text.Json;
 using Xunit;
 
@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
         [Fact]
         public void TestIsHighRisk()
         {
-            var country = JsonSerializer.Deserialize<GeoIP2Country>(
+            var country = JsonSerializer.Deserialize<Country>(
                 @"
                     {
                         ""is_high_risk"": true,
@@ -18,9 +18,6 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 ")!;
 
             Assert.True(country.IsInEuropeanUnion);
-#pragma warning disable CS0618 // Type or member is obsolete
-            Assert.True(country.IsHighRisk);
-#pragma warning restore CS0618 // Type or member is obsolete
         }
     }
 }

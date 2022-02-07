@@ -35,6 +35,13 @@ namespace MaxMind.MinFraud.Exception
         /// <summary>
         /// Constructor.
         /// </summary>
+        public HttpException(string? message, int hresult) : base(message, hresult)
+        {
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         /// <param name="message">A message describing the reason why the exception was thrown.</param>
         /// <param name="innerException">The underlying exception that caused this one.</param>
         public HttpException(string message, System.Exception innerException) : base(message, innerException)

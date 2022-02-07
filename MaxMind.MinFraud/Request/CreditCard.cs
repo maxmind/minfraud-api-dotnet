@@ -10,15 +10,14 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CreditCard
     {
-        private static readonly Regex IssuerIdNumberRe = new Regex("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
-        private static readonly Regex LastDigitsRe = new Regex("^[0-9]{2}$|^[0-9]{4}$", RegexOptions.Compiled);
+        private static readonly Regex IssuerIdNumberRe = new("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
+        private static readonly Regex LastDigitsRe = new("^[0-9]{2}$|^[0-9]{4}$", RegexOptions.Compiled);
 
-        private static readonly Regex TokenRe = new Regex("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
+        private static readonly Regex TokenRe = new("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
         private string? _issuerIdNumber;
         private string? _lastDigits;
         private string? _token;
-
 
         /// <summary>
         /// Constructor.
@@ -74,41 +73,6 @@ namespace MaxMind.MinFraud.Request
             CvvResult = cvvResult;
             Token = token;
             Was3DSecureSuccessful = was3DSecureSuccessful;
-        }
-
-        /// <summary>
-        /// Legacy constructor for backwards compatibility.
-        /// </summary>
-        [Obsolete("Legacy constructor for backwards compatibility")]
-        public CreditCard(
-            string? issuerIdNumber,
-            string? last4Digits,
-            string? bankName,
-            string? bankPhoneCountryCode,
-            string? bankPhoneNumber,
-            char? avsResult,
-            char? cvvResult,
-            string? token,
-            bool? was3DSecureSuccessful
-        ) : this(issuerIdNumber, last4Digits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, was3DSecureSuccessful, null)
-        {
-        }
-
-        /// <summary>
-        /// Legacy constructor for backwards compatibility.
-        /// </summary>
-        [Obsolete("Legacy constructor for backwards compatibility")]
-        public CreditCard(
-            string? issuerIdNumber,
-            string? last4Digits,
-            string? bankName,
-            string? bankPhoneCountryCode,
-            string? bankPhoneNumber,
-            char? avsResult,
-            char? cvvResult,
-            string? token
-        ) : this(issuerIdNumber, last4Digits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, null)
-        {
         }
 
         /// <summary>

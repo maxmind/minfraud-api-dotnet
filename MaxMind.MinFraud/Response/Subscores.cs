@@ -100,22 +100,6 @@ namespace MaxMind.MinFraud.Response
         public double? EmailLocalPart { get; init; }
 
         /// <summary>
-        /// The risk associated with the issuer ID number on the email
-        /// domain. If present, this is a value in the range 0.01 to 99.
-        /// </summary>
-        [JsonPropertyName("email_tenure")]
-        [Obsolete("Deprecated effective August 29, 2019. This risk factor score will default to 1 and will be removed in a future release. The user tenure on email is reflected in the email address risk factor score, MaxMind.MinFraud.Response.Subscores#EmailAddress.")]
-        public double? EmailTenure { get; init; }
-
-        /// <summary>
-        /// The risk associated with the issuer ID number on the IP address.
-        /// If present, this is a value in the range 0.01 to 99.
-        /// </summary>
-        [JsonPropertyName("ip_tenure")]
-        [Obsolete("Deprecated effective August 29, 2019. This risk factor score will default to 1 and will be removed in a future release. The IP tenure is reflected in the overall risk score MaxMind.MinFraud.Response.Score#RiskScore.")]
-        public double? IPTenure { get; init; }
-
-        /// <summary>
         /// The risk associated with the particular issuer ID number (IIN)
         /// given the billing location and the history of usage of the IIN on
         /// your account and shop ID. If present, this is a value in the range
@@ -168,9 +152,7 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-#pragma warning disable CS0618 // Type or member is obsolete
-            return $"AvsResult: {AvsResult}, BillingAddress: {BillingAddress}, BillingAddressDistanceToIPLocation: {BillingAddressDistanceToIPLocation}, Browser: {Browser}, Chargeback: {Chargeback}, Country: {Country}, CountryMismatch: {CountryMismatch}, CvvResult: {CvvResult}, EmailAddress: {EmailAddress}, EmailDomain: {EmailDomain}, EmailTenure: {EmailTenure}, IPTenure: {IPTenure}, IssuerIdMumber: {IssuerIdNumber}, OrderAmount: {OrderAmount}, PhoneNumber: {PhoneNumber}, ShippingAddressDistanceToIPLocation: {ShippingAddressDistanceToIPLocation}, TimeOfDay: {TimeOfDay}";
-#pragma warning restore CS0618 // Type or member is obsolete
+            return $"AvsResult: {AvsResult}, BillingAddress: {BillingAddress}, BillingAddressDistanceToIPLocation: {BillingAddressDistanceToIPLocation}, Browser: {Browser}, Chargeback: {Chargeback}, Country: {Country}, CountryMismatch: {CountryMismatch}, CvvResult: {CvvResult}, EmailAddress: {EmailAddress}, EmailDomain: {EmailDomain}, IssuerIdMumber: {IssuerIdNumber}, OrderAmount: {OrderAmount}, PhoneNumber: {PhoneNumber}, ShippingAddressDistanceToIPLocation: {ShippingAddressDistanceToIPLocation}, TimeOfDay: {TimeOfDay}";
         }
     }
 }
