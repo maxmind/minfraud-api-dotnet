@@ -5,7 +5,6 @@ using System.Text.Json;
 
 namespace MaxMind.MinFraud.UnitTest
 {
-
     // This is taken from https://stackoverflow.com/questions/60580743/what-is-equivalent-in-jtoken-deepequal-in-system-text-json
     //
     // Per https://stackoverflow.com/help/licensing, it is licensed under CC BY-SA 4.0.

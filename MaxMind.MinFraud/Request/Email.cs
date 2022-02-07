@@ -100,7 +100,6 @@ namespace MaxMind.MinFraud.Request
                     _domain = parts.Last();
                 }
                 _address = value;
-
             }
         }
 
@@ -132,7 +131,7 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// By default, the <c>address</c> will  be sent in plain text. If 
+        /// By default, the <c>address</c> will  be sent in plain text. If
         /// this is set to true, the address will instead be sent as an MD5
         /// hash.
         /// </summary>

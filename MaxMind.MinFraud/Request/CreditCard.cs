@@ -19,7 +19,6 @@ namespace MaxMind.MinFraud.Request
         private string? _lastDigits;
         private string? _token;
 
-
         /// <summary>
         /// Constructor.
         /// </summary>

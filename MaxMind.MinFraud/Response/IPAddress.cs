@@ -23,7 +23,6 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("location")]
         public new GeoIP2Location Location { get; init; } = new GeoIP2Location();
 
-
         /// <summary>
         /// This property is not provided by minFraud.
         /// </summary>
