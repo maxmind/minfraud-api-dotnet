@@ -120,7 +120,7 @@ namespace MaxMind.MinFraud.UnitTest
             mockHttp.When(HttpMethod.Post, "https://test.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
                 .With(request => VerifyRequestFor("score", request, output))
-                .Respond(req => message);
+                .Respond(_ => message);
 
             var options = Options.Create(new WebServiceClientOptions
             {
@@ -189,7 +189,7 @@ namespace MaxMind.MinFraud.UnitTest
             mockHttp.When(HttpMethod.Post, "https://minfraud.maxmind.com/minfraud/v2.0/score")
                 .WithHeaders("Accept", "application/json")
                 .With(request => VerifyRequestFor("score", request, output))
-                .Respond(req => message);
+                .Respond(_ => message);
 
             var client = new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
             var response = await client.ScoreAsync(CreateFullRequest());
@@ -392,7 +392,7 @@ namespace MaxMind.MinFraud.UnitTest
             mockHttp.When(HttpMethod.Post, $"https://minfraud.maxmind.com/minfraud/v2.0/{service}")
                 .WithHeaders("Accept", "application/json")
                 .With(request => VerifyRequestFor(service, request, output))
-                .Respond(req => message);
+                .Respond(_ => message);
 
             return new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
         }
