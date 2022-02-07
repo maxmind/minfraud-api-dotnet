@@ -17,6 +17,7 @@ using System.Reflection;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 #endregion
 
@@ -180,7 +181,7 @@ namespace MaxMind.MinFraud
         {
             var options = new JsonSerializerOptions
             {
-                IgnoreNullValues = true
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
 
             var response = await _httpClient.PostAsJsonAsync<T>(

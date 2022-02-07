@@ -14,6 +14,7 @@ using Xunit;
 using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
 using System.Text.Json;
 using Xunit.Abstractions;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.UnitTest
 {
@@ -142,9 +143,11 @@ namespace MaxMind.MinFraud.UnitTest
         {
             var expectedResponse = JsonDocument.Parse(responseContent);
 
-            var options = new JsonSerializerOptions();
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
             options.Converters.Add(new NetworkConverter());
-            options.IgnoreNullValues = true;
 
             var actualJson = JsonSerializer.Serialize(response, options);
             var actualResponse = JsonDocument.Parse(actualJson);
