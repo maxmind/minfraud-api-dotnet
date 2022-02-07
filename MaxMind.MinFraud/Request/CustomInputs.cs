@@ -30,7 +30,7 @@ namespace MaxMind.MinFraud.Request
         public IDictionary<string, object> Inputs => new ReadOnlyDictionary<string, object>(_inputs);
 
         /// <summary>
-        /// Builder class for <code>CustomInputs</code> objects.
+        /// Builder class for <c>CustomInputs</c> objects.
         /// </summary>
         public sealed class Builder : IEnumerable<KeyValuePair<string, object>>
         {
@@ -61,9 +61,9 @@ namespace MaxMind.MinFraud.Request
             }
 
             /// <summary>
-            ///     Build the <code>CustomInputs</code> object.
+            ///     Build the <c>CustomInputs</c> object.
             /// </summary>
-            /// <returns>The constructed <code>CustomInputs</code> object.</returns>
+            /// <returns>The constructed <c>CustomInputs</c> object.</returns>
             public CustomInputs Build()
             {
                 ValidateState();
