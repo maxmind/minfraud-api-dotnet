@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CustomInputs
     {
-        private readonly Dictionary<string, object> _inputs = new Dictionary<string, object>();
+        private readonly Dictionary<string, object> _inputs = new();
 
         /// <summary>
         ///     This is only to be used by the Builder.
@@ -35,11 +35,11 @@ namespace MaxMind.MinFraud.Request
         public sealed class Builder : IEnumerable<KeyValuePair<string, object>>
         {
             private const long NumMax = (long)1e13;
-            private static readonly Regex KeyRe = new Regex("^[a-z0-9_]{1,25}$", RegexOptions.Compiled);
+            private static readonly Regex KeyRe = new("^[a-z0-9_]{1,25}$", RegexOptions.Compiled);
 
             // We do the builder this way so that we don't have to
             // make a copy of the dictionary after construction
-            private readonly CustomInputs _customInputs = new CustomInputs();
+            private readonly CustomInputs _customInputs = new();
             private bool alreadyBuilt = false;
 
             /// <summary>
