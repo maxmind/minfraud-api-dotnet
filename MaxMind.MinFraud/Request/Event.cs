@@ -9,8 +9,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public enum EventType
     {
-#pragma warning disable CS1591
-
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
         [EnumMember(Value = "account_creation")]
         AccountCreation,
 
@@ -37,8 +36,7 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "survey")]
         Survey
-
-#pragma warning restore
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
     }
 
     /// <summary>
