@@ -98,8 +98,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, long value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -114,8 +117,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, float value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -130,8 +136,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, double value)
             {
                 if (value <= -NumMax || value >= NumMax)
+                {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -146,8 +155,11 @@ namespace MaxMind.MinFraud.Request
             public void Add(string key, string value)
             {
                 if (value.Length > 255 || value.Contains("\n"))
+                {
                     throw new ArgumentException($"The custom input string {value} is invalid. " +
                                                 "The string length must be <= 255 and it must not contain a newline.");
+                }
+
                 ValidatedAdd(key, value);
             }
 
@@ -177,8 +189,10 @@ namespace MaxMind.MinFraud.Request
             private void ValidateState()
             {
                 if (alreadyBuilt)
+                {
                     throw new InvalidOperationException(
                         "CustomInputs.Builder cannot be reused after Build() has been called.");
+                }
             }
         }
     }

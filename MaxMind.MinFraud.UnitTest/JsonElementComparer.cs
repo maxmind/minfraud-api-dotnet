@@ -109,10 +109,14 @@ namespace MaxMind.MinFraud.UnitTest
 
                 case JsonValueKind.Array:
                     if (depth != MaxHashDepth)
+                    {
                         foreach (var item in obj.EnumerateArray())
                             ComputeHashCode(item, ref hash, depth + 1);
+                    }
                     else
+                    {
                         hash.Add(obj.GetArrayLength());
+                    }
                     break;
 
                 case JsonValueKind.Object:
