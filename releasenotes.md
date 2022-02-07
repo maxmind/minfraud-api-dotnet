@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+4.0.0
+------------------
+
+* This library no longer targets .NET 4.6.1.
+* .NET 6.0 was added as a target.
+
 3.3.0 (2022-01-27)
 ------------------
 
