@@ -10,11 +10,13 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CreditCard
     {
+        private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
         private static readonly Regex IssuerIdNumberRe = new("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
         private static readonly Regex LastDigitsRe = new("^[0-9]{2}$|^[0-9]{4}$", RegexOptions.Compiled);
 
         private static readonly Regex TokenRe = new("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
+        private string? _country;
         private string? _issuerIdNumber;
         private string? _lastDigits;
         private string? _token;
@@ -51,6 +53,12 @@ namespace MaxMind.MinFraud.Request
         /// <param name="last4Digits">The last two or four digits of the credit
         /// card number. last4Digits is obsolete. Use lastDigits instead.
         /// </param>
+        /// <param name="country">The country where the issuer of the card is
+        /// located.This may be passed instead of <c>IssuerIdNumber</c> if you
+        /// do not wish to pass partial account numbers or if your payment
+        /// processor does not provide them. The ISO 3166-1 alpha-2 country code
+        /// should be used, e.g., "US".
+        /// </param>
         public CreditCard(
             string? issuerIdNumber = null,
             string? lastDigits = null,
@@ -61,9 +69,11 @@ namespace MaxMind.MinFraud.Request
             char? cvvResult = null,
             string? token = null,
             bool? was3DSecureSuccessful = null,
-            string? last4Digits = null
+            string? last4Digits = null,
+            string? country = null
         )
         {
+            Country = country;
             IssuerIdNumber = issuerIdNumber;
             LastDigits = lastDigits ?? last4Digits;
             BankName = bankName;
@@ -73,6 +83,45 @@ namespace MaxMind.MinFraud.Request
             CvvResult = cvvResult;
             Token = token;
             Was3DSecureSuccessful = was3DSecureSuccessful;
+        }
+
+        /// <summary>
+        /// Construct for binary compatibility.
+        /// </summary>
+        [Obsolete("This constructor exists for binary compatibility and will be removed in next major version.")]
+        public CreditCard(
+            string? issuerIdNumber,
+            string? lastDigits,
+            string? bankName,
+            string? bankPhoneCountryCode,
+            string? bankPhoneNumber,
+            char? avsResult,
+            char? cvvResult,
+            string? token,
+            bool? was3DSecureSuccessful,
+            string? last4Digits
+        ) : this(issuerIdNumber, lastDigits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, was3DSecureSuccessful, last4Digits, null)
+        { }
+
+        /// <summary>
+        /// The country where the issuer of the card is located.This may be
+        /// passed instead of <c>IssuerIdNumber</c> if you do not wish to
+        /// pass partial account numbers or if your payment processor does not
+        /// provide them. The ISO 3166-1 alpha-2 country code should be used,
+        /// e.g., "US".
+        /// </summary>
+        [JsonPropertyName("country")]
+        public string? Country
+        {
+            get => _country;
+            init
+            {
+                if (value != null && !CountryRe.IsMatch(value))
+                {
+                    throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
+                }
+                _country = value;
+            }
         }
 
         /// <summary>
@@ -194,7 +243,7 @@ namespace MaxMind.MinFraud.Request
         public override string ToString()
         {
             return
-                $"IssuerIdNumber: {IssuerIdNumber}, LastDigits: {LastDigits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
+                $"IssuerIdNumber: {IssuerIdNumber}, LastDigits: {LastDigits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, Country: {Country}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
         }
     }
 }

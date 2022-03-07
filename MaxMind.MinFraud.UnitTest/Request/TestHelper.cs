@@ -83,6 +83,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 ),
                 creditCard:
                 new CreditCard(
+                    country: "US",
                     issuerIdNumber: "411111",
                     bankName: "Bank of No Hope",
                     bankPhoneCountryCode: "1",
@@ -232,6 +233,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 },
                 CreditCard = new CreditCard
                 {
+                    Country = "US",
                     IssuerIdNumber = "411111",
                     BankName = "Bank of No Hope",
                     BankPhoneCountryCode = "1",
