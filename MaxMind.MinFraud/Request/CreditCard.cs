@@ -54,7 +54,7 @@ namespace MaxMind.MinFraud.Request
         /// card number. last4Digits is obsolete. Use lastDigits instead.
         /// </param>
         /// <param name="country">The country where the issuer of the card is
-        /// located.This may be passed instead of <c>IssuerIdNumber</c> if you
+        /// located. This may be passed instead of <c>IssuerIdNumber</c> if you
         /// do not wish to pass partial account numbers or if your payment
         /// processor does not provide them. The ISO 3166-1 alpha-2 country code
         /// should be used, e.g., "US".
@@ -86,7 +86,7 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// Construct for binary compatibility.
+        /// Constructor for binary compatibility.
         /// </summary>
         [Obsolete("This constructor exists for binary compatibility and will be removed in next major version.")]
         public CreditCard(
@@ -104,7 +104,7 @@ namespace MaxMind.MinFraud.Request
         { }
 
         /// <summary>
-        /// The country where the issuer of the card is located.This may be
+        /// The country where the issuer of the card is located. This may be
         /// passed instead of <c>IssuerIdNumber</c> if you do not wish to
         /// pass partial account numbers or if your payment processor does not
         /// provide them. The ISO 3166-1 alpha-2 country code should be used,
