@@ -7,6 +7,41 @@ namespace MaxMind.MinFraud.UnitTest.Request
     public class CreditCardTest
     {
         [Fact]
+        public void TestCountry()
+        {
+            var cc = new CreditCard(country: "US");
+            Assert.Equal("US", cc.Country);
+        }
+
+        [Fact]
+        public void TestCountryInit()
+        {
+            var cc = new CreditCard
+            {
+                Country = "US"
+            };
+            Assert.Equal("US", cc.Country);
+        }
+
+        [Fact]
+        public void TestCountryThatIsTooLong()
+        {
+            Assert.Throws<ArgumentException>(() => new CreditCard(country: "USA"));
+        }
+
+        [Fact]
+        public void TestCountryWithNumbers()
+        {
+            Assert.Throws<ArgumentException>(() => new CreditCard(country: "U1"));
+        }
+
+        [Fact]
+        public void TestCountryInWrongCase()
+        {
+            Assert.Throws<ArgumentException>(() => new CreditCard(country: "us"));
+        }
+
+        [Fact]
         public void TestIssuerIdNumber()
         {
             var cc6 = new CreditCard(issuerIdNumber: "123456");
