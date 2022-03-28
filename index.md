@@ -2,7 +2,7 @@
 layout: default
 title: MaxMind minFraud Score, Insights, and Factors .NET API
 language: dotnet
-version: v4.0.0
+version: v4.1.0
 ---
 # .NET API for MaxMind minFraud Services #
 
