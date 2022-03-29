@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-4.1.0
+4.1.0 (2022-03-28)
 ------------------
 
 * Added the `Country` property to `MaxMind.MinFraud.Response.CreditCard`.
