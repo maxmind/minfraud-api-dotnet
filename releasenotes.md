@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+4.2.0
+------------------
+
+* Added `ShopifyPayments` to the `PaymentProcessor` enum.
+
 4.1.0 (2022-03-28)
 ------------------
 
