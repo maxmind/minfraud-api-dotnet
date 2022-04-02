@@ -403,6 +403,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "securetrading")]
         Securetrading,
 
+        [EnumMember(Value = "shopify_payments")]
+        ShopifyPayments,
+
         [EnumMember(Value = "simplify_commerce")]
         SimplifyCommerce,
 
