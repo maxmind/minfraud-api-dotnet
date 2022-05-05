@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Test project for minFraud API</Description>
     <VersionPrefix>0.6.0</VersionPrefix>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net6.0;net5.0;net461;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net6.0;net5.0;net472;netcoreapp3.1</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
     <AssemblyName>MaxMind.MinFraud.UnitTest</AssemblyName>
     <PackageId>MaxMind.MinFraud.UnitTest</PackageId>
@@ -34,7 +34,7 @@
     <PackageReference Include="RichardSzalay.MockHttp" Version="6.0.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.core" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.4">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
