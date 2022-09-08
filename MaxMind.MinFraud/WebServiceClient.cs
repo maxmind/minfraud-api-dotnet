@@ -26,7 +26,7 @@ namespace MaxMind.MinFraud
     /// <summary>
     /// Client for querying the minFraud Score and Insights web services.
     /// </summary>
-    public sealed class WebServiceClient : IDisposable
+    public sealed class WebServiceClient : IDisposable, IWebServiceClient
     // If removing sealed, update Dispose methods.
     {
         private static readonly string Version =
