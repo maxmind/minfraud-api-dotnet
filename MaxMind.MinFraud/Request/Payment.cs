@@ -208,6 +208,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "gocardless")]
         Gocardless,
 
+        [EnumMember(Value = "google_pay")]
+        GooglePay,
+
         [EnumMember(Value = "global_payments")]
         GlobalPayments,
 
