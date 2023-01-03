@@ -367,6 +367,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "payza")]
         Payza,
 
+        [EnumMember(Value = "placetopay")]
+        Placetopay,
+
         [EnumMember(Value = "posconnect")]
         Posconnect,
 

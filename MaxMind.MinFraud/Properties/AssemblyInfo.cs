@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MaxMind, Inc.")]
 [assembly: AssemblyProduct("MaxMind.MinFraud")]
-[assembly: AssemblyCopyright("Copyright ©  2015-2022")]
+[assembly: AssemblyCopyright("Copyright ©  2015-2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
