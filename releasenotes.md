@@ -8,6 +8,7 @@ Release Notes
 * Added `IWebServiceClient` to facilitate mocking of `WebServiceClient`.
   Pull request by Ian Göbl. GitHub #152.
 * Added `GooglePay` to the `PaymentProcessor` enum.
+* Added `Placetopay` to the `PaymentProcessor` enum.
 
 4.1.0 (2022-03-28)
 ------------------
