@@ -30,6 +30,11 @@ namespace MaxMind.MinFraud
 
         /// <summary>
         /// The host to use when accessing the service.
+        /// By default, the client connects to the production host. However,
+        /// during testing and development, you can set this option to
+        /// 'sandbox.maxmind.com' to use the Sandbox environment's host. The
+        /// sandbox allows you to experiment with the API without affecting your
+        /// production data.
         /// </summary>
         public string Host { get; set; } = "minfraud.maxmind.com";
     }
