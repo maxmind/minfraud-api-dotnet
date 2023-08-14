@@ -44,6 +44,16 @@ takes your MaxMind account ID and license key:
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
+To use the Sandbox web service instead of the production web service, you can provide the host argument:
+    
+```csharp
+var client = new WebServiceClient(
+    accountId: 10, 
+    licenseKey: "LICENSEKEY", 
+    host: "sandbox.maxmind.com"
+    );
+```
+
 You may also specify the fall-back locales, the host, or the timeout as
 optional parameters. See the API docs for more information.
 
