@@ -3,8 +3,8 @@
   <PropertyGroup>
     <Description>Test project for minFraud API</Description>
     <VersionPrefix>0.6.0</VersionPrefix>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net6.0;net5.0;net472;netcoreapp3.1</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net6.0;net5.0;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net6.0;net472</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net6.0</TargetFrameworks>
     <AssemblyName>MaxMind.MinFraud.UnitTest</AssemblyName>
     <PackageId>MaxMind.MinFraud.UnitTest</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
