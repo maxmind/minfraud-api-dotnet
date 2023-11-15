@@ -42,7 +42,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-    <PackageReference Include="System.Net.Http.Json" Version="7.0.1" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
     <PackageReference Include="System.Text.Json" Version="8.0.0" />
   </ItemGroup>
 
