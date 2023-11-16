@@ -1,9 +1,7 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
-#if !NET461
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
-#endif
 using RichardSzalay.MockHttp;
 using System;
 using System.Net;
@@ -103,7 +101,6 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.Null(exception);
         }
 
-#if !NET461
         [Fact]
         public async Task TestWebServiceClientOptionsConstructor()
         {
@@ -137,7 +134,6 @@ namespace MaxMind.MinFraud.UnitTest
 
             CompareJson(responseContent, response);
         }
-#endif
 
         private void CompareJson(string responseContent, object response)
         {

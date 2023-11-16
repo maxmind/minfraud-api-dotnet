@@ -4,6 +4,10 @@ Release Notes
 4.2.0
 ------------------
 
+* .NET 5.0 has been removed as a target as it has reach its end of life.
+  However, if you are using .NET 5.0, the .NET Standard 2.1 target should
+  continue working for you.
+* .NET 7.0 and .NET 8.0 have been added as a target.
 * Added `ShopifyPayments` to the `PaymentProcessor` enum.
 * Added `IWebServiceClient` to facilitate mocking of `WebServiceClient`.
   Pull request by Ian Göbl. GitHub #152.

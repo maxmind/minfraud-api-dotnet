@@ -1,9 +1,7 @@
 ﻿#region
 
 using MaxMind.MinFraud.Exception;
-#if !NET461
 using Microsoft.Extensions.Options;
-#endif
 using MaxMind.MinFraud.Request;
 using MaxMind.MinFraud.Response;
 using MaxMind.MinFraud.Util;
@@ -39,7 +37,6 @@ namespace MaxMind.MinFraud
         private readonly List<string> _locales;
         private bool _disposed;
 
-#if !NET461
         /// <summary>
         ///     Initializes a new instance of the <see cref="WebServiceClient" /> class.
         /// </summary>
@@ -58,7 +55,7 @@ namespace MaxMind.MinFraud
             httpClient)
         {
         }
-#endif
+
         /// <summary>
         /// Constructor for minFraud web service client.
         /// </summary>
