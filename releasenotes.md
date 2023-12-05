@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-4.2.0
+4.2.0 (2023-12-05)
 ------------------
 
 * .NET 5.0 has been removed as a target as it has reach its end of life.
@@ -13,6 +13,11 @@ Release Notes
   Pull request by Ian Göbl. GitHub #152.
 * Added `GooglePay` to the `PaymentProcessor` enum.
 * Added `Placetopay` to the `PaymentProcessor` enum.
+* Updated `MaxMind.GeoIP2` dependency to version that includes the `IsAnycast`
+  property on `MaxMind.GeoIP2.Model.Traits`. This is `true` if the IP address
+  belongs to an [anycast network](https://en.wikipedia.org/wiki/Anycast).
+  This is available in minFraud Insights and Factors.
+
 
 4.1.0 (2022-03-28)
 ------------------
