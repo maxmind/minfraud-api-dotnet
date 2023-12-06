@@ -1,18 +1,21 @@
 Release Notes
 =============
 
-4.2.0
+4.2.0 (2023-12-05)
 ------------------
 
 * .NET 5.0 has been removed as a target as it has reach its end of life.
   However, if you are using .NET 5.0, the .NET Standard 2.1 target should
   continue working for you.
 * .NET 7.0 and .NET 8.0 have been added as a target.
-* Added `ShopifyPayments` to the `PaymentProcessor` enum.
+* Added  `GooglePay`, `Placetopay`, and `ShopifyPayments` to the
+  `PaymentProcessor` enum.
 * Added `IWebServiceClient` to facilitate mocking of `WebServiceClient`.
   Pull request by Ian Göbl. GitHub #152.
-* Added `GooglePay` to the `PaymentProcessor` enum.
-* Added `Placetopay` to the `PaymentProcessor` enum.
+* Updated `MaxMind.GeoIP2` dependency to version that includes the `IsAnycast`
+  property on `MaxMind.GeoIP2.Model.Traits`. This is `true` if the IP address
+  belongs to an [anycast network](https://en.wikipedia.org/wiki/Anycast).
+  This is available in minFraud Insights and Factors.
 
 4.1.0 (2022-03-28)
 ------------------
@@ -21,7 +24,6 @@ Release Notes
   This is the country where the issuer of the card is located. This may be
   passed instead of `IssuerIdNumber` if you do not wish to pass partial
   account numbers or if your payment processor does not provide them.
-
 
 4.0.0 (2022-02-07)
 ------------------
