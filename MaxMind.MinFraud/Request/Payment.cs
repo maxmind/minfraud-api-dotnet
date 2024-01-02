@@ -379,6 +379,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "psigate")]
         Psigate,
 
+        [EnumMember(Value = "pxp_financial")]
+        PxpFinancial,
+
         [EnumMember(Value = "qiwi")]
         Qiwi,
 
@@ -450,6 +453,9 @@ namespace MaxMind.MinFraud.Request
 
         [EnumMember(Value = "trustly")]
         Trustly,
+
+        [EnumMember(Value = "trustpay")]
+        Trustpay,
 
         [EnumMember(Value = "tsys")]
         Tsys,
