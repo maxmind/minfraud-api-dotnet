@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+4.3.0
+------------------
+
+* Added  `PxpFinancial` and `Trustpay` to the `PaymentProcessor` enum.
+
 4.2.0 (2023-12-05)
 ------------------
 
