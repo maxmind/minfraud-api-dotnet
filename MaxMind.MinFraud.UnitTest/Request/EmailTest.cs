@@ -153,6 +153,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
             e = new Email(address: "foo-bar@ymail.com", hashAddress: true);
             Assert.Equal("fead35da88f8414ec0414ef5f25d49c8", e.AddressMD5);
             Assert.Equal("ymail.com", e.Domain);
+
+            e = new Email(address: "foo@example.com.com", hashAddress: true);
+            Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
+            Assert.Equal("example.com.com", e.Domain);
         }
 
         [Fact]

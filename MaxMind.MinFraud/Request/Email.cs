@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -14,6 +15,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
+        private static readonly Regex DuplicateDotComRe = new Regex(@"(?:\.com){2,}$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
         {
@@ -392,6 +394,8 @@ namespace MaxMind.MinFraud.Request
             }
 
             domain = _idn.GetAscii(domain);
+
+            domain = DuplicateDotComRe.Replace(domain, ".com");
 
             if (_typoDomains.ContainsKey(domain))
             {
