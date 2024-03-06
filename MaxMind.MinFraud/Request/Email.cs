@@ -162,6 +162,63 @@ namespace MaxMind.MinFraud.Request
             "your-mail.com"
         };
 
+        private static readonly HashSet<string> _yahooDomains = new HashSet<string>
+        {
+            "y7mail.com",
+            "yahoo.at",
+            "yahoo.be",
+            "yahoo.bg",
+            "yahoo.ca",
+            "yahoo.cl",
+            "yahoo.co.id",
+            "yahoo.co.il",
+            "yahoo.co.in",
+            "yahoo.co.kr",
+            "yahoo.co.nz",
+            "yahoo.co.th",
+            "yahoo.co.uk",
+            "yahoo.co.za",
+            "yahoo.com",
+            "yahoo.com.ar",
+            "yahoo.com.au",
+            "yahoo.com.br",
+            "yahoo.com.co",
+            "yahoo.com.hk",
+            "yahoo.com.hr",
+            "yahoo.com.mx",
+            "yahoo.com.my",
+            "yahoo.com.pe",
+            "yahoo.com.ph",
+            "yahoo.com.sg",
+            "yahoo.com.tr",
+            "yahoo.com.tw",
+            "yahoo.com.ua",
+            "yahoo.com.ve",
+            "yahoo.com.vn",
+            "yahoo.cz",
+            "yahoo.de",
+            "yahoo.dk",
+            "yahoo.ee",
+            "yahoo.es",
+            "yahoo.fi",
+            "yahoo.fr",
+            "yahoo.gr",
+            "yahoo.hu",
+            "yahoo.ie",
+            "yahoo.in",
+            "yahoo.it",
+            "yahoo.lt",
+            "yahoo.lv",
+            "yahoo.nl",
+            "yahoo.no",
+            "yahoo.pl",
+            "yahoo.pt",
+            "yahoo.ro",
+            "yahoo.se",
+            "yahoo.sk",
+            "ymail.com",
+        };
+
         private string? _address;
         private string? _domain;
 
@@ -295,7 +352,7 @@ namespace MaxMind.MinFraud.Request
 
             domain = CleanDomain(domain);
 
-            var divider = domain == "yahoo.com" ? '-' : '+';
+            var divider = _yahooDomains.Contains(domain) ? '-' : '+';
 
             var dividerIdx = localPart.IndexOf(divider);
             if (dividerIdx > 0)
