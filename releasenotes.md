@@ -7,6 +7,9 @@ Release Notes
 * Added  `PxpFinancial` and `Trustpay` to the `PaymentProcessor` enum.
 * Equivalent domain names are now normalized when `hashAddress` is used.
   For example, `googlemail.com` will become `gmail.com`.
+* Periods are now removed from `gmail.com` email address local parts when
+  `hashAddress` is used. For example, `f.o.o@gmail.com` will become
+  `foo@gmail.com`.
 
 4.2.0 (2023-12-05)
 ------------------

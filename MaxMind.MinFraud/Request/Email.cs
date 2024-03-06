@@ -182,6 +182,11 @@ namespace MaxMind.MinFraud.Request
                 localPart = localPart.Substring(0, dividerIdx);
             }
 
+            if (domain == "gmail.com")
+            {
+                localPart = localPart.Replace(".", "");
+            }
+
             return $"{localPart}@{domain}";
         }
 

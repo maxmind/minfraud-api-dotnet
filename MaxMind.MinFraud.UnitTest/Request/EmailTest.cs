@@ -141,6 +141,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
             e = new Email(address: "foo@googlemail.com", hashAddress: true);
             Assert.Equal("6c0fbec2cc554c35c3d2b8b51840b49d", e.AddressMD5);
             Assert.Equal("googlemail.com", e.Domain);
+
+            e = new Email(address: "foo.bar@gmail.com", hashAddress: true);
+            Assert.Equal("726f7c3769f32d3da4656ea906d02adb", e.AddressMD5);
+            Assert.Equal("gmail.com", e.Domain);
         }
 
         [Fact]
