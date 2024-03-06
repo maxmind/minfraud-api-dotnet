@@ -5,6 +5,8 @@ Release Notes
 ------------------
 
 * Added  `PxpFinancial` and `Trustpay` to the `PaymentProcessor` enum.
+* Equivalent domain names are now normalized when `hashAddress` is used.
+  For example, `googlemail.com` will become `gmail.com`.
 
 4.2.0 (2023-12-05)
 ------------------

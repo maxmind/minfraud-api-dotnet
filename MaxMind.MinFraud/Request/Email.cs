@@ -29,6 +29,18 @@ namespace MaxMind.MinFraud.Request
             {"putlook.com", "outlook.com"},
         };
 
+        private static readonly IReadOnlyDictionary<string, string> _equivalentDomains = new Dictionary<string, string>
+        {
+            {"googlemail.com", "gmail.com"},
+            {"pm.me", "protonmail.com"},
+            {"proton.me", "protonmail.com"},
+            {"yandex.by", "yandex.ru"},
+            {"yandex.com", "yandex.ru"},
+            {"yandex.kz", "yandex.ru"},
+            {"yandex.ua", "yandex.ru"},
+            {"ya.ru", "yandex.ru"},
+        };
+
         private string? _address;
         private string? _domain;
 
@@ -187,6 +199,11 @@ namespace MaxMind.MinFraud.Request
             if (_typoDomains.ContainsKey(domain))
             {
                 domain = _typoDomains[domain];
+            }
+
+            if (_equivalentDomains.ContainsKey(domain))
+            {
+                domain = _equivalentDomains[domain];
             }
 
             return domain;
