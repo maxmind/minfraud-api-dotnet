@@ -16,6 +16,7 @@ namespace MaxMind.MinFraud.Request
     public sealed class Email
     {
         private static readonly Regex DuplicateDotComRe = new Regex(@"(?:\.com){2,}$", RegexOptions.Compiled);
+        private static readonly Regex DotComExtraCharsRe = new Regex(@"\.com[^.]+$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
         {
@@ -396,6 +397,7 @@ namespace MaxMind.MinFraud.Request
             domain = _idn.GetAscii(domain);
 
             domain = DuplicateDotComRe.Replace(domain, ".com");
+            domain = DotComExtraCharsRe.Replace(domain, ".com");
 
             if (_typoDomains.ContainsKey(domain))
             {
