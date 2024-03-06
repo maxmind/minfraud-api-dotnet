@@ -41,6 +41,127 @@ namespace MaxMind.MinFraud.Request
             {"ya.ru", "yandex.ru"},
         };
 
+        private static readonly HashSet<string> _fastmailDomains = new HashSet<string>
+        {
+            "123mail.org",
+            "150mail.com",
+            "150ml.com",
+            "16mail.com",
+            "2-mail.com",
+            "4email.net",
+            "50mail.com",
+            "airpost.net",
+            "allmail.net",
+            "bestmail.us",
+            "cluemail.com",
+            "elitemail.org",
+            "emailcorner.net",
+            "emailengine.net",
+            "emailengine.org",
+            "emailgroups.net",
+            "emailplus.org",
+            "emailuser.net",
+            "eml.cc",
+            "f-m.fm",
+            "fast-email.com",
+            "fast-mail.org",
+            "fastem.com",
+            "fastemail.us",
+            "fastemailer.com",
+            "fastest.cc",
+            "fastimap.com",
+            "fastmail.cn",
+            "fastmail.co.uk",
+            "fastmail.com",
+            "fastmail.com.au",
+            "fastmail.de",
+            "fastmail.es",
+            "fastmail.fm",
+            "fastmail.fr",
+            "fastmail.im",
+            "fastmail.in",
+            "fastmail.jp",
+            "fastmail.mx",
+            "fastmail.net",
+            "fastmail.nl",
+            "fastmail.org",
+            "fastmail.se",
+            "fastmail.to",
+            "fastmail.tw",
+            "fastmail.uk",
+            "fastmail.us",
+            "fastmailbox.net",
+            "fastmessaging.com",
+            "fea.st",
+            "fmail.co.uk",
+            "fmailbox.com",
+            "fmgirl.com",
+            "fmguy.com",
+            "ftml.net",
+            "h-mail.us",
+            "hailmail.net",
+            "imap-mail.com",
+            "imap.cc",
+            "imapmail.org",
+            "inoutbox.com",
+            "internet-e-mail.com",
+            "internet-mail.org",
+            "internetemails.net",
+            "internetmailing.net",
+            "jetemail.net",
+            "justemail.net",
+            "letterboxes.org",
+            "mail-central.com",
+            "mail-page.com",
+            "mailandftp.com",
+            "mailas.com",
+            "mailbolt.com",
+            "mailc.net",
+            "mailcan.com",
+            "mailforce.net",
+            "mailftp.com",
+            "mailhaven.com",
+            "mailingaddress.org",
+            "mailite.com",
+            "mailmight.com",
+            "mailnew.com",
+            "mailsent.net",
+            "mailservice.ms",
+            "mailup.net",
+            "mailworks.org",
+            "ml1.net",
+            "mm.st",
+            "myfastmail.com",
+            "mymacmail.com",
+            "nospammail.net",
+            "ownmail.net",
+            "petml.com",
+            "postinbox.com",
+            "postpro.net",
+            "proinbox.com",
+            "promessage.com",
+            "realemail.net",
+            "reallyfast.biz",
+            "reallyfast.info",
+            "rushpost.com",
+            "sent.as",
+            "sent.at",
+            "sent.com",
+            "speedpost.net",
+            "speedymail.org",
+            "ssl-mail.com",
+            "swift-mail.com",
+            "the-fastest.net",
+            "the-quickest.com",
+            "theinternetemail.com",
+            "veryfast.biz",
+            "veryspeedy.net",
+            "warpmail.net",
+            "xsmail.com",
+            "yepmail.net",
+            "your-mail.com"
+        };
+
         private string? _address;
         private string? _domain;
 
@@ -185,6 +306,20 @@ namespace MaxMind.MinFraud.Request
             if (domain == "gmail.com")
             {
                 localPart = localPart.Replace(".", "");
+            }
+
+            var domainParts = domain.Split('.');
+            if (domainParts.Length > 2)
+            {
+                var possibleDomain = string.Join(".", domainParts.Skip(1));
+                if (_fastmailDomains.Contains(possibleDomain))
+                {
+                    domain = possibleDomain;
+                    if (!string.IsNullOrEmpty(localPart))
+                    {
+                        localPart = domainParts[0];
+                    }
+                }
             }
 
             return $"{localPart}@{domain}";
