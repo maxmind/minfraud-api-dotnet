@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -14,19 +15,216 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
+        private static readonly Regex DuplicateDotComRe = new Regex(@"(?:\.com){2,}$", RegexOptions.Compiled);
+        private static readonly Regex DotComExtraCharsRe = new Regex(@"\.com[^.]+$", RegexOptions.Compiled);
+        private static readonly Regex DotComTypoRe = new Regex(@"(?:\.(?:com|c[a-z]{1,2}m|co[ln]|[dsvx]o[mn]|))$", RegexOptions.Compiled);
+        private static readonly Regex GmailLeadingDigitRe = new Regex(@"^\d+(?:gmail?\.com)$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
         {
             // gmail.com
-            {"35gmai.com", "gmail.com"},
-            {"636gmail.com", "gmail.com"},
+            {"gmai.com", "gmail.com"},
             {"gamil.com", "gmail.com"},
-            {"gmail.comu", "gmail.com"},
+            {"gmali.com", "gmail.com"},
             {"gmial.com", "gmail.com"},
             {"gmil.com", "gmail.com"},
+            {"gmaill.com", "gmail.com"},
+            {"gmailm.com", "gmail.com"},
+            {"gmailo.com", "gmail.com"},
+            {"gmailyhoo.com", "gmail.com"},
             {"yahoogmail.com", "gmail.com"},
             // outlook.com
             {"putlook.com", "outlook.com"},
+        };
+
+        private static readonly IReadOnlyDictionary<string, string> _equivalentDomains = new Dictionary<string, string>
+        {
+            {"googlemail.com", "gmail.com"},
+            {"pm.me", "protonmail.com"},
+            {"proton.me", "protonmail.com"},
+            {"yandex.by", "yandex.ru"},
+            {"yandex.com", "yandex.ru"},
+            {"yandex.kz", "yandex.ru"},
+            {"yandex.ua", "yandex.ru"},
+            {"ya.ru", "yandex.ru"},
+        };
+
+        private static readonly HashSet<string> _fastmailDomains = new HashSet<string>
+        {
+            "123mail.org",
+            "150mail.com",
+            "150ml.com",
+            "16mail.com",
+            "2-mail.com",
+            "4email.net",
+            "50mail.com",
+            "airpost.net",
+            "allmail.net",
+            "bestmail.us",
+            "cluemail.com",
+            "elitemail.org",
+            "emailcorner.net",
+            "emailengine.net",
+            "emailengine.org",
+            "emailgroups.net",
+            "emailplus.org",
+            "emailuser.net",
+            "eml.cc",
+            "f-m.fm",
+            "fast-email.com",
+            "fast-mail.org",
+            "fastem.com",
+            "fastemail.us",
+            "fastemailer.com",
+            "fastest.cc",
+            "fastimap.com",
+            "fastmail.cn",
+            "fastmail.co.uk",
+            "fastmail.com",
+            "fastmail.com.au",
+            "fastmail.de",
+            "fastmail.es",
+            "fastmail.fm",
+            "fastmail.fr",
+            "fastmail.im",
+            "fastmail.in",
+            "fastmail.jp",
+            "fastmail.mx",
+            "fastmail.net",
+            "fastmail.nl",
+            "fastmail.org",
+            "fastmail.se",
+            "fastmail.to",
+            "fastmail.tw",
+            "fastmail.uk",
+            "fastmail.us",
+            "fastmailbox.net",
+            "fastmessaging.com",
+            "fea.st",
+            "fmail.co.uk",
+            "fmailbox.com",
+            "fmgirl.com",
+            "fmguy.com",
+            "ftml.net",
+            "h-mail.us",
+            "hailmail.net",
+            "imap-mail.com",
+            "imap.cc",
+            "imapmail.org",
+            "inoutbox.com",
+            "internet-e-mail.com",
+            "internet-mail.org",
+            "internetemails.net",
+            "internetmailing.net",
+            "jetemail.net",
+            "justemail.net",
+            "letterboxes.org",
+            "mail-central.com",
+            "mail-page.com",
+            "mailandftp.com",
+            "mailas.com",
+            "mailbolt.com",
+            "mailc.net",
+            "mailcan.com",
+            "mailforce.net",
+            "mailftp.com",
+            "mailhaven.com",
+            "mailingaddress.org",
+            "mailite.com",
+            "mailmight.com",
+            "mailnew.com",
+            "mailsent.net",
+            "mailservice.ms",
+            "mailup.net",
+            "mailworks.org",
+            "ml1.net",
+            "mm.st",
+            "myfastmail.com",
+            "mymacmail.com",
+            "nospammail.net",
+            "ownmail.net",
+            "petml.com",
+            "postinbox.com",
+            "postpro.net",
+            "proinbox.com",
+            "promessage.com",
+            "realemail.net",
+            "reallyfast.biz",
+            "reallyfast.info",
+            "rushpost.com",
+            "sent.as",
+            "sent.at",
+            "sent.com",
+            "speedpost.net",
+            "speedymail.org",
+            "ssl-mail.com",
+            "swift-mail.com",
+            "the-fastest.net",
+            "the-quickest.com",
+            "theinternetemail.com",
+            "veryfast.biz",
+            "veryspeedy.net",
+            "warpmail.net",
+            "xsmail.com",
+            "yepmail.net",
+            "your-mail.com"
+        };
+
+        private static readonly HashSet<string> _yahooDomains = new HashSet<string>
+        {
+            "y7mail.com",
+            "yahoo.at",
+            "yahoo.be",
+            "yahoo.bg",
+            "yahoo.ca",
+            "yahoo.cl",
+            "yahoo.co.id",
+            "yahoo.co.il",
+            "yahoo.co.in",
+            "yahoo.co.kr",
+            "yahoo.co.nz",
+            "yahoo.co.th",
+            "yahoo.co.uk",
+            "yahoo.co.za",
+            "yahoo.com",
+            "yahoo.com.ar",
+            "yahoo.com.au",
+            "yahoo.com.br",
+            "yahoo.com.co",
+            "yahoo.com.hk",
+            "yahoo.com.hr",
+            "yahoo.com.mx",
+            "yahoo.com.my",
+            "yahoo.com.pe",
+            "yahoo.com.ph",
+            "yahoo.com.sg",
+            "yahoo.com.tr",
+            "yahoo.com.tw",
+            "yahoo.com.ua",
+            "yahoo.com.ve",
+            "yahoo.com.vn",
+            "yahoo.cz",
+            "yahoo.de",
+            "yahoo.dk",
+            "yahoo.ee",
+            "yahoo.es",
+            "yahoo.fi",
+            "yahoo.fr",
+            "yahoo.gr",
+            "yahoo.hu",
+            "yahoo.ie",
+            "yahoo.in",
+            "yahoo.it",
+            "yahoo.lt",
+            "yahoo.lv",
+            "yahoo.nl",
+            "yahoo.no",
+            "yahoo.pl",
+            "yahoo.pt",
+            "yahoo.ro",
+            "yahoo.se",
+            "yahoo.sk",
+            "ymail.com",
         };
 
         private string? _address;
@@ -162,12 +360,31 @@ namespace MaxMind.MinFraud.Request
 
             domain = CleanDomain(domain);
 
-            var divider = domain == "yahoo.com" ? '-' : '+';
+            var divider = _yahooDomains.Contains(domain) ? '-' : '+';
 
             var dividerIdx = localPart.IndexOf(divider);
             if (dividerIdx > 0)
             {
                 localPart = localPart.Substring(0, dividerIdx);
+            }
+
+            if (domain == "gmail.com")
+            {
+                localPart = localPart.Replace(".", "");
+            }
+
+            var domainParts = domain.Split('.');
+            if (domainParts.Length > 2)
+            {
+                var possibleDomain = string.Join(".", domainParts.Skip(1));
+                if (_fastmailDomains.Contains(possibleDomain))
+                {
+                    domain = possibleDomain;
+                    if (!string.IsNullOrEmpty(localPart))
+                    {
+                        localPart = domainParts[0];
+                    }
+                }
             }
 
             return $"{localPart}@{domain}";
@@ -184,9 +401,19 @@ namespace MaxMind.MinFraud.Request
 
             domain = _idn.GetAscii(domain);
 
+            domain = DuplicateDotComRe.Replace(domain, ".com");
+            domain = DotComExtraCharsRe.Replace(domain, ".com");
+            domain = DotComTypoRe.Replace(domain, ".com");
+            domain = GmailLeadingDigitRe.Replace(domain, "gmail.com");
+
             if (_typoDomains.ContainsKey(domain))
             {
                 domain = _typoDomains[domain];
+            }
+
+            if (_equivalentDomains.ContainsKey(domain))
+            {
+                domain = _equivalentDomains[domain];
             }
 
             return domain;

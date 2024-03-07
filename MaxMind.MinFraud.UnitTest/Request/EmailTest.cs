@@ -137,6 +137,38 @@ namespace MaxMind.MinFraud.UnitTest.Request
             e = new Email(address: "test@", hashAddress: true);
             Assert.Equal("246a848af2f8394e3adbc738dbe43720", e.AddressMD5);
             Assert.Equal("", e.Domain);
+
+            e = new Email(address: "foo@googlemail.com", hashAddress: true);
+            Assert.Equal("6c0fbec2cc554c35c3d2b8b51840b49d", e.AddressMD5);
+            Assert.Equal("googlemail.com", e.Domain);
+
+            e = new Email(address: "foo.bar@gmail.com", hashAddress: true);
+            Assert.Equal("726f7c3769f32d3da4656ea906d02adb", e.AddressMD5);
+            Assert.Equal("gmail.com", e.Domain);
+
+            e = new Email(address: "alias@user.fastmail.com", hashAddress: true);
+            Assert.Equal("2dc11f44b436d1bc4ecfd4806e469d33", e.AddressMD5);
+            Assert.Equal("user.fastmail.com", e.Domain);
+
+            e = new Email(address: "foo-bar@ymail.com", hashAddress: true);
+            Assert.Equal("fead35da88f8414ec0414ef5f25d49c8", e.AddressMD5);
+            Assert.Equal("ymail.com", e.Domain);
+
+            e = new Email(address: "foo@example.com.com", hashAddress: true);
+            Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
+            Assert.Equal("example.com.com", e.Domain);
+
+            e = new Email(address: "foo@example.comfoo", hashAddress: true);
+            Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
+            Assert.Equal("example.comfoo", e.Domain);
+
+            e = new Email(address: "foo@example.cam", hashAddress: true);
+            Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
+            Assert.Equal("example.cam", e.Domain);
+
+            e = new Email(address: "foo@10000gmail.com", hashAddress: true);
+            Assert.Equal("6c0fbec2cc554c35c3d2b8b51840b49d", e.AddressMD5);
+            Assert.Equal("10000gmail.com", e.Domain);
         }
 
         [Fact]
