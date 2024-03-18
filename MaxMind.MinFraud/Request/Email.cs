@@ -16,8 +16,6 @@ namespace MaxMind.MinFraud.Request
     public sealed class Email
     {
         private static readonly Regex DuplicateDotComRe = new Regex(@"(?:\.com){2,}$", RegexOptions.Compiled);
-        private static readonly Regex DotComExtraCharsRe = new Regex(@"\.com[^.]+$", RegexOptions.Compiled);
-        private static readonly Regex DotComTypoRe = new Regex(@"(?:\.(?:com|c[a-z]{1,2}m|co[ln]|[dsvx]o[mn]|))$", RegexOptions.Compiled);
         private static readonly Regex GmailLeadingDigitRe = new Regex(@"^\d+(?:gmail?\.com)$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
@@ -35,6 +33,55 @@ namespace MaxMind.MinFraud.Request
             {"yahoogmail.com", "gmail.com"},
             // outlook.com
             {"putlook.com", "outlook.com"},
+        };
+
+        private static readonly IReadOnlyDictionary<string, string> _typoTlds = new Dictionary<string, string>
+        {
+            {"comm", "com"},
+            {"commm", "com"},
+            {"commmm", "com"},
+            {"comn", "com"},
+
+            {"cbm", "com"},
+            {"ccm", "com"},
+            {"cdm", "com"},
+            {"cem", "com"},
+            {"cfm", "com"},
+            {"cgm", "com"},
+            {"chm", "com"},
+            {"cim", "com"},
+            {"cjm", "com"},
+            {"ckm", "com"},
+            {"clm", "com"},
+            {"cmm", "com"},
+            {"cnm", "com"},
+            {"cpm", "com"},
+            {"cqm", "com"},
+            {"crm", "com"},
+            {"csm", "com"},
+            {"ctm", "com"},
+            {"cum", "com"},
+            {"cvm", "com"},
+            {"cwm", "com"},
+            {"cxm", "com"},
+            {"cym", "com"},
+            {"czm", "com"},
+
+            {"col", "com"},
+            {"con", "com"},
+
+            {"dom", "com"},
+            {"don", "com"},
+            {"som", "com"},
+            {"son", "com"},
+            {"vom", "com"},
+            {"von", "com"},
+            {"xom", "com"},
+            {"xon", "com"},
+
+            {"clam", "com"},
+            {"colm", "com"},
+            {"comcom", "com"},
         };
 
         private static readonly IReadOnlyDictionary<string, string> _equivalentDomains = new Dictionary<string, string>
@@ -402,9 +449,15 @@ namespace MaxMind.MinFraud.Request
             domain = _idn.GetAscii(domain);
 
             domain = DuplicateDotComRe.Replace(domain, ".com");
-            domain = DotComExtraCharsRe.Replace(domain, ".com");
-            domain = DotComTypoRe.Replace(domain, ".com");
             domain = GmailLeadingDigitRe.Replace(domain, "gmail.com");
+
+            var idx = domain.LastIndexOf('.');
+            if (idx != -1) {
+                var tld = domain.Substring(idx + 1);
+                if (_typoTlds.ContainsKey(tld)) {
+                    domain = domain.Substring(0, idx) + "." + _typoTlds[tld];
+                }
+            }
 
             if (_typoDomains.ContainsKey(domain))
             {
