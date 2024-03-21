@@ -443,7 +443,8 @@ namespace MaxMind.MinFraud.Request
 
             if (domain.EndsWith("."))
             {
-                domain = domain.Substring(0, domain.Length - 1);
+                char[] period = {'.'};
+                domain = domain.TrimEnd(period);
             }
 
             domain = _idn.GetAscii(domain);
