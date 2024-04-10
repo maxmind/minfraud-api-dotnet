@@ -405,6 +405,7 @@ namespace MaxMind.MinFraud.Request
             var localPart = address.Substring(0, domainIndex);
             var domain = address.Substring(domainIndex + 1);
 
+            localPart = localPart.Normalize(NormalizationForm.FormC);
             domain = CleanDomain(domain);
 
             var divider = _yahooDomains.Contains(domain) ? '-' : '+';
