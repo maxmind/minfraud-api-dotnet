@@ -1,10 +1,10 @@
 ﻿#region
 
 using MaxMind.MinFraud.Exception;
-using Microsoft.Extensions.Options;
 using MaxMind.MinFraud.Request;
 using MaxMind.MinFraud.Response;
 using MaxMind.MinFraud.Util;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +14,8 @@ using System.Net.Http.Json;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 #endregion
 

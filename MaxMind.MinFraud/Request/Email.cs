@@ -444,7 +444,7 @@ namespace MaxMind.MinFraud.Request
 
             if (domain.EndsWith("."))
             {
-                char[] period = {'.'};
+                char[] period = { '.' };
                 domain = domain.TrimEnd(period);
             }
 
@@ -454,9 +454,11 @@ namespace MaxMind.MinFraud.Request
             domain = GmailLeadingDigitRe.Replace(domain, "gmail.com");
 
             var idx = domain.LastIndexOf('.');
-            if (idx != -1) {
+            if (idx != -1)
+            {
                 var tld = domain.Substring(idx + 1);
-                if (_typoTlds.ContainsKey(tld)) {
+                if (_typoTlds.ContainsKey(tld))
+                {
                     domain = domain.Substring(0, idx) + "." + _typoTlds[tld];
                 }
             }
