@@ -71,7 +71,7 @@ namespace MaxMind.MinFraud.Request
         ///     us understand context are helpful.</param>
         /// <param name="transactionId">The transaction ID you originally passed
         ///     to minFraud. This field is not required, but you are encouraged
-        ///     to provide it or the transaction's <c>>maxmindId</c> or
+        ///     to provide it or the transaction's <c>maxmindId</c> or
         ///     <c>minfraudId</c>.</param>
         public TransactionReport(
             IPAddress ipAddress,
@@ -156,7 +156,7 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// The transaction ID you originally passed to minFraud. This field
         /// is not required, but you are encouraged to provide it or the
-        /// transaction's <c>>maxmindId</c> or <c>minfraudId</c>.
+        /// transaction's <c>maxmindId</c> or <c>minfraudId</c>.
         /// </summary>
         [JsonPropertyName("transaction_id")]
         public string? TransactionId { get; init; }
