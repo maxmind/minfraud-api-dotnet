@@ -167,7 +167,7 @@ namespace MaxMind.MinFraud.Request
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"IPAddress: {IPAddress}, Tag: {Tag}, ChargebackCode: {ChargebackCode}, MaxMindId: {MaxMindId}"
+            return $"IPAddress: {IPAddress}, Tag: {Tag}, ChargebackCode: {ChargebackCode}, MaxMindId: {MaxMindId}, "
                 + $"MinFraudId: {MinFraudId}, Notes: {Notes}, TransactionId: {TransactionId}";
         }
     }
