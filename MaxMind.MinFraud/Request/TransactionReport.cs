@@ -46,10 +46,13 @@ namespace MaxMind.MinFraud.Request
         private string? _maxmindId;
 
         /// <summary>
-        /// Constructor.
+        /// Constructor with validation.
         /// </summary>
         /// <param name="ipAddress">The IP address reported to MaxMind for the
-        ///     transaction.</param>
+        ///     transaction. This field is not required if you provide at least
+        ///     one of the transaction's <c>minfraudId</c>, <c>maxmindId</c>,
+        ///     or <c>transactionId></c>. You are encouraged to provide it,
+        ///     if possible.</param>
         /// <param name="tag">The <c>TransactionReportTag</c> indicating the
         ///     type of report being made.</param>
         /// <param name="chargebackCode">A string which is provided by your
@@ -58,23 +61,27 @@ namespace MaxMind.MinFraud.Request
         /// <param name="maxmindId">A unique eight character string identifying
         ///     a minFraud Standard or Premium request. These IDs are returned
         ///     in the <c>maxmindID</c> field of a response for a successful
-        ///     minFraud request. This field is not required, but you are
-        ///     encouraged to provide it, if possible.</param>
+        ///     minFraud request. This field is not required if you provide at
+        ///     least one of the transaction's <c>ipAddress</c>,
+        ///     <c>minfraudId</c>, or <c>transactionId></c>. You are encouraged
+        ///     to provide it, if possible.</param>
         /// <param name="minfraudId">A UUID that identifies a minFraud Score,
         ///     minFraud Insights, or minFraud Factors request. This ID is
         ///     returned at <c>/id</c> in the response. This field is not
-        ///     required, but you are encouraged to provide it if the request
-        ///     was made to one of these services.</param>
+        ///     required if you provide at least one of the transaction's
+        ///     <c>ipAddress</c>, <c>maxmindId</c>, or <c>transactionId></c>.
+        ///     You are encouraged to provide it, if possible.</param>
         /// <param name="notes">Your notes on the fraud tag associated with the
         ///     transaction. We manually review many reported transactions to
         ///     improve our scoring for you so any additional details to help
         ///     us understand context are helpful.</param>
         /// <param name="transactionId">The transaction ID you originally passed
-        ///     to minFraud. This field is not required, but you are encouraged
-        ///     to provide it or the transaction's <c>maxmindId</c> or
-        ///     <c>minfraudId</c>.</param>
+        ///     to minFraud. This field is not required if you provide at least
+        ///     one of the transaction's <c>ipAddress</c>, <c>maxmindId</c>,
+        ///     or <c>minfraudId></c>. You are encouraged to provide it, if
+        ///     possible.</param>
         public TransactionReport(
-            IPAddress ipAddress,
+            IPAddress? ipAddress,
             TransactionReportTag tag,
             string? chargebackCode = null,
             string? maxmindId = null,
@@ -83,6 +90,15 @@ namespace MaxMind.MinFraud.Request
             string? transactionId = null
         )
         {
+            if (ipAddress == null && minfraudId == null && string.IsNullOrEmpty(maxmindId)
+                && string.IsNullOrEmpty(transactionId))
+            {
+                throw new ArgumentException(
+                    "The user must pass at least one of the following: " +
+                    "ipAddress, minfraudId, maxmindId, transactionId."
+                );
+            }
+
             IPAddress = ipAddress;
             Tag = tag;
             ChargebackCode = chargebackCode;
@@ -97,7 +113,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("ip_address")]
         [JsonConverter(typeof(IPAddressConverter))]
-        public IPAddress IPAddress { get; init; }
+        public IPAddress? IPAddress { get; init; }
 
         /// <summary>
         /// The <c>TransactionReportTag</c> indicating the type of report
