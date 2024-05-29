@@ -90,8 +90,8 @@ namespace MaxMind.MinFraud.Request
             string? transactionId = null
         )
         {
-            if (ipAddress == null && minfraudId == null && string.IsNullOrEmpty(maxmindId)
-                && string.IsNullOrEmpty(transactionId))
+            if (ipAddress == null && (minfraudId == null || minfraudId == Guid.Empty)
+                && string.IsNullOrEmpty(maxmindId) && string.IsNullOrEmpty(transactionId))
             {
                 throw new ArgumentException(
                     "The user must pass at least one of the following: " +
@@ -103,9 +103,12 @@ namespace MaxMind.MinFraud.Request
             Tag = tag;
             ChargebackCode = chargebackCode;
             MaxMindId = maxmindId;
-            MinFraudId = minfraudId;
             Notes = notes;
             TransactionId = transactionId;
+
+            if(minfraudId != Guid.Empty) {
+                MinFraudId = minfraudId;
+            }
         }
 
         /// <summary>
