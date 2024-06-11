@@ -250,8 +250,14 @@ namespace MaxMind.MinFraud
 
             // The null guard is primarily because our unit testing mock library does not
             // set Content for the default response.
-            var content = response.Content != null ? await response.Content.ReadAsStringAsync().ConfigureAwait(false) : null;
+            if (response.Content == null)
+            {
+                throw new HttpException(
+                    $"Received a {status} error for {uri} with no body",
+                    response.StatusCode, uri);
+            }
 
+            var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             if (string.IsNullOrEmpty(content))
             {
                 throw new HttpException(
