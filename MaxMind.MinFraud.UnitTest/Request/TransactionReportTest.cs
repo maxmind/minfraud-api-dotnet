@@ -20,30 +20,31 @@ namespace MaxMind.MinFraud.UnitTest.Request
             TransactionReport report;
 
             // ipAddress supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, ipAddress: null));
             report = new TransactionReport(tag: tag, ipAddress: IP);
             Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
             Assert.Equal(IP, report.IPAddress);
 
             // maxmindId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, maxmindId: ""));
             report = new TransactionReport(tag: tag, ipAddress: null, maxmindId: maxmindId);
             Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
             Assert.Null(report.IPAddress);
             Assert.Equal(maxmindId, report.MaxMindId);
 
             // minfraudId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, minfraudId: Guid.Empty));
             report = new TransactionReport(tag: tag, ipAddress: null, minfraudId: minfraudId);
             Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
             Assert.Null(report.IPAddress);
             Assert.Equal(minfraudId, report.MinFraudId);
 
             // tranactionId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, transactionId: ""));
             report = new TransactionReport(tag: tag, ipAddress: null, transactionId: transactionId);
             Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
             Assert.Null(report.IPAddress);
             Assert.Equal(transactionId, report.TransactionId);
-
-            // no identifier supplied
-            Assert.Throws<ArgumentException>(() => new TransactionReport(ipAddress: null, tag: tag));
         }
 
         [Fact]
