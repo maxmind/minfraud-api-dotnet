@@ -48,16 +48,16 @@ namespace MaxMind.MinFraud.Request
         /// <summary>
         /// Constructor with validation.
         /// </summary>
-        /// <param name="ipAddress">The IP address reported to MaxMind for the
-        ///     transaction. This field is not required if you provide at least
-        ///     one of the transaction's <c>minfraudId</c>, <c>maxmindId</c>,
-        ///     or <c>transactionId></c>. You are encouraged to provide it,
-        ///     if possible.</param>
         /// <param name="tag">The <c>TransactionReportTag</c> indicating the
         ///     type of report being made.</param>
         /// <param name="chargebackCode">A string which is provided by your
         ///     payment processor indicating <a href="https://en.wikipedia.org/wiki/Chargeback#Reason_codes">
         ///     the reason for the chargeback</a>.</param>
+        /// <param name="ipAddress">The IP address reported to MaxMind for the
+        ///     transaction. This field is not required if you provide at least
+        ///     one of the transaction's <c>minfraudId</c>, <c>maxmindId</c>,
+        ///     or <c>transactionId></c>. You are encouraged to provide it,
+        ///     if possible.</param>
         /// <param name="maxmindId">A unique eight character string identifying
         ///     a minFraud Standard or Premium request. These IDs are returned
         ///     in the <c>maxmindID</c> field of a response for a successful
@@ -81,9 +81,9 @@ namespace MaxMind.MinFraud.Request
         ///     or <c>minfraudId></c>. You are encouraged to provide it, if
         ///     possible.</param>
         public TransactionReport(
-            IPAddress? ipAddress,
             TransactionReportTag tag,
             string? chargebackCode = null,
+            IPAddress? ipAddress = null,
             string? maxmindId = null,
             Guid? minfraudId = null,
             string? notes = null,
@@ -109,6 +109,22 @@ namespace MaxMind.MinFraud.Request
             if(minfraudId != Guid.Empty) {
                 MinFraudId = minfraudId;
             }
+        }
+
+        /// <summary>
+        /// Constructor for backwards compatibility.
+        /// </summary>
+        [Obsolete]
+        public TransactionReport(
+            IPAddress? ipAddress,
+            TransactionReportTag tagObsolete,
+            string? chargebackCode = null,
+            string? maxmindId = null,
+            Guid? minfraudId = null,
+            string? notes = null,
+            string? transactionId = null
+        ): this(tagObsolete, chargebackCode, ipAddress, maxmindId, minfraudId, notes, transactionId)
+        {
         }
 
         /// <summary>
