@@ -79,7 +79,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestMaxMindIdIsInvalid(string? maxmindId)
         {
             Assert.Throws<ArgumentException>(() => new TransactionReport(
-                IP, TransactionReportTag.SpamOrAbuse, maxmindId: maxmindId));
+                tag: TransactionReportTag.SpamOrAbuse, maxmindId: maxmindId));
         }
     }
 }
