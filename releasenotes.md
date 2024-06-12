@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+5.0.0
+------------------
+
+* Updated `TransactionReport` to make the `ipAddress` parameter optional. Now
+  the `tag` and at least one of the following parameters must be supplied:
+  `ipAddress`, `maxmindId`, `minfraudID`, `transactionID`.
+
 4.3.0 (2024-04-16)
 ------------------
 

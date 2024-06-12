@@ -178,7 +178,8 @@ var report = new TransactionReport(
     transactionId: "txn123");
 ```
 
-Only the `ipAddress` and `tag` parameters are required.
+A valid `tag` and at least one of the following are required parameters:
+`ipAddress`, `maxmindId`, `minfraudId`, `transactionId`.
 
 Send the report by calling the `ReportAsync` method using the `await` keyword:
 

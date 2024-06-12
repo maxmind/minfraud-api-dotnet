@@ -12,9 +12,39 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestRequired()
         {
-            var report = new TransactionReport(ipAddress: IP, tag: TransactionReportTag.NotFraud);
-            Assert.Equal(IP, report.IPAddress);
+            var maxmindId = "12345678";
+            var minfraudId = Guid.NewGuid();
+            var tag = TransactionReportTag.NotFraud;
+            var transactionId = "txn123";
+
+            TransactionReport report;
+
+            // ipAddress supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, ipAddress: null));
+            report = new TransactionReport(tag: tag, ipAddress: IP);
             Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
+            Assert.Equal(IP, report.IPAddress);
+
+            // maxmindId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, maxmindId: ""));
+            report = new TransactionReport(tag: tag, ipAddress: null, maxmindId: maxmindId);
+            Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
+            Assert.Null(report.IPAddress);
+            Assert.Equal(maxmindId, report.MaxMindId);
+
+            // minfraudId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, minfraudId: Guid.Empty));
+            report = new TransactionReport(tag: tag, ipAddress: null, minfraudId: minfraudId);
+            Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
+            Assert.Null(report.IPAddress);
+            Assert.Equal(minfraudId, report.MinFraudId);
+
+            // tranactionId supplied as identifier
+            Assert.Throws<ArgumentException>(() => new TransactionReport(tag: tag, transactionId: ""));
+            report = new TransactionReport(tag: tag, ipAddress: null, transactionId: transactionId);
+            Assert.Equal(TransactionReportTag.NotFraud, report.Tag);
+            Assert.Null(report.IPAddress);
+            Assert.Equal(transactionId, report.TransactionId);
         }
 
         [Fact]
@@ -50,7 +80,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestMaxMindIdIsInvalid(string? maxmindId)
         {
             Assert.Throws<ArgumentException>(() => new TransactionReport(
-                IP, TransactionReportTag.SpamOrAbuse, maxmindId: maxmindId));
+                tag: TransactionReportTag.SpamOrAbuse, maxmindId: maxmindId));
         }
     }
 }
