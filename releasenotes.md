@@ -7,6 +7,11 @@ Release Notes
 * Updated `TransactionReport` to make the `ipAddress` parameter optional. Now
   the `tag` and at least one of the following parameters must be supplied:
   `ipAddress`, `maxmindId`, `minfraudID`, `transactionID`.
+* Added `BillingPhone` and `ShippingPhone` properties to the minFraud Insights
+  and Factors response models. These contain objects with information about
+  the respective phone numbers. Please see [our developer
+  site](https://dev.maxmind.com/minfraud/api-documentation/responses/) for
+  more information.
 
 4.3.0 (2024-04-16)
 ------------------
