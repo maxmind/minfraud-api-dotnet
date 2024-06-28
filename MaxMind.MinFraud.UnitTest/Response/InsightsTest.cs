@@ -24,7 +24,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
                                 ""is_free"": true
                             }},
                         ""shipping_address"": {{""is_in_ip_country"": true}},
+                        ""shipping_phone"": {{""is_voip"": true}},
                         ""billing_address"": {{""is_in_ip_country"": true}},
+                        ""billing_phone"": {{""is_voip"": false}},
                         ""funds_remaining"": 1.20,
                         ""queries_remaining"": 123,
                         ""risk_score"": 0.01,
@@ -40,7 +42,9 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal("accept", insights.Disposition.Action);
             Assert.True(insights.Email.IsFree);
             Assert.True(insights.ShippingAddress.IsInIPCountry);
+            Assert.True(insights.ShippingPhone.IsVoip);
             Assert.True(insights.BillingAddress.IsInIPCountry);
+            Assert.False(insights.BillingPhone.IsVoip);
             Assert.Equal(id, insights.Id.ToString());
             Assert.Equal(1.20m, insights.FundsRemaining);
             Assert.Equal(123, insights.QueriesRemaining);
