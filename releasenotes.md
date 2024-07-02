@@ -12,11 +12,12 @@ Release Notes
   the respective phone numbers. Please see [our developer
   site](https://dev.maxmind.com/minfraud/api-documentation/responses/) for
   more information.
+* Added `Payconex` to the `PaymentProcessor` enum.
 
 4.3.0 (2024-04-16)
 ------------------
 
-* Added  `PxpFinancial` and `Trustpay` to the `PaymentProcessor` enum.
+* Added `PxpFinancial` and `Trustpay` to the `PaymentProcessor` enum.
 * Equivalent domain names are now normalized when `hashAddress` is used.
   For example, `googlemail.com` will become `gmail.com`.
 * Periods are now removed from `gmail.com` email address local parts when

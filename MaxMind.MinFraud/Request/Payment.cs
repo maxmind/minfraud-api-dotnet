@@ -301,6 +301,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "pacnet_services")]
         PacnetServices,
 
+        [EnumMember(Value = "payconex")]
+        Payconex,
+
         [EnumMember(Value = "payeezy")]
         Payeezy,
 
