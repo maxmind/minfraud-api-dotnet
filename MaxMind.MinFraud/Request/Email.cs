@@ -15,8 +15,8 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Email
     {
-        private static readonly Regex DuplicateDotComRe = new Regex(@"(?:\.com){2,}$", RegexOptions.Compiled);
-        private static readonly Regex GmailLeadingDigitRe = new Regex(@"^\d+(?:gmail?\.com)$", RegexOptions.Compiled);
+        private static readonly Regex DuplicateDotComRe = new(@"(?:\.com){2,}$", RegexOptions.Compiled);
+        private static readonly Regex GmailLeadingDigitRe = new(@"^\d+(?:gmail?\.com)$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
         private static readonly IReadOnlyDictionary<string, string> _typoDomains = new Dictionary<string, string>
         {
@@ -96,8 +96,8 @@ namespace MaxMind.MinFraud.Request
             {"ya.ru", "yandex.ru"},
         };
 
-        private static readonly HashSet<string> _fastmailDomains = new HashSet<string>
-        {
+        private static readonly HashSet<string> _fastmailDomains =
+        [
             "123mail.org",
             "150mail.com",
             "150ml.com",
@@ -215,10 +215,10 @@ namespace MaxMind.MinFraud.Request
             "xsmail.com",
             "yepmail.net",
             "your-mail.com"
-        };
+        ];
 
-        private static readonly HashSet<string> _yahooDomains = new HashSet<string>
-        {
+        private static readonly HashSet<string> _yahooDomains =
+        [
             "y7mail.com",
             "yahoo.at",
             "yahoo.be",
@@ -272,7 +272,7 @@ namespace MaxMind.MinFraud.Request
             "yahoo.se",
             "yahoo.sk",
             "ymail.com",
-        };
+        ];
 
         private string? _address;
         private string? _domain;
@@ -340,10 +340,7 @@ namespace MaxMind.MinFraud.Request
                     throw new ArgumentException($"The email address {value} is invalid");
                 }
 
-                if (_domain == null)
-                {
-                    _domain = parts.Last();
-                }
+                _domain ??= parts.Last();
                 _address = value;
             }
         }
@@ -444,7 +441,7 @@ namespace MaxMind.MinFraud.Request
 
             if (domain.EndsWith("."))
             {
-                char[] period = { '.' };
+                char[] period = ['.'];
                 domain = domain.TrimEnd(period);
             }
 

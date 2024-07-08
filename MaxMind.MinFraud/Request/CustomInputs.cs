@@ -14,7 +14,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class CustomInputs
     {
-        private readonly Dictionary<string, object> _inputs = new();
+        private readonly Dictionary<string, object> _inputs = [];
 
         /// <summary>
         ///     This is only to be used by the Builder.
