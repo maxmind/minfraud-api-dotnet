@@ -106,7 +106,8 @@ namespace MaxMind.MinFraud.Request
             Notes = notes;
             TransactionId = transactionId;
 
-            if(minfraudId != Guid.Empty) {
+            if (minfraudId != Guid.Empty)
+            {
                 MinFraudId = minfraudId;
             }
         }
@@ -123,7 +124,7 @@ namespace MaxMind.MinFraud.Request
             Guid? minfraudId = null,
             string? notes = null,
             string? transactionId = null
-        ): this(tagObsolete, chargebackCode, ipAddress, maxmindId, minfraudId, notes, transactionId)
+        ) : this(tagObsolete, chargebackCode, ipAddress, maxmindId, minfraudId, notes, transactionId)
         {
         }
 
