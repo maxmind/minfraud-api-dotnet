@@ -64,38 +64,6 @@ namespace MaxMind.MinFraud.Exception
         }
 
         /// <summary>
-        ///     Constructor for deserialization.
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-#if NET8_0_OR_GREATER
-        [Obsolete(DiagnosticId = "SYSLIB0051")]
-#endif
-        protected InvalidRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-            Code = info.GetString("MaxMind.MinFraud.Exception.InvalidRequestException.Code")
-                ?? throw new SerializationException("Unexpected null Code value");
-            Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", typeof(Uri))
-                ?? throw new SerializationException("Unexpected null Uri value"));
-        }
-
-        /// <summary>
-        ///     Method to serialize data.
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-#if NET8_0_OR_GREATER
-        [Obsolete(DiagnosticId = "SYSLIB0051")]
-#endif
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            base.GetObjectData(info, context);
-
-            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Code", Code);
-            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", Uri, typeof(Uri));
-        }
-
-        /// <summary>
         /// The <a href="https://dev.maxmind.com/minfraud/api-documentation/responses?lang=en#errors">
         /// reason code</a> for why the web service rejected the request.
         /// </summary>

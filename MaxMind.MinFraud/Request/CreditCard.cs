@@ -86,24 +86,6 @@ namespace MaxMind.MinFraud.Request
         }
 
         /// <summary>
-        /// Constructor for binary compatibility.
-        /// </summary>
-        [Obsolete("This constructor exists for binary compatibility and will be removed in next major version.")]
-        public CreditCard(
-            string? issuerIdNumber,
-            string? lastDigits,
-            string? bankName,
-            string? bankPhoneCountryCode,
-            string? bankPhoneNumber,
-            char? avsResult,
-            char? cvvResult,
-            string? token,
-            bool? was3DSecureSuccessful,
-            string? last4Digits
-        ) : this(issuerIdNumber, lastDigits, bankName, bankPhoneCountryCode, bankPhoneNumber, avsResult, cvvResult, token, was3DSecureSuccessful, last4Digits, null)
-        { }
-
-        /// <summary>
         /// The country where the issuer of the card is located. This may be
         /// passed instead of <c>IssuerIdNumber</c> if you do not wish to
         /// pass partial account numbers or if your payment processor does not
@@ -140,17 +122,6 @@ namespace MaxMind.MinFraud.Request
                 }
                 _issuerIdNumber = value;
             }
-        }
-
-        /// <summary>
-        /// The last two or four digits of the credit card number.
-        /// </summary>
-        [Obsolete("Last4Digits is obsolete. Use LastDigits instead.")]
-        [JsonIgnore]
-        public string? Last4Digits
-        {
-            get => LastDigits;
-            init => LastDigits = value;
         }
 
         /// <summary>

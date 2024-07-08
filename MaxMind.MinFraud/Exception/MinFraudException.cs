@@ -33,17 +33,5 @@ namespace MaxMind.MinFraud.Exception
         public MinFraudException(string message, System.Exception innerException) : base(message, innerException)
         {
         }
-
-        /// <summary>
-        ///     Constructor for deserialization.
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-#if NET8_0_OR_GREATER
-        [Obsolete(DiagnosticId = "SYSLIB0051")]
-#endif
-        protected MinFraudException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
     }
 }
