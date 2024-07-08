@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-5.0.0
+5.0.0 (2024-07-08)
 ------------------
 
 * Updated `TransactionReport` to make the `ipAddress` parameter optional. Now
