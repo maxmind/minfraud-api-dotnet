@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-5.0.0
+5.0.0 (2024-07-08)
 ------------------
 
 * Updated `TransactionReport` to make the `ipAddress` parameter optional. Now
@@ -13,6 +13,8 @@ Release Notes
   site](https://dev.maxmind.com/minfraud/api-documentation/responses/) for
   more information.
 * Added `Payconex` to the `PaymentProcessor` enum.
+* Removed several obsolete constructors as well as the `Last4Digits`
+  property on `MaxMind.MinFraud.Request.CreditCard`.
 
 4.3.0 (2024-04-16)
 ------------------

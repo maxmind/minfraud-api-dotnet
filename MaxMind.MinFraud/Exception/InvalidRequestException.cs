@@ -1,7 +1,6 @@
 ﻿#region
 
 using System;
-using System.Runtime.Serialization;
 
 #endregion
 
@@ -61,38 +60,6 @@ namespace MaxMind.MinFraud.Exception
         {
             Code = code;
             Uri = uri;
-        }
-
-        /// <summary>
-        ///     Constructor for deserialization.
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-#if NET8_0_OR_GREATER
-        [Obsolete(DiagnosticId = "SYSLIB0051")]
-#endif
-        protected InvalidRequestException(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-            Code = info.GetString("MaxMind.MinFraud.Exception.InvalidRequestException.Code")
-                ?? throw new SerializationException("Unexpected null Code value");
-            Uri = (Uri)(info.GetValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", typeof(Uri))
-                ?? throw new SerializationException("Unexpected null Uri value"));
-        }
-
-        /// <summary>
-        ///     Method to serialize data.
-        /// </summary>
-        /// <param name="info"></param>
-        /// <param name="context"></param>
-#if NET8_0_OR_GREATER
-        [Obsolete(DiagnosticId = "SYSLIB0051")]
-#endif
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            base.GetObjectData(info, context);
-
-            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Code", Code);
-            info.AddValue("MaxMind.MinFraud.Exception.InvalidRequestException.Uri", Uri, typeof(Uri));
         }
 
         /// <summary>

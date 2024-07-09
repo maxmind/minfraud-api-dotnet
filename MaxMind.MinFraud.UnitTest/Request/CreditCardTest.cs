@@ -76,18 +76,6 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
-        public void TestLast4Digits()
-        {
-#pragma warning disable 618
-            var cc2 = new CreditCard(last4Digits: "12");
-            Assert.Equal("12", cc2.Last4Digits);
-
-            var cc4 = new CreditCard(last4Digits: "1234");
-            Assert.Equal("1234", cc4.Last4Digits);
-#pragma warning restore 618
-        }
-
-        [Fact]
         public void TestLastDigits()
         {
             var cc2 = new CreditCard(lastDigits: "12");
