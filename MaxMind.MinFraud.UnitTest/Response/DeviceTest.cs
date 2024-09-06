@@ -19,7 +19,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                         ""confidence"": 99,
                         ""id"": ""{id}"",
                         ""last_seen"": ""{lastSeen}"",
-                        ""local_time"": ""{localTime }""
+                        ""local_time"": ""{localTime}""
                     }}
                 ")!;
 
