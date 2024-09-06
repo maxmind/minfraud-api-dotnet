@@ -1,18 +1,18 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
 using RichardSzalay.MockHttp;
 using System;
+using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Xunit;
-using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
-using System.Text.Json;
 using Xunit.Abstractions;
-using System.Text.Json.Serialization;
+using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
 
 namespace MaxMind.MinFraud.UnitTest
 {

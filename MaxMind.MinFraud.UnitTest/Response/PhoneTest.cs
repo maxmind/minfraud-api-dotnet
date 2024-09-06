@@ -1,5 +1,4 @@
-﻿using System;
-using System.Text.Json;
+﻿using System.Text.Json;
 using Xunit;
 using Phone = MaxMind.MinFraud.Response.Phone;
 
@@ -19,7 +18,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                         ""country"": ""{country}"",
                         ""is_voip"": true,
                         ""network_operator"": ""{networkOperator}"",
-                        ""number_type"": ""{numberType }""
+                        ""number_type"": ""{numberType}""
                     }}
                 ")!;
 

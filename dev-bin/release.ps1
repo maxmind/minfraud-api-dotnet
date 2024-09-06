@@ -3,7 +3,7 @@ $DebugPreference = 'Continue'
 
 $projectFile=(Get-Item "MaxMind.MinFraud/MaxMind.MinFraud.csproj").FullName
 $matches = (Get-Content -Encoding UTF8 releasenotes.md) ` |
-            Select-String '(\d+\.\d+\.\d+(?:-\w+)?) \((\d{4}-\d{2}-\d{2})\)' `
+            Select-String '(\d+\.\d+\.\d+(?:-\w+(?:\.\d+)?)?) \((\d{4}-\d{2}-\d{2})\)' `
 
 $version = $matches.Matches.Groups[1].Value
 $date = $matches.Matches.Groups[2].Value
