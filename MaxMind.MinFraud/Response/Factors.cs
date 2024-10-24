@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
@@ -24,6 +25,7 @@ namespace MaxMind.MinFraud.Response
         /// risk score.
         /// </summary>
         [JsonPropertyName("subscores")]
+        [Obsolete("Replaced by RiskScoreReasons")]
         public Subscores Subscores { get; init; } = new Subscores();
 
         /// <summary>
@@ -32,7 +34,9 @@ namespace MaxMind.MinFraud.Response
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
+#pragma warning disable 0618
             return $"{base.ToString()}, Subscores: {Subscores}, RiskScoreReasons: {RiskScoreReasons}";
+#pragma warning restore 0618
         }
     }
 }

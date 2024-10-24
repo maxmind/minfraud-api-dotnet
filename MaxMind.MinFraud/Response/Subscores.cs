@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
 {
@@ -6,6 +7,7 @@ namespace MaxMind.MinFraud.Response
     /// This class contains scores for many of the individual risk
     /// factors that are used to calculate the overall risk score.
     /// </summary>
+    [Obsolete("Replaced by RiskScoreReason")]
     public sealed class Subscores
     {
         /// <summary>

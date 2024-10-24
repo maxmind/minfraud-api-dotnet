@@ -4,6 +4,7 @@ using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Response
 {
+#pragma warning disable 0618
     public class SubScoresTest
     {
         [Fact]
@@ -55,4 +56,5 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal(0.20, subscores.TimeOfDay);
         }
     }
+#pragma warning restore 0618
 }
