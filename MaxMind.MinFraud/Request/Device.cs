@@ -79,7 +79,7 @@ namespace MaxMind.MinFraud.Request
             get => _sessionAge;
             init
             {
-                if (value != null && value < 0)
+                if (value is < 0)
                 {
                     throw new ArgumentException($"{nameof(value)} must be non-negative.");
                 }
@@ -97,7 +97,7 @@ namespace MaxMind.MinFraud.Request
             get => _sessionId;
             init
             {
-                if (value != null && value.Length > 255)
+                if (value is { Length: > 255 })
                 {
                     throw new ArgumentException($"{nameof(value)} must be less than 255 characters long.");
                 }
