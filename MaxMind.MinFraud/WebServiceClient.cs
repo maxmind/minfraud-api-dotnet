@@ -91,7 +91,7 @@ namespace MaxMind.MinFraud
          HttpClient httpClient
          )
         {
-            _locales = locales == null ? new List<string> { "en" } : new List<string>(locales);
+            _locales = locales == null ? ["en"] : [..locales];
 
             httpClient.BaseAddress = new UriBuilder("https", host, -1, BasePath).Uri;
 
