@@ -66,7 +66,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestNormalizing()
         {
-            Email e = new Email(address: "test@maxmind.com", hashAddress: true);
+            var e = new Email(address: "test@maxmind.com", hashAddress: true);
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
