@@ -10,12 +10,12 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestIsHighRisk()
         {
             var country = JsonSerializer.Deserialize<Country>(
-                @"
-                    {
-                        ""is_high_risk"": true,
-                        ""is_in_european_union"": true
-                    }
-                ")!;
+                """
+                {
+                    "is_high_risk": true,
+                    "is_in_european_union": true
+                }
+                """)!;
 
             Assert.True(country.IsInEuropeanUnion);
         }

@@ -12,14 +12,14 @@ namespace MaxMind.MinFraud.UnitTest.Response
             var phone = "132-342-2131";
 
             var issuer = JsonSerializer.Deserialize<Issuer>(
-                $@"
-                    {{
-                        ""name"": ""Bank"",
-                        ""matches_provided_name"": true,
-                        ""phone_number"": ""{phone}"",
-                        ""matches_provided_phone_number"": true
-                    }}
-                ")!;
+                $$"""
+                      {
+                          "name": "Bank",
+                          "matches_provided_name": true,
+                          "phone_number": "{{phone}}",
+                          "matches_provided_phone_number": true
+                      }
+                      """)!;
 
             Assert.Equal("Bank", issuer.Name);
             Assert.True(issuer.MatchesProvidedName);

@@ -23,12 +23,12 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.True(
                 comparer.JsonEquals(
                     JsonDocument.Parse(
-                        $@"
-                        {{
-                            ""address"": ""{address}"",
-                            ""domain"": ""{domain}""
-                        }}
-                        "),
+                        $$"""
+                          {
+                              "address": "{{address}}",
+                              "domain": "{{domain}}"
+                          }
+                          """),
                     JsonDocument.Parse(json)
                 ),
                 json
@@ -52,12 +52,12 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.True(
                 comparer.JsonEquals(
                     JsonDocument.Parse(
-                        $@"
-                        {{
-                            ""address"": ""{md5}"",
-                            ""domain"": ""{domain}""
-                        }}
-                        "),
+                        $$"""
+                          {
+                              "address": "{{md5}}",
+                              "domain": "{{domain}}"
+                          }
+                          """),
                     JsonDocument.Parse(json)
                 )
             );

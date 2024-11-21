@@ -24,16 +24,16 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var comparer = new JsonElementComparer();
             Assert.True(comparer.JsonEquals(
                 JsonDocument.Parse(
-                    @"
+                    """
                     {
-                        ""string_input_1"": ""test string"",
-                        ""int_input"": 19,
-                        ""long_input"": 12,
-                        ""float_input"": 3.20000005,
-                        ""double_input"": 32.122999999999998,
-                        ""bool_input"": true
+                        "string_input_1": "test string",
+                        "int_input": 19,
+                        "long_input": 12,
+                        "float_input": 3.20000005,
+                        "double_input": 32.122999999999998,
+                        "bool_input": true
                     }
-                    "),
+                    """),
                 JsonDocument.Parse(json)
                 ),
                 json

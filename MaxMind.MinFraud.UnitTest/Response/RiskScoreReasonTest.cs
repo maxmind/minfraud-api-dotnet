@@ -10,17 +10,17 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestRiskScoreReason()
         {
             var reason = JsonSerializer.Deserialize<RiskScoreReason>(
-                $@"
-                    {{
-                        ""multiplier"": 45.0,
-                        ""reasons"": [
-                            {{
-                                ""code"": ""ANONYMOUS_IP"",
-                                ""reason"": ""Risk due to IP being an Anonymous IP""
-                            }}
-                        ]
-                    }}
-                ")!;
+                $$"""
+                      {
+                          "multiplier": 45.0,
+                          "reasons": [
+                              {
+                                  "code": "ANONYMOUS_IP",
+                                  "reason": "Risk due to IP being an Anonymous IP"
+                              }
+                          ]
+                      }
+                    """)!;
 
             Assert.Equal(45.0, reason.Multiplier);
             Assert.Equal("ANONYMOUS_IP", reason.Reasons[0].Code);

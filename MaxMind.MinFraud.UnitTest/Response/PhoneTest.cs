@@ -13,14 +13,14 @@ namespace MaxMind.MinFraud.UnitTest.Response
             var networkOperator = "Verizon";
             var numberType = "mobile";
             var phone = JsonSerializer.Deserialize<Phone>(
-                @$"
-                    {{
-                        ""country"": ""{country}"",
-                        ""is_voip"": true,
-                        ""network_operator"": ""{networkOperator}"",
-                        ""number_type"": ""{numberType}""
-                    }}
-                ")!;
+                $$"""
+                      {
+                          "country": "{{country}}",
+                          "is_voip": true,
+                          "network_operator": "{{networkOperator}}",
+                          "number_type": "{{numberType}}"
+                      }
+                      """)!;
 
             Assert.Equal(country, phone.Country);
             Assert.True(phone.IsVoip);
