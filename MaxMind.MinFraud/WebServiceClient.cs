@@ -227,15 +227,15 @@ namespace MaxMind.MinFraud
             var uri = response.RequestMessage?.RequestUri;
             var status = (int)response.StatusCode;
 
-            if (status >= 400 && status < 500)
+            switch (status)
             {
-                await Handle4xxStatus(response).ConfigureAwait(false);
-            }
-            else if (status >= 500 && status < 600)
-            {
-                throw new HttpException(
-                    $"Received a server ({status}) error for {uri}", response.StatusCode,
-                    uri);
+                case >= 400 and < 500:
+                    await Handle4xxStatus(response).ConfigureAwait(false);
+                    break;
+                case >= 500 and < 600:
+                    throw new HttpException(
+                        $"Received a server ({status}) error for {uri}", response.StatusCode,
+                        uri);
             }
 
             var errorMessage =
