@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using MaxMind.MinFraud.Util;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request

@@ -3,7 +3,7 @@ using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace MaxMind.MinFraud
+namespace MaxMind.MinFraud.Util
 {
     internal class IPAddressConverter : JsonConverter<IPAddress?>
     {

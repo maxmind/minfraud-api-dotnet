@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Util;
+using System;
 using System.Net;
 using System.Text.Json.Serialization;
 
