@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Request
     public abstract class Location
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
-        private string? _country;
+        private readonly string? _country;
 
         /// <summary>
         /// Constructor.

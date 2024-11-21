@@ -274,8 +274,8 @@ namespace MaxMind.MinFraud.Request
             "ymail.com",
         ];
 
-        private string? _address;
-        private string? _domain;
+        private readonly string? _address;
+        private readonly string? _domain;
 
         /// <summary>
         /// Constructor.

@@ -11,8 +11,8 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Device
     {
-        private double? _sessionAge;
-        private string? _sessionId;
+        private readonly double? _sessionAge;
+        private readonly string? _sessionId;
 
         /// <summary>
         /// Constructor.

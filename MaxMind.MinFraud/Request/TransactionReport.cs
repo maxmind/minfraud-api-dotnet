@@ -44,7 +44,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class TransactionReport
     {
-        private string? _maxmindId;
+        private readonly string? _maxmindId;
 
         /// <summary>
         /// Constructor with validation.

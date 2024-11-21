@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Request
     public sealed class Order
     {
         private static readonly Regex CurrencyRe = new("^[A-Z]{3}$", RegexOptions.Compiled);
-        private string? _currency;
+        private readonly string? _currency;
 
         /// <summary>
         /// Constructor.
