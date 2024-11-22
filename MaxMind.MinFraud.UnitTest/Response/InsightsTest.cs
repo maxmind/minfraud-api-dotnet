@@ -11,28 +11,28 @@ namespace MaxMind.MinFraud.UnitTest.Response
         {
             var id = "b643d445-18b2-4b9d-bad4-c9c4366e402a";
             var insights = JsonSerializer.Deserialize<Insights>(
-                $@"
-                    {{
-                        ""id"": ""{id}"",
-                        ""ip_address"": {{""country"": {{""iso_code"": ""US""}}}},
-                        ""credit_card"": {{""is_business"": true, ""is_prepaid"": true}},
-                        ""device"": {{""id"": ""{id}""}},
-                        ""disposition"": {{""action"": ""accept""}},
-                        ""email"": 
-                            {{
-                                ""domain"": {{ ""first_seen"": ""2014-02-03""}},
-                                ""is_free"": true
-                            }},
-                        ""shipping_address"": {{""is_in_ip_country"": true}},
-                        ""shipping_phone"": {{""is_voip"": true}},
-                        ""billing_address"": {{""is_in_ip_country"": true}},
-                        ""billing_phone"": {{""is_voip"": false}},
-                        ""funds_remaining"": 1.20,
-                        ""queries_remaining"": 123,
-                        ""risk_score"": 0.01,
-                        ""warnings"": [{{""code"": ""INVALID_INPUT""}}]
-                    }}
-                ")!;
+                   $$$"""
+                   {
+                       "id": "{{{id}}}",
+                       "ip_address": {"country": {"iso_code": "US"}},
+                       "credit_card": {"is_business": true, "is_prepaid": true},
+                       "device": {"id": "{{{id}}}"},
+                       "disposition": {"action": "accept"},
+                       "email":
+                           {
+                               "domain": { "first_seen": "2014-02-03"},
+                               "is_free": true
+                           },
+                       "shipping_address": {"is_in_ip_country": true},
+                       "shipping_phone": {"is_voip": true},
+                       "billing_address": {"is_in_ip_country": true},
+                       "billing_phone": {"is_voip": false},
+                       "funds_remaining": 1.20,
+                       "queries_remaining": 123,
+                       "risk_score": 0.01,
+                       "warnings": [{"code": "INVALID_INPUT"}]
+                   }
+                   """)!;
 
             Assert.Equal("2014-02-03", insights.Email.Domain.FirstSeen?.ToString("yyyy-MM-dd"));
             Assert.Equal("US", insights.IPAddress.Country.IsoCode);

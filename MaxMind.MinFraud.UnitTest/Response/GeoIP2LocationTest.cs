@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
         {
             var time = "2015-04-19T12:59:23-01:00";
             var location = JsonSerializer.Deserialize<GeoIP2Location>(
-                @$"{{""local_time"": ""{time}"" }}")!;
+                $$"""{"local_time": "{{time}}" }""")!;
 
             Assert.Equal(time, location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));
         }

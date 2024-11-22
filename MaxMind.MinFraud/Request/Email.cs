@@ -274,8 +274,8 @@ namespace MaxMind.MinFraud.Request
             "ymail.com",
         ];
 
-        private string? _address;
-        private string? _domain;
+        private readonly string? _address;
+        private readonly string? _domain;
 
         /// <summary>
         /// Constructor.
@@ -454,20 +454,20 @@ namespace MaxMind.MinFraud.Request
             if (idx != -1)
             {
                 var tld = domain.Substring(idx + 1);
-                if (_typoTlds.ContainsKey(tld))
+                if (_typoTlds.TryGetValue(tld, out var typoTld))
                 {
-                    domain = domain.Substring(0, idx) + "." + _typoTlds[tld];
+                    domain = domain.Substring(0, idx) + "." + typoTld;
                 }
             }
 
-            if (_typoDomains.ContainsKey(domain))
+            if (_typoDomains.TryGetValue(domain, out var typoDomain))
             {
-                domain = _typoDomains[domain];
+                domain = typoDomain;
             }
 
-            if (_equivalentDomains.ContainsKey(domain))
+            if (_equivalentDomains.TryGetValue(domain, out var equivalentDomain))
             {
-                domain = _equivalentDomains[domain];
+                domain = equivalentDomain;
             }
 
             return domain;

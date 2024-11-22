@@ -1,5 +1,6 @@
 ﻿using MaxMind.MinFraud.Exception;
 using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Util;
 using Microsoft.Extensions.Options;
 using RichardSzalay.MockHttp;
 using System;

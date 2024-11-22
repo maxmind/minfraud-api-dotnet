@@ -97,7 +97,7 @@ namespace MaxMind.MinFraud.Request
             /// </param>
             public void Add(string key, long value)
             {
-                if (value <= -NumMax || value >= NumMax)
+                if (value is <= -NumMax or >= NumMax)
                 {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
@@ -116,7 +116,7 @@ namespace MaxMind.MinFraud.Request
             /// </param>
             public void Add(string key, float value)
             {
-                if (value <= -NumMax || value >= NumMax)
+                if (value is <= -NumMax or >= NumMax)
                 {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");
@@ -135,7 +135,7 @@ namespace MaxMind.MinFraud.Request
             /// </param>
             public void Add(string key, double value)
             {
-                if (value <= -NumMax || value >= NumMax)
+                if (value is <= -NumMax or >= NumMax)
                 {
                     throw new ArgumentException($"The custom input number {value} is invalid. " +
                                                 $"The number must be between -{NumMax} and {NumMax}, exclusive");

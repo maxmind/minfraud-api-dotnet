@@ -11,17 +11,17 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestShippingAddress()
         {
             var address = JsonSerializer.Deserialize<ShippingAddress>(
-                @"
+                """
                     {
-                        ""is_in_ip_country"": true,
-                        ""latitude"": 43.1,
-                        ""longitude"": 32.1,
-                        ""distance_to_ip_location"": 100,
-                        ""is_postal_in_city"": true,
-                        ""is_high_risk"": false,
-                        ""distance_to_billing_address"": 200
+                        "is_in_ip_country": true,
+                        "latitude": 43.1,
+                        "longitude": 32.1,
+                        "distance_to_ip_location": 100,
+                        "is_postal_in_city": true,
+                        "is_high_risk": false,
+                        "distance_to_billing_address": 200
                     }
-                ")!;
+                    """)!;
 
             TestAddress(address);
 

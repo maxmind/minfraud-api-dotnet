@@ -10,13 +10,13 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestDisposition()
         {
             var disposition = JsonSerializer.Deserialize<Disposition>(
-                @"
-                    {
-                        ""action"": ""manual_review"",
-                        ""reason"": ""custom_rule"",
-                        ""rule_label"": ""the rule's label""
-                    }
-                ")!;
+                """
+                {
+                    "action": "manual_review",
+                    "reason": "custom_rule",
+                    "rule_label": "the rule's label"
+                }
+                """)!;
 
             Assert.Equal("manual_review", disposition.Action);
             Assert.Equal("custom_rule", disposition.Reason);

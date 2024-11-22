@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace MaxMind.MinFraud
+namespace MaxMind.MinFraud.Util
 {
     // See https://github.com/dotnet/runtime/issues/31081. We could also switch
     // to a snakecase naming policy of that is added:

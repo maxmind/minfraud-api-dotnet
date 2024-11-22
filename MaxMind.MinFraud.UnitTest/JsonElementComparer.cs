@@ -75,7 +75,7 @@ namespace MaxMind.MinFraud.UnitTest
                     }
 
                 default:
-                    throw new JsonException(string.Format("Unknown JsonValueKind {0}", x.ValueKind));
+                    throw new JsonException($"Unknown JsonValueKind {x.ValueKind}");
             }
         }
 
@@ -128,7 +128,7 @@ namespace MaxMind.MinFraud.UnitTest
                     break;
 
                 default:
-                    throw new JsonException(string.Format("Unknown JsonValueKind {0}", obj.ValueKind));
+                    throw new JsonException($"Unknown JsonValueKind {obj.ValueKind}");
             }
         }
 

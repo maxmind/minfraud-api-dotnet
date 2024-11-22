@@ -53,14 +53,14 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.True(
                 comparer.JsonEquals(
                     JsonDocument.Parse(
-                        @"
+                        """
                         {
-                            ""transaction_id"": ""txn123"",
-                            ""shop_id"": ""shop123"",
-                            ""time"": ""2020-07-12T15:30:00+02:00"",
-                            ""type"": ""account_creation""
+                            "transaction_id": "txn123",
+                            "shop_id": "shop123",
+                            "time": "2020-07-12T15:30:00+02:00",
+                            "type": "account_creation"
                         }
-                        "),
+                        """),
                     JsonDocument.Parse(json)
                 ),
                 json

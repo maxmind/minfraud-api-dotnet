@@ -4,6 +4,10 @@ Release Notes
 5.1.0
 ------------------
 
+* .NET 6.0 and .NET 7.0 have been removed as targets as they have both
+  reach their end of support from Microsoft. If you are using these versions,
+  the .NET Standard 2.1 target should continue working for you.
+* .NET 9.0 has been added as a target.
 * The minFraud Factors subscores have been deprecated. They will be removed
   in March 2025. Please see [our release notes](https://dev.maxmind.com/minfraud/release-notes/2024/#deprecation-of-risk-factor-scoressubscores)
   for more information.

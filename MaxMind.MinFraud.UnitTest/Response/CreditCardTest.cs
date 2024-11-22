@@ -10,18 +10,18 @@ namespace MaxMind.MinFraud.UnitTest.Response
         public void TestCreditCard()
         {
             var cc = JsonSerializer.Deserialize<CreditCard>(
-                @"
+                """
                 {
-                    ""issuer"": {""name"": ""Bank""},
-                    ""brand"": ""Visa"",
-                    ""country"": ""US"",
-                    ""is_business"": true,
-                    ""is_issued_in_billing_address_country"":  true,
-                    ""is_prepaid"": true,
-                    ""is_virtual"": true,
-                    ""type"": ""credit""
+                    "issuer": {"name": "Bank"},
+                    "brand": "Visa",
+                    "country": "US",
+                    "is_business": true,
+                    "is_issued_in_billing_address_country":  true,
+                    "is_prepaid": true,
+                    "is_virtual": true,
+                    "type": "credit"
                 }
-                ")!;
+                """)!;
 
             Assert.Equal("Bank", cc.Issuer.Name);
             Assert.Equal("US", cc.Country);

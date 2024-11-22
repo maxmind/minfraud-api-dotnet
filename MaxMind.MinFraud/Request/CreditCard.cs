@@ -16,10 +16,10 @@ namespace MaxMind.MinFraud.Request
 
         private static readonly Regex TokenRe = new("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
-        private string? _country;
-        private string? _issuerIdNumber;
-        private string? _lastDigits;
-        private string? _token;
+        private readonly string? _country;
+        private readonly string? _issuerIdNumber;
+        private readonly string? _lastDigits;
+        private readonly string? _token;
 
         /// <summary>
         /// Constructor.

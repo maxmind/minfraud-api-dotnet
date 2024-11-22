@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Util;
+using System;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
@@ -43,7 +44,7 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class TransactionReport
     {
-        private string? _maxmindId;
+        private readonly string? _maxmindId;
 
         /// <summary>
         /// Constructor with validation.

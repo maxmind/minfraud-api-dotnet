@@ -13,13 +13,13 @@ namespace MaxMind.MinFraud.UnitTest.Response
             var msg = "Input invalid";
 
             var warning = JsonSerializer.Deserialize<Warning>(
-                $@"
-                    {{
-                        ""code"": ""{code}"",
-                        ""warning"": ""{msg}"",
-                        ""input_pointer"": ""/first/second""
-                    }}
-                ")!;
+                $$"""
+                      {
+                          "code": "{{code}}",
+                          "warning": "{{msg}}",
+                          "input_pointer": "/first/second"
+                      }
+                      """)!;
 
             Assert.Equal(code, warning.Code);
             Assert.Equal(msg, warning.Message);
