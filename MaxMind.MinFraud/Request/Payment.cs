@@ -182,6 +182,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "epay")]
         Epay,
 
+        [EnumMember(Value = "epayco")]
+        Epayco,
+
         [EnumMember(Value = "eprocessing_network")]
         EprocessingNetwork,
 
