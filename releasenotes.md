@@ -11,6 +11,7 @@ Release Notes
 * The minFraud Factors subscores have been deprecated. They will be removed
   in March 2025. Please see [our release notes](https://dev.maxmind.com/minfraud/release-notes/2024/#deprecation-of-risk-factor-scoressubscores)
   for more information.
+* Added `Epayco` to the `PaymentProcessor` enum.
 
 5.1.0-beta.1 (2024-09-06)
 -------------------------
