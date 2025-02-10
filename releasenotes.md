@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-5.1.0
+5.1.0 (2025-02-10)
 ------------------
 
 * .NET 6.0 and .NET 7.0 have been removed as targets as they have both
