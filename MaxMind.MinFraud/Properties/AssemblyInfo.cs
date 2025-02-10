@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("MaxMind.MinFraud")]
-[assembly: AssemblyDescription("API for MaxMind minFraud Score and Insights web services")]
+[assembly: AssemblyDescription("API for MaxMind minFraud web services")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MaxMind, Inc.")]
 [assembly: AssemblyProduct("MaxMind.MinFraud")]
