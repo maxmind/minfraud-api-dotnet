@@ -128,6 +128,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "credorax")]
         Credorax,
 
+        [EnumMember(Value = "cryptomus")]
+        Cryptomus,
+
         [EnumMember(Value = "ct_payments")]
         CtPayments,
 

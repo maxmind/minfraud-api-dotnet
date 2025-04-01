@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+5.2.0
+------------------
+
+* Added `Cryptomus` to the `PaymentProcessor` enum.
+
 5.1.0 (2025-02-10)
 ------------------
 
