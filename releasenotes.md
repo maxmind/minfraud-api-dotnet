@@ -4,6 +4,9 @@ Release Notes
 5.2.0
 ------------------
 
+* Added support for the `/billing_phone/matches_postal` and
+  `/shipping_phone/matches_postal` outputs. These are available as the
+  `MatchesPostal` property on `MaxMind.MinFraud.Response.Phone`.
 * Added `Cryptomus` to the `PaymentProcessor` enum.
 
 5.1.0 (2025-02-10)
