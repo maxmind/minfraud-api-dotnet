@@ -17,6 +17,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
                       {
                           "country": "{{country}}",
                           "is_voip": true,
+                          "matches_postal": false,
                           "network_operator": "{{networkOperator}}",
                           "number_type": "{{numberType}}"
                       }
@@ -24,6 +25,7 @@ namespace MaxMind.MinFraud.UnitTest.Response
 
             Assert.Equal(country, phone.Country);
             Assert.True(phone.IsVoip);
+            Assert.False(phone.MatchesPostal);
             Assert.Equal(networkOperator, phone.NetworkOperator);
             Assert.Equal(numberType, phone.NumberType);
         }

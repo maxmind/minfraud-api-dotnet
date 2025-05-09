@@ -25,6 +25,17 @@ namespace MaxMind.MinFraud.Response
         public bool? IsVoip { get; init; }
 
         /// <summary>
+        /// This is <c>true</c> if the phone number's prefix is commonly
+        /// associated with the postal code. It is <c>false</c> if the prefix
+        /// is not associated with the postal code. It is non-<c>null</c> only
+        /// when the phone number is in the US, the number prefix is in our
+        /// database, and the postal code and country
+        /// are provided in the request.
+        /// </summary>
+        [JsonPropertyName("matches_postal")]
+        public bool? MatchesPostal { get; init; }
+
+        /// <summary>
         /// The name of the original network operator associated with the
         /// phone number. This property does not reflect phone numbers that
         /// have been ported from the original operator to another, nor does
@@ -45,7 +56,7 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         public override string ToString()
         {
-            return $"Country: {Country}, IsVoip: {IsVoip}, " +
+            return $"Country: {Country}, IsVoip: {IsVoip}, MatchesPostal: {MatchesPostal}" +
                 $"NetworkOperator: {NetworkOperator}, NumberType: {NumberType}";
         }
     }
