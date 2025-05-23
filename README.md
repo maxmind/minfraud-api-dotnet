@@ -1,7 +1,6 @@
 # .NET API for MaxMind minFraud Services #
 
 [![NuGet](https://img.shields.io/nuget/v/MaxMind.MinFraud)](https://www.nuget.org/packages/MaxMind.MinFraud)
-[![API Docs](https://www.fuget.org/packages/MaxMind.MinFraud/badge.svg)](https://www.fuget.org/packages/MaxMind.MinFraud)
 
 ## Description ##
 
