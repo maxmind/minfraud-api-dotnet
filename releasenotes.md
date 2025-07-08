@@ -1,6 +1,11 @@
 Release Notes
 =============
 
+5.3.0
+------------------
+
+* Added `Securepay` to the `PaymentProcessor` enum.
+
 5.2.0 (2025-05-23)
 ------------------
 
