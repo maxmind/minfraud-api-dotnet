@@ -419,6 +419,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "sagepay")]
         Sagepay,
 
+        [EnumMember(Value = "securepay")]
+        Securepay,
+
         [EnumMember(Value = "securetrading")]
         Securetrading,
 
