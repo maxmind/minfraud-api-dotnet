@@ -6,7 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
-using Xunit.Abstractions;
+using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {

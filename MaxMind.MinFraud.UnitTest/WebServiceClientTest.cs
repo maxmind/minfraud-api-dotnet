@@ -12,7 +12,6 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Xunit;
-using Xunit.Abstractions;
 using static MaxMind.MinFraud.UnitTest.Request.TestHelper;
 
 namespace MaxMind.MinFraud.UnitTest
