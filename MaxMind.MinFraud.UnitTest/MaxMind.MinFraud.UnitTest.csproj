@@ -5,6 +5,7 @@
     <VersionPrefix>0.6.0</VersionPrefix>
     <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">net9.0;net8.0;net481</TargetFrameworks>
     <TargetFrameworks Condition=" '$(OS)' != 'Windows_NT' ">net9.0;net8.0</TargetFrameworks>
+    <OutputType>Exe</OutputType>
     <AssemblyName>MaxMind.MinFraud.UnitTest</AssemblyName>
     <PackageId>MaxMind.MinFraud.UnitTest</PackageId>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
@@ -33,7 +34,7 @@
     <PackageReference Include="Microsoft.Bcl.HashCode" Version="6.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.0" />
     <PackageReference Include="RichardSzalay.MockHttp" Version="7.0.0" />
-    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.v3" Version="3.0.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="3.1.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
