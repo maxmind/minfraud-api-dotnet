@@ -37,6 +37,20 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
+        public void TestCreditApplicationType()
+        {
+            var eventReq = new Event(type: EventType.CreditApplication);
+            Assert.Equal(EventType.CreditApplication, eventReq.Type);
+        }
+
+        [Fact]
+        public void TestFundTransferType()
+        {
+            var eventReq = new Event(type: EventType.FundTransfer);
+            Assert.Equal(EventType.FundTransfer, eventReq.Type);
+        }
+
+        [Fact]
         public void TestSerialization()
         {
             var eventReq = new Event(

@@ -5,6 +5,7 @@ Release Notes
 ------------------
 
 * Added `Securepay` to the `PaymentProcessor` enum.
+* Added `CreditApplication` and `FundTransfer` to the `EventType` enum.
 
 5.2.0 (2025-05-23)
 ------------------

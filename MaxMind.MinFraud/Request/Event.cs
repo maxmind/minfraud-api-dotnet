@@ -17,8 +17,14 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "account_login")]
         AccountLogin,
 
+        [EnumMember(Value = "credit_application")]
+        CreditApplication,
+
         [EnumMember(Value = "email_change")]
         EmailChange,
+
+        [EnumMember(Value = "fund_transfer")]
+        FundTransfer,
 
         [EnumMember(Value = "password_reset")]
         PasswordReset,
