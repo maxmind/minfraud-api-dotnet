@@ -131,7 +131,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 new Payment(
                     processor: PaymentProcessor.Stripe,
                     wasAuthorized: false,
-                    declineCode: "invalid number"
+                    declineCode: "invalid number",
+                    method: PaymentMethod.Card
                 ),
                 shipping:
                 new Shipping(
@@ -228,6 +229,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 },
                 Payment = new Payment
                 {
+                    Method = PaymentMethod.Card,
                     Processor = PaymentProcessor.Stripe,
                     WasAuthorized = false,
                     DeclineCode = "invalid number"

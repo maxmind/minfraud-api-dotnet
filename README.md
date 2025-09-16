@@ -289,6 +289,7 @@ public class MinFraudExample
             },
             Payment = new Payment
             {
+                Method = PaymentMethod.Card,
                 Processor = PaymentProcessor.Stripe,
                 WasAuthorized = false,
                 DeclineCode = "invalid number"

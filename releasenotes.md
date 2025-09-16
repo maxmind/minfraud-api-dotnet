@@ -9,6 +9,9 @@ Release Notes
 * Added the input `/event/party`. This is the party submitting the
   transaction. You may provide this using the `Party` property on
   `MaxMind.MinFraud.Request.Event`.
+* Added the input `/payment/method`. This is the payment method associated
+  with the transaction. You may provide this using the `Method` property on
+  `MaxMind.MinFraud.Request.Payment`.
 
 5.2.0 (2025-05-23)
 ------------------
