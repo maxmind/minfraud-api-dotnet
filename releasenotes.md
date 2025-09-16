@@ -99,7 +99,7 @@ Release Notes
 4.1.0 (2022-03-28)
 ------------------
 
-* Added the `Country` property to `MaxMind.MinFraud.Response.CreditCard`.
+* Added the `Country` property to `MaxMind.MinFraud.Request.CreditCard`.
   This is the country where the issuer of the card is located. This may be
   passed instead of `IssuerIdNumber` if you do not wish to pass partial
   account numbers or if your payment processor does not provide them.
