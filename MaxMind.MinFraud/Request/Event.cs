@@ -6,6 +6,20 @@ using System.Text.Json.Serialization;
 namespace MaxMind.MinFraud.Request
 {
     /// <summary>
+    /// The enumerated event parties supported by the web service.
+    /// </summary>
+    public enum EventParty
+    {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        [EnumMember(Value = "agent")]
+        Agent,
+
+        [EnumMember(Value = "customer")]
+        Customer
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+    }
+
+    /// <summary>
     /// The enumerated event types supported by the web service.
     /// </summary>
     public enum EventType
@@ -66,18 +80,41 @@ namespace MaxMind.MinFraud.Request
         /// <param name="time">The date and time the event occurred. If this
         /// field is not in the request, the current time will be used.</param>
         /// <param name="type">The type of event being scored.</param>
+        /// <param name="party">The party submitting the transaction.</param>
         public Event(
             string? transactionId = null,
             string? shopId = null,
             DateTimeOffset? time = null,
-            EventType? type = null
+            EventType? type = null,
+            EventParty? party = null
             )
         {
+            Party = party;
             TransactionId = transactionId;
             ShopId = shopId;
             Time = time;
             Type = type;
         }
+
+        /// <summary>
+        /// Constructor for backwards compatibility.
+        /// </summary>
+        [Obsolete("This constructor exists for binary compatibility and will be removed in next major version.")]
+        public Event(
+            string? transactionId,
+            string? shopId,
+            DateTimeOffset? time,
+            EventType? type
+            ) : this(transactionId, shopId, time, type, null)
+        {
+        }
+
+        /// <summary>
+        /// The party submitting the transaction.
+        /// </summary>
+        [JsonConverter(typeof(EnumMemberValueConverter<EventParty>))]
+        [JsonPropertyName("party")]
+        public EventParty? Party { get; init; }
 
         /// <summary>
         /// Your internal ID for the transaction. We can use this to locate a
@@ -114,7 +151,7 @@ namespace MaxMind.MinFraud.Request
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"TransactionId: {TransactionId}, ShopId: {ShopId}, Time: {Time}, Type: {Type}";
+            return $"Party: {Party}, TransactionId: {TransactionId}, ShopId: {ShopId}, Time: {Time}, Type: {Type}";
         }
     }
 }

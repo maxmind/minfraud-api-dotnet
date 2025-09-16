@@ -6,6 +6,9 @@ Release Notes
 
 * Added `Securepay` to the `PaymentProcessor` enum.
 * Added `CreditApplication` and `FundTransfer` to the `EventType` enum.
+* Added the input `/event/party`. This is the party submitting the
+  transaction. You may provide this using the `Party` property on
+  `MaxMind.MinFraud.Request.Event`.
 
 5.2.0 (2025-05-23)
 ------------------
