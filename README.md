@@ -241,6 +241,7 @@ public class MinFraudExample
             },
             Event = new Event
             {
+                Party = EventParty.Customer,
                 TransactionId = "txn3134133",
                 ShopId = "s2123",
                 Time = new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
@@ -288,6 +289,7 @@ public class MinFraudExample
             },
             Payment = new Payment
             {
+                Method = PaymentMethod.Card,
                 Processor = PaymentProcessor.Stripe,
                 WasAuthorized = false,
                 DeclineCode = "invalid number"

@@ -113,7 +113,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     transactionId: "txn3134133",
                     shopId: "s2123",
                     time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
-                    type: EventType.Purchase
+                    type: EventType.Purchase,
+                    party: null
                 ),
                 order:
                 new Order(
@@ -130,7 +131,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 new Payment(
                     processor: PaymentProcessor.Stripe,
                     wasAuthorized: false,
-                    declineCode: "invalid number"
+                    declineCode: "invalid number",
+                    method: PaymentMethod.Card
                 ),
                 shipping:
                 new Shipping(
@@ -227,6 +229,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 },
                 Payment = new Payment
                 {
+                    Method = PaymentMethod.Card,
                     Processor = PaymentProcessor.Stripe,
                     WasAuthorized = false,
                     DeclineCode = "invalid number"

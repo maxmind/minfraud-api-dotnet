@@ -37,6 +37,34 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
+        public void TestCreditApplicationType()
+        {
+            var eventReq = new Event(type: EventType.CreditApplication);
+            Assert.Equal(EventType.CreditApplication, eventReq.Type);
+        }
+
+        [Fact]
+        public void TestFundTransferType()
+        {
+            var eventReq = new Event(type: EventType.FundTransfer);
+            Assert.Equal(EventType.FundTransfer, eventReq.Type);
+        }
+
+        [Fact]
+        public void TestAgentParty()
+        {
+            var eventReq = new Event(party: EventParty.Agent);
+            Assert.Equal(EventParty.Agent, eventReq.Party);
+        }
+
+        [Fact]
+        public void TestCustomerParty()
+        {
+            var eventReq = new Event(party: EventParty.Customer);
+            Assert.Equal(EventParty.Customer, eventReq.Party);
+        }
+
+        [Fact]
         public void TestSerialization()
         {
             var eventReq = new Event(
@@ -45,7 +73,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 time: new DateTimeOffset(2020, 7, 12,
                                          15, 30, 0, 0,
                                          new TimeSpan(2, 0, 0)),
-                type: EventType.AccountCreation
+                type: EventType.AccountCreation,
+                party: EventParty.Agent
             );
 
             var json = JsonSerializer.Serialize(eventReq);
@@ -55,6 +84,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     JsonDocument.Parse(
                         """
                         {
+                            "party": "agent",
                             "transaction_id": "txn123",
                             "shop_id": "shop123",
                             "time": "2020-07-12T15:30:00+02:00",

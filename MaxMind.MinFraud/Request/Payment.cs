@@ -1,9 +1,48 @@
 ﻿using MaxMind.MinFraud.Util;
+using System;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// Enumerated payment methods supported by the web service.
+    /// </summary>
+    public enum PaymentMethod
+    {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        [EnumMember(Value = "bank_debit")]
+        BankDebit,
+
+        [EnumMember(Value = "bank_redirect")]
+        BankRedirect,
+
+        [EnumMember(Value = "bank_transfer")]
+        BankTransfer,
+
+        [EnumMember(Value = "buy_now_pay_later")]
+        BuyNowPayLater,
+
+        [EnumMember(Value = "card")]
+        Card,
+
+        [EnumMember(Value = "crypto")]
+        Crypto,
+
+        [EnumMember(Value = "digital_wallet")]
+        DigitalWallet,
+
+        [EnumMember(Value = "gift_card")]
+        GiftCard,
+
+        [EnumMember(Value = "real_time_payment")]
+        RealTimePayment,
+
+        [EnumMember(Value = "rewards")]
+        Rewards
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+    }
+
     /// <summary>
     /// Enumerated payment processors supported by the web service.
     /// </summary>
@@ -526,16 +565,38 @@ namespace MaxMind.MinFraud.Request
         /// <param name="declineCode">The decline code as provided by your
         /// payment processor. If the transaction was not declined, do not
         /// include this field.</param>
+        /// <param name="method">The payment method associated with the transaction.</param>
         public Payment(
             PaymentProcessor? processor = null,
             bool? wasAuthorized = null,
-            string? declineCode = null
+            string? declineCode = null,
+            PaymentMethod? method = null
             )
         {
             Processor = processor;
             WasAuthorized = wasAuthorized;
             DeclineCode = declineCode;
+            Method = method;
         }
+
+        /// <summary>
+        /// Constructor for backwards compatibility.
+        /// </summary>
+        [Obsolete("This constructor exists for binary compatibility and will be removed in next major version.")]
+        public Payment(
+            PaymentProcessor? processor,
+            bool? wasAuthorized,
+            string? declineCode
+            ) : this(processor, wasAuthorized, declineCode, null)
+        {
+        }
+
+        /// <summary>
+        /// The payment method associated with the transaction.
+        /// </summary>
+        [JsonConverter(typeof(EnumMemberValueConverter<PaymentMethod>))]
+        [JsonPropertyName("method")]
+        public PaymentMethod? Method { get; init; }
 
         /// <summary>
         /// The payment processor used for the transaction.
@@ -565,7 +626,7 @@ namespace MaxMind.MinFraud.Request
         /// <returns>A string that represents the current object.</returns>
         public override string ToString()
         {
-            return $"Processor: {Processor}, WasAuthorized: {WasAuthorized}, DeclineCode: {DeclineCode}";
+            return $"Method: {Method}, Processor: {Processor}, WasAuthorized: {WasAuthorized}, DeclineCode: {DeclineCode}";
         }
     }
 }

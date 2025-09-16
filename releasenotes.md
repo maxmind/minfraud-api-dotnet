@@ -5,6 +5,13 @@ Release Notes
 ------------------
 
 * Added `Securepay` to the `PaymentProcessor` enum.
+* Added `CreditApplication` and `FundTransfer` to the `EventType` enum.
+* Added the input `/event/party`. This is the party submitting the
+  transaction. You may provide this using the `Party` property on
+  `MaxMind.MinFraud.Request.Event`.
+* Added the input `/payment/method`. This is the payment method associated
+  with the transaction. You may provide this using the `Method` property on
+  `MaxMind.MinFraud.Request.Payment`.
 
 5.2.0 (2025-05-23)
 ------------------
@@ -99,7 +106,7 @@ Release Notes
 4.1.0 (2022-03-28)
 ------------------
 
-* Added the `Country` property to `MaxMind.MinFraud.Response.CreditCard`.
+* Added the `Country` property to `MaxMind.MinFraud.Request.CreditCard`.
   This is the country where the issuer of the card is located. This may be
   passed instead of `IssuerIdNumber` if you do not wish to pass partial
   account numbers or if your payment processor does not provide them.
