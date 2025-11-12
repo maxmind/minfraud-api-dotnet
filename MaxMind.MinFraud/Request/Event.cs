@@ -55,6 +55,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "referral")]
         Referral,
 
+        [EnumMember(Value = "sim_swap")]
+        SimSwap,
+
         [EnumMember(Value = "survey")]
         Survey
 #pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
