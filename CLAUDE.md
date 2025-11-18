@@ -316,6 +316,8 @@ When MaxMind adds new payment processors, event types, etc.:
 
 3. **No tests needed** for simple enum additions
 
+**Forward Compatibility**: The `EnumMemberValueConverter<T>` gracefully handles unknown enum values from the API by returning `null` instead of throwing exceptions. This ensures that when MaxMind adds new enum values to the web service, existing client versions won't break - the new value will simply be treated as null. This is critical for maintaining backward compatibility and preventing client breakage during API evolution.
+
 ### Exception Handling Strategy
 
 **Exception Hierarchy:**
