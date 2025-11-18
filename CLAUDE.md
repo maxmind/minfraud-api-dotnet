@@ -247,21 +247,23 @@ Test that response objects can be serialized back to JSON and match the original
 
 ### Adding New Fields to Existing Request Models
 
-1. **Add property** with JSON attribute and validation:
+1. **Add property** with JSON attribute and validation using C# 14 `field` keyword:
    ```csharp
-   private readonly double? _fieldName;
-
    [JsonPropertyName("field_name")]
    public double? FieldName {
-       get => _fieldName;
+       get => field;
        init {
            if (value is < 0) {
                throw new ArgumentException("must be non-negative.");
            }
-           _fieldName = value;
+           field = value;
        }
    }
    ```
+
+   **Note:** Use the `field` keyword (C# 14) instead of explicit backing fields. This eliminates
+   boilerplate while maintaining validation logic. Only use explicit backing fields if you need
+   cross-property assignments (e.g., Email.cs where `_domain` is set from `Address`).
 
 2. **Update `releasenotes.md`** with the change
 
@@ -396,20 +398,22 @@ This library targets multiple frameworks. When adding features:
 - Defensive copying (readonly collections, immutable types)
 - Use `IReadOnlyList<T>` for collections in responses
 
-### Pattern: Validation in Property Setters
+### Pattern: Validation in Property Setters with C# 14 `field` Keyword
 ```csharp
-private readonly double? _value;
-
 public double? Value {
-    get => _value;
+    get => field;
     init {
         if (value is < 0 or > 100) {
             throw new ArgumentException("must be between 0 and 100.");
         }
-        _value = value;
+        field = value;
     }
 }
 ```
+
+The `field` keyword (C# 14) creates a compiler-synthesized backing field, eliminating the need for
+explicit `private readonly` declarations. Use this for all properties with validation logic unless
+you need cross-property assignments.
 
 ### Pattern: Default Empty Objects (Never Null)
 ```csharp

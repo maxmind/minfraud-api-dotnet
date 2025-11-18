@@ -11,7 +11,6 @@ namespace MaxMind.MinFraud.Request
     public sealed class Order
     {
         private static readonly Regex CurrencyRe = new("^[A-Z]{3}$", RegexOptions.Compiled);
-        private readonly string? _currency;
 
         /// <summary>
         /// Constructor.
@@ -65,14 +64,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("currency")]
         public string? Currency
         {
-            get => _currency;
+            get => field;
             init
             {
                 if (value != null && !CurrencyRe.IsMatch(value))
                 {
                     throw new ArgumentException($"The currency code {value} is invalid.");
                 }
-                _currency = value;
+                field = value;
             }
         }
 

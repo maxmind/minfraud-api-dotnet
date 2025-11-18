@@ -44,8 +44,6 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class TransactionReport
     {
-        private readonly string? _maxmindId;
-
         /// <summary>
         /// Constructor with validation.
         /// </summary>
@@ -161,14 +159,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("maxmind_id")]
         public string? MaxMindId
         {
-            get => _maxmindId;
+            get => field;
             init
             {
                 if (value != null && value.Length != 8)
                 {
                     throw new ArgumentException($"{nameof(value)} must be an eight character string.");
                 }
-                _maxmindId = value;
+                field = value;
             }
         }
 
