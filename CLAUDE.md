@@ -13,11 +13,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 The library provides both synchronous and asynchronous methods, supports ASP.NET Core dependency injection, and integrates deeply with MaxMind's GeoIP2 library for IP intelligence.
 
 **Key Technologies:**
-- .NET 9.0, .NET 8.0, .NET Standard 2.1, and .NET Standard 2.0
+- .NET 10.0, .NET 9.0, .NET 8.0, .NET Standard 2.1, and .NET Standard 2.0
 - System.Text.Json for JSON serialization/deserialization
 - MaxMind.GeoIP2 library (critical dependency for response models)
 - xUnit for testing
-- Modern C# features (nullable reference types, init-only properties, C# 13.0)
+- Modern C# features (nullable reference types, init-only properties, C# 14.0)
 
 ## Development Commands
 
@@ -470,8 +470,8 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 
 ## Version Requirements
 
-- **Target Frameworks**: net9.0, net8.0, netstandard2.1, netstandard2.0
-- **Language Version**: C# 13.0
+- **Target Frameworks**: net10.0, net9.0, net8.0, netstandard2.1, netstandard2.0
+- **Language Version**: C# 14.0
 - **Assembly Signing**: Uses MaxMind.snk strong name key
 - **NuGet Package**: MaxMind.MinFraud
 

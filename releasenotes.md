@@ -4,6 +4,8 @@ Release Notes
 5.3.0
 ------------------
 
+* .NET 10.0 has been added as a target.
+* The language version has been updated to C# 14.0.
 * Added `Securepay` to the `PaymentProcessor` enum.
 * Added `CreditApplication`, `FundTransfer`, and `SimSwap` to the `EventType` enum.
 * Added the input `/event/party`. This is the party submitting the
