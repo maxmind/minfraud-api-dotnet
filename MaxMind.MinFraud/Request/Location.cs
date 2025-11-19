@@ -11,7 +11,6 @@ namespace MaxMind.MinFraud.Request
     public abstract class Location
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
-        private readonly string? _country;
 
         /// <summary>
         /// Constructor.
@@ -106,14 +105,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("country")]
         public string? Country
         {
-            get => _country;
+            get => field;
             init
             {
                 if (value != null && !CountryRe.IsMatch(value))
                 {
                     throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
                 }
-                _country = value;
+                field = value;
             }
         }
 

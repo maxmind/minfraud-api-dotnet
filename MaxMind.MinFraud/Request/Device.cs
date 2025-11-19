@@ -11,9 +11,6 @@ namespace MaxMind.MinFraud.Request
     /// </summary>
     public sealed class Device
     {
-        private readonly double? _sessionAge;
-        private readonly string? _sessionId;
-
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -76,14 +73,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("session_age")]
         public double? SessionAge
         {
-            get => _sessionAge;
+            get => field;
             init
             {
                 if (value is < 0)
                 {
                     throw new ArgumentException($"{nameof(value)} must be non-negative.");
                 }
-                _sessionAge = value;
+                field = value;
             }
         }
 
@@ -94,14 +91,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("session_id")]
         public string? SessionId
         {
-            get => _sessionId;
+            get => field;
             init
             {
                 if (value is { Length: > 255 })
                 {
                     throw new ArgumentException($"{nameof(value)} must be less than 255 characters long.");
                 }
-                _sessionId = value;
+                field = value;
             }
         }
 

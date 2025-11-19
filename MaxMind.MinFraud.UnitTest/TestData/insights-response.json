@@ -176,7 +176,14 @@
   },
   "email": {
     "domain": {
-      "first_seen": "2014-02-03"
+      "classification": "education",
+      "first_seen": "2014-02-03",
+      "risk": 8.75,
+      "volume": 1500.5,
+      "visit": {
+        "last_visited_on": "2025-11-12",
+        "status": "live"
+      }
     },
     "first_seen": "2017-01-02",
     "is_disposable": true,

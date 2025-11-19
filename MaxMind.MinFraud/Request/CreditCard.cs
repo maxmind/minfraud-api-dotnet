@@ -16,10 +16,6 @@ namespace MaxMind.MinFraud.Request
 
         private static readonly Regex TokenRe = new("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
-        private readonly string? _country;
-        private readonly string? _issuerIdNumber;
-        private readonly string? _lastDigits;
-        private readonly string? _token;
 
         /// <summary>
         /// Constructor.
@@ -95,14 +91,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("country")]
         public string? Country
         {
-            get => _country;
+            get => field;
             init
             {
                 if (value != null && !CountryRe.IsMatch(value))
                 {
                     throw new ArgumentException("Expected two-letter country code in the ISO 3166-1 alpha-2 format");
                 }
-                _country = value;
+                field = value;
             }
         }
 
@@ -113,14 +109,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("issuer_id_number")]
         public string? IssuerIdNumber
         {
-            get => _issuerIdNumber;
+            get => field;
             init
             {
                 if (value != null && !IssuerIdNumberRe.IsMatch(value))
                 {
                     throw new ArgumentException($"The issuer ID number {value} is of the wrong format.");
                 }
-                _issuerIdNumber = value;
+                field = value;
             }
         }
 
@@ -130,14 +126,14 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("last_digits")]
         public string? LastDigits
         {
-            get => _lastDigits;
+            get => field;
             init
             {
                 if (value != null && !LastDigitsRe.IsMatch(value))
                 {
                     throw new ArgumentException($"The last credit card digits {value} is of the wrong format.");
                 }
-                _lastDigits = value;
+                field = value;
             }
         }
 
@@ -183,7 +179,7 @@ namespace MaxMind.MinFraud.Request
         [JsonPropertyName("token")]
         public string? Token
         {
-            get => _token;
+            get => field;
             init
             {
                 if (value != null && !TokenRe.IsMatch(value))
@@ -192,7 +188,7 @@ namespace MaxMind.MinFraud.Request
                                                 + "Tokens must be non-space ASCII printable characters. If the "
                                                 + "token consists of all digits, it must be more than 19 digits.");
                 }
-                _token = value;
+                field = value;
             }
         }
 

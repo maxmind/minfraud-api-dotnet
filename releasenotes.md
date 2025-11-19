@@ -4,6 +4,8 @@ Release Notes
 5.3.0
 ------------------
 
+* .NET 10.0 has been added as a target.
+* The language version has been updated to C# 14.0.
 * Added `Securepay` to the `PaymentProcessor` enum.
 * Added `CreditApplication`, `FundTransfer`, and `SimSwap` to the `EventType` enum.
 * Added the input `/event/party`. This is the party submitting the
@@ -12,6 +14,29 @@ Release Notes
 * Added the input `/payment/method`. This is the payment method associated
   with the transaction. You may provide this using the `Method` property on
   `MaxMind.MinFraud.Request.Payment`.
+* Added support for new `/email/domain` outputs. These are available in
+  minFraud Insights and Factors responses:
+  * `/email/domain/classification` - The classification of the email domain.
+    Available via the `Classification` property on
+    `MaxMind.MinFraud.Response.EmailDomain`. Possible values include
+    `Business`, `Education`, `Government`, and `IspEmail`.
+  * `/email/domain/risk` - A risk score for the email domain, ranging from
+    0.01 to 99. Available via the `Risk` property on
+    `MaxMind.MinFraud.Response.EmailDomain`.
+  * `/email/domain/volume` - The activity indicator for the email domain
+    across the minFraud network, expressed as sightings per million. Available
+    via the `Volume` property on `MaxMind.MinFraud.Response.EmailDomain`.
+  * `/email/domain/visit/has_redirect` - Whether the domain automatically
+    forwards visitors elsewhere. Available via the `HasRedirect` property on
+    `MaxMind.MinFraud.Response.EmailDomainVisit`.
+  * `/email/domain/visit/last_visited_on` - The date when the domain was last
+    visited by MaxMind's automated inspection system. Available via the
+    `LastVisitedOn` property on `MaxMind.MinFraud.Response.EmailDomainVisit`.
+  * `/email/domain/visit/status` - The status of the domain from automated
+    inspection. Available via the `Status` property on
+    `MaxMind.MinFraud.Response.EmailDomainVisit`. Possible values include
+    `Live`, `DnsError`, `NetworkError`, `HttpError`, `Parked`, and
+    `PreDevelopment`.
 
 5.2.0 (2025-05-23)
 ------------------
