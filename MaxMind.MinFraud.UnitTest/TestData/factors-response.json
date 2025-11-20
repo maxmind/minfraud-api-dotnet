@@ -139,6 +139,14 @@
       "network": "81.2.69.0/24",
       "organization": "STONEHOUSE office network",
       "user_type": "government"
+    },
+    "anonymizer": {
+      "is_anonymous": false,
+      "is_anonymous_vpn": false,
+      "is_hosting_provider": false,
+      "is_public_proxy": false,
+      "is_residential_proxy": false,
+      "is_tor_exit_node": false
     }
   },
   "billing_address": {
