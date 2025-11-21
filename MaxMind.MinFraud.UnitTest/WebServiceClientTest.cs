@@ -51,7 +51,9 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.True(response.IPAddress.Country.IsInEuropeanUnion);
             Assert.True(response.IPAddress.RegisteredCountry.IsInEuropeanUnion);
             Assert.True(response.IPAddress.RepresentedCountry.IsInEuropeanUnion);
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.True(response.IPAddress.Traits.IsResidentialProxy);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.Equal("310", response.IPAddress.Traits.MobileCountryCode);
             Assert.Equal("004", response.IPAddress.Traits.MobileNetworkCode);

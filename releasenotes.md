@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-5.3.0
+5.3.0 (2025-11-20)
 ------------------
 
 * .NET 10.0 has been added as a target.

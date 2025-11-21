@@ -52,12 +52,14 @@ namespace MaxMind.MinFraud.UnitTest.Response
                 address.RiskReasons[1].Reason
             );
             Assert.Equal(time, address.Location.LocalTime?.ToString("yyyy-MM-ddTHH:mm:ssK"));
+#pragma warning disable CS0618 // Type or member is obsolete
             Assert.True(address.Traits.IsAnonymous);
             Assert.True(address.Traits.IsAnonymousVpn);
             Assert.True(address.Traits.IsHostingProvider);
             Assert.True(address.Traits.IsPublicProxy);
             Assert.True(address.Traits.IsResidentialProxy);
             Assert.True(address.Traits.IsTorExitNode);
+#pragma warning restore CS0618 // Type or member is obsolete
             Assert.Equal("310", address.Traits.MobileCountryCode);
             Assert.Equal("004", address.Traits.MobileNetworkCode);
         }
