@@ -6,7 +6,7 @@ To publish the to NuGet:
    necessary.
 3. Review `releasenotes.md` for completeness and correctness. Update its release
    date.
-4. Run dev-bin/release.ps1. This will build the project, generate docs, upload to
-   NuGet, and make a GitHub release.
-5. Update GitHub Release page for the release.
-6. Verify the release on [NuGet](https://www.nuget.org/packages/MaxMind.MaxMind/).
+4. Run dev-bin/release.sh. This will build the project, create a version commit,
+   and make a GitHub release.
+5. Approve the workflow run in the GitHub Actions UI.
+6. Verify the release on [NuGet](https://www.nuget.org/packages/MaxMind.MinFraud/).
