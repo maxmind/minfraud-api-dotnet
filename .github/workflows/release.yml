@@ -39,7 +39,7 @@ jobs:
         run: dotnet pack -c Release MaxMind.MinFraud/MaxMind.MinFraud.csproj
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: nuget-packages
           path: MaxMind.MinFraud/bin/Release/*.nupkg
