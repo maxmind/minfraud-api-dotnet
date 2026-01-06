@@ -95,6 +95,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "balanced")]
         Balanced,
 
+        [EnumMember(Value = "banquest")]
+        Banquest,
+
         [EnumMember(Value = "beanstream")]
         Beanstream,
 
@@ -488,6 +491,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "stripe")]
         Stripe,
 
+        [EnumMember(Value = "summit_payments")]
+        SummitPayments,
+
         [EnumMember(Value = "synapsefi")]
         Synapsefi,
 
@@ -543,7 +549,10 @@ namespace MaxMind.MinFraud.Request
         Wirecard,
 
         [EnumMember(Value = "worldpay")]
-        Worldpay
+        Worldpay,
+
+        [EnumMember(Value = "yaadpay")]
+        Yaadpay
 
 #pragma warning restore
     }

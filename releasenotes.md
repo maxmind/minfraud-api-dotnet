@@ -1,6 +1,12 @@
 Release Notes
 =============
 
+5.4.0
+------------------
+
+* Added `Banquest`, `SummitPayments`, and `Yaadpay` to the `PaymentProcessor`
+  enum.
+
 5.3.1 (2025-11-24)
 ------------------
 
