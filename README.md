@@ -34,8 +34,8 @@ install-package MaxMind.MinFraud
 ## Usage ##
 
 This API uses the [async/await
-feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
-.NET 4.5 to provide non-blocking calls to the minFraud web services.
+feature](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
+to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
 takes your MaxMind account ID and license key:
