@@ -34,8 +34,8 @@ install-package MaxMind.MinFraud
 ## Usage ##
 
 This API uses the [async/await
-feature](https://msdn.microsoft.com/en-us/library/hh191443.aspx) introduced in
-.NET 4.5 to provide non-blocking calls to the minFraud web services.
+feature](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
+to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
 takes your MaxMind account ID and license key:
@@ -146,7 +146,7 @@ public class MinFraudController : ControllerBase
 {
     private readonly WebServiceClient _minfraudClient;
 
-    public MaxMindController(WebServiceClient minfraudClient)
+    public MinFraudController(WebServiceClient minfraudClient)
     {
         _minfraudClient = minfraudClient;
     }
@@ -169,9 +169,9 @@ report it to MaxMind. To do this, create a new `TransactionReport` object:
 
 ```csharp
 var report = new TransactionReport(
-    ipAddress: IPAddress.Parse("104.16.148.244"), 
     tag: TransactionReportTag.Chargeback,
     chargebackCode: "BL",
+    ipAddress: IPAddress.Parse("104.16.148.244"),
     maxmindId: "abcd1234",
     minfraudId: new Guid("01c25cb0-f067-4e02-8ed0-a094c580f5e4"),
     notes: "Suspicious account behavior",
@@ -202,7 +202,7 @@ Thrown by `WebServiceClient` method calls:
 * `AuthenticationException` - Thrown when the server is unable to authenticate
   the request, e.g., if the license key or account ID is invalid.
 * `InsufficientFundsException` - Thrown when your account is out of funds.
-* `PermissionRequireException` - Thrown when your account does not have
+* `PermissionRequiredException` - Thrown when your account does not have
   permission to access the service.
 * `InvalidRequestException` - Thrown when the server rejects the request for
   another reason such as invalid JSON in the POST.
@@ -218,6 +218,7 @@ using MaxMind.MinFraud;
 using MaxMind.MinFraud.Request;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 
 public class MinFraudExample
@@ -379,6 +380,6 @@ This API uses [Semantic Versioning](https://semver.org/).
 
 ## Copyright and License ##
 
-This software is Copyright (c) 2015-2025 by MaxMind, Inc.
+This software is Copyright (c) 2015-2026 by MaxMind, Inc.
 
 This is free software, licensed under the Apache License, Version 2.0.
