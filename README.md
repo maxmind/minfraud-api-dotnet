@@ -202,7 +202,7 @@ Thrown by `WebServiceClient` method calls:
 * `AuthenticationException` - Thrown when the server is unable to authenticate
   the request, e.g., if the license key or account ID is invalid.
 * `InsufficientFundsException` - Thrown when your account is out of funds.
-* `PermissionRequireException` - Thrown when your account does not have
+* `PermissionRequiredException` - Thrown when your account does not have
   permission to access the service.
 * `InvalidRequestException` - Thrown when the server rejects the request for
   another reason such as invalid JSON in the POST.
