@@ -218,6 +218,7 @@ using MaxMind.MinFraud;
 using MaxMind.MinFraud.Request;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 
 public class MinFraudExample
