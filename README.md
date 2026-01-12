@@ -146,7 +146,7 @@ public class MinFraudController : ControllerBase
 {
     private readonly WebServiceClient _minfraudClient;
 
-    public MaxMindController(WebServiceClient minfraudClient)
+    public MinFraudController(WebServiceClient minfraudClient)
     {
         _minfraudClient = minfraudClient;
     }
