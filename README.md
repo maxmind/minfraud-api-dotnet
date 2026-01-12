@@ -169,9 +169,9 @@ report it to MaxMind. To do this, create a new `TransactionReport` object:
 
 ```csharp
 var report = new TransactionReport(
-    ipAddress: IPAddress.Parse("104.16.148.244"), 
     tag: TransactionReportTag.Chargeback,
     chargebackCode: "BL",
+    ipAddress: IPAddress.Parse("104.16.148.244"),
     maxmindId: "abcd1234",
     minfraudId: new Guid("01c25cb0-f067-4e02-8ed0-a094c580f5e4"),
     notes: "Suspicious account behavior",
