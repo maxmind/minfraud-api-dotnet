@@ -51,5 +51,80 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal(0.01, insights.RiskScore);
             Assert.Equal("INVALID_INPUT", insights.Warnings[0].Code);
         }
+
+        [Fact]
+        public void TestIPAddressAnonymizer()
+        {
+            var insights = JsonSerializer.Deserialize<Insights>(
+                """
+                {
+                    "id": "b643d445-18b2-4b9d-bad4-c9c4366e402a",
+                    "ip_address": {
+                        "country": {"iso_code": "US"},
+                        "anonymizer": {
+                            "confidence": 85,
+                            "is_anonymous": true,
+                            "is_anonymous_vpn": true,
+                            "is_hosting_provider": false,
+                            "is_public_proxy": false,
+                            "is_residential_proxy": true,
+                            "is_tor_exit_node": false,
+                            "network_last_seen": "2025-01-15",
+                            "provider_name": "TestVPN"
+                        }
+                    },
+                    "risk_score": 0.5
+                }
+                """)!;
+
+            var anonymizer = insights.IPAddress.Anonymizer;
+            Assert.Equal(85, anonymizer.Confidence);
+            Assert.True(anonymizer.IsAnonymous);
+            Assert.True(anonymizer.IsAnonymousVpn);
+            Assert.False(anonymizer.IsHostingProvider);
+            Assert.False(anonymizer.IsPublicProxy);
+            Assert.True(anonymizer.IsResidentialProxy);
+            Assert.False(anonymizer.IsTorExitNode);
+#if NET6_0_OR_GREATER
+            Assert.Equal("2025-01-15", anonymizer.NetworkLastSeen?.ToString("yyyy-MM-dd"));
+#endif
+            Assert.Equal("TestVPN", anonymizer.ProviderName);
+        }
+
+        [Fact]
+        public void TestIPAddressAnonymizerEmpty()
+        {
+            var insights = JsonSerializer.Deserialize<Insights>(
+                """
+                {
+                    "id": "b643d445-18b2-4b9d-bad4-c9c4366e402a",
+                    "ip_address": {
+                        "country": {"iso_code": "US"},
+                        "anonymizer": {
+                            "is_anonymous": false,
+                            "is_anonymous_vpn": false,
+                            "is_hosting_provider": false,
+                            "is_public_proxy": false,
+                            "is_residential_proxy": false,
+                            "is_tor_exit_node": false
+                        }
+                    },
+                    "risk_score": 0.01
+                }
+                """)!;
+
+            var anonymizer = insights.IPAddress.Anonymizer;
+            Assert.Null(anonymizer.Confidence);
+            Assert.False(anonymizer.IsAnonymous);
+            Assert.False(anonymizer.IsAnonymousVpn);
+            Assert.False(anonymizer.IsHostingProvider);
+            Assert.False(anonymizer.IsPublicProxy);
+            Assert.False(anonymizer.IsResidentialProxy);
+            Assert.False(anonymizer.IsTorExitNode);
+#if NET6_0_OR_GREATER
+            Assert.Null(anonymizer.NetworkLastSeen);
+#endif
+            Assert.Null(anonymizer.ProviderName);
+        }
     }
 }
