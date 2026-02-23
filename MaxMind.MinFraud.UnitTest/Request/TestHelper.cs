@@ -60,7 +60,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
                     acceptLanguage: "en-US,en;q=0.8",
                     sessionAge: 3600.5,
-                    sessionId: "foobar"
+                    sessionId: "foobar",
+                    trackingToken: "tst_abc123"
                 ),
                 account:
                 new Account(
@@ -178,7 +179,8 @@ namespace MaxMind.MinFraud.UnitTest.Request
                         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36",
                     AcceptLanguage = "en-US,en;q=0.8",
                     SessionAge = 3600.5,
-                    SessionId = "foobar"
+                    SessionId = "foobar",
+                    TrackingToken = "tst_abc123"
                 },
                 Event = new Event
                 {
