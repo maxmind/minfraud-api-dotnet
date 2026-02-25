@@ -238,7 +238,8 @@ public class MinFraudExample
                 UserAgent = "Mozilla/5.0 (X11; Linux x86_64)",
                 AcceptLanguage = "en-US,en;q=0.8",
                 SessionAge = 3600.5,
-                SessionId = "a333a4e127f880d8820e56a66f40717c"
+                SessionId = "a333a4e127f880d8820e56a66f40717c",
+                TrackingToken = "a]L@E*bnoqHa9&SBSwbB8X3#1E"
             },
             Event = new Event
             {

@@ -56,5 +56,13 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             Assert.Throws<ArgumentException>(() => new Device(sessionId: new string('x', 256)));
         }
+
+        [Fact]
+        public void TestTrackingToken()
+        {
+            var token = "a]L@E*bnoqHa9&SBSwbB8X3#1E";
+            var device = new Device(trackingToken: token);
+            Assert.Equal(token, device.TrackingToken);
+        }
     }
 }
