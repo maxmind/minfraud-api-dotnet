@@ -44,7 +44,7 @@ namespace MaxMind.MinFraud.UnitTest
             var response = await client.InsightsAsync(request);
             CompareJson(responseContent, response);
 
-            // The purpose here is to test that SetLocales worked as expected
+            // The purpose here is to test that WithLocales worked as expected
             Assert.Equal("London", response.IPAddress.City.Name);
             Assert.Equal("United Kingdom", response.IPAddress.Country.Name);
 
@@ -81,6 +81,7 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.Equal("London", response.IPAddress.City.Name);
         }
 
+#pragma warning disable CS0618 // Type or member is obsolete
         [Fact]
         public async Task TestFullReportRequest()
         {
@@ -102,6 +103,7 @@ namespace MaxMind.MinFraud.UnitTest
 
             Assert.Null(exception);
         }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         [Fact]
         public async Task TestWebServiceClientOptionsConstructor()

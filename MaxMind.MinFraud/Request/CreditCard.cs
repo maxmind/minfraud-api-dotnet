@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// The credit card information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class CreditCard
+    public sealed record CreditCard
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
         private static readonly Regex IssuerIdNumberRe = new("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
@@ -16,6 +16,11 @@ namespace MaxMind.MinFraud.Request
 
         private static readonly Regex TokenRe = new("^(?![0-9]{1,19}$)[\\x21-\\x7E]{1,255}$",
             RegexOptions.Compiled);
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public CreditCard() { }
 
         /// <summary>
         /// Constructor.
@@ -55,6 +60,7 @@ namespace MaxMind.MinFraud.Request
         /// processor does not provide them. The ISO 3166-1 alpha-2 country code
         /// should be used, e.g., "US".
         /// </param>
+        [Obsolete("Use object initializer syntax.")]
         public CreditCard(
             string? issuerIdNumber = null,
             string? lastDigits = null,
@@ -202,15 +208,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("was_3d_secure_successful")]
         public bool? Was3DSecureSuccessful { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return
-                $"IssuerIdNumber: {IssuerIdNumber}, LastDigits: {LastDigits}, BankName: {BankName}, BankPhoneCountryCode: {BankPhoneCountryCode}, BankPhoneNumber: {BankPhoneNumber}, Country: {Country}, AvsResult: {AvsResult}, CvvResult: {CvvResult}, Token: {Token}, Was3DSecureSuccessful: {Was3DSecureSuccessful}";
-        }
     }
 }

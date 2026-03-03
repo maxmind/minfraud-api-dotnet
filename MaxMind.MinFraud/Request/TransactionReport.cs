@@ -42,8 +42,13 @@ namespace MaxMind.MinFraud.Request
     /// The transaction information for a report you would like to file with
     /// MaxMind.
     /// </summary>
-    public sealed class TransactionReport
+    public sealed record TransactionReport
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public TransactionReport() { }
+
         /// <summary>
         /// Constructor with validation.
         /// </summary>
@@ -79,6 +84,7 @@ namespace MaxMind.MinFraud.Request
         ///     one of the transaction's <c>ipAddress</c>, <c>maxmindId</c>,
         ///     or <c>minfraudId></c>. You are encouraged to provide it, if
         ///     possible.</param>
+        [Obsolete("Use object initializer syntax.")]
         public TransactionReport(
             TransactionReportTag tag,
             string? chargebackCode = null,
@@ -195,15 +201,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("transaction_id")]
         public string? TransactionId { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"IPAddress: {IPAddress}, Tag: {Tag}, ChargebackCode: {ChargebackCode}, MaxMindId: {MaxMindId}, "
-                + $"MinFraudId: {MinFraudId}, Notes: {Notes}, TransactionId: {TransactionId}";
-        }
     }
 }

@@ -2,6 +2,8 @@
 using System;
 using Xunit;
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     // This code is identical to code in ShippingTest. I couldn't

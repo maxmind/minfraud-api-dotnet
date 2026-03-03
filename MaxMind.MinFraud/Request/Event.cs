@@ -67,8 +67,13 @@ namespace MaxMind.MinFraud.Request
     /// Event information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Event
+    public sealed record Event
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Event() { }
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -84,6 +89,7 @@ namespace MaxMind.MinFraud.Request
         /// field is not in the request, the current time will be used.</param>
         /// <param name="type">The type of event being scored.</param>
         /// <param name="party">The party submitting the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Event(
             string? transactionId = null,
             string? shopId = null,
@@ -147,14 +153,5 @@ namespace MaxMind.MinFraud.Request
         [JsonConverter(typeof(EnumMemberValueConverter<EventType>))]
         [JsonPropertyName("type")]
         public EventType? Type { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Party: {Party}, TransactionId: {TransactionId}, ShopId: {ShopId}, Time: {Time}, Type: {Type}";
-        }
     }
 }

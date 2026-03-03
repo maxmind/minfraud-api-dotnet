@@ -122,8 +122,16 @@ namespace MaxMind.MinFraud
         public async Task<Factors> FactorsAsync(Transaction transaction)
         {
             var factors = await MakeResponse<Factors>(transaction).ConfigureAwait(false);
-            factors.IPAddress.SetLocales(_locales);
-            return factors;
+            var withLocales = ((GeoIP2.Responses.AbstractResponse)factors.IPAddress)
+                .WithLocales(_locales);
+            if (withLocales is not Response.IPAddress ipAddress)
+            {
+                throw new MinFraudException(
+                    $"WithLocales returned {withLocales.GetType().FullName} instead of "
+                    + $"the expected {typeof(Response.IPAddress).FullName}. "
+                    + "This may indicate an incompatible GeoIP2 library version.");
+            }
+            return factors with { IPAddress = ipAddress };
         }
 
         /// <summary>
@@ -136,8 +144,16 @@ namespace MaxMind.MinFraud
         public async Task<Insights> InsightsAsync(Transaction transaction)
         {
             var insights = await MakeResponse<Insights>(transaction).ConfigureAwait(false);
-            insights.IPAddress.SetLocales(_locales);
-            return insights;
+            var withLocales = ((GeoIP2.Responses.AbstractResponse)insights.IPAddress)
+                .WithLocales(_locales);
+            if (withLocales is not Response.IPAddress ipAddress)
+            {
+                throw new MinFraudException(
+                    $"WithLocales returned {withLocales.GetType().FullName} instead of "
+                    + $"the expected {typeof(Response.IPAddress).FullName}. "
+                    + "This may indicate an incompatible GeoIP2 library version.");
+            }
+            return insights with { IPAddress = ipAddress };
         }
 
         /// <summary>

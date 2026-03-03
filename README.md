@@ -69,18 +69,20 @@ Create a new `Transaction` object. This represents the transaction that you
 are sending to minFraud:
 
 ```csharp
-var transaction = new Transaction(
-    device: new Device(
-        ipAddress: System.Net.IPAddress.Parse("152.216.7.110"),
-        userAgent: "Mozilla/5.0 (X11; Linux x86_64)",
-        acceptLanguage: "en-US,en;q=0.8"
-        ),
-    account:
-        new Account(
-            userId: "3132",
-            username: "fred"
-            )
-    );
+var transaction = new Transaction
+{
+    Device = new Device
+    {
+        IPAddress = System.Net.IPAddress.Parse("152.216.7.110"),
+        UserAgent = "Mozilla/5.0 (X11; Linux x86_64)",
+        AcceptLanguage = "en-US,en;q=0.8"
+    },
+    Account = new Account
+    {
+        UserId = "3132",
+        Username = "fred"
+    }
+};
 ```
 
 After creating the request object, send a non-blocking minFraud Score request
@@ -168,14 +170,16 @@ If a transaction was scored incorrectly or you received a chargeback, you may
 report it to MaxMind. To do this, create a new `TransactionReport` object:
 
 ```csharp
-var report = new TransactionReport(
-    tag: TransactionReportTag.Chargeback,
-    chargebackCode: "BL",
-    ipAddress: IPAddress.Parse("104.16.148.244"),
-    maxmindId: "abcd1234",
-    minfraudId: new Guid("01c25cb0-f067-4e02-8ed0-a094c580f5e4"),
-    notes: "Suspicious account behavior",
-    transactionId: "txn123");
+var report = new TransactionReport
+{
+    Tag = TransactionReportTag.Chargeback,
+    ChargebackCode = "BL",
+    IPAddress = IPAddress.Parse("104.16.148.244"),
+    MaxMindId = "abcd1234",
+    MinFraudId = new Guid("01c25cb0-f067-4e02-8ed0-a094c580f5e4"),
+    Notes = "Suspicious account behavior",
+    TransactionId = "txn123"
+};
 ```
 
 A valid `tag` and at least one of the following are required parameters:
@@ -304,7 +308,7 @@ public class MinFraudExample
                 BankPhoneNumber = "123-456-1234",
                 AvsResult = 'Y',
                 CvvResult = 'N',
-                Last4Digits = "7643",
+                LastDigits = "7643",
                 Token = "123456abc1234",
                 Was3DSecureSuccessful = true
             },

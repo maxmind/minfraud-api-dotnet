@@ -13,8 +13,13 @@ namespace MaxMind.MinFraud.Request
     /// The email information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Email
+    public sealed record Email
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Email() { }
+
         private static readonly Regex DuplicateDotComRe = new(@"(?:\.com){2,}$", RegexOptions.Compiled);
         private static readonly Regex GmailLeadingDigitRe = new(@"^\d+(?:gmail?\.com)$", RegexOptions.Compiled);
         private static readonly IdnMapping _idn = new();
@@ -290,6 +295,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="hashAddress">By default, the <c>address</c> will
         /// be sent in plain text. If <c>hashAddress</c> is set to true,
         /// the address will instead be sent as an MD5 hash.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Email(
             string? address = null,
             string? domain = null,
@@ -379,15 +385,6 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonIgnore]
         public bool HashAddress { get; init; } = false;
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Address: {Address}, Domain: {Domain}";
-        }
 
         private static string CleanAddress(string address)
         {

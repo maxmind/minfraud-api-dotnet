@@ -561,8 +561,13 @@ namespace MaxMind.MinFraud.Request
     /// The payment information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Payment
+    public sealed record Payment
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Payment() { }
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -575,6 +580,7 @@ namespace MaxMind.MinFraud.Request
         /// payment processor. If the transaction was not declined, do not
         /// include this field.</param>
         /// <param name="method">The payment method associated with the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Payment(
             PaymentProcessor? processor = null,
             bool? wasAuthorized = null,
@@ -628,14 +634,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("decline_code")]
         public string? DeclineCode { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Method: {Method}, Processor: {Processor}, WasAuthorized: {WasAuthorized}, DeclineCode: {DeclineCode}";
-        }
     }
 }

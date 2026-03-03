@@ -2,6 +2,8 @@
 using System;
 using Xunit;
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     public class OrderTest
