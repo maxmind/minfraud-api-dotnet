@@ -10,7 +10,7 @@ namespace MaxMind.MinFraud.Response
     /// explanation of the reason for the risk score, see
     /// <a href="https://dev.maxmind.com/minfraud/api-documentation/responses/#schema--response--risk-score-reason--multiplier-reason">the documentation</a>.
     /// </remarks>
-    public sealed class MultiplierReason
+    public sealed record MultiplierReason
     {
         /// <summary>
         /// This property is a machine-readable code identifying the reason.

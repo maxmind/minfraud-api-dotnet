@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Response
     /// This class provides both a machine-readable code and a human-readable
     /// explanation of the reason for the IP risk score.
     /// </remarks>
-    public sealed class IPRiskReason
+    public sealed record IPRiskReason
     {
         /// <summary>
         /// This property is a machine-readable code identifying the reason.

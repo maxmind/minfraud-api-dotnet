@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model class for Score response.
     /// </summary>
-    public class Score
+    public record Score
     {
         /// <summary>
         /// This object contains information about the disposition set by

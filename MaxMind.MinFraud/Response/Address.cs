@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// General address response data.
     /// </summary>
-    public abstract class Address
+    public abstract record Address
     {
         /// <summary>
         /// This property is <c>true</c> if the address is in the

@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for the credit card issuer data from minFraud.
     /// </summary>
-    public sealed class Issuer
+    public sealed record Issuer
     {
         /// <summary>
         /// The name of the bank which issued the credit card.

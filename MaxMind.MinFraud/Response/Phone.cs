@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// This object contains information about the billing or shipping phone.
     /// </summary>
-    public sealed class Phone
+    public sealed record Phone
     {
         /// <summary>
         /// A two-character ISO 3166-1 country code for the country associated

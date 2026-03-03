@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Information about the shipping address.
     /// </summary>
-    public sealed class ShippingAddress : Address
+    public sealed record ShippingAddress : Address
     {
         /// <summary>
         /// This property is <c>true</c> if the shipping address is in

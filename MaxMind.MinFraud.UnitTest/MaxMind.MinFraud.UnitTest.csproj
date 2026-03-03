@@ -24,6 +24,7 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <NoWarn>CS0618</NoWarn>
     <EnableMicrosoftTestingPlatform>true</EnableMicrosoftTestingPlatform>
   </PropertyGroup>
 

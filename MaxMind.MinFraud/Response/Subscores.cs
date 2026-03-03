@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// factors that are used to calculate the overall risk score.
     /// </summary>
     [Obsolete("Replaced by RiskScoreReason")]
-    public sealed class Subscores
+    public sealed record Subscores
     {
         /// <summary>
         /// The risk associated with the AVS result. If present, this is a

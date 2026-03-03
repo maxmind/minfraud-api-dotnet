@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Information about the credit card based on the issuer ID number.
     /// </summary>
-    public sealed class CreditCard
+    public sealed record CreditCard
     {
         /// <summary>
         /// The credit card brand.

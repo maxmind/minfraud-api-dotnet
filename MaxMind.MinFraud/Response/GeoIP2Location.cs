@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// A subclass of the GeoIP2 Location model with minFraud-specific
     /// additions.
     /// </summary>
-    public sealed class GeoIP2Location : Location
+    public sealed record GeoIP2Location : Location
     {
         /// <summary>
         /// The date and time of the transaction in the time

@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// A warning returned by the web service.
     /// </summary>
-    public sealed class Warning
+    public sealed record Warning
     {
         /// <summary>
         /// This value is a machine-readable code identifying the

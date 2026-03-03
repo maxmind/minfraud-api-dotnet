@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// This object contains the disposition set by custom rules.
     /// </summary>
-    public sealed class Disposition
+    public sealed record Disposition
     {
         /// <summary>
         /// The action to take on the transaction as defined by your custom

@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for minFraud GeoIP2 Insights data.
     /// </summary>
-    public sealed class IPAddress : InsightsResponse, IIPAddress
+    public sealed record IPAddress : InsightsResponse, IIPAddress
     {
         /// <summary>
         /// Location object for the requested IP address.
@@ -38,12 +38,6 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("risk_reasons")]
         public IReadOnlyList<IPRiskReason> RiskReasons { get; init; }
             = new List<IPRiskReason>().AsReadOnly();
-
-        internal new void SetLocales(IReadOnlyList<string> locales)
-        {
-            var l = new List<string>(locales);
-            base.SetLocales(l);
-        }
 
         /// <summary>
         /// Returns a string that represents the current object.

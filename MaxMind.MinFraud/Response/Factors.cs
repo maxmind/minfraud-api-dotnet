@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for Insights response.
     /// </summary>
-    public sealed class Factors : Insights
+    public sealed record Factors : Insights
     {
         /// <summary>
         /// This list contains objects that describe risk score reasons for a given transaction

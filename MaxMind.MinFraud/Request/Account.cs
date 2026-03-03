@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
     /// Account related data information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Account
+    public sealed record Account
     {
         /// <summary>
         /// Constructor.
@@ -22,6 +22,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="username">The username associated with the account.
         /// This is not the MD5 of username. Rather, the MD is automatically
         /// generated from this string.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Account(
             string? userId = null,
             string? username = null

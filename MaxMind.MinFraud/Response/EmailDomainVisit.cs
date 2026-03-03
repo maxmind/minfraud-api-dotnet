@@ -7,7 +7,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// This object contains information about the visit to the email domain.
     /// </summary>
-    public sealed class EmailDomainVisit
+    public sealed record EmailDomainVisit
     {
         /// <summary>
         /// This property is true if the domain automatically forwards visitors

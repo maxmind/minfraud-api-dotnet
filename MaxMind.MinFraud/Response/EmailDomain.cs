@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// This object contains information about the email address domain passed
     /// in the request.
     /// </summary>
-    public sealed class EmailDomain
+    public sealed record EmailDomain
     {
         /// <summary>
         /// The classification of the email domain.

@@ -67,7 +67,7 @@ namespace MaxMind.MinFraud.Request
     /// Event information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Event
+    public sealed record Event
     {
         /// <summary>
         /// Constructor.
@@ -84,6 +84,7 @@ namespace MaxMind.MinFraud.Request
         /// field is not in the request, the current time will be used.</param>
         /// <param name="type">The type of event being scored.</param>
         /// <param name="party">The party submitting the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Event(
             string? transactionId = null,
             string? shopId = null,

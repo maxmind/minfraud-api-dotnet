@@ -33,7 +33,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaxMind.GeoIP2" Version="5.4.1" />
+    <ProjectReference Include="../../../../../GeoIP2-dotnet/.worktrees/greg/eng-3437/MaxMind.GeoIP2/MaxMind.GeoIP2.csproj" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.3" />
   </ItemGroup>
 

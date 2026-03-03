@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
     /// <see href="https://dev.maxmind.com/minfraud/track-devices?lang=en">Device
     /// Tracking Add-on</see>.
     /// </summary>
-    public sealed class Device
+    public sealed record Device
     {
         /// <summary>
         /// A number representing the confidence that the <c>DeviceId</c>

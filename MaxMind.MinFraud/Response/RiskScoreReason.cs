@@ -6,7 +6,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for a risk score multiplier and reasons for that multiplier.
     /// </summary>
-    public sealed class RiskScoreReason
+    public sealed record RiskScoreReason
     {
         /// <summary>
         /// The factor by which the risk score is increased (if the value is greater than 1)

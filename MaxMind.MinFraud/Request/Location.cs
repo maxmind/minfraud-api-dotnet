@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// The location information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public abstract class Location
+    public abstract record Location
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
 
@@ -28,6 +28,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="postal">The postal code of the user’s address.</param>
         /// <param name="phoneNumber">The phone number without the country code for the user’s address.</param>
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s address.</param>
+        [Obsolete("Use object initializer syntax.")]
         protected Location(
             string? firstName = null,
             string? lastName = null,
