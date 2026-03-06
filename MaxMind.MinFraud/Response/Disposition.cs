@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// This object contains the disposition set by custom rules.
     /// </summary>
-    public sealed class Disposition
+    public sealed record Disposition
     {
         /// <summary>
         /// The action to take on the transaction as defined by your custom
@@ -32,13 +32,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("rule_label")]
         public string? RuleLabel { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Action: {Action}, Reason: {Reason}, Rule Label: {RuleLabel}";
-        }
     }
 }

@@ -42,7 +42,7 @@ namespace MaxMind.MinFraud.Request
     /// The transaction information for a report you would like to file with
     /// MaxMind.
     /// </summary>
-    public sealed class TransactionReport
+    public sealed record TransactionReport
     {
         /// <summary>
         /// Constructor with validation.
@@ -79,6 +79,7 @@ namespace MaxMind.MinFraud.Request
         ///     one of the transaction's <c>ipAddress</c>, <c>maxmindId</c>,
         ///     or <c>minfraudId></c>. You are encouraged to provide it, if
         ///     possible.</param>
+        [Obsolete("Use object initializer syntax.")]
         public TransactionReport(
             TransactionReportTag tag,
             string? chargebackCode = null,

@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     /// This object contains information about the email address domain passed
     /// in the request.
     /// </summary>
-    public sealed class EmailDomain
+    public sealed record EmailDomain
     {
         /// <summary>
         /// The classification of the email domain.
@@ -44,13 +44,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("visit")]
         public EmailDomainVisit? Visit { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Classification: {Classification}, FirstSeen: {FirstSeen}, Risk: {Risk}, Volume: {Volume}, Visit: {Visit}";
-        }
     }
 }

@@ -561,7 +561,7 @@ namespace MaxMind.MinFraud.Request
     /// The payment information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Payment
+    public sealed record Payment
     {
         /// <summary>
         /// Constructor.
@@ -575,6 +575,7 @@ namespace MaxMind.MinFraud.Request
         /// payment processor. If the transaction was not declined, do not
         /// include this field.</param>
         /// <param name="method">The payment method associated with the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Payment(
             PaymentProcessor? processor = null,
             bool? wasAuthorized = null,

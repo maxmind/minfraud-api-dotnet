@@ -122,8 +122,11 @@ namespace MaxMind.MinFraud
         public async Task<Factors> FactorsAsync(Transaction transaction)
         {
             var factors = await MakeResponse<Factors>(transaction).ConfigureAwait(false);
-            factors.IPAddress.SetLocales(_locales);
-            return factors;
+            return factors with
+            {
+                IPAddress = (Response.IPAddress)((GeoIP2.Responses.AbstractResponse)factors.IPAddress)
+                    .WithLocales(_locales)
+            };
         }
 
         /// <summary>
@@ -136,8 +139,11 @@ namespace MaxMind.MinFraud
         public async Task<Insights> InsightsAsync(Transaction transaction)
         {
             var insights = await MakeResponse<Insights>(transaction).ConfigureAwait(false);
-            insights.IPAddress.SetLocales(_locales);
-            return insights;
+            return insights with
+            {
+                IPAddress = (Response.IPAddress)((GeoIP2.Responses.AbstractResponse)insights.IPAddress)
+                    .WithLocales(_locales)
+            };
         }
 
         /// <summary>

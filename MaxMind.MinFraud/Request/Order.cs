@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// The order information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Order
+    public sealed record Order
     {
         private static readonly Regex CurrencyRe = new("^[A-Z]{3}$", RegexOptions.Compiled);
 
@@ -31,6 +31,7 @@ namespace MaxMind.MinFraud.Request
         /// purchaser.</param>
         /// <param name="hasGiftMessage">Whether the purchaser included a gift
         /// message.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Order(
             decimal? amount = null,
             string? currency = null,

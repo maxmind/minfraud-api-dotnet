@@ -6,7 +6,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for a risk score multiplier and reasons for that multiplier.
     /// </summary>
-    public sealed class RiskScoreReason
+    public sealed record RiskScoreReason
     {
         /// <summary>
         /// The factor by which the risk score is increased (if the value is greater than 1)
@@ -23,14 +23,5 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("reasons")]
         public IReadOnlyList<MultiplierReason> Reasons { get; init; }
             = new List<MultiplierReason>().AsReadOnly();
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Multiplier: {Multiplier}, Reasons: {Reasons}";
-        }
     }
 }

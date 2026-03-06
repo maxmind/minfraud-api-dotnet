@@ -1,4 +1,5 @@
 ﻿using MaxMind.MinFraud.Util;
+using System;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 
@@ -24,7 +25,7 @@ namespace MaxMind.MinFraud.Request
     /// The shipping information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Shipping : Location
+    public sealed record Shipping : Location
     {
         /// <summary>
         /// Constructor.
@@ -43,6 +44,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="phoneNumber">The phone number without the country code for the user’s shipping address.</param>
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s shipping address.</param>
         /// <param name="deliverySpeed">The shipping delivery speed for the order.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Shipping(
             string? firstName = null,
             string? lastName = null,

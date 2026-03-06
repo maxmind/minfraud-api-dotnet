@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
@@ -6,7 +7,7 @@ namespace MaxMind.MinFraud.Request
     /// Information for an item in the shopping cart for the transaction
     /// being sent to the web service.
     /// </summary>
-    public sealed class ShoppingCartItem
+    public sealed record ShoppingCartItem
     {
         /// <summary>
         /// Constructor
@@ -17,6 +18,7 @@ namespace MaxMind.MinFraud.Request
         /// This must be positive</param>
         /// <param name="price">The price of the item in the shopping cart. This
         /// should be the same currency as the order currency.</param>
+        [Obsolete("Use object initializer syntax.")]
         public ShoppingCartItem(
             string? category = null,
             string? itemId = null,

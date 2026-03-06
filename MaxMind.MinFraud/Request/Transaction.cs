@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
@@ -6,7 +7,7 @@ namespace MaxMind.MinFraud.Request
     /// <summary>
     ///     The transaction to be sent to the web service.
     /// </summary>
-    public sealed class Transaction
+    public sealed record Transaction
     {
         /// <summary>
         ///     Constructor. See
@@ -27,6 +28,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="payment">Information about the payment processing.</param>
         /// <param name="shipping">Shipping information used in the transaction.</param>
         /// <param name="shoppingCart">List of shopping items in the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Transaction(
             Device? device = null,
             Account? account = null,

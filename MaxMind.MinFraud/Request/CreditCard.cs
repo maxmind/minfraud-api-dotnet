@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Request
     /// The credit card information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class CreditCard
+    public sealed record CreditCard
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
         private static readonly Regex IssuerIdNumberRe = new("^[0-9]{6}$|^[0-9]{8}$", RegexOptions.Compiled);
@@ -55,6 +55,7 @@ namespace MaxMind.MinFraud.Request
         /// processor does not provide them. The ISO 3166-1 alpha-2 country code
         /// should be used, e.g., "US".
         /// </param>
+        [Obsolete("Use object initializer syntax.")]
         public CreditCard(
             string? issuerIdNumber = null,
             string? lastDigits = null,

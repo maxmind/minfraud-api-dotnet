@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// This object contains information about the billing or shipping phone.
     /// </summary>
-    public sealed class Phone
+    public sealed record Phone
     {
         /// <summary>
         /// A two-character ISO 3166-1 country code for the country associated
@@ -50,14 +50,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("number_type")]
         public string? NumberType { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Country: {Country}, IsVoip: {IsVoip}, MatchesPostal: {MatchesPostal}" +
-                $"NetworkOperator: {NetworkOperator}, NumberType: {NumberType}";
-        }
     }
 }

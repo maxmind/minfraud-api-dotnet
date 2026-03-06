@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// The IP addresses risk.
     /// </summary>
-    public sealed class ScoreIPAddress : IIPAddress
+    public sealed record ScoreIPAddress : IIPAddress
     {
         /// <summary>
         /// The risk associated with the IP address. The value ranges from 0.01
@@ -13,14 +13,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("risk")]
         public double? Risk { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Risk: {Risk}";
-        }
     }
 }
