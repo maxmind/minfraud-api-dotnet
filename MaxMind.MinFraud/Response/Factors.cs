@@ -27,16 +27,5 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("subscores")]
         [Obsolete("Replaced by RiskScoreReasons")]
         public Subscores Subscores { get; init; } = new Subscores();
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-#pragma warning disable 0618
-            return $"{base.ToString()}, Subscores: {Subscores}, RiskScoreReasons: {RiskScoreReasons}";
-#pragma warning restore 0618
-        }
     }
 }

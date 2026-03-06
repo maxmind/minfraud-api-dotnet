@@ -23,14 +23,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("distance_to_billing_address")]
         public int? DistanceToBillingAddress { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"{base.ToString()}, IsHighRisk: {IsHighRisk}, DistanceToBillingAddress: {DistanceToBillingAddress}";
-        }
     }
 }

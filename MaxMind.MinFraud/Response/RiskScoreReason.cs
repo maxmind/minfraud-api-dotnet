@@ -23,14 +23,5 @@ namespace MaxMind.MinFraud.Response
         [JsonPropertyName("reasons")]
         public IReadOnlyList<MultiplierReason> Reasons { get; init; }
             = new List<MultiplierReason>().AsReadOnly();
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Multiplier: {Multiplier}, Reasons: {Reasons}";
-        }
     }
 }

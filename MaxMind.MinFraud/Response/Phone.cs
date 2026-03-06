@@ -50,14 +50,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("number_type")]
         public string? NumberType { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Country: {Country}, IsVoip: {IsVoip}, MatchesPostal: {MatchesPostal}" +
-                $"NetworkOperator: {NetworkOperator}, NumberType: {NumberType}";
-        }
     }
 }

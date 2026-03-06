@@ -30,13 +30,5 @@ namespace MaxMind.MinFraud.Response
         [JsonConverter(typeof(EnumMemberValueConverter<DomainVisitStatus>))]
         [JsonPropertyName("status")]
         public DomainVisitStatus? Status { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"HasRedirect: {HasRedirect}, LastVisitedOn: {LastVisitedOn}, Status: {Status}";
-        }
     }
 }

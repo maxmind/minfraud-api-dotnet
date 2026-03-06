@@ -146,14 +146,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("time_of_day")]
         public double? TimeOfDay { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"AvsResult: {AvsResult}, BillingAddress: {BillingAddress}, BillingAddressDistanceToIPLocation: {BillingAddressDistanceToIPLocation}, Browser: {Browser}, Chargeback: {Chargeback}, Country: {Country}, CountryMismatch: {CountryMismatch}, CvvResult: {CvvResult}, EmailAddress: {EmailAddress}, EmailDomain: {EmailDomain}, IssuerIdMumber: {IssuerIdNumber}, OrderAmount: {OrderAmount}, PhoneNumber: {PhoneNumber}, ShippingAddressDistanceToIPLocation: {ShippingAddressDistanceToIPLocation}, TimeOfDay: {TimeOfDay}";
-        }
     }
 }

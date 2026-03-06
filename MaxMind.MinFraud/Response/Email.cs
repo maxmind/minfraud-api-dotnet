@@ -44,13 +44,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("is_high_risk")]
         public bool? IsHighRisk { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Domain: {Domain}, FirstSeen: {FirstSeen}, IsDisposable: {IsDisposable}, IsFree: {IsFree}, IsHighRiskFree: {IsHighRisk}";
-        }
     }
 }

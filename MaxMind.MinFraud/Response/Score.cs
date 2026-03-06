@@ -1,7 +1,6 @@
 ﻿using MaxMind.MinFraud.Util;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Response
@@ -65,15 +64,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("warnings")]
         public IReadOnlyList<Warning> Warnings { get; init; } = new List<Warning>().AsReadOnly();
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            var warnings = string.Join("; ", Warnings.Select(x => x.Message));
-            return $"Warnings: [{warnings}], Disposition: {Disposition}, FundsRemaining: {FundsRemaining}, Id: {Id},  QueriesRemaining: {QueriesRemaining}, RiskScore: {RiskScore}";
-        }
     }
 }

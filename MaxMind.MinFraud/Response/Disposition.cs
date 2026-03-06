@@ -32,13 +32,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("rule_label")]
         public string? RuleLabel { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Action: {Action}, Reason: {Reason}, Rule Label: {RuleLabel}";
-        }
     }
 }

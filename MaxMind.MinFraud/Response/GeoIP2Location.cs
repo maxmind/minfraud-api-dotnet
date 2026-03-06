@@ -16,14 +16,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("local_time")]
         public DateTimeOffset? LocalTime { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"{base.ToString()}, LocalTime: {LocalTime}";
-        }
     }
 }

@@ -42,15 +42,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("distance_to_ip_location")]
         public int? DistanceToIPLocation { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return
-                $"IsInIPCountry: {IsInIPCountry}, IsPostalInCity: {IsPostalInCity}, Latitude: {Latitude}, Longitude: {Longitude}, DistanceToIPLocation: {DistanceToIPLocation}";
-        }
     }
 }

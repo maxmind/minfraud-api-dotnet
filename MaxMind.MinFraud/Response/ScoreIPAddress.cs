@@ -13,14 +13,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("risk")]
         public double? Risk { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Risk: {Risk}";
-        }
     }
 }

@@ -32,14 +32,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("input_pointer")]
         public string? InputPointer { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"Code: {Code}, Message: {Message}, InputPointer: {InputPointer}";
-        }
     }
 }
