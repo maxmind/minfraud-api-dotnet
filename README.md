@@ -199,8 +199,8 @@ there is an error, an exception will be thrown.
 
 Thrown by the request models:
 
-- `ArgumentException` - Thrown when invalid data is passed to the model
-  constructor.
+- `ArgumentException` - Thrown when invalid data is passed to a request model
+  property or to `ReportAsync`.
 
 Thrown by `WebServiceClient` method calls:
 
