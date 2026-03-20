@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
@@ -6,8 +7,13 @@ namespace MaxMind.MinFraud.Request
     /// <summary>
     ///     The transaction to be sent to the web service.
     /// </summary>
-    public sealed class Transaction
+    public sealed record Transaction
     {
+        /// <summary>
+        ///     Constructor.
+        /// </summary>
+        public Transaction() { }
+
         /// <summary>
         ///     Constructor. See
         ///     <a href="https://dev.maxmind.com/minfraud/api-documentation/requests?lang=en">
@@ -27,6 +33,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="payment">Information about the payment processing.</param>
         /// <param name="shipping">Shipping information used in the transaction.</param>
         /// <param name="shoppingCart">List of shopping items in the transaction.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Transaction(
             Device? device = null,
             Account? account = null,
@@ -119,15 +126,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("shopping_cart")]
         public IList<ShoppingCartItem>? ShoppingCart { get; init; }
-
-        /// <summary>
-        ///     Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return
-                $"Account: {Account}, Billing: {Billing}, CreditCard: {CreditCard}, Device: {Device}, Email: {Email}, Event: {Event}, Order: {Order}, Payment: {Payment}, Shipping: {Shipping}, ShoppingCart: {ShoppingCart}";
-        }
     }
 }

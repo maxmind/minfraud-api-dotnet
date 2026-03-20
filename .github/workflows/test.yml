@@ -3,7 +3,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '3 20 * * SUN'
+    - cron: "3 20 * * SUN"
 
 permissions: {}
 

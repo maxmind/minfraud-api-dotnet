@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Information about the shipping address.
     /// </summary>
-    public sealed class ShippingAddress : Address
+    public sealed record ShippingAddress : Address
     {
         /// <summary>
         /// This property is <c>true</c> if the shipping address is in
@@ -23,14 +23,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("distance_to_billing_address")]
         public int? DistanceToBillingAddress { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"{base.ToString()}, IsHighRisk: {IsHighRisk}, DistanceToBillingAddress: {DistanceToBillingAddress}";
-        }
     }
 }

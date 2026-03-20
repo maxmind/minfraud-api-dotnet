@@ -1,11 +1,18 @@
-﻿namespace MaxMind.MinFraud.Request
+﻿using System;
+
+namespace MaxMind.MinFraud.Request
 {
     /// <summary>
     /// The billing information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public sealed class Billing : Location
+    public sealed record Billing : Location
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Billing() { }
+
         /// <summary>
         /// Constructor.
         /// </summary>
@@ -22,6 +29,7 @@
         /// <param name="postal">The postal code of the user’s billing address.</param>
         /// <param name="phoneNumber">The phone number without the country code for the user’s billing address.</param>
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s billing address.</param>
+        [Obsolete("Use object initializer syntax.")]
         public Billing(
             string? firstName = null,
             string? lastName = null,

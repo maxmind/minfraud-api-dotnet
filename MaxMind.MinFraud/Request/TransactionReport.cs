@@ -1,5 +1,6 @@
 ﻿using MaxMind.MinFraud.Util;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
@@ -42,8 +43,13 @@ namespace MaxMind.MinFraud.Request
     /// The transaction information for a report you would like to file with
     /// MaxMind.
     /// </summary>
-    public sealed class TransactionReport
+    public sealed record TransactionReport
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public TransactionReport() { }
+
         /// <summary>
         /// Constructor with validation.
         /// </summary>
@@ -79,6 +85,8 @@ namespace MaxMind.MinFraud.Request
         ///     one of the transaction's <c>ipAddress</c>, <c>maxmindId</c>,
         ///     or <c>minfraudId></c>. You are encouraged to provide it, if
         ///     possible.</param>
+        [Obsolete("Use object initializer syntax.")]
+        [SetsRequiredMembers]
         public TransactionReport(
             TransactionReportTag tag,
             string? chargebackCode = null,
@@ -115,6 +123,7 @@ namespace MaxMind.MinFraud.Request
         /// Constructor for backwards compatibility.
         /// </summary>
         [Obsolete]
+        [SetsRequiredMembers]
         public TransactionReport(
             IPAddress? ipAddress,
             TransactionReportTag tagObsolete,
@@ -140,7 +149,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<TransactionReportTag>))]
         [JsonPropertyName("tag")]
-        public TransactionReportTag Tag { get; init; }
+        public required TransactionReportTag Tag { get; init; }
 
         /// <summary>
         /// A string which is provided by your payment processor indicating
@@ -177,7 +186,11 @@ namespace MaxMind.MinFraud.Request
         /// provide it if the request was made to one of these services.
         /// </summary>
         [JsonPropertyName("minfraud_id")]
-        public Guid? MinFraudId { get; init; }
+        public Guid? MinFraudId
+        {
+            get => field;
+            init => field = value == Guid.Empty ? null : value;
+        }
 
         /// <summary>
         /// Your notes on the fraud tag associated with the transaction. We
@@ -195,15 +208,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("transaction_id")]
         public string? TransactionId { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"IPAddress: {IPAddress}, Tag: {Tag}, ChargebackCode: {ChargebackCode}, MaxMindId: {MaxMindId}, "
-                + $"MinFraudId: {MinFraudId}, Notes: {Notes}, TransactionId: {TransactionId}";
-        }
     }
 }

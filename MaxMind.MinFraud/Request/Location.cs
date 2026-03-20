@@ -8,9 +8,14 @@ namespace MaxMind.MinFraud.Request
     /// The location information for the transaction being sent to the
     /// web service.
     /// </summary>
-    public abstract class Location
+    public abstract record Location
     {
         private static readonly Regex CountryRe = new("^[A-Z]{2}$", RegexOptions.Compiled);
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        protected Location() { }
 
         /// <summary>
         /// Constructor.
@@ -28,6 +33,7 @@ namespace MaxMind.MinFraud.Request
         /// <param name="postal">The postal code of the user’s address.</param>
         /// <param name="phoneNumber">The phone number without the country code for the user’s address.</param>
         /// <param name="phoneCountryCode">The country code for phone number associated with the user’s address.</param>
+        [Obsolete("Use object initializer syntax.")]
         protected Location(
             string? firstName = null,
             string? lastName = null,
@@ -133,15 +139,5 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("phone_country_code")]
         public string? PhoneCountryCode { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return
-                $"FirstName: {FirstName}, LastName: {LastName}, Company: {Company}, Address: {Address}, Address2: {Address2}, Region: {Region}, Country: {Country}, Postal: {Postal}, City: {City}, PhoneNumber: {PhoneNumber}, PhoneCountryCode: {PhoneCountryCode}";
-        }
     }
 }

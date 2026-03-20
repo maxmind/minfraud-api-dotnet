@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Information about the credit card based on the issuer ID number.
     /// </summary>
-    public sealed class CreditCard
+    public sealed record CreditCard
     {
         /// <summary>
         /// The credit card brand.
@@ -62,14 +62,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("type")]
         public string? Type { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return $"{nameof(Brand)}: {Brand}, {nameof(Country)}: {Country}, {nameof(IsBusiness)}: {IsBusiness}, {nameof(IsIssuedInBillingAddressCountry)}: {IsIssuedInBillingAddressCountry}, {nameof(IsPrepaid)}: {IsPrepaid}, {nameof(IsVirtual)}: {IsVirtual}, {nameof(Issuer)}: {Issuer}, {nameof(Type)}: {Type}";
-        }
     }
 }

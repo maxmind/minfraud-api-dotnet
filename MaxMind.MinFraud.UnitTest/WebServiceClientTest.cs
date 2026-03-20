@@ -44,7 +44,7 @@ namespace MaxMind.MinFraud.UnitTest
             var response = await client.InsightsAsync(request);
             CompareJson(responseContent, response);
 
-            // The purpose here is to test that SetLocales worked as expected
+            // The purpose here is to test that WithLocales worked as expected
             Assert.Equal("London", response.IPAddress.City.Name);
             Assert.Equal("United Kingdom", response.IPAddress.Country.Name);
 
@@ -90,17 +90,32 @@ namespace MaxMind.MinFraud.UnitTest
                 "application/json",
                 ""
             );
-            var request = new TransactionReport(
-                ipAddress: IPAddress.Parse("1.1.1.1"),
-                tag: TransactionReportTag.SuspectedFraud,
-                chargebackCode: "AA",
-                maxmindId: "a1b2c3d4",
-                minfraudId: new Guid("9194a1ac-0a81-475a-bf81-9bf8543a3f8f"),
-                notes: "note",
-                transactionId: "txn1");
+            var request = new TransactionReport
+            {
+                IPAddress = IPAddress.Parse("1.1.1.1"),
+                Tag = TransactionReportTag.SuspectedFraud,
+                ChargebackCode = "AA",
+                MaxMindId = "a1b2c3d4",
+                MinFraudId = new Guid("9194a1ac-0a81-475a-bf81-9bf8543a3f8f"),
+                Notes = "note",
+                TransactionId = "txn1"
+            };
             var exception = await Record.ExceptionAsync(() => client.ReportAsync(request));
 
             Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task TestReportRequiresIdentifier()
+        {
+            var client = CreateClient(
+                "transactions/report",
+                HttpStatusCode.NoContent,
+                "application/json",
+                ""
+            );
+            var report = new TransactionReport { Tag = TransactionReportTag.NotFraud };
+            await Assert.ThrowsAsync<ArgumentException>(() => client.ReportAsync(report));
         }
 
         [Fact]

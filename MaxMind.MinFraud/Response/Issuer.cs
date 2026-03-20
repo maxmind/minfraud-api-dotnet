@@ -5,7 +5,7 @@ namespace MaxMind.MinFraud.Response
     /// <summary>
     /// Model for the credit card issuer data from minFraud.
     /// </summary>
-    public sealed class Issuer
+    public sealed record Issuer
     {
         /// <summary>
         /// The name of the bank which issued the credit card.
@@ -40,15 +40,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("matches_provided_phone_number")]
         public bool? MatchesProvidedPhoneNumber { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        /// <returns>A string that represents the current object.</returns>
-        public override string ToString()
-        {
-            return
-                $"Name: {Name}, MatchesProvidedName: {MatchesProvidedName}, PhoneNumber: {PhoneNumber}, MatchesProvidedPhoneNumber: {MatchesProvidedPhoneNumber}";
-        }
     }
 }

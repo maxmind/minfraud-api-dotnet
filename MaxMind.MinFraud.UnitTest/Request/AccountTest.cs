@@ -1,4 +1,4 @@
-﻿using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Request;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -8,9 +8,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestUserId()
         {
-            var account = new Account(
-                userId: "usr"
-            );
+            var account = new Account
+            {
+                UserId = "usr"
+            };
 
             Assert.Equal("usr", account.UserId);
         }
@@ -18,9 +19,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestUsername()
         {
-            var account = new Account(
-                username: "username"
-            );
+            var account = new Account
+            {
+                Username = "username"
+            };
             Assert.Equal("14c4b06b824ec593239362517f538b29", account.UsernameMD5);
         }
 
@@ -30,7 +32,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestNullUsername()
         {
-            var account = new Account(username: null);
+            var account = new Account { Username = null };
             Assert.Null(account.UsernameMD5);
         }
     }

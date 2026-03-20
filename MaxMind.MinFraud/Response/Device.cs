@@ -11,7 +11,7 @@ namespace MaxMind.MinFraud.Response
     /// <see href="https://dev.maxmind.com/minfraud/track-devices?lang=en">Device
     /// Tracking Add-on</see>.
     /// </summary>
-    public sealed class Device
+    public sealed record Device
     {
         /// <summary>
         /// A number representing the confidence that the <c>DeviceId</c>
@@ -42,13 +42,5 @@ namespace MaxMind.MinFraud.Response
         /// </summary>
         [JsonPropertyName("local_time")]
         public DateTimeOffset? LocalTime { get; init; }
-
-        /// <summary>
-        /// Returns a string that represents the current object.
-        /// </summary>
-        public override string ToString()
-        {
-            return $"Confidence: {Confidence}, Id: {Id}, LastSeen: {LastSeen}, LocalTime: {LocalTime}";
-        }
     }
 }

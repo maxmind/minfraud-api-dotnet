@@ -227,7 +227,7 @@
     "country_mismatch": 0.07,
     "cvv_result": 0.08,
     "device": 0.09,
-    "email_address": 0.10,
+    "email_address": 0.1,
     "email_domain": 0.11,
     "email_local_part": 0.12,
     "issuer_id_number": 0.15,
@@ -235,7 +235,7 @@
     "phone_number": 0.17,
     "shipping_address": 0.18,
     "shipping_address_distance_to_ip_location": 0.19,
-    "time_of_day": 0.20
+    "time_of_day": 0.2
   },
   "warnings": [
     {

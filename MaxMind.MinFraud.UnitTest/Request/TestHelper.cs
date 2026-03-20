@@ -52,6 +52,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             return currentDirectory;
         }
 
+#pragma warning disable CS0618 // Type or member is obsolete
         public static Transaction CreateFullRequestUsingConstructors()
         {
             return new Transaction(
@@ -167,6 +168,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 }
             );
         }
+#pragma warning restore CS0618 // Type or member is obsolete
 
         public static Transaction CreateFullRequest()
         {

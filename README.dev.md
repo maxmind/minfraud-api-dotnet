@@ -9,4 +9,5 @@ To publish the to NuGet:
 4. Run dev-bin/release.sh. This will build the project, create a version commit,
    and make a GitHub release.
 5. Approve the workflow run in the GitHub Actions UI.
-6. Verify the release on [NuGet](https://www.nuget.org/packages/MaxMind.MinFraud/).
+6. Verify the release on
+   [NuGet](https://www.nuget.org/packages/MaxMind.MinFraud/).
