@@ -190,7 +190,7 @@ namespace MaxMind.MinFraud
                     + "IPAddress, MinFraudId, MaxMindId, TransactionId.");
             }
 
-            await MakeRequest("transactions/report", report);
+            await MakeRequest("transactions/report", report).ConfigureAwait(false);
         }
 
         private async Task<T> MakeResponse<T>(Transaction request) where T : Score
