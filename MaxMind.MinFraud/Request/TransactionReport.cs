@@ -1,5 +1,6 @@
 ﻿using MaxMind.MinFraud.Util;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
@@ -85,6 +86,7 @@ namespace MaxMind.MinFraud.Request
         ///     or <c>minfraudId></c>. You are encouraged to provide it, if
         ///     possible.</param>
         [Obsolete("Use object initializer syntax.")]
+        [SetsRequiredMembers]
         public TransactionReport(
             TransactionReportTag tag,
             string? chargebackCode = null,
@@ -121,6 +123,7 @@ namespace MaxMind.MinFraud.Request
         /// Constructor for backwards compatibility.
         /// </summary>
         [Obsolete]
+        [SetsRequiredMembers]
         public TransactionReport(
             IPAddress? ipAddress,
             TransactionReportTag tagObsolete,
@@ -146,7 +149,7 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonConverter(typeof(EnumMemberValueConverter<TransactionReportTag>))]
         [JsonPropertyName("tag")]
-        public TransactionReportTag Tag { get; init; }
+        public required TransactionReportTag Tag { get; init; }
 
         /// <summary>
         /// A string which is provided by your payment processor indicating
