@@ -1,40 +1,40 @@
-# .NET API for MaxMind minFraud Services #
+# .NET API for MaxMind minFraud Services
 
 [![NuGet](https://img.shields.io/nuget/v/MaxMind.MinFraud)](https://www.nuget.org/packages/MaxMind.MinFraud)
 [![API Docs](https://www.fuget.org/packages/MaxMind.MinFraud/badge.svg)](https://www.fuget.org/packages/MaxMind.MinFraud)
 
-## Description ##
+## Description
 
-This package provides an API for the [MaxMind minFraud web services](https://dev.maxmind.com/minfraud?lang=en).
-This includes minFraud Score, Insights, and Factors. It also includes our
+This package provides an API for the
+[MaxMind minFraud web services](https://dev.maxmind.com/minfraud?lang=en). This
+includes minFraud Score, Insights, and Factors. It also includes our
 [minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-a-transaction?lang=en).
 
-The legacy minFraud Standard and Premium services are not supported by this
-API.
+The legacy minFraud Standard and Premium services are not supported by this API.
 
-## Requirements ##
+## Requirements
 
-This library works with .NET Framework version 4.6.1 and above and .NET
-Standard 2.0 or above.
+This library works with .NET Framework version 4.6.1 and above and .NET Standard
+2.0 or above.
 
 This library depends on [GeoIP2](https://www.nuget.org/packages/MaxMind.GeoIP2/)
 and its dependencies.
 
-## Installation ##
+## Installation
 
-### NuGet ###
+### NuGet
 
-We recommend installing this library with NuGet. To do this, type the
-following into the Visual Studio Package Manager Console:
+We recommend installing this library with NuGet. To do this, type the following
+into the Visual Studio Package Manager Console:
 
 ```
 install-package MaxMind.MinFraud
 ```
 
-## Usage ##
+## Usage
 
-This API uses the [async/await
-feature](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
+This API uses the
+[async/await feature](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)
 to provide non-blocking calls to the minFraud web services.
 
 To use this API, first create a new `WebServiceClient` object. The constructor
@@ -44,29 +44,30 @@ takes your MaxMind account ID and license key:
 var client = new WebServiceClient(10, "LICENSEKEY");
 ```
 
-To use the Sandbox web service instead of the production web service, you can provide the host argument:
-    
+To use the Sandbox web service instead of the production web service, you can
+provide the host argument:
+
 ```csharp
 var client = new WebServiceClient(
-    accountId: 10, 
-    licenseKey: "LICENSEKEY", 
+    accountId: 10,
+    licenseKey: "LICENSEKEY",
     host: "sandbox.maxmind.com"
     );
 ```
 
-You may also specify the fall-back locales, the host, or the timeout as
-optional parameters. See the API docs for more information.
+You may also specify the fall-back locales, the host, or the timeout as optional
+parameters. See the API docs for more information.
 
 This object is safe to share across threads. If you are making multiple
-requests, the object should be reused to so that new connections are not
-created for each request. Once you have finished making requests, you
-should dispose of the object to ensure the connections are closed and any
-resources are promptly returned to the system.
+requests, the object should be reused to so that new connections are not created
+for each request. Once you have finished making requests, you should dispose of
+the object to ensure the connections are closed and any resources are promptly
+returned to the system.
 
-### Making a minFraud Score, Insights, or Factors Request ###
+### Making a minFraud Score, Insights, or Factors Request
 
-Create a new `Transaction` object. This represents the transaction that you
-are sending to minFraud:
+Create a new `Transaction` object. This represents the transaction that you are
+sending to minFraud:
 
 ```csharp
 var transaction = new Transaction
@@ -85,9 +86,9 @@ var transaction = new Transaction
 };
 ```
 
-After creating the request object, send a non-blocking minFraud Score request
-by calling the `ScoreAsync` method using the `await` keyword from a method
-marked as async:
+After creating the request object, send a non-blocking minFraud Score request by
+calling the `ScoreAsync` method using the `await` keyword from a method marked
+as async:
 
 ```csharp
 var score = await client.ScoreAsync(transaction);
@@ -110,9 +111,9 @@ the request fails, an exception will be thrown.
 
 See the API documentation for more details.
 
-### ASP.NET Core Usage ###
+### ASP.NET Core Usage
 
-To use the web service API with HttpClient factory pattern as a 
+To use the web service API with HttpClient factory pattern as a
 [Typed client](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#typed-clients)
 you need to do the following:
 
@@ -126,7 +127,8 @@ services.Configure<WebServiceClientOptions>(Configuration.GetSection("MinFraud")
 services.AddHttpClient<WebServiceClient>();
 ```
 
-2. Add configuration in your `appsettings.json` with your account ID and license key.
+2. Add configuration in your `appsettings.json` with your account ID and license
+   key.
 
 ```jsonc
 ...
@@ -163,8 +165,7 @@ public class MinFraudController : ControllerBase
 }
 ```
 
-
-### Reporting a Transaction to MaxMind ###
+### Reporting a Transaction to MaxMind
 
 If a transaction was scored incorrectly or you received a chargeback, you may
 report it to MaxMind. To do this, create a new `TransactionReport` object:
@@ -191,28 +192,28 @@ Send the report by calling the `ReportAsync` method using the `await` keyword:
 await client.ReportAsync(report);
 ```
 
-The endpoint does not return any data and the method does not return a value.
-If there is an error, an exception will be thrown.
+The endpoint does not return any data and the method does not return a value. If
+there is an error, an exception will be thrown.
 
-### Exceptions ###
+### Exceptions
 
 Thrown by the request models:
 
-* `ArgumentException` - Thrown when invalid data is passed to the model
+- `ArgumentException` - Thrown when invalid data is passed to the model
   constructor.
 
 Thrown by `WebServiceClient` method calls:
 
-* `AuthenticationException` - Thrown when the server is unable to authenticate
+- `AuthenticationException` - Thrown when the server is unable to authenticate
   the request, e.g., if the license key or account ID is invalid.
-* `InsufficientFundsException` - Thrown when your account is out of funds.
-* `PermissionRequiredException` - Thrown when your account does not have
+- `InsufficientFundsException` - Thrown when your account is out of funds.
+- `PermissionRequiredException` - Thrown when your account does not have
   permission to access the service.
-* `InvalidRequestException` - Thrown when the server rejects the request for
+- `InvalidRequestException` - Thrown when the server rejects the request for
   another reason such as invalid JSON in the POST.
-* `MinFraudException` - Thrown when the server returns an unexpected response.
+- `MinFraudException` - Thrown when the server returns an unexpected response.
   This also serves as the base class for the above exceptions.
-* `HttpException` - Thrown when an unexpected HTTP error occurs such as an
+- `HttpException` - Thrown when an unexpected HTTP error occurs such as an
   internal server error or other unexpected status code.
 
 ## Example
@@ -365,25 +366,24 @@ public class MinFraudExample
 }
 ```
 
-## Support ##
+## Support
 
 Please report all issues with this code using the
 [GitHub issue tracker](https://github.com/maxmind/minfraud-api-dotnet/issues).
 
-If you are having an issue with the minFraud service that is not specific
-to the client API, please see
-[our support page](https://www.maxmind.com/en/support).
+If you are having an issue with the minFraud service that is not specific to the
+client API, please see [our support page](https://www.maxmind.com/en/support).
 
-## Contributing ##
+## Contributing
 
 Patches and pull requests are encouraged. Please include unit tests whenever
 possible.
 
-## Versioning ##
+## Versioning
 
 This API uses [Semantic Versioning](https://semver.org/).
 
-## Copyright and License ##
+## Copyright and License
 
 This software is Copyright (c) 2015-2026 by MaxMind, Inc.
 

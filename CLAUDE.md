@@ -1,18 +1,26 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with
+code in this repository.
 
 ## Project Overview
 
-**minfraud-api-dotnet** is MaxMind's official .NET client library for the minFraud fraud detection web services:
+**minfraud-api-dotnet** is MaxMind's official .NET client library for the
+minFraud fraud detection web services:
+
 - **minFraud Score**: Risk score for transactions
 - **minFraud Insights**: Score plus GeoIP2 data and device/email intelligence
-- **minFraud Factors**: All Insights data plus risk reasons and deprecated subscores
-- **Transaction Reporting API**: Report chargebacks and fraud to improve minFraud accuracy
+- **minFraud Factors**: All Insights data plus risk reasons and deprecated
+  subscores
+- **Transaction Reporting API**: Report chargebacks and fraud to improve
+  minFraud accuracy
 
-The library provides both synchronous and asynchronous methods, supports ASP.NET Core dependency injection, and integrates deeply with MaxMind's GeoIP2 library for IP intelligence.
+The library provides both synchronous and asynchronous methods, supports ASP.NET
+Core dependency injection, and integrates deeply with MaxMind's GeoIP2 library
+for IP intelligence.
 
 **Key Technologies:**
+
 - .NET 10.0, .NET 9.0, .NET 8.0, .NET Standard 2.1, and .NET Standard 2.0
 - System.Text.Json for JSON serialization/deserialization
 - MaxMind.GeoIP2 library (critical dependency for response models)
@@ -22,6 +30,7 @@ The library provides both synchronous and asynchronous methods, supports ASP.NET
 ## Development Commands
 
 ### Building
+
 ```bash
 # Build main library
 dotnet build MaxMind.MinFraud
@@ -34,6 +43,7 @@ dotnet build MaxMind.MinFraud.sln
 ```
 
 ### Testing
+
 ```bash
 # Run all tests
 dotnet test MaxMind.MinFraud.UnitTest/MaxMind.MinFraud.UnitTest.csproj
@@ -46,6 +56,7 @@ dotnet test -v normal
 ```
 
 ### Other Commands
+
 ```bash
 # Check for outdated dependencies
 dotnet-outdated
@@ -85,7 +96,8 @@ MaxMind.MinFraud.UnitTest/
 
 #### 1. **Request Model Composition with Init-Only Properties**
 
-The `Transaction` model aggregates 11 optional sub-models using init-only properties:
+The `Transaction` model aggregates 11 optional sub-models using init-only
+properties:
 
 ```csharp
 var transaction = new Transaction {
@@ -97,6 +109,7 @@ var transaction = new Transaction {
 ```
 
 **Key Points:**
+
 - All request properties use `init` setters (immutable after construction)
 - Validation happens immediately in property setters (fail-fast)
 - JSON serialization uses `[JsonPropertyName("snake_case")]` attributes
@@ -115,9 +128,12 @@ Score (base)
 ```
 
 **Key Points:**
+
 - Each level adds more detail without breaking compatibility
-- Interface-based polymorphism for `IIPAddress` (Score uses minimal, Insights uses full)
-- Response models inherit from GeoIP2 models (e.g., `IPAddress : InsightsResponse`)
+- Interface-based polymorphism for `IIPAddress` (Score uses minimal, Insights
+  uses full)
+- Response models inherit from GeoIP2 models (e.g.,
+  `IPAddress : InsightsResponse`)
 - All response properties are init-only with default empty objects (never null)
 
 #### 3. **GeoIP2 Integration via Inheritance**
@@ -135,13 +151,16 @@ public sealed class IPAddress : InsightsResponse, IIPAddress
 ```
 
 **Implications:**
+
 - Changes to GeoIP2 models affect minFraud responses
 - When adding fields, check if they belong in GeoIP2 or minFraud layer
 - Use GeoIP2 patterns for location-related data
 
 #### 4. **Email Address Normalization**
 
-The `Email` class performs sophisticated normalization when `HashAddress = true`:
+The `Email` class performs sophisticated normalization when
+`HashAddress = true`:
+
 - Domain typo fixes: `gmai.com` → `gmail.com`
 - TLD typo fixes: `example.comm` → `example.com`
 - Equivalent domains: `googlemail.com` → `gmail.com`
@@ -166,6 +185,7 @@ var customInputs = new CustomInputs.Builder {
 ```
 
 **Key Points:**
+
 - One-time use (builder invalidated after `Build()`)
 - Type-safe overloads for supported types
 - Validation: key format `^[a-z0-9_]{1,25}$`, numeric range ±10^13
@@ -186,6 +206,7 @@ await client.ReportAsync(report);
 ```
 
 **Key Points:**
+
 - Thread-safe, designed for singleton/reuse across requests
 - Implements `IDisposable` for proper HttpClient lifecycle
 - Base path: `https://minfraud.maxmind.com/minfraud/v2.0/{endpoint}`
@@ -216,6 +237,7 @@ public MyController(WebServiceClient client) { ... }
 ## Testing Conventions
 
 ### Test Structure
+
 - Tests use xUnit framework
 - HTTP mocking via RichardSzalay.MockHttp
 - JSON fixtures in `TestData/` for response deserialization tests
@@ -224,6 +246,7 @@ public MyController(WebServiceClient client) { ... }
 ### Test Patterns
 
 **1. HTTP Mocking:**
+
 ```csharp
 var mockHttp = new MockHttpMessageHandler();
 mockHttp.When(HttpMethod.Post, "https://minfraud.maxmind.com/minfraud/v2.0/score")
@@ -233,6 +256,7 @@ var client = new WebServiceClient(new HttpClient(mockHttp), options);
 ```
 
 **2. Validation Testing:**
+
 ```csharp
 [Theory]
 [InlineData(-1.0)]  // Invalid
@@ -240,14 +264,16 @@ var client = new WebServiceClient(new HttpClient(mockHttp), options);
 public void TestSessionAge(double age) { ... }
 ```
 
-**3. JSON Round-Trip Testing:**
-Test that response objects can be serialized back to JSON and match the original structure.
+**3. JSON Round-Trip Testing:** Test that response objects can be serialized
+back to JSON and match the original structure.
 
 ## Working with This Codebase
 
 ### Adding New Fields to Existing Request Models
 
-1. **Add property** with JSON attribute and validation using C# 14 `field` keyword:
+1. **Add property** with JSON attribute and validation using C# 14 `field`
+   keyword:
+
    ```csharp
    [JsonPropertyName("field_name")]
    public double? FieldName {
@@ -261,9 +287,10 @@ Test that response objects can be serialized back to JSON and match the original
    }
    ```
 
-   **Note:** Use the `field` keyword (C# 14) instead of explicit backing fields. This eliminates
-   boilerplate while maintaining validation logic. Only use explicit backing fields if you need
-   cross-property assignments (e.g., Email.cs where `_domain` is set from `Address`).
+   **Note:** Use the `field` keyword (C# 14) instead of explicit backing fields.
+   This eliminates boilerplate while maintaining validation logic. Only use
+   explicit backing fields if you need cross-property assignments (e.g.,
+   Email.cs where `_domain` is set from `Address`).
 
 2. **Update `releasenotes.md`** with the change
 
@@ -276,13 +303,16 @@ Test that response objects can be serialized back to JSON and match the original
    - minFraud: Risk, device intelligence, email intelligence → Add here
 
 2. **Add property** with init-only setter:
+
    ```csharp
    [JsonInclude]
    [JsonPropertyName("field_name")]
    public TypeName? FieldName { get; init; }
    ```
 
-3. **For MINOR version releases**: Add deprecated constructor matching old signature to avoid breaking changes:
+3. **For MINOR version releases**: Add deprecated constructor matching old
+   signature to avoid breaking changes:
+
    ```csharp
    // New constructor with added parameter
    public ResponseClass(
@@ -307,6 +337,7 @@ Test that response objects can be serialized back to JSON and match the original
 When MaxMind adds new payment processors, event types, etc.:
 
 1. **Add to enum** (e.g., `PaymentProcessor`, `EventType`):
+
    ```csharp
    [EnumMember(Value = "new_processor")]
    NewProcessor,
@@ -316,11 +347,17 @@ When MaxMind adds new payment processors, event types, etc.:
 
 3. **No tests needed** for simple enum additions
 
-**Forward Compatibility**: The `EnumMemberValueConverter<T>` gracefully handles unknown enum values from the API by returning `null` instead of throwing exceptions. This ensures that when MaxMind adds new enum values to the web service, existing client versions won't break - the new value will simply be treated as null. This is critical for maintaining backward compatibility and preventing client breakage during API evolution.
+**Forward Compatibility**: The `EnumMemberValueConverter<T>` gracefully handles
+unknown enum values from the API by returning `null` instead of throwing
+exceptions. This ensures that when MaxMind adds new enum values to the web
+service, existing client versions won't break - the new value will simply be
+treated as null. This is critical for maintaining backward compatibility and
+preventing client breakage during API evolution.
 
 ### Exception Handling Strategy
 
 **Exception Hierarchy:**
+
 ```
 System.Exception
   ├─ IOException
@@ -333,8 +370,11 @@ System.Exception
 ```
 
 **Error Handling:**
-- HTTP-level errors (network, 500s) → `HttpException` (inherits from `IOException`)
-- Service errors (4xx) → Parse JSON error body → Specific `MinFraudException` subclass
+
+- HTTP-level errors (network, 500s) → `HttpException` (inherits from
+  `IOException`)
+- Service errors (4xx) → Parse JSON error body → Specific `MinFraudException`
+  subclass
 - Validation errors (construction) → `ArgumentException` (fail-fast)
 - Non-fatal issues → `Score.Warnings` list (not thrown)
 
@@ -343,13 +383,12 @@ System.Exception
 Always update `releasenotes.md` for user-facing changes:
 
 ```markdown
-5.x.0 (YYYY-MM-DD)
-------------------
+## 5.x.0 (YYYY-MM-DD)
 
-* Added `NewProperty` property to `MaxMind.MinFraud.Response.ResponseClass`.
+- Added `NewProperty` property to `MaxMind.MinFraud.Response.ResponseClass`.
   This provides information about...
-* Added `NewValue` to the `EnumName` enum.
-* The `OldProperty` property in `MaxMind.MinFraud.Model.ModelClass` has been
+- Added `NewValue` to the `EnumName` enum.
+- The `OldProperty` property in `MaxMind.MinFraud.Model.ModelClass` has been
   marked `Obsolete`. Please use `NewProperty` instead.
 ```
 
@@ -358,6 +397,7 @@ For MAJOR versions, prefix breaking changes with `**BREAKING:**`
 ### Deprecation Guidelines
 
 1. **Use `[Obsolete]` attribute** with helpful messages:
+
    ```csharp
    [Obsolete("Use NewProperty instead. This will be removed in v6.0.0.")]
    public string? OldProperty { get; init; }
@@ -372,6 +412,7 @@ For MAJOR versions, prefix breaking changes with `**BREAKING:**`
 ### Code Quality Standards
 
 The project enforces strict standards:
+
 - **EnforceCodeStyleInBuild**: Code style violations are build errors
 - **TreatWarningsAsErrors**: All warnings must be resolved
 - **EnableNETAnalyzers**: .NET code analyzers enabled
@@ -384,7 +425,8 @@ The project enforces strict standards:
 This library targets multiple frameworks. When adding features:
 
 1. **Prefer standard types** that work across all targets
-2. **For newer types** (e.g., `DateOnly` in .NET 6+), use conditional compilation:
+2. **For newer types** (e.g., `DateOnly` in .NET 6+), use conditional
+   compilation:
    ```csharp
    #if NET6_0_OR_GREATER
        public DateOnly? SomeDate { get; init; }
@@ -395,12 +437,14 @@ This library targets multiple frameworks. When adding features:
 ## Common Patterns and Conventions
 
 ### Pattern: Immutability
+
 - All request/response models use init-only properties
 - No public setters after construction
 - Defensive copying (readonly collections, immutable types)
 - Use `IReadOnlyList<T>` for collections in responses
 
 ### Pattern: Validation in Property Setters with C# 14 `field` Keyword
+
 ```csharp
 public double? Value {
     get => field;
@@ -413,11 +457,12 @@ public double? Value {
 }
 ```
 
-The `field` keyword (C# 14) creates a compiler-synthesized backing field, eliminating the need for
-explicit `private readonly` declarations. Use this for all properties with validation logic unless
-you need cross-property assignments.
+The `field` keyword (C# 14) creates a compiler-synthesized backing field,
+eliminating the need for explicit `private readonly` declarations. Use this for
+all properties with validation logic unless you need cross-property assignments.
 
 ### Pattern: Default Empty Objects (Never Null)
+
 ```csharp
 public CreditCard CreditCard { get; init; } = new();
 public IReadOnlyList<Warning> Warnings { get; init; } = [];
@@ -426,6 +471,7 @@ public IReadOnlyList<Warning> Warnings { get; init; } = [];
 This prevents null reference exceptions and simplifies client code.
 
 ### Pattern: Computed Properties (Not Serialized)
+
 ```csharp
 [JsonIgnore]
 public string? Username { get; init; }
@@ -440,6 +486,7 @@ public string? UsernameMD5 {
 ```
 
 ### Pattern: EnumMember for JSON Serialization
+
 ```csharp
 public enum EventType
 {
@@ -458,20 +505,25 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 ### Critical Dependencies
 
 **MaxMind.GeoIP2**
-- Provides base models for response classes (InsightsResponse, Location, Traits, etc.)
+
+- Provides base models for response classes (InsightsResponse, Location, Traits,
+  etc.)
 - minFraud responses inherit from and extend these models
 - Changes to GeoIP2 models can affect minFraud API surface
 
 **System.Text.Json**
+
 - Modern JSON serialization (not Newtonsoft.Json)
 - Requires custom converters for enums, IP addresses, GeoIP2 types
 - Uses snake_case naming via `[JsonPropertyName]` attributes
 
 **Microsoft.Extensions.Options**
+
 - ASP.NET Core configuration binding
 - Enables dependency injection pattern
 
 **IsExternalInit** (.NET Standard only)
+
 - Polyfill for C# 9.0 `init` keyword on older frameworks
 
 ## Version Requirements
@@ -491,4 +543,4 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 
 ---
 
-*Last Updated: 2025-11-18*
+_Last Updated: 2025-11-18_
