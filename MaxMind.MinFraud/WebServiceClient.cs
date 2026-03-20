@@ -180,6 +180,16 @@ namespace MaxMind.MinFraud
         /// this API will throw an exception if there is an error.</returns>
         public async Task ReportAsync(TransactionReport report)
         {
+            if (report.IPAddress == null
+                && (report.MinFraudId == null || report.MinFraudId == Guid.Empty)
+                && string.IsNullOrEmpty(report.MaxMindId)
+                && string.IsNullOrEmpty(report.TransactionId))
+            {
+                throw new ArgumentException(
+                    "The report must include at least one of the following: "
+                    + "IPAddress, MinFraudId, MaxMindId, TransactionId.");
+            }
+
             await MakeRequest("transactions/report", report);
         }
 
