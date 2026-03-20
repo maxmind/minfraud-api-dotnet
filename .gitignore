@@ -62,6 +62,7 @@ ipch/
 
 # ReSharper is a .NET coding add-in
 _ReSharper*
+*.DotSettings
 
 # NCrunch
 *.ncrunch*
@@ -100,6 +101,12 @@ AppPackages/
 # Idea
 .idea
 *.iml
+
+# Build logs
+*.binlog
+
+# Worktrees
+.worktrees
 
 # Others
 [Bb]in
