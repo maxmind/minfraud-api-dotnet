@@ -1,8 +1,6 @@
-﻿using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Request;
 using System;
 using Xunit;
-
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -15,83 +13,84 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestFirstName()
         {
-            var loc = new Billing(
-                firstName: "frst"
-            );
+            var loc = new Billing
+            {
+                FirstName = "frst"
+            };
             Assert.Equal("frst", loc.FirstName);
         }
 
         [Fact]
         public void TestLastName()
         {
-            var loc = new Billing(lastName: "last");
+            var loc = new Billing { LastName = "last" };
             Assert.Equal("last", loc.LastName);
         }
 
         [Fact]
         public void TestCompany()
         {
-            var loc = new Billing(company: "company");
+            var loc = new Billing { Company = "company" };
             Assert.Equal("company", loc.Company);
         }
 
         [Fact]
         public void TestAddress()
         {
-            var loc = new Billing(address: "addr");
+            var loc = new Billing { Address = "addr" };
             Assert.Equal("addr", loc.Address);
         }
 
         [Fact]
         public void TestAddress2()
         {
-            var loc = new Billing(address2: "addr2");
+            var loc = new Billing { Address2 = "addr2" };
             Assert.Equal("addr2", loc.Address2);
         }
 
         [Fact]
         public void TestCity()
         {
-            var loc = new Billing(city: "Pdx");
+            var loc = new Billing { City = "Pdx" };
             Assert.Equal("Pdx", loc.City);
         }
 
         [Fact]
         public void TestRegion()
         {
-            var loc = new Billing(region: "MN");
+            var loc = new Billing { Region = "MN" };
             Assert.Equal("MN", loc.Region);
         }
 
         [Fact]
         public void TestCountry()
         {
-            var loc = new Billing(country: "US");
+            var loc = new Billing { Country = "US" };
             Assert.Equal("US", loc.Country);
         }
 
         [Fact]
         public void TestCountryThatIsTooLong()
         {
-            Assert.Throws<ArgumentException>(() => new Billing(country: "USA"));
+            Assert.Throws<ArgumentException>(() => new Billing { Country = "USA" });
         }
 
         [Fact]
         public void TestCountryWithNumbers()
         {
-            Assert.Throws<ArgumentException>(() => new Billing(country: "U1"));
+            Assert.Throws<ArgumentException>(() => new Billing { Country = "U1" });
         }
 
         [Fact]
         public void TestCountryInWrongCase()
         {
-            Assert.Throws<ArgumentException>(() => new Billing(country: "us"));
+            Assert.Throws<ArgumentException>(() => new Billing { Country = "us" });
         }
 
         [Fact]
         public void TestPostal()
         {
-            var loc = new Billing(postal: "03231");
+            var loc = new Billing { Postal = "03231" };
             Assert.Equal("03231", loc.Postal);
         }
 
@@ -99,14 +98,14 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestPhoneNumber()
         {
             var phone = "321-321-3213";
-            var loc = new Billing(phoneNumber: phone);
+            var loc = new Billing { PhoneNumber = phone };
             Assert.Equal(phone, loc.PhoneNumber);
         }
 
         [Fact]
         public void TestPhoneCountryCode()
         {
-            var loc = new Billing(phoneCountryCode: "1");
+            var loc = new Billing { PhoneCountryCode = "1" };
             Assert.Equal("1", loc.PhoneCountryCode);
         }
     }

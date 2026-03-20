@@ -1,9 +1,7 @@
-﻿using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Request;
 using System;
 using System.Text.Json;
 using Xunit;
-
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -12,14 +10,14 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestTransactionId()
         {
-            var eventReq = new Event(transactionId: "t12");
+            var eventReq = new Event { TransactionId = "t12" };
             Assert.Equal("t12", eventReq.TransactionId);
         }
 
         [Fact]
         public void TestShopId()
         {
-            var eventReq = new Event(shopId: "s12");
+            var eventReq = new Event { ShopId = "s12" };
             Assert.Equal("s12", eventReq.ShopId);
         }
 
@@ -27,57 +25,58 @@ namespace MaxMind.MinFraud.UnitTest.Request
         public void TestTime()
         {
             var date = new DateTimeOffset();
-            var eventReq = new Event(time: date);
+            var eventReq = new Event { Time = date };
             Assert.Equal(date, eventReq.Time);
         }
 
         [Fact]
         public void TestType()
         {
-            var eventReq = new Event(type: EventType.AccountCreation);
+            var eventReq = new Event { Type = EventType.AccountCreation };
             Assert.Equal(EventType.AccountCreation, eventReq.Type);
         }
 
         [Fact]
         public void TestCreditApplicationType()
         {
-            var eventReq = new Event(type: EventType.CreditApplication);
+            var eventReq = new Event { Type = EventType.CreditApplication };
             Assert.Equal(EventType.CreditApplication, eventReq.Type);
         }
 
         [Fact]
         public void TestFundTransferType()
         {
-            var eventReq = new Event(type: EventType.FundTransfer);
+            var eventReq = new Event { Type = EventType.FundTransfer };
             Assert.Equal(EventType.FundTransfer, eventReq.Type);
         }
 
         [Fact]
         public void TestAgentParty()
         {
-            var eventReq = new Event(party: EventParty.Agent);
+            var eventReq = new Event { Party = EventParty.Agent };
             Assert.Equal(EventParty.Agent, eventReq.Party);
         }
 
         [Fact]
         public void TestCustomerParty()
         {
-            var eventReq = new Event(party: EventParty.Customer);
+            var eventReq = new Event { Party = EventParty.Customer };
             Assert.Equal(EventParty.Customer, eventReq.Party);
         }
 
         [Fact]
         public void TestSerialization()
         {
-            var eventReq = new Event(
-                transactionId: "txn123",
-                shopId: "shop123",
-                time: new DateTimeOffset(2020, 7, 12,
+            var eventReq = new Event
+            {
+                TransactionId = "txn123",
+                ShopId = "shop123",
+                Time = new DateTimeOffset(2020, 7, 12,
                                          15, 30, 0, 0,
                                          new TimeSpan(2, 0, 0)),
-                type: EventType.AccountCreation,
-                party: EventParty.Agent
-            );
+                Type = EventType.AccountCreation,
+                Party = EventParty.Agent
+            };
 
             var json = JsonSerializer.Serialize(eventReq);
             var comparer = new JsonElementComparer();

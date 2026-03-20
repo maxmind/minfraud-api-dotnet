@@ -1,9 +1,7 @@
-﻿using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Request;
 using System;
 using System.Text.Json;
 using Xunit;
-
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -15,7 +13,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var address = "test@maxmind.com";
             var domain = "maxmind.com";
 
-            var email = new Email(address: address);
+            var email = new Email { Address = address };
             Assert.Equal(address, email.Address);
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
             Assert.Equal(domain, email.Domain);
@@ -44,7 +42,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             var md5 = "977577b140bfb7c516e4746204fbdb01";
             var domain = "maxmind.com";
 
-            var email = new Email(address: address, hashAddress: true);
+            var email = new Email { Address = address, HashAddress = true };
             Assert.Equal(address, email.Address);
             Assert.Equal(md5, email.AddressMD5);
             Assert.Equal("maxmind.com", email.Domain);
@@ -68,151 +66,151 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestNormalizing()
         {
-            var e = new Email(address: "test@maxmind.com", hashAddress: true);
+            var e = new Email { Address = "test@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test@maxmind.com", hashAddress: true);
+            e = new Email { Address = "Test@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "  Test@maxmind.com", hashAddress: true);
+            e = new Email { Address = "  Test@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test+alias@maxmind.com", hashAddress: true);
+            e = new Email { Address = "Test+alias@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test+007+008@maxmind.com", hashAddress: true);
+            e = new Email { Address = "Test+007+008@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test+@maxmind.com", hashAddress: true);
+            e = new Email { Address = "Test+@maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test@maxmind.com.", hashAddress: true);
+            e = new Email { Address = "Test@maxmind.com.", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal("maxmind.com.", e.Domain);
 
-            e = new Email(address: "+@maxmind.com", hashAddress: true);
+            e = new Email { Address = "+@maxmind.com", HashAddress = true };
             Assert.Equal("aa57884e48f0dda9fc6f4cb2bffb1dd2", e.AddressMD5);
             Assert.Equal("maxmind.com", e.Domain);
 
-            e = new Email(address: "Test@ maxmind.com", hashAddress: true);
+            e = new Email { Address = "Test@ maxmind.com", HashAddress = true };
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
             Assert.Equal(" maxmind.com", e.Domain);
 
-            e = new Email(address: "Test+foo@yahoo.com", hashAddress: true);
+            e = new Email { Address = "Test+foo@yahoo.com", HashAddress = true };
             Assert.Equal("a5f830c699fd71ad653aa59fa688c6d9", e.AddressMD5);
             Assert.Equal("yahoo.com", e.Domain);
 
-            e = new Email(address: "Test-foo@yahoo.com", hashAddress: true);
+            e = new Email { Address = "Test-foo@yahoo.com", HashAddress = true };
             Assert.Equal("88e478531ab3bc303f1b5da82c2e9bbb", e.AddressMD5);
             Assert.Equal("yahoo.com", e.Domain);
 
-            e = new Email(address: "Test-foo-foo2@yahoo.com", hashAddress: true);
+            e = new Email { Address = "Test-foo-foo2@yahoo.com", HashAddress = true };
             Assert.Equal("88e478531ab3bc303f1b5da82c2e9bbb", e.AddressMD5);
             Assert.Equal("yahoo.com", e.Domain);
 
-            e = new Email(address: "Test-foo@gmail.com", hashAddress: true);
+            e = new Email { Address = "Test-foo@gmail.com", HashAddress = true };
             Assert.Equal("6f3ff986fa5e830dbbf08a942777a17c", e.AddressMD5);
             Assert.Equal("gmail.com", e.Domain);
 
-            e = new Email(address: "test@gmail.com", hashAddress: true);
+            e = new Email { Address = "test@gmail.com", HashAddress = true };
             Assert.Equal("1aedb8d9dc4751e229a335e371db8058", e.AddressMD5);
             Assert.Equal("gmail.com", e.Domain);
 
-            e = new Email(address: "test@gamil.com", hashAddress: true);
+            e = new Email { Address = "test@gamil.com", HashAddress = true };
             Assert.Equal("1aedb8d9dc4751e229a335e371db8058", e.AddressMD5);
             Assert.Equal("gamil.com", e.Domain);
 
-            e = new Email(address: "test@bücher.com", hashAddress: true);
+            e = new Email { Address = "test@bücher.com", HashAddress = true };
             Assert.Equal("24948acabac551360cd510d5e5e2b464", e.AddressMD5);
             Assert.Equal("bücher.com", e.Domain);
 
-            e = new Email(address: "Test+alias@Bücher.com", hashAddress: true);
+            e = new Email { Address = "Test+alias@Bücher.com", HashAddress = true };
             Assert.Equal("24948acabac551360cd510d5e5e2b464", e.AddressMD5);
             Assert.Equal("Bücher.com", e.Domain);
 
-            e = new Email(address: "test@", hashAddress: true);
+            e = new Email { Address = "test@", HashAddress = true };
             Assert.Equal("246a848af2f8394e3adbc738dbe43720", e.AddressMD5);
             Assert.Equal("", e.Domain);
 
-            e = new Email(address: "foo@googlemail.com", hashAddress: true);
+            e = new Email { Address = "foo@googlemail.com", HashAddress = true };
             Assert.Equal("6c0fbec2cc554c35c3d2b8b51840b49d", e.AddressMD5);
             Assert.Equal("googlemail.com", e.Domain);
 
-            e = new Email(address: "foo.bar@gmail.com", hashAddress: true);
+            e = new Email { Address = "foo.bar@gmail.com", HashAddress = true };
             Assert.Equal("726f7c3769f32d3da4656ea906d02adb", e.AddressMD5);
             Assert.Equal("gmail.com", e.Domain);
 
-            e = new Email(address: "alias@user.fastmail.com", hashAddress: true);
+            e = new Email { Address = "alias@user.fastmail.com", HashAddress = true };
             Assert.Equal("2dc11f44b436d1bc4ecfd4806e469d33", e.AddressMD5);
             Assert.Equal("user.fastmail.com", e.Domain);
 
-            e = new Email(address: "foo-bar@ymail.com", hashAddress: true);
+            e = new Email { Address = "foo-bar@ymail.com", HashAddress = true };
             Assert.Equal("fead35da88f8414ec0414ef5f25d49c8", e.AddressMD5);
             Assert.Equal("ymail.com", e.Domain);
 
-            e = new Email(address: "foo@example.com.com", hashAddress: true);
+            e = new Email { Address = "foo@example.com.com", HashAddress = true };
             Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
             Assert.Equal("example.com.com", e.Domain);
 
-            e = new Email(address: "foo@example.comfoo", hashAddress: true);
+            e = new Email { Address = "foo@example.comfoo", HashAddress = true };
             Assert.Equal("f235e180832a24cbeb724db47e000ffa", e.AddressMD5);
             Assert.Equal("example.comfoo", e.Domain);
 
-            e = new Email(address: "foo@example.cam", hashAddress: true);
+            e = new Email { Address = "foo@example.cam", HashAddress = true };
             Assert.Equal("0434eeacd3b34ec807df2b57f79640fa", e.AddressMD5);
             Assert.Equal("example.cam", e.Domain);
 
-            e = new Email(address: "foo@10000gmail.com", hashAddress: true);
+            e = new Email { Address = "foo@10000gmail.com", HashAddress = true };
             Assert.Equal("6c0fbec2cc554c35c3d2b8b51840b49d", e.AddressMD5);
             Assert.Equal("10000gmail.com", e.Domain);
 
-            e = new Email(address: "foo@example.comcom", hashAddress: true);
+            e = new Email { Address = "foo@example.comcom", HashAddress = true };
             Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
             Assert.Equal("example.comcom", e.Domain);
 
-            e = new Email(address: "foo@example.com.", hashAddress: true);
+            e = new Email { Address = "foo@example.com.", HashAddress = true };
             Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
             Assert.Equal("example.com.", e.Domain);
 
-            e = new Email(address: "foo@example.com...", hashAddress: true);
+            e = new Email { Address = "foo@example.com...", HashAddress = true };
             Assert.Equal("b48def645758b95537d4424c84d1a9ff", e.AddressMD5);
             Assert.Equal("example.com...", e.Domain);
 
-            e = new Email(address: "example@bu\u0308cher.com", hashAddress: true);
+            e = new Email { Address = "example@bu\u0308cher.com", HashAddress = true };
             Assert.Equal("2b21bc76dab3c8b1622837c1d698936c", e.AddressMD5);
-            e = new Email(address: "example@b\u00FCcher.com", hashAddress: true);
+            e = new Email { Address = "example@b\u00FCcher.com", HashAddress = true };
             Assert.Equal("2b21bc76dab3c8b1622837c1d698936c", e.AddressMD5);
 
-            e = new Email(address: "bu\u0308cher@example.com", hashAddress: true);
+            e = new Email { Address = "bu\u0308cher@example.com", HashAddress = true };
             Assert.Equal("53550c712b146287a2d0dd30e5ed6f4b", e.AddressMD5);
-            e = new Email(address: "b\u00FCcher@example.com", hashAddress: true);
+            e = new Email { Address = "b\u00FCcher@example.com", HashAddress = true };
             Assert.Equal("53550c712b146287a2d0dd30e5ed6f4b", e.AddressMD5);
         }
 
         [Fact]
         public void TestInvalidAddress()
         {
-            Assert.Throws<ArgumentException>(() => new Email(address: "no-domain"));
+            Assert.Throws<ArgumentException>(() => new Email { Address = "no-domain" });
         }
 
         [Fact]
         public void TestDomain()
         {
             var domain = "domain.com";
-            var email = new Email(domain: domain);
+            var email = new Email { Domain = domain };
             Assert.Equal(domain, email.Domain);
         }
 
         [Fact]
         public void TestInvalidDomain()
         {
-            Assert.Throws<ArgumentException>(() => new Email(domain: " domain.com"));
+            Assert.Throws<ArgumentException>(() => new Email { Domain = " domain.com" });
         }
     }
 }

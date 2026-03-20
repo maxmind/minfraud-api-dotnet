@@ -1,7 +1,5 @@
-﻿using MaxMind.MinFraud.Request;
+using MaxMind.MinFraud.Request;
 using Xunit;
-
-#pragma warning disable CS0618 // Type or member is obsolete
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
@@ -10,56 +8,56 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestProcessor()
         {
-            var payment = new Payment(processor: PaymentProcessor.Adyen);
+            var payment = new Payment { Processor = PaymentProcessor.Adyen };
             Assert.Equal(PaymentProcessor.Adyen, payment.Processor);
         }
 
         [Fact]
         public void TestWasAuthorized()
         {
-            var payment = new Payment(wasAuthorized: true);
+            var payment = new Payment { WasAuthorized = true };
             Assert.True(payment.WasAuthorized);
         }
 
         [Fact]
         public void TestDeclineCode()
         {
-            var payment = new Payment(declineCode: "declined");
+            var payment = new Payment { DeclineCode = "declined" };
             Assert.Equal("declined", payment.DeclineCode);
         }
 
         [Fact]
         public void TestBankDebitMethod()
         {
-            var payment = new Payment(method: PaymentMethod.BankDebit);
+            var payment = new Payment { Method = PaymentMethod.BankDebit };
             Assert.Equal(PaymentMethod.BankDebit, payment.Method);
         }
 
         [Fact]
         public void TestCardMethod()
         {
-            var payment = new Payment(method: PaymentMethod.Card);
+            var payment = new Payment { Method = PaymentMethod.Card };
             Assert.Equal(PaymentMethod.Card, payment.Method);
         }
 
         [Fact]
         public void TestCryptoMethod()
         {
-            var payment = new Payment(method: PaymentMethod.Crypto);
+            var payment = new Payment { Method = PaymentMethod.Crypto };
             Assert.Equal(PaymentMethod.Crypto, payment.Method);
         }
 
         [Fact]
         public void TestDigitalWalletMethod()
         {
-            var payment = new Payment(method: PaymentMethod.DigitalWallet);
+            var payment = new Payment { Method = PaymentMethod.DigitalWallet };
             Assert.Equal(PaymentMethod.DigitalWallet, payment.Method);
         }
 
         [Fact]
         public void TestRewardsMethod()
         {
-            var payment = new Payment(method: PaymentMethod.Rewards);
+            var payment = new Payment { Method = PaymentMethod.Rewards };
             Assert.Equal(PaymentMethod.Rewards, payment.Method);
         }
     }
