@@ -48,6 +48,30 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Null(report.MinFraudId);
         }
 
+        [Fact]
+        public void TestConstructorValidation()
+        {
+#pragma warning disable CS0618 // Type or member is obsolete
+            // Constructor requires at least one identifier
+            Assert.Throws<ArgumentException>(() =>
+                new TransactionReport(tag: TransactionReportTag.NotFraud));
+
+            // Constructor with valid identifier succeeds
+            var report = new TransactionReport(
+                tag: TransactionReportTag.Chargeback,
+                ipAddress: IPAddress.Parse("1.1.1.1"));
+            Assert.Equal(TransactionReportTag.Chargeback, report.Tag);
+            Assert.Equal(IPAddress.Parse("1.1.1.1"), report.IPAddress);
+
+            // Constructor normalizes Guid.Empty to null
+            report = new TransactionReport(
+                tag: TransactionReportTag.NotFraud,
+                ipAddress: IPAddress.Parse("1.1.1.1"),
+                minfraudId: Guid.Empty);
+            Assert.Null(report.MinFraudId);
+#pragma warning restore CS0618
+        }
+
         [Theory]
         [InlineData("abcd123")]
         [InlineData("")]
