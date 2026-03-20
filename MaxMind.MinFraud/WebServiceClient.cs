@@ -181,7 +181,7 @@ namespace MaxMind.MinFraud
         public async Task ReportAsync(TransactionReport report)
         {
             if (report.IPAddress == null
-                && (report.MinFraudId == null || report.MinFraudId == Guid.Empty)
+                && report.MinFraudId == null
                 && string.IsNullOrEmpty(report.MaxMindId)
                 && string.IsNullOrEmpty(report.TransactionId))
             {

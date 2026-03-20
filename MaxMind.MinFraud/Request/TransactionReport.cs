@@ -183,7 +183,11 @@ namespace MaxMind.MinFraud.Request
         /// provide it if the request was made to one of these services.
         /// </summary>
         [JsonPropertyName("minfraud_id")]
-        public Guid? MinFraudId { get; init; }
+        public Guid? MinFraudId
+        {
+            get => field;
+            init => field = value == Guid.Empty ? null : value;
+        }
 
         /// <summary>
         /// Your notes on the fraud tag associated with the transaction. We

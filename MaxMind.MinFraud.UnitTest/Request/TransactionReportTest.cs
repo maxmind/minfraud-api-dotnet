@@ -37,6 +37,17 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal(transactionId, report.TransactionId);
         }
 
+        [Fact]
+        public void TestGuidEmptyIsNormalized()
+        {
+            var report = new TransactionReport
+            {
+                Tag = TransactionReportTag.NotFraud,
+                MinFraudId = Guid.Empty
+            };
+            Assert.Null(report.MinFraudId);
+        }
+
         [Theory]
         [InlineData("abcd123")]
         [InlineData("")]
