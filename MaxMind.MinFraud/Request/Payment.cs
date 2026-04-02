@@ -242,6 +242,9 @@ namespace MaxMind.MinFraud.Request
         [EnumMember(Value = "exact")]
         Exact,
 
+        [EnumMember(Value = "fat_zebra")]
+        FatZebra,
+
         [EnumMember(Value = "first_atlantic_commerce")]
         FirstAtlanticCommerce,
 
