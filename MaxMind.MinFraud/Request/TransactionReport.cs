@@ -37,6 +37,13 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [EnumMember(Value = "chargeback")]
         Chargeback,
+
+        /// <summary>
+        /// Clear a previous transaction report tag when new information
+        /// indicates the initial classification was incorrect.
+        /// </summary>
+        [EnumMember(Value = "clear")]
+        Clear,
     }
 
     /// <summary>
