@@ -16,6 +16,8 @@
   explicit device linking.
 - Added `Banquest`, `SummitPayments`, `Yaadpay`, and `FatZebra` to the
   `PaymentProcessor` enum.
+- Added `Clear` to the `TransactionReportTag` enum for use with the Report
+  Transaction API.
 - **BREAKING:** The minimum `MaxMind.GeoIP2` dependency has been bumped to 6.0.0
   (a transitive breaking change).
 - Custom `ToString()` overrides have been removed from all response and request

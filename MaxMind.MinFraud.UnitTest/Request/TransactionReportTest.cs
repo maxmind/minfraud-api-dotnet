@@ -84,5 +84,16 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 MaxMindId = maxmindId
             });
         }
+
+        [Fact]
+        public void TestClearTag()
+        {
+            var report = new TransactionReport
+            {
+                IPAddress = IP,
+                Tag = TransactionReportTag.Clear
+            };
+            Assert.Equal(TransactionReportTag.Clear, report.Tag);
+        }
     }
 }
