@@ -130,3 +130,7 @@ Backup*/
 UpgradeLog*.XML
 
 .doxygen.conf
+
+# Hugo docs build output
+docs/.hugo_build.lock
+docs/public/
