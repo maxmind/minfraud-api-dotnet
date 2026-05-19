@@ -1,0 +1,248 @@
+<!doctype html><html lang=en><head><meta name=generator content="Hugo 0.161.1"><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>MaxMind minFraud .NET API</title><style>:root{--fg:#2d2d2d;--bg:#faf9f7;--accent:#1a6b50;--accent-soft:rgba(26, 107, 80, 0.06);--border:#d5d0c8;--code-bg:#f0eeea;--heading:#1a1a1a;--muted:#70695f}::selection{background:rgba(26,107,80,.15)}*,*::before,*::after{box-sizing:border-box}body{font-family:Charter,bitstream charter,sitka text,Cambria,serif;font-size:1.05rem;line-height:1.78;color:var(--fg);background:var(--bg);max-width:50rem;margin:0 auto;padding:3rem 1.5rem 5rem}h1,h2,h3,h4{font-family:system-ui,-apple-system,segoe ui,Helvetica,Arial,sans-serif;line-height:1.35}h1{font-size:1.75rem;font-weight:800;color:var(--heading);margin:0 0 1.5rem;padding-bottom:.75rem;border-bottom:3px solid var(--accent)}h2{font-size:1.3rem;font-weight:700;color:var(--heading);margin:3rem 0 .75rem;padding-bottom:.4rem;border-bottom:1px solid var(--border)}h3{font-size:1.05rem;font-weight:700;color:var(--accent);margin:2.5rem 0 .5rem;padding:.4rem .75rem;border-left:3px solid var(--accent);background:linear-gradient( 135deg,var(--accent-soft),transparent 80% );border-radius:0 3px 3px 0}h4{font-size:.92rem;font-weight:700;color:var(--muted);margin:2rem 0 .5rem;padding-bottom:.2rem;border-bottom:1px dashed var(--border)}p{margin:.8rem 0}a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2px;transition:text-decoration-thickness .15s}a:hover{text-decoration-thickness:2px}strong{color:var(--heading);font-weight:700}ol,ul{padding-left:1.75rem}li+li{margin-top:.3rem}code{font-family:jetbrains mono,cascadia code,Menlo,Consolas,monospace;font-size:.88em;background:var(--code-bg);padding:.15em .4em;border-radius:3px;border:1px solid rgba(0,0,0,6%)}pre{background:var(--code-bg);border:1px solid var(--border);border-radius:5px;padding:1rem 1.25rem;overflow-x:auto;line-height:1.55}pre code{background:0 0;padding:0;border:none;font-size:.85em}img{max-width:100%;height:auto}.heading-anchor{opacity:0;margin-left:.3em;font-weight:400;text-decoration:none;transition:opacity .15s}h1:hover .heading-anchor,h2:hover .heading-anchor,h3:hover .heading-anchor,h4:hover .heading-anchor,.heading-anchor:focus{opacity:.4}.heading-anchor:hover{opacity:1}.page-nav{margin-bottom:2.5rem;display:flex;gap:.5rem;flex-wrap:wrap}.page-nav a{font-family:system-ui,-apple-system,segoe ui,Helvetica,Arial,sans-serif;font-size:.85rem;font-weight:600;text-decoration:none;color:var(--muted);padding:.3rem .75rem;border:1px solid var(--border);border-radius:999px;transition:color .15s,border-color .15s,background .15s}.page-nav a:hover{color:var(--accent);border-color:var(--accent)}.page-nav a.active{color:var(--bg);background:var(--accent);border-color:var(--accent)}</style></head><body><nav class=page-nav><a href=/minfraud-api-dotnet/ class=active aria-current=page>Overview</a>
+<a href=/minfraud-api-dotnet/doc/latest/>API documentation</a></nav><main><h1 id=net-api-for-maxmind-minfraud-services>.NET API for MaxMind minFraud Services<a class=heading-anchor href=#net-api-for-maxmind-minfraud-services aria-label="Link to .NET API for MaxMind minFraud Services">#</a></h1><p><a href=https://www.nuget.org/packages/MaxMind.MinFraud><img src=https://img.shields.io/nuget/v/MaxMind.MinFraud alt=NuGet></a></p><h2 id=description>Description<a class=heading-anchor href=#description aria-label="Link to Description">#</a></h2><p>This package provides an API for the
+<a href="https://dev.maxmind.com/minfraud?lang=en">MaxMind minFraud web services</a>. This
+includes minFraud Score, Insights, and Factors. It also includes our
+<a href="https://dev.maxmind.com/minfraud/report-a-transaction?lang=en">minFraud Report Transaction API</a>.</p><p>The legacy minFraud Standard and Premium services are not supported by this API.</p><h2 id=requirements>Requirements<a class=heading-anchor href=#requirements aria-label="Link to Requirements">#</a></h2><p>This library works with .NET Framework version 4.6.1 and above and .NET Standard
+2.0 or above.</p><p>This library depends on <a href=https://www.nuget.org/packages/MaxMind.GeoIP2/>GeoIP2</a>
+and its dependencies.</p><h2 id=installation>Installation<a class=heading-anchor href=#installation aria-label="Link to Installation">#</a></h2><h3 id=nuget>NuGet<a class=heading-anchor href=#nuget aria-label="Link to NuGet">#</a></h3><p>We recommend installing this library with NuGet. To do this, type the following
+into the Visual Studio Package Manager Console:</p><pre tabindex=0><code>install-package MaxMind.MinFraud
+</code></pre><h2 id=usage>Usage<a class=heading-anchor href=#usage aria-label="Link to Usage">#</a></h2><p>This API uses the
+<a href=https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/>async/await feature</a>
+to provide non-blocking calls to the minFraud web services.</p><p>To use this API, first create a new <code>WebServiceClient</code> object. The constructor
+takes your MaxMind account ID and license key:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> client <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> WebServiceClient<span style=color:#1f2328>(</span><span style=color:#0550ae>10</span><span style=color:#1f2328>,</span> <span style=color:#0a3069>&#34;LICENSEKEY&#34;</span><span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>To use the Sandbox web service instead of the production web service, you can
+provide the host argument:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> client <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> WebServiceClient<span style=color:#1f2328>(</span>
+</span></span><span style=display:flex><span>    accountId<span style=color:#1f2328>:</span> <span style=color:#0550ae>10</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    licenseKey<span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;LICENSEKEY&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    host<span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;sandbox.maxmind.com&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>You may also specify the fall-back locales, the host, or the timeout as optional
+parameters. See the API docs for more information.</p><p>This object is safe to share across threads. If you are making multiple
+requests, the object should be reused to so that new connections are not created
+for each request. Once you have finished making requests, you should dispose of
+the object to ensure the connections are closed and any resources are promptly
+returned to the system.</p><h3 id=making-a-minfraud-score-insights-or-factors-request>Making a minFraud Score, Insights, or Factors Request<a class=heading-anchor href=#making-a-minfraud-score-insights-or-factors-request aria-label="Link to Making a minFraud Score, Insights, or Factors Request">#</a></h3><p>Create a new <code>Transaction</code> object. This represents the transaction that you are
+sending to minFraud:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> transaction <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Transaction
+</span></span><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    Device <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Device
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        IPAddress <span style=color:#1f2328>=</span> System<span style=color:#1f2328>.</span>Net<span style=color:#1f2328>.</span>IPAddress<span style=color:#1f2328>.</span>Parse<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;152.216.7.110&#34;</span><span style=color:#1f2328>),</span>
+</span></span><span style=display:flex><span>        UserAgent <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Mozilla/5.0 (X11; Linux x86_64)&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>        AcceptLanguage <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;en-US,en;q=0.8&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>    Account <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Account
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        UserId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;3132&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>        Username <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;fred&#34;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>};</span>
+</span></span></code></pre></div><p>After creating the request object, send a non-blocking minFraud Score request by
+calling the <code>ScoreAsync</code> method using the <code>await</code> keyword from a method marked
+as async:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> score <span style=color:#1f2328>=</span> <span style=color:#cf222e>await</span> client<span style=color:#1f2328>.</span>ScoreAsync<span style=color:#1f2328>(</span>transaction<span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>A minFraud Insights request by calling the <code>InsightsAsync</code> method:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> insights <span style=color:#1f2328>=</span> <span style=color:#cf222e>await</span> client<span style=color:#1f2328>.</span>InsightsAsync<span style=color:#1f2328>(</span>transaction<span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>Or a minFraud Factors request by calling the <code>FactorsAsync</code> method:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> factors <span style=color:#1f2328>=</span> <span style=color:#cf222e>await</span> client<span style=color:#1f2328>.</span>FactorsAsync<span style=color:#1f2328>(</span>transaction<span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>If the request succeeds, a model object will be returned for the endpoint. If
+the request fails, an exception will be thrown.</p><p>See the API documentation for more details.</p><h3 id=aspnet-core-usage>ASP.NET Core Usage<a class=heading-anchor href=#aspnet-core-usage aria-label="Link to ASP.NET Core Usage">#</a></h3><p>To use the web service API with HttpClient factory pattern as a
+<a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#typed-clients">Typed client</a>
+you need to do the following:</p><ol><li>Add the following lines to <code>Startup.cs</code> <code>ConfigureServices</code> method:</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#57606a>// Configure to read configuration options from MinFraud section</span>
+</span></span><span style=display:flex><span>services<span style=color:#1f2328>.</span>Configure<span style=color:#1f2328>&lt;</span>WebServiceClientOptions<span style=color:#1f2328>&gt;(</span>Configuration<span style=color:#1f2328>.</span>GetSection<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;MinFraud&#34;</span><span style=color:#1f2328>));</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#57606a>// Configure dependency injection for WebServiceClient</span>
+</span></span><span style=display:flex><span>services<span style=color:#1f2328>.</span>AddHttpClient<span style=color:#1f2328>&lt;</span>WebServiceClient<span style=color:#1f2328>&gt;();</span>
+</span></span></code></pre></div><ol start=2><li>Add configuration in your <code>appsettings.json</code> with your account ID and license
+key.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-jsonc data-lang=jsonc><span style=display:flex><span><span style=color:#f6f8fa;background-color:#82071e>...</span>
+</span></span><span style=display:flex><span>  <span style=color:#0a3069>&#34;MinFraud&#34;</span><span style=color:#f6f8fa;background-color:#82071e>:</span> <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;AccountId&#34;</span><span style=color:#1f2328>:</span> <span style=color:#0550ae>10</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;LicenseKey&#34;</span><span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;LICENSEKEY&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;Timeout&#34;</span><span style=color:#1f2328>:</span> <span style=color:#f6f8fa;background-color:#82071e>TimeSpan.FromSeconds(</span><span style=color:#0550ae>5</span><span style=color:#f6f8fa;background-color:#82071e>)</span><span style=color:#1f2328>,</span> <span style=color:#57606a>// optional
+</span></span></span><span style=display:flex><span>    <span style=color:#0550ae>&#34;Host&#34;</span><span style=color:#1f2328>:</span> <span style=color:#0a3069>&#34;minfraud.maxmind.com&#34;</span> <span style=color:#57606a>// optional
+</span></span></span><span style=display:flex><span>  <span style=color:#1f2328>}</span><span style=color:#f6f8fa;background-color:#82071e>,</span>
+</span></span><span style=display:flex><span><span style=color:#f6f8fa;background-color:#82071e>...</span>
+</span></span></code></pre></div><ol start=3><li>Inject the <code>WebServiceClient</code> where you need to make the call and use it.</li></ol><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#1f2328>[ApiController]</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>[Route(&#34;[controller]</span><span style=color:#0a3069>&#34;)]
+</span></span></span><span style=display:flex><span><span style=color:#cf222e>public</span> <span style=color:#cf222e>class</span> <span style=color:#1f2328>MinFraudController</span> <span style=color:#1f2328>:</span> ControllerBase
+</span></span><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>private</span> <span style=color:#cf222e>readonly</span> WebServiceClient _minfraudClient<span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>public</span> MinFraudController<span style=color:#1f2328>(</span>WebServiceClient minfraudClient<span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        _minfraudClient <span style=color:#1f2328>=</span> minfraudClient<span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>
+</span></span></span><span style=display:flex><span><span style=color:#1f2328>    [HttpGet]</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>public</span> <span style=color:#cf222e>async</span> Task<span style=color:#1f2328>&lt;</span><span style=color:#cf222e>double?</span><span style=color:#1f2328>&gt;</span> RiskScore<span style=color:#1f2328>(</span>Transaction transaction<span style=color:#1f2328>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>var</span> score <span style=color:#1f2328>=</span> <span style=color:#cf222e>await</span> _minfraudClient<span style=color:#1f2328>.</span>ScoreAsync<span style=color:#1f2328>(</span>transaction<span style=color:#1f2328>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>return</span> score<span style=color:#1f2328>.</span>RiskScore<span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>}</span>
+</span></span></code></pre></div><h3 id=reporting-a-transaction-to-maxmind>Reporting a Transaction to MaxMind<a class=heading-anchor href=#reporting-a-transaction-to-maxmind aria-label="Link to Reporting a Transaction to MaxMind">#</a></h3><p>If a transaction was scored incorrectly or you received a chargeback, you may
+report it to MaxMind. To do this, create a new <code>TransactionReport</code> object:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>var</span> report <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> TransactionReport
+</span></span><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    Tag <span style=color:#1f2328>=</span> TransactionReportTag<span style=color:#1f2328>.</span>Chargeback<span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    ChargebackCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;BL&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    IPAddress <span style=color:#1f2328>=</span> IPAddress<span style=color:#1f2328>.</span>Parse<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;104.16.148.244&#34;</span><span style=color:#1f2328>),</span>
+</span></span><span style=display:flex><span>    MaxMindId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;abcd1234&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    MinFraudId <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Guid<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;01c25cb0-f067-4e02-8ed0-a094c580f5e4&#34;</span><span style=color:#1f2328>),</span>
+</span></span><span style=display:flex><span>    Notes <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Suspicious account behavior&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>    TransactionId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;txn123&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>};</span>
+</span></span></code></pre></div><p>A valid <code>tag</code> and at least one of the following are required parameters:
+<code>ipAddress</code>, <code>maxmindId</code>, <code>minfraudId</code>, <code>transactionId</code>.</p><p>Send the report by calling the <code>ReportAsync</code> method using the <code>await</code> keyword:</p><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>await</span> client<span style=color:#1f2328>.</span>ReportAsync<span style=color:#1f2328>(</span>report<span style=color:#1f2328>);</span>
+</span></span></code></pre></div><p>The endpoint does not return any data and the method does not return a value. If
+there is an error, an exception will be thrown.</p><h3 id=exceptions>Exceptions<a class=heading-anchor href=#exceptions aria-label="Link to Exceptions">#</a></h3><p>Thrown by the request models:</p><ul><li><code>ArgumentException</code> - Thrown when invalid data is passed to a request model
+property or to <code>ReportAsync</code>.</li></ul><p>Thrown by <code>WebServiceClient</code> method calls:</p><ul><li><code>AuthenticationException</code> - Thrown when the server is unable to authenticate
+the request, e.g., if the license key or account ID is invalid.</li><li><code>InsufficientFundsException</code> - Thrown when your account is out of funds.</li><li><code>PermissionRequiredException</code> - Thrown when your account does not have
+permission to access the service.</li><li><code>InvalidRequestException</code> - Thrown when the server rejects the request for
+another reason such as invalid JSON in the POST.</li><li><code>MinFraudException</code> - Thrown when the server returns an unexpected response.
+This also serves as the base class for the above exceptions.</li><li><code>HttpException</code> - Thrown when an unexpected HTTP error occurs such as an
+internal server error or other unexpected status code.</li></ul><h2 id=example>Example<a class=heading-anchor href=#example aria-label="Link to Example">#</a></h2><div class=highlight><pre tabindex=0 style=background-color:#f7f7f7;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-csharp data-lang=csharp><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>MaxMind.MinFraud</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>MaxMind.MinFraud.Request</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>System</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>System.Collections.Generic</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>System.Net</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>using</span> <span style=color:#24292e>System.Threading.Tasks</span><span style=color:#1f2328>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>public</span> <span style=color:#cf222e>class</span> <span style=color:#1f2328>MinFraudExample</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>static</span> <span style=color:#cf222e>void</span> Main<span style=color:#1f2328>()</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        MinFraudAsync<span style=color:#1f2328>().</span>Wait<span style=color:#1f2328>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#cf222e>static</span> <span style=color:#cf222e>public</span> <span style=color:#cf222e>async</span> Task MinFraudAsync<span style=color:#1f2328>()</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>var</span> transaction <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Transaction
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>            Device <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Device
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                IPAddress <span style=color:#1f2328>=</span> IPAddress<span style=color:#1f2328>.</span>Parse<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;152.216.7.110&#34;</span><span style=color:#1f2328>),</span>
+</span></span><span style=display:flex><span>                UserAgent <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Mozilla/5.0 (X11; Linux x86_64)&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                AcceptLanguage <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;en-US,en;q=0.8&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                SessionAge <span style=color:#1f2328>=</span> <span style=color:#0550ae>3600.5</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                SessionId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;a333a4e127f880d8820e56a66f40717c&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                TrackingToken <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;a]L@E*bnoqHa9&amp;SBSwbB8X3#1E&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Event <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Event
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                Party <span style=color:#1f2328>=</span> EventParty<span style=color:#1f2328>.</span>Customer<span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                TransactionId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;txn3134133&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                ShopId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;s2123&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Time <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> DateTimeOffset<span style=color:#1f2328>(</span><span style=color:#0550ae>2014</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>4</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>12</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>23</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>20</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>50</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>52</span><span style=color:#1f2328>,</span> <span style=color:#cf222e>new</span> TimeSpan<span style=color:#1f2328>(</span><span style=color:#0550ae>0</span><span style=color:#1f2328>)),</span>
+</span></span><span style=display:flex><span>                Type <span style=color:#1f2328>=</span> EventType<span style=color:#1f2328>.</span>Purchase
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Account <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Account
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                UserId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;3132&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Username <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;fred&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Email <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Email
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                Address <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;test@maxmind.com&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Domain <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;maxmind.com&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                HashAddress <span style=color:#1f2328>=</span> <span style=color:#cf222e>false</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Billing <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Billing
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                FirstName <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;First&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                LastName <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Last&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Company <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Company&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Address <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;101 Address Rd.&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Address2 <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Unit 5&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                City <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;City of Thorns&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Region <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;CT&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Country <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;US&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Postal <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;06510&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                PhoneNumber <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;123-456-7890&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                PhoneCountryCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;1&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Shipping <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Shipping
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                FirstName <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;ShipFirst&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                LastName <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;ShipLast&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Company <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;ShipCo&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Address <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;322 Ship Addr. Ln.&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Address2 <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;St. 43&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                City <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Nowhere&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Region <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;OK&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Country <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;US&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Postal <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;73003&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                PhoneNumber <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;123-456-0000&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                PhoneCountryCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;1&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                DeliverySpeed <span style=color:#1f2328>=</span> ShippingDeliverySpeed<span style=color:#1f2328>.</span>SameDay
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            Payment <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Payment
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                Method <span style=color:#1f2328>=</span> PaymentMethod<span style=color:#1f2328>.</span>Card<span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Processor <span style=color:#1f2328>=</span> PaymentProcessor<span style=color:#1f2328>.</span>Stripe<span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                WasAuthorized <span style=color:#1f2328>=</span> <span style=color:#cf222e>false</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                DeclineCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;invalid number&#34;</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            CreditCard <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> CreditCard
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                IssuerIdNumber <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;411111&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                BankName <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;Bank of No Hope&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                BankPhoneCountryCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;1&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                BankPhoneNumber <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;123-456-1234&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                AvsResult <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#39;Y&#39;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                CvvResult <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#39;N&#39;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                LastDigits <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;7643&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Token <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;123456abc1234&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Was3DSecureSuccessful <span style=color:#1f2328>=</span> <span style=color:#cf222e>true</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            CustomInputs <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> CustomInputs<span style=color:#1f2328>.</span>Builder
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span> <span style=color:#0a3069>&#34;float_input&#34;</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>12.1d</span><span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span> <span style=color:#0a3069>&#34;integer_input&#34;</span><span style=color:#1f2328>,</span> <span style=color:#0550ae>3123</span><span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span> <span style=color:#0a3069>&#34;string_input&#34;</span><span style=color:#1f2328>,</span> <span style=color:#0a3069>&#34;This is a string input.&#34;</span><span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span> <span style=color:#0a3069>&#34;boolean_input&#34;</span><span style=color:#1f2328>,</span> <span style=color:#cf222e>true</span><span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>}.</span>Build<span style=color:#1f2328>(),</span>
+</span></span><span style=display:flex><span>            Order <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Order
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                Amount <span style=color:#1f2328>=</span> <span style=color:#0550ae>323.21</span>m<span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                Currency <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;USD&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                DiscountCode <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;FIRST&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                AffiliateId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;af12&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                SubaffiliateId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;saf42&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                ReferrerUri <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> Uri<span style=color:#1f2328>(</span><span style=color:#0a3069>&#34;http://www.amazon.com/&#34;</span><span style=color:#1f2328>),</span>
+</span></span><span style=display:flex><span>                IsGift <span style=color:#1f2328>=</span> <span style=color:#cf222e>true</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                HasGiftMessage <span style=color:#1f2328>=</span> <span style=color:#cf222e>false</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>            ShoppingCart <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> List<span style=color:#1f2328>&lt;</span>ShoppingCartItem<span style=color:#1f2328>&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                <span style=color:#cf222e>new</span> ShoppingCartItem
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                    Category <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;pets&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    ItemId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;ad23232&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    Quantity <span style=color:#1f2328>=</span> <span style=color:#0550ae>2</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    Price <span style=color:#1f2328>=</span> <span style=color:#0550ae>20.43</span>m
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>},</span>
+</span></span><span style=display:flex><span>                <span style=color:#cf222e>new</span> ShoppingCartItem
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>                    Category <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;beauty&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    ItemId <span style=color:#1f2328>=</span> <span style=color:#0a3069>&#34;bst112&#34;</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    Quantity <span style=color:#1f2328>=</span> <span style=color:#0550ae>1</span><span style=color:#1f2328>,</span>
+</span></span><span style=display:flex><span>                    Price <span style=color:#1f2328>=</span> <span style=color:#0550ae>100.00</span>m
+</span></span><span style=display:flex><span>                <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span>            <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>};</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>// If you are making multiple requests, a single WebServiceClient</span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>// should be shared across requests to allow connection reuse. The</span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>// class is thread safe.</span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>//</span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>// Replace &#34;6&#34; with your account ID and &#34;ABCD567890&#34; with your license</span>
+</span></span><span style=display:flex><span>        <span style=color:#57606a>// key.</span>
+</span></span><span style=display:flex><span>        <span style=color:#cf222e>using</span> <span style=color:#1f2328>(</span><span style=color:#cf222e>var</span> client <span style=color:#1f2328>=</span> <span style=color:#cf222e>new</span> WebServiceClient<span style=color:#1f2328>(</span><span style=color:#0550ae>6</span><span style=color:#1f2328>,</span> <span style=color:#0a3069>&#34;ABCD567890&#34;</span><span style=color:#1f2328>))</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>{</span>
+</span></span><span style=display:flex><span>            <span style=color:#57606a>// Use `InsightsAsync` if querying Insights</span>
+</span></span><span style=display:flex><span>            <span style=color:#cf222e>var</span> score <span style=color:#1f2328>=</span> <span style=color:#cf222e>await</span> client<span style=color:#1f2328>.</span>ScoreAsync<span style=color:#1f2328>(</span>transaction<span style=color:#1f2328>);</span>
+</span></span><span style=display:flex><span>            Console<span style=color:#1f2328>.</span>WriteLine<span style=color:#1f2328>(</span>score<span style=color:#1f2328>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span>    <span style=color:#1f2328>}</span>
+</span></span><span style=display:flex><span><span style=color:#1f2328>}</span>
+</span></span></code></pre></div><h2 id=support>Support<a class=heading-anchor href=#support aria-label="Link to Support">#</a></h2><p>Please report all issues with this code using the
+<a href=https://github.com/maxmind/minfraud-api-dotnet/issues>GitHub issue tracker</a>.</p><p>If you are having an issue with the minFraud service that is not specific to the
+client API, please see <a href=https://www.maxmind.com/en/support>our support page</a>.</p><h2 id=contributing>Contributing<a class=heading-anchor href=#contributing aria-label="Link to Contributing">#</a></h2><p>Patches and pull requests are encouraged. Please include unit tests whenever
+possible.</p><h2 id=versioning>Versioning<a class=heading-anchor href=#versioning aria-label="Link to Versioning">#</a></h2><p>This API uses <a href=https://semver.org/>Semantic Versioning</a>.</p><h2 id=copyright-and-license>Copyright and License<a class=heading-anchor href=#copyright-and-license aria-label="Link to Copyright and License">#</a></h2><p>This software is Copyright (c) 2015-2026 by MaxMind, Inc.</p><p>This is free software, licensed under the Apache License, Version 2.0.</p></main></body></html>
