@@ -2,6 +2,8 @@
 
 [![NuGet](https://img.shields.io/nuget/v/MaxMind.MinFraud)](https://www.nuget.org/packages/MaxMind.MinFraud)
 
+[API documentation](https://maxmind.github.io/minfraud-api-dotnet/)
+
 ## Description
 
 This package provides an API for the
