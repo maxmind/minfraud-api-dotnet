@@ -23,10 +23,11 @@
   `PaymentProcessor` enum.
 - Added `Clear` to the `TransactionReportTag` enum for use with the Report
   Transaction API.
-- `ReportAsync` on `MaxMind.MinFraud.WebServiceClient` now validates that the
-  `TransactionReport` includes at least one of `IPAddress`, `MinFraudId`,
-  `MaxMindId`, or `TransactionId`, throwing `ArgumentException` if none are set.
-  Previously this check only ran in the (now obsolete) constructor.
+- **BREAKING:** `ReportAsync` on `MaxMind.MinFraud.WebServiceClient` now
+  validates that the `TransactionReport` includes at least one of `IPAddress`,
+  `MinFraudId`, `MaxMindId`, or `TransactionId`, throwing `ArgumentException` if
+  none are set. Previously this check only ran in the (now obsolete)
+  constructor.
 - A `Guid.Empty` value assigned to the `MinFraudId` property on
   `MaxMind.MinFraud.Request.TransactionReport` is now normalized to `null`,
   matching the behavior of the obsolete constructor.
