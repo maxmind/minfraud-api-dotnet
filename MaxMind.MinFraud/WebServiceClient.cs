@@ -129,7 +129,7 @@ namespace MaxMind.MinFraud
                 throw new MinFraudException(
                     $"WithLocales returned {withLocales.GetType().FullName} instead of "
                     + $"the expected {typeof(Response.IPAddress).FullName}. "
-                    + "This may indicate an incompatible GeoIP2 library version.");
+                    + "This may indicate an incompatible GeoIP library version.");
             }
             return factors with { IPAddress = ipAddress };
         }
@@ -151,7 +151,7 @@ namespace MaxMind.MinFraud
                 throw new MinFraudException(
                     $"WithLocales returned {withLocales.GetType().FullName} instead of "
                     + $"the expected {typeof(Response.IPAddress).FullName}. "
-                    + "This may indicate an incompatible GeoIP2 library version.");
+                    + "This may indicate an incompatible GeoIP library version.");
             }
             return insights with { IPAddress = ipAddress };
         }

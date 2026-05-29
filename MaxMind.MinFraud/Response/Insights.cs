@@ -8,7 +8,7 @@ namespace MaxMind.MinFraud.Response
     public record Insights : Score
     {
         /// <summary>
-        /// An object containing GeoIP2 and minFraud Insights information about
+        /// An object containing GeoIP and minFraud Insights information about
         /// the IP address.
         /// </summary>
         [JsonPropertyName("ip_address")]
