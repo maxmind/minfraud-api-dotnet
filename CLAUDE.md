@@ -9,7 +9,7 @@ code in this repository.
 minFraud fraud detection web services:
 
 - **minFraud Score**: Risk score for transactions
-- **minFraud Insights**: Score plus GeoIP2 data and device/email intelligence
+- **minFraud Insights**: Score plus GeoIP data and device/email intelligence
 - **minFraud Factors**: All Insights data plus risk reasons and deprecated
   subscores
 - **Transaction Reporting API**: Report chargebacks and fraud to improve
@@ -121,7 +121,7 @@ var transaction = new Transaction {
 Score (base)
   ├─ Properties: RiskScore, Id, Disposition, Warnings, FundsRemaining, IPAddress
   └─ Insights (extends Score)
-      ├─ Overrides IPAddress with full GeoIP2 data
+      ├─ Overrides IPAddress with full GeoIP data
       ├─ Adds: CreditCard, Device, Email, BillingAddress, ShippingAddress, Phones
       └─ Factors (extends Insights)
           └─ Adds: RiskScoreReasons, Subscores (obsolete as of 2025-03)

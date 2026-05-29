@@ -6,7 +6,7 @@ using System.Text.Json.Serialization;
 namespace MaxMind.MinFraud.Response
 {
     /// <summary>
-    /// Model for minFraud GeoIP2 Insights data.
+    /// Model for minFraud GeoIP Insights data.
     /// </summary>
     public sealed record IPAddress : InsightsResponse, IIPAddress
     {
