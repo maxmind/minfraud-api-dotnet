@@ -5,7 +5,7 @@ using System.Text.Json.Serialization;
 namespace MaxMind.MinFraud.Response
 {
     /// <summary>
-    /// A subclass of the GeoIP2 Location model with minFraud-specific
+    /// A subclass of the GeoIP Location model with minFraud-specific
     /// additions.
     /// </summary>
     public sealed record GeoIP2Location : Location

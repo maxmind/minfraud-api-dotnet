@@ -9,14 +9,14 @@ code in this repository.
 minFraud fraud detection web services:
 
 - **minFraud Score**: Risk score for transactions
-- **minFraud Insights**: Score plus GeoIP2 data and device/email intelligence
+- **minFraud Insights**: Score plus GeoIP data and device/email intelligence
 - **minFraud Factors**: All Insights data plus risk reasons and deprecated
   subscores
 - **Transaction Reporting API**: Report chargebacks and fraud to improve
   minFraud accuracy
 
 The library provides both synchronous and asynchronous methods, supports ASP.NET
-Core dependency injection, and integrates deeply with MaxMind's GeoIP2 library
+Core dependency injection, and integrates deeply with MaxMind's GeoIP library
 for IP intelligence.
 
 **Key Technologies:**
@@ -79,7 +79,7 @@ MaxMind.MinFraud/
 │   └── CustomInputs.cs        # Builder pattern for custom fields
 ├── Response/           # Response models (Score, Insights, Factors)
 │   ├── Score.cs               # Base response (RiskScore, Id, Warnings)
-│   ├── Insights.cs            # Extends Score, adds GeoIP2 & device data
+│   ├── Insights.cs            # Extends Score, adds GeoIP & device data
 │   ├── Factors.cs             # Extends Insights, adds RiskScoreReasons
 │   └── IPAddress.cs, Device.cs, Email.cs, etc.
 ├── Util/               # JSON converters and helpers
@@ -121,7 +121,7 @@ var transaction = new Transaction {
 Score (base)
   ├─ Properties: RiskScore, Id, Disposition, Warnings, FundsRemaining, IPAddress
   └─ Insights (extends Score)
-      ├─ Overrides IPAddress with full GeoIP2 data
+      ├─ Overrides IPAddress with full GeoIP data
       ├─ Adds: CreditCard, Device, Email, BillingAddress, ShippingAddress, Phones
       └─ Factors (extends Insights)
           └─ Adds: RiskScoreReasons, Subscores (obsolete as of 2025-03)
@@ -132,13 +132,13 @@ Score (base)
 - Each level adds more detail without breaking compatibility
 - Interface-based polymorphism for `IIPAddress` (Score uses minimal, Insights
   uses full)
-- Response models inherit from GeoIP2 models (e.g.,
+- Response models inherit from GeoIP models (e.g.,
   `IPAddress : InsightsResponse`)
 - All response properties are init-only with default empty objects (never null)
 
-#### 3. **GeoIP2 Integration via Inheritance**
+#### 3. **GeoIP Integration via Inheritance**
 
-minFraud response models inherit from and extend GeoIP2 models:
+minFraud response models inherit from and extend GeoIP models:
 
 ```csharp
 public sealed class IPAddress : InsightsResponse, IIPAddress
@@ -152,9 +152,9 @@ public sealed class IPAddress : InsightsResponse, IIPAddress
 
 **Implications:**
 
-- Changes to GeoIP2 models affect minFraud responses
-- When adding fields, check if they belong in GeoIP2 or minFraud layer
-- Use GeoIP2 patterns for location-related data
+- Changes to GeoIP models affect minFraud responses
+- When adding fields, check if they belong in GeoIP or minFraud layer
+- Use GeoIP patterns for location-related data
 
 #### 4. **Email Address Normalization**
 
@@ -298,8 +298,8 @@ back to JSON and match the original structure.
 
 ### Adding New Fields to Existing Response Models
 
-1. **Determine if field is GeoIP2 or minFraud-specific**
-   - GeoIP2: Location data, ISP, traits, etc. → Add to GeoIP2 library first
+1. **Determine if field is GeoIP or minFraud-specific**
+   - GeoIP: Location data, ISP, traits, etc. → Add to GeoIP library first
    - minFraud: Risk, device intelligence, email intelligence → Add here
 
 2. **Add property** with init-only setter:
@@ -509,12 +509,12 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 - Provides base models for response classes (InsightsResponse, Location, Traits,
   etc.)
 - minFraud responses inherit from and extend these models
-- Changes to GeoIP2 models can affect minFraud API surface
+- Changes to GeoIP models can affect minFraud API surface
 
 **System.Text.Json**
 
 - Modern JSON serialization (not Newtonsoft.Json)
-- Requires custom converters for enums, IP addresses, GeoIP2 types
+- Requires custom converters for enums, IP addresses, GeoIP types
 - Uses snake_case naming via `[JsonPropertyName]` attributes
 
 **Microsoft.Extensions.Options**
