@@ -37,6 +37,16 @@ exclude = [
     '^http://schemas\.',
     '^https://schemas\.',
     '^http://www\.w3\.org/',
+    # dev.maxmind.com docs are a single-page app: deep "#schema--" anchors are
+    # rendered client-side and not present in the server HTML, so lychee cannot
+    # verify the fragment even though the page (a clean 200) and anchor are valid.
+    '^https://dev\.maxmind\.com/minfraud/api-documentation/responses/.*#schema--',
+    # Placeholder / example hosts that only appear in unit-test fixtures and
+    # README sample code (not navigable links to verify).
+    '^https?://www\.maxmind\.com/$',
+    '^https?://test\.maxmind\.com',
+    '^https?://www\.mm\.com',
+    '^https?://(www\.)?amazon\.com',
     # Local / placeholder URLs (e.g. proxy examples in docs)
     '^file://',
     '^https?://example\.(com|org|net)',

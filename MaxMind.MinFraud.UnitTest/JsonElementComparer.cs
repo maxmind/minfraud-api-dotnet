@@ -5,7 +5,7 @@ using System.Text.Json;
 
 namespace MaxMind.MinFraud.UnitTest
 {
-    // This is taken from https://stackoverflow.com/questions/60580743/what-is-equivalent-in-jtoken-deepequal-in-system-text-json
+    // This is taken from https://stackoverflow.com/questions/60580743/what-is-equivalent-in-jtoken-deepequals-in-system-text-json
     //
     // Per https://stackoverflow.com/help/licensing, it is licensed under CC BY-SA 4.0.
     //
@@ -54,7 +54,7 @@ namespace MaxMind.MinFraud.UnitTest
                         // Surprisingly, JsonDocument fully supports duplicate property names.
                         // I.e. it's perfectly happy to parse {"Value":"a", "Value" : "b"} and will store both
                         // key/value pairs inside the document!
-                        // A close reading of https://tools.ietf.org/html/rfc8259#section-4 seems to indicate that
+                        // A close reading of https://datatracker.ietf.org/doc/html/rfc8259#section-4 seems to indicate that
                         // such objects are allowed but not recommended, and when they arise, interpretation of 
                         // identically-named properties is order-dependent.  
                         // So stably sorting by name then comparing values seems the way to go.
@@ -81,7 +81,7 @@ namespace MaxMind.MinFraud.UnitTest
 
         public int GetHashCode(JsonElement obj)
         {
-            var hash = new HashCode(); // New in .Net core: https://docs.microsoft.com/en-us/dotnet/api/system.hashcode
+            var hash = new HashCode(); // New in .Net core: https://learn.microsoft.com/en-us/dotnet/api/system.hashcode?view=net-10.0
             ComputeHashCode(obj, ref hash, 0);
             return hash.ToHashCode();
         }

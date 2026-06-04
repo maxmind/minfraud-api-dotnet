@@ -7,9 +7,9 @@
 ## Description
 
 This package provides an API for the
-[MaxMind minFraud web services](https://dev.maxmind.com/minfraud?lang=en). This
+[MaxMind minFraud web services](https://dev.maxmind.com/minfraud/?lang=en). This
 includes minFraud Score, Insights, and Factors. It also includes our
-[minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-a-transaction?lang=en).
+[minFraud Report Transaction API](https://dev.maxmind.com/minfraud/report-a-transaction/?lang=en).
 
 The legacy minFraud Standard and Premium services are not supported by this API.
 
@@ -115,7 +115,7 @@ See the API documentation for more details.
 ### ASP.NET Core Usage
 
 To use the web service API with HttpClient factory pattern as a
-[Typed client](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#typed-clients)
+[Typed client](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.1#typed-clients)
 you need to do the following:
 
 1. Add the following lines to `Startup.cs` `ConfigureServices` method:
@@ -373,7 +373,8 @@ Please report all issues with this code using the
 [GitHub issue tracker](https://github.com/maxmind/minfraud-api-dotnet/issues).
 
 If you are having an issue with the minFraud service that is not specific to the
-client API, please see [our support page](https://www.maxmind.com/en/support).
+client API, please see
+[our support page](https://support.maxmind.com/knowledge-base).
 
 ## Contributing
 

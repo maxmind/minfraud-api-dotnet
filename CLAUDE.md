@@ -536,7 +536,7 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 ## Additional Resources
 
 - [API Documentation](https://maxmind.github.io/minfraud-api-dotnet/)
-- [minFraud Web Services Docs](https://dev.maxmind.com/minfraud?lang=en)
+- [minFraud Web Services Docs](https://dev.maxmind.com/minfraud/?lang=en)
 - [minFraud Response Docs](https://dev.maxmind.com/minfraud/api-documentation/responses/)
 - [GitHub Issues](https://github.com/maxmind/minfraud-api-dotnet/issues)
 - [Release Process](README.dev.md)
