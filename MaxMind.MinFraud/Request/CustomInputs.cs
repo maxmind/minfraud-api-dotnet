@@ -9,7 +9,7 @@ namespace MaxMind.MinFraud.Request
 {
     /// <summary>
     ///     Custom inputs to be used in
-    ///     <a href="https://www.maxmind.com/en/minfraud-interactive/#/custom-rules">Custom Rules</a>.
+    ///     <a href="https://www.maxmind.com/en/accounts/current/minfraud-interactive/custom-rules">Custom Rules</a>.
     ///     In order to use custom inputs, you must set them up from your account portal.
     /// </summary>
     public sealed class CustomInputs
