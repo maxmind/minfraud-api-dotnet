@@ -57,6 +57,12 @@ namespace MaxMind.MinFraud.UnitTest
 
             Assert.Equal("310", response.IPAddress.Traits.MobileCountryCode);
             Assert.Equal("004", response.IPAddress.Traits.MobileNetworkCode);
+
+            Assert.Equal(82, response.IPAddress.Anonymizer.Residential?.Confidence);
+#if NET6_0_OR_GREATER
+            Assert.Equal(new DateOnly(2026, 5, 11), response.IPAddress.Anonymizer.Residential?.NetworkLastSeen);
+#endif
+            Assert.Equal("quickshift", response.IPAddress.Anonymizer.Residential?.ProviderName);
         }
 
         [Fact]
