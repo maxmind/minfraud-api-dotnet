@@ -4,8 +4,11 @@
 # Run locally with:
 #   lychee './**/*.md' './**/*.cs' './MaxMind.MinFraud/MaxMind.MinFraud.csproj'
 
-# Include URL fragments in checks
-include_fragments = true
+# Include URL fragments in checks. `full` checks both anchor fragments like
+# `#section` and text fragments like `#:~:text=example`. (lychee 0.24 replaced
+# the previous boolean value with this string enum:
+# `none`/`anchor-only`/`text-only`/`full`.)
+include_fragments = "full"
 
 # Don't allow any redirects, so links that have moved are surfaced and can be
 # updated to their canonical destination.
