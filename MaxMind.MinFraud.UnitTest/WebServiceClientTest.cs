@@ -9,6 +9,9 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
+#if !NET6_0_OR_GREATER
+using System.Text.Json.Nodes;
+#endif
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Xunit;
@@ -42,7 +45,7 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("insights", responseContent);
             var request = CreateFullRequest();
             var response = await client.InsightsAsync(request);
-            CompareJson(responseContent, response);
+            CompareJson(StripFrameworkOnlyFields(responseContent), response);
 
             // The purpose here is to test that WithLocales worked as expected
             Assert.Equal("London", response.IPAddress.City.Name);
@@ -57,6 +60,12 @@ namespace MaxMind.MinFraud.UnitTest
 
             Assert.Equal("310", response.IPAddress.Traits.MobileCountryCode);
             Assert.Equal("004", response.IPAddress.Traits.MobileNetworkCode);
+
+            Assert.Equal(82, response.IPAddress.Anonymizer.Residential.Confidence);
+#if NET6_0_OR_GREATER
+            Assert.Equal(new DateOnly(2026, 5, 11), response.IPAddress.Anonymizer.Residential.NetworkLastSeen);
+#endif
+            Assert.Equal("quickshift", response.IPAddress.Anonymizer.Residential.ProviderName);
         }
 
         [Fact]
@@ -66,7 +75,7 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("factors", responseContent);
             var request = CreateFullRequest();
             var response = await client.FactorsAsync(request);
-            CompareJson(responseContent, response);
+            CompareJson(StripFrameworkOnlyFields(responseContent), response);
         }
 
         [Fact]
@@ -76,7 +85,7 @@ namespace MaxMind.MinFraud.UnitTest
             var client = CreateSuccessClient("factors", responseContent);
             var request = CreateFullRequestUsingConstructors();
             var response = await client.FactorsAsync(request);
-            CompareJson(responseContent, response);
+            CompareJson(StripFrameworkOnlyFields(responseContent), response);
 
             Assert.Equal("London", response.IPAddress.City.Name);
         }
@@ -150,6 +159,27 @@ namespace MaxMind.MinFraud.UnitTest
             var response = await client.ScoreAsync(request);
 
             CompareJson(responseContent, response);
+        }
+
+        // AnonymizerFeed.NetworkLastSeen is a DateOnly, which only exists under
+        // NET6_0_OR_GREATER. On earlier frameworks the property is compiled out,
+        // so the serialized model omits network_last_seen under
+        // anonymizer.residential. Remove it from the expected fixture on those
+        // frameworks so the exact-match comparison in CompareJson stays valid.
+        // On net6+ this is a no-op pass-through and the field is fully checked.
+        private static string StripFrameworkOnlyFields(string responseContent)
+        {
+#if NET6_0_OR_GREATER
+            return responseContent;
+#else
+            var root = JsonNode.Parse(responseContent);
+            if (root?["ip_address"]?["anonymizer"]?["residential"] is JsonObject residential)
+            {
+                residential.Remove("network_last_seen");
+            }
+
+            return root!.ToJsonString();
+#endif
         }
 
         private void CompareJson(string responseContent, object response)
