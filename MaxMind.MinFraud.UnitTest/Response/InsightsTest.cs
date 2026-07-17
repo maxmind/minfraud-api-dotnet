@@ -70,7 +70,12 @@ namespace MaxMind.MinFraud.UnitTest.Response
                             "is_residential_proxy": true,
                             "is_tor_exit_node": false,
                             "network_last_seen": "2025-01-15",
-                            "provider_name": "TestVPN"
+                            "provider_name": "TestVPN",
+                            "residential": {
+                                "confidence": 82,
+                                "network_last_seen": "2026-05-11",
+                                "provider_name": "quickshift"
+                            }
                         }
                     },
                     "risk_score": 0.5
@@ -89,6 +94,56 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.Equal("2025-01-15", anonymizer.NetworkLastSeen?.ToString("yyyy-MM-dd"));
 #endif
             Assert.Equal("TestVPN", anonymizer.ProviderName);
+
+            Assert.Equal(82, anonymizer.Residential.Confidence);
+#if NET6_0_OR_GREATER
+            Assert.Equal("2026-05-11", anonymizer.Residential.NetworkLastSeen?.ToString("yyyy-MM-dd"));
+#endif
+            Assert.Equal("quickshift", anonymizer.Residential.ProviderName);
+        }
+
+        [Fact]
+        public void TestIPAddressAnonymizerResidentialOnly()
+        {
+            // The anonymizer object may contain only the residential
+            // sub-object, e.g. when a network has residential proxy data
+            // but no other anonymizer data.
+            var insights = JsonSerializer.Deserialize<Insights>(
+                """
+                {
+                    "id": "b643d445-18b2-4b9d-bad4-c9c4366e402a",
+                    "ip_address": {
+                        "country": {"iso_code": "US"},
+                        "anonymizer": {
+                            "residential": {
+                                "confidence": 82,
+                                "network_last_seen": "2026-05-11",
+                                "provider_name": "quickshift"
+                            }
+                        }
+                    },
+                    "risk_score": 0.5
+                }
+                """)!;
+
+            var anonymizer = insights.IPAddress.Anonymizer;
+            Assert.Null(anonymizer.Confidence);
+            Assert.False(anonymizer.IsAnonymous);
+            Assert.False(anonymizer.IsAnonymousVpn);
+            Assert.False(anonymizer.IsHostingProvider);
+            Assert.False(anonymizer.IsPublicProxy);
+            Assert.False(anonymizer.IsResidentialProxy);
+            Assert.False(anonymizer.IsTorExitNode);
+#if NET6_0_OR_GREATER
+            Assert.Null(anonymizer.NetworkLastSeen);
+#endif
+            Assert.Null(anonymizer.ProviderName);
+
+            Assert.Equal(82, anonymizer.Residential.Confidence);
+#if NET6_0_OR_GREATER
+            Assert.Equal("2026-05-11", anonymizer.Residential.NetworkLastSeen?.ToString("yyyy-MM-dd"));
+#endif
+            Assert.Equal("quickshift", anonymizer.Residential.ProviderName);
         }
 
         [Fact]

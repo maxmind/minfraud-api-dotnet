@@ -1,5 +1,14 @@
 # Release Notes
 
+## 6.1.0 (TBD)
+
+- The `Anonymizer` property on `MaxMind.MinFraud.Response.IPAddress` (inherited
+  from `MaxMind.GeoIP2.Model.Anonymizer`) now includes a `Residential` property.
+  This is of the new `MaxMind.GeoIP2.Model.AnonymizerFeed` type and contains
+  residential proxy data for the network: `Confidence`, `NetworkLastSeen`
+  (`DateOnly` on .NET 6.0+), and `ProviderName`. `Anonymizer.Residential` may be
+  populated even when none of the other `Anonymizer` properties are set.
+
 ## 6.0.0 (2026-05-22)
 
 - **BREAKING:** All response classes in `MaxMind.MinFraud.Response` have been
