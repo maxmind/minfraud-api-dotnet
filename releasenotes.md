@@ -1,6 +1,6 @@
 # Release Notes
 
-## 6.1.0 (TBD)
+## 6.1.0 (2026-07-21)
 
 - The `Anonymizer` property on `MaxMind.MinFraud.Response.IPAddress` (inherited
   from `MaxMind.GeoIP2.Model.Anonymizer`) now includes a `Residential` property.
