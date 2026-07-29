@@ -130,6 +130,7 @@ namespace MaxMind.MinFraud.Request
             "fastemailer.com",
             "fastest.cc",
             "fastimap.com",
+            "fastmail.ca",
             "fastmail.cn",
             "fastmail.co.uk",
             "fastmail.com",
@@ -224,6 +225,7 @@ namespace MaxMind.MinFraud.Request
 
         private static readonly HashSet<string> _yahooDomains =
         [
+            "myyahoo.com",
             "y7mail.com",
             "yahoo.at",
             "yahoo.be",
