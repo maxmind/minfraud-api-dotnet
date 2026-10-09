@@ -1,5 +1,14 @@
 # Release Notes
 
+## 6.2.0 (TBD)
+
+- Added `PhoneVerificationMethod`, `PhoneWasVerificationSuccessful`, and
+  `PhoneVerificationTime` properties to `MaxMind.MinFraud.Request.Billing`.
+  These describe the most recent verification of the billing phone number. The
+  new `PhoneVerificationMethod` enum has the values `DeliveredCode`, `Network`,
+  and `Other`. Do not set `PhoneWasVerificationSuccessful` if no verification
+  was attempted.
+
 ## 6.1.0 (2026-07-21)
 
 - The `Anonymizer` property on `MaxMind.MinFraud.Response.IPAddress` (inherited
