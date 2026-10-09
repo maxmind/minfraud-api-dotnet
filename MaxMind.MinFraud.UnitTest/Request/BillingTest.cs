@@ -1,5 +1,7 @@
 using MaxMind.MinFraud.Request;
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -107,6 +109,60 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             var loc = new Billing { PhoneCountryCode = "1" };
             Assert.Equal("1", loc.PhoneCountryCode);
+        }
+
+        [Fact]
+        public void TestPhoneVerificationMethod()
+        {
+            var loc = new Billing { PhoneVerificationMethod = PhoneVerificationMethod.Network };
+            Assert.Equal(PhoneVerificationMethod.Network, loc.PhoneVerificationMethod);
+        }
+
+        [Fact]
+        public void TestPhoneWasVerificationSuccessful()
+        {
+            var loc = new Billing { PhoneWasVerificationSuccessful = false };
+            Assert.False(loc.PhoneWasVerificationSuccessful);
+        }
+
+        [Fact]
+        public void TestPhoneVerificationTime()
+        {
+            var time = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0));
+            var loc = new Billing { PhoneVerificationTime = time };
+            Assert.Equal(time, loc.PhoneVerificationTime);
+        }
+
+        [Fact]
+        public void TestPhoneVerificationSerialization()
+        {
+            var loc = new Billing
+            {
+                PhoneVerificationMethod = PhoneVerificationMethod.DeliveredCode,
+                PhoneWasVerificationSuccessful = false,
+                PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
+            };
+
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+            var json = JsonSerializer.Serialize(loc, options);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        """
+                        {
+                            "phone_verification_method": "delivered_code",
+                            "phone_was_verification_successful": false,
+                            "phone_verification_time": "2026-10-01T16:30:00+02:00"
+                        }
+                        """),
+                    JsonDocument.Parse(json)
+                ),
+                json
+            );
         }
     }
 }

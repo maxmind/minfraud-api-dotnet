@@ -1,7 +1,27 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Util;
+using System;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// The enumerated methods for verifying the billing phone number.
+    /// </summary>
+    public enum PhoneVerificationMethod
+    {
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+        [EnumMember(Value = "delivered_code")]
+        DeliveredCode,
+
+        [EnumMember(Value = "network")]
+        Network,
+
+        [EnumMember(Value = "other")]
+        Other
+#pragma warning restore CS1591 // Missing XML comment for publicly visible type or member
+    }
+
     /// <summary>
     /// The billing information for the transaction being sent to the
     /// web service.
@@ -57,5 +77,26 @@ namespace MaxMind.MinFraud.Request
         )
         {
         }
+
+        /// <summary>
+        /// The most recent method used to verify the billing phone number.
+        /// </summary>
+        [JsonConverter(typeof(EnumMemberValueConverter<PhoneVerificationMethod>))]
+        [JsonPropertyName("phone_verification_method")]
+        public PhoneVerificationMethod? PhoneVerificationMethod { get; init; }
+
+        /// <summary>
+        /// Whether the most recent verification of the billing phone number
+        /// succeeded. Do not set this if no verification was attempted.
+        /// </summary>
+        [JsonPropertyName("phone_was_verification_successful")]
+        public bool? PhoneWasVerificationSuccessful { get; init; }
+
+        /// <summary>
+        /// The date and time of the most recent verification of the billing
+        /// phone number.
+        /// </summary>
+        [JsonPropertyName("phone_verification_time")]
+        public DateTimeOffset? PhoneVerificationTime { get; init; }
     }
 }
