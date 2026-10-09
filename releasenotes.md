@@ -8,6 +8,10 @@
   new `PhoneVerificationMethod` enum has the values `DeliveredCode`, `Network`,
   and `Other`. Do not set `PhoneWasVerificationSuccessful` if no verification
   was attempted.
+- Added `WasVerificationSuccessful` and `VerificationTime` properties to
+  `MaxMind.MinFraud.Request.Email`. These describe the most recent verification
+  of the email address. Do not set `WasVerificationSuccessful` if no
+  verification was attempted.
 
 ## 6.1.0 (2026-07-21)
 
