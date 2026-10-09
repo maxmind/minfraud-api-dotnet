@@ -264,7 +264,9 @@ public class MinFraudExample
             {
                 Address = "test@maxmind.com",
                 Domain = "maxmind.com",
-                HashAddress = false
+                HashAddress = false,
+                WasVerificationSuccessful = true,
+                VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0))
             },
             Billing = new Billing
             {

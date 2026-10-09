@@ -388,6 +388,20 @@ namespace MaxMind.MinFraud.Request
         [JsonIgnore]
         public bool HashAddress { get; init; } = false;
 
+        /// <summary>
+        /// Whether the most recent verification of the email address
+        /// succeeded. Do not set this if no verification was attempted.
+        /// </summary>
+        [JsonPropertyName("was_verification_successful")]
+        public bool? WasVerificationSuccessful { get; init; }
+
+        /// <summary>
+        /// The date and time of the most recent verification of the email
+        /// address.
+        /// </summary>
+        [JsonPropertyName("verification_time")]
+        public DateTimeOffset? VerificationTime { get; init; }
+
         private static string CleanAddress(string address)
         {
             address = address.Trim().ToLower();

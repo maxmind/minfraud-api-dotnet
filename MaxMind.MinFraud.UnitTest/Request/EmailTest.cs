@@ -1,12 +1,59 @@
 using MaxMind.MinFraud.Request;
 using System;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
 {
     public class EmailTest
     {
+        private static readonly JsonSerializerOptions SerializerOptions = new()
+        {
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        };
+
+        [Fact]
+        public void TestWasVerificationSuccessful()
+        {
+            var email = new Email { WasVerificationSuccessful = false };
+            Assert.False(email.WasVerificationSuccessful);
+        }
+
+        [Fact]
+        public void TestVerificationTime()
+        {
+            var time = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0));
+            var email = new Email { VerificationTime = time };
+            Assert.Equal(time, email.VerificationTime);
+        }
+
+        [Fact]
+        public void TestVerificationSerialization()
+        {
+            var email = new Email
+            {
+                WasVerificationSuccessful = false,
+                VerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
+            };
+
+            var json = JsonSerializer.Serialize(email, SerializerOptions);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        """
+                        {
+                            "was_verification_successful": false,
+                            "verification_time": "2026-10-01T16:30:00+02:00"
+                        }
+                        """),
+                    JsonDocument.Parse(json)
+                ),
+                json
+            );
+        }
+
         [Fact]
         public void TestAddress()
         {
@@ -18,7 +65,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
             Assert.Equal(domain, email.Domain);
 
-            var json = JsonSerializer.Serialize(email);
+            var json = JsonSerializer.Serialize(email, SerializerOptions);
             var comparer = new JsonElementComparer();
             Assert.True(
                 comparer.JsonEquals(
@@ -47,7 +94,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal(md5, email.AddressMD5);
             Assert.Equal("maxmind.com", email.Domain);
 
-            var json = JsonSerializer.Serialize(email);
+            var json = JsonSerializer.Serialize(email, SerializerOptions);
             var comparer = new JsonElementComparer();
             Assert.True(
                 comparer.JsonEquals(
