@@ -1,9 +1,36 @@
-﻿using System;
+﻿using MaxMind.MinFraud.Util;
+using System;
+using System.Runtime.Serialization;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 
 namespace MaxMind.MinFraud.Request
 {
+    /// <summary>
+    /// The enumerated methods for verifying the phone number.
+    /// </summary>
+    public enum LocationPhoneVerificationMethod
+    {
+        /// <summary>
+        /// A code delivered to the phone, such as by SMS, voice call, or messaging app.
+        /// </summary>
+        [EnumMember(Value = "delivered_code")]
+        DeliveredCode,
+
+        /// <summary>
+        /// Verification through the mobile network operator, such as silent network
+        /// authentication.
+        /// </summary>
+        [EnumMember(Value = "network")]
+        Network,
+
+        /// <summary>
+        /// Another verification method.
+        /// </summary>
+        [EnumMember(Value = "other")]
+        Other
+    }
+
     /// <summary>
     /// The location information for the transaction being sent to the
     /// web service.
@@ -139,5 +166,27 @@ namespace MaxMind.MinFraud.Request
         /// </summary>
         [JsonPropertyName("phone_country_code")]
         public string? PhoneCountryCode { get; init; }
+
+        /// <summary>
+        /// The most recent method used to verify the phone number.
+        /// </summary>
+        [JsonConverter(typeof(EnumMemberValueConverter<LocationPhoneVerificationMethod>))]
+        [JsonPropertyName("phone_verification_method")]
+        public LocationPhoneVerificationMethod? PhoneVerificationMethod { get; init; }
+
+        /// <summary>
+        /// Whether the most recent verification of the phone number
+        /// succeeded. Do not set this if no verification was attempted.
+        /// </summary>
+        [JsonPropertyName("phone_was_verification_successful")]
+        public bool? PhoneWasVerificationSuccessful { get; init; }
+
+        /// <summary>
+        /// The date and time of the most recent verification of the
+        /// phone number. The time must not be before 1970-01-01T00:00:00Z
+        /// or more than two days in the future.
+        /// </summary>
+        [JsonPropertyName("phone_verification_time")]
+        public DateTimeOffset? PhoneVerificationTime { get; init; }
     }
 }

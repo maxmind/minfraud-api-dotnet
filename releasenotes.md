@@ -2,6 +2,12 @@
 
 ## 6.2.0 (TBD)
 
+- Added `PhoneVerificationMethod`, `PhoneWasVerificationSuccessful`, and
+  `PhoneVerificationTime` properties to `MaxMind.MinFraud.Request.Billing` and
+  `MaxMind.MinFraud.Request.Shipping`. These describe the most recent
+  verification of the phone number. The new `LocationPhoneVerificationMethod`
+  enum has the values `DeliveredCode`, `Network`, and `Other`. Do not set
+  `PhoneWasVerificationSuccessful` if no verification was attempted.
 - Fixed Insights requests and email address hashing in cultures that change case
   conversion, such as Turkish (`tr`) and Azerbaijani (`az`). In those cultures,
   Insights requests went to the `ınsights` path with a dotless `ı`, and
