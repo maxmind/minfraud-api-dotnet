@@ -278,7 +278,10 @@ public class MinFraudExample
                 Country = "US",
                 Postal = "06510",
                 PhoneNumber = "123-456-7890",
-                PhoneCountryCode = "1"
+                PhoneCountryCode = "1",
+                PhoneVerificationMethod = LocationPhoneVerificationMethod.DeliveredCode,
+                PhoneWasVerificationSuccessful = true,
+                PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0))
             },
             Shipping = new Shipping
             {
@@ -293,6 +296,9 @@ public class MinFraudExample
                 Postal = "73003",
                 PhoneNumber = "123-456-0000",
                 PhoneCountryCode = "1",
+                PhoneVerificationMethod = LocationPhoneVerificationMethod.Network,
+                PhoneWasVerificationSuccessful = false,
+                PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0)),
                 DeliverySpeed = ShippingDeliverySpeed.SameDay
             },
             Payment = new Payment

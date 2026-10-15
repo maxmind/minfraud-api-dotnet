@@ -5,6 +5,7 @@ using Microsoft.Extensions.Options;
 using RichardSzalay.MockHttp;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -66,6 +67,28 @@ namespace MaxMind.MinFraud.UnitTest
             Assert.Equal(new DateOnly(2026, 5, 11), response.IPAddress.Anonymizer.Residential.NetworkLastSeen);
 #endif
             Assert.Equal("quickshift", response.IPAddress.Anonymizer.Residential.ProviderName);
+        }
+
+        [Fact]
+        public async Task TestTurkishCulture()
+        {
+            // In tr-TR, "I".ToLower() returns a dotless "ı".
+            var originalCulture = CultureInfo.CurrentCulture;
+            CultureInfo.CurrentCulture = new CultureInfo("tr-TR");
+            try
+            {
+                var responseContent = ReadJsonFile("insights-response");
+                var client = CreateSuccessClient("insights", responseContent);
+                var response = await client.InsightsAsync(CreateFullRequest());
+                Assert.Equal("London", response.IPAddress.City.Name);
+
+                var email = new Email { Address = "TEST@MAXMIND.COM" };
+                Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
+            }
+            finally
+            {
+                CultureInfo.CurrentCulture = originalCulture;
+            }
         }
 
         [Fact]
