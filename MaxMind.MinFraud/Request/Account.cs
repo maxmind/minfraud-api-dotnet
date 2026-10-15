@@ -74,7 +74,7 @@ namespace MaxMind.MinFraud.Request
                 var md5 = md5Generator.ComputeHash(bytes);
                 return BitConverter.ToString(md5)
                     .Replace("-", string.Empty)
-                    .ToLower();
+                    .ToLowerInvariant();
             }
         }
     }

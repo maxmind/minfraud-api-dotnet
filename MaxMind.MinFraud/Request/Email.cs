@@ -325,7 +325,7 @@ namespace MaxMind.MinFraud.Request
                 var md5 = md5Generator.ComputeHash(bytes);
                 return BitConverter.ToString(md5)
                     .Replace("-", string.Empty)
-                    .ToLower();
+                    .ToLowerInvariant();
             }
         }
 
@@ -390,7 +390,7 @@ namespace MaxMind.MinFraud.Request
 
         private static string CleanAddress(string address)
         {
-            address = address.Trim().ToLower();
+            address = address.Trim().ToLowerInvariant();
 
             var domainIndex = address.LastIndexOf('@');
             if (domainIndex == -1 || domainIndex + 1 == address.Length)
@@ -438,11 +438,7 @@ namespace MaxMind.MinFraud.Request
         {
             domain = domain.Trim();
 
-            if (domain.EndsWith("."))
-            {
-                char[] period = ['.'];
-                domain = domain.TrimEnd(period);
-            }
+            domain = domain.TrimEnd('.');
 
             domain = _idn.GetAscii(domain);
 

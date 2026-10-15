@@ -1,5 +1,6 @@
 ﻿using MaxMind.Db;
 using System;
+using System.Globalization;
 using System.Net;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -39,7 +40,8 @@ namespace MaxMind.MinFraud.Util
             // It'd probably be nice if we added an appropriate constructor
             // to Network.
             var parts = value.Split('/');
-            if (parts.Length != 2 || !int.TryParse(parts[1], out var prefixLength))
+            if (parts.Length != 2 || !int.TryParse(parts[1], NumberStyles.Integer, CultureInfo.InvariantCulture,
+                    out var prefixLength))
             {
                 throw new JsonException("Network not in CIDR format: " + value);
             }
