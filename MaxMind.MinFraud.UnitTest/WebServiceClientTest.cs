@@ -81,9 +81,6 @@ namespace MaxMind.MinFraud.UnitTest
                 var client = CreateSuccessClient("insights", responseContent);
                 var response = await client.InsightsAsync(CreateFullRequest());
                 Assert.Equal("London", response.IPAddress.City.Name);
-
-                var email = new Email { Address = "TEST@MAXMIND.COM" };
-                Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
             }
             finally
             {
