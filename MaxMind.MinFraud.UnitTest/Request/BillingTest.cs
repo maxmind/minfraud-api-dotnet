@@ -133,12 +133,15 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal(time, loc.PhoneVerificationTime);
         }
 
-        [Fact]
-        public void TestPhoneVerificationSerialization()
+        [Theory]
+        [InlineData(LocationPhoneVerificationMethod.DeliveredCode, "delivered_code")]
+        [InlineData(LocationPhoneVerificationMethod.Network, "network")]
+        [InlineData(LocationPhoneVerificationMethod.Other, "other")]
+        public void TestPhoneVerificationSerialization(LocationPhoneVerificationMethod method, string expected)
         {
             var loc = new Billing
             {
-                PhoneVerificationMethod = LocationPhoneVerificationMethod.DeliveredCode,
+                PhoneVerificationMethod = method,
                 PhoneWasVerificationSuccessful = false,
                 PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
             };
@@ -152,9 +155,9 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.True(
                 comparer.JsonEquals(
                     JsonDocument.Parse(
-                        """
+                        $$"""
                         {
-                            "phone_verification_method": "delivered_code",
+                            "phone_verification_method": "{{expected}}",
                             "phone_was_verification_successful": false,
                             "phone_verification_time": "2026-10-01T16:30:00+02:00"
                         }
