@@ -156,13 +156,13 @@ namespace MaxMind.MinFraud.Request
         public string? Postal { get; init; }
 
         /// <summary>
-        /// The phone country code for the phone number associated with the address.
+        /// The phone number, without the country code, associated with the address.
         /// </summary>
         [JsonPropertyName("phone_number")]
         public string? PhoneNumber { get; init; }
 
         /// <summary>
-        /// The phone number, without the country code, associated with the address.
+        /// The phone country code for the phone number associated with the address.
         /// </summary>
         [JsonPropertyName("phone_country_code")]
         public string? PhoneCountryCode { get; init; }
