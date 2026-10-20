@@ -1,4 +1,5 @@
 ﻿using MaxMind.MinFraud.Response;
+using System.Globalization;
 using System.Text.Json;
 using Xunit;
 
@@ -25,6 +26,24 @@ namespace MaxMind.MinFraud.UnitTest.Response
             Assert.True(email.IsDisposable);
             Assert.True(email.IsFree);
             Assert.True(email.IsHighRisk);
+        }
+
+        [Fact]
+        public void TestSerializeFirstSeenThaiCulture()
+        {
+            // th-TH uses the Buddhist calendar, so 2026 formats as 2569.
+            var originalCulture = CultureInfo.CurrentCulture;
+            CultureInfo.CurrentCulture = new CultureInfo("th-TH");
+            try
+            {
+                var email = JsonSerializer.Deserialize<Email>("""{"first_seen": "2026-10-01"}""")!;
+                using var json = JsonDocument.Parse(JsonSerializer.Serialize(email));
+                Assert.Equal("2026-10-01", json.RootElement.GetProperty("first_seen").GetString());
+            }
+            finally
+            {
+                CultureInfo.CurrentCulture = originalCulture;
+            }
         }
     }
 }

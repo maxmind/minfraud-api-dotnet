@@ -82,7 +82,12 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     postal: "06510",
                     phoneNumber: "123-456-7890",
                     phoneCountryCode: "1"
-                ),
+                )
+                {
+                    PhoneVerificationMethod = LocationPhoneVerificationMethod.DeliveredCode,
+                    PhoneWasVerificationSuccessful = true,
+                    PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0))
+                },
                 creditCard:
                 new CreditCard(
                     country: "US",
@@ -150,7 +155,12 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     phoneNumber: "123-456-0000",
                     phoneCountryCode: "1",
                     deliverySpeed: ShippingDeliverySpeed.SameDay
-                ),
+                )
+                {
+                    PhoneVerificationMethod = LocationPhoneVerificationMethod.Network,
+                    PhoneWasVerificationSuccessful = false,
+                    PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
+                },
                 shoppingCart: new List<ShoppingCartItem>
                 {
                     new ShoppingCartItem(
@@ -214,7 +224,10 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     Country = "US",
                     Postal = "06510",
                     PhoneNumber = "123-456-7890",
-                    PhoneCountryCode = "1"
+                    PhoneCountryCode = "1",
+                    PhoneVerificationMethod = LocationPhoneVerificationMethod.DeliveredCode,
+                    PhoneWasVerificationSuccessful = true,
+                    PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0))
                 },
                 Shipping = new Shipping
                 {
@@ -229,6 +242,9 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     Postal = "73003",
                     PhoneNumber = "123-456-0000",
                     PhoneCountryCode = "1",
+                    PhoneVerificationMethod = LocationPhoneVerificationMethod.Network,
+                    PhoneWasVerificationSuccessful = false,
+                    PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0)),
                     DeliverySpeed = ShippingDeliverySpeed.SameDay
                 },
                 Payment = new Payment

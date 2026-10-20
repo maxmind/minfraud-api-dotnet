@@ -325,7 +325,7 @@ namespace MaxMind.MinFraud.Request
                 var md5 = md5Generator.ComputeHash(bytes);
                 return BitConverter.ToString(md5)
                     .Replace("-", string.Empty)
-                    .ToLower();
+                    .ToLowerInvariant();
             }
         }
 
@@ -390,7 +390,10 @@ namespace MaxMind.MinFraud.Request
 
         private static string CleanAddress(string address)
         {
-            address = address.Trim().ToLower();
+            // ToLowerInvariant does not change "İ" (U+0130). Lowercase it to
+            // "i" as en-US and the server do. A CultureInfo for en-US is not
+            // available in globalization-invariant mode.
+            address = address.Trim().ToLowerInvariant().Replace('\u0130', 'i');
 
             var domainIndex = address.LastIndexOf('@');
             if (domainIndex == -1 || domainIndex + 1 == address.Length)
@@ -438,11 +441,7 @@ namespace MaxMind.MinFraud.Request
         {
             domain = domain.Trim();
 
-            if (domain.EndsWith("."))
-            {
-                char[] period = ['.'];
-                domain = domain.TrimEnd(period);
-            }
+            domain = domain.TrimEnd('.');
 
             domain = _idn.GetAscii(domain);
 

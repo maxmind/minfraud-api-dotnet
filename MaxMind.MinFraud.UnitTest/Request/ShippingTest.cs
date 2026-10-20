@@ -2,6 +2,8 @@
 
 using MaxMind.MinFraud.Request;
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 #endregion
@@ -108,6 +110,76 @@ namespace MaxMind.MinFraud.UnitTest.Request
         {
             var loc = new Shipping { PhoneCountryCode = "1" };
             Assert.Equal("1", loc.PhoneCountryCode);
+        }
+
+        [Fact]
+        public void TestPhoneVerificationMethod()
+        {
+            var loc = new Shipping { PhoneVerificationMethod = LocationPhoneVerificationMethod.Network };
+            Assert.Equal(LocationPhoneVerificationMethod.Network, loc.PhoneVerificationMethod);
+        }
+
+        [Fact]
+        public void TestPhoneWasVerificationSuccessful()
+        {
+            var loc = new Shipping { PhoneWasVerificationSuccessful = false };
+            Assert.False(loc.PhoneWasVerificationSuccessful);
+        }
+
+        [Fact]
+        public void TestPhoneVerificationTime()
+        {
+            var time = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0));
+            var loc = new Shipping { PhoneVerificationTime = time };
+            Assert.Equal(time, loc.PhoneVerificationTime);
+        }
+
+        [Theory]
+        [InlineData(LocationPhoneVerificationMethod.DeliveredCode, "delivered_code")]
+        [InlineData(LocationPhoneVerificationMethod.Network, "network")]
+        [InlineData(LocationPhoneVerificationMethod.Other, "other")]
+        public void TestPhoneVerificationSerialization(LocationPhoneVerificationMethod method, string expected)
+        {
+            var loc = new Shipping
+            {
+                PhoneVerificationMethod = method,
+                PhoneWasVerificationSuccessful = false,
+                PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
+            };
+
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+            var json = JsonSerializer.Serialize(loc, options);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        $$"""
+                        {
+                            "phone_verification_method": "{{expected}}",
+                            "phone_was_verification_successful": false,
+                            "phone_verification_time": "2026-10-01T16:30:00+02:00"
+                        }
+                        """),
+                    JsonDocument.Parse(json)
+                ),
+                json
+            );
+        }
+
+        [Fact]
+        public void TestPhoneVerificationUnsetIsNotSerialized()
+        {
+            var options = new JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            };
+            var json = JsonSerializer.Serialize(new Shipping { FirstName = "f" }, options);
+            Assert.DoesNotContain("phone_verification_method", json);
+            Assert.DoesNotContain("phone_was_verification_successful", json);
+            Assert.DoesNotContain("phone_verification_time", json);
         }
 
         // End shared code

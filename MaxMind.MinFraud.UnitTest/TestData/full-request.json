@@ -24,7 +24,10 @@
     "country": "US",
     "postal": "06510",
     "phone_number": "123-456-7890",
-    "phone_country_code": "1"
+    "phone_country_code": "1",
+    "phone_verification_method": "delivered_code",
+    "phone_was_verification_successful": true,
+    "phone_verification_time": "2026-10-01T14:30:00+00:00"
   },
   "shipping": {
     "first_name": "ShipFirst",
@@ -38,6 +41,9 @@
     "postal": "73003",
     "phone_number": "123-456-0000",
     "phone_country_code": "1",
+    "phone_verification_method": "network",
+    "phone_was_verification_successful": false,
+    "phone_verification_time": "2026-10-01T16:30:00+02:00",
     "delivery_speed": "same_day"
   },
   "payment": {

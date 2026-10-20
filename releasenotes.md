@@ -1,5 +1,24 @@
 # Release Notes
 
+## 6.2.0 (TBD)
+
+- Added `PhoneVerificationMethod`, `PhoneWasVerificationSuccessful`, and
+  `PhoneVerificationTime` properties to `MaxMind.MinFraud.Request.Billing` and
+  `MaxMind.MinFraud.Request.Shipping`. These describe the most recent
+  verification of the phone number. The new `LocationPhoneVerificationMethod`
+  enum has the values `DeliveredCode`, `Network`, and `Other`. Do not set
+  `PhoneWasVerificationSuccessful` if no verification was attempted.
+- Fixed Insights requests and email address hashing in cultures that change case
+  conversion, such as Turkish (`tr`) and Azerbaijani (`az`). In those cultures,
+  Insights requests went to the `ınsights` path with a dotless `ı`, and
+  `AddressMD5` on `MaxMind.MinFraud.Request.Email` returned a different hash for
+  addresses that contain `I`. The library now uses the invariant culture for the
+  request path. Email address hashing now gives the same result in all cultures
+  and lowercases `İ` (U+0130) to `i`, as en-US does.
+- Fixed JSON serialization of response dates, such as `FirstSeen` on
+  `MaxMind.MinFraud.Response.Email`, in cultures that use a non-Gregorian
+  calendar. In Thai (`th`), 2026-10-01 was written as `2569-10-01`.
+
 ## 6.1.0 (2026-07-21)
 
 - The `Anonymizer` property on `MaxMind.MinFraud.Response.IPAddress` (inherited

@@ -1,5 +1,6 @@
 using MaxMind.MinFraud.Request;
 using System;
+using System.Globalization;
 using System.Text.Json;
 using Xunit;
 
@@ -199,6 +200,30 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal("53550c712b146287a2d0dd30e5ed6f4b", e.AddressMD5);
             e = new Email { Address = "b\u00FCcher@example.com", HashAddress = true };
             Assert.Equal("53550c712b146287a2d0dd30e5ed6f4b", e.AddressMD5);
+        }
+
+        [Theory]
+        [InlineData("tr-TR")]
+        [InlineData("en-US")]
+        [InlineData("")]
+        public void TestNormalizingCulture(string culture)
+        {
+            // In tr-TR, "I".ToLower() returns a dotless "ı".
+            // ToLowerInvariant does not lowercase "İ".
+            var originalCulture = CultureInfo.CurrentCulture;
+            CultureInfo.CurrentCulture = new CultureInfo(culture);
+            try
+            {
+                var e = new Email { Address = "TEST@MAXMIND.COM" };
+                Assert.Equal("977577b140bfb7c516e4746204fbdb01", e.AddressMD5);
+
+                e = new Email { Address = "TEST@GMA\u0130L.COM" };
+                Assert.Equal("1aedb8d9dc4751e229a335e371db8058", e.AddressMD5);
+            }
+            finally
+            {
+                CultureInfo.CurrentCulture = originalCulture;
+            }
         }
 
         [Fact]

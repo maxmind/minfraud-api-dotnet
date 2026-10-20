@@ -27,7 +27,7 @@ namespace MaxMind.MinFraud.Util
 
         public override void Write(Utf8JsonWriter writer, DateTimeOffset? value, JsonSerializerOptions options)
         {
-            writer.WriteStringValue(value?.ToString(format));
+            writer.WriteStringValue(value?.ToString(format, DateTimeFormatInfo.InvariantInfo));
         }
     }
 }

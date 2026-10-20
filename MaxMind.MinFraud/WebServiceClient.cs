@@ -195,7 +195,7 @@ namespace MaxMind.MinFraud
 
         private async Task<T> MakeResponse<T>(Transaction request) where T : Score
         {
-            var requestPath = typeof(T).Name.ToLower();
+            var requestPath = typeof(T).Name.ToLowerInvariant();
             var response = await MakeRequest(requestPath, request).ConfigureAwait(false);
             return await HandleSuccess<T>(response).ConfigureAwait(false);
         }
