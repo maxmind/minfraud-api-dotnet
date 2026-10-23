@@ -113,7 +113,11 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     address: "test@maxmind.com",
                     domain: "maxmind.com",
                     hashAddress: false
-                ),
+                )
+                {
+                    VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0)),
+                    WasVerificationSuccessful = true
+                },
                 userEvent:
                 new Event
                 (
@@ -210,7 +214,9 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 {
                     Address = "test@maxmind.com",
                     Domain = "maxmind.com",
-                    HashAddress = false
+                    HashAddress = false,
+                    VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0)),
+                    WasVerificationSuccessful = true
                 },
                 Billing = new Billing
                 {
