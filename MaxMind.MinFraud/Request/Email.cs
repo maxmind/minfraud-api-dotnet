@@ -392,6 +392,8 @@ namespace MaxMind.MinFraud.Request
         /// The date and time of the most recent attempt to verify the
         /// email address, if known. The time must not be before 1970-01-01T00:00:00Z
         /// or more than two days in the future.
+        /// A <c>DateTime</c> with Kind <c>Unspecified</c> is treated as local
+        /// time. Use <c>DateTimeKind.Utc</c> or a <c>DateTimeOffset</c>.
         /// </summary>
         [JsonPropertyName("verification_time")]
         public DateTimeOffset? VerificationTime { get; init; }
