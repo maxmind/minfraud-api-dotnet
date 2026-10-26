@@ -239,6 +239,32 @@ namespace MaxMind.MinFraud.UnitTest
         }
 
         [Fact]
+        public async Task TestUnsetVerificationFieldsAreNotSent()
+        {
+            string? body = null;
+            var mockHttp = new MockHttpMessageHandler();
+            mockHttp.When(HttpMethod.Post, "https://minfraud.maxmind.com/minfraud/v2.0/score")
+                .With(request =>
+                {
+                    body = request.Content!.ReadAsStringAsync().Result;
+                    return true;
+                })
+                .Respond("application/json", ReadJsonFile("score-response"));
+
+            var client = new WebServiceClient(6, "0123456789", httpMessageHandler: mockHttp);
+            await client.ScoreAsync(new Transaction
+            {
+                Billing = new Billing { FirstName = "f" },
+                Email = new Email { Domain = "maxmind.com" },
+                Shipping = new Shipping { FirstName = "f" }
+            });
+
+            Assert.NotNull(body);
+            Assert.Contains("first_name", body);
+            Assert.DoesNotContain("verification", body);
+        }
+
+        [Fact]
         public async Task Test200WithNoContentLength()
         {
             var expectedResponse = ReadJsonFile("score-response");
