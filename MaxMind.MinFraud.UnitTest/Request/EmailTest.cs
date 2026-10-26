@@ -56,6 +56,18 @@ namespace MaxMind.MinFraud.UnitTest.Request
         }
 
         [Fact]
+        public void TestVerificationTimeFromUtcDateTime()
+        {
+            var email = new Email
+            {
+                VerificationTime = new DateTime(2026, 10, 1, 14, 30, 0, DateTimeKind.Utc)
+            };
+
+            var json = JsonSerializer.Serialize(email, SerializerOptions);
+            Assert.Contains("\"verification_time\":\"2026-10-01T14:30:00+00:00\"", json);
+        }
+
+        [Fact]
         public void TestVerificationUnsetIsNotSerialized()
         {
             var json = JsonSerializer.Serialize(new Email { Domain = "maxmind.com" }, SerializerOptions);
