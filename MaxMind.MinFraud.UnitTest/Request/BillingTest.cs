@@ -1,7 +1,6 @@
 using MaxMind.MinFraud.Request;
 using System;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -146,11 +145,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0))
             };
 
-            var options = new JsonSerializerOptions
-            {
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            };
-            var json = JsonSerializer.Serialize(loc, options);
+            var json = JsonSerializer.Serialize(loc, TestHelper.SerializerOptions);
             var comparer = new JsonElementComparer();
             Assert.True(
                 comparer.JsonEquals(
@@ -171,11 +166,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
         [Fact]
         public void TestPhoneVerificationUnsetIsNotSerialized()
         {
-            var options = new JsonSerializerOptions
-            {
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            };
-            var json = JsonSerializer.Serialize(new Billing { FirstName = "f" }, options);
+            var json = JsonSerializer.Serialize(new Billing { FirstName = "f" }, TestHelper.SerializerOptions);
             Assert.DoesNotContain("phone_verification_method", json);
             Assert.DoesNotContain("phone_was_verification_successful", json);
             Assert.DoesNotContain("phone_verification_time", json);

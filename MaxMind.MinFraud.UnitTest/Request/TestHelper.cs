@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -13,6 +14,11 @@ namespace MaxMind.MinFraud.UnitTest.Request
     internal static class TestHelper
     {
         public static string TestDirectory { get; } = GetTestDirectory();
+
+        public static JsonSerializerOptions SerializerOptions { get; } = new()
+        {
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        };
 
         private static string GetTestDirectory()
         {
