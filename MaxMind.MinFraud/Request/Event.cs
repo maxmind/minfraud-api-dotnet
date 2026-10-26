@@ -86,7 +86,11 @@ namespace MaxMind.MinFraud.Request
         /// who are resellers, payment providers, gateways and affiliate
         /// networks.</param>
         /// <param name="time">The date and time the event occurred. If this
-        /// field is not in the request, the current time will be used.</param>
+        /// field is not in the request, the current time will be used.
+        /// A <c>DateTime</c> with Kind <c>Unspecified</c> is treated as local
+        /// time. For a UTC value, use
+        /// <c>DateTime.SpecifyKind(value, DateTimeKind.Utc)</c> or
+        /// <c>new DateTimeOffset(value, TimeSpan.Zero)</c>.</param>
         /// <param name="type">The type of event being scored.</param>
         /// <param name="party">The party submitting the transaction.</param>
         [Obsolete("Use object initializer syntax.")]
