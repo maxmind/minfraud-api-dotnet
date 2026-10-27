@@ -252,7 +252,7 @@ public class MinFraudExample
                 Party = EventParty.Customer,
                 TransactionId = "txn3134133",
                 ShopId = "s2123",
-                Time = new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                Time = new DateTimeOffset(2026, 10, 5, 23, 20, 50, 52, new TimeSpan(0)),
                 Type = EventType.Purchase
             },
             Account = new Account
@@ -264,7 +264,9 @@ public class MinFraudExample
             {
                 Address = "test@maxmind.com",
                 Domain = "maxmind.com",
-                HashAddress = false
+                HashAddress = false,
+                VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0)),
+                WasVerificationSuccessful = true
             },
             Billing = new Billing
             {

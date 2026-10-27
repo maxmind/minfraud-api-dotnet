@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Xunit;
 
 namespace MaxMind.MinFraud.UnitTest.Request
@@ -13,6 +14,11 @@ namespace MaxMind.MinFraud.UnitTest.Request
     internal static class TestHelper
     {
         public static string TestDirectory { get; } = GetTestDirectory();
+
+        public static JsonSerializerOptions SerializerOptions { get; } = new()
+        {
+            DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+        };
 
         private static string GetTestDirectory()
         {
@@ -113,13 +119,17 @@ namespace MaxMind.MinFraud.UnitTest.Request
                     address: "test@maxmind.com",
                     domain: "maxmind.com",
                     hashAddress: false
-                ),
+                )
+                {
+                    VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0)),
+                    WasVerificationSuccessful = true
+                },
                 userEvent:
                 new Event
                 (
                     transactionId: "txn3134133",
                     shopId: "s2123",
-                    time: new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                    time: new DateTimeOffset(2026, 10, 5, 23, 20, 50, 52, new TimeSpan(0)),
                     type: EventType.Purchase,
                     party: null
                 ),
@@ -198,7 +208,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 {
                     TransactionId = "txn3134133",
                     ShopId = "s2123",
-                    Time = new DateTimeOffset(2014, 4, 12, 23, 20, 50, 52, new TimeSpan(0)),
+                    Time = new DateTimeOffset(2026, 10, 5, 23, 20, 50, 52, new TimeSpan(0)),
                     Type = EventType.Purchase
                 },
                 Account = new Account
@@ -210,7 +220,9 @@ namespace MaxMind.MinFraud.UnitTest.Request
                 {
                     Address = "test@maxmind.com",
                     Domain = "maxmind.com",
-                    HashAddress = false
+                    HashAddress = false,
+                    VerificationTime = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0)),
+                    WasVerificationSuccessful = true
                 },
                 Billing = new Billing
                 {

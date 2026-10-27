@@ -9,6 +9,67 @@ namespace MaxMind.MinFraud.UnitTest.Request
     public class EmailTest
     {
         [Fact]
+        public void TestVerificationTime()
+        {
+            var time = new DateTimeOffset(2026, 10, 1, 14, 30, 0, new TimeSpan(0));
+            var email = new Email { VerificationTime = time };
+            Assert.Equal(time, email.VerificationTime);
+        }
+
+        [Fact]
+        public void TestWasVerificationSuccessful()
+        {
+            var email = new Email { WasVerificationSuccessful = false };
+            Assert.False(email.WasVerificationSuccessful);
+        }
+
+        [Fact]
+        public void TestVerificationSerialization()
+        {
+            var email = new Email
+            {
+                VerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0)),
+                WasVerificationSuccessful = false
+            };
+
+            var json = JsonSerializer.Serialize(email, TestHelper.SerializerOptions);
+            var comparer = new JsonElementComparer();
+            Assert.True(
+                comparer.JsonEquals(
+                    JsonDocument.Parse(
+                        """
+                        {
+                            "verification_time": "2026-10-01T16:30:00+02:00",
+                            "was_verification_successful": false
+                        }
+                        """),
+                    JsonDocument.Parse(json)
+                ),
+                json
+            );
+        }
+
+        [Fact]
+        public void TestVerificationTimeFromUtcDateTime()
+        {
+            var email = new Email
+            {
+                VerificationTime = new DateTime(2026, 10, 1, 14, 30, 0, DateTimeKind.Utc)
+            };
+
+            var json = JsonSerializer.Serialize(email, TestHelper.SerializerOptions);
+            Assert.Contains("\"verification_time\":\"2026-10-01T14:30:00+00:00\"", json);
+        }
+
+        [Fact]
+        public void TestVerificationUnsetIsNotSerialized()
+        {
+            var json = JsonSerializer.Serialize(new Email { Domain = "maxmind.com" }, TestHelper.SerializerOptions);
+            Assert.DoesNotContain("verification_time", json);
+            Assert.DoesNotContain("was_verification_successful", json);
+        }
+
+        [Fact]
         public void TestAddress()
         {
             var address = "test@maxmind.com";
@@ -19,7 +80,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal("977577b140bfb7c516e4746204fbdb01", email.AddressMD5);
             Assert.Equal(domain, email.Domain);
 
-            var json = JsonSerializer.Serialize(email);
+            var json = JsonSerializer.Serialize(email, TestHelper.SerializerOptions);
             var comparer = new JsonElementComparer();
             Assert.True(
                 comparer.JsonEquals(
@@ -48,7 +109,7 @@ namespace MaxMind.MinFraud.UnitTest.Request
             Assert.Equal(md5, email.AddressMD5);
             Assert.Equal("maxmind.com", email.Domain);
 
-            var json = JsonSerializer.Serialize(email);
+            var json = JsonSerializer.Serialize(email, TestHelper.SerializerOptions);
             var comparer = new JsonElementComparer();
             Assert.True(
                 comparer.JsonEquals(

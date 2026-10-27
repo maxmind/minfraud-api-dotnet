@@ -388,6 +388,27 @@ namespace MaxMind.MinFraud.Request
         [JsonIgnore]
         public bool HashAddress { get; init; } = false;
 
+        /// <summary>
+        /// The date and time of the most recent attempt to verify the
+        /// email address, if known. The time must not be before 1970-01-01T00:00:00Z
+        /// or more than two days in the future.
+        /// A <c>DateTime</c> with Kind <c>Unspecified</c> is treated as local
+        /// time. For a UTC value, use
+        /// <c>DateTime.SpecifyKind(value, DateTimeKind.Utc)</c> or
+        /// <c>new DateTimeOffset(value, TimeSpan.Zero)</c>.
+        /// </summary>
+        [JsonPropertyName("verification_time")]
+        public DateTimeOffset? VerificationTime { get; init; }
+
+        /// <summary>
+        /// Whether the most recent verification that the end user controls
+        /// the email address succeeded, for example by confirming a link
+        /// sent to the address. Do not set this if no verification was
+        /// attempted.
+        /// </summary>
+        [JsonPropertyName("was_verification_successful")]
+        public bool? WasVerificationSuccessful { get; init; }
+
         private static string CleanAddress(string address)
         {
             // ToLowerInvariant does not change "İ" (U+0130). Lowercase it to
