@@ -336,12 +336,17 @@ back to JSON and match the original structure.
 
 When MaxMind adds new payment processors, event types, etc.:
 
-1. **Add to enum** (e.g., `PaymentProcessor`, `EventType`):
+1. **Add to the end of the enum** (e.g., `PaymentProcessor`, `EventType`):
 
    ```csharp
    [EnumMember(Value = "new_processor")]
    NewProcessor,
    ```
+
+   Do not insert the member in alphabetical order. That changes the numeric
+   value of each member after it, which breaks binary compatibility and fails
+   package validation. In a major release, sort the members alphabetically
+   again.
 
 2. **Update `releasenotes.md`** listing the new value
 
