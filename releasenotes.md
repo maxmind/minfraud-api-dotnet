@@ -22,6 +22,7 @@
 - Fixed JSON serialization of response dates, such as `FirstSeen` on
   `MaxMind.MinFraud.Response.Email`, in cultures that use a non-Gregorian
   calendar. In Thai (`th`), 2026-10-01 was written as `2569-10-01`.
+- Added `Ryft` to the `PaymentProcessor` enum.
 
 ## 6.1.0 (2026-07-21)
 
