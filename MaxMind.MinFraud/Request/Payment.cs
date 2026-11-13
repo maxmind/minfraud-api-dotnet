@@ -555,7 +555,10 @@ namespace MaxMind.MinFraud.Request
         Worldpay,
 
         [EnumMember(Value = "yaadpay")]
-        Yaadpay
+        Yaadpay,
+
+        [EnumMember(Value = "ryft")]
+        Ryft
 
 #pragma warning restore
     }
