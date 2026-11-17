@@ -1,6 +1,6 @@
 # Release Notes
 
-## 6.2.0 (TBD)
+## 6.2.0 (2026-11-18)
 
 - Added `PhoneVerificationMethod`, `PhoneWasVerificationSuccessful`, and
   `PhoneVerificationTime` properties to `MaxMind.MinFraud.Request.Billing` and
