@@ -23,6 +23,16 @@
   `MaxMind.MinFraud.Response.Email`, in cultures that use a non-Gregorian
   calendar. In Thai (`th`), 2026-10-01 was written as `2569-10-01`.
 - Added `Ryft` to the `PaymentProcessor` enum.
+- Updated `MaxMind.GeoIP2` to 6.2.0. On `MaxMind.MinFraud.Response.IPAddress`,
+  the non-null records and collections inherited from GeoIP2, such as `Country`
+  and `Traits`, now keep their defaults when the response sets them to null.
+  This does not apply to `Location` and `RiskReasons`, which minFraud defines.
+  GeoIP2 6.2.0 also adds NativeAOT and trimming support to its database reader
+  and web service client, but not to `MaxMind.MinFraud`. It updates `MaxMind.Db`
+  to 5.3.0, which enforces decoding limits and throws `InvalidDatabaseException`
+  for corrupt data. See the
+  [GeoIP2 release notes](https://github.com/maxmind/GeoIP2-dotnet/releases/tag/v6.2.0)
+  for details.
 
 ## 6.1.0 (2026-07-21)
 

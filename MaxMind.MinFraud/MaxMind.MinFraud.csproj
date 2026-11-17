@@ -36,10 +36,14 @@
          Advisories still appear in build output, and Dependabot handles the
          actual fix. Local builds keep the strict behavior. -->
     <WarningsNotAsErrors Condition="'$(CI)' == 'true'">$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904;NU1905</WarningsNotAsErrors>
+    <!-- IPAddress hides the Location it inherits from a GeoIP2 model, so the
+         MaxMind.Db source generator reports MMDBSG014. This library never
+         decodes MMDB data, so the MaxMind.Db diagnostics do not apply. -->
+    <MaxMindDbAotDiagnostics>false</MaxMindDbAotDiagnostics>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MaxMind.GeoIP2" Version="6.1.0" />
+    <PackageReference Include="MaxMind.GeoIP2" Version="6.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options" Version="10.0.14" />
   </ItemGroup>
 
