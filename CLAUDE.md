@@ -423,7 +423,6 @@ The project enforces strict standards:
 - **TreatWarningsAsErrors**: All warnings must be resolved
 - **EnableNETAnalyzers**: .NET code analyzers enabled
 - **.editorconfig**: Defines consistent coding style
-- **Language Version**: C# 13.0
 - **Nullable Reference Types**: Enabled (`<Nullable>enable</Nullable>`)
 
 ### Multi-Framework Considerations
