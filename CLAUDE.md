@@ -21,11 +21,12 @@ for IP intelligence.
 
 **Key Technologies:**
 
-- .NET 10.0, .NET 9.0, .NET 8.0, .NET Standard 2.1, and .NET Standard 2.0
+- .NET 11.0, .NET 10.0, .NET 9.0, .NET 8.0, .NET Standard 2.1, and .NET Standard
+  2.0
 - System.Text.Json for JSON serialization/deserialization
 - MaxMind.GeoIP2 library (critical dependency for response models)
 - xUnit for testing
-- Modern C# features (nullable reference types, init-only properties, C# 14.0)
+- Modern C# features (nullable reference types, init-only properties, C# 15.0)
 
 ## Development Commands
 
@@ -422,7 +423,6 @@ The project enforces strict standards:
 - **TreatWarningsAsErrors**: All warnings must be resolved
 - **EnableNETAnalyzers**: .NET code analyzers enabled
 - **.editorconfig**: Defines consistent coding style
-- **Language Version**: C# 13.0
 - **Nullable Reference Types**: Enabled (`<Nullable>enable</Nullable>`)
 
 ### Multi-Framework Considerations
@@ -533,8 +533,9 @@ Requires `EnumMemberValueConverter<T>` in JSON options.
 
 ## Version Requirements
 
-- **Target Frameworks**: net10.0, net9.0, net8.0, netstandard2.1, netstandard2.0
-- **Language Version**: C# 14.0
+- **Target Frameworks**: net11.0, net10.0, net9.0, net8.0, netstandard2.1,
+  netstandard2.0
+- **Language Version**: C# 15.0
 - **Assembly Signing**: Uses MaxMind.snk strong name key
 - **NuGet Package**: MaxMind.MinFraud
 
