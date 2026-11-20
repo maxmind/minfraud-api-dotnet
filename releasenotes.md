@@ -1,5 +1,9 @@
 # Release Notes
 
+## 6.3.0 (TBD)
+
+- Added .NET 11 as a target framework.
+
 ## 6.2.0 (2026-11-18)
 
 - Added `PhoneVerificationMethod`, `PhoneWasVerificationSuccessful`, and
