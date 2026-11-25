@@ -300,7 +300,6 @@ public class MinFraudExample
                 PhoneCountryCode = "1",
                 PhoneVerificationMethod = LocationPhoneVerificationMethod.Network,
                 PhoneWasVerificationSuccessful = false,
-                PhoneVerificationTime = new DateTimeOffset(2026, 10, 1, 16, 30, 0, new TimeSpan(2, 0, 0)),
                 DeliverySpeed = ShippingDeliverySpeed.SameDay
             },
             Payment = new Payment

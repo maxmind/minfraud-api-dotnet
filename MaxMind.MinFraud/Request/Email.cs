@@ -389,9 +389,11 @@ namespace MaxMind.MinFraud.Request
         public bool HashAddress { get; init; } = false;
 
         /// <summary>
-        /// The date and time of the most recent attempt to verify the
-        /// email address, if known. The time must not be before 1970-01-01T00:00:00Z
-        /// or more than two days in the future.
+        /// The date and time that the end user completed the most recent
+        /// verification of the email address, if known. Set this only if
+        /// <c>WasVerificationSuccessful</c> is <c>true</c>. The time must
+        /// not be before 1970-01-01T00:00:00Z or more than two days in the
+        /// future.
         /// A <c>DateTime</c> with Kind <c>Unspecified</c> is treated as local
         /// time. For a UTC value, use
         /// <c>DateTime.SpecifyKind(value, DateTimeKind.Utc)</c> or
@@ -401,10 +403,14 @@ namespace MaxMind.MinFraud.Request
         public DateTimeOffset? VerificationTime { get; init; }
 
         /// <summary>
-        /// Whether the most recent verification that the end user controls
-        /// the email address succeeded, for example by confirming a link
-        /// sent to the address. Do not set this if no verification was
-        /// attempted.
+        /// Whether the end user has verified that they control the email
+        /// address, as of the time of the event. Set this to <c>true</c> if
+        /// the user completed a verification, for example by confirming a
+        /// link sent to the address. Set it to <c>false</c> if the address
+        /// is not verified. This includes a verification that is pending,
+        /// abandoned, expired, or failed, and an address that you did not
+        /// try to verify. Leaving this unset is not equivalent to
+        /// <c>false</c>.
         /// </summary>
         [JsonPropertyName("was_verification_successful")]
         public bool? WasVerificationSuccessful { get; init; }

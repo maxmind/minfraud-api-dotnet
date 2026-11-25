@@ -3,6 +3,12 @@
 ## 6.3.0 (TBD)
 
 - Added .NET 11 as a target framework.
+- Updated the documentation for the email and phone verification inputs. `false`
+  for `WasVerificationSuccessful` and `PhoneWasVerificationSuccessful` now means
+  that the email address or phone number is not verified as of the time of the
+  event, for any reason. Set a verification time only when the value is `true`.
+  Set `PhoneVerificationMethod` for any verification that you tried. There are
+  no code changes.
 
 ## 6.2.0 (2026-11-18)
 
